@@ -151,6 +151,17 @@ section article h3
      transform : translateY(-13px);
 }
 
+.cartesFixes
+{
+     background-color: silver;
+     border : 2px gray solid;
+     border-radius : 10px;
+     margin : 10px;
+     padding : 10px;
+     -webkit-backdrop-filter : blur(10px);
+     backdrop-filter : blur(10px);
+}
+
 /* Stylisation du pied de page */
 
 footer
