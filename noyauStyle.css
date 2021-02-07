@@ -16,7 +16,7 @@ img
 
 aside
 {
-     background-image: url("noyauBackground.jpg");
+     background-image: url("noyauBackground.webp"), url("noyauBackground.jpg");
      background-attachment: fixed;
      background-repeat: no-repeat;
      background-size : cover;
