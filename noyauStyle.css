@@ -1,0 +1,205 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body *
+{
+     font-family: Ubuntu, Arial;
+}
+
+img
+{
+     overflow: hidden;
+}
+
+/* En-tête */
+
+aside
+{
+     background-image: url("noyauBackground.jpg");
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size : cover;
+     background-position: center;
+
+     margin : -8px -8px 0px -8px;
+     height : 400px;
+}
+
+header
+{
+     background-color : #FFF7;
+}
+
+body > div
+{
+     background : linear-gradient(transparent, white);
+     margin : 0px -8px;
+     transform: translateY(-40px);
+     height : 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > div button
+{
+     color : white;
+     padding : 10px;
+     border-radius : 5px;
+     width : 300px;
+     margin : 5px;
+     background : linear-gradient(to right, blue, green);
+     font-size : 20px;
+     transform: translateY(20px);
+     border : none;
+}
+
+/* Stylisation de l'en-tête */
+
+header *
+{
+     color : black;
+}
+
+@media (min-width : 1280px) /* Ordinateur */
+{
+     img[alt="Icone du site"]
+     {
+          width : 80px;
+          height : 80px;
+     }
+}
+
+@media (max-width : 1280px) /* Mobile */
+{
+     img[alt="Icone du site"]
+     {
+          width : 50px;
+          height : 50px;
+     }
+}
+
+header h1
+{
+     margin : 0px;
+     position : absolute;
+     left : 55px;
+     top : 12px;
+}
+
+#noyauSettings
+{
+     float : right;
+     margin : 5px;
+}
+
+#noyauSettings img[alt="Mode jour"]
+{
+     width : 30px;
+     height : 30px;
+     display : none;
+}
+
+nav
+{
+     width : 100%;
+     overflow: scroll;
+     display: flex;
+}
+
+nav p
+{
+     margin : 5px 10px;
+     display : flex;
+}
+
+nav p:after
+{
+     content : url("https://img.icons8.com/android/10/expand-arrow.png");
+     margin-left : 5px;
+}
+
+/* Stylisation de l'illustration */
+
+aside article
+{
+     color : white;
+     text-align: center;     
+     vertical-align : bottom;
+     height : 100%;
+}
+
+aside article button
+{
+     border : none;
+     background-color : #FF000050;
+     font-size : 20px;
+     padding : 10px;
+     
+     width : 200px;
+     margin-left : auto;
+     margin-right : auto;
+}
+
+/* Stylisation du contenu */
+
+section article h3
+{
+     display : inline-block;
+     margin : 0px;
+     transform : translateY(-13px);
+}
+
+/* Stylisation du pied de page */
+
+footer
+{
+     background-color : #c0c0c0;
+     border-top : 3px solid red;
+     width : 100%;
+     position : absolute;
+     left : 0px;
+     right : 0px;
+     bottom : 0px;
+     
+     padding-top : 20px;
+}
+
+footer img
+{
+     width : 50px;
+     height : 50px;
+     border-radius : 100%;
+     border : 2px solid red;
+     background-color: white;
+     position : absolute;
+     transform : translate(-50%, -60px);
+     left : 50%;
+     
+}
+
+footer div
+{
+     display : flex;
+}
+
+footer select
+{
+     border : 2px black solid;
+     background-color: white;
+     padding : 5px;
+     width : 100px;
+     height : 40px;
+}
+
+footer *
+{
+     text-align: right;
+     margin : 10px;
+}
+
+footer h5
+{
+     margin-right : 30px;
+}
