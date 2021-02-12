@@ -188,6 +188,11 @@ aside article button a
 
 /* Stylisation du contenu */
 
+section article
+{
+	width : 100%;
+}
+
 section article h3
 {
      display : inline-block;
@@ -202,6 +207,34 @@ section article h3
      border-radius : 10px;
      margin : 10px;
      padding : 10px;
+}
+
+.cartesDefilantesRect, .cartesDefilantesCarre div
+{
+	display: inline-flex;
+}
+
+.cartesDefilantesRect div, .cartesDefilantesCarre div
+{
+	border-radius: 20px;
+	width : 250px;
+	height : 100px;
+	margin : 10px;
+	background-color: #FF000050;
+}
+
+.cartesDefilantesCarre div
+{
+	width : 100px;
+}
+
+.cartesDefilantesRect div p
+{
+	color : white;
+	font-size : 30px;
+	text-align: center;
+	font-weight: bold;
+	margin : 0px;
 }
 
 /* Stylisation du pied de page */
