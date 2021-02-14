@@ -133,11 +133,11 @@ header h1
      margin : 5px;
 }
 
-#noyauSettings img[alt="Mode jour"]
+#noyauSettings img[alt="mode jour"], #noyauSettings img[alt="mode nuit"] 
 {
      width : 30px;
      height : 30px;
-     display : none;
+     margin : 5px;
 }
 
 nav
@@ -217,8 +217,8 @@ section article h3
 .cartesDefilantesRect div, .cartesDefilantesCarre div
 {
 	border-radius: 20px;
-	width : 250px;
-	height : 100px;
+	width : 200px;
+	height : 120px;
 	margin : 10px;
 	background-color: #FF000050;
 }
@@ -230,11 +230,18 @@ section article h3
 
 .cartesDefilantesRect div p
 {
-	color : white;
+	width: inherit;
+	height: inherit;
 	font-size : 30px;
 	text-align: center;
 	font-weight: bold;
 	margin : 0px;
+	position: absolute;
+}
+
+.cartesDefilantesRect div img
+{
+	border-radius : 20px;
 }
 
 /* Stylisation du pied de page */
