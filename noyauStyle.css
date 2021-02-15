@@ -83,7 +83,7 @@ body > div button
      border : none;
 }
 
-body > div button a
+body > div a button
 {
      color : white;
      text-decoration: none;
@@ -181,7 +181,7 @@ aside article button
      margin-right : auto;
 }
 
-aside article button a
+aside article a button
 {
      color : white;
      text-decoration : none;
