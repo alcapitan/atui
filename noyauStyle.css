@@ -42,16 +42,17 @@ aside
 aside > div
 {
      background-color: red;
-     padding : 5px;
      animation : linear chargement 1s;
      overflow : hidden;
+     transition-duration: 1s;
+     transition-property: height;
 }
 
 aside > div p
 {
      color : white;
      text-align : center;
-     margin : 0px;
+     margin : 5px;
 }
 
 header
@@ -209,9 +210,12 @@ section article h3
      padding : 10px;
 }
 
-.cartesDefilantesRect, .cartesDefilantesCarre div
+.cartesDefilantesRect, .cartesDefilantesCarre
 {
 	display: inline-flex;
+	width : 100%;
+	overflow-y: scroll;
+	position : relative;
 }
 
 .cartesDefilantesRect div, .cartesDefilantesCarre div
@@ -225,7 +229,9 @@ section article h3
 
 .cartesDefilantesCarre div
 {
-	width : 100px;
+	width : 120px;
+	height : 120px;
+	position : relative;
 }
 
 .cartesDefilantesRect div p
