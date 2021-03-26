@@ -1,10 +1,15 @@
 /* Global */
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+
+body
+{
+     min-width : 350px;
+}
 
 body *
 {
-     font-family: Ubuntu, Arial;
+     font-family: 'Red Hat Display', Arial;
 }
 
 img
@@ -12,84 +17,51 @@ img
      overflow: hidden;
 }
 
-@keyframes chargement
+img[alt="Icone du site"]
 {
-     0%
+     width : 50px;
+     height : 50px;
+}
+
+@media (max-width : 650px) /* Mobile */
+{
+     header > img
      {
-          height : 0px;
+          height : 50%;
      }
-     
-     100%
+}
+
+@media (min-width : 650px) /* Ordi */
+{
+     section
      {
-          height : 20px;
+          display: inline-flex;
+     }
+
+     section article
+     {
+          width : 40%;
+	    margin : 5px;
      }
 }
 
 /* En-tête */
 
-aside
+header > img
 {
-     background-image: url("noyauBackground.webp"), url("noyauBackground.jpg");
-     background-attachment: fixed;
-     background-repeat: no-repeat;
-     background-size : cover;
-     background-position: center;
-
      margin : -8px -8px 0px -8px;
-     height : 400px;
+     position: absolute;
+     z-index: -1;
+     width : 100%;
+     background-position: center;
 }
 
-aside > div
-{
-     background-color: red;
-     animation : linear chargement 1s;
-     overflow : hidden;
-     transition-duration: 1s;
-     transition-property: height;
-}
-
-aside > div p
-{
-     color : white;
-     text-align : center;
-     margin : 5px;
-}
-
-header
+header aside
 {
      background-color : #FFF7;
+     margin : -8px -8px 0px -8px;
+     height : 50px;
 }
-
-body > div
-{
-     background : linear-gradient(transparent, white);
-     margin : 0px -8px;
-     transform: translateY(-40px);
-     height : 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-body > div button
-{
-     padding : 10px;
-     border-radius : 5px;
-     width : 300px;
-     margin : 5px;
-     background : linear-gradient(to right, blue, green);
-     font-size : 20px;
-     transform: translateY(20px);
-     border : none;
-}
-
-body > div a button
-{
-     color : white;
-     text-decoration: none;
-}
-
-/* Stylisation de l'en-tête */
 
 header *
 {
@@ -101,37 +73,24 @@ img[alt="Icone du site"]
      float: left;
 }
 
-@media (min-width : 1280px) /* Ordinateur */
-{
-     img[alt="Icone du site"]
-     {
-          width : 80px;
-          height : 80px;
-     }
-}
-
-@media (max-width : 1280px) /* Mobile */
-{
-     img[alt="Icone du site"]
-     {
-          width : 50px;
-          height : 50px;
-     }
-}
-
-header h1
+header aside h1
 {
      margin : 0px;
-     transform : translate(11px, 11px);
-     width: min-content;
-     white-space : nowrap;
-     display : inline-flex;
+     padding-top : 11px;
+     margin-left : 60px;
 }
 
 #noyauSettings
 {
      float : right;
      margin : 5px;
+     transform: translateY(-40px);
+}
+
+#noyauSettings div
+{
+	display: inline-flex;
+	transform: translateY(-5px);
 }
 
 #noyauSettings img[alt="mode jour"], #noyauSettings img[alt="mode nuit"] 
@@ -141,35 +100,16 @@ header h1
      margin : 5px;
 }
 
-nav
+/* Illustration */
+
+header article *
 {
+     text-align: center;
      width : 100%;
-     overflow: hidden;
-     display: flex;
-}
-
-nav p
-{
-     margin : 5px 10px;
-     display : flex;
-}
-
-nav p:after
-{
-     content : url("https://img.icons8.com/android/10/expand-arrow.png");
-     margin-left : 5px;
-}
-
-/* Stylisation de l'illustration */
-
-aside article
-{
      color : white;
-     text-align: center;     
-     transform : translateY(40px);
 }
 
-aside article button
+header article button
 {
      border : none;
      background-color : #FF000070;
@@ -177,86 +117,80 @@ aside article button
      padding : 10px;
      
      width : 200px;
-     margin-left : auto;
-     margin-right : auto;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
 }
 
-aside article a button
+/* Navigateur */
+
+nav
 {
-     color : white;
-     text-decoration : none;
+     width : 100%;
+     position : relative;
+     display : flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     margin-top : 40%;
 }
 
-/* Stylisation du contenu */
+nav div
+{
+     width : 100px;
+     margin : 0px;
+}
 
-section article
+nav div img
+{
+     width : 100px;
+}
+
+nav div p
+{
+     text-align : center;
+     margin : 0px;
+     margin-top : -10px;
+}
+
+/* Contenu */
+
+section article img
 {
 	width : 100%;
+	margin-top : 20px;
 }
 
 section article h3
 {
-     display : inline-block;
      margin : 0px;
-     transform : translateY(-13px);
+     margin-top : 5px;
 }
 
-.cartesFixes
+section p, section a
 {
-     background-color: silver;
-     border : 2px gray solid;
-     border-radius : 10px;
-     margin : 10px;
-     padding : 10px;
+     margin : 5px 0px;
 }
 
-.cartesDefilantesRect, .cartesDefilantesCarre
+section article a
 {
-	display: inline-flex;
-	width : 100%;
-	overflow-y: scroll;
-	position : relative;
+     color : blue;
+     font-weight: bold;
+     font-size : 16px;
 }
 
-.cartesDefilantesRect div, .cartesDefilantesCarre div
+section article a:after
 {
-	border-radius: 20px;
-	width : 200px;
-	height : 120px;
-	margin : 10px;
-	background-color: #FF000050;
+     content : " >";
 }
 
-.cartesDefilantesCarre div
-{
-	width : 120px;
-	height : 120px;
-	position : relative;
-}
-
-.cartesDefilantesRect div p
-{
-	width: inherit;
-	height: inherit;
-	font-size : 30px;
-	text-align: center;
-	font-weight: bold;
-	margin : 0px;
-	position: absolute;
-}
-
-.cartesDefilantesRect div img
-{
-	border-radius : 20px;
-}
-
-/* Stylisation du pied de page */
+/* Pied de page */
 
 footer
 {
      background-color : #c0c0c0;
      border-top : 3px solid red;
      margin : 10px -8px -10px -8px;
+     padding: 5px;
      
      padding-top : 20px;
 }
@@ -268,14 +202,18 @@ footer img
      border-radius : 100%;
      border : 2px solid red;
      background-color: white;
-     position : absolute;
-
+     transform : translateY(-48px);	
+     position: absolute;
+     left : 50%;
+     right : 50%;
+     transform : translate(-50%, -50%);
 }
 
 footer div
 {
      display : flex;
      justify-content: flex-end;
+     flex-wrap : wrap;
 }
 
 footer select
@@ -291,6 +229,9 @@ footer div a
 {
      text-align: right;
      margin : 10px;
+     width : min-content;
+     margin-left : 40px;
+     margin-top : 0px;
      
      color : black;
      text-decoration: none;
