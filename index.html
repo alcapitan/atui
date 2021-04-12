@@ -2,53 +2,64 @@
 <html lang="fr">
      <head>
           <meta charset="UTF-8">
-          <meta name="description" content="Menu du site noyau pour la v3.">
+          <meta name="description" content="ATUI est une interface utilisateur universelle. Elle vous permet de faire vos pages web rapidement et avoir un résultat élégant.">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Coucou Milan !</title>
-	    <link href="noyauStyle.css" type="text/css" rel="stylesheet">
-	    <link href="style.css" type="type/css" rel="stylesheet">
-	    <link rel="icon" href="noyauIconSite.png">
-	    <!-- https://validator.w3.org/#validate_by_upload -->
+          <title>ATUI</title>
+	    <link href="atuiStyleFresh.css" type="text/css" rel="stylesheet">
+	    <link rel="icon" href="atuiIconSite.png">
      </head>
      <body>
-          <header>
-		     <img src="noyauBackground2.jpg">
+          <header id="header">
+		     <img src="atuiPresentation.jpg">
 		     <aside>
-		          <img alt="Icone du site" src="noyauIconSite.png">
-			     <h1>Coucou Milan !</h1>
+		          <img alt="Icone du site" src="atuiIconSite.png">
+			     <h1>ATUI</h1>
 			     <div id="noyauSettings">
 				    <div>
-			               <img alt="Mode jour" src="noyauNavClair.png">
-			               <img alt="Mode nuit" src="noyauNavSombre.png">
+			               <img alt="Mode jour" class="modeVisuel" src="atuiModeClair.png">
+			               <img alt="Mode nuit" class="modeVisuel" src="atuiModeSombre.png">
+                                       <div id="atuiProfilSettings">
+                                            <img src="atuiInscription.png">
+                                            <p alt="inscription">S'inscrire</p>
+                                            <hr>
+                                            <img src="atuiConnexion.png">
+                                            <p alt="connexion">Se connecter</p>
+                                            <hr>
+                                            <img src="atuiProfil.png">
+                                            <p alt="profil">Profil</p>
+                                            <hr>
+                                            <img src="atuiDeconnexion.png">
+                                            <p alt="deconnexion">Se déconnecter</p>
+                                       </div>
 				    </div>
-			          <img alt="Aucun compte connecté" src="noyauNavCompte.png">
+			          <img alt="Aucun compte connecté" id="atuiProfil" src="atuiNoCompte.png">
 			     </div>
 		     </aside>
 		     <article>
-		          <h2>Coucou Milan !</h2>
-		          <h3>Coucou Milan !</h3>
-		          <button href="https://www.alexb84fr5.github.io/#">Coucou Milan</button>
+		          <h2>Titre</h2>
+		          <h3>Description</h3>
+		          <div><button href="">Lien</button></div>
 		     </article>
           </header>
           <nav>
 	          <div>
-		          <img src="categorie.png">
+		          <img src="atuiCategorie.png">
 			     <p>Catégorie</p>
 		     </div>
 	          <div>
-		          <img src="categorie.png">
+		          <img src="atuiCategorie.png">
 			     <p>Catégorie</p>
 		     </div>
 	          <div>
-		          <img src="categorie.png">
+		          <img src="atuiCategorie.png">
 			     <p>Catégorie</p>
 		     </div>
 	          <div>
-		          <img src="categorie.png">
+		          <img src="atuiCategorie.png">
 			     <p>Catégorie</p>
 		     </div>
 	          <div>
-		          <img src="categorie.png">
+		          <img src="atuiCategorie.png">
 			     <p>Catégorie</p>
 		     </div>
 	     </nav>
@@ -72,17 +83,17 @@
                </article>
           </section>
 		<footer>
-		     <img alt="Remonter en haut de la page" src="https://img.icons8.com/carbon-copy/50/000000/double-up.png">
+		     <a href="#header"><img alt="Remonter en haut de la page" src="https://img.icons8.com/carbon-copy/50/000000/double-up.png"></a>
 		     <div>
 		          <select>
 		               <option>Français</option>
 		               <option>Anglais</option>
 		          </select>
-		          <a href="https://www.alexb84fr5.github.io/mentions-legales">Mentions légales</a>
-		          <a href="https://www.alexb84fr5.github.io/conditions-utilisation">Conditions d'utilisation</a>
+		          <a href="">Mentions légales</a>
+		          <a href="">Conditions d'utilisation</a>
 		     </div>
-		     <p>Ce site est basé sur le noyau ATUI.</p>
+		     <h5>Ce site est basé sur le noyau ATUI avec le style Fresh.</h5>
 		</footer>
-	     <script src="noyauScript.js"></script>
+	     <script src="atuiScript.js"></script>
      </body>
 </html>
