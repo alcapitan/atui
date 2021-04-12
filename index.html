@@ -10,14 +10,14 @@
      </head>
      <body>
           <header id="header">
-		     <img src="atuiPresentation.jpg">
-		     <aside>
+		     <img src="atuiPresentation.jpg" id="atuiPresentation">
+		     <aside id="atuiAside">
 		          <img alt="Icone du site" src="atuiIconSite.png">
 			     <h1>ATUI</h1>
 			     <div id="noyauSettings">
 				    <div>
-			               <img alt="Mode jour" class="modeVisuel" src="atuiModeClair.png">
-			               <img alt="Mode nuit" class="modeVisuel" src="atuiModeSombre.png">
+			               <img alt="Mode jour" class="modeVisuel" src="atuiModeClair.png" onclick="modeSombre()">
+			               <img alt="Mode nuit" class="modeVisuel" src="atuiModeSombre.png" onclick="modeClair()">
                                        <div id="atuiProfilSettings">
                                             <img src="atuiInscription.png">
                                             <p alt="inscription">S'inscrire</p>
@@ -82,7 +82,7 @@
                     <div>Cliquez ici pour voir ma présentation générale !</div>
                </article>
           </section>
-		<footer>
+		<footer id="atuiFooter">
 		     <a href="#header"><img alt="Remonter en haut de la page" src="https://img.icons8.com/carbon-copy/50/000000/double-up.png"></a>
 		     <div>
 		          <select>
