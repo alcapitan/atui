@@ -1,0 +1,315 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+
+body *
+{
+     font-family: 'Red Hat Display', Arial;
+}
+
+img
+{
+     overflow: hidden;
+}
+
+img[alt="Icone du site"]
+{
+     width : 50px;
+     height : 50px;
+}
+
+@media (max-width : 650px) /* Mobile */
+{
+     header > img
+     {
+          height : 50%;
+          width : 100%;
+     }
+}
+
+@media (min-width : 650px) /* Ordi */
+{
+     section
+     {
+          display: inline-flex;
+     }
+
+     section article
+     {
+          width : 40%;
+	    margin : 5px;
+     }
+
+     header > img
+     {
+          width : 100%;
+     }
+}
+
+/* En-tête */
+
+header
+{
+     background-color : #bfbfbf;
+     aspect-ratio : 2/1;
+     margin : -8px -8px 0px -8px;
+     min-height : 231.5px;
+}
+
+header > img
+{
+     position : absolute;
+     background-position: center;
+}
+
+header aside
+{
+     background-color : #FFF7;
+     height : 50px;
+     position : relative;
+}
+
+header *
+{
+     color : black;
+}
+
+img[alt="Icone du site"]
+{
+     float: left;
+}
+
+header aside h1
+{
+     margin : 0px;
+     padding-top : 11px;
+     margin-left : 60px;
+}
+
+#noyauSettings
+{
+     float : right;
+     margin : 5px;
+     transform: translateY(-40px);
+}
+
+#noyauSettings div
+{
+	display: inline-flex;
+	transform: translateY(-5px);
+}
+
+#noyauSettings img[alt="mode jour"], #noyauSettings img[alt="mode nuit"] 
+{
+     width : 30px;
+     height : 30px;
+     margin : 5px;
+     display : none;
+}
+
+/*@media (prefers-color-scheme: light)
+{
+     #noyauSettings img[alt="Mode nuit"]
+     {
+          display : none;
+     }
+}
+
+@media (prefers-color-scheme: dark)
+{
+     #noyauSettings img[alt="Mode jour"]
+     {
+          display : none;
+     }
+} */
+
+#noyauSettings img
+{
+     transform : translateY(-2.5px);
+}
+
+#noyauSettings div div:before
+{
+     content : '▲';
+     position : absolute;
+     color : white;
+     font-size : 20px;
+     transform : translate(178px, -25px);
+}
+
+#noyauSettings div div
+{
+     position : fixed;
+     top : 50px;
+     right : -40px;
+     width : 200px;
+     background-color : white;
+     border-radius : 10px;
+     padding : 5px;
+     display : none;
+     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#noyauSettings div div p, #noyauSettings div div img
+{
+     margin : 5px;
+     height : 21px;
+}
+
+#noyauSettings div div img
+{
+     float : left;
+     margin-top : 7px;
+}
+
+hr
+{
+     border : 1px silver solid;
+     margin : 0px 15px;
+}
+
+/* Illustration */
+
+header article > *
+{
+     width : 100%;
+     color : white;
+     display : flex;
+     justify-content : center;
+     transform : translateY(-25px);
+}
+
+header article button
+{
+     border : none;
+     background-color : #FF000070;
+     font-size : 20px;
+     padding : 10px;
+     color : white;
+     
+     width : 200px;
+     position: absolute;
+}
+
+/* Navigateur */
+
+nav
+{
+     width : 100%;
+     position : relative;
+     display : flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+}
+
+nav div
+{
+     width : 100px;
+     margin : 0px;
+}
+
+nav div img
+{
+     width : 100px;
+}
+
+nav div p
+{
+     text-align : center;
+     margin : 0px;
+     margin-top : -10px;
+}
+
+/* Contenu */
+
+section article img
+{
+	width : 100%;
+	margin-top : 20px;
+}
+
+section article h3
+{
+     margin : 0px;
+     margin-top : 5px;
+}
+
+section p, section a
+{
+     margin : 5px 0px;
+}
+
+section article a
+{
+     color : blue;
+     font-weight: bold;
+     font-size : 16px;
+}
+
+section article a:after
+{
+     content : " >";
+}
+
+/* Pied de page */
+
+footer
+{
+     background-color : #c0c0c0;
+     border-top : 3px solid red;
+     margin : 10px -8px -10px -8px;
+     padding: 5px;
+     
+     padding-top : 20px;
+}
+
+footer img
+{
+     width : 50px;
+     height : 50px;
+     border-radius : 100%;
+     border : 2px solid red;
+     background-color: white;
+     position: absolute;
+     left : 50%;
+     right : 50%;
+     transform : translate(-50%, -50px);
+}
+
+footer div
+{
+     display : flex;
+     justify-content: flex-end;
+     flex-wrap : wrap;
+     margin-top : 20px;
+}
+
+footer select
+{
+     border : 2px black solid;
+     background-color: white;
+     padding : 5px;
+     width : 100px;
+     height : 40px;
+}
+
+footer div a
+{
+     text-align: right;
+     margin : 10px;
+     width : min-content;
+     margin-left : 40px;
+     margin-top : 0px;
+     
+     color : black;
+     text-decoration: none;
+}
+
+footer > h5
+{
+     margin : 20px;
+     text-align: right;
+     color : #666666;
+     font-weight : 1000;
+     font-size : 14px;
+}
