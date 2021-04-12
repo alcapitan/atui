@@ -99,7 +99,7 @@ header aside h1
 	transform: translateY(-5px);
 }
 
-#noyauSettings img[alt="mode jour"], #noyauSettings img[alt="mode nuit"] 
+#noyauSettings div > img
 {
      width : 30px;
      height : 30px;
@@ -160,6 +160,8 @@ header aside h1
 {
      float : left;
      margin-top : 7px;
+     display : block;
+     width : 21px;
 }
 
 hr
