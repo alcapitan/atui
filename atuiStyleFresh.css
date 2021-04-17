@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
 
+body
+{
+     margin : 0px;
+}
+
 body *
 {
      font-family: 'Red Hat Display', Arial;
@@ -18,15 +23,6 @@ img[alt="Icone du site"]
      height : 50px;
 }
 
-@media (max-width : 650px) /* Mobile */
-{
-     header > img
-     {
-          height : 50%;
-          width : 100%;
-     }
-}
-
 @media (min-width : 650px) /* Ordi */
 {
      section
@@ -36,13 +32,8 @@ img[alt="Icone du site"]
 
      section article
      {
-          width : 40%;
-	    margin : 5px;
-     }
-
-     header > img
-     {
-          width : 100%;
+           width : 40%;
+	   margin : 5px;
      }
 }
 
@@ -51,15 +42,10 @@ img[alt="Icone du site"]
 header
 {
      background-color : #bfbfbf;
-     aspect-ratio : 2/1;
-     margin : -8px -8px 0px -8px;
-     min-height : 231.5px;
-}
-
-header > img
-{
-     position : absolute;
-     background-position: center;
+     background-image : url(atuiPresentation.jpg);
+     height : 50vh;
+     background-size : cover;
+     background-position : center center;
 }
 
 header aside
@@ -224,6 +210,11 @@ nav div p
 
 /* Contenu */
 
+section
+{
+     padding : 10px;
+}
+
 section article img
 {
 	width : 100%;
@@ -259,7 +250,7 @@ footer
 {
      background-color : #c0c0c0;
      border-top : 3px solid red;
-     margin : 10px -8px -10px -8px;
+     margin : 40px 0px -10px 0px;
      padding: 5px;
      
      padding-top : 20px;
