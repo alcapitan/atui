@@ -120,13 +120,14 @@ header aside h1
      position : absolute;
      color : white;
      font-size : 20px;
-     transform : translate(178px, -25px);
+     top : -20px;
+     right : 7px;
 }
 
 #noyauSettings div div
 {
      position : fixed;
-     top : 50px;
+     top : 55px;
      right : -40px;
      width : 200px;
      background-color : white;
@@ -234,7 +235,7 @@ section p, section a
 
 section article a
 {
-     color : blue;
+     color : red;
      font-weight: bold;
      font-size : 16px;
 }
