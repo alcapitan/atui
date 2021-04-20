@@ -17,7 +17,6 @@ profil.addEventListener('click', event =>
      }
 });
 
-
 var modeVisuel = document.getElementsByClassName('modeVisuel');
 var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
 function modeSombre()

@@ -12,17 +12,6 @@ body *
      font-family: 'Red Hat Display', Arial;
 }
 
-img
-{
-     overflow: hidden;
-}
-
-img[alt="Icone du site"]
-{
-     width : 50px;
-     height : 50px;
-}
-
 @media (min-width : 650px) /* Ordi */
 {
      section
@@ -32,8 +21,8 @@ img[alt="Icone du site"]
 
      section article
      {
-           width : 40%;
-	   margin : 5px;
+          width : 40%;
+	  margin : 5px;
      }
 }
 
@@ -45,76 +34,53 @@ header
      background-image : url(atuiPresentation.jpg);
      height : 50vh;
      background-size : cover;
-     background-position : center center;
+     background-position : center;
 }
 
 header aside
 {
      background-color : #FFF7;
      height : 50px;
-     position : relative;
-}
-
-header *
-{
-     color : black;
 }
 
 img[alt="Icone du site"]
 {
      float: left;
+     height : 50px;
 }
 
-header aside h1
+header aside > a
 {
      margin : 0px;
-     padding-top : 11px;
+     padding-top : 4px;
      margin-left : 60px;
+     color : black;
+     text-decoration : none;
+     font-size : 30px;
+     font-weight : bold;
+     display : block;
 }
 
-#noyauSettings
+#atuiSettings
 {
      float : right;
      margin : 5px;
-     transform: translateY(-40px);
+     transform: translateY(-43.5px);
 }
 
-#noyauSettings div
+#atuiSettingsModeVisuel
 {
-	display: inline-flex;
-	transform: translateY(-5px);
+     display: inline-flex;
 }
 
-#noyauSettings div > img
+#atuiSettingsModeVisuel img
 {
-     width : 30px;
-     height : 30px;
      margin : 5px;
      display : none;
+     transform : translateY(-5px);
 }
 
-/*@media (prefers-color-scheme: light)
-{
-     #noyauSettings img[alt="Mode nuit"]
-     {
-          display : none;
-     }
-}
-
-@media (prefers-color-scheme: dark)
-{
-     #noyauSettings img[alt="Mode jour"]
-     {
-          display : none;
-     }
-} */
-
-#noyauSettings img
-{
-     transform : translateY(-2.5px);
-}
-
-#noyauSettings div div:before
+#atuiProfilSettings:before
 {
      content : '▲';
      position : absolute;
@@ -124,11 +90,11 @@ header aside h1
      right : 7px;
 }
 
-#noyauSettings div div
+#atuiProfilSettings
 {
      position : fixed;
      top : 55px;
-     right : -40px;
+     right : 3px;
      width : 200px;
      background-color : white;
      border-radius : 10px;
@@ -137,21 +103,22 @@ header aside h1
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-#noyauSettings div div p, #noyauSettings div div img
+#atuiProfilSettings a
 {
+     margin : 5px;
+     display : block;
+     color : black;
+     text-decoration : none;
+}
+
+#atuiProfilSettings img
+{
+     float : left;
      margin : 5px;
      height : 21px;
 }
 
-#noyauSettings div div img
-{
-     float : left;
-     margin-top : 7px;
-     display : block;
-     width : 21px;
-}
-
-hr
+#atuiProfilSettings hr
 {
      border : 1px silver solid;
      margin : 0px 15px;
@@ -165,44 +132,40 @@ header article > *
      color : white;
      display : flex;
      justify-content : center;
-     transform : translateY(-25px);
 }
 
 header article button
 {
      border : none;
      background-color : #FF000070;
-     font-size : 20px;
+     font-size : 21px;
      padding : 10px;
      color : white;
-     
      width : 200px;
-     position: absolute;
 }
 
 /* Navigateur */
 
 nav
 {
-     width : 100%;
-     position : relative;
      display : flex;
      justify-content: space-around;
      flex-wrap: wrap;
+     margin : 5px;
 }
 
-nav div
+nav a
+{
+     color : black;
+     text-decoration : none;
+}
+
+nav a img
 {
      width : 100px;
-     margin : 0px;
 }
 
-nav div img
-{
-     width : 100px;
-}
-
-nav div p
+nav a p
 {
      text-align : center;
      margin : 0px;
@@ -213,13 +176,19 @@ nav div p
 
 section
 {
-     padding : 10px;
+     margin : 10px;
+     flex-wrap : wrap;
+     justify-content: space-around;
+}
+
+section article
+{
+     margin-bottom : 20px;
 }
 
 section article img
 {
-	width : 100%;
-	margin-top : 20px;
+     width : 100%;
 }
 
 section article h3
@@ -228,7 +197,7 @@ section article h3
      margin-top : 5px;
 }
 
-section p, section a
+section article p, section article a
 {
      margin : 5px 0px;
 }
@@ -245,28 +214,31 @@ section article a:after
      content : " >";
 }
 
+section article a:hover
+{
+     text-decoration : underline;
+}
+
 /* Pied de page */
 
 footer
 {
      background-color : #c0c0c0;
      border-top : 3px solid red;
-     margin : 40px 0px -10px 0px;
+     margin-top : 40px;
      padding: 5px;
-     
      padding-top : 20px;
+     padding-bottom : 60px;
 }
 
 footer img
 {
      width : 50px;
-     height : 50px;
      border-radius : 100%;
-     border : 2px solid red;
+     border : 3px solid red;
      background-color: white;
      position: absolute;
      left : 50%;
-     right : 50%;
      transform : translate(-50%, -50px);
 }
 
@@ -294,16 +266,16 @@ footer div a
      width : min-content;
      margin-left : 40px;
      margin-top : 0px;
-     
      color : black;
      text-decoration: none;
 }
 
-footer > h5
+footer > a
 {
      margin : 20px;
-     text-align: right;
+     float : right;
      color : #666666;
-     font-weight : 1000;
+     font-weight : bold;
      font-size : 14px;
+     text-decoration : none;
 }
