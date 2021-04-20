@@ -207,6 +207,7 @@ section article a
      color : red;
      font-weight: bold;
      font-size : 16px;
+     text-decoration : none;
 }
 
 section article a:after
@@ -239,7 +240,7 @@ footer img
      background-color: white;
      position: absolute;
      left : 50%;
-     transform : translate(-50%, -50px);
+     transform : translate(-50%, -70px);
 }
 
 footer div
