@@ -1,11 +1,11 @@
-# ATUI (Alex Technologies Utilisateur Interface)
+# ATUI (Alex Technologies User Interface)
   
-ATUI est une interface utilisateur universelle.  
-C'est à dire quelle est une base CSS et JavaScript pour coder votre site web plus rapidement car vous n'avez plus besoin de faire de CSS (le JavaScript permet le dynamise du CSS).  
-Cette base est fait pour être la plus compatible (Chrome, Edge et Firefox), et performante (grâce aux conseil du Vérificateur du W3C et Google Insights) possible.  
+ATUI est un framework web front-end.  
+C'est à dire que c'est une base CSS et JavaScript pour coder votre site web plus rapidement car vous n'avez plus besoin de faire de CSS (le JavaScript permet le dynamise du CSS).  
+Cette base est faite pour être la plus compatible (Chrome, Edge et Firefox), et performante (grâce aux conseil du Vérificateur du W3C et Google Insights) possible.  
 Elle est optimisé pour les faibles connexions et performances.  
   
-Information : JavaScript peut être désactivé sans que ATUI crashe, seul des fonctionnalités ne fonctionneront plus.  
+_Information : JavaScript peut être désactivé sans que ATUI crashe, seul des fonctionnalités ne fonctionneront plus._  
   
 ## Comment l'utiliser ?
 
@@ -29,7 +29,8 @@ Si j'en juge utile, je peux vous mettre en contributeur du projet, sous réserve
 ## Licences
 
 Ce projet est sous licence <a href="https://github.com/alcapitan/atui/blob/public/LICENSE.md">GNU General Public Licence</a>.  
-<a href="https://developers.google.com/speed/pagespeed/insights/?hl=fr">Google Insights</a> est un site créé par Google.  
+Les conseils d'optimisation sont fait par <a href="https://developers.google.com/speed/pagespeed/insights/?hl=fr">Google Insights</a>.  
+La police d'écriture (<a href="https://fonts.google.com/specimen/Red+Hat+Display?query=red+hat+dis">Red Hat Display</a>) vient de <a href="https://fonts.google.com">Google Fonts</a>.  
 Les icônes présent sur ce projet viennent de <a href="https://icones8.fr/">Icones8</a>.  
 Et les illustrations proviennent de <a href="https://www.pexels.com/fr-fr/">Pexels</a>.  
   
