@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
      <head>
           <meta charset="UTF-8">
           <meta name="description" content="ATUI est une interface utilisateur universelle. Elle vous permet de faire vos pages web rapidement et avoir un résultat élégant.">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>ATUI</title>
           <link href="atuiStyle.css" type="text/css" rel="stylesheet">
-          <link rel="icon" href="medias/atuiIcon.png">
+          <link rel="icon" href="medias/logo atui.png">
      </head>
      <body>
           <header id="atuiHeader">
                <aside>
-                    <img alt="Icone du site" src="medias/atuiIcon.png">
+                    <img alt="Icone du site" src="medias/patch/logo atui.png">
                     <a href="#">ATUI</a>
                     <div id="atuiSettings">
                          <div id="atuiSettingsModeVisuel">
-                              <img alt="Mode jour" class="modeVisuel" src="medias/atuiModeClair.png" onclick="modeSombre()">
-                              <img alt="Mode nuit" class="modeVisuel" src="medias/atuiModeSombre.png" onclick="modeClair()">
+                              <img alt="Mode jour" class="modeVisuel" src="medias/icons/mode clair.png" onclick="modeSombre()" style="display: block;">
+                              <img alt="Mode nuit" class="modeVisuel" src="medias/icons/mode sombre.png" onclick="modeClair()">
                          </div>
-                         <img alt="Aucun compte connecté" id="atuiProfil" src="medias/atuiNoCompte.png">
+                         <img alt="Aucun compte connecté" id="atuiProfil" src="medias/icons/aucun compte.png">
                          <div id="atuiProfilSettings">
-                              <img src="medias/atuiInscription.png" alt="icone inscription">
+                              <img src="medias/icons/inscription.png" alt="icone inscription">
                               <a href="#" alt="inscription">S'inscrire</a>
                               <hr>
-                              <img src="medias/atuiConnexion.png" alt="icone connexion">
+                              <img src="medias/icons/connexion.png" alt="icone connexion">
                               <a href="#" alt="connexion">Se connecter</a>
                               <hr>
-                              <img src="medias/atuiProfil.png" alt="icone profil">
-                              <a href="#" alt="profil">Profil</a>
-                              <hr>
-                              <img src="medias/atuiDeconnexion.png" alt="icone deconnexion">
+                              <img src="medias/icons/deconnexion.png" alt="icone deconnexion">
                               <a href="#" alt="deconnexion">Se déconnecter</a>
+                              <hr>
+                              <img src="medias/icons/profil.png" alt="icone profil">
+                              <a href="#" alt="profil">Profil</a>
                          </div>
                     </div>
                </aside>
@@ -42,46 +42,52 @@
           </header>
           <nav>
                <a href="#">
-                    <img src="medias/atuiCategorie.png" alt="icone categorie">
+                    <img src="medias/icons/categorie.png" alt="icone categorie">
                     <p>Catégorie</p>
                </a>
                <a href="#">
-                    <img src="medias/atuiCategorie.png" alt="icone categorie">
+                    <img src="medias/icons/categorie.png" alt="icone categorie">
                     <p>Catégorie</p>
                </a>
                <a href="#">
-                    <img src="medias/atuiCategorie.png" alt="icone categorie">
+                    <img src="medias/icons/categorie.png" alt="icone categorie">
                     <p>Catégorie</p>
                </a>
                <a href="#">
-                    <img src="medias/atuiCategorie.png" alt="icone categorie">
+                    <img src="medias/icons/categorie.png" alt="icone categorie">
                     <p>Catégorie</p>
                </a>
                <a href="#">
-                    <img src="medias/atuiCategorie.png" alt="icone categorie">
+                    <img src="medias/icons/categorie.png" alt="icone categorie">
                     <p>Catégorie</p>
                </a>
           </nav>
           <section>
                <article>
-                    <img src="medias/documentationIllustration.jpg" alt="illustration performance">
+                    <img src="medias/illustrations/presentation.jpg" alt="illustration présentation">
+                    <h3>Qu'est-ce que ATUI ?</h3>
+                    <p>A quoi sert ATUI, quelles particularités à t'il ?</p>
+                    <a href="#">En savoir plus</a>
+               </article>
+               <article>
+                    <img src="medias/illustrations/documentation.jpg" alt="illustration documentation">
                     <h3>Comment l'utiliser pour son site ?</h3>
                     <p>Le guide d'utilisation est présent dans le wiki sur GitHub. Tout y est expliqué pour une utilisation complète et claire.</p>
                     <a href="#">Lire la documentation</a>
                </article>
                <article>
-                    <img src="medias/exemplesIllustration.jpg" alt="illustration produits">
+                    <img src="medias/illustrations/exemples.jpg" alt="illustration exemples">
                     <h3>Plusieurs sites déjà basés sur ATUI</h3>
                     <p>Visitez ces sites web pour voir la variété de possibilités offertes par ATUI.</p>
                     <a href="#">Voir les sites basés sur ATUI</a>
                </article>
           </section>
           <footer>
-               <a href="#atuiHeader"><img alt="Remonter en haut de la page" src="medias/atuiRemonter.png"></a>
+               <a href="#atuiHeader"><img alt="Remonter en haut de la page" src="medias/icons/remonter.png"></a>
                <div id="atuiContacts">
                     <p>Contacts</p>
                     <div id="atuiContactsLarge">
-
+     
                     </div>
                     <div id="atuiContactsListe">
                          <a href="https://github.com/alcapitan/atui"><img src="medias/contacts/github.png" alt="Logo GitHub"></a>
@@ -89,6 +95,15 @@
                     </div>
                </div>
                <div id="atuiExploreFooter">
+                    <div>
+                         <p>Plan du site</p>
+                         <li>
+                              <a href="#">Documentation</a>
+                         </li>
+                         <li>
+                              <a href="#">Exemples d'utilisation</a>
+                         </li>
+                    </div>
                     <div>
                          <p>Options</p>
                          <li>
@@ -99,15 +114,6 @@
                               </select>
                          </li>
                     </div>
-                    <div>
-                         <p>Plan du site</p>
-                         <li>
-                              <a href="#">Documentation</a>
-                         </li>
-                         <li>
-                              <a href="#">Exemples d'utilisation</a>
-                         </li>
-                    </div>
                </div>
                <div id="atuiPlugin">
                     <p>Ce site a été réalisé à partir de ATUI beta2</p>
@@ -116,5 +122,6 @@
                </div>
           </footer>
           <script src="atuiScript.js"></script>
+     
      </body>
 </html>
