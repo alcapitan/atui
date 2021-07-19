@@ -46,7 +46,7 @@ header
 
 header aside
 {
-     background-color : #FFF7;
+     background-color : rgba(255,255,255,0.7);
      height : 50px;
 }
 
@@ -59,13 +59,13 @@ img[alt="Icone du site"]
 header aside > a
 {
      margin : 0px;
-     padding-top : 4px;
-     margin-left : 60px;
+     margin-top : 4px;
+     transform: translateX(20px);
      color : black;
      text-decoration : none;
      font-size : 30px;
      font-weight : bold;
-     display : block;
+     display : inline-block;
      font-family : "Red Hat Display";
 }
 
@@ -75,7 +75,6 @@ header aside > a
 {
      float : right;
      margin : 5px;
-     transform: translateY(-43.5px);
 }
 
 #atuiSettingsModeVisuel
@@ -154,7 +153,7 @@ header article h2
 header article button
 {
      border : none;
-     background-color : #FF000070;
+     background-color : rgba(255,0,0,0.7);
      font-size : 21px;
      padding : 10px;
      color : white;
@@ -251,7 +250,6 @@ footer
      margin-top : 40px;
      padding: 5px;
      padding-top : 0px;
-     padding-bottom : 20px;
 }
 
 footer > a img
@@ -262,7 +260,7 @@ footer > a img
      background-color: white;
      position: absolute;
      left : 50%;
-     transform : translate(-50%, -50px);
+     transform : translate(-50%, -30px);
 }
 
 /* Contacts */
@@ -270,6 +268,12 @@ footer > a img
 #atuiContacts
 {
      margin : 10px;
+}
+
+#atuiContacts > p
+{
+     font-family: "Red Hat Display";
+     font-weight: bold;
 }
 
 #atuiContacts a
@@ -287,9 +291,31 @@ footer > a img
 #atuiExploreFooter
 {
      display : flex;
-     justify-content: flex-end;
+     justify-content: space-around;
      flex-wrap : wrap;
      margin-top : 20px;
+}
+
+#atuiExploreFooter div p
+{
+     font-weight: bold;
+     font-size : 18px;
+     margin : 15px 0px;
+     font-family: "Red Hat Display";
+}
+
+#atuiExploreFooter div li
+{
+     list-style: none;
+     margin : 8px;
+     margin-left : 15px;
+     font-size : 16px;
+}
+
+#atuiExploreFooter div li a
+{
+     color : black;
+     text-decoration: none;
 }
 
 footer select
@@ -299,15 +325,21 @@ footer select
      padding : 5px;
      width : 100px;
      height : 40px;
+     border-radius: 10px;
 }
 
-#atuiExploreFooter a
+/* Plug-in */
+
+#atuiPlugin
 {
-     text-align: right;
+     background-color: red;
+     display : flex;
+     justify-content: space-around;
+     margin : 30px -5px -5px -5px;
+}
+
+#atuiPlugin *
+{
+     color : white;
      margin : 10px;
-     width : min-content;
-     margin-left : 40px;
-     margin-top : 0px;
-     color : black;
-     text-decoration: none;
 }
