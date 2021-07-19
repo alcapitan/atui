@@ -6,12 +6,12 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>ATUI</title>
           <link href="atuiStyle.css" type="text/css" rel="stylesheet">
-          <link rel="icon" href="medias/atuiIconSite.png">
+          <link rel="icon" href="medias/atuiIcon.png">
      </head>
      <body>
           <header id="atuiHeader">
                <aside>
-                    <img alt="Icone du site" src="medias/atuiIconSite.png">
+                    <img alt="Icone du site" src="medias/atuiIcon.png">
                     <a href="#">ATUI</a>
                     <div id="atuiSettings">
                          <div id="atuiSettingsModeVisuel">
@@ -79,15 +79,40 @@
           <footer>
                <a href="#atuiHeader"><img alt="Remonter en haut de la page" src="medias/atuiRemonter.png"></a>
                <div id="atuiContacts">
-                    <a href="https://github.com/alcapitan/atui"><img src="medias/github.png" alt="Logo GitHub"></a>
-                    <a href="https://instagram.com/al.capitan"><img src="medias/instagram.png" alt="Logo Instagram"></a>
+                    <p>Contacts</p>
+                    <div id="atuiContactsLarge">
+
+                    </div>
+                    <div id="atuiContactsListe">
+                         <a href="https://github.com/alcapitan/atui"><img src="medias/contacts/github.png" alt="Logo GitHub"></a>
+                         <a href="https://instagram.com/al.capitan"><img src="medias/contacts/instagram.png" alt="Logo Instagram"></a>
+                    </div>
                </div>
                <div id="atuiExploreFooter">
-                    <select>
-                         <option>Français</option>
-                         <option>Anglais</option>
-                    </select>
-                    <a href="#">Conditions d'utilisation</a>
+                    <div>
+                         <p>Options</p>
+                         <li>
+                              <!-- https://img.icons8.com/ios/50/000000/translation.png -->
+                              <select>
+                                   <option>Français</option>
+                                   <option>Anglais</option>
+                              </select>
+                         </li>
+                    </div>
+                    <div>
+                         <p>Plan du site</p>
+                         <li>
+                              <a href="#">Documentation</a>
+                         </li>
+                         <li>
+                              <a href="#">Exemples d'utilisation</a>
+                         </li>
+                    </div>
+               </div>
+               <div id="atuiPlugin">
+                    <p>Ce site a été réalisé à partir de ATUI beta2</p>
+                    <a href="#">Conditions d'utilisation d'ATUI</a>
+                    <a href="#">En savoir plus sur ATUI</a>
                </div>
           </footer>
           <script src="atuiScript.js"></script>
