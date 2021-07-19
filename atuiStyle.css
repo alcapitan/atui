@@ -13,6 +13,8 @@ body *
      font-family: 'Montserrat', Arial;
 }
 
+/* Responsives et importations */
+
 @media (min-width : 650px) /* Ordi */
 {
      header
@@ -31,21 +33,7 @@ body *
      }
 }
 
-@keyframes kenburns-bottom
-{
-     0%
-     {
-          transform: scale(1) translateY(0);
-          transform-origin: 50% 84%;
-     }
-     100%
-     {
-          transform: scale(1.25) translateY(15px);
-          transform-origin: bottom;
-     }
-}
-
-/* En-tête */
+/* Barre d'en tête */
 
 header
 {
@@ -54,11 +42,6 @@ header
      height : 50vh;
      background-size : cover;
      background-position : center;
-}
-
-.kenburns-bottom
-{
-	animation: kenburns-bottom 5s ease-out both;
 }
 
 header aside
@@ -85,6 +68,8 @@ header aside > a
      display : block;
      font-family : "Red Hat Display";
 }
+
+/* Barre d'option profil */
 
 #atuiSettings
 {
@@ -266,13 +251,7 @@ footer
      margin-top : 40px;
      padding: 5px;
      padding-top : 0px;
-     padding-bottom : 60px;
-}
-
-#atuiContacts
-{
-     border : 1px lime solid;
-     float : left;
+     padding-bottom : 20px;
 }
 
 footer > a img
@@ -286,21 +265,26 @@ footer > a img
      transform : translate(-50%, -50px);
 }
 
+/* Contacts */
+
 #atuiContacts
 {
-     position : absolute;
-     margin : 0px;
-     left : 0px;
+     margin : 10px;
+}
+
+#atuiContacts a
+{
+     margin-right : 5px;
 }
 
 #atuiContacts a img
 {
      height : 50px;
-     float : left;
-     margin : 0px;
 }
 
-footer div
+/* Explorateur footer */
+
+#atuiExploreFooter
 {
      display : flex;
      justify-content: flex-end;
@@ -317,7 +301,7 @@ footer select
      height : 40px;
 }
 
-footer div a
+#atuiExploreFooter a
 {
      text-align: right;
      margin : 10px;
