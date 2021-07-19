@@ -1,3 +1,5 @@
+/* Options profil */
+
 var profil = document.getElementById('atuiProfil');
 var profilSettings = document.getElementById('atuiProfilSettings');
 var profilSettingsDisplay = "none";
@@ -16,6 +18,8 @@ profil.addEventListener('click', event =>
           return;
      }
 });
+
+/* Mode clair/sombre */
 
 var modeVisuel = document.getElementsByClassName('modeVisuel');
 var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
@@ -38,3 +42,34 @@ function modeClair()
      atuiHeader.style.backgroundColor = "#FFF7";
 }
 modeVisuel[0].style.display  = "block";
+
+/* Exclusion d'Internet Explorer */
+
+//renvoie version de IE ou false, si le navigateur n'est pas IE
+function IEdetection()
+{
+     var ua = window.navigator.userAgent;
+     var msie = ua.indexOf('MSIE ');
+     if (msie > 0)
+     {
+          // IE 10 ou plus ancien, renvoie le nombre de version
+          return ('IE ' + parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10));
+     }
+     var trident = ua.indexOf('Trident/');
+     if (trident > 0)
+     {
+          // IE 11, renvoie le nombre de version
+          var rv = ua.indexOf('rv:');
+              return ('IE ' + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10));
+     }
+     var edge = ua.indexOf('Edge/');
+     if (edge > 0) {
+          //Edge (IE 12+), renvoie le nombre de version
+          return ('IE ' + parseInt(ua.substring(
+          edge + 5, ua.indexOf('.', edge)), 10));
+     }
+     // L'utilisateur utilise un autre navigateur
+     return ('Not IE');
+}
+var result = IEdetection();
+console.log(result);

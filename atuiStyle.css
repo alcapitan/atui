@@ -39,7 +39,7 @@ header
 {
      background-color : #bfbfbf;
      background-image : url(medias/illustrations/presentation.jpg);
-     height : 50vh;
+     height : 70vh;
      background-size : cover;
      background-position : center;
 }
@@ -69,7 +69,7 @@ header aside > a
      font-family : "Red Hat Display";
 }
 
-/* Barre d'option profil */
+/* Options profil */
 
 #atuiSettings
 {
@@ -95,15 +95,15 @@ header aside > a
      position : absolute;
      color : white;
      font-size : 20px;
-     top : -19px;
-     right : 7px;
+     top : -15px;
+     right : 10px;
 }
 
 #atuiProfilSettings
 {
      position : absolute;
      top : 55px;
-     right : 3px;
+     right : 5px;
      width : 200px;
      background-color : white;
      border-radius : 10px;
