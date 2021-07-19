@@ -38,7 +38,7 @@ body *
 header
 {
      background-color : #bfbfbf;
-     background-image : url(medias/atuiPresentation1.jpg);
+     background-image : url(medias/illustrations/presentation.jpg);
      height : 50vh;
      background-size : cover;
      background-position : center;
@@ -95,13 +95,13 @@ header aside > a
      position : absolute;
      color : white;
      font-size : 20px;
-     top : -20px;
+     top : -19px;
      right : 7px;
 }
 
 #atuiProfilSettings
 {
-     position : fixed;
+     position : absolute;
      top : 55px;
      right : 3px;
      width : 200px;
@@ -118,6 +118,7 @@ header aside > a
      display : block;
      color : black;
      text-decoration : none;
+     font-size : 18px;
 }
 
 #atuiProfilSettings img
@@ -168,7 +169,7 @@ nav
      display : flex;
      justify-content: space-around;
      flex-wrap: wrap;
-     margin : 5px;
+     margin : 10px;
 }
 
 nav a
@@ -186,7 +187,6 @@ nav a p
 {
      text-align : center;
      margin : 0px;
-     margin-top : -10px;
 }
 
 /* Contenu */
@@ -194,7 +194,7 @@ nav a p
 section
 {
      margin : 20px;
-     margin-top : 30px;
+     margin-top : 15px;
      flex-wrap : wrap;
      justify-content: space-around;
 }
@@ -316,6 +316,11 @@ footer > a img
 {
      color : black;
      text-decoration: none;
+}
+
+#atuiExploreFooter div li a:hover
+{
+     text-decoration : underline;
 }
 
 footer select
