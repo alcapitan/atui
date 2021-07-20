@@ -11,29 +11,75 @@
      <body>
           <header id="atuiHeader">
                <aside>
-                    <nav>
-                         <img src="medias/icons/menu.png" alt="menu">
-                    </nav>
-                    <img alt="Icone du site" src="medias/patch/logo atui.png">
-                    <a href="#">ATUI</a>
-                    <div id="atuiSettings">
-                         <div id="atuiSettingsModeVisuel">
+                    <div id="atuiHeaderBarLeft">
+                         <nav id="atuiNavStyleFloatingLeft">
+                              <img src="medias/icons/menu.png" alt="menu">
+                              <aside>
+                                   <a href="#">
+                                        <div>
+                                             <img src="medias/icons/categorie.png" alt="icone categorie">
+                                             <p>Catégorie</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <img src="medias/icons/categorie.png" alt="icone categorie">
+                                             <p>Catégorie</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <img src="medias/icons/categorie.png" alt="icone categorie">
+                                             <p>Catégorie</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <img src="medias/icons/categorie.png" alt="icone categorie">
+                                             <p>Catégorie</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <img src="medias/icons/categorie.png" alt="icone categorie">
+                                             <p>Catégorie</p>
+                                        </div>
+                                   </a>
+                              </aside>
+                         </nav>
+                         <a href="#">
+                              <img alt="Icone du site" src="medias/patch/logo atui.png">
+                              <p>ATUI</p>
+                         </a>
+                    </div>
+                    <div id="atuiHeaderBarCenter">
+
+                    </div>
+                    <div id="atuiHeaderBarRight">
+                         <!--<div id="atuiSettingsModeVisuel">
                               <img alt="Mode jour" class="modeVisuel" src="medias/icons/mode clair.png" onclick="modeSombre()" style="display: block;">
                               <img alt="Mode nuit" class="modeVisuel" src="medias/icons/mode sombre.png" onclick="modeClair()">
-                         </div>
-                         <img alt="Aucun compte connecté" id="atuiProfil" src="medias/icons/aucun compte.png">
-                         <div id="atuiProfilSettings">
-                              <img src="medias/icons/inscription.png" alt="icone inscription">
-                              <a href="#" alt="inscription">S'inscrire</a>
-                              <hr>
-                              <img src="medias/icons/connexion.png" alt="icone connexion">
-                              <a href="#" alt="connexion">Se connecter</a>
-                              <hr>
-                              <img src="medias/icons/deconnexion.png" alt="icone deconnexion">
-                              <a href="#" alt="deconnexion">Se déconnecter</a>
-                              <hr>
-                              <img src="medias/icons/profil.png" alt="icone profil">
-                              <a href="#" alt="profil">Profil</a>
+                         </div> -->
+                         <div id="atuiSettingsAccount">
+                              <img alt="Aucun compte connecté" src="medias/icons/aucun compte.png">
+                              <aside>
+                                   <div>
+                                        <img src="medias/icons/inscription.png" alt="icone inscription">
+                                        <a href="#" alt="inscription">S'inscrire</a>
+                                   </div>
+                                   <div>
+                                        <img src="medias/icons/connexion.png" alt="icone connexion">
+                                        <a href="#" alt="connexion">Se connecter</a>
+                                   </div>
+                                   <div>
+                                        <img src="medias/icons/deconnexion.png" alt="icone deconnexion">
+                                        <a href="#" alt="deconnexion">Se déconnecter</a>
+                                   </div>
+                                   <div>
+                                        <img src="medias/icons/profil.png" alt="icone profil">
+                                        <a href="#" alt="profil">Profil</a>
+                                   </div>
+                              </aside>
                          </div>
                     </div>
                </aside>
@@ -127,7 +173,29 @@
                     <a href="#">En savoir plus sur ATUI</a>
                </div>
           </footer>
+          <aside id="atuiBoot">
+               <article>
+                    <header>
+                         <h2>Navigateur non supporté !</h2>
+                    </header>
+                    <section>
+                         <p>Ce site a détécté que vous utilisez Internet Explorer ou Edge Legacy (ancien Edge).<br>
+                            Donc vous n'aurez pas accès au site.</p>
+                         <p>Il est bénéfique pour vous (sécurité, performances et modernité) de mettre à jour votre ordinateur, ou d'installer Edge Chromium (nouveau Edge).</p>
+                    </section>
+                    <footer>
+                         <a href="https:///www.microsoft.com/fr-fr/edge">
+                              <button style="background-color : rgb(230, 46, 0);">Installer Edge Chromium</button>
+                         </a>
+                    </footer>
+               </article>
+               <article>
+                    <!-- JavaScript -->
+               </article>
+               <article>
+                    <!-- Cookies -->
+               </article>
+          </aside>
           <script src="atuiScript.js"></script>
-     
      </body>
 </html>
