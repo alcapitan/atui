@@ -1,50 +1,6 @@
-/* Options profil */
+// Exclusion d'Internet Explorer
 
-var profil = document.getElementById('atuiProfil');
-var profilSettings = document.getElementById('atuiProfilSettings');
-var profilSettingsDisplay = "none";
-profil.addEventListener('click', event =>
-{
-     if (profilSettingsDisplay == "block")
-     {
-          profilSettings.style.display = "none";
-          profilSettingsDisplay = "none";
-          return;
-     }
-     if (profilSettingsDisplay == "none")
-     {
-          profilSettings.style.display = "block";
-          profilSettingsDisplay = "block";
-          return;
-     }
-});
-
-/* Mode clair/sombre */
-
-var modeVisuel = document.getElementsByClassName('modeVisuel');
-var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
-function modeSombre()
-{
-     console.log('Mode Sombre appliqué');
-     modeVisuel[0].style.display  = "none";
-     modeVisuel[1].style.display  = "block";
-     document.childNodes[1].childNodes[2].style.filter = "brightness(0.5)";
-     document.childNodes[1].childNodes[2].style.backgroundColor = "#404040";
-     atuiHeader.style.backgroundColor = "#5557";
-}
-function modeClair()
-{
-     console.log('Mode Clair appliqué');
-     modeVisuel[0].style.display  = "block";
-     modeVisuel[1].style.display  = "none";
-     document.childNodes[1].childNodes[2].style.filter = "brightness(1)";
-     document.childNodes[1].childNodes[2].style.backgroundColor = "#FFFFFF";
-     atuiHeader.style.backgroundColor = "#FFF7";
-}
-modeVisuel[0].style.display  = "block";
-
-/* Exclusion d'Internet Explorer */
-
+atuiBanIE = document.getElementById('atuiBoot');
 //renvoie version de IE ou false, si le navigateur n'est pas IE
 function IEdetection()
 {
@@ -73,3 +29,52 @@ function IEdetection()
 }
 var result = IEdetection();
 console.log(result);
+if (result != "Not IE")
+{
+     atuiBanIE.style.display = "block";
+}
+
+// Mode d'application visuel
+
+/*var modeVisuel = document.getElementsByClassName('modeVisuel');
+var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
+function modeSombre()
+{
+     console.log('Mode Sombre appliqué');
+     modeVisuel[0].style.display  = "none";
+     modeVisuel[1].style.display  = "block";
+     document.childNodes[1].childNodes[2].style.filter = "brightness(0.5)";
+     document.childNodes[1].childNodes[2].style.backgroundColor = "#404040";
+     atuiHeader.style.backgroundColor = "#5557";
+}
+function modeClair()
+{
+     console.log('Mode Clair appliqué');
+     modeVisuel[0].style.display  = "block";
+     modeVisuel[1].style.display  = "none";
+     document.childNodes[1].childNodes[2].style.filter = "brightness(1)";
+     document.childNodes[1].childNodes[2].style.backgroundColor = "#FFFFFF";
+     atuiHeader.style.backgroundColor = "#FFF7";
+}
+modeVisuel[0].style.display  = 'block'; */
+
+// Gestion compte
+
+var atuiCompteAvatar = document.getElementById('atuiSettingsAccount').childNodes[1];
+var atuiCompteBar = document.getElementById('atuiSettingsAccount').childNodes[3];
+var atuiCompteBarDisplay = "none";
+atuiCompteAvatar.addEventListener('click', event =>
+{
+     if (atuiCompteBarDisplay == "block")
+     {
+          atuiCompteBar.style.display = "none";
+          atuiCompteBarDisplay = "none";
+          return;
+     }
+     if (atuiCompteBarDisplay == "none")
+     {
+          atuiCompteBar.style.display = "block";
+          atuiCompteBarDisplay = "block";
+          return;
+     }
+});

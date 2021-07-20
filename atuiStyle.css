@@ -13,20 +13,16 @@ body *
      font-family: 'Montserrat', Arial;
 }
 
-/* Responsives et importations */
+/* Responsives */
 
 @media (min-width : 650px) /* Ordi */
 {
-     header
-     {
-          height : 30vh;
-     }
-     section
+     body > section
      {
           display: inline-flex;
      }
 
-     section article
+     body > section article
      {
           width : 40%;
 	     margin : 5px;
@@ -35,32 +31,39 @@ body *
 
 /* Barre d'en tête */
 
-header
-{
-     background-color : #bfbfbf;
-     background-image : url(medias/illustrations/presentation.jpg);
-     height : 70vh;
-     background-size : cover;
-     background-position : center;
-}
-
-header aside
+header > aside
 {
      background-color : rgba(255,255,255,0.7);
      height : 50px;
 }
 
-img[alt="Icone du site"]
+header aside img 
 {
-     float: left;
-     height : 50px;
+     height : 40px;
+     margin : 5px;
 }
 
-header aside > a
+     /* Bloc gauche */
+
+#atuiHeaderBarLeft
+{
+     border : 1px red solid;
+     width : 35%;
+     height : 50px;
+     float: left;
+}
+
+#atuiHeaderBarLeft > a img
+{
+     float: left;
+     margin-left: 15px;
+}
+
+#atuiHeaderBarLeft > a p
 {
      margin : 0px;
      margin-top : 4px;
-     transform: translateX(20px);
+     margin-left: 10px;
      color : black;
      text-decoration : none;
      font-size : 30px;
@@ -69,18 +72,22 @@ header aside > a
      font-family : "Red Hat Display";
 }
 
-/* Options profil */
+     /* Bloc droit */
 
-#atuiSettings
+#atuiHeaderBarRight
 {
-     float : right;
-     margin : 5px;
+     border : 1px blue solid;
+     width : 25%;
+     height : 50px;
+     float: right;
 }
 
-#atuiSettingsModeVisuel
+#atuiHeaderBarRight > *
 {
-     display: inline-flex;
+     float: right;
 }
+
+/* Mode d'application visuel */
 
 #atuiSettingsModeVisuel img
 {
@@ -89,21 +96,13 @@ header aside > a
      transform : translateY(-5px);
 }
 
-#atuiProfilSettings:before
-{
-     content : '▲';
-     position : absolute;
-     color : white;
-     font-size : 20px;
-     top : -15px;
-     right : 10px;
-}
+/* Gestion compte */
 
-#atuiProfilSettings
+#atuiSettingsAccount aside
 {
      position : absolute;
-     top : 55px;
-     right : 5px;
+     top : 60px;
+     right : 10px;
      width : 200px;
      background-color : white;
      border-radius : 10px;
@@ -112,31 +111,39 @@ header aside > a
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-#atuiProfilSettings a
+#atuiSettingsAccount aside div
 {
-     margin : 5px;
-     display : block;
+     height : 35px;
+     margin: 5px 0px;
+}
+
+#atuiSettingsAccount aside div a
+{
      color : black;
      text-decoration : none;
-     font-size : 18px;
+     font-size : 20px;
+     position: absolute;
+     margin-top : 5.5px;
 }
 
-#atuiProfilSettings img
+#atuiSettingsAccount aside div img
 {
-     float : left;
      margin : 5px;
-     height : 21px;
-}
-
-#atuiProfilSettings hr
-{
-     border : 1px silver solid;
-     margin : 0px 15px;
+     height : 25px;
 }
 
 /* Illustration */
 
-header article > *
+body > header
+{
+     background-color : #bfbfbf;
+     background-image : url(medias/illustrations/presentation.jpg);
+     height : 70vh;
+     background-size : cover;
+     background-position : center;
+}
+
+body > header article > *
 {
      width : 90%;
      color : white;
@@ -146,12 +153,12 @@ header article > *
      margin-left : 5%;
 }
 
-header article h2
+body > header article h2
 {
      font-family: "Red Hat Display";
 }
 
-header article button
+body > header article button
 {
      border : none;
      background-color : rgba(255,0,0,0.7);
@@ -164,7 +171,57 @@ header article button
 
 /* Navigateur */
 
-nav
+     /* Floating Left */
+
+#atuiNavStyleFloatingLeft
+{
+     margin : 0px;
+     display: block;
+}
+
+#atuiNavStyleFloatingLeft > img
+{
+     float: left;
+}
+
+#atuiNavStyleFloatingLeft aside
+{
+     position : absolute;
+     top : 60px;
+     left : 10px;
+     width : 200px;
+     background-color : white;
+     border-radius : 10px;
+     padding : 5px;
+     display : none;
+     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+#atuiNavStyleFloatingLeft aside a div
+{
+     height : 35px;
+     margin: 5px 0px;
+}
+
+#atuiNavStyleFloatingLeft aside a div p
+{
+     color : black;
+     text-decoration : none;
+     font-size : 20px;
+     position: absolute;
+     margin-top : 5.5px;
+}
+
+#atuiNavStyleFloatingLeft aside a div img
+{
+     margin : 5px;
+     height : 25px;
+}
+
+     /* Independant */
+
+body > nav
 {
      display : flex;
      justify-content: space-around;
@@ -172,18 +229,18 @@ nav
      margin : 10px;
 }
 
-nav a
+body > nav a
 {
      color : black;
      text-decoration : none;
 }
 
-nav a img
+body > nav a img
 {
      width : 100px;
 }
 
-nav a p
+body > nav a p
 {
      text-align : center;
      margin : 0px;
@@ -191,7 +248,7 @@ nav a p
 
 /* Contenu */
 
-section
+body > section
 {
      margin : 20px;
      margin-top : 15px;
@@ -199,30 +256,30 @@ section
      justify-content: space-around;
 }
 
-section article
+body > section article
 {
      margin-bottom : 30px;
 }
 
-section article img
+body > section article img
 {
      width : 100%;
      border-radius : 10px;
 }
 
-section article h3
+body > section article h3
 {
      margin : 0px;
      margin-top : 5px;
      font-family: "Red Hat Display";
 }
 
-section article p, section article a
+body > section article p, body > section article a
 {
      margin : 5px 0px;
 }
 
-section article a
+body > section article a
 {
      color : red;
      font-weight: bold;
@@ -231,19 +288,19 @@ section article a
      font-family : "Red Hat Display";
 }
 
-section article a:after
+body > section article a:after
 {
      content : " >";
 }
 
-section article a:hover
+body > section article a:hover
 {
      text-decoration : underline;
 }
 
 /* Pied de page */
 
-footer
+body > footer
 {
      background-color : #c0c0c0;
      border-top : 3px solid red;
@@ -252,7 +309,7 @@ footer
      padding-top : 0px;
 }
 
-footer > a img
+body > footer > a img
 {
      width : 50px;
      border-radius : 100%;
@@ -347,4 +404,41 @@ footer select
 {
      color : white;
      margin : 10px;
+}
+
+/* Boot */
+
+#atuiBoot
+{
+     position: fixed;
+     width : 100%;
+     height : 100%;
+     background-color: rgb(255, 255, 255);
+     top : 0px;
+     display: none;
+}
+
+#atuiBoot article
+{
+     border-radius: 20px;
+     border : 1px solid rdb(0,0,0);
+}
+
+#atuiBoot article header, #atuiBoot article footer
+{
+     margin : 20px;
+}
+
+#atuiBoot article section
+{
+     margin : 30px;
+}
+
+#atuiBoot article footer button
+{
+     padding : 10px;
+     margin : 5px;
+     border : none;
+     border-radius : 10px;
+     font-size : 16px;
 }
