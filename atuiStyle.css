@@ -72,6 +72,38 @@ header aside img
      font-family : "Red Hat Display";
 }
 
+     /* Bloc centre */
+
+#atuiHeaderBarCenter
+{
+     margin-left : 35%;
+     border : 1px solid green;
+     width : 40%;
+}
+
+#atuiHeaderBarCenter div
+{
+     height : 40px;
+     margin : 5px;
+     background-color: white;
+     border-radius: 10px;
+}
+
+#atuiHeaderBarCenter div input
+{
+     appearance: none;
+     border : none;
+     font-size: 22px;
+     margin : 6.5px;
+     width : 90%;
+}
+
+#atuiHeaderBarCenter div input:active
+{
+     appearance: none;
+     border : none;
+}
+
      /* Bloc droit */
 
 #atuiHeaderBarRight
@@ -80,6 +112,7 @@ header aside img
      width : 25%;
      height : 50px;
      float: right;
+     padding-right: 10px;
 }
 
 #atuiHeaderBarRight > *
@@ -91,9 +124,7 @@ header aside img
 
 #atuiSettingsModeVisuel img
 {
-     margin : 5px;
      display : none;
-     transform : translateY(-5px);
 }
 
 /* Gestion compte */
@@ -101,35 +132,51 @@ header aside img
 #atuiSettingsAccount aside
 {
      position : absolute;
-     top : 60px;
-     right : 10px;
-     width : 200px;
-     background-color : white;
-     border-radius : 10px;
-     padding : 5px;
+     top : 65px;
+     right : 15px;
+     width : 280px;
      display : none;
+     background-color: #ffffff;
+     border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-#atuiSettingsAccount aside div
+#atuiSettingsAccount aside a div
 {
      height : 35px;
-     margin: 5px 0px;
+     padding : 5px 10px;
+     margin : 0px;
 }
 
-#atuiSettingsAccount aside div a
+#atuiSettingsAccount aside a:first-child
 {
-     color : black;
-     text-decoration : none;
+     margin-top : 10px;
+}
+
+#atuiSettingsAccount aside a:last-child
+{
+     margin-bottom : 10px;
+}
+
+#atuiSettingsAccount aside a div:hover
+{
+     background-color : #e6e6e6;
+}
+
+#atuiSettingsAccount aside a div p
+{
      font-size : 20px;
      position: absolute;
      margin-top : 5.5px;
+     display: inline;
+     color : black;
 }
 
-#atuiSettingsAccount aside div img
+#atuiSettingsAccount aside a div img
 {
      margin : 5px;
      height : 25px;
+     margin-right: 10px;
 }
 
 /* Illustration */
@@ -187,36 +234,51 @@ body > header article button
 #atuiNavStyleFloatingLeft aside
 {
      position : absolute;
-     top : 60px;
-     left : 10px;
-     width : 200px;
-     background-color : white;
-     border-radius : 10px;
-     padding : 5px;
+     top : 65px;
+     left : 15px;
+     width : 280px;
      display : none;
+     background-color: #ffffff;
+     border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-
 }
 
 #atuiNavStyleFloatingLeft aside a div
 {
      height : 35px;
-     margin: 5px 0px;
+     padding : 5px 10px;
+     margin : 0px;
+}
+
+#atuiNavStyleFloatingLeft aside a:first-child
+{
+     margin-top : 10px;
+}
+
+#atuiNavStyleFloatingLeft aside a:last-child
+{
+     margin-bottom : 10px;
+}
+
+#atuiNavStyleFloatingLeft aside a div:hover
+{
+     background-color : #e6e6e6;
 }
 
 #atuiNavStyleFloatingLeft aside a div p
 {
-     color : black;
-     text-decoration : none;
      font-size : 20px;
      position: absolute;
      margin-top : 5.5px;
+     display: inline;
+     color : black;
 }
 
 #atuiNavStyleFloatingLeft aside a div img
 {
      margin : 5px;
      height : 25px;
+     margin-right: 10px;
 }
 
      /* Independant */
