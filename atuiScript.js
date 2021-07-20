@@ -36,7 +36,7 @@ if (result != "Not IE")
 
 // Mode d'application visuel
 
-/*var modeVisuel = document.getElementsByClassName('modeVisuel');
+var modeVisuel = document.getElementsByClassName('modeVisuel');
 var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
 function modeSombre()
 {
@@ -56,7 +56,7 @@ function modeClair()
      document.childNodes[1].childNodes[2].style.backgroundColor = "#FFFFFF";
      atuiHeader.style.backgroundColor = "#FFF7";
 }
-modeVisuel[0].style.display  = 'block'; */
+modeVisuel[0].style.display  = 'block';
 
 // Gestion compte
 
@@ -75,6 +75,27 @@ atuiCompteAvatar.addEventListener('click', event =>
      {
           atuiCompteBar.style.display = "block";
           atuiCompteBarDisplay = "block";
+          return;
+     }
+});
+
+/* Gestion Nav Style Floating Left/Right */
+
+var atuiNavIcon = document.getElementById('atuiNavStyleFloatingLeft').childNodes[1];
+var atuiNavBar = document.getElementById('atuiNavStyleFloatingLeft').childNodes[3];
+var atuiNavBarDisplay = "none";
+atuiNavIcon.addEventListener('click', event =>
+{
+     if (atuiNavBarDisplay == "block")
+     {
+          atuiNavBar.style.display = "none";
+          atuiNavBarDisplay = "none";
+          return;
+     }
+     if (atuiNavBarDisplay == "none")
+     {
+          atuiNavBar.style.display = "block";
+          atuiNavBarDisplay = "block";
           return;
      }
 });
