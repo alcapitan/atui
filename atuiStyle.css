@@ -34,6 +34,7 @@ body *
 header > aside
 {
      background-color : rgba(255,255,255,0.7);
+     backdrop-filter: blur(5px);
      height : 50px;
 }
 
@@ -85,7 +86,8 @@ header aside img
 #atuiHeaderBarCenter div
 {
      height : 40px;
-     background-color: rgb(242, 242, 242);
+     background-color: rgb(242, 242, 242, 0.8);
+     backdrop-filter: blur(10px);
      border-radius: 10px;
 }
 
@@ -144,7 +146,8 @@ header aside img
      right : 15px;
      width : 280px;
      display : none;
-     background-color: #ffffff;
+     background-color: rgba(255,255,255,0.7);
+     backdrop-filter: blur(10px);
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
@@ -173,7 +176,7 @@ header aside img
 
 #atuiSettingsAccount aside a div:hover
 {
-     background-color : #e6e6e6;
+     background-color : rgb(255, 255, 255, 0.6);
 }
 
 #atuiSettingsAccount aside a div p
@@ -251,7 +254,8 @@ body > header article button
      left : 15px;
      width : 280px;
      display : none;
-     background-color: #ffffff;
+     background-color: rgba(255,255,255,0.8);
+     backdrop-filter: blur(10px);
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
@@ -280,7 +284,7 @@ body > header article button
 
 #atuiNavStyleFloatingLeft aside a div:hover
 {
-     background-color : #e6e6e6;
+     background-color : rgb(255, 255, 255, 0.6);
 }
 
 #atuiNavStyleFloatingLeft aside a div p
