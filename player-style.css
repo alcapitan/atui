@@ -1,0 +1,160 @@
+aside
+{
+	position : fixed;
+	background-color : #959595;
+	border-radius : 15px;
+	width : 96.5%;
+	margin : 10px;
+	padding : 10px;
+	left : 10px;
+	right : 10px;
+	bottom : 10px;
+	height : 150px;
+}
+
+aside .infos-music *
+{
+	margin : 0px;
+	margin-left : 10px;
+}
+
+aside .img-album
+{
+	border-radius : 20px;
+	width : 150px;
+	height : 150px;
+	background-color : white;
+	float : left;
+}
+
+aside .name-album
+{
+	font-size : 15px;
+	float : left;
+	margin-left : 10px;
+}
+
+aside .date-album
+{
+	font-size : 15px;
+	text-align : right;
+}
+
+#titre-artiste-music *
+{
+	display : inline-block;
+	font-size : 40px;
+}
+
+#progressBarControl
+{
+	background-color : #00000080;
+	height : 10px;
+	margin-left : 160px;
+}
+
+#progressBar
+{
+	background-color : #FF0000;
+	height : 10px;
+	margin-left : 0px;
+	width : 0px;
+}
+
+#timer
+{
+	margin : 0px;
+}
+
+#timer *
+{
+	display : inline-block;
+}
+
+#intersection-timer
+{
+	margin : 0px;
+}
+
+#durationTime
+{
+	margin : 10px;
+}
+
+aside button
+{
+	width : 40px;
+	height : 40px;
+	padding : 0px;
+	border : 0px;
+}
+
+aside button img
+{
+	border-radius : 20px;
+	cursor : pointer;
+}
+
+#progressTime
+{
+	margin : 10px;
+}
+
+#boutons-music, #volumecontrol, #volumecontrol *
+{
+	margin-left : 10px;
+	display: inline-block;
+}
+
+#volumecontrol, #volumecontrol *
+{
+	vertical-align: top;
+	margin : 5px;
+}
+
+#volumecontrol *
+{
+	font-size : 20px;
+}
+
+#iptvol
+{
+	width : 200px;
+	-webkit-appearance : none;
+	background : #2020FF60;
+	height : 10px;
+	border-radius : 5px;
+	margin-top : 12px;
+}
+
+#iptvol::-webkit-slider-thumb
+{
+	-webkit-appearance : none;
+	appearance : none;
+	width : 25px;
+	height : 25px;
+	border-radius : 50%;
+	background : #1010FF;
+	cursor : grab;
+}
+
+#nivvol
+{
+	background-color : #808080;
+	padding : 5px;
+	border-radius : 5px;
+	vertical-align: top;
+	margin : 0px;
+}
+
+#fermer
+{
+	width : 10px;
+	height : 15px;
+	float : right;
+	padding : 5px;
+	background-color : red;
+	color : white;
+	border-radius : 10px;
+	cursor : pointer;
+}

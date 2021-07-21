@@ -6,6 +6,7 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>ATUI</title>
           <link href="atuiStyle.css" type="text/css" rel="stylesheet">
+          <link rel="stylesheet" href="player-style.css">
           <link rel="icon" href="medias/patch/logo atui.png">
      </head>
      <body>
@@ -55,6 +56,7 @@
                     <div id="atuiHeaderBarCenter">
                          <div>
                               <input type="text" placeholder="Faites une recherche...">
+                              <img src="medias/icons/search.png" alt="Rechercher">
                          </div>
                     </div>
                     <div id="atuiHeaderBarRight">
@@ -183,6 +185,36 @@
                     <a href="#">En savoir plus sur ATUI</a>
                </div>
           </footer>
+		<aside id="player">
+			<script src="player-script.js"></script>
+			<script src="selection-script.js"></script>
+			<img class="img-album" id="imgAlbum" src="images-system/no-image.png">
+			<div class="infos-music">
+				<p class="name-album" id="nameAlbum">Nom de l'album</p>
+				<p id="fermer" onclick="var player = document.getElementById('player');player.style.display = 'none';">X</p>
+				<p class="date-album" id="dateAlbum">Date de sortie</p>
+				<div id="titre-artiste-music">
+					<p class="artiste-music" id="artisteMusic">Artiste de la musique</p>
+					<p> - </p>
+					<p class="titre-music" id="titreMusic">Titre de la musique</p>
+				</div>
+				<audio id="audioPlayer" ontimeupdate="update(this)" loop></audio>
+				<div id="progressBarControl" onclick="clickProgress('audioPlayer', this, event)">
+					<div id="progressBar"></div>
+				</div>
+				<div id="timer"><span id="progressTime">00:00</span><p id="intersection-timer"> - </p><span id="durationTime">00:00</span></div>
+			</div>
+			<div id="boutons-music">
+				<button class="control" id="btnplay" onclick="play('audioPlayer', this)"><img  id="imgplay" src="images-system/play.jpg"></button>
+				<button><img src="images-system/reculer.jpg" onclick="reculer('audioPlayer', this)"></button>
+				<button><img src="images-system/avancer.jpg" onclick="avancer('audioPlayer', this)"></button>
+			</div>
+			<div id="volumecontrol">
+				<p>Volume :</p>
+				<input id="iptvol" type="range" value="100" min="0" max="100" onchange="changevol('audioPlayer')">
+				<p id="nivvol">100</p>
+			</div>
+		</aside>
           <aside id="atuiBoot">
                <article>
                     <header>

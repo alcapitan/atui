@@ -47,10 +47,11 @@ header aside img
 
 #atuiHeaderBarLeft
 {
-     border : 1px red solid;
      width : 35%;
      height : 50px;
-     float: left;
+     position: absolute;
+     top : 0px;
+     left : 0px;
 }
 
 #atuiHeaderBarLeft > a img
@@ -77,41 +78,48 @@ header aside img
 #atuiHeaderBarCenter
 {
      margin-left : 35%;
-     border : 1px solid green;
-     width : 40%;
+     width : 39%;
+     padding : 5px;
 }
 
 #atuiHeaderBarCenter div
 {
      height : 40px;
-     margin : 5px;
-     background-color: white;
+     background-color: rgb(242, 242, 242);
      border-radius: 10px;
 }
 
 #atuiHeaderBarCenter div input
 {
-     appearance: none;
+     background-color: transparent;
      border : none;
-     font-size: 22px;
-     margin : 6.5px;
+     font-size: 25px;
+     margin : 5px;
      width : 90%;
+     height: 30px;
 }
 
 #atuiHeaderBarCenter div input:active
 {
-     appearance: none;
+     background-color: transparent;
      border : none;
+}
+
+#atuiHeaderBarCenter div img
+{
+     float : right;
+     height : 30px;
 }
 
      /* Bloc droit */
 
 #atuiHeaderBarRight
 {
-     border : 1px blue solid;
      width : 25%;
      height : 50px;
-     float: right;
+     position: absolute;
+     top : 0px;
+     right : 0px;
      padding-right: 10px;
 }
 
@@ -139,6 +147,11 @@ header aside img
      background-color: #ffffff;
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#atuiSettingsAccount aside a
+{
+     display : block;
 }
 
 #atuiSettingsAccount aside a div
@@ -241,6 +254,11 @@ body > header article button
      background-color: #ffffff;
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#atuiNavStyleFloatingLeft aside a
+{
+     display : block;
 }
 
 #atuiNavStyleFloatingLeft aside a div
