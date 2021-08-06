@@ -102,9 +102,11 @@
 #atuiAudioPlayerControlsProgress
 {
 	background-color: rgb(255, 204, 204, 0.9);
-	width : 100%;
+	width : calc(100% + 20px);
 	height : 10px;
-	border-radius: 10px;
+	border-radius: 0px 0px 10px 10px;
+	transform: translateX(-10px);
+	overflow: hidden;
 }
 
 #atuiAudioPlayerControlsProgress div
@@ -112,5 +114,4 @@
 	width : 20%;
 	height : 10px;
 	background-color: rgb(230, 0, 0);
-	border-radius: 10px;
 }
