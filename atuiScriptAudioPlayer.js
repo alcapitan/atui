@@ -1,3 +1,11 @@
+/* Fermer Audio Player */
+
+function atuiAudioPlayerFermer()
+{
+	var atuiAudioPlayer = document.getElementById('atuiAudioPlayer');
+	atuiAudioPlayer.style.display = "none";
+}
+
 /* Sélection des musiques */
 
 var player = document.getElementById('player');
@@ -21,16 +29,6 @@ function chooseMusic(choose)
 	}
 	play('audioPlayer');
 }
-
-/* Calcul de la longueur du player */
-
-while (0 == 1)
-{
-	var wdh = document.body.clientWidth;
-	wdh = wdh - 63;
-	document.getElementById('player').style.width = wdh;
-}
-console.info("Calcul de la longueur du player terminé.");
 
 /* Manipulation du player audio */
 
@@ -83,32 +81,6 @@ function update(player)
 	progress.style.width = percent + '%';
 	document.querySelector('#progressTime').textContent = calculTime(time);
 	document.querySelector('#durationTime').textContent = calculTime(duration);
-}
-
-function reculer(idPlayer, reculer)
-{
-	var player = document.querySelector('#' + idPlayer);
-	var duration = player.currentTime;
-	player.currentTime = duration - 10;
-	console.info("La musique a été reculée de 10 secondes.");
-}
-
-function avancer(idPlayer, avancer)
-{
-	var player = document.querySelector('#' + idPlayer);
-	var duration = player.currentTime;
-	player.currentTime = duration + 10;
-	console.info("La musique a été avancée de 10 secondes.");
-}
-
-function changevol(idPlayer)
-{
-	var vol = document.getElementById("iptvol").value;
-	document.getElementById('nivvol').innerHTML = vol;
-	var player = document.querySelector('#' + idPlayer);
-	var regvol = (vol / 100)
-    player.volume = regvol;
-	console.info("Le volume a été modifié.");
 }
 
 function getPosition(element){
