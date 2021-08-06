@@ -54,7 +54,7 @@
 {
 	font-size: 30px;
 	font-weight: bold;
-	color : rgb(230, 0, 0);
+	color : var(--atuiDefaultColor);
 }
 
 #atuiAudioPlayerControls
@@ -101,7 +101,6 @@
 
 #atuiAudioPlayerControlsProgress
 {
-	background-color: rgb(255, 204, 204, 0.9);
 	width : calc(100% + 20px);
 	height : 10px;
 	border-radius: 0px 0px 10px 10px;
@@ -113,5 +112,5 @@
 {
 	width : 20%;
 	height : 10px;
-	background-color: rgb(230, 0, 0);
+	background-color: var(--atuiDefaultColor);
 }
