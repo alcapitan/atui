@@ -15,7 +15,7 @@ body *
 
 :root
 {
-	--atuiDefaultColor : #00FF00;
+	--atuiDefaultColor : rgb(230, 0, 0);
 }
 
 /* Responsives */
@@ -204,7 +204,7 @@ header aside img
 
 body > header
 {
-     background-color : #bfbfbf;
+     background-color : var(--atuiDefaultColor);
      background-image : url(medias/illustrations/presentation.jpg);
      height : 70vh;
      background-size : cover;
@@ -229,7 +229,7 @@ body > header article h2
 body > header article button
 {
      border : none;
-     background-color : rgba(255,0,0,0.7);
+     background-color : var(--atuiDefaultColor);
      font-size : 21px;
      padding : 10px;
      color : white;
@@ -370,7 +370,7 @@ body > section article p, body > section article a
 
 body > section article a
 {
-     color : red;
+     color : var(--atuiDefaultColor);
      font-weight: bold;
      font-size : 16px;
      text-decoration : none;
@@ -392,7 +392,7 @@ body > section article a:hover
 body > footer
 {
      background-color : #c0c0c0;
-     border-top : 3px solid red;
+     border-top : 3px solid var(--atuiDefaultColor);
      margin-top : 40px;
      padding: 5px;
      padding-top : 0px;
@@ -402,7 +402,7 @@ body > footer > a img
 {
      width : 50px;
      border-radius : 100%;
-     border : 3px solid red;
+     border : 3px solid var(--atuiDefaultColor);
      background-color: white;
      position: absolute;
      left : 50%;
@@ -483,7 +483,7 @@ footer select
 
 #atuiPlugin
 {
-     background-color: red;
+     background-color: var(--atuiDefaultColor);
      display : flex;
      justify-content: space-around;
      margin : 30px -5px -5px -5px;
