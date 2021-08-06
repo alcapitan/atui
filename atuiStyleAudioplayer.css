@@ -28,8 +28,8 @@
 #atuiAudioPlayer > img
 {
 	border-radius : 10px;
-	width : 150px;
-	height : 150px;
+	width : 140px;
+	height : 140px;
 	float : left;
 }
 
@@ -84,12 +84,18 @@
 {
 	width : 30px;
 	height : 30px;
-	margin : 5px;
+	padding : 5px;
+	border-radius: 10px;
 }
 
 #atuiAudioPlayerControlsButtonsBasic, #atuiAudioPlayerControlsButtonsAdvanced
 {
 	margin : 0px 20px;
+}
+
+#atuiAudioPlayerControlsButtonsBasic img:hover, #atuiAudioPlayerControlsButtonsAdvanced img:hover
+{
+	background-color: var(--atuiDefaultColor);
 }
 
 #progressBarControl
@@ -106,6 +112,8 @@
 	border-radius: 0px 0px 10px 10px;
 	transform: translateX(-10px);
 	overflow: hidden;
+	position: absolute;
+	bottom : 0px;
 }
 
 #atuiAudioPlayerControlsProgress div

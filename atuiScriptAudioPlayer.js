@@ -6,7 +6,7 @@ function atuiAudioPlayerFermer()
 	atuiAudioPlayer.style.display = "none";
 }
 
-/* Sélection des musiques */
+/* Updates des métadonnées de l'Audio Player sur la musique en cours */
 
 var player = document.getElementById('player');
 player.style.display = 'none';
@@ -30,7 +30,7 @@ function chooseMusic(choose)
 	play('audioPlayer');
 }
 
-/* Manipulation du player audio */
+/* Gestion Play/Pause */
 
 function play(idPlayer, control)
 {
@@ -70,6 +70,8 @@ function play(idPlayer, control)
 		console.info("La musique a été mise en pause.");
 	}
 }
+
+/* Changement time play music */
 
 function update(player)
 {
