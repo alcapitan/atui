@@ -186,10 +186,10 @@
                </div>
           </footer>
 		<aside id="atuiAudioPlayer">
-               <audio id="audioPlayer" ontimeupdate="update(this)" loop></audio>
-			<script src="player-script.js"></script>
+               <audio id="audioPlayer" ontimeupdate="update(this)"></audio>
+			<script src="atuiScriptAudioPlayer.js"></script>
 			<script src="selection-script.js"></script>
-			<img src="medias/icons/no music.png">
+			<img src="medias/illustrations/musics/test.jpg">
                <div id="atuiAudioPlayerManager">
                     <div>
                          <img src="medias/icons/info.png" alt="Infos album">
@@ -201,8 +201,8 @@
                     <div>
                          <img src="medias/icons/afficher popup.png" alt="Afficher Audio Player dans Pop-up">
                     </div>
-                    <div>
-				     <img src="medias/icons/fermer fenêtre.png" alt="Fermer Audio Player" onclick="atuiAudioPlayerFermer()">
+                    <div onclick="atuiAudioPlayerFermer()">
+				     <img src="medias/icons/fermer fenêtre.png" alt="Fermer Audio Player">
                     </div>
                </div>
 			<div id="atuiAudioPlayerInfosMusic">

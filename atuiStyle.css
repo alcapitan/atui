@@ -134,9 +134,10 @@ header aside img
      background-color: transparent;
      font-size: 25px;
      padding : 5px;
-     width : calc(100% - 54px);
+     width : calc(100% - 60px);
      height: 30px;
      border: none;
+     padding-left: 10px;
 }
 
 #atuiHeaderBarCenter div input:active
@@ -265,6 +266,7 @@ body > header article button
      color : white;
      width : 200px;
      font-family : "Red Hat Display";
+     border-radius: 10px;
 }
 
 /* Navigateur */
