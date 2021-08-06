@@ -20,7 +20,7 @@ body *
 
 /* Responsives */
 
-@media (min-width : 650px) /* Ordi */
+@media (min-width : 768px) /* Ordi */
 {
      body > section
      {
@@ -32,6 +32,36 @@ body *
           width : 40%;
 	     margin : 5px;
      }
+
+     #atuiHeaderBarCenter
+     {
+          flex : 3;
+     }
+
+     #atuiHeaderBarCenter div
+     {
+          background-color: rgb(242, 242, 242, 0.8);
+          backdrop-filter: blur(10px);
+     }
+
+     #atuiHeaderBarCenter div input
+     {
+          display: inline;
+     }
+
+     #atuiHeaderBarRight
+     {
+          flex : 1;
+     }
+}
+
+@media (max-width : 768px) /* Mobile */
+{
+     #atuiHeaderBarCenter div input
+     {
+          display : none;
+     }
+
 }
 
 /* Barre d'en tête */
@@ -41,6 +71,12 @@ header > aside
      background-color : rgba(255,255,255,0.7);
      backdrop-filter: blur(5px);
      height : 50px;
+     display: flex;
+}
+
+header > aside > *
+{
+     align-content: stretch;
 }
 
 header aside img 
@@ -53,11 +89,10 @@ header aside img
 
 #atuiHeaderBarLeft
 {
-     width : 35%;
      height : 50px;
-     position: absolute;
-     top : 0px;
-     left : 0px;
+     padding-left: 10px;
+     order: 1;
+     flex: 2;
 }
 
 #atuiHeaderBarLeft > a img
@@ -83,27 +118,25 @@ header aside img
 
 #atuiHeaderBarCenter
 {
-     margin-left : 35%;
-     width : 39%;
      padding : 5px;
+     width: min-content;
+     order : 2;
 }
 
 #atuiHeaderBarCenter div
 {
      height : 40px;
-     background-color: rgb(242, 242, 242, 0.8);
-     backdrop-filter: blur(10px);
      border-radius: 10px;
 }
 
 #atuiHeaderBarCenter div input
 {
      background-color: transparent;
-     border : none;
      font-size: 25px;
-     margin : 5px;
+     padding : 5px;
      width : calc(100% - 54px);
      height: 30px;
+     border: none;
 }
 
 #atuiHeaderBarCenter div input:active
@@ -122,12 +155,9 @@ header aside img
 
 #atuiHeaderBarRight
 {
-     width : 25%;
      height : 50px;
-     position: absolute;
-     top : 0px;
-     right : 0px;
      padding-right: 10px;
+     order: 3;
 }
 
 #atuiHeaderBarRight > *
