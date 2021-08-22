@@ -3,18 +3,19 @@
 @font-face
 {
      font-family : "Red Hat Display";
-     src : url("fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
+     src : url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap'), url("fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
 }
 
 @font-face
 {
      font-family : "Montserrat";
-     src : url("fonts/Montserrat/Montserrat-Regular.ttf");
+     src : url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'), url("fonts/Montserrat/Montserrat-Regular.ttf");
 }
 
 body
 {
      margin : 0px;
+     overflow-x : hidden;
 }
 
 body *
@@ -25,6 +26,7 @@ body *
 :root
 {
 	--atuiDefaultColor : rgb(230, 0, 0);
+     --atuiDefaultColorTransparent : rgb(230, 0, 0, 0.6);
 }
 
 /* Responsives */
@@ -109,7 +111,7 @@ body *
 
 .atuiSelector a div:hover
 {
-     background-color : var(--atuiDefaultColor);
+     background-color : var(--atuiDefaultColorTransparent);
 }
 
 .atuiSelector a div p
@@ -275,7 +277,7 @@ body > header article h2
 body > header article button
 {
      border : none;
-     background-color : var(--atuiDefaultColor);
+     background-color : var(--atuiDefaultColorTransparent);
      font-size : 21px;
      padding : 10px;
      color : white;
@@ -340,7 +342,7 @@ section
      margin : 15px 5%;
 }
 
-/* Cartes */
+     /* Cartes */
 
 .atuiCardsContainer
 {
@@ -349,7 +351,7 @@ section
      justify-content: space-around;
 }
 
-     /* Cards style presentation */
+          /* Cards style presentation */
 
 /* .atuiCardsPresentation
 {
@@ -400,7 +402,7 @@ section
      text-decoration : underline;
 }
 
-/* Paragraphes */
+     /* Paragraphes */
 
 .atuiTextContainer h3
 {
@@ -413,6 +415,16 @@ section
 .atuiTextContainer p
 {
      font-size : 16px;
+}
+
+.atuiTextContainer a
+{
+     color : var(--atuiDefaultColor);
+}
+
+.atuiTextContainer a:hover
+{
+     font-weight: bold;
 }
 
 /* Pied de page */
