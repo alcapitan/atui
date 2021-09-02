@@ -1,36 +1,46 @@
 /* Global */
 
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face
+{
+     font-family : "Red Hat Display";
+     src : url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap'), url("fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
+}
+
+@font-face
+{
+     font-family : "Montserrat";
+     src : url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'), url("fonts/Montserrat/Montserrat-Regular.ttf");
+}
 
 body
 {
      margin : 0px;
+     overflow-x : hidden;
 }
 
 body *
 {
-     font-family: 'Montserrat', Arial;
+     font-family: 'Montserrat', sans-serif;
 }
 
 :root
 {
 	--atuiDefaultColor : rgb(230, 0, 0);
+     --atuiDefaultColorTransparent : rgb(230, 0, 0, 0.6);
 }
 
 /* Responsives */
 
 @media (min-width : 768px) /* Ordi */
 {
-     body > section
+     .atuiCardsContainer
      {
           display: inline-flex;
      }
 
-     body > section article
+     .atuiCardsPresentation
      {
-          width : 40%;
-	     margin : 5px;
+          width : 300px;
      }
 
      #atuiHeaderBarCenter
@@ -63,6 +73,63 @@ body *
      }
 
 }
+
+/* Sélecteurs */
+
+.atuiSelector
+{
+     position : absolute;
+     width : 280px;
+     display : none;
+     background-color: rgba(255,255,255,0.8);
+     backdrop-filter: blur(10px);
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.atuiSelector a
+{
+     display : block;
+}
+
+.atuiSelector div
+{
+     height : 35px;
+     padding : 5px 10px;
+     margin : 0px;
+}
+
+.atuiSelector a:first-child
+{
+     margin-top : 10px;
+}
+
+.atuiSelector a:last-child
+{
+     margin-bottom : 10px;
+}
+
+.atuiSelector a div:hover
+{
+     background-color : var(--atuiDefaultColorTransparent);
+}
+
+.atuiSelector a div p
+{
+     font-size : 20px;
+     position: absolute;
+     margin-top : 5.5px;
+     display: inline;
+     color : black;
+}
+
+.atuiSelector a div img
+{
+     margin : 5px;
+     height : 25px;
+     margin-right: 10px;
+}
+
 
 /* Barre d'en tête */
 
@@ -177,58 +244,8 @@ header aside img
 
 #atuiSettingsAccount aside
 {
-     position : absolute;
      top : 65px;
      right : 15px;
-     width : 280px;
-     display : none;
-     background-color: rgba(255,255,255,0.8);
-     backdrop-filter: blur(10px);
-     border-radius: 10px;
-     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
-
-#atuiSettingsAccount aside a
-{
-     display : block;
-}
-
-#atuiSettingsAccount aside a div
-{
-     height : 35px;
-     padding : 5px 10px;
-     margin : 0px;
-}
-
-#atuiSettingsAccount aside a:first-child
-{
-     margin-top : 10px;
-}
-
-#atuiSettingsAccount aside a:last-child
-{
-     margin-bottom : 10px;
-}
-
-#atuiSettingsAccount aside a div:hover
-{
-     background-color : rgb(255, 255, 255, 0.6);
-}
-
-#atuiSettingsAccount aside a div p
-{
-     font-size : 20px;
-     position: absolute;
-     margin-top : 5.5px;
-     display: inline;
-     color : black;
-}
-
-#atuiSettingsAccount aside a div img
-{
-     margin : 5px;
-     height : 25px;
-     margin-right: 10px;
 }
 
 /* Illustration */
@@ -260,7 +277,7 @@ body > header article h2
 body > header article button
 {
      border : none;
-     background-color : var(--atuiDefaultColor);
+     background-color : var(--atuiDefaultColorTransparent);
      font-size : 21px;
      padding : 10px;
      color : white;
@@ -286,65 +303,16 @@ body > header article button
 
 #atuiNavStyleFloatingLeft aside
 {
-     position : absolute;
      top : 65px;
      left : 15px;
-     width : 280px;
-     display : none;
-     background-color: rgba(255,255,255,0.8);
-     backdrop-filter: blur(10px);
-     border-radius: 10px;
-     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
-
-#atuiNavStyleFloatingLeft aside a
-{
-     display : block;
-}
-
-#atuiNavStyleFloatingLeft aside a div
-{
-     height : 35px;
-     padding : 5px 10px;
-     margin : 0px;
-}
-
-#atuiNavStyleFloatingLeft aside a:first-child
-{
-     margin-top : 10px;
-}
-
-#atuiNavStyleFloatingLeft aside a:last-child
-{
-     margin-bottom : 10px;
-}
-
-#atuiNavStyleFloatingLeft aside a div:hover
-{
-     background-color : rgb(255, 255, 255, 0.6);
-}
-
-#atuiNavStyleFloatingLeft aside a div p
-{
-     font-size : 20px;
-     position: absolute;
-     margin-top : 5.5px;
-     display: inline;
-     color : black;
-}
-
-#atuiNavStyleFloatingLeft aside a div img
-{
-     margin : 5px;
-     height : 25px;
-     margin-right: 10px;
 }
 
      /* Independant */
 
 body > nav
 {
-     display : flex;
+     display : inline-flex;
+     width : 100%;
      justify-content: space-around;
      flex-wrap: wrap;
      margin : 10px;
@@ -369,39 +337,54 @@ body > nav a p
 
 /* Contenu */
 
-body > section
+section
 {
-     margin : 20px;
-     margin-top : 15px;
+     margin : 15px 5%;
+}
+
+     /* Cartes */
+
+.atuiCardsContainer
+{
+     display: flex;
      flex-wrap : wrap;
      justify-content: space-around;
 }
 
-body > section article
-{
-     margin-bottom : 30px;
-}
+          /* Cards style presentation */
 
-body > section article img
+/* .atuiCardsPresentation
+{
+     border : 3px solid silver;
+} */
+
+.atuiCardsPresentation img
 {
      width : 100%;
      border-radius : 10px;
 }
 
-body > section article h3
+.atuiCardsPresentation div
 {
-     margin : 0px;
-     margin-top : 5px;
-     font-family: "Red Hat Display";
+     margin: 5px;
 }
 
-body > section article p, body > section article a
+.atuiCardsPresentation div h3
+{
+     font-family: "Red Hat Display";
+     margin : 5px 0px;
+     font-size: 20px;
+}
+
+.atuiCardsPresentation div p
 {
      margin : 5px 0px;
+     font-size: 16px;
 }
 
-body > section article a
+.atuiCardsPresentation div a
 {
+     margin : 5px 0px;
      color : var(--atuiDefaultColor);
      font-weight: bold;
      font-size : 16px;
@@ -409,14 +392,46 @@ body > section article a
      font-family : "Red Hat Display";
 }
 
-body > section article a:after
+.atuiCardsPresentation div a:after
 {
      content : " >";
 }
 
-body > section article a:hover
+.atuiCardsPresentation div a:hover
 {
      text-decoration : underline;
+}
+
+     /* Paragraphes */
+
+.atuiTextContainer h3
+{
+     font-weight: bold;
+     font-size : 20px;
+     color : var(--atuiDefaultColor);
+     font-family: "Red Hat Display";
+}
+
+.atuiTextContainer p
+{
+     font-size : 16px;
+}
+
+.atuiTextContainer a
+{
+     color : var(--atuiDefaultColor);
+}
+
+.atuiTextContainer a:hover
+{
+     font-weight: bold;
+}
+
+.atuiTextContainer img
+{
+     margin : 0px 20%;
+     width: 60%;
+     border-radius: 10px;
 }
 
 /* Pied de page */
@@ -425,7 +440,7 @@ body > footer
 {
      background-color : #c0c0c0;
      border-top : 3px solid var(--atuiDefaultColor);
-     margin-top : 40px;
+     margin-top : 50px;
      padding: 5px;
      padding-top : 0px;
 }

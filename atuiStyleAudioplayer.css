@@ -1,5 +1,6 @@
 #atuiAudioPlayer
 {
+	display: none;
 	position : fixed;
 	background-color : rgb(230, 230, 230, 0.8);
 	backdrop-filter : blur(10px);
