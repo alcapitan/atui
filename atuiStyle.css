@@ -1,16 +1,19 @@
 /* Global */
 
-@font-face
+/* @font-face
 {
      font-family : "Red Hat Display";
-     src : url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap'), url("fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
+     src : url("/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
 }
 
 @font-face
 {
      font-family : "Montserrat";
-     src : url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'), url("fonts/Montserrat/Montserrat-Regular.ttf");
-}
+     src : url("fonts/Montserrat/Montserrat-Regular.ttf");
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body
 {
@@ -92,13 +95,6 @@ body *
      display : block;
 }
 
-.atuiSelector div
-{
-     height : 35px;
-     padding : 5px 10px;
-     margin : 0px;
-}
-
 .atuiSelector a:first-child
 {
      margin-top : 10px;
@@ -112,6 +108,13 @@ body *
 .atuiSelector a div:hover
 {
      background-color : var(--atuiDefaultColorTransparent);
+}
+
+.atuiSelector a div
+{
+     height : 35px;
+     padding : 5px 10px;
+     margin : 0px;
 }
 
 .atuiSelector a div p
@@ -128,6 +131,14 @@ body *
      margin : 5px;
      height : 25px;
      margin-right: 10px;
+}
+
+.atuiSelectorSeparator
+{
+     background-color: var(--atuiDefaultColor);
+     width : 80%;
+     height : 2px;
+     margin : 5px 10%;
 }
 
 
@@ -432,6 +443,15 @@ section
      margin : 0px 20%;
      width: 60%;
      border-radius: 10px;
+}
+
+     /* Captions */
+
+.atuiCaption
+{
+     text-align: center;
+     color: #333333;
+     margin : 5px;
 }
 
 /* Pied de page */
