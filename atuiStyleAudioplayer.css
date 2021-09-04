@@ -119,7 +119,7 @@
 
 #atuiAudioPlayerControlsProgress div
 {
-	width : 20%;
+	width : 100%;
 	height : 10px;
 	background-color: var(--atuiDefaultColor);
 }
