@@ -6,6 +6,27 @@ function atuiAudioPlayerFermer()
 	atuiAudioPlayer.style.display = "none";
 }
 
+/* Gestionnaire Play/Pause */
+
+function atuiAudioPlayerMusicPlayPause()
+{
+	console.log("Coucou Milan !");
+	var atuiAudioPlayer = document.getElementById('atuiAudioPlayer');
+	atuiAudioPlayer.style.display = 'block';
+	var atuiAudioPlayerMusic = document.getElementById('atuiAudioPlayerMusic');
+	var atuiAudioPlayerControlsButtonsPlayPause = document.getElementById('atuiAudioPlayerControlsButtonsBasic').childNodes[3];
+	if (atuiAudioPlayerMusic.paused)
+	{
+ 		atuiAudioPlayerMusic.play();
+		atuiAudioPlayerControlsButtonsPlayPause.src = 'medias/icons/play.png';
+ 	}
+	else
+	{
+		atuiAudioPlayerMusic.pause();
+		atuiAudioPlayerControlsButtonsPlayPause.src = 'medias/icons/pause.png';
+	}
+}
+
 /* Updates des métadonnées de l'Audio Player sur la musique en cours */
 
 var player = document.getElementById('player');
@@ -30,50 +51,9 @@ function chooseMusic(choose)
 	play('audioPlayer');
 }
 
-/* Gestion Play/Pause */
-
-function play(idPlayer, control)
-{
-	if (audioPlayer.src == '')
-	{
-		return;
-	}
-	var player = document.getElementById('player');
-	player.style.display = 'block';
-	var player = document.querySelector('#' + idPlayer);
-	var imgbtnplay = document.getElementById('imgplay');
-	imgbtnplay.parentNode.removeChild(imgbtnplay);
-	var imgbtnplay = document.createElement('img');
-	imgbtnplay.id = 'imgplay';
-	imgbtnplay.src = 'images-system/pause.jpg';
-	document.getElementById('btnplay').appendChild(imgbtnplay);
-	if (player.paused)
-	{
- 		player.play();
-		var imgbtnplay = document.getElementById('imgplay');
-		imgbtnplay.parentNode.removeChild(imgbtnplay);
-		var imgbtnplay = document.createElement('img');
-		imgbtnplay.id = 'imgplay';
-		imgbtnplay.src = 'images-system/pause.jpg';
-		document.getElementById('btnplay').appendChild(imgbtnplay);
-		console.info("La musique a démarré.");
- 	}
-	else
-	{
-		player.pause();	
-		var imgbtnplay = document.getElementById('imgplay');
-		imgbtnplay.parentNode.removeChild(imgbtnplay);
-		var imgbtnplay = document.createElement('img');
-		imgbtnplay.id = 'imgplay';
-		imgbtnplay.src = 'images-system/play.jpg';
-		document.getElementById('btnplay').appendChild(imgbtnplay);
-		console.info("La musique a été mise en pause.");
-	}
-}
-
 /* Changement time play music */
 
-function update(player)
+/* function update(player)
 {
 	var duration = player.duration;    // Durée totale
 	var time     = player.currentTime; // Temps écoulé
@@ -101,7 +81,7 @@ function getMousePosition(event) {
         x: event.pageX,
         y: event.pageY
     };
-}
+} */
 
 function clickProgress(idPlayer, control, event) {
     var parent = getPosition(control);    // La position absolue de la progressBar
