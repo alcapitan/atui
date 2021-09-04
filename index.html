@@ -202,10 +202,10 @@
                </div>
           </footer>
 		<aside id="atuiAudioPlayer">
-               <audio id="audioPlayer" ontimeupdate="update(this)"></audio>
+               <audio id="atuiAudioPlayerMusic" src="medias/musics/test.mp3"></audio><!-- ontimeupdate="update(this)" -->
 			<script src="atuiScriptAudioPlayer.js"></script>
 			<script src="selection-script.js"></script>
-			<img src="medias/illustrations/musics/test.jpg">
+			<img src="medias/icons/no music.png">
                <div id="atuiAudioPlayerManager">
                     <div>
                          <img src="medias/icons/info.png" alt="Infos album">
@@ -233,7 +233,7 @@
                     </div>
 			     <div id="atuiAudioPlayerControlsButtonsBasic">
 				     <img src="medias/icons/musique précédante.png" alt="Musique précédante"></img>
-				     <img src="medias/icons/play.png" alt="Play Music"></img>
+				     <img src="medias/icons/play.png" alt="Play Music" onclick="atuiAudioPlayerMusicPlayPause()"></img>
 				     <img src="medias/icons/musique suivante.png" alt="Musique suivante"></img>
                     </div>
 			     <div id="atuiAudioPlayerControlsButtonsAdvanced">
