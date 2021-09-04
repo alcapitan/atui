@@ -196,20 +196,19 @@
                     </div>
                </div>
                <div id="atuiPlugin">
-                    <p>Ce site a été réalisé à partir de ATUI dev2</p>
-                    <a href="#">Conditions d'utilisation d'ATUI</a>
-                    <a href="#">En savoir plus sur ATUI</a>
+                    <p>Basé sur ATUI dev2</p>
+                    <a href="#">En savoir plus</a>
                </div>
           </footer>
 		<aside id="atuiAudioPlayer">
-               <audio id="atuiAudioPlayerMusic" src="medias/musics/test.mp3"></audio><!-- ontimeupdate="update(this)" -->
+               <audio id="atuiAudioPlayerMusic" src="medias/musics/test.mp3" ontimeupdate="update(this)"></audio>
 			<script src="atuiScriptAudioPlayer.js"></script>
 			<script src="selection-script.js"></script>
 			<img src="medias/icons/no music.png">
                <div id="atuiAudioPlayerManager">
                     <div>
                          <img src="medias/icons/info.png" alt="Infos album">
-                         <aside>
+                         <aside id="atuiAudioPlayerInfosMusicAdvanced">
                               <!-- <p class="name-album" id="nameAlbum">Nom de l'album</p>
                               <p class="date-album" id="dateAlbum">Date de sortie</p> -->
                          </aside>
@@ -242,7 +241,7 @@
 				     <img src="medias/icons/aléatoire.png" alt="Choix musique aléatoire"></img>
                     </div>
 			</div>
-               <div id="atuiAudioPlayerControlsProgress" onclick="clickProgress('audioPlayer', this, event)">
+               <div id="atuiAudioPlayerControlsProgress" onclick="atuiAudioPlayerControlsProgressChange(this, event)">
                     <div></div>
                </div>
 		</aside>
