@@ -454,6 +454,37 @@ section
      margin : 5px;
 }
 
+     /* Télécharger un fichier */
+
+.atuiFileDownload
+{
+     border-radius: 10px;
+     border : 2px var(--atuiDefaultColor) solid;
+     margin : 10px;
+     padding: 10px;
+     height : 70px;
+     width : 100%;
+}
+
+.atuiFileDownload img
+{
+     float: left;
+     height : 50px;
+}
+
+.atuiFileDownload p
+{
+     font-weight : bold;
+     float : left;
+     margin-left : 20px;
+}
+
+.atuiFileDownload a
+{
+     float : right;
+     color : var(--atuiDefaultColor);
+}
+
 /* Pied de page */
 
 body > footer
