@@ -18,18 +18,31 @@
 body
 {
      margin : 0px;
-     overflow-x : hidden;
+     overflow-x: hidden;
 }
 
 body *
 {
      font-family: 'Montserrat', sans-serif;
+     max-width: 100%;
 }
 
 :root
 {
 	--atuiDefaultColor : rgb(230, 0, 0);
      --atuiDefaultColorTransparent : rgb(230, 0, 0, 0.6);
+}
+
+a
+{
+     text-decoration: none;
+     color: var(--atuiDefaultColor);
+}
+
+a:hover, a:active
+{
+     font-weight: bold;
+     text-decoration: underline;
 }
 
 /* Responsives */
@@ -143,6 +156,11 @@ body *
 
 
 /* Barre d'en tête */
+
+header
+{
+     background-color : var(--atuiDefaultColor);
+}
 
 header > aside
 {
@@ -261,31 +279,28 @@ header aside img
 
 /* Illustration */
 
-body > header
+.atuiIllustration
 {
-     background-color : var(--atuiDefaultColor);
      background-image : url(medias/illustrations/presentation.jpg);
-     height : 70vh;
+     height : 50vh;
      background-size : cover;
      background-position : center;
 }
 
-body > header article > *
+.atuiIllustration div *
 {
-     width : 90%;
      color : white;
-     display : flex;
-     justify-content : center;
      text-align : center;
-     margin-left : 5%;
+     margin : 0;
+     padding: 10px;
 }
 
-body > header article h2
+.atuiIllustration div h2
 {
      font-family: "Red Hat Display";
 }
 
-body > header article button
+.atuiIllustration div button
 {
      border : none;
      background-color : var(--atuiDefaultColorTransparent);
@@ -399,18 +414,12 @@ section
      color : var(--atuiDefaultColor);
      font-weight: bold;
      font-size : 16px;
-     text-decoration : none;
      font-family : "Red Hat Display";
 }
 
 .atuiCardsPresentation div a:after
 {
      content : " >";
-}
-
-.atuiCardsPresentation div a:hover
-{
-     text-decoration : underline;
 }
 
      /* Paragraphes */
@@ -462,7 +471,7 @@ section
      border : 2px var(--atuiDefaultColor) solid;
      margin : 10px;
      padding: 10px;
-     height : 70px;
+     height : 50px;
      width : 100%;
 }
 
@@ -476,13 +485,16 @@ section
 {
      font-weight : bold;
      float : left;
-     margin-left : 20px;
+     margin : 14px 0px 14px 20px;
+     font-size: 18px;
 }
 
 .atuiFileDownload a
 {
      float : right;
      color : var(--atuiDefaultColor);
+     margin : 14px 20px 14px 0px;
+     font-size: 18px;
 }
 
 /* Pied de page */
@@ -559,12 +571,6 @@ body > footer > a img
 #atuiExploreFooter div li a
 {
      color : black;
-     text-decoration: none;
-}
-
-#atuiExploreFooter div li a:hover
-{
-     text-decoration : underline;
 }
 
 footer select
@@ -581,16 +587,15 @@ footer select
 
 #atuiPlugin
 {
-     background-color: var(--atuiDefaultColor);
-     display : flex;
-     justify-content: space-around;
-     margin : 30px -5px -5px -5px;
+     text-align : center;
+     margin : 10px;
+     margin-top : 20px;
 }
 
 #atuiPlugin *
 {
-     color : white;
-     margin : 10px;
+     color : var(--atuiDefaultColor);
+     font-size : 16px;
 }
 
 /* Boot */
