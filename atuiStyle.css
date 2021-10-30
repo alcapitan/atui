@@ -1,19 +1,21 @@
 /* Global */
 
-/* @font-face
+@font-face
 {
-     font-family : "Red Hat Display";
-     src : url("/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
+     font-family : 'Red Hat Display (Offline)';
+     src : url(fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf);
 }
 
 @font-face
 {
-     font-family : "Montserrat";
-     src : url("fonts/Montserrat/Montserrat-Regular.ttf");
-} */
+     font-family : 'Montserrat (Offline)';
+     src : url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url("Red Hat Display (Offline)");
+@import url("Montserrat (Offline)");
 
 body
 {
@@ -22,7 +24,7 @@ body
 
 body *
 {
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'Montserrat','Montserrat (Offline)',Arial;
      max-width: 100%;
 }
 
@@ -632,39 +634,4 @@ footer select
      border : none;
      border-radius : 10px;
      font-size : 16px;
-}
-
-/* Notifications */
-
-#atuiNotificationsCenter
-{
-     position: fixed;
-     top : 10px;
-     width : 100vw;
-     display: flex;
-     justify-content: center;
-}
-
-.atuiNotifications
-{
-     margin : 10px;
-     background-color: white;
-     width : 50vw;
-     border-radius: 10px;
-     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-     padding : 15px 30px;
-}
-
-.atuiNotifications h3
-{
-     font-family: "Red Hat Display";
-     margin : 0;
-     font-size : 22px;
-     font-weight : bold;
-}
-
-.atuiNotifications p
-{
-     margin : 10px;
-     font-size : 18px;
 }
