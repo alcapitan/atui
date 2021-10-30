@@ -6,6 +6,17 @@ Cette base est fait pour être la plus compatible (Chrome, Edge et Firefox), et 
 Elle est optimisé pour les faibles connexions et performances.  
   
 Information : JavaScript peut être désactivé sans que ATUI crashe, seul des fonctionnalités ne fonctionneront plus.  
+
+# Attention ! Informations développement !
+ATUI est un projet qui est encore en phase de développement. Ainsi, il est déconseillé d'utiliser ce projet pour l'instant.  
+Si vous êtes curieux de découvrir ATUI, d'abord je remercie de l'interêt porté !  
+La branche actuelle nommée "dev" contient les modifications les plus récentes ! Veuillez y rester !
+  
+Comme écrit ci-dessus, ATUI est un projet en développement. Rassurez-vous, à l'avenir, le projet bénéficira d'un README et d'un wiki complet ! De plus, sachez que la première version stable sera dans la future branche "lts".
+
+<p align="center">
+    <img src="/medias/patch/organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="720" height="405">
+</p>
   
 ## Comment l'utiliser ?
 
