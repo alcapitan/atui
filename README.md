@@ -14,7 +14,7 @@ Cependant, pour éviter que vous soyez déçus par erreur, je vous informe que c
   
 Comme écrit ci-dessus, ATUI est un projet en développement. Rassurez-vous, à l'avenir, le projet bénéficira d'un README et d'un wiki complet ! De plus, sachez que la première version stable sera dans la future branche "lts".
 
-<img src="organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="1080" height="607">
+<img src="organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="720" height="405">
   
 ## Comment l'utiliser ?
 
