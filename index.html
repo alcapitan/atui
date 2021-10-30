@@ -8,6 +8,7 @@
           <title>ATUI</title>
           <link rel="stylesheet" type="text/css" href="atuiStyle.css" >
           <link rel="stylesheet" type="text/css" href="atuiStyleAudioplayer.css">
+          <link rel="stylesheet" type="text/css" href="atuiStyleNotifications.css">
           <link rel="icon" type="img/png" href="medias/patch/logo atui.png">
      </head>
      <body>
@@ -216,15 +217,15 @@
                     <a href="https://github.com/alcapitan/atui" target="_blank">Ce site est basé sur ATUI dev2. En savoir plus...</a>
                </div>
           </footer>
-		<aside id="atuiAudioPlayer">
-               <audio id="atuiAudioPlayerMusic" src="medias/musics/test.mp3" ontimeupdate="update(this)"></audio>
-			<script src="atuiScriptAudioPlayer.js"></script>
-			<script src="selection-script.js"></script>
+		<aside id="atuiAudioplayer">
+               <audio id="atuiAudioplayerMusic" src="medias/musics/test.mp3" ontimeupdate="update(this)"></audio>
+			<script src="atuiScriptAudioplayer.js"></script>
+			<!--<script src="selection-script.js"></script>-->
 			<img src="medias/icons/no music.png">
-               <div id="atuiAudioPlayerManager">
+               <div id="atuiAudioplayerManager">
                     <div>
                          <img src="medias/icons/info.png" alt="Infos album">
-                         <aside id="atuiAudioPlayerInfosMusicAdvanced">
+                         <aside id="atuiAudioplayerInfosMusicAdvanced">
                               <!-- <p class="name-album" id="nameAlbum">Nom de l'album</p>
                               <p class="date-album" id="dateAlbum">Date de sortie</p> -->
                          </aside>
@@ -232,32 +233,32 @@
                     <div>
                          <img src="medias/icons/afficher popup.png" alt="Afficher Audio Player dans Pop-up">
                     </div>
-                    <div onclick="atuiAudioPlayerFermer()">
+                    <div onclick="atuiAudioplayerFermer()">
 				     <img src="medias/icons/fermer fenêtre.png" alt="Fermer Audio Player">
                     </div>
                </div>
-			<div id="atuiAudioPlayerInfosMusic">
+			<div id="atuiAudioplayerInfosMusic">
 				<p>Nom Artiste</p>
 				<p>Nom Musique</p>
                </div>
-               <div id="atuiAudioPlayerControls">
-				<div id="atuiAudioPlayerControlsTime">
+               <div id="atuiAudioplayerControls">
+				<div id="atuiAudioplayerControlsTime">
                          <p>00:00</p>
                          <p> - </p>
                          <p>00:00</p>
                     </div>
-			     <div id="atuiAudioPlayerControlsButtonsBasic">
+			     <div id="atuiAudioplayerControlsButtonsBasic">
 				     <img src="medias/icons/musique précédante.png" alt="Musique précédante"></img>
-				     <img src="medias/icons/play.png" alt="Play Music" onclick="atuiAudioPlayerMusicPlayPause()"></img>
+				     <img src="medias/icons/play.png" alt="Play Music" onclick="atuiAudioplayerMusicPlayPause()"></img>
 				     <img src="medias/icons/musique suivante.png" alt="Musique suivante"></img>
                     </div>
-			     <div id="atuiAudioPlayerControlsButtonsAdvanced">
+			     <div id="atuiAudioplayerControlsButtonsAdvanced">
 				     <img src="medias/icons/playlist.png" alt="Voir playlists"></img>
 				     <img src="medias/icons/aime.png" alt="J'aime cette musique"></img>
 				     <img src="medias/icons/aléatoire.png" alt="Choix musique aléatoire"></img>
                     </div>
 			</div>
-               <div id="atuiAudioPlayerControlsProgress" onclick="atuiAudioPlayerControlsProgressChange(this, event)">
+               <div id="atuiAudioplayerControlsProgress" onclick="atuiAudioplayerControlsProgressChange(this, event)">
                     <div></div>
                </div>
 		</aside>
