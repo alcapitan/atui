@@ -1,13 +1,20 @@
 # ATUI (Alex Technologies User Interface)
   
-Attention, la branche "public-dev-1" est une vielle version. Pour voir les avancés de conception les plus récentes, <a href="https://github.com/alcapitan/atui/tree/beta-dev2">veuillez aller vers la branche "beta-dev2" !</a>
-  
 ATUI est un framework web front-end.  
 C'est à dire que c'est une base CSS et JavaScript pour coder votre site web plus rapidement car vous n'avez plus besoin de faire de CSS (le JavaScript permet le dynamise du CSS).  
 Cette base est faite pour être la plus compatible (Chrome, Edge et Firefox), et performante (grâce aux conseil du Vérificateur du W3C et Google Insights) possible.  
 Elle est optimisé pour les faibles connexions et performances.  
   
 _Information : JavaScript peut être désactivé sans que ATUI crashe, seul des fonctionnalités ne fonctionneront plus._  
+
+# Attention ! Informations développement !
+ATUI est un projet qui est encore en phase de développement. Ainsi, il est déconseillé d'utiliser ce projet pour l'instant.  
+Si vous êtes curieux de découvrir ATUI, d'abord je remercie de l'interêt porté !  
+Cependant, pour éviter que vous soyez déçus par erreur, je vous informe que cette branche "beta" est une vielle version. Pour voir les avancés de conception les plus récentes, <a href="https://github.com/alcapitan/atui/tree/dev">veuillez aller vers la branche "dev" !</a>  
+  
+Comme écrit ci-dessus, ATUI est un projet en développement. Rassurez-vous, à l'avenir, le projet bénéficira d'un README et d'un wiki complet ! De plus, sachez que la première version stable sera dans la future branche "lts".
+
+<img src="organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="1080" height="607">
   
 ## Comment l'utiliser ?
 
