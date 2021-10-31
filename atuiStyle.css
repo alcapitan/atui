@@ -1,3 +1,86 @@
+/* Sommaire :
+- fonts x
+- root x
+- responsives x
+- sélecteurs x
+- barre d'en tête x
+     - bloc gauche x
+     - bloc centre x
+     - bloc droit x
+- mode d'application visuel x
+- gestion compte x
+- illustration x
+- navigateur x
+     - floating left x
+     - independant x
+- contenu x
+     - cartes x
+          - cartes style presentation x
+     - paragraphes x
+     - captions x
+     - télécharger un fichier
+     - video player x
+- pied de page x
+- contacts x
+- explorateur footer x
+- plugin x
+- boot x
+*/
+
+/* Sommaire :
+- Kernel
+     - Priority
+          - atuiBoot / boot => atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
+          - X / root  => X / Global StyleSheets
+          - X / fonts => X / Fonts
+          - atuiPlugin => atuiKernel_PriorityLabel / Label
+     - Responsives
+          - Ordinateur > min-width 768px
+          - Mobile > max-width 767px
+     - Tools
+          - atuiSelector / Sélecteurs => atuiKernel_ToolsSelector / Selector
+          - atuiSelectorSeparator / X => atuiKernel_ToolsSelectorSeparator / Selector Separator
+          - atuiSettingsModeVisuel / Mode d'application visuel => atuiKernel_ToolsSettingsDisplaymode / Settings > Display Mode
+          - atuiContacts / Contacts => atuiKernel_ToolsContact / Contact
+          - atuiExploreFooter / Explorateur footer => atuiKernel_ToolsExplorer / Explorer
+          - atuiIllustration / Illustration => atuiKernel_ToolsCarousel / Carousel
+     - Header
+          - header//atuiHeader / Barre d'en tête => atuiKernel_Header / Header
+          - atuiHeaderBarLeft / Bloc gauche => atuiKernel_HeaderBlockLeft / Left block
+          - atuiHeaderBarCenter / Bloc centre => atuiKernel_HeaderBlockCenter / Center block
+          - atuiHeaderBarRight / Bloc droit => atuiKernel_HeaderBlockRight / Right block
+     - Navigator
+          - atuiNavStyleFloatingLeft / Floating Left => atuiKernel_NavigatorStyleFloatleft / Float Left
+          - X / Independanr => atuiKernel_NavigatorStyleRow / Row
+     - Section
+          - atuiTextContainer / Paragraphes => atuiKernel_SectionText / Paragraph
+          - atuiTextContainer img && atuiCaption / X && Caption => atuiKernel_SectionImage / Image
+          - atuiFileDownload / Télécharger un fichier => atuiKernel_SectionDownload / Download
+          - atuiKernel_SectionCard
+               - atuiCardsPresentation / Cards style presentation => atuiKernel_SectionCardStylePurified / Purified
+     - Footer
+          - [style]
+
+- LanguagesManager
+     - atuiLanguagesManager_LanguageSelector
+- MediasPlayer
+     - atuiMediasPlayerAudio
+          - X / atuiAudioPlayer => Audio > Player / atuiMediasPlayer_AudioPlayer
+          - X / atuiAudioPlayerManager => Audio > Additionals Informations / atuiMediasPlayer_AudioPlayerAdditionals
+          - X / atuiAudioPlayerInfosMusic => Audio > Music Informations / atuiMediasPlayer_AudioPlayerMusicinformations
+          - X / atuiAudioPlayerControls => Audio > Audio Controls / atuiMediasPlayer_AudioPlayerControls
+          - X / atuiAudioPlayerControlsTimer => Audio > Timer / atuiMediasPlayer_AudioPlayerTimer
+          - X / atuiAudioPlayerControlsButtonsBasic => Audio > Basic Buttons / atuiMediasPlayer_AudioPlayerButtonsBasic
+          - X / atuiAudioPlayerControlsButtonsAdvanced => Audio > Advanced Buttons / atuiMediasPlayer_AudioPlayerButtonsAdvanced
+          - X / progressBarControl => Audio > Progress Bar / atuiMediasPlayer_AudioPlayerProgressbar
+     - atuiMediasPlayerVideo
+          - [actions]
+- SearchService
+- ServerExchanges
+     - atuiSettingsAccount / Gestion compte => atuiServerExchanges_AccountActions / Actions sur le compte 
+
+*/
+
 /* Fonts */
 
 /* @font-face
