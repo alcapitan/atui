@@ -51,5 +51,5 @@ function notificationMessage(title,text)
     atuiNotificationSound.play();
 }
 
-notificationMessage('1e notif','Coucou..');
-notificationMessage('2e notif','.. Milan !');
+/*notificationMessage('1e notif','Coucou..');
+notificationMessage('2e notif','.. Milan !');*/
