@@ -522,6 +522,15 @@ section
      font-size: 18px;
 }
 
+     /* Videoplayer */
+
+.atuiVideo video
+{
+     border-radius: 10px;
+     width : 80%;
+     margin : 20px 10%;
+}
+
 /* Pied de page */
 
 body > footer
