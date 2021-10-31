@@ -1,21 +1,24 @@
-/* Global */
+/* Fonts */
 
-@font-face
+/* @font-face
 {
-     font-family : 'Red Hat Display (Offline)';
+     font-family : 'Red Hat Display';
      src : url(fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf);
 }
 
 @font-face
 {
-     font-family : 'Montserrat (Offline)';
+     font-family : 'Montserrat';
      src : url(fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
-/*@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
-@import url("Red Hat Display (Offline)");
-@import url("Montserrat (Offline)");
+@import url("Red Hat Display");
+@import url("Montserrat"); */
+
+/* Root */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body
 {
@@ -24,7 +27,7 @@ body
 
 body *
 {
-     font-family: 'Montserrat','Montserrat (Offline)',Arial;
+     font-family: 'Montserrat',Arial;
      max-width: 100%;
 }
 
@@ -80,9 +83,14 @@ a:hover, a:active
      {
           flex : 1;
      }
+
+     #atuiHeader > .atuiIllustration
+     {
+          padding-top : 100px;
+     }
 }
 
-@media (max-width : 768px) /* Mobile */
+@media (max-width : 767px) /* Mobile */
 {
      #atuiHeaderBarCenter div input
      {
@@ -161,6 +169,7 @@ a:hover, a:active
 header
 {
      background-color : var(--atuiDefaultColor);
+     min-height: 50px;
 }
 
 header > aside
@@ -169,6 +178,8 @@ header > aside
      backdrop-filter: blur(5px);
      height : 50px;
      display: flex;
+     position: absolute;
+     width : 100vw;
 }
 
 header > aside > *
@@ -284,9 +295,22 @@ header aside img
 .atuiIllustration
 {
      background-image : url(medias/illustrations/presentation.jpg);
-     height : 50vh;
      background-size : cover;
      background-position : center;
+     display: flex;
+     align-items: flex-end;
+     justify-content: center;
+}
+
+#atuiHeader > .atuiIllustration
+{
+     height : calc(50vh + 50px);
+}
+
+.atuiIllustration div
+{
+     margin : 50px 10%;
+     margin-top : 80px;
 }
 
 .atuiIllustration div *
