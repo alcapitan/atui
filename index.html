@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
      <head>
           <meta charset="UTF-8">
           <meta name="description" content="ATUI est une interface utilisateur universelle. Elle vous permet de faire vos pages web rapidement et avoir un résultat élégant.">
@@ -11,7 +11,7 @@
           <link rel="stylesheet" type="text/css" href="atui/MediasPlayer/main.css">
           <link rel="stylesheet" type="text/css" href="atui/SearchService/main.css">
           <link rel="stylesheet" type="text/css" href="atui/ServerExchanges/main.css">
-          <link rel="icon" type="img/png" href="patch/icons/logo atui.png">
+          <link rel="icon" type="img/png" href="patch/icons/logo.png">
      </head>
      <body>
           <header id="atuiHeader">
@@ -53,7 +53,7 @@
                               </aside>
                          </nav>
                          <a href="#">
-                              <img alt="Icone du site" src="patch/icons/logo atui.png">
+                              <img alt="Icone du site" src="patch/icons/logo.png">
                               <p>ATUI</p>
                          </a>
                     </div>
@@ -95,8 +95,8 @@
                               </aside>
                          </div>
                          <div id="atuiSettingsModeVisuel">
-                              <img alt="Mode jour" class="modeVisuel" src="atui/kernel/medias/mode clair.png" onclick="modeSombre()" style="display: block;">
-                              <img alt="Mode nuit" class="modeVisuel" src="atui/kernel/medias/mode sombre.png" onclick="modeClair()">
+                              <img alt="Mode jour" class="modeVisuel" src="atui/kernel/medias/light.png" onclick="modeSombre()" style="display: block;">
+                              <img alt="Mode nuit" class="modeVisuel" src="atui/kernel/medias/dark.png" onclick="modeClair()">
                          </div>
                     </div>
                </aside>
@@ -104,7 +104,7 @@
                     <div>
                          <h2>Découvrez ATUI</h2>
                          <h3>Voici la première version du framework web ultra-fonctionel pour construire vos pages web rapidement.</h3>
-                         <div><button href="#">En savoir plus</button></div>
+                         <div><a href="#">En savoir plus</a></div>
                     </div>
                </article>
           </header>
@@ -160,21 +160,21 @@
                <div class="atuiTextContainer">
                     <h3>Soutenez le développement d'ATUI</h3>
                     <p>Afin de rendre ATUI meilleur, contribuez au projet ! Faites moi par de vos bogues rencontrés ou de vos idées, et pour les plus expérimentés, améliorez le code d'ATUI ; Tout ça sur le <a href="https://github.com/alcapitan/atui">GitHub d'ATUI</a>.</p>
-                    <img src="patch/illustrations/community.jpg"></img>
+                    <img src="patch/illustrations/community.jpg" alt="Illustration communauté. Source : Ingo Joseph sur Pexels.">
                     <p class="atuiCaption">Source : Ingo Joseph sur Pexels</p>
                </div>
                <div class="atuiFileDownload">
-                    <img src="atui/kernel/medias/file.png">
+                    <img src="atui/kernel/medias/file.png" alt="Icone fichier">
                     <p>test.txt</p>
                     <a download="" href="">Télécharger</a>
                </div>
                <div class="atuiFileDownload">
-                    <img src="atui/kernel/medias/file.png">
+                    <img src="atui/kernel/medias/file.png" alt="Icone fichier">
                     <p>test.jpg</p>
                     <a download="" href="">Télécharger</a>
                </div>
                <div class="atuiFileDownload">
-                    <img src="atui/kernel/medias/file.png">
+                    <img src="atui/kernel/medias/file.png" alt="Icone fichier">
                     <p>test.mp3</p>
                     <a download="" href="">Télécharger</a>
                </div>
@@ -200,25 +200,23 @@
                <div id="atuiExploreFooter">
                     <div>
                          <p>Plan du site</p>
-                         <li>
-                              <a href="#">Présentation</a>
-                         </li>
-                         <li>
-                              <a href="#">Documentation</a>
-                         </li>
-                         <li>
-                              <a href="#">Exemples d'utilisation</a>
-                         </li>
+                         <ul>
+                              <li><a href="#">Présentation</a></li>
+                              <li><a href="#">Documentation</a></li>
+                              <li><a href="#">Exemples d'utilisation</a></li>
+                         </ul>
                     </div>
                     <div>
                          <p>Options</p>
-                         <li>
-                              <!-- https://img.icons8.com/ios/50/000000/translation.png -->
-                              <select>
-                                   <option>Français</option>
-                                   <option>Anglais</option>
-                              </select>
-                         </li>
+                         <ul>
+                              <li id="atuiLanguagesManager_LanguageSelector">
+                                   <!-- https://img.icons8.com/ios/50/000000/translation.png -->
+                                   <select>
+                                        <option>Français</option>
+                                        <option>Anglais</option>
+                                   </select>
+                              </li>
+                         </ul>
                     </div>
                </div>
                <div id="atuiPlugin">
@@ -229,7 +227,7 @@
                <audio id="atuiAudioplayerMusic" src="patch/musics/test.mp3" ontimeupdate="update(this)"></audio>
 			<script src="atui/MediasPlayer/main.js"></script>
 			<!--<script src="atui/MediasPlayer/extractDatabase.js"></script>-->
-			<img src="atui/MediasPlayer/medias/cover.png">
+			<img src="atui/MediasPlayer/medias/cover.png" alt="Icone Couverture d'album indisponible.">
                <div id="atuiAudioplayerManager">
                     <div>
                          <img src="atui/MediasPlayer/medias/information.png" alt="Infos album">
@@ -256,14 +254,14 @@
                          <p>00:00</p>
                     </div>
 			     <div id="atuiAudioplayerControlsButtonsBasic">
-				     <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédante"></img>
-				     <img src="atui/MediasPlayer/medias/play.png" alt="Play Music" onclick="atuiAudioplayerMusicPlayPause()"></img>
-				     <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante"></img>
+				     <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédante">
+				     <img src="atui/MediasPlayer/medias/play.png" alt="Play Music" onclick="atuiAudioplayerMusicPlayPause()">
+				     <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante">
                     </div>
 			     <div id="atuiAudioplayerControlsButtonsAdvanced">
-				     <img src="atui/MediasPlayer/medias/playlist.png" alt="Voir playlists"></img>
-				     <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique"></img>
-				     <img src="atui/MediasPlayer/medias/random.png" alt="Choix musique aléatoire"></img>
+				     <img src="atui/MediasPlayer/medias/playlist.png" alt="Voir playlists">
+				     <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique">
+				     <img src="atui/MediasPlayer/medias/random.png" alt="Choix musique aléatoire">
                     </div>
 			</div>
                <div id="atuiAudioplayerControlsProgress" onclick="atuiAudioplayerControlsProgressChange(this, event)">
@@ -283,9 +281,7 @@
                          <p>Il est bénéfique pour vous (sécurité, performances et modernité) de mettre à jour votre ordinateur, ou d'installer Edge Chromium (nouveau Edge).</p>
                     </section>
                     <footer>
-                         <a href="https:///www.microsoft.com/fr-fr/edge">
-                              <button style="background-color : rgb(230, 46, 0);">Installer Edge Chromium</button>
-                         </a>
+                         <a style="background-color : rgb(230, 46, 0);" href="https://www.microsoft.com/fr-fr/edge">Installer Edge Chromium</a>
                     </footer>
                </article>
                <article>

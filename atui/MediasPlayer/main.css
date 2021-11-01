@@ -6,7 +6,7 @@ Version : dev2
 
 /* Audio */
 
-#atuiAudioPlayer
+#atuiAudioplayer
 {
 	display: none;
 	position : fixed;
@@ -22,19 +22,19 @@ Version : dev2
 	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-#atuiAudioPlayerManager
+#atuiAudioplayerManager
 {
 	float : right;
 	display: flex;
 }
 
-#atuiAudioPlayerManager img
+#atuiAudioplayerManager img
 {
 	height : 25px;
 	margin : 5px;
 }
 
-#atuiAudioPlayer > img
+#atuiAudioplayer > img
 {
 	border-radius : 10px;
 	width : 140px;
@@ -42,54 +42,54 @@ Version : dev2
 	float : left;
 }
 
-#atuiAudioPlayerInfosMusic
+#atuiAudioplayerInfosMusic
 {
 	margin-left : 160px;
 }
 
-#atuiAudioPlayerInfosMusic p
+#atuiAudioplayerInfosMusic p
 {
 	font-family: "Red Hat Display";
 	margin : 10px 0px;
 	width : 50%;
 }
 
-#atuiAudioPlayerInfosMusic p:first-child
+#atuiAudioplayerInfosMusic p:first-child
 {
 	font-size: 20px;
 }
 
-#atuiAudioPlayerInfosMusic p:last-child
+#atuiAudioplayerInfosMusic p:last-child
 {
 	font-size: 30px;
 	font-weight: bold;
 	color : var(--atuiDefaultColor);
 }
 
-#atuiAudioPlayerControls
+#atuiAudioplayerControls
 {
 	display: flex;
 }
 
-#atuiAudioPlayerControlsTime
+#atuiAudioplayerControlsTime
 {
 	display: flex;
 	margin : 15px;
 	transform: translate(10px, -4px);
 }
 
-#atuiAudioPlayerControlsTime p
+#atuiAudioplayerControlsTime p
 {
 	margin : 0px;
 	font-size : 16px;
 }
 
-#atuiAudioPlayerControlsTime p:nth-child(2)
+#atuiAudioplayerControlsTime p:nth-child(2)
 {
 	margin : 0px 5px;
 }
 
-#atuiAudioPlayerControls img
+#atuiAudioplayerControls img
 {
 	width : 30px;
 	height : 30px;
@@ -97,12 +97,12 @@ Version : dev2
 	border-radius: 10px;
 }
 
-#atuiAudioPlayerControlsButtonsBasic, #atuiAudioPlayerControlsButtonsAdvanced
+#atuiAudioplayerControlsButtonsBasic, #atuiAudioplayerControlsButtonsAdvanced
 {
 	margin : 0px 20px;
 }
 
-#atuiAudioPlayerControlsButtonsBasic img:hover, #atuiAudioPlayerControlsButtonsAdvanced img:hover
+#atuiAudioplayerControlsButtonsBasic img:hover, #atuiAudioplayerControlsButtonsAdvanced img:hover
 {
 	background-color: var(--atuiDefaultColor);
 }
@@ -114,7 +114,7 @@ Version : dev2
 	margin-left : 160px;
 }
 
-#atuiAudioPlayerControlsProgress
+#atuiAudioplayerControlsProgress
 {
 	width : calc(100% + 20px);
 	height : 10px;
@@ -125,7 +125,7 @@ Version : dev2
 	bottom : 0px;
 }
 
-#atuiAudioPlayerControlsProgress div
+#atuiAudioplayerControlsProgress div
 {
 	width : 100%;
 	height : 10px;
