@@ -346,7 +346,7 @@ a:hover, a:active
 
 .atuiIllustration
 {
-     background-image : url(medias/illustrations/presentation.jpg);
+     background-image : url(patch/illustrations/presentation.jpg);
      background-size : cover;
      background-position : center;
      display: flex;
