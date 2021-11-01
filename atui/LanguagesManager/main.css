@@ -1,0 +1,15 @@
+/* Metadata : 
+Auteur (github) : alcapitan
+Nom du module : Languages Manager
+Version : dev2
+*/
+
+footer select
+{
+     border : 2px black solid;
+     background-color: white;
+     padding : 5px;
+     width : 100px;
+     height : 40px;
+     border-radius: 10px;
+}

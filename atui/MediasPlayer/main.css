@@ -1,0 +1,142 @@
+/* Metadata : 
+Auteur (github) : alcapitan
+Nom du module : Medias Player
+Version : dev2
+*/
+
+/* Audio */
+
+#atuiAudioPlayer
+{
+	display: none;
+	position : fixed;
+	background-color : rgb(230, 230, 230, 0.8);
+	backdrop-filter : blur(10px);
+	border-radius : 10px;
+	width : 90%;
+	padding : 10px;
+	bottom : 10px;
+	height : 150px;
+	margin-left : 50%;
+	transform: translateX(-50%);
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#atuiAudioPlayerManager
+{
+	float : right;
+	display: flex;
+}
+
+#atuiAudioPlayerManager img
+{
+	height : 25px;
+	margin : 5px;
+}
+
+#atuiAudioPlayer > img
+{
+	border-radius : 10px;
+	width : 140px;
+	height : 140px;
+	float : left;
+}
+
+#atuiAudioPlayerInfosMusic
+{
+	margin-left : 160px;
+}
+
+#atuiAudioPlayerInfosMusic p
+{
+	font-family: "Red Hat Display";
+	margin : 10px 0px;
+	width : 50%;
+}
+
+#atuiAudioPlayerInfosMusic p:first-child
+{
+	font-size: 20px;
+}
+
+#atuiAudioPlayerInfosMusic p:last-child
+{
+	font-size: 30px;
+	font-weight: bold;
+	color : var(--atuiDefaultColor);
+}
+
+#atuiAudioPlayerControls
+{
+	display: flex;
+}
+
+#atuiAudioPlayerControlsTime
+{
+	display: flex;
+	margin : 15px;
+	transform: translate(10px, -4px);
+}
+
+#atuiAudioPlayerControlsTime p
+{
+	margin : 0px;
+	font-size : 16px;
+}
+
+#atuiAudioPlayerControlsTime p:nth-child(2)
+{
+	margin : 0px 5px;
+}
+
+#atuiAudioPlayerControls img
+{
+	width : 30px;
+	height : 30px;
+	padding : 5px;
+	border-radius: 10px;
+}
+
+#atuiAudioPlayerControlsButtonsBasic, #atuiAudioPlayerControlsButtonsAdvanced
+{
+	margin : 0px 20px;
+}
+
+#atuiAudioPlayerControlsButtonsBasic img:hover, #atuiAudioPlayerControlsButtonsAdvanced img:hover
+{
+	background-color: var(--atuiDefaultColor);
+}
+
+#progressBarControl
+{
+	background-color : #00000080;
+	height : 10px;
+	margin-left : 160px;
+}
+
+#atuiAudioPlayerControlsProgress
+{
+	width : calc(100% + 20px);
+	height : 10px;
+	border-radius: 0px 0px 10px 10px;
+	transform: translateX(-10px);
+	overflow: hidden;
+	position: absolute;
+	bottom : 0px;
+}
+
+#atuiAudioPlayerControlsProgress div
+{
+	width : 100%;
+	height : 10px;
+	background-color: var(--atuiDefaultColor);
+}
+
+/* Video */
+
+.atuiVideo video
+{
+     border-radius: 10px;
+     width : 80%;
+     margin : 20px 10%;
+}
