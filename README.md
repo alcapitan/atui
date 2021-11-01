@@ -15,7 +15,7 @@ La branche actuelle nommée "dev" contient les modifications les plus récentes 
 Comme écrit ci-dessus, ATUI est un projet en développement. Rassurez-vous, à l'avenir, le projet bénéficira d'un README et d'un wiki complet ! De plus, sachez que la première version stable sera dans la future branche "lts".
 
 <p align="center">
-    <img src="/medias/patch/organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="720" height="405">
+    <img src="/patch/documents/organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="720" height="405">
 </p>
   
 ## Comment l'utiliser ?
