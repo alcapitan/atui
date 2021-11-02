@@ -237,7 +237,7 @@ a:hover, a:active
 
 .atuiKernel_ToolsSelector a div p
 {
-     font-size : 20px;
+     font-size : 1.25rem;
      position: absolute;
      margin-top : 5.5px;
      display: inline;
@@ -304,7 +304,7 @@ a:hover, a:active
 #atuiKernel_ToolsExplorer div p
 {
      font-weight: bold;
-     font-size : 18px;
+     font-size : 1.125rem;
      margin : 15px 0px;
      font-family: "Red Hat Display";
 }
@@ -314,7 +314,7 @@ a:hover, a:active
      list-style: none;
      margin : 8px;
      margin-left : 15px;
-     font-size : 16px;
+     font-size : 1rem;
 }
 
 #atuiKernel_ToolsExplorer div ul li a
@@ -361,7 +361,7 @@ a:hover, a:active
 {
      border : none;
      background-color : var(--atuiDefaultColorTransparent);
-     font-size : 21px;
+     font-size : 1.25rem;
      padding : 10px 20px;
      color : white;
      width : 200px;
@@ -371,7 +371,7 @@ a:hover, a:active
 
      /* Notification */
 
-#atuiNotificationsCenter
+#atuiKernel_Notification
 {
      position: fixed;
      top : 10px;
@@ -381,7 +381,7 @@ a:hover, a:active
      align-items: center;
 }
 
-.atuiNotifications
+.atuiKernel_NotificationElement
 {
      margin : 10px;
      background-color: white;
@@ -391,49 +391,49 @@ a:hover, a:active
      padding : 15px 30px;
 }
 
-.atuiNotifications h3
+.atuiKernel_NotificationElement h3
 {
      font-family: "Red Hat Display";
      margin : 0;
-     font-size : 22px;
+     font-size : 1.375rem;
      font-weight : bold;
 }
 
-.atuiNotifications p
+.atuiKernel_NotificationElement p
 {
      margin : 10px;
-     font-size : 18px;
+     font-size : 1.125rem;
 }
 
-.atuiNotificationsButtonsContainer
+.atuiKernel_NotificationElementFooter
 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-.atuiNotificationsButtonsContainer *
+.atuiKernel_NotificationElementFooter *
 {
      margin : 10px;
 }
 
-.atuiNotificationsButtonsContainer button
+.atuiKernel_NotificationElementFooter button
 {
      padding : 10px;
      border-radius: 10px;
      background-color: rgb(230, 230, 230);
      border : none;
-     font-size : 16px;
+     font-size : 1rem;
 }
 
-.atuiNotificationsButtonMain
+.atuiKernel_NotificationElementFooterMain
 {
      background-color: var(--atuiDefaultColor) !important;
      font-weight: bold;
      font-family: "Red Hat Display";
 }
 
-.atuiNotificationsButtonFermer
+.atuiKernel_NotificationElementFermer
 {
      float: right;
      width: 30px;
@@ -492,7 +492,7 @@ a:hover, a:active
      margin-left: 10px;
      color : black;
      text-decoration : none;
-     font-size : 30px;
+     font-size : 1.875;
      font-weight : bold;
      display : inline-block;
      font-family : "Red Hat Display";
@@ -506,35 +506,6 @@ a:hover, a:active
      width: min-content;
      order : 2;
      flex : 2;
-}
-
-#atuiKernel_HeaderBlockCenter div
-{
-     height : 40px;
-     border-radius: 10px;
-}
-
-#atuiKernel_HeaderBlockCenter div input
-{
-     background-color: transparent;
-     font-size: 25px;
-     padding : 5px;
-     width : calc(100% - 60px);
-     height: 30px;
-     border: none;
-     padding-left: 10px;
-}
-
-#atuiKernel_HeaderBlockCenter div input:active
-{
-     background-color: transparent;
-     border : none;
-}
-
-#atuiKernel_HeaderBlockCenter div img
-{
-     float : right;
-     height : 30px;
 }
 
      /* Right block */
@@ -612,14 +583,14 @@ section
 .atuiKernel_SectionText h3
 {
      font-weight: bold;
-     font-size : 20px;
+     font-size : 1.25rem;
      color : var(--atuiDefaultColor);
      font-family: "Red Hat Display";
 }
 
 .atuiKernel_SectionText p
 {
-     font-size : 16px;
+     font-size : 1rem;
 }
 
 .atuiKernel_SectionText a
@@ -670,7 +641,7 @@ section
      font-weight : bold;
      float : left;
      margin : 14px 0px 14px 20px;
-     font-size: 18px;
+     font-size: 1.125rem;
 }
 
 .atuiKernel_SectionDownload a
@@ -678,14 +649,14 @@ section
      float : right;
      color : var(--atuiDefaultColor);
      margin : 14px 20px 14px 0px;
-     font-size: 18px;
+     font-size: 1.125rem;
 }
 
      /* Card */
 
           /* Purified */
 
-.atuiCardsContainer
+.atuiKernel_SectionCard
 {
      display: flex;
      flex-wrap : wrap;
@@ -707,13 +678,13 @@ section
 {
      font-family: "Red Hat Display";
      margin : 5px 0px;
-     font-size: 20px;
+     font-size: 1.25rem;
 }
 
 .atuiKernel_SectionCardStylePurified div p
 {
      margin : 5px 0px;
-     font-size: 16px;
+     font-size: 1rem;
 }
 
 .atuiKernel_SectionCardStylePurified div a
@@ -721,7 +692,7 @@ section
      margin : 5px 0px;
      color : var(--atuiDefaultColor);
      font-weight: bold;
-     font-size : 16px;
+     font-size : 1rem;
      font-family : "Red Hat Display";
 }
 
