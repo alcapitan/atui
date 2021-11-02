@@ -4,3 +4,31 @@ Nom du module : Search Service
 Version : dev2
 */
 
+#atuiKernel_HeaderBlockCenter div
+{
+     height : 40px;
+     border-radius: 10px;
+}
+
+#atuiKernel_HeaderBlockCenter div input
+{
+     background-color: transparent;
+     font-size: 1.5rem;
+     padding : 5px;
+     width : calc(100% - 60px);
+     height: 30px;
+     border: none;
+     padding-left: 10px;
+}
+
+#atuiKernel_HeaderBlockCenter div input:active
+{
+     background-color: transparent;
+     border : none;
+}
+
+#atuiKernel_HeaderBlockCenter div img
+{
+     float : right;
+     height : 30px;
+}

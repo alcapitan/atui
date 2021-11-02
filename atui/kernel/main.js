@@ -6,7 +6,7 @@ Version : dev2
 
 /* Notifications */
 
-var centerNotification = document.getElementById("atuiNotificationsCenter");
+var centerNotification = document.getElementById("atuiKernel_Notification");
 
      /* Messages */
 
@@ -14,7 +14,7 @@ function notificationMessage(title,text)
 {
     // Créer boite notification
     var elementNotification = document.createElement('aside');
-    elementNotification.classList.add("atuiNotifications");
+    elementNotification.classList.add("atuiKernel_NotificationElement");
 
     // Titre
     var elementNotificationTitle = document.createElement('h3');
@@ -26,12 +26,12 @@ function notificationMessage(title,text)
 
     // Buttons
     var elementNotificationButtonsContainer = document.createElement('div');
-    elementNotificationButtonsContainer.classList.add("atuiNotificationsButtonsContainer");
+    elementNotificationButtonsContainer.classList.add("atuiKernel_NotificationElementFooter");
 
     var elementNotificationButtonAgree = document.createElement('button');
     elementNotificationButtonAgree.textContent = "J'accepte";
     elementNotificationButtonAgree.onclick = "a";
-    elementNotificationButtonAgree.classList.add("atuiNotificationsButtonMain");
+    elementNotificationButtonAgree.classList.add("atuiKernel_NotificationElementFooterMain");
 
     var elementNotificationButtonDisagreeOne = document.createElement('button');
     elementNotificationButtonDisagreeOne.textContent = "Je refuse une fois";
@@ -42,7 +42,7 @@ function notificationMessage(title,text)
     // Icone Fermer
     var elementNotificationButtonFermer = document.createElement('img');
     elementNotificationButtonFermer.src = 'medias/icons/fermer fenêtre.png';
-    elementNotificationButtonFermer.classList.add("atuiNotificationsButtonFermer");
+    elementNotificationButtonFermer.classList.add("atuiKernel_NotificationElementFermer");
 
     // Son Notification
     var atuiNotificationSound = new Audio('medias/musics/atuiNotification.mp3');
@@ -64,7 +64,7 @@ notificationMessage('2e notif','.. Milan !');*/
 
 /* Browser compatibility */
 
-atuiBanIE = document.getElementById('atuiBoot');
+atuiBanIE = document.getElementById('atuiKernel_PriorityBrowserCompatibility');
 //renvoie version de IE ou false, si le navigateur n'est pas IE
 function IEdetection()
 {
@@ -100,11 +100,11 @@ if (result != "Not IE")
 
 /* Display mode */
 
-var modeVisuel = document.getElementsByClassName('modeVisuel');
-var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
+var modeVisuel = document.getElementsByClassName('atuiKernel_ToolsSettingsDisplaymodeIcons');
+var atuiHeader = document.getElementById('atuiKernel_Header').childNodes[1];
 function modeSombre()
 {
-     console.log('Mode Sombre appliqué');
+     console.log('Dark mode applied. ');
      modeVisuel[0].style.display  = "none";
      modeVisuel[1].style.display  = "block";
      document.childNodes[1].childNodes[2].style.filter = "brightness(0.5)";
@@ -113,7 +113,7 @@ function modeSombre()
 }
 function modeClair()
 {
-     console.log('Mode Clair appliqué');
+     console.log('Light mode applied. ');
      modeVisuel[0].style.display  = "block";
      modeVisuel[1].style.display  = "none";
      document.childNodes[1].childNodes[2].style.filter = "brightness(1)";
@@ -124,8 +124,8 @@ modeVisuel[0].style.display  = 'block';
 
 /* Selector */
 
-var atuiNavIcon = document.getElementById('atuiNavStyleFloatingLeft').childNodes[1];
-var atuiNavBar = document.getElementById('atuiNavStyleFloatingLeft').childNodes[3];
+var atuiNavIcon = document.getElementById('atuiKernel_NavigatorStyleFloatleft').childNodes[1];
+var atuiNavBar = document.getElementById('atuiKernel_NavigatorStyleFloatleft').childNodes[3];
 var atuiNavBarDisplay = "none";
 atuiNavIcon.addEventListener('click', event =>
 {
