@@ -9,7 +9,6 @@ Version : dev2
      - Priority
           - atuiBoot / boot => atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
           - X / root  => X / Global StyleSheets
-          - X / fonts => X / Fonts
           - atuiPlugin => atuiKernel_PriorityLabel / Label
      - Responsives
           - Ordinateur > min-width 768px
@@ -127,23 +126,6 @@ a:hover, a:active
      font-weight: bold;
      text-decoration: underline;
 }
-
-     /* Fonts */
-
-/* @font-face
-{
-     font-family : 'Red Hat Display';
-     src : url(fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf);
-}
-
-@font-face
-{
-     font-family : 'Montserrat';
-     src : url(fonts/Montserrat/Montserrat-Regular.ttf);
-}
-
-@import url("Red Hat Display");
-@import url("Montserrat"); */
 
      /* Plug-in */
 
@@ -343,7 +325,6 @@ a:hover, a:active
 
 .atuiIllustration
 {
-     /*background-image : url(https://www.github.com/alcapitan/atui/patch/illustrations/presentation.jpg);*/
      background-size : cover;
      background-position : center;
      display: flex;
