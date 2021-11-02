@@ -62,7 +62,7 @@ function notificationMessage(title,text)
 /*notificationMessage('1e notif','Coucou..');
 notificationMessage('2e notif','.. Milan !');*/
 
-// Exclusion d'Internet Explorer
+/* Browser compatibility */
 
 atuiBanIE = document.getElementById('atuiBoot');
 //renvoie version de IE ou false, si le navigateur n'est pas IE
@@ -98,7 +98,7 @@ if (result != "Not IE")
      atuiBanIE.style.display = "block";
 }
 
-// Mode d'application visuel
+/* Display mode */
 
 var modeVisuel = document.getElementsByClassName('modeVisuel');
 var atuiHeader = document.getElementById('atuiHeader').childNodes[1];
@@ -122,7 +122,7 @@ function modeClair()
 }
 modeVisuel[0].style.display  = 'block';
 
-/* Gestion Nav Style Floating Left/Right */
+/* Selector */
 
 var atuiNavIcon = document.getElementById('atuiNavStyleFloatingLeft').childNodes[1];
 var atuiNavBar = document.getElementById('atuiNavStyleFloatingLeft').childNodes[3];

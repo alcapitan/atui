@@ -18,12 +18,12 @@
           <link rel="icon" type="img/png" href="patch/icons/logo.png">
      </head>
      <body>
-          <header id="atuiHeader">
+          <header id="atuiKernel_Header">
                <aside>
-                    <div id="atuiHeaderBarLeft">
-                         <nav id="atuiNavStyleFloatingLeft">
+                    <div id="atuiKernel_HeaderBlockLeft">
+                         <nav id="atuiKernel_NavigatorStyleFloatleft">
                               <img src="atui/kernel/medias/program.png" alt="menu">
-                              <aside class="atuiSelector">
+                              <aside class="atuiKernel_ToolsSelector">
                                    <a href="#">
                                         <div>
                                              <img src="atui/kernel/medias/section.png" alt="icone categorie">
@@ -61,16 +61,16 @@
                               <p>ATUI</p>
                          </a>
                     </div>
-                    <div id="atuiHeaderBarCenter">
+                    <div id="atuiKernel_HeaderBlockCenter">
                          <div>
                               <input type="text" placeholder="Faites une recherche...">
                               <img src="atui/SearchService/medias/search.png" alt="Rechercher">
                          </div>
                     </div>
-                    <div id="atuiHeaderBarRight">
+                    <div id="atuiKernel_HeaderBlockRight">
                          <div id="atuiSettingsAccount">
                               <img alt="Aucun compte connecté" src="atui/ServerExchanges/medias/account.png">
-                              <aside class="atuiSelector">
+                              <aside class="atuiKernel_ToolsSelector">
                                    <a href="#">
                                         <div>
                                              <img src="atui/ServerExchanges/medias/registration.png" alt="icone inscription">
@@ -89,7 +89,7 @@
                                              <p>Se déconnecter</p>
                                         </div>
                                    </a>
-                                   <div class="atuiSelectorSeparator"></div>
+                                   <div class="atuiKernel_ToolsSelectorSeparator"></div>
                                    <a href="#">
                                         <div>
                                              <img src="atui/ServerExchanges/medias/profil.png" alt="icone profil">
@@ -98,13 +98,13 @@
                                    </a>
                               </aside>
                          </div>
-                         <div id="atuiSettingsModeVisuel">
+                         <div id="atuiKernel_ToolsSettingsDisplaymode">
                               <img alt="Mode jour" class="modeVisuel" src="atui/kernel/medias/light.png" onclick="modeSombre()" style="display: block;">
                               <img alt="Mode nuit" class="modeVisuel" src="atui/kernel/medias/dark.png" onclick="modeClair()">
                          </div>
                     </div>
                </aside>
-               <article class="atuiIllustration">
+               <article class="atuiKernel_ToolsCarousel">
                     <div>
                          <h2>Découvrez ATUI</h2>
                          <h3>Voici la première version du framework web ultra-fonctionel pour construire vos pages web rapidement.</h3>
@@ -112,7 +112,7 @@
                     </div>
                </article>
           </header>
-          <nav>
+          <nav class="atuiKernel_NavigatorStyleRow">
                <a href="#">
                     <img src="atui/kernel/medias/section.png" alt="icone categorie">
                     <p>Catégorie</p>
@@ -161,23 +161,25 @@
                          </div>
                     </article>
                </div>
-               <div class="atuiTextContainer">
+               <div class="atuiKernel_SectionText">
                     <h3>Soutenez le développement d'ATUI</h3>
                     <p>Afin de rendre ATUI meilleur, contribuez au projet ! Faites moi par de vos bogues rencontrés ou de vos idées, et pour les plus expérimentés, améliorez le code d'ATUI ; Tout ça sur le <a href="https://github.com/alcapitan/atui">GitHub d'ATUI</a>.</p>
-                    <img src="patch/illustrations/community.jpg" alt="Illustration communauté. Source : Ingo Joseph sur Pexels.">
-                    <p class="atuiCaption">Source : Ingo Joseph sur Pexels</p>
                </div>
-               <div class="atuiFileDownload">
+               <div class="atuiKernel_SectionImage">
+                    <img src="patch/illustrations/community.jpg" alt="Illustration communauté. Source : Ingo Joseph sur Pexels.">
+                    <p>Source : Ingo Joseph sur Pexels</p>
+               </div>
+               <div class="atuiKernel_SectionDownload">
                     <img src="atui/kernel/medias/file.png" alt="Icone fichier">
                     <p>test.txt</p>
                     <a download="" href="">Télécharger</a>
                </div>
-               <div class="atuiFileDownload">
+               <div class="atuiKernel_SectionDownload">
                     <img src="atui/kernel/medias/file.png" alt="Icone fichier">
                     <p>test.jpg</p>
                     <a download="" href="">Télécharger</a>
                </div>
-               <div class="atuiFileDownload">
+               <div class="atuiKernel_SectionDownload">
                     <img src="atui/kernel/medias/file.png" alt="Icone fichier">
                     <p>test.mp3</p>
                     <a download="" href="">Télécharger</a>
@@ -190,18 +192,18 @@
                </div>
           </section>
           <footer>
-               <a href="#atuiHeader"><img alt="Remonter en haut de la page" src="atui/kernel/medias/backUp.png"></a>
-               <div id="atuiContacts">
+               <a href="#atuiKernel_Header"><img alt="Remonter en haut de la page" src="atui/kernel/medias/backUp.png"></a>
+               <div id="atuiKernel_ToolsContact">
                     <p>Contacts</p>
-                    <div id="atuiContactsLarge">
+                    <div id="atuiKernel_ToolsContactBroad">
      
                     </div>
-                    <div id="atuiContactsListe">
+                    <div id="atuiKernel_ToolsContactCompact">
                          <a href="https://github.com/alcapitan/atui"><img src="atui/kernel/medias/github.png" alt="Logo GitHub"></a>
                          <a href="https://instagram.com/al.capitan"><img src="atui/kernel/medias/instagram.png" alt="Logo Instagram"></a>
                     </div>
                </div>
-               <div id="atuiExploreFooter">
+               <div id="atuiKernel_ToolsExplorer">
                     <div>
                          <p>Plan du site</p>
                          <ul>
@@ -223,7 +225,7 @@
                          </ul>
                     </div>
                </div>
-               <div id="atuiPlugin">
+               <div id="atuiKernel_PriorityLabel">
                     <a href="https://github.com/alcapitan/atui" target="_blank">Ce site est basé sur ATUI dev2. En savoir plus...</a>
                </div>
           </footer>
@@ -274,7 +276,7 @@
 		</aside>
           <aside id="atuiNotificationsCenter">
           </aside>
-          <aside id="atuiBoot">
+          <aside id="atuiKernel_PriorityBrowserCompatibility">
                <article>
                     <header>
                          <h2>Navigateur non supporté !</h2>

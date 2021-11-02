@@ -61,7 +61,7 @@ Version : dev2
 
      /* Boot */
 
-#atuiBoot
+#atuiKernel_PriorityBrowserCompatibility
 {
      position: fixed;
      width : 100%;
@@ -71,29 +71,29 @@ Version : dev2
      display: none;
 }
 
-#atuiBoot article
+#atuiKernel_PriorityBrowserCompatibility article
 {
      border-radius: 20px;
      border : 1px solid rdb(0,0,0);
 }
 
-#atuiBoot article header, #atuiBoot article footer
+#atuiKernel_PriorityBrowserCompatibility article header, #atuiKernel_PriorityBrowserCompatibility article footer
 {
      margin : 20px;
 }
 
-#atuiBoot article section
+#atuiKernel_PriorityBrowserCompatibility article section
 {
      margin : 30px;
 }
 
-#atuiBoot article footer button
+#atuiKernel_PriorityBrowserCompatibility article footer button
 {
      padding : 10px;
      margin : 5px;
      border : none;
      border-radius : 10px;
-     font-size : 16px;
+     font-size : 1rem;
 }
 
      /* Root */
@@ -113,6 +113,7 @@ body *
 {
 	--atuiDefaultColor : rgb(230, 0, 0);
      --atuiDefaultColorTransparent : rgb(230, 0, 0, 0.6);
+     font-size : 16px;
 }
 
 a
@@ -129,17 +130,17 @@ a:hover, a:active
 
      /* Plug-in */
 
-#atuiPlugin
+#atuiKernel_PriorityLabel
 {
      text-align : center;
      margin : 10px;
      margin-top : 20px;
 }
 
-#atuiPlugin *
+#atuiKernel_PriorityLabel *
 {
      color : var(--atuiDefaultColor);
-     font-size : 16px;
+     font-size : 1rem;
 }
 
 /* Responsives */
@@ -151,33 +152,33 @@ a:hover, a:active
           display: inline-flex;
      }
 
-     .atuiCardsPresentation
+     .atuiKernel_SectionCardStylePurified
      {
           width : 300px;
      }
 
-     #atuiHeaderBarCenter
+     #atuiKernel_HeaderBlockCenter
      {
           flex : 3;
      }
 
-     #atuiHeaderBarCenter div
+     #atuiKernel_HeaderBlockCenter div
      {
           background-color: rgb(242, 242, 242, 0.8);
           backdrop-filter: blur(10px);
      }
 
-     #atuiHeaderBarCenter div input
+     #atuiKernel_HeaderBlockCenter div input
      {
           display: inline;
      }
 
-     #atuiHeaderBarRight
+     #atuiKernel_HeaderBlockRight
      {
           flex : 1;
      }
 
-     #atuiHeader > .atuiIllustration
+     #atuiKernel_Header > .atuiKernel_ToolsCarousel
      {
           padding-top : 100px;
      }
@@ -185,7 +186,7 @@ a:hover, a:active
 
 @media (max-width : 767px) /* Smartphones */
 {
-     #atuiHeaderBarCenter div input
+     #atuiKernel_HeaderBlockCenter div input
      {
           display : none;
      }
@@ -196,7 +197,7 @@ a:hover, a:active
 
      /* Selector */
 
-.atuiSelector
+.atuiKernel_ToolsSelector
 {
      position : absolute;
      width : 280px;
@@ -207,34 +208,34 @@ a:hover, a:active
      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-.atuiSelector a
+.atuiKernel_ToolsSelector a
 {
      display : block;
 }
 
-.atuiSelector a:first-child
+.atuiKernel_ToolsSelector a:first-child
 {
      margin-top : 10px;
 }
 
-.atuiSelector a:last-child
+.atuiKernel_ToolsSelector a:last-child
 {
      margin-bottom : 10px;
 }
 
-.atuiSelector a div:hover
+.atuiKernel_ToolsSelector a div:hover
 {
      background-color : var(--atuiDefaultColorTransparent);
 }
 
-.atuiSelector a div
+.atuiKernel_ToolsSelector a div
 {
      height : 35px;
      padding : 5px 10px;
      margin : 0px;
 }
 
-.atuiSelector a div p
+.atuiKernel_ToolsSelector a div p
 {
      font-size : 20px;
      position: absolute;
@@ -243,14 +244,14 @@ a:hover, a:active
      color : black;
 }
 
-.atuiSelector a div img
+.atuiKernel_ToolsSelector a div img
 {
      margin : 5px;
      height : 25px;
      margin-right: 10px;
 }
 
-.atuiSelectorSeparator
+.atuiKernel_ToolsSelectorSeparator
 {
      background-color: var(--atuiDefaultColor);
      width : 80%;
@@ -262,37 +263,37 @@ a:hover, a:active
 
           /* Display mode */
 
-#atuiSettingsModeVisuel img
+#atuiKernel_ToolsSettingsDisplaymode img
 {
      display : none;
 }
 
      /* Contact */
 
-#atuiContacts
+#atuiKernel_ToolsContact
 {
      margin : 10px;
 }
 
-#atuiContacts > p
+#atuiKernel_ToolsContact > p
 {
      font-family: "Red Hat Display";
      font-weight: bold;
 }
 
-#atuiContacts a
+#atuiKernel_ToolsContact a
 {
      margin-right : 5px;
 }
 
-#atuiContacts a img
+#atuiKernel_ToolsContact a img
 {
      height : 50px;
 }
 
      /* Explorer */
 
-#atuiExploreFooter
+#atuiKernel_ToolsExplorer
 {
      display : flex;
      justify-content: space-around;
@@ -300,7 +301,7 @@ a:hover, a:active
      margin-top : 20px;
 }
 
-#atuiExploreFooter div p
+#atuiKernel_ToolsExplorer div p
 {
      font-weight: bold;
      font-size : 18px;
@@ -308,7 +309,7 @@ a:hover, a:active
      font-family: "Red Hat Display";
 }
 
-#atuiExploreFooter div ul
+#atuiKernel_ToolsExplorer div ul
 {
      list-style: none;
      margin : 8px;
@@ -316,14 +317,14 @@ a:hover, a:active
      font-size : 16px;
 }
 
-#atuiExploreFooter div ul li a
+#atuiKernel_ToolsExplorer div ul li a
 {
      color : black;
 }
 
      /* Carousel */
 
-.atuiIllustration
+.atuiKernel_ToolsCarousel
 {
      background-size : cover;
      background-position : center;
@@ -332,18 +333,18 @@ a:hover, a:active
      justify-content: center;
 }
 
-#atuiHeader > .atuiIllustration
+#atuiKernel_Header > .atuiKernel_ToolsCarousel
 {
      height : calc(50vh + 50px);
 }
 
-.atuiIllustration div
+.atuiKernel_ToolsCarousel div
 {
      margin : 50px 10%;
      margin-top : 80px;
 }
 
-.atuiIllustration div *
+.atuiKernel_ToolsCarousel div *
 {
      color : white;
      text-align : center;
@@ -351,17 +352,17 @@ a:hover, a:active
      padding: 10px;
 }
 
-.atuiIllustration div h2
+.atuiKernel_ToolsCarousel div h2
 {
      font-family: "Red Hat Display";
 }
 
-.atuiIllustration div a
+.atuiKernel_ToolsCarousel div a
 {
      border : none;
      background-color : var(--atuiDefaultColorTransparent);
      font-size : 21px;
-     padding : 10px;
+     padding : 10px 20px;
      color : white;
      width : 200px;
      font-family : "Red Hat Display";
@@ -441,13 +442,13 @@ a:hover, a:active
 
 /* Header */
 
-header
+#atuiKernel_Header
 {
      background-color : var(--atuiDefaultColor);
      min-height: 50px;
 }
 
-header > aside
+#atuiKernel_Header > aside
 {
      background-color : rgba(255,255,255,0.7);
      backdrop-filter: blur(5px);
@@ -457,12 +458,12 @@ header > aside
      width : 100vw;
 }
 
-header > aside > *
+#atuiKernel_Header > aside > *
 {
      align-content: stretch;
 }
 
-header aside img 
+#atuiKernel_Header aside img 
 {
      height : 40px;
      margin : 5px;
@@ -470,7 +471,7 @@ header aside img
 
      /* Left block */
 
-#atuiHeaderBarLeft
+#atuiKernel_HeaderBlockLeft
 {
      height : 50px;
      padding-left: 10px;
@@ -478,13 +479,13 @@ header aside img
      flex: 2;
 }
 
-#atuiHeaderBarLeft > a img
+#atuiKernel_HeaderBlockLeft > a img
 {
      float: left;
      margin-left: 15px;
 }
 
-#atuiHeaderBarLeft > a p
+#atuiKernel_HeaderBlockLeft > a p
 {
      margin : 0px;
      margin-top : 4px;
@@ -499,7 +500,7 @@ header aside img
 
      /* Center block */
 
-#atuiHeaderBarCenter
+#atuiKernel_HeaderBlockCenter
 {
      padding : 5px;
      width: min-content;
@@ -507,13 +508,13 @@ header aside img
      flex : 2;
 }
 
-#atuiHeaderBarCenter div
+#atuiKernel_HeaderBlockCenter div
 {
      height : 40px;
      border-radius: 10px;
 }
 
-#atuiHeaderBarCenter div input
+#atuiKernel_HeaderBlockCenter div input
 {
      background-color: transparent;
      font-size: 25px;
@@ -524,13 +525,13 @@ header aside img
      padding-left: 10px;
 }
 
-#atuiHeaderBarCenter div input:active
+#atuiKernel_HeaderBlockCenter div input:active
 {
      background-color: transparent;
      border : none;
 }
 
-#atuiHeaderBarCenter div img
+#atuiKernel_HeaderBlockCenter div img
 {
      float : right;
      height : 30px;
@@ -538,14 +539,14 @@ header aside img
 
      /* Right block */
 
-#atuiHeaderBarRight
+#atuiKernel_HeaderBlockRight
 {
      height : 50px;
      padding-right: 10px;
      order: 3;
 }
 
-#atuiHeaderBarRight > *
+#atuiKernel_HeaderBlockRight > *
 {
      float: right;
 }
@@ -554,18 +555,18 @@ header aside img
 
      /* Float left */
 
-#atuiNavStyleFloatingLeft
+#atuiKernel_NavigatorStyleFloatleft
 {
      margin : 0px;
      display: block;
 }
 
-#atuiNavStyleFloatingLeft > img
+#atuiKernel_NavigatorStyleFloatleft > img
 {
      float: left;
 }
 
-#atuiNavStyleFloatingLeft aside
+#atuiKernel_NavigatorStyleFloatleft aside
 {
      top : 65px;
      left : 15px;
@@ -573,7 +574,7 @@ header aside img
 
      /* Row */
 
-body > nav
+.atuiKernel_NavigatorStyleRow
 {
      display : inline-flex;
      width : calc(100% - 20px);
@@ -582,18 +583,18 @@ body > nav
      margin : 10px;
 }
 
-body > nav a
+.atuiKernel_NavigatorStyleRow a
 {
      color : black;
      text-decoration : none;
 }
 
-body > nav a img
+.atuiKernel_NavigatorStyleRow a img
 {
      width : 100px;
 }
 
-body > nav a p
+.atuiKernel_NavigatorStyleRow a p
 {
      text-align : center;
      margin : 0px;
@@ -608,7 +609,7 @@ section
 
      /* Paragraph */
 
-.atuiTextContainer h3
+.atuiKernel_SectionText h3
 {
      font-weight: bold;
      font-size : 20px;
@@ -616,31 +617,31 @@ section
      font-family: "Red Hat Display";
 }
 
-.atuiTextContainer p
+.atuiKernel_SectionText p
 {
      font-size : 16px;
 }
 
-.atuiTextContainer a
+.atuiKernel_SectionText a
 {
      color : var(--atuiDefaultColor);
 }
 
-.atuiTextContainer a:hover
+.atuiKernel_SectionText a:hover
 {
      font-weight: bold;
 }
 
-.atuiTextContainer img
+     /* Image */
+
+.atuiKernel_SectionImage img
 {
      margin : 0px 20%;
      width: 60%;
      border-radius: 10px;
 }
-
-     /* Image */
-
-.atuiCaption
+     
+.atuiKernel_SectionImage p
 {
      text-align: center;
      color: #333333;
@@ -649,7 +650,7 @@ section
 
      /* Download */
 
-.atuiFileDownload
+.atuiKernel_SectionDownload
 {
      border-radius: 10px;
      border : 2px var(--atuiDefaultColor) solid;
@@ -658,13 +659,13 @@ section
      height : 50px;
 }
 
-.atuiFileDownload img
+.atuiKernel_SectionDownload img
 {
      float: left;
      height : 50px;
 }
 
-.atuiFileDownload p
+.atuiKernel_SectionDownload p
 {
      font-weight : bold;
      float : left;
@@ -672,7 +673,7 @@ section
      font-size: 18px;
 }
 
-.atuiFileDownload a
+.atuiKernel_SectionDownload a
 {
      float : right;
      color : var(--atuiDefaultColor);
@@ -691,31 +692,31 @@ section
      justify-content: space-around;
 }
 
-.atuiCardsPresentation img
+.atuiKernel_SectionCardStylePurified img
 {
      width : 100%;
      border-radius : 10px;
 }
 
-.atuiCardsPresentation div
+.atuiKernel_SectionCardStylePurified div
 {
      margin: 5px;
 }
 
-.atuiCardsPresentation div h3
+.atuiKernel_SectionCardStylePurified div h3
 {
      font-family: "Red Hat Display";
      margin : 5px 0px;
      font-size: 20px;
 }
 
-.atuiCardsPresentation div p
+.atuiKernel_SectionCardStylePurified div p
 {
      margin : 5px 0px;
      font-size: 16px;
 }
 
-.atuiCardsPresentation div a
+.atuiKernel_SectionCardStylePurified div a
 {
      margin : 5px 0px;
      color : var(--atuiDefaultColor);
@@ -724,7 +725,7 @@ section
      font-family : "Red Hat Display";
 }
 
-.atuiCardsPresentation div a:after
+.atuiKernel_SectionCardStylePurified div a:after
 {
      content : " >";
 }
