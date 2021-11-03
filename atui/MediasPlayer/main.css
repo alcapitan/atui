@@ -134,7 +134,12 @@ Version : dev2
 
 /* Video */
 
-.atuiMediasPlayer_Video video
+.atuiMediasPlayer_Video
+{
+	margin : 10px;
+}
+
+.atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
 {
      border-radius: 10px;
      width : 80%;

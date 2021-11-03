@@ -7,35 +7,35 @@ Version : dev2
 /* Contents :
 - Kernel
      - Priority
-          - atuiBoot / boot => atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
-          - X / root  => X / Global StyleSheets
-          - atuiPlugin => atuiKernel_PriorityLabel / Label
+          - atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
+          - X / Global StyleSheets
+          - atuiKernel_PriorityLabel / Label
      - Responsives
-          - Ordinateur > min-width 768px
-          - Mobile > max-width 767px
+          - Computers > min-width 768px
+          - Smartphones > max-width 767px
      - Tools
-          - atuiSelector / Sélecteurs => atuiKernel_ToolsSelector / Selector
-          - atuiSelectorSeparator / X => atuiKernel_ToolsSelectorSeparator / Selector Separator
-          - atuiSettingsModeVisuel / Mode d'application visuel => atuiKernel_ToolsSettingsDisplaymode / Settings > Display Mode
-          - atuiContacts / Contacts => atuiKernel_ToolsContact / Contact
-          - atuiExploreFooter / Explorateur footer => atuiKernel_ToolsExplorer / Explorer
-          - atuiIllustration / Illustration => atuiKernel_ToolsCarousel / Carousel
+          - atuiKernel_ToolsSelector / Selector
+          - atuiKernel_ToolsSelectorSeparator / Selector Separator
+          - atuiKernel_ToolsSettingsDisplaymode / Settings > Display Mode
+          - atuiKernel_ToolsContact / Contact
+          - atuiKernel_ToolsExplorer / Explorer
+          - atuiKernel_ToolsCarousel / Carousel
      - Header
-          - header//atuiHeader / Barre d'en tête => atuiKernel_Header / Header
-          - atuiHeaderBarLeft / Bloc gauche => atuiKernel_HeaderBlockLeft / Left block
-          - atuiHeaderBarCenter / Bloc centre => atuiKernel_HeaderBlockCenter / Center block
-          - atuiHeaderBarRight / Bloc droit => atuiKernel_HeaderBlockRight / Right block
+          - atuiKernel_Header / Header
+          - atuiKernel_HeaderBlockLeft / Left block
+          - atuiKernel_HeaderBlockCenter / Center block
+          - atuiKernel_HeaderBlockRight / Right block
      - Navigator
-          - atuiNavStyleFloatingLeft / Floating Left => atuiKernel_NavigatorStyleFloatleft / Float Left
-          - X / Independanr => atuiKernel_NavigatorStyleRow / Row
+          - atuiKernel_NavigatorStyleFloatleft / Float Left
+          - atuiKernel_NavigatorStyleRow / Row
      - Section
-          - atuiTextContainer / Paragraphes => atuiKernel_SectionText / Paragraph
-          - atuiTextContainer img && atuiCaption / X && Caption => atuiKernel_SectionImage / Image
-          - atuiFileDownload / Télécharger un fichier => atuiKernel_SectionDownload / Download
+          - atuiKernel_SectionText / Paragraph
+          - atuiKernel_SectionImage / Image
+          - atuiKernel_SectionDownload / Download
           - atuiKernel_SectionCard
-               - atuiCardsPresentation / Cards style presentation => atuiKernel_SectionCardStylePurified / Purified
+               - atuiKernel_SectionCardStylePurified / Purified
      - Footer
-          - [style]
+          - atuiKernel_FooterBackup / Back-Up
 
 - LanguagesManager
      - atuiLanguagesManager_LanguageSelector
@@ -280,15 +280,21 @@ a:hover, a:active
 {
      font-family: "Red Hat Display";
      font-weight: bold;
+     font-size: 1.5rem;
+     margin : 0;
 }
 
 #atuiKernel_ToolsContact a
 {
-     margin-right : 5px;
+     width : 50px;
+     height : 50px;
+     margin : 10px;
+     display: inline-block;
 }
 
 #atuiKernel_ToolsContact a img
 {
+     width : 50px;
      height : 50px;
 }
 
@@ -305,9 +311,10 @@ a:hover, a:active
 #atuiKernel_ToolsExplorer div p
 {
      font-weight: bold;
-     font-size : 1.125rem;
+     font-size : 1.5rem;
      margin : 15px 0px;
      font-family: "Red Hat Display";
+     margin : 0;
 }
 
 #atuiKernel_ToolsExplorer div ul
@@ -316,6 +323,12 @@ a:hover, a:active
      margin : 8px;
      margin-left : 15px;
      font-size : 1rem;
+     padding-left : 20px;
+}
+
+#atuiKernel_ToolsExplorer div ul li
+{
+     margin : 5px;
 }
 
 #atuiKernel_ToolsExplorer div ul li a
@@ -636,28 +649,35 @@ section
      margin : 10px;
      padding: 10px;
      height : 50px;
+     display: flex;
+     align-items: center;
 }
 
 .atuiKernel_SectionDownload img
 {
-     float: left;
      height : 50px;
+     margin-right : 10px;
+     flex-grow: 0;
 }
 
 .atuiKernel_SectionDownload p
 {
      font-weight : bold;
-     float : left;
-     margin : 14px 0px 14px 20px;
      font-size: 1.125rem;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     margin : 0;
+     flex-grow: 1;
 }
 
 .atuiKernel_SectionDownload a
 {
-     float : right;
      color : var(--atuiDefaultColor);
-     margin : 14px 20px 14px 0px;
      font-size: 1.125rem;
+     justify-content: flex-end;
+     margin : 0px 10px 0px 20px;
+     flex-grow: 0;
 }
 
      /* Card */
@@ -722,17 +742,27 @@ body > footer
      background-color : #c0c0c0;
      border-top : 3px solid var(--atuiDefaultColor);
      margin-top : 50px;
-     padding: 5px;
-     padding-top : 0px;
+     padding: 0px 5%;
+     padding-bottom: 5px;
 }
 
-body > footer > a img
+body > footer > *:nth-child(2)
 {
-     width : 50px;
-     border-radius : 100%;
-     border : 3px solid var(--atuiDefaultColor);
-     background-color: white;
+     margin-top : 40px !important;
+}
+
+#atuiKernel_FooterBackup
+{
      position: absolute;
      left : 50%;
      transform : translate(-50%, -30px);
+}
+
+#atuiKernel_FooterBackup img
+{
+     border-radius : 100%;
+     border : 3px solid var(--atuiDefaultColor);
+     background-color: white;
+     width : 50px;
+     height : 50px;
 }
