@@ -231,24 +231,25 @@ a:hover, a:active
 .atuiKernel_ToolsSelector a div
 {
      height : 35px;
-     padding : 5px 10px;
+     padding : 5px 15px;
      margin : 0px;
+     display: flex;
+     align-items: center;
 }
 
 .atuiKernel_ToolsSelector a div p
 {
      font-size : 1.25rem;
-     position: absolute;
-     margin-top : 5.5px;
-     display: inline;
+     margin : 0px;
      color : black;
 }
 
 .atuiKernel_ToolsSelector a div img
 {
-     margin : 5px;
-     height : 25px;
-     margin-right: 10px;
+     margin : 0px !important;
+     margin-right: 10px !important;
+     width : 35px !important;
+     height : 35px !important;
 }
 
 .atuiKernel_ToolsSelectorSeparator
@@ -331,6 +332,7 @@ a:hover, a:active
      display: flex;
      align-items: flex-end;
      justify-content: center;
+     background-attachment: fixed;
 }
 
 #atuiKernel_Header > .atuiKernel_ToolsCarousel
@@ -547,11 +549,10 @@ a:hover, a:active
 
 .atuiKernel_NavigatorStyleRow
 {
-     display : inline-flex;
-     width : calc(100% - 20px);
+     display : flex;
      justify-content: space-around;
      flex-wrap: wrap;
-     margin : 10px;
+     margin : 15px;
 }
 
 .atuiKernel_NavigatorStyleRow a
@@ -568,7 +569,7 @@ a:hover, a:active
 .atuiKernel_NavigatorStyleRow a p
 {
      text-align : center;
-     margin : 0px;
+     margin : 5px;
 }
      
 /* Contenu */
@@ -583,14 +584,16 @@ section
 .atuiKernel_SectionText h3
 {
      font-weight: bold;
-     font-size : 1.25rem;
+     font-size : 1.5rem;
      color : var(--atuiDefaultColor);
      font-family: "Red Hat Display";
+     margin : 10px 0px;
 }
 
 .atuiKernel_SectionText p
 {
      font-size : 1rem;
+     margin : 10px;
 }
 
 .atuiKernel_SectionText a
@@ -604,6 +607,11 @@ section
 }
 
      /* Image */
+
+.atuiKernel_SectionImage
+{
+     padding : 10px;
+}
 
 .atuiKernel_SectionImage img
 {
@@ -663,6 +671,11 @@ section
      justify-content: space-around;
 }
 
+.atuiKernel_SectionCardStylePurified
+{
+     padding : 10px;
+}
+
 .atuiKernel_SectionCardStylePurified img
 {
      width : 100%;
@@ -671,7 +684,7 @@ section
 
 .atuiKernel_SectionCardStylePurified div
 {
-     margin: 5px;
+     margin: 5px 10px;
 }
 
 .atuiKernel_SectionCardStylePurified div h3
@@ -683,13 +696,14 @@ section
 
 .atuiKernel_SectionCardStylePurified div p
 {
-     margin : 5px 0px;
+     margin : 5px;
      font-size: 1rem;
 }
 
 .atuiKernel_SectionCardStylePurified div a
 {
-     margin : 5px 0px;
+     margin : 0px;
+     margin-top: 10px;
      color : var(--atuiDefaultColor);
      font-weight: bold;
      font-size : 1rem;
