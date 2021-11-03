@@ -19,6 +19,10 @@ Version : dev2
      height: 30px;
      border: none;
      padding-left: 10px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     color : rgb(128, 128, 128);
 }
 
 #atuiKernel_HeaderBlockCenter div input:active
