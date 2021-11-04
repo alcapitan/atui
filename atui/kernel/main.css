@@ -158,16 +158,15 @@ a:hover, a:active
           flex : 1;
      }
 
-     .atuiCardsContainer
+     .atuiKernel_SectionCardStylePurified, .atuiKernel_SectionCardStyleFlat, .atuiKernel_SectionCardStyleMinimal
      {
           display: inline-flex;
      }
 
-     .atuiKernel_SectionCardStylePurified
+     .atuiKernel_SectionCardStylePurified article, .atuiKernel_SectionCardStyleFlat article, .atuiKernel_SectionCardStyleMinimal article
      {
           width : 300px;
      }
-
 }
 
 @media (max-width : 767px) /* Smartphones */
@@ -499,19 +498,24 @@ a:hover, a:active
      flex : 2;
 }
 
-#atuiKernel_HeaderBlockLeft > a img
+#atuiKernel_HeaderLogotype a
+{
+     color : black;
+     text-decoration : none;
+     display : flex;
+     align-items: center;
+}
+
+#atuiKernel_HeaderLogotype a img
 {
      float: left;
      margin-left: 15px;
 }
 
-#atuiKernel_HeaderBlockLeft > a p
+#atuiKernel_HeaderLogotype a p
 {
      margin : 0px;
-     margin-top : 4px;
      margin-left: 10px;
-     color : black;
-     text-decoration : none;
      font-size : 1.875rem;
      font-weight : bold;
      display : inline-block;
@@ -689,43 +693,44 @@ section
 
           /* Purified */
 
-.atuiKernel_SectionCard
+.atuiKernel_SectionCardStylePurified
 {
      display: flex;
      flex-wrap : wrap;
      justify-content: space-around;
+     margin : 15px 0;
 }
 
-.atuiKernel_SectionCardStylePurified
+.atuiKernel_SectionCardStylePurified article
 {
      padding : 10px;
 }
 
-.atuiKernel_SectionCardStylePurified img
+.atuiKernel_SectionCardStylePurified article img
 {
      width : 100%;
      border-radius : 10px;
 }
 
-.atuiKernel_SectionCardStylePurified div
+.atuiKernel_SectionCardStylePurified article div
 {
      margin: 5px 10px;
 }
 
-.atuiKernel_SectionCardStylePurified div h3
+.atuiKernel_SectionCardStylePurified article div h3
 {
      font-family: "Red Hat Display";
      margin : 5px 0px;
      font-size: 1.3rem;
 }
 
-.atuiKernel_SectionCardStylePurified div p
+.atuiKernel_SectionCardStylePurified article div p
 {
      margin : 5px;
      font-size: 1rem;
 }
 
-.atuiKernel_SectionCardStylePurified div a
+.atuiKernel_SectionCardStylePurified article div a
 {
      margin : 0px;
      margin-top: 10px;
@@ -735,9 +740,137 @@ section
      font-family : "Red Hat Display";
 }
 
-.atuiKernel_SectionCardStylePurified div a:after
+.atuiKernel_SectionCardStylePurified article div a:after
 {
      content : " >";
+}
+
+     /* Flat */
+
+.atuiKernel_SectionCardStyleFlat
+{
+     display: flex;
+     flex-wrap : wrap;
+     justify-content: space-around;
+     margin : 15px 0;
+}
+
+.atuiKernel_SectionCardStyleFlat article
+{
+     border : 1px rgb(77, 77, 77) solid;
+     border-radius: 10px;
+     overflow: hidden;
+}
+
+.atuiKernel_SectionCardStyleFlat article div
+{
+     margin : 10px;
+}
+
+.atuiKernel_SectionCardStyleFlat article div h3
+{
+     font-family: "Red Hat Display";
+     margin : 5px 0px;
+     font-size: 1.3rem;
+}
+
+.atuiKernel_SectionCardStyleFlat article div p
+{
+     margin : 5px;
+     font-size: 1rem;
+}
+
+.atuiKernel_SectionCardStyleFlat article div a
+{
+     margin : 0px;
+     margin-top: 10px;
+     color : var(--atuiDefaultColor);
+     font-weight: bold;
+     font-size : 1.1rem;
+     font-family : "Red Hat Display";
+}
+
+.atuiKernel_SectionCardStyleFlat article div a:after
+{
+     content : " >";
+}
+
+     /* Minimal */
+
+.atuiKernel_SectionCardStyleMinimal
+{
+     display: flex;
+     flex-wrap : wrap;
+     justify-content: space-around;
+     margin : 15px 0;
+}
+
+.atuiKernel_SectionCardStyleMinimal article
+{
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: flex-end;
+     border-radius : 10px;
+     min-height : 300px;
+}
+
+.atuiKernel_SectionCardStyleMinimal article div
+{
+     padding : 15px;
+     background : linear-gradient(to top, rgb(51, 51, 51),transparent);
+     border-radius: 0 0 10px 10px;
+     min-height: 150px;
+     display : flex;
+     justify-content : flex-end;
+     flex-direction: column;
+}
+
+.atuiKernel_SectionCardStyleMinimal article div *
+{
+     color : white;
+}
+
+.atuiKernel_SectionCardStyleMinimal article div h3
+{
+     font-family: "Red Hat Display";
+     margin : 5px 0px;
+     font-size: 1.3rem;
+}
+
+.atuiKernel_SectionCardStyleMinimal article div p
+{
+     margin : 5px;
+     font-size: 1rem;
+}
+
+.atuiKernel_SectionCardStyleMinimal article div a
+{
+     margin : 0px;
+     margin-top: 10px;
+     color : var(--atuiDefaultColor);
+     font-weight: bold;
+     font-size : 1.1rem;
+     font-family : "Red Hat Display";
+}
+
+.atuiKernel_SectionCardStyleMinimal article div a:after
+{
+     content : " >";
+}
+
+     /* Integral left */
+
+.atuiKernel_SectionCardStyleIntegralleft
+{
+     display : none;
+}
+
+     /* Integral right */
+
+.atuiKernel_SectionCardStyleIntegralright
+{
+     display : none;
 }
 
 /* Footer */
