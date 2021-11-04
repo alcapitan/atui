@@ -12,8 +12,7 @@ Version : dev2
 {
      border : 2px black solid;
      background-color: white;
-     padding : 5px;
-     width : 100px;
-     height : 40px;
+     padding : 8px;
      border-radius: 10px;
+     font-size : 1rem;
 }
