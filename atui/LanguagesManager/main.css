@@ -4,6 +4,10 @@ Nom du module : Languages Manager
 Version : dev2
 */
 
+/* Contents :
+- atuiLanguagesManager_LanguageSelector
+*/
+
 #atuiLanguagesManager_LanguageSelector select
 {
      border : 2px black solid;
