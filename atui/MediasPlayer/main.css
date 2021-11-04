@@ -4,6 +4,20 @@ Nom du module : Medias Player
 Version : dev2
 */
 
+/* Contents :
+- atuiMediasPlayerAudio
+     - X / atuiAudioPlayer => Audio > Player / atuiMediasPlayer_AudioPlayer
+     - X / atuiAudioPlayerManager => Audio > Additionals Informations / atuiMediasPlayer_AudioPlayerAdditionals
+     - X / atuiAudioPlayerInfosMusic => Audio > Music Informations / atuiMediasPlayer_AudioPlayerMusicinformations
+     - X / atuiAudioPlayerControls => Audio > Audio Controls / atuiMediasPlayer_AudioPlayerControls
+     - X / atuiAudioPlayerControlsTimer => Audio > Timer / atuiMediasPlayer_AudioPlayerTimer
+     - X / atuiAudioPlayerControlsButtonsBasic => Audio > Basic Buttons / atuiMediasPlayer_AudioPlayerButtonsBasic
+     - X / atuiAudioPlayerControlsButtonsAdvanced => Audio > Advanced Buttons / atuiMediasPlayer_AudioPlayerButtonsAdvanced
+     - X / progressBarControl => Audio > Progress Bar / atuiMediasPlayer_AudioPlayerProgressbar
+- atuiMediasPlayerVideo
+     - [actions]
+*/
+
 /* Audio */
 
 #atuiAudioplayer

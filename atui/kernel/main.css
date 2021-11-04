@@ -5,56 +5,36 @@ Version : dev2
 */
 
 /* Contents :
-- Kernel
-     - Priority
-          - atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
-          - X / Global StyleSheets
-          - atuiKernel_PriorityLabel / Label
-     - Responsives
-          - Computers > min-width 768px
-          - Smartphones > max-width 767px
-     - Tools
-          - atuiKernel_ToolsSelector / Selector
-          - atuiKernel_ToolsSelectorSeparator / Selector Separator
-          - atuiKernel_ToolsSettingsDisplaymode / Settings > Display Mode
-          - atuiKernel_ToolsContact / Contact
-          - atuiKernel_ToolsExplorer / Explorer
-          - atuiKernel_ToolsCarousel / Carousel
-     - Header
-          - atuiKernel_Header / Header
-          - atuiKernel_HeaderBlockLeft / Left block
-          - atuiKernel_HeaderBlockCenter / Center block
-          - atuiKernel_HeaderBlockRight / Right block
-     - Navigator
-          - atuiKernel_NavigatorStyleFloatleft / Float Left
-          - atuiKernel_NavigatorStyleRow / Row
-     - Section
-          - atuiKernel_SectionText / Paragraph
-          - atuiKernel_SectionImage / Image
-          - atuiKernel_SectionDownload / Download
-          - atuiKernel_SectionCard
-               - atuiKernel_SectionCardStylePurified / Purified
-     - Footer
-          - atuiKernel_FooterBackup / Back-Up
-
-- LanguagesManager
-     - atuiLanguagesManager_LanguageSelector
-- MediasPlayer
-     - atuiMediasPlayerAudio
-          - X / atuiAudioPlayer => Audio > Player / atuiMediasPlayer_AudioPlayer
-          - X / atuiAudioPlayerManager => Audio > Additionals Informations / atuiMediasPlayer_AudioPlayerAdditionals
-          - X / atuiAudioPlayerInfosMusic => Audio > Music Informations / atuiMediasPlayer_AudioPlayerMusicinformations
-          - X / atuiAudioPlayerControls => Audio > Audio Controls / atuiMediasPlayer_AudioPlayerControls
-          - X / atuiAudioPlayerControlsTimer => Audio > Timer / atuiMediasPlayer_AudioPlayerTimer
-          - X / atuiAudioPlayerControlsButtonsBasic => Audio > Basic Buttons / atuiMediasPlayer_AudioPlayerButtonsBasic
-          - X / atuiAudioPlayerControlsButtonsAdvanced => Audio > Advanced Buttons / atuiMediasPlayer_AudioPlayerButtonsAdvanced
-          - X / progressBarControl => Audio > Progress Bar / atuiMediasPlayer_AudioPlayerProgressbar
-     - atuiMediasPlayerVideo
-          - [actions]
-- SearchService
-- ServerExchanges
-     - atuiSettingsAccount / Gestion compte => atuiServerExchanges_AccountActions / Actions sur le compte 
-
+- Priority
+     - atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
+     - X / Global StyleSheets
+     - atuiKernel_PriorityLabel / Label
+- Responsives
+     - Computers > min-width 768px
+     - Smartphones > max-width 767px
+- Tools
+     - atuiKernel_ToolsSelector / Selector
+     - atuiKernel_ToolsSelectorSeparator / Selector Separator
+     - atuiKernel_ToolsSettingsDisplaymode / Settings > Display Mode
+     - atuiKernel_ToolsContact / Contact
+     - atuiKernel_ToolsExplorer / Explorer
+     - atuiKernel_ToolsCarousel / Carousel
+- Header
+     - atuiKernel_Header / Header
+     - atuiKernel_HeaderBlockLeft / Left block
+     - atuiKernel_HeaderBlockCenter / Center block
+     - atuiKernel_HeaderBlockRight / Right block
+- Navigator
+     - atuiKernel_NavigatorStyleFloatleft / Float Left
+     - atuiKernel_NavigatorStyleRow / Row
+- Section
+     - atuiKernel_SectionText / Paragraph
+     - atuiKernel_SectionImage / Image
+     - atuiKernel_SectionDownload / Download
+     - atuiKernel_SectionCard
+          - atuiKernel_SectionCardStylePurified / Purified
+- Footer
+     - atuiKernel_FooterBackup / Back-Up
 */
 
 /* Priority */
