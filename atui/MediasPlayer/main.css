@@ -142,6 +142,21 @@ Version : dev2
 .atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
 {
      border-radius: 10px;
-     width : 80%;
-     margin : 20px 10%;
+}
+
+@media (min-width : 768px) /* Computers */
+{
+	.atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
+	{
+		margin : 20px 10%;
+		width : 80%;
+	}
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+	.atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
+	{
+		margin : 20px 0;
+	}
 }
