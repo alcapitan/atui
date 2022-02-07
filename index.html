@@ -340,14 +340,13 @@
                     <a href="https://github.com/alcapitan/atui" target="_blank">Ce site est basé sur ATUI dev2. En savoir plus...</a>
                </div>
           </footer>
-		<aside id="atuiAudioplayer">
-               <audio id="atuiAudioplayerMusic" src="" ontimeupdate="atuiAudioplayerMusicUpdate()"></audio>
-			<script src="atui/MediasPlayer/main.js"></script>
+		<aside id="atuiMediasPlayer_Audioplayer">
+               <audio id="atuiMediasPlayer_AudioplayerMusic" src="" ontimeupdate="atuiAudioplayerMusicUpdate()"></audio>
 			<img src="atui/MediasPlayer/medias/cover.png" alt="Icone Couverture d'album indisponible.">
-               <div id="atuiAudioplayerManager">
+               <div id="atuiMediasPlayer_AudioplayerAdditionals">
                     <div>
                          <img src="atui/MediasPlayer/medias/information.png" alt="Infos album">
-                         <aside id="atuiAudioplayerInfosMusicAdvanced">
+                         <aside id="atuiMediasPlayer_AudioplayerMusicinformationsAdvanced">
                               <p class="name-album" id="nameAlbum">Nom de l'album</p>
                               <p class="date-album" id="dateAlbum">Date de sortie</p>
                          </aside>
@@ -359,30 +358,31 @@
 				     <img src="atui/MediasPlayer/medias/close.png" alt="Fermer Audio Player">
                     </div>
                </div>
-			<div id="atuiAudioplayerInfosMusic">
+			<div id="atuiMediasPlayer_AudioplayerMusicinformations">
 				<p>Nom Artiste</p>
 				<p>Nom Musique</p>
                </div>
-               <div id="atuiAudioplayerControls">
-				<div id="atuiAudioplayerControlsTime">
+               <div id="atuiMediasPlayer_AudioplayerControls">
+				<div id="atuiMediasPlayer_AudioplayerTimer">
                          <p>00:00</p>
                          <p> - </p>
                          <p>00:00</p>
                     </div>
-			     <div id="atuiAudioplayerControlsButtonsBasic">
+			     <div id="atuiMediasPlayer_AudioplayerButtonsBasic">
 				     <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédante">
 				     <img src="atui/MediasPlayer/medias/play.png" alt="Play Music" onclick="atuiAudioplayerMusicPlayPause()">
 				     <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante">
                     </div>
-			     <div id="atuiAudioplayerControlsButtonsAdvanced">
+			     <div id="atuiMediasPlayer_AudioplayerButtonsAdvanced">
 				     <img src="atui/MediasPlayer/medias/playlist.png" alt="Voir playlists">
 				     <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique">
 				     <img src="atui/MediasPlayer/medias/random.png" alt="Choix musique aléatoire">
                     </div>
 			</div>
-               <div id="atuiAudioplayerControlsProgress" onclick="atuiAudioplayerControlsProgressChange(this, event)">
+               <div id="atuiMediasPlayer_AudioplayerProgressbar" onclick="atuiAudioplayerControlsProgressChange(this, event)">
                     <div></div>
                </div>
+               <script src="atui/MediasPlayer/main.js"></script>
 		</aside>
           <aside id="atuiKernel_Notification">
           </aside>
