@@ -124,21 +124,22 @@ modeVisuel[0].style.display  = 'block';
 
 /* Selector */
 
-var atuiNavIcon = document.getElementById('atuiKernel_NavigatorStyleFloatleft').childNodes[1];
-var atuiNavBar = document.getElementById('atuiKernel_NavigatorStyleFloatleft').childNodes[3];
-var atuiNavBarDisplay = "none";
-atuiNavIcon.addEventListener('click', event =>
+function atuiKernel_ToolsSelector(element,cible)
 {
-     if (atuiNavBarDisplay == "block")
+     offsetTop = element.offsetTop + 50;
+     offsetLeft = element.offsetLeft + 20;
+     offsetTop = offsetTop + "px";
+     offsetLeft = offsetLeft + "px";
+     cible = document.getElementById(cible);
+     if (cible.style.display == "block")
      {
-          atuiNavBar.style.display = "none";
-          atuiNavBarDisplay = "none";
-          return;
+          cible.style.display = "none";
      }
-     if (atuiNavBarDisplay == "none")
+     else
      {
-          atuiNavBar.style.display = "block";
-          atuiNavBarDisplay = "block";
-          return;
+          cible.style.top = offsetTop;
+          cible.style.left = offsetLeft;
+          cible.style.display = "block";
      }
-});
+}
+
