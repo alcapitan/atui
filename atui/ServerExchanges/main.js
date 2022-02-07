@@ -6,8 +6,8 @@ Version : dev2
 
 /* Actions sur le compte */
 
-var atuiCompteAvatar = document.getElementById('atuiSettingsAccount').childNodes[1];
-var atuiCompteBar = document.getElementById('atuiSettingsAccount').childNodes[3];
+var atuiCompteAvatar = document.getElementById('atuiServerExchanges_AccountActions').childNodes[1];
+var atuiCompteBar = document.getElementById('atuiServerExchanges_AccountActions').childNodes[3];
 var atuiCompteBarDisplay = "none";
 atuiCompteAvatar.addEventListener('click', event =>
 {
