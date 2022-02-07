@@ -48,6 +48,11 @@ Version : dev2
 	margin : 5px;
 }
 
+#atuiAudioplayerInfosMusicAdvanced *
+{
+	display : none;
+}
+
 #atuiAudioplayer > img
 {
 	border-radius : 10px;
