@@ -516,18 +516,19 @@ a:hover, a:active
      flex : 2;
 }
 
+#atuiKernel_HeaderLogotype
+{
+     margin : 0 15px;
+     height : 100%;
+}
+
 #atuiKernel_HeaderLogotype a
 {
      color : black;
      text-decoration : none;
      display : flex;
      align-items: center;
-}
-
-#atuiKernel_HeaderLogotype a img
-{
-     float: left;
-     margin-left: 15px;
+     height : 100%;
 }
 
 #atuiKernel_HeaderLogotype a p
