@@ -6,21 +6,22 @@ Version : dev2
 
 /* Contents :
 - atuiMediasPlayerAudio
-     - X / atuiAudioPlayer => Audio > Player / atuiMediasPlayer_AudioPlayer
-     - X / atuiAudioPlayerManager => Audio > Additionals Informations / atuiMediasPlayer_AudioPlayerAdditionals
-     - X / atuiAudioPlayerInfosMusic => Audio > Music Informations / atuiMediasPlayer_AudioPlayerMusicinformations
-     - X / atuiAudioPlayerControls => Audio > Audio Controls / atuiMediasPlayer_AudioPlayerControls
-     - X / atuiAudioPlayerControlsTimer => Audio > Timer / atuiMediasPlayer_AudioPlayerTimer
-     - X / atuiAudioPlayerControlsButtonsBasic => Audio > Basic Buttons / atuiMediasPlayer_AudioPlayerButtonsBasic
-     - X / atuiAudioPlayerControlsButtonsAdvanced => Audio > Advanced Buttons / atuiMediasPlayer_AudioPlayerButtonsAdvanced
-     - X / progressBarControl => Audio > Progress Bar / atuiMediasPlayer_AudioPlayerProgressbar
+     - Player / atuiMediasPlayer_Audioplayer
+     - Additionals Informations / atuiMediasPlayer_AudioplayerAdditionals
+     - Music Informations / #atuiMediasPlayer_AudioplayerMusicinformations
+     - Audio Controls / atuiMediasPlayer_AudioplayerControls
+     - Timer / atuiMediasPlayer_AudioplayerTimer
+     - Audio > Basic Buttons / atuiMediasPlayer_AudioplayerButtonsBasic
+     - Advanced Buttons / atuiMediasPlayer_AudioplayerButtonsAdvanced
+     - Audio > Progress Bar / atuiMediasPlayer_AudioplayerProgressbar
 - atuiMediasPlayerVideo
-     - [actions]
 */
 
 /* Audio */
 
-#atuiAudioplayer
+	/* Player */
+
+#atuiMediasPlayer_Audioplayer
 {
 	display: none;
 	position : fixed;
@@ -36,24 +37,26 @@ Version : dev2
 	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-#atuiAudioplayerManager
+	/* Additionals Informations */
+
+#atuiMediasPlayer_AudioplayerAdditionals
 {
 	float : right;
 	display: flex;
 }
 
-#atuiAudioplayerManager img
+#atuiMediasPlayer_AudioplayerAdditionals img
 {
 	height : 25px;
 	margin : 5px;
 }
 
-#atuiAudioplayerInfosMusicAdvanced *
+#atuiMediasPlayer_AudioplayerMusicinformationsAdvanced *
 {
 	display : none;
 }
 
-#atuiAudioplayer > img
+#atuiMediasPlayer_Audioplayer > img
 {
 	border-radius : 10px;
 	width : 140px;
@@ -61,54 +64,58 @@ Version : dev2
 	float : left;
 }
 
-#atuiAudioplayerInfosMusic
+#atuiMediasPlayer_AudioplayerMusicinformations
 {
 	margin-left : 160px;
 }
 
-#atuiAudioplayerInfosMusic p
+#atuiMediasPlayer_AudioplayerMusicinformations p
 {
 	font-family: "Red Hat Display";
 	margin : 10px 0px;
 	width : 50%;
 }
 
-#atuiAudioplayerInfosMusic p:first-child
+#atuiMediasPlayer_AudioplayerMusicinformations p:first-child
 {
 	font-size: 20px;
 }
 
-#atuiAudioplayerInfosMusic p:last-child
+#atuiMediasPlayer_AudioplayerMusicinformations p:last-child
 {
 	font-size: 30px;
 	font-weight: bold;
 	color : var(--atuiDefaultColor);
 }
 
-#atuiAudioplayerControls
+#atuiMediasPlayer_AudioplayerControls
 {
 	display: flex;
 }
 
-#atuiAudioplayerControlsTime
+	/* Timer */
+
+#atuiMediasPlayer_AudioplayerTimer
 {
 	display: flex;
 	margin : 15px;
 	transform: translate(10px, -4px);
 }
 
-#atuiAudioplayerControlsTime p
+#atuiMediasPlayer_AudioplayerTimer p
 {
 	margin : 0px;
 	font-size : 16px;
 }
 
-#atuiAudioplayerControlsTime p:nth-child(2)
+#atuiMediasPlayer_AudioplayerTimer p:nth-child(2)
 {
 	margin : 0px 5px;
 }
 
-#atuiAudioplayerControls img
+	/* Controls */
+
+#atuiMediasPlayer_AudioplayerControls img
 {
 	width : 30px;
 	height : 30px;
@@ -116,24 +123,26 @@ Version : dev2
 	border-radius: 10px;
 }
 
-#atuiAudioplayerControlsButtonsBasic, #atuiAudioplayerControlsButtonsAdvanced
+#atuiMediasPlayer_AudioplayerButtonsBasic, #atuiMediasPlayer_AudioplayerButtonsAdvanced
 {
 	margin : 0px 20px;
 }
 
-#atuiAudioplayerControlsButtonsBasic img:hover, #atuiAudioplayerControlsButtonsAdvanced img:hover
+#atuiMediasPlayer_AudioplayerButtonsBasic img:hover, #atuiMediasPlayer_AudioplayerButtonsAdvanced img:hover
 {
 	background-color: var(--atuiDefaultColor);
 }
 
-#progressBarControl
+#progressBarControl /* Utilité ??? */
 {
 	background-color : #00000080;
 	height : 10px;
 	margin-left : 160px;
 }
 
-#atuiAudioplayerControlsProgress
+	/* Progress bar */
+
+#atuiMediasPlayer_AudioplayerProgressbar
 {
 	width : calc(100% + 20px);
 	height : 10px;
@@ -144,7 +153,7 @@ Version : dev2
 	bottom : 0px;
 }
 
-#atuiAudioplayerControlsProgress div
+#atuiMediasPlayer_AudioplayerProgressbar div
 {
 	width : 100%;
 	height : 10px;
