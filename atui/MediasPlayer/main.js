@@ -4,56 +4,38 @@ Nom du module : Medias Player
 Version : dev2
 */
 
-var atuiAudioPlayer = document.getElementById('atuiAudioPlayer');
-var atuiAudioPlayerMusic = document.getElementById('atuiAudioPlayerMusic');
+var atuiAudioplayer = document.getElementById('atuiAudioplayer'); // Element audioPlayer
+var atuiAudioplayerMusic = document.getElementById('atuiAudioplayerMusic'); // Balise HTML <audio> diffusant la musique
 
-/* Fermer Audio Player */
 
-function atuiAudioPlayerFermer()
+/* Execution d'une musique */
+
+function atuiAudioplayerMusicChange(atuiAudioplayerMusicChosen)
 {
-	atuiAudioPlayer.style.display = "none";
+	atuiAudioplayer.style.display = "block";
+	console.log(atuiAudioplayerMusicChosen[1]);
+	document.getElementById("atuiAudioplayerMusic").src = atuiAudioplayerMusicChosen[0]; /* Chemin vers la musique */
+	document.getElementById("atuiAudioplayer").childNodes[5].src = atuiAudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
+	document.getElementById("atuiAudioplayerInfosMusic").childNodes[1].innerHTML = atuiAudioplayerMusicChosen[2]; /* Artiste */
+	document.getElementById("atuiAudioplayerInfosMusic").childNodes[3].innerHTML = atuiAudioplayerMusicChosen[3]; /* Titre */
+	document.getElementById("atuiAudioplayerInfosMusicAdvanced").childNodes[1].innerHTML = atuiAudioplayerMusicChosen[4]; /* Album */
+	document.getElementById("atuiAudioplayerInfosMusicAdvanced").childNodes[3].innerHTML = atuiAudioplayerMusicChosen[5]; /* Date */
+	play('Audioplayer');
+}
+atuiAudioplayerMusicChange(["patch/musics/santé.mp3","patch/musics/santé.png","Stromaé","Santé","Multitude","2022"])
+
+
+/* Hide Audio Player */
+
+function atuiAudioplayerFermer() // Ferme l'audioplayer
+{
+	atuiAudioplayer.style.display = "none";
 }
 
-/* Gestionnaire Play/Pause */
 
-function atuiAudioPlayerMusicPlayPause()
-{
-	atuiAudioPlayer.style.display = 'block';
-	var atuiAudioPlayerControlsButtonsPlayPause = document.getElementById('atuiAudioPlayerControlsButtonsBasic').childNodes[3];
-	if (atuiAudioPlayerMusic.paused)
-	{
- 		atuiAudioPlayerMusic.play();
-		atuiAudioPlayerControlsButtonsPlayPause.src = 'medias/icons/pause.png';
- 	}
-	else
-	{
-		atuiAudioPlayerMusic.pause();
-		atuiAudioPlayerControlsButtonsPlayPause.src = 'medias/icons/play.png';
-	}
-}
+/* Update progress time and bar */
 
-/* Gestionnaire métadonnées */
-
-var atuiAudioPlayerMusicProgress = "";
-function atuiAudioPlayerMusicChange(atuiAudioPlayerMusicChosen)
-{
-	if (atuiAudioPlayerMusicChosen != atuiAudioPlayerMusicProgress)
-	{
-		atuiAudioPlayerMusicProgress = atuiAudioPlayerMusicChosen;
-		var atuiAudioPlayerMusicMetadata = [atuiAudioPlayerMusicArtiste[choix - 1], atuiAudioPlayerMusicTitre[choix - 1], atuiAudioPlayerMusicAlbum[choix - 1], atuiAudioPlayerMusicDate[choix - 1]];
-		document.getElementById("atuiAudioPlayerMusic").src = "medias/musics/test.mp3"; /* Musique */
-		document.getElementById("atuiAudioPlayer").childNodes[8].src = 'musiques/images/' + choix + '.jpg'; /* Image */
-		document.getElementById("atuiAudioPlayerInfosMusic").childNodes[1].innerHTML = atuiAudioPlayerMusicMetadata[0]; /* Artiste */
-		document.getElementById("atuiAudioPlayerInfosMusic").childNodes[3].innerHTML = atuiAudioPlayerMusicMetadata[1]; /* Titre */
-		document.getElementById("atuiAudioPlayerInfosMusicAdvanced").childNodes[1].innerHTML = atuiAudioPlayerMusicMetadata[2]; /* Album */
-		document.getElementById("atuiAudioPlayerInfosMusicAdvanced").childNodes[3].innerHTML = atuiAudioPlayerMusicMetadata[3]; /* Date */
-	}
-	play('audioPlayer');
-}
-
-/* Change progress time */
-
-function calculTime(time, duration)
+function convertTime(time) // Converti les nombres en format de durée
 {
 	var hours = Math.floor(time / 3600);
 	var mins  = Math.floor((time % 3600) / 60);
@@ -76,16 +58,34 @@ function calculTime(time, duration)
 	}
 }
 
-function update(player)
+function atuiAudioplayerMusicUpdate()
+{	
+	var atuiAudioplayerMusicDuration = atuiAudioplayerMusic.duration; // Durée totale de la musique
+	var atuiAudioplayerMusicListened = atuiAudioplayerMusic.currentTime; // Temps écoulé de la musique
+	var atuiAudioplayerMusicPercentlistened = atuiAudioplayerMusicListened / atuiAudioplayerMusicDuration;
+	var atuiAudioplayerMusicPercentlistened  = Math.round(atuiAudioplayerMusicPercentlistened * 100); // Converti la valeur en poucentage
+	document.getElementById("atuiAudioplayerControlsProgress").childNodes[1].style.width = atuiAudioplayerMusicPercentlistened + '%'; // Actualise le width de la progressbar selon le temps écoulé de la musique
+	document.getElementById("atuiAudioplayerControlsTime").childNodes[1].textContent = convertTime(atuiAudioplayerMusicListened);
+	document.getElementById("atuiAudioplayerControlsTime").childNodes[5].textContent = convertTime(atuiAudioplayerMusicDuration);
+}
+
+
+/* Gestionnaire Play/Pause */
+
+function atuiAudioplayerMusicPlayPause()
 {
-	var duration = player.duration;    // Durée totale
-	var time     = player.currentTime; // Temps écoulé
-	var fraction = time / duration;
-	var percent  = Math.ceil(fraction * 100);
-	var progress = document.getElementById("atuiAudioPlayerControlsProgress").childNodes[1];
-	progress.style.width = percent + '%';
-	document.getElementById("atuiAudioPlayerControlsTime").childNodes[1].textContent = calculTime(time);
-	document.getElementById("atuiAudioPlayerControlsTime").childNodes[5].textContent = calculTime(duration);
+	atuiAudioplayer.style.display = 'block';
+	var atuiAudioplayerControlsButtonsPlayPause = document.getElementById('atuiAudioplayerControlsButtonsBasic').childNodes[3];
+	if (atuiAudioplayerMusic.paused)
+	{
+ 		atuiAudioplayerMusic.play();
+		atuiAudioplayerControlsButtonsPlayPause.src = 'atui/MediasPlayer/medias/pause.png';
+ 	}
+	else
+	{
+		atuiAudioplayerMusic.pause();
+		atuiAudioplayerControlsButtonsPlayPause.src = 'atui/MediasPlayer/medias/play.png';
+	}
 }
 
 function getPosition(element){
@@ -105,15 +105,19 @@ function getPosition(element){
 	};
  }
  
- function atuiAudioPlayerControlsProgressChange(control, event) {
+ function atuiAudioplayerControlsProgressChange(control, event) {
 	var parent = getPosition(control);    // La position absolue de la progressBar
 	var target = getMousePosition(event); // L'endroit de la progressBar où on a cliqué
    
 	var x = target.x - parent.x; 
-	var wrapperWidth = document.getElementById('atuiAudioPlayerControlsProgress').childNodes[1].offsetWidth;
+	var wrapperWidth = document.getElementById('atuiAudioplayerControlsProgress').childNodes[1].offsetWidth;
 	
 	var percent = Math.ceil((x / wrapperWidth) * 100);    
-	var duration = atuiAudioPlayerMusic.duration;
+	var duration = atuiAudioplayerMusic.duration;
 	
-	atuiAudioPlayerMusic.currentTime = (duration * percent) / 100;
+	console.log("percent:",percent);
+	console.log("duration:",duration);
+	console.log("current time:",atuiAudioplayerMusic.currentTime);
+	console.log("new current time:",(duration * percent) / 100);
+	/*atuiAudioplayerMusic.currentTime = (duration * percent) / 100;*/
  }
