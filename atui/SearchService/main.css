@@ -5,15 +5,58 @@ Version : dev2
 */
 
 /* Contents :
-- SearchService
+- Responsives
+- SearchBar Header
+- Extras
 */
-#atuiKernel_HeaderBlockCenter div
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
 {
-     height : 40px;
-     border-radius: 10px;
+     #atuiSearchServices_Header > div
+     {
+          background-color: rgb(242, 242, 242);
+          backdrop-filter: blur(10px);
+     }
+
+     #atuiSearchServices_Header > div input
+     {
+          display: inline;
+     }
 }
 
-#atuiKernel_HeaderBlockCenter div input
+@media (max-width : 767px) /* Smartphones */
+{
+     #atuiSearchServices_Header > div input
+     {
+          display : none;
+     }
+}
+
+
+/* Search bar header */
+
+#atuiSearchServices_Header
+{
+     height : max-content;
+     width : 100%;
+     background-color: var(--atuiDefaultColor);
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+}
+
+#atuiSearchServices_Header > div
+{
+     border-radius: 10px;
+     width : 100%;
+     height : 40px;
+}
+
+#atuiSearchServices_Header > div input
 {
      background-color: transparent;
      font-size: 1.5rem;
@@ -28,15 +71,43 @@ Version : dev2
      color : rgb(128, 128, 128);
 }
 
-#atuiKernel_HeaderBlockCenter div input:active
+#atuiSearchServices_Header > div input:active
 {
      background-color: transparent;
      border : none;
 }
 
-#atuiKernel_HeaderBlockCenter div img
+#atuiSearchServices_Header > div img
 {
      float : right;
      height : 30px;
      width : 30px;
 }
+
+
+/* Extras */
+
+#atuiSearchServices_Header aside
+{
+     display : none;
+     margin : 10px;
+}
+
+#atuiSearchServices_Header aside article
+{
+     margin : 0 10px 20px 10px;
+}
+
+#atuiSearchServices_Header aside article > p
+{
+     margin : 0;
+     font-family: 'Red Hat Display';
+     font-weight : bold;
+     font-size : 1.25rem;
+}
+
+#atuiSearchServices_Header aside article > div
+{
+     margin : 15px;
+}
+

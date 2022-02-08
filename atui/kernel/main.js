@@ -137,11 +137,11 @@ function atuiKernel_ToolsSelector(element,cible)
      {
           if (offsetLeft + cible.offsetWidth > document.body.clientWidth)
           {
-               offsetLeft = document.body.clientWidth - cible.offsetWidth - offsetLeft;
+               offsetLeft = document.body.clientWidth - cible.offsetWidth - 20;
           }
           if (offsetTop + cible.offsetHeight > window.innerHeight)
           {
-               offsetTop = window.innerHeight - cible.offsetHeight - offsetTop + 20;
+               offsetTop = window.innerHeight - cible.offsetHeight - 20;
           }
           offsetTop = offsetTop + "px";
           offsetLeft = offsetLeft + "px";
