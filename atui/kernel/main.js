@@ -126,20 +126,28 @@ modeVisuel[0].style.display  = 'block';
 
 function atuiKernel_ToolsSelector(element,cible)
 {
-     offsetTop = element.offsetTop + 50;
-     offsetLeft = element.offsetLeft + 20;
-     offsetTop = offsetTop + "px";
-     offsetLeft = offsetLeft + "px";
+     offsetTop = element.offsetTop + 40;
+     offsetLeft = element.offsetLeft + 10;
      cible = document.getElementById(cible);
-     if (cible.style.display == "block")
+     if (cible.style.visibility == "visible")
      {
-          cible.style.display = "none";
+          cible.style.visibility = "hidden";
      }
      else
      {
+          if (offsetLeft + cible.offsetWidth > document.body.clientWidth)
+          {
+               offsetLeft = document.body.clientWidth - cible.offsetWidth - offsetLeft;
+          }
+          if (offsetTop + cible.offsetHeight > window.innerHeight)
+          {
+               offsetTop = window.innerHeight - cible.offsetHeight - offsetTop + 20;
+          }
+          offsetTop = offsetTop + "px";
+          offsetLeft = offsetLeft + "px";
           cible.style.top = offsetTop;
           cible.style.left = offsetLeft;
-          cible.style.display = "block";
+          cible.style.visibility = "visible";
      }
 }
 
