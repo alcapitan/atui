@@ -65,16 +65,36 @@
                               </a>
                          </div>
                     </div>
-                    <!-- <div id="atuiKernel_HeaderBlockCenter">
-                         <div>
-                              <input type="text" placeholder="Faites une recherche...">
-                              <img src="atui/SearchService/medias/search.png" alt="Rechercher">
+                    <div id="atuiKernel_HeaderBlockCenter">
+                         <div id="atuiSearchServices_Header" onmouseover="atuiSearchService_HeaderDevelop()" onmouseout="atuiSearchService_HeaderAntidevelop()">
+                              <div>
+                                   <input type="text" placeholder="Faites une recherche...">
+                                   <img src="atui/SearchService/medias/search.png" alt="Rechercher">
+                              </div>
+                              <aside>
+                                   <article>
+                                        <p>Recherches récentes</p>
+                                        <div>
+                                             <p>Recherche 1</p>
+                                             <p>Recherche 1</p>
+                                             <p>Recherche 1</p>
+                                        </div>
+                                   </article>
+                                   <article>
+                                        <p>Suggestions</p>
+                                        <div>
+                                             <p>Suggestion 1</p>
+                                             <p>Suggestion 1</p>
+                                             <p>Suggestion 1</p>
+                                        </div>
+                                   </article>
+                              </aside>
                          </div>
                     </div>
                     <div id="atuiKernel_HeaderBlockRight">
                          <div id="atuiServerExchanges_AccountActions">
-                              <img alt="Aucun compte connecté" src="atui/ServerExchanges/medias/account.png">
-                              <aside class="atuiKernel_ToolsSelector">
+                              <img alt="Aucun compte connecté" src="atui/ServerExchanges/medias/account.png" onclick="atuiKernel_ToolsSelector(this,'atuiKernel_ToolsSelector2');">
+                              <aside class="atuiKernel_ToolsSelector" id="atuiKernel_ToolsSelector2">
                                    <a href="#">
                                         <div>
                                              <img src="atui/ServerExchanges/medias/registration.png" alt="icone inscription">
@@ -106,7 +126,7 @@
                               <img alt="Light mode" class="atuiKernel_ToolsSettingsDisplaymodeIcons" src="atui/kernel/medias/light.png" onclick="modeSombre()" style="display: block;">
                               <img alt="Dark mode" class="atuiKernel_ToolsSettingsDisplaymodeIcons" src="atui/kernel/medias/dark.png" onclick="modeClair()">
                          </div>
-                    </div> -->
+                    </div>
                </aside>
                <article class="atuiKernel_ToolsCarousel">
                     <div>
@@ -409,5 +429,6 @@
           </aside>
           <script src="atui/kernel/main.js"></script>
           <script src="atui/ServerExchanges/main.js"></script>
+          <script src="atui/SearchService/main.js"></script>
      </body>
 </html>
