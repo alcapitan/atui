@@ -23,9 +23,9 @@
           <header id="atuiKernel_Header">
                <aside>
                     <div id="atuiKernel_HeaderBlockLeft">
-                         <nav id="atuiKernel_Navigator1">
+                         <nav class="atuiKernel_ToolsSelector" id="atuiKernel_NavigatorImg">
                               <img src="atui/kernel/medias/program.png" alt="menu">
-                              <aside class="atuiKernel_ToolsSelector">
+                              <aside>
                                    <a href="#">
                                         <div>
                                              <img src="atui/kernel/medias/section.png" alt="icone categorie">
@@ -92,9 +92,43 @@
                          </nav>
                     </div>
                     <div id="atuiKernel_HeaderBlockRight">
-                         <nav id="atuiServerExchanges_AccountActions">
+                         <nav class="atuiKernel_ToolsSelector" id="atuiKernel_NavigatorText">
+                              <p>Produits</p>
+                              <aside>
+                                   <a href="#">
+                                        <div>
+                                             <p>Kernel</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <p>LanguagesManager</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <p>MediasPlayer</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <p>SearchService</p>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div>
+                                             <p>ServerExchanges</p>
+                                        </div>
+                                   </a>
+                              </aside>
+                         </nav>
+                         <div id="atuiKernel_ToolsSettingsDisplaymode">
+                              <img alt="Light mode" class="atuiKernel_ToolsSettingsDisplaymodeIcons" src="atui/kernel/medias/light.png" onclick="modeSombre()" style="display: block;">
+                              <img alt="Dark mode" class="atuiKernel_ToolsSettingsDisplaymodeIcons" src="atui/kernel/medias/dark.png" onclick="modeClair()">
+                         </div>
+                         <nav class="atuiKernel_ToolsSelector" id="atuiServerExchanges_AccountActions">
                               <img alt="Aucun compte connecté" src="atui/ServerExchanges/medias/account.png">
-                              <aside class="atuiKernel_ToolsSelector">
+                              <aside>
                                    <a href="#">
                                         <div>
                                              <img src="atui/ServerExchanges/medias/registration.png" alt="icone inscription">
@@ -113,7 +147,7 @@
                                              <p>Se déconnecter</p>
                                         </div>
                                    </a>
-                                   <div class="atuiKernel_ToolsSelectorSeparator"></div>
+                                   <hr>
                                    <a href="#">
                                         <div>
                                              <img src="atui/ServerExchanges/medias/profil.png" alt="icone profil">
@@ -122,10 +156,6 @@
                                    </a>
                               </aside>
                          </nav>
-                         <div id="atuiKernel_ToolsSettingsDisplaymode">
-                              <img alt="Light mode" class="atuiKernel_ToolsSettingsDisplaymodeIcons" src="atui/kernel/medias/light.png" onclick="modeSombre()" style="display: block;">
-                              <img alt="Dark mode" class="atuiKernel_ToolsSettingsDisplaymodeIcons" src="atui/kernel/medias/dark.png" onclick="modeClair()">
-                         </div>
                     </div>
                </aside>
                <article class="atuiKernel_ToolsCarousel">
@@ -402,7 +432,6 @@
                <div id="atuiMediasPlayer_AudioplayerProgressbar" onclick="atuiAudioplayerControlsProgressChange(this, event)">
                     <div></div>
                </div>
-               <script src="atui/MediasPlayer/main.js"></script>
 		</aside>
           <aside id="atuiKernel_Notification">
           </aside>
@@ -427,8 +456,9 @@
                     <!-- Cookies -->
                </article>
           </aside>
-          <script src="atui/kernel/main.js"></script>
-          <script src="atui/ServerExchanges/main.js"></script>
-          <script src="atui/SearchService/main.js"></script>
+          <script type="text/javascript" src="atui/kernel/main.js"></script>
+          <script type="text/javascript" src="atui/MediasPlayer/main.js"></script>
+          <script type="text/javascript" src="atui/ServerExchanges/main.js"></script>
+          <script type="text/javascript" src="atui/SearchService/main.js"></script>
      </body>
 </html>
