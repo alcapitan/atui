@@ -25,6 +25,7 @@ function atuiSearchService_HeaderDevelop(element,wish)
      }
 }
 
-document.getElementById("atuiSearchServices_Header").addEventListener("mouseover",function(){atuiSearchService_HeaderDevelop(this,true);});
+/* document.getElementById("atuiSearchServices_Header").addEventListener("mouseover",function(){atuiSearchService_HeaderDevelop(this,true);});
 document.getElementById("atuiSearchServices_Header").addEventListener("mouseout",function(){atuiSearchService_HeaderDevelop(this,false);});
+*/
 
