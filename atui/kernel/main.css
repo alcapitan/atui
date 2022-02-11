@@ -26,6 +26,7 @@ Version : dev2
      - atuiKernel_HeaderBlockRight / Right block
 - Navigator
      - atuiKernel_NavigatorStyleRow / Row
+     - atuiKernel_Header > nav / Header Navigator
 - Section
      - atuiKernel_SectionText / Paragraph
      - atuiKernel_SectionImage / Image
@@ -495,17 +496,10 @@ a:hover, a:active
 {
      background-color : rgba(255,255,255,0.7);
      backdrop-filter: blur(5px);
-     height : 50px;
-     display: flex;
-     justify-content: space-between;
+     min-height : 50px;
      position: absolute;
      width : calc(100% - 20px);
      padding : 0 10px;
-}
-
-#atuiKernel_Header > aside > *
-{
-     display: flex;
 }
 
 #atuiKernel_Header img 
@@ -513,6 +507,18 @@ a:hover, a:active
      height : 40px;
      width : 40px;
      margin : 5px;
+}
+
+#atuiKernel_Header > aside > div
+{
+     display: flex;
+     justify-content: space-between;
+     height : 50px;
+}
+
+#atuiKernel_Header > aside > div > *
+{
+     display: flex;
 }
 
      /* Left block */
@@ -557,6 +563,7 @@ a:hover, a:active
 
 #atuiKernel_HeaderBlockCenter
 {
+     justify-content: center;
      padding : 5px;
      order : 2;
 }
@@ -599,7 +606,40 @@ a:hover, a:active
      margin : 5px;
      font-size : 1.1rem;
 }
-     
+
+     /* Header Navigator */
+
+#atuiKernel_Header > aside > nav
+{
+     display : flex;
+     min-height : 30px;
+     margin : 5px 0;
+     flex-wrap: wrap;
+}
+
+#atuiKernel_Header > aside > nav div
+{
+     margin : 0 10px;
+}
+#atuiKernel_Header > aside > nav div a
+{
+     color : black;
+     display: flex;
+     align-items: center;
+}
+
+#atuiKernel_Header > aside > nav div a img
+{
+     width : 20px;
+     height : 20px;
+     margin-right : 10px;
+}
+
+#atuiKernel_Header > aside > nav div a p
+{
+     margin : 0;
+}
+
 /* Contenu */
 
 section
