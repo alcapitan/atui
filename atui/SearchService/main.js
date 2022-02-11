@@ -5,21 +5,26 @@ Version : dev2
 */
 
 
-searchBarHeaderZone = document.getElementById("atuiSearchServices_Header");
-searchBarHeaderBar = document.getElementById("atuiSearchServices_Header").childNodes[1];
-searchBarHeaderExtras = document.getElementById("atuiSearchServices_Header").childNodes[3];
-
-function atuiSearchService_HeaderDevelop()
+function atuiSearchService_HeaderDevelop(element,wish)
 {
-     searchBarHeaderBar.style.width = "calc(100% - 20px)";
-     searchBarHeaderBar.style.margin = "10px";
-     searchBarHeaderExtras.style.display = "block";
+     searchBarHeaderBar = element.childNodes[1];
+     searchBarHeaderExtras = element.childNodes[3];
+     if (wish == false)
+     {
+          element.style.backgroundColor = "transparent";
+          searchBarHeaderBar.style.width = "100%";
+          searchBarHeaderBar.style.margin = "0px";
+          searchBarHeaderExtras.style.display = "none";
+     }
+     else
+     {
+          element.style.backgroundColor = "var(--atuiDefaultColor)";
+          searchBarHeaderBar.style.width = "calc(100% - 20px)";
+          searchBarHeaderBar.style.margin = "10px";
+          searchBarHeaderExtras.style.display = "block";
+     }
 }
 
-function atuiSearchService_HeaderAntidevelop()
-{
-     searchBarHeaderBar.style.width = "100%";
-     searchBarHeaderBar.style.margin = "0px";
-     searchBarHeaderExtras.style.display = "none";
-}
+document.getElementById("atuiSearchServices_Header").addEventListener("mouseover",function(){atuiSearchService_HeaderDevelop(this,true);});
+document.getElementById("atuiSearchServices_Header").addEventListener("mouseout",function(){atuiSearchService_HeaderDevelop(this,false);});
 

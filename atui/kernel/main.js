@@ -124,12 +124,13 @@ modeVisuel[0].style.display  = 'block';
 
 /* Selector */
 
-function atuiKernel_ToolsSelector(element,cible)
+function atuiKernel_ToolsSelector(element,wish)
 {
+     cible = element.childNodes[3];
+     element = element.childNodes[1];
      offsetTop = element.offsetTop + 40;
      offsetLeft = element.offsetLeft + 10;
-     cible = document.getElementById(cible);
-     if (cible.style.visibility == "visible")
+     if (wish == false)
      {
           cible.style.visibility = "hidden";
      }
@@ -151,3 +152,5 @@ function atuiKernel_ToolsSelector(element,cible)
      }
 }
 
+document.getElementById("atuiKernel_Navigator1").addEventListener("mouseover",function(){atuiKernel_ToolsSelector(this,true);});
+document.getElementById("atuiKernel_Navigator1").addEventListener("mouseout",function(){atuiKernel_ToolsSelector(this,false);});

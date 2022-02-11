@@ -25,7 +25,6 @@ Version : dev2
      - atuiKernel_HeaderBlockCenter / Center block
      - atuiKernel_HeaderBlockRight / Right block
 - Navigator
-     - atuiKernel_NavigatorStyleFloatleft / Float Left
      - atuiKernel_NavigatorStyleRow / Row
 - Section
      - atuiKernel_SectionText / Paragraph
@@ -204,6 +203,7 @@ a:hover, a:active
 .atuiKernel_ToolsSelector a
 {
      display : block;
+     text-decoration: none;
 }
 
 .atuiKernel_ToolsSelector a:first-child
@@ -548,25 +548,6 @@ a:hover, a:active
 }
 
 /* Navigator */
-
-     /* Float left */
-
-#atuiKernel_NavigatorStyleFloatleft
-{
-     margin : 0px;
-     display: block;
-}
-
-/* #atuiKernel_NavigatorStyleFloatleft > img
-{
-     float: left;
-} */
-
-#atuiKernel_NavigatorStyleFloatleft aside
-{
-     top : 65px;
-     left : 15px;
-}
 
      /* Row */
 
