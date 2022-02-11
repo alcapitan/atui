@@ -1,0 +1,24 @@
+Relevé le 11 février 2022 / Commit 43ece4e
+Les sauts de lignes ne sont pas comptés comme des lignes.
+
+HTML : 504 / 26%
+- index : 504
+
+CSS : 1167 / 60%
+- patch : 4
+- kernel : 881
+- languages manager : 16
+- medias player : 159
+- search service : 93
+- server exchanges : 14
+
+JavaScript : 273 / 14%
+- kernel : 142
+- languages manager : 5
+- medias player : 93
+- search service : 27
+- server exchanges : 6
+- total : 273
+
+TOTAL : 1944
+
