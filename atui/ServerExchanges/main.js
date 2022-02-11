@@ -5,6 +5,5 @@ Version : dev2
 */
 
 
-document.getElementById("atuiServerExchanges_AccountActions").addEventListener("mouseover",function(){atuiKernel_ToolsSelector(this,true);});
-document.getElementById("atuiServerExchanges_AccountActions").addEventListener("mouseout",function(){atuiKernel_ToolsSelector(this,false);});
+atuiKernel_ToolsSelector("atuiServerExchanges_AccountActions");
 

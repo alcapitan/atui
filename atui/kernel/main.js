@@ -124,12 +124,12 @@ modeVisuel[0].style.display  = 'block';
 
 /* Selector */
 
-function atuiKernel_ToolsSelector(element,wish)
+function atuiKernel_ToolsSelectorDisplay(element,wish)
 {
      cible = element.childNodes[3];
      element = element.childNodes[1];
-     offsetTop = element.offsetTop + 40;
-     offsetLeft = element.offsetLeft + 10;
+     offsetTop = element.offsetTop + 20;
+     offsetLeft = element.offsetLeft;
      if (wish == false)
      {
           cible.style.visibility = "hidden";
@@ -152,5 +152,11 @@ function atuiKernel_ToolsSelector(element,wish)
      }
 }
 
-document.getElementById("atuiKernel_Navigator1").addEventListener("mouseover",function(){atuiKernel_ToolsSelector(this,true);});
-document.getElementById("atuiKernel_Navigator1").addEventListener("mouseout",function(){atuiKernel_ToolsSelector(this,false);});
+function atuiKernel_ToolsSelector(cible)
+{
+     document.getElementById(cible).addEventListener("mouseover",function(){atuiKernel_ToolsSelectorDisplay(this,true);});
+     document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_ToolsSelectorDisplay(this,false);});     
+}
+
+atuiKernel_ToolsSelector("atuiKernel_NavigatorImg");
+atuiKernel_ToolsSelector("atuiKernel_NavigatorText");

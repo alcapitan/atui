@@ -46,7 +46,7 @@ Version : dev2
      width : 100%;
      height : 100%;
      background-color: rgb(255, 255, 255);
-     top : 0px;
+     top : 0;
      display: none;
 }
 
@@ -79,7 +79,7 @@ Version : dev2
 
 body
 {
-     margin : 0px;
+     margin : 0;
 }
 
 body *
@@ -158,7 +158,7 @@ a:hover, a:active
 
      .atuiKernel_SectionImage img
      {
-          margin : 0px 10%;
+          margin : 0 10%;
           width: 80%;
      }
 
@@ -191,66 +191,89 @@ a:hover, a:active
 
 .atuiKernel_ToolsSelector
 {
+     display: flex;
+     align-items: center;
+}
+
+.atuiKernel_ToolsSelector > p
+{
+     font-family: "Red Hat Display";
+     font-size : 1.4rem;
+     margin : 0 15px;
+}
+
+.atuiKernel_ToolsSelector > p:hover, .atuiKernel_ToolsSelector > p:active
+{
+     font-weight: bold;
+     text-decoration: underline;
+}
+
+.atuiKernel_ToolsSelector aside 
+{
      position : absolute;
      width : 280px;
      visibility: hidden;
      background-color: rgba(255,255,255,0.8);
      backdrop-filter: blur(10px);
      border-radius: 10px;
-     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+     box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
 }
 
-.atuiKernel_ToolsSelector a
+.atuiKernel_ToolsSelector aside a
 {
      display : block;
      text-decoration: none;
 }
 
-.atuiKernel_ToolsSelector a:first-child
+.atuiKernel_ToolsSelector aside a:first-child
 {
      margin-top : 10px;
 }
 
-.atuiKernel_ToolsSelector a:last-child
+.atuiKernel_ToolsSelector aside a:last-child
 {
      margin-bottom : 10px;
 }
 
-.atuiKernel_ToolsSelector a div:hover
+.atuiKernel_ToolsSelector aside a div:hover
 {
      background-color : var(--atuiDefaultColorTransparent);
 }
 
-.atuiKernel_ToolsSelector a div
+.atuiKernel_ToolsSelector aside a div
 {
-     height : 35px;
+     min-height : 35px;
      padding : 5px 15px;
-     margin : 0px;
+     margin : 0;
      display: flex;
      align-items: center;
+     justify-content: flex-end;
 }
 
-.atuiKernel_ToolsSelector a div p
+.atuiKernel_ToolsSelector aside a div p
 {
      font-size : 1.25rem;
-     margin : 0px;
+     margin : 0;
      color : black;
+     width : calc(100% - 38px);
+     overflow-wrap: anywhere;
 }
 
-.atuiKernel_ToolsSelector a div img
+.atuiKernel_ToolsSelector aside a div img
 {
-     margin : 0px !important;
+     margin : 0 !important;
      margin-right: 10px !important;
      width : 28px !important;
      height : 28px !important;
 }
 
-.atuiKernel_ToolsSelectorSeparator
+.atuiKernel_ToolsSelector aside hr
 {
      background-color: var(--atuiDefaultColor);
      width : 80%;
      height : 2px;
      margin : 5px 10%;
+     border : 0;
 }
 
      /* Settings */
@@ -309,7 +332,7 @@ a:hover, a:active
 {
      font-weight: bold;
      font-size : 1.5rem;
-     margin : 15px 0px;
+     margin : 15px 0;
      font-family: "Red Hat Display";
      margin : 0;
 }
@@ -407,7 +430,7 @@ a:hover, a:active
      background-color: white;
      width : 70vw;
      border-radius: 10px;
-     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+     box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
      padding : 15px 30px;
 }
 
@@ -544,7 +567,7 @@ a:hover, a:active
 {
      height : 50px;
      order: 3;
-     flex-direction: row-reverse;
+     justify-content: flex-end;
 }
 
 /* Navigator */
@@ -592,7 +615,7 @@ section
      font-size : 1.5rem;
      color : var(--atuiDefaultColor);
      font-family: "Red Hat Display";
-     margin : 10px 0px;
+     margin : 10px 0;
 }
 
 .atuiKernel_SectionText p
@@ -667,7 +690,7 @@ section
      color : var(--atuiDefaultColor);
      font-size: 1.2rem;
      justify-content: flex-end;
-     margin : 0px 10px 0px 20px;
+     margin : 0 10px 0 20px;
      flex-grow: 0;
 }
 
@@ -707,7 +730,7 @@ section
 .atuiKernel_SectionCardStylePurified article div h3
 {
      font-family: "Red Hat Display";
-     margin : 5px 0px;
+     margin : 5px 0;
      font-size: 1.3rem;
 }
 
@@ -719,7 +742,7 @@ section
 
 .atuiKernel_SectionCardStylePurified article div a
 {
-     margin : 0px;
+     margin : 0;
      margin-top: 10px;
      color : var(--atuiDefaultColor);
      font-weight: bold;
@@ -772,7 +795,7 @@ section
 .atuiKernel_SectionCardStyleFlat article div h3
 {
      font-family: "Red Hat Display";
-     margin : 5px 0px;
+     margin : 5px 0;
      font-size: 1.3rem;
      flex : 0;
 }
@@ -786,7 +809,7 @@ section
 
 .atuiKernel_SectionCardStyleFlat article div a
 {
-     margin : 0px;
+     margin : 0;
      margin-top: 10px;
      color : var(--atuiDefaultColor);
      font-weight: bold;
@@ -840,7 +863,7 @@ section
 .atuiKernel_SectionCardStyleMinimal article div h3
 {
      font-family: "Red Hat Display";
-     margin : 5px 0px;
+     margin : 5px 0;
      font-size: 1.3rem;
 }
 
@@ -852,7 +875,7 @@ section
 
 .atuiKernel_SectionCardStyleMinimal article div a
 {
-     margin : 0px;
+     margin : 0;
      margin-top: 10px;
      color : var(--atuiDefaultColor);
      font-weight: bold;
@@ -962,7 +985,7 @@ body > footer
      background-color : #c0c0c0;
      border-top : 3px solid var(--atuiDefaultColor);
      margin-top : 50px;
-     padding: 0px 5%;
+     padding: 0 5%;
      padding-bottom: 5px;
 }
 
