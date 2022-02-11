@@ -62,8 +62,10 @@ function notificationMessage(title,text)
 /*notificationMessage('1e notif','Coucou..');
 notificationMessage('2e notif','.. Milan !');*/
 
+
 /* Browser compatibility */
 
+/*
 atuiBanIE = document.getElementById('atuiKernel_PriorityBrowserCompatibility');
 //renvoie version de IE ou false, si le navigateur n'est pas IE
 function IEdetection()
@@ -97,6 +99,8 @@ if (result != "Not IE")
 {
      atuiBanIE.style.display = "block";
 }
+*/
+
 
 /* Display mode */
 
@@ -121,6 +125,7 @@ function modeClair()
      atuiHeader.style.backgroundColor = "#FFF7";
 }
 modeVisuel[0].style.display  = 'block';
+
 
 /* Selector */
 
@@ -160,3 +165,4 @@ function atuiKernel_ToolsSelector(cible)
 
 atuiKernel_ToolsSelector("atuiKernel_NavigatorImg");
 atuiKernel_ToolsSelector("atuiKernel_NavigatorText");
+
