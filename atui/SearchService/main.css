@@ -42,7 +42,7 @@ Version : dev2
 {
      height : max-content;
      width : 100%;
-     background-color: var(--atuiDefaultColor);
+     background-color: transparent;
      border-radius: 10px;
      display: flex;
      justify-content: center;
