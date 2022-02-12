@@ -40,13 +40,12 @@ Version : dev2
 
 #atuiSearchServices_Header
 {
-     height : max-content;
-     width : 100%;
      background-color: transparent;
      border-radius: 10px;
      display: flex;
      justify-content: center;
      flex-direction: column;
+     top : 5px;
 }
 
 #atuiSearchServices_Header > div
@@ -111,3 +110,15 @@ Version : dev2
      margin : 15px;
 }
 
+#atuiSearchServices_Header aside article > div a
+{
+     color : black;
+     display : block;
+     padding : 5px 0;
+}
+
+#atuiSearchServices_Header aside article > div a:hover,#atuiSearchServices_Header aside article > div a:active
+{
+     transition : transform 300ms;
+     transform : translateX(30px);
+}
