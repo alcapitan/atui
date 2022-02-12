@@ -589,32 +589,83 @@ a:hover, a:active
 
 /* Navigator */
 
-     /* Row */
+     /* Section */
 
-.atuiKernel_NavigatorStyleRow
+.atuiKernel_NavigatorSectionWithoutimg, .atuiKernel_NavigatorSectionImgbig, .atuiKernel_NavigatorSectionImgsmall
 {
      display : flex;
      justify-content: space-around;
-     flex-wrap: wrap;
      margin : 15px;
+     flex-wrap: wrap;
 }
 
-.atuiKernel_NavigatorStyleRow a
+.atuiKernel_NavigatorSectionWithoutimg a, .atuiKernel_NavigatorSectionImgbig a, .atuiKernel_NavigatorSectionImgsmall a
 {
      color : black;
      text-decoration : none;
+     padding : 10px;
+     border-radius: 10px;
 }
 
-.atuiKernel_NavigatorStyleRow a img
+.atuiKernel_NavigatorSectionWithoutimg a:hover, .atuiKernel_NavigatorSectionImgbig a:hover, .atuiKernel_NavigatorSectionImgsmall a:hover, .atuiKernel_NavigatorSectionWithout a:active, .atuiKernel_NavigatorSectionImgbig a:active, .atuiKernel_NavigatorSectionImgsmall a:active
 {
-     width : 100px;
+     background-color: var(--atuiDefaultColor);
 }
 
-.atuiKernel_NavigatorStyleRow a p
+.atuiKernel_NavigatorSectionWithoutimg a p, .atuiKernel_NavigatorSectionImgbig a p, .atuiKernel_NavigatorSectionImgsmall a p
 {
      text-align : center;
-     margin : 5px;
-     font-size : 1.1rem;
+     margin : 0;
+     font-size : 1.2rem;
+}
+
+          /* Without image */
+
+.atuiKernel_NavigatorSectionWithoutimg a p
+{
+     margin : 0 10px;
+}
+
+          /* Imgbig */
+
+.atuiKernel_NavigatorSectionImgbig a
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.atuiKernel_NavigatorSectionImgbig a img
+{
+     width : 100px;
+     height : 100px;
+}
+
+.atuiKernel_NavigatorSectionImgbig a p
+{
+     margin : 5px 10px 0 10px;
+}
+
+          /* Imgsmall */
+
+.atuiKernel_NavigatorSectionImgsmall a
+{
+     display : flex;
+     align-items: center;
+}
+
+.atuiKernel_NavigatorSectionImgsmall a img
+{
+     width : 30px;
+     height : 30px;
+     margin : 0 5px 0 10px;
+}
+
+.atuiKernel_NavigatorSectionImgsmall a p
+{
+     margin-left : 5px;
+     margin-right : 10px;
+     
 }
 
      /* Header Navigator */
@@ -625,6 +676,7 @@ a:hover, a:active
      min-height : 30px;
      margin : 5px 0;
      flex-wrap: wrap;
+     justify-content: space-around;
 }
 
 #atuiKernel_Header > aside > nav div
@@ -648,6 +700,7 @@ a:hover, a:active
 #atuiKernel_Header > aside > nav div a p
 {
      margin : 0;
+     font-size: 1.2rem;
 }
 
 /* Contenu */
