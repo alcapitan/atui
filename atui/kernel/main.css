@@ -127,9 +127,9 @@ a:hover, a:active
 
 @media (min-width : 768px) /* Computers */
 {
-     #atuiKernel_HeaderBlockCenter
+     #atuiKernel_Header > aside > div
      {
-          flex : 1;
+          justify-content: space-between;
      }
 
      #atuiKernel_ToolsExplorer
@@ -142,7 +142,7 @@ a:hover, a:active
           padding-top : 100px;
      }
 
-     #atuiKernel_HeaderBlockRight
+     #atuiKernel_HeaderBlockLeft,#atuiKernel_HeaderBlockCenter,#atuiKernel_HeaderBlockRight
      {
           flex : 1;
      }
@@ -167,6 +167,16 @@ a:hover, a:active
 
 @media (max-width : 767px) /* Smartphones */
 {
+     #atuiKernel_Header > aside > div
+     {
+          justify-content: center;
+     }
+
+     #atuiKernel_Header > aside > div > *
+     {
+          margin : 0 20px;
+     }
+
      #atuiKernel_ToolsExplorer
      {
           margin : 0 5%;
@@ -514,8 +524,8 @@ a:hover, a:active
 #atuiKernel_Header > aside > div
 {
      display: flex;
-     justify-content: space-between;
-     height : 50px;
+     flex-wrap: wrap;
+     min-height : 50px;
 }
 
 #atuiKernel_Header > aside > div > *
@@ -529,7 +539,6 @@ a:hover, a:active
 {
      height : 50px;
      order: 1;
-     flex : 1;
      justify-content: flex-start;
 }
 
@@ -566,7 +575,6 @@ a:hover, a:active
 #atuiKernel_HeaderBlockCenter
 {
      justify-content: center;
-     padding : 5px;
      order : 2;
 }
 
