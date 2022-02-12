@@ -138,9 +138,13 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
      if (wish == false)
      {
           cible.style.visibility = "hidden";
+          element.style.fontWeight = "normal";
+          element.style.textDecoration = "none";
      }
      else
      {
+          element.style.fontWeight = "bold";
+          element.style.textDecoration = "underline";
           if (offsetLeft + cible.offsetWidth > document.body.clientWidth)
           {
                offsetLeft = document.body.clientWidth - cible.offsetWidth - 20;
