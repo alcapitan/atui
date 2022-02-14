@@ -170,3 +170,35 @@ function atuiKernel_ToolsSelector(cible)
 atuiKernel_ToolsSelector("atuiKernel_NavigatorImg");
 atuiKernel_ToolsSelector("atuiKernel_NavigatorText");
 
+
+/* Global Panel */
+
+function atuiKernel_NavigatorGlobalpanelDisplay(element,wish)
+{
+     cible = element.childNodes[3];
+     element = element.childNodes[1];
+     if (!wish)
+     {
+          cible.style.visibility = "hidden";
+          element.style.fontWeight = "normal";
+          element.style.textDecoration = "none";
+     }
+     else
+     {
+          element.style.fontWeight = "bold";
+          element.style.textDecoration = "underline";
+          offsetTop = element.offsetTop + 30;
+          offsetTop = offsetTop + "px";
+          cible.style.top = offsetTop;
+          cible.style.visibility = "visible";
+     }
+}
+
+function atuiKernel_NavigatorGlobalpanel(cible)
+{
+     document.getElementById(cible).addEventListener("mouseover",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,true);});
+     document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,false);});     
+}
+
+atuiKernel_NavigatorGlobalpanel("atuiKernel_NavigatorGlobalpanel1");
+
