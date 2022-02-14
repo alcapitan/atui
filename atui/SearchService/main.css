@@ -55,7 +55,7 @@ Version : dev2
      height : 40px;
 }
 
-#atuiSearchServices_Header > div input
+#atuiSearchServices_Header > div form input
 {
      background-color: transparent;
      font-size: 1.5rem;
@@ -70,15 +70,24 @@ Version : dev2
      color : rgb(128, 128, 128);
 }
 
-#atuiSearchServices_Header > div input:active
+#atuiSearchServices_Header > div form input:active
 {
      background-color: transparent;
      border : none;
 }
 
-#atuiSearchServices_Header > div img
+#atuiSearchServices_Header > div form button
 {
+     height : 40px;
+     width : 40px;
+     padding : 0;
+     background-color: transparent;
+     border: none;
      float : right;
+}
+
+#atuiSearchServices_Header > div form button img
+{
      height : 30px;
      width : 30px;
 }
@@ -117,8 +126,3 @@ Version : dev2
      padding : 5px 0;
 }
 
-#atuiSearchServices_Header aside article > div a:hover,#atuiSearchServices_Header aside article > div a:active
-{
-     transition : transform 300ms;
-     transform : translateX(30px);
-}

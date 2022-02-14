@@ -69,24 +69,22 @@
                          <div id="atuiKernel_HeaderBlockCenter">
                               <nav id="atuiSearchServices_Header">
                                    <div>
-                                        <input type="text" placeholder="Faites une recherche...">
-                                        <img src="atui/SearchService/medias/search.png" alt="Rechercher">
+                                        <form action="" method="post"><!-- Lier le fichier PHP dans action -->
+                                             <input name="atuiSearchServices_Request" type="text" placeholder="Faites une recherche...">
+                                             <button type="submit">
+                                                  <img src="atui/SearchService/medias/search.png" alt="Rechercher">
+                                             </button>
+                                        </form>
                                    </div>
                                    <aside>
                                         <article>
                                              <p>Recherches récentes</p>
                                              <div>
-                                                  <p>Recherche 1</p>
-                                                  <p>Recherche 1</p>
-                                                  <p>Recherche 1</p>
                                              </div>
                                         </article>
                                         <article>
                                              <p>Suggestions</p>
                                              <div>
-                                                  <p>Suggestion 1</p>
-                                                  <p>Suggestion 1</p>
-                                                  <p>Suggestion 1</p>
                                              </div>
                                         </article>
                                    </aside>
