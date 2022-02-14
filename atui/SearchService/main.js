@@ -5,8 +5,8 @@ Version : dev2
 */
 
 
-atuiSearchService_HeaderGenerateinfoRecentsearches = ["satisfied drop room","era assumption grow","score wheel shaft","veil crossing inhabitant","ratio spoil freedom"]
-atuiSearchService_HeaderGenerateinfoSuggestedsearches = ["charter gutter merit","meaning presidency maze","different federation zone","realize praise doctor","network atmosphere last"]
+atuiSearchService_HeaderGenerateinfoRecentsearches = [["satisfied drop room","https://www.at.ma"],["era assumption grow","https://www.at.ma"],["score wheel shaft","https://www.at.ma"],["veil crossing inhabitant","https://www.at.ma"],["ratio spoil freedom","https://www.at.ma"]]
+atuiSearchService_HeaderGenerateinfoSuggestedsearches = [["charter gutter merit","https://www.at.ma"],["meaning presidency maze","https://www.at.ma"],["different federation zone","https://www.at.ma"],["realize praise doctor","https://www.at.ma"],["network atmosphere last","https://www.at.ma"]]
 
 function atuiSearchService_HeaderGenerateinfo(element)
 {
@@ -16,9 +16,9 @@ function atuiSearchService_HeaderGenerateinfo(element)
      for (let counter in atuiSearchService_HeaderGenerateinfoRecentsearches)
      {
           var atuiSearchService_HeaderGenerateinfoRecentsearchesNewlink = document.createElement("a");
-          var atuiSearchService_HeaderGenerateinfoRecentsearchesNewlinkText = document.createTextNode(atuiSearchService_HeaderGenerateinfoRecentsearches[counter]);
+          var atuiSearchService_HeaderGenerateinfoRecentsearchesNewlinkText = document.createTextNode(atuiSearchService_HeaderGenerateinfoRecentsearches[counter][0]);
           atuiSearchService_HeaderGenerateinfoRecentsearchesNewlink.appendChild(atuiSearchService_HeaderGenerateinfoRecentsearchesNewlinkText);
-          atuiSearchService_HeaderGenerateinfoRecentsearchesNewlink.src = "#";
+          atuiSearchService_HeaderGenerateinfoRecentsearchesNewlink.setAttribute("href",atuiSearchService_HeaderGenerateinfoRecentsearches[counter][1]);
           atuiSearchService_HeaderGenerateinfoRecentsearchesContainer.appendChild(atuiSearchService_HeaderGenerateinfoRecentsearchesNewlink);
      }
      /* Suggested searches */
@@ -27,9 +27,9 @@ function atuiSearchService_HeaderGenerateinfo(element)
      for (let counter in atuiSearchService_HeaderGenerateinfoSuggestedsearches)
      {
           var atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlink = document.createElement("a");
-          var atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlinkText = document.createTextNode(atuiSearchService_HeaderGenerateinfoSuggestedsearches[counter]);
+          var atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlinkText = document.createTextNode(atuiSearchService_HeaderGenerateinfoSuggestedsearches[counter][0]);
           atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlink.appendChild(atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlinkText);
-          atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlink.src = "#";
+          atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlink.setAttribute("href",atuiSearchService_HeaderGenerateinfoRecentsearches[counter][1]);
           atuiSearchService_HeaderGenerateinfoSuggestedsearchesContainer.appendChild(atuiSearchService_HeaderGenerateinfoSuggestedsearchesNewlink);
      }
 }
@@ -60,6 +60,6 @@ function atuiSearchService_HeaderDevelop(element,wish)
      }
 }
 
-document.getElementById("atuiSearchServices_Header").addEventListener("mouseover",function(){atuiSearchService_HeaderDevelop(this,true);});
-document.getElementById("atuiSearchServices_Header").addEventListener("mouseout",function(){atuiSearchService_HeaderDevelop(this,false);});
+document.getElementById("atuiSearchServices_Header").addEventListener("mouseenter",function(){atuiSearchService_HeaderDevelop(this,true);});
+document.getElementById("atuiSearchServices_Header").addEventListener("mouseleave",function(){atuiSearchService_HeaderDevelop(this,false);});
 
