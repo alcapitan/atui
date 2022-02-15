@@ -4,14 +4,3 @@ Nom du module : Server Exchanges
 Version : dev2
 */
 
-/* Contents :
-- atuiServerExchanges_AccountActions / Actions sur le compte 
-*/
-
-/* Actions sur le compte */
-
-#atuiServerExchanges_AccountActions aside
-{
-     top : 65px;
-     right : 15px;
-}

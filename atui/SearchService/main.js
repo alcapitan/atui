@@ -52,7 +52,7 @@ function atuiSearchService_HeaderDevelop(element,wish)
      {
           element.style.position = "absolute";
           element.style.backgroundColor = "var(--atuiKernel_ToolsSettingsAccentcolor)";
-          element.style.boxShadow = "rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px";
+          element.style.boxShadow = "var(--atuiKernel_Shadow)";
           searchBarHeaderBar.style.width = "calc(100% - 20px)";
           searchBarHeaderBar.style.margin = "10px";
           atuiSearchService_HeaderGenerateinfo(searchBarHeaderExtras);
