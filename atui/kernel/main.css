@@ -83,6 +83,7 @@ Version : dev2
 body
 {
      margin : 0;
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
 }
 
 body *
@@ -93,15 +94,17 @@ body *
 
 :root
 {
-	--atuiDefaultColor : rgb(230, 0, 0);
-     --atuiDefaultColorTransparent : rgb(230, 0, 0, 0.6);
+	--atuiKernel_ToolsSettingsAccentcolor : rgb(230, 51, 0);
+     --atuiKernel_ToolsSettingsAccentcolorOpacity : rgb(230, 51, 0, 0.8);
+     --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
+     --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
      font-size : 16px;
 }
 
 a
 {
      text-decoration: none;
-     color: var(--atuiDefaultColor);
+     color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
 a:hover, a:active
@@ -121,7 +124,7 @@ a:hover, a:active
 
 #atuiKernel_PriorityLabel *
 {
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-size : 1.2rem;
 }
 
@@ -198,6 +201,15 @@ a:hover, a:active
      
 }
 
+@media (prefers-color-scheme: dark) /* Dark theme */
+{
+     :root
+     {
+          --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(102,102,102);
+          --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(102,102,102,0.8);
+     }
+}
+
 /* Tools */
 
      /* Selector */
@@ -226,7 +238,7 @@ a:hover, a:active
      position : absolute;
      width : 280px;
      visibility: hidden;
-     background-color: rgba(255,255,255,0.9);
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      backdrop-filter: blur(10px);
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
@@ -253,7 +265,7 @@ a:hover, a:active
 
 .atuiKernel_ToolsSelector aside a div:hover
 {
-     background-color : var(--atuiDefaultColorTransparent);
+     background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
 }
 
 .atuiKernel_ToolsSelector aside a div
@@ -285,7 +297,7 @@ a:hover, a:active
 
 .atuiKernel_ToolsSelector aside hr
 {
-     background-color: var(--atuiDefaultColor);
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
      width : 80%;
      height : 2px;
      margin : 5px 10%;
@@ -296,9 +308,17 @@ a:hover, a:active
 
           /* Display mode */
 
+#atuiKernel_ToolsSettingsDisplaymode
+{
+     width : 50px;
+     height : 50px;
+}
+
 #atuiKernel_ToolsSettingsDisplaymode img
 {
-     display : none;
+     width : 35px !important;
+     height : 35px !important;
+     margin : 7.5px !important;
 }
 
      /* Contact */
@@ -419,7 +439,7 @@ a:hover, a:active
 .atuiKernel_ToolsCarousel div a
 {
      border : none;
-     background-color : var(--atuiDefaultColorTransparent);
+     background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
      font-size : 1.3rem;
      padding : 10px 20px;
      color : white;
@@ -487,7 +507,7 @@ a:hover, a:active
 
 .atuiKernel_NotificationElementFooterMain
 {
-     background-color: var(--atuiDefaultColor) !important;
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor) !important;
      font-weight: bold;
      font-family: "Red Hat Display";
 }
@@ -503,14 +523,14 @@ a:hover, a:active
 
 #atuiKernel_Header
 {
-     background-color : var(--atuiDefaultColor);
+     background-color : var(--atuiKernel_ToolsSettingsAccentcolor);
      min-height: 50px;
 }
 
 #atuiKernel_Header > aside
 {
-     background-color : rgba(255,255,255,0.8);
-     backdrop-filter: blur(5px);
+     background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     backdrop-filter: blur(10px);
      min-height : 50px;
      position: absolute;
      width : calc(100% - 20px);
@@ -613,7 +633,7 @@ a:hover, a:active
 
 .atuiKernel_NavigatorSectionWithoutimg a:hover, .atuiKernel_NavigatorSectionImgbig a:hover, .atuiKernel_NavigatorSectionImgsmall a:hover, .atuiKernel_NavigatorSectionWithout a:active, .atuiKernel_NavigatorSectionImgbig a:active, .atuiKernel_NavigatorSectionImgsmall a:active
 {
-     background-color: var(--atuiDefaultColor);
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
 .atuiKernel_NavigatorSectionWithoutimg a p, .atuiKernel_NavigatorSectionImgbig a p, .atuiKernel_NavigatorSectionImgsmall a p
@@ -719,7 +739,7 @@ a:hover, a:active
      right : 20px;
      width : calc(100vw - 100px);
      visibility: hidden;
-     background-color: rgba(255,255,255,0.9);
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      backdrop-filter: blur(10px);
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
@@ -766,7 +786,7 @@ section
 {
      font-weight: bold;
      font-size : 1.5rem;
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-family: "Red Hat Display";
      margin : 10px 0;
 }
@@ -779,7 +799,7 @@ section
 
 .atuiKernel_SectionText a
 {
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
 .atuiKernel_SectionText a:hover
@@ -812,7 +832,7 @@ section
 .atuiKernel_SectionDownload
 {
      border-radius: 10px;
-     border : 2px var(--atuiDefaultColor) solid;
+     border : 2px var(--atuiKernel_ToolsSettingsAccentcolor) solid;
      margin : 10px;
      padding: 10px;
      height : 50px;
@@ -840,7 +860,7 @@ section
 
 .atuiKernel_SectionDownload a
 {
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-size: 1.2rem;
      justify-content: flex-end;
      margin : 0 10px 0 20px;
@@ -897,7 +917,7 @@ section
 {
      margin : 0;
      margin-top: 10px;
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-weight: bold;
      font-size : 1.1rem;
      font-family : "Red Hat Display";
@@ -964,7 +984,7 @@ section
 {
      margin : 0;
      margin-top: 10px;
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-weight: bold;
      font-size : 1.1rem;
      font-family : "Red Hat Display";
@@ -1030,7 +1050,7 @@ section
 {
      margin : 0;
      margin-top: 10px;
-     color : var(--atuiDefaultColor);
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-weight: bold;
      font-size : 1.1rem;
      font-family : "Red Hat Display";
@@ -1136,7 +1156,7 @@ section
 body > footer
 {
      background-color : #c0c0c0;
-     border-top : 3px solid var(--atuiDefaultColor);
+     border-top : 3px solid var(--atuiKernel_ToolsSettingsAccentcolor);
      margin-top : 50px;
      padding: 0 5%;
      padding-bottom: 5px;
@@ -1157,7 +1177,7 @@ body > footer > *:nth-child(2)
 #atuiKernel_FooterBackup img
 {
      border-radius : 100%;
-     border : 3px solid var(--atuiDefaultColor);
+     border : 3px solid var(--atuiKernel_ToolsSettingsAccentcolor);
      background-color: white;
      width : 50px;
      height : 50px;

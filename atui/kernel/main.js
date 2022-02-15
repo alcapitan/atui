@@ -104,27 +104,29 @@ if (result != "Not IE")
 
 /* Display mode */
 
-var modeVisuel = document.getElementsByClassName('atuiKernel_ToolsSettingsDisplaymodeIcons');
-var atuiHeader = document.getElementById('atuiKernel_Header').childNodes[1];
-function modeSombre()
+var atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
+var atuiKernel_ToolsSettingsDisplaymodeRoot = document.documentElement;
+var atuiKernel_ToolsSettingsDisplaymodeStatus = true;
+atuiKernel_ToolsSettingsDisplaymodeElement.addEventListener("click",atuiKernel_ToolsSettingsDisplaymodeChange);
+function atuiKernel_ToolsSettingsDisplaymodeChange()
 {
-     console.log('Dark mode applied. ');
-     modeVisuel[0].style.display  = "none";
-     modeVisuel[1].style.display  = "block";
-     document.childNodes[1].childNodes[2].style.filter = "brightness(0.5)";
-     document.childNodes[1].childNodes[2].style.backgroundColor = "#404040";
-     atuiHeader.style.backgroundColor = "#5557";
+     if (atuiKernel_ToolsSettingsDisplaymodeStatus)
+     {
+          atuiKernel_ToolsSettingsDisplaymodeStatus = false;
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src","atui/kernel/medias/dark.png");
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt","Mode sombre activé");
+          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColor","rgb(102,102,102)");
+          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColorOpacity","rgb(102,102,102,0.8)");
+     }
+     else
+     {
+          atuiKernel_ToolsSettingsDisplaymodeStatus = true;
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src","atui/kernel/medias/light.png");
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt","Mode clair activé");
+          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColor","rgb(255,255,255)");
+          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColorOpacity","rgb(255,255,255,0.8)");
+     }
 }
-function modeClair()
-{
-     console.log('Light mode applied. ');
-     modeVisuel[0].style.display  = "block";
-     modeVisuel[1].style.display  = "none";
-     document.childNodes[1].childNodes[2].style.filter = "brightness(1)";
-     document.childNodes[1].childNodes[2].style.backgroundColor = "#FFFFFF";
-     atuiHeader.style.backgroundColor = "#FFF7";
-}
-modeVisuel[0].style.display  = 'block';
 
 
 /* Selector */

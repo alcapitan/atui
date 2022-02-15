@@ -1,3 +1,5 @@
 notification.mp3 > https://sonneriepro.com/sms/sonnerie-oppo-sms/
 shop.png > https://img.icons8.com/fluency-systems-regular/96/000000/shopping-cart.png
 checkmark.png > https://img.icons8.com/fluency-systems-regular/96/000000/checkmark--v1.png
+light.png > https://img.icons8.com/fluency-systems-regular/96/000000/sun--v1.png
+dark.png > https://img.icons8.com/fluency-systems-regular/96/000000/bright-moon.png
