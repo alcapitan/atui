@@ -106,8 +106,7 @@ if (result != "Not IE")
 
 var atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
 var atuiKernel_ToolsSettingsDisplaymodeRoot = document.documentElement;
-var atuiKernel_ToolsSettingsDisplaymodeStatus = true;
-atuiKernel_ToolsSettingsDisplaymodeElement.addEventListener("click",atuiKernel_ToolsSettingsDisplaymodeChange);
+var atuiKernel_ToolsSettingsDisplaymodeStatus = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 function atuiKernel_ToolsSettingsDisplaymodeChange()
 {
      if (atuiKernel_ToolsSettingsDisplaymodeStatus)
@@ -126,6 +125,12 @@ function atuiKernel_ToolsSettingsDisplaymodeChange()
           atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColor","rgb(255,255,255)");
           atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColorOpacity","rgb(255,255,255,0.8)");
      }
+}
+atuiKernel_ToolsSettingsDisplaymodeElement.addEventListener("click",atuiKernel_ToolsSettingsDisplaymodeChange);
+if (!atuiKernel_ToolsSettingsDisplaymodeStatus)
+{
+     atuiKernel_ToolsSettingsDisplaymodeStatus = true;
+     atuiKernel_ToolsSettingsDisplaymodeChange()
 }
 
 
