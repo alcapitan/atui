@@ -95,7 +95,6 @@ body
 body *
 {
      font-family: 'Montserrat',Arial;
-     max-width: 100%;
 }
 
 :root
@@ -159,23 +158,18 @@ a:hover, a:active
           flex : 1;
      }
 
-     .atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom
-     {
-          display: inline-flex;
-     }
-
      .atuiKernel_SectionImage img
      {
           margin : 0 10%;
           width: 80%;
      }
 
-     .atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop, .atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
+     .atuiKernel_SectionCardBasic,.atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop, .atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
      {
           justify-content: space-around;
      }
 
-     .atuiKernel_SectionCardFlat article
+     .atuiKernel_SectionCardBasic article, .atuiKernel_SectionCardFlat article
      {
           width : 25%;
      }
@@ -237,12 +231,12 @@ a:hover, a:active
           width: 100%;
      }
      
-     .atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop, .atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
+     .atuiKernel_SectionCardBasic,.atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop, .atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
      {
           flex-direction: column;
      }
 
-     .atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article, .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardMainColumn article
+     .atuiKernel_SectionCardBasic article,.atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article, .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardMainColumn article
      {
           margin : 5px 0;
      }
@@ -942,6 +936,66 @@ section
 }
 
      /* Card */
+
+          /* Basic */
+
+.atuiKernel_SectionCardBasic
+{
+     display: flex;
+     flex-wrap : wrap;
+     margin : 20px 0;
+}
+
+.atuiKernel_SectionCardBasic article
+{
+     display: flex;
+     flex-direction: column;
+     border : 1px rgb(179, 179, 179) solid;
+     border-radius: 10px;
+     overflow: hidden;
+     background-color: rgb(230, 230, 230);
+}
+
+/* .atuiKernel_SectionCardBasic article > div
+{
+     margin : 10px;
+     margin-top : 5px;
+} */
+
+.atuiKernel_SectionCardBasic article *
+{
+     overflow-wrap: break-word;
+}
+
+.atuiKernel_SectionCardBasic article h3
+{
+     font-family: "Red Hat Display";
+     font-size: 1.3rem;
+     margin : 0;
+     padding : 10px 20px;
+     border-bottom : 1px rgb(179, 179, 179) solid;
+     background-color: rgb(204, 204, 204);
+}
+
+.atuiKernel_SectionCardBasic article p
+{
+     margin : 10px 20px;
+     text-align: justify;
+}
+
+.atuiKernel_SectionCardBasic article div
+{
+     margin : 10px;
+     display : flex;
+     flex-wrap: wrap;
+}
+
+.atuiKernel_SectionCardBasic article a
+{
+     margin : 5px 10px;
+     font-size : 1.2rem;
+     font-family : "Red Hat Display";
+}
 
           /* Flat */
 
