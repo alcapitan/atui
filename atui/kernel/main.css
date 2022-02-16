@@ -175,12 +175,12 @@ a:hover, a:active
           justify-content: space-around;
      }
 
-     .atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article
+     .atuiKernel_SectionCardFlat article
      {
           width : 25%;
      }
 
-     .atuiKernel_SectionCardMainRow article
+     .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article
      {
           flex-direction: row;
           width : 45%;
@@ -982,7 +982,7 @@ section
 
 .atuiKernel_SectionCardFlat article > div p
 {
-     margin : 10px 20px;
+     margin : 10px;
      text-align: justify;
 }
 
@@ -1044,14 +1044,13 @@ section
 .atuiKernel_SectionCardOverlayBottom article div h3, .atuiKernel_SectionCardOverlayTop article div h3
 {
      font-family: "Red Hat Display";
-     margin : 0;
-     margin-bottom : 10px;
+     margin : 0 5px 10px 5px;
      font-size: 1.3rem;
 }
 
 .atuiKernel_SectionCardOverlayBottom article div p, .atuiKernel_SectionCardOverlayTop article div p
 {
-     margin : 10px;
+     margin : 10px 5px;
      text-align: justify;
 }
 
@@ -1074,13 +1073,13 @@ section
 .atuiKernel_SectionCardOverlayBottom article > div
 {
      bottom : 0;
-     background : linear-gradient(to top, rgb(51, 51, 51),transparent);
+     background : linear-gradient(to top, rgba(51,51,51,0.8) 50%,transparent 100%);
 }
 
 .atuiKernel_SectionCardOverlayTop article > div
 {
      top : 0;
-     background : linear-gradient(to bottom, rgb(51, 51, 51),transparent);
+     background : linear-gradient(to bottom, rgba(51,51,51,0.8) 50%,transparent 100%);
 }
 
           /* Main Row & Column */
@@ -1122,11 +1121,12 @@ section
 {
      font-family: "Red Hat Display";
      font-size : 1.3rem;
+     margin : 5px;
 }
 
 .atuiKernel_SectionCardMainRow article > div p, .atuiKernel_SectionCardMainColumn article > div p
 {
-     margin : 10px;
+     margin : 10px 5px;
      text-align: justify;
 }
 
@@ -1180,7 +1180,7 @@ section
 
 .atuiKernel_SectionCardMainColumn article > div > p
 {
-     margin : 10px 20px;
+     margin : 10px;
 }
 
 /* Footer */
