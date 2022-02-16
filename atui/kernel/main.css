@@ -530,33 +530,58 @@ a:hover, a:active
 .atuiKernel_NotificationElement
 {
      margin : 10px;
-     background-color: white;
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      width : 70vw;
      border-radius: 10px;
      box-shadow: var(--atuiKernel_Shadow);
      padding : 15px 30px;
 }
 
-.atuiKernel_NotificationElement h3
+.atuiKernel_NotificationElement div:first-child
 {
+     display : flex;
+     align-items: center;
+}
+
+.atuiKernel_NotificationElement div:first-child img
+{
+     width : 30px;
+     height : 30px;
+}
+
+.atuiKernel_NotificationElement div:first-child h3
+{
+     margin : 0 20px;
      font-family: "Red Hat Display";
-     margin : 0;
-     font-size : 1.375rem;
-     font-weight : bold;
+     font-weight: bold;
+     font-size : 1.3rem;
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     flex : 1;
 }
 
-.atuiKernel_NotificationElement p
+.atuiKernel_NotificationElement > p
 {
-     margin : 10px;
-     font-size : 1.125rem;
+     margin : 15px 0;
 }
 
-.atuiKernel_NotificationElementFooter
+.atuiKernel_NotificationElement div:last-child
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
 }
+
+.atuiKernel_NotificationElement div:last-child button
+{
+     margin : 5px 10px;
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     border-radius: 10px;
+     padding : 10px 20px;
+     font-family : "Red Hat Display";
+     font-size : 1.1rem;
+     border : none;
+}
+/*
 
 .atuiKernel_NotificationElementFooter *
 {
@@ -577,14 +602,7 @@ a:hover, a:active
      background-color: var(--atuiKernel_ToolsSettingsAccentcolor) !important;
      font-weight: bold;
      font-family: "Red Hat Display";
-}
-
-.atuiKernel_NotificationElementFermer
-{
-     float: right;
-     width: 30px;
-     height: 30px;
-}
+}*/
 
 /* Header */
 
