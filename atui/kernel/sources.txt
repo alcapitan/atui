@@ -3,3 +3,4 @@ shop.png > https://img.icons8.com/fluency-systems-regular/96/000000/shopping-car
 checkmark.png > https://img.icons8.com/fluency-systems-regular/96/000000/checkmark--v1.png
 light.png > https://img.icons8.com/fluency-systems-regular/96/000000/sun--v1.png
 dark.png > https://img.icons8.com/fluency-systems-regular/96/000000/bright-moon.png
+cookies.png > https://img.icons8.com/fluency/96/000000/cookies.png

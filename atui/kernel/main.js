@@ -6,62 +6,116 @@ Version : dev2
 
 /* Notifications */
 
-var centerNotification = document.getElementById("atuiKernel_Notification");
-
-     /* Messages */
-
-function notificationMessage(title,text)
+/*function atuiKernel_NotificationClose(element)
 {
-    // Créer boite notification
-    var elementNotification = document.createElement('aside');
-    elementNotification.classList.add("atuiKernel_NotificationElement");
-
-    // Titre
-    var elementNotificationTitle = document.createElement('h3');
-    elementNotificationTitle.textContent = title;
-
-    // Texte
-    var elementNotificationText = document.createElement('p');
-    elementNotificationText.textContent = text;
-
-    // Buttons
-    var elementNotificationButtonsContainer = document.createElement('div');
-    elementNotificationButtonsContainer.classList.add("atuiKernel_NotificationElementFooter");
-
-    var elementNotificationButtonAgree = document.createElement('button');
-    elementNotificationButtonAgree.textContent = "J'accepte";
-    elementNotificationButtonAgree.onclick = "a";
-    elementNotificationButtonAgree.classList.add("atuiKernel_NotificationElementFooterMain");
-
-    var elementNotificationButtonDisagreeOne = document.createElement('button');
-    elementNotificationButtonDisagreeOne.textContent = "Je refuse une fois";
-
-    var elementNotificationButtonDisagreeAlways = document.createElement('button');
-    elementNotificationButtonDisagreeAlways.textContent = "Je refuse pour toujours";
-
-    // Icone Fermer
-    var elementNotificationButtonFermer = document.createElement('img');
-    elementNotificationButtonFermer.src = 'medias/icons/fermer fenêtre.png';
-    elementNotificationButtonFermer.classList.add("atuiKernel_NotificationElementFermer");
-
-    // Son Notification
-    var atuiNotificationSound = new Audio('medias/musics/atuiNotification.mp3');
-
-    // Insertion de l'élément
-    elementNotification.appendChild(elementNotificationButtonFermer);
-    elementNotification.appendChild(elementNotificationTitle);
-    elementNotification.appendChild(elementNotificationText);
-    elementNotification.appendChild(elementNotificationButtonsContainer);
-    elementNotificationButtonsContainer.appendChild(elementNotificationButtonAgree);
-    elementNotificationButtonsContainer.appendChild(elementNotificationButtonDisagreeOne);
-    elementNotificationButtonsContainer.appendChild(elementNotificationButtonDisagreeAlways);
-    centerNotification.appendChild(elementNotification);
-    atuiNotificationSound.play();
+     element.remove();
 }
 
-/*notificationMessage('1e notif','Coucou..');
-notificationMessage('2e notif','.. Milan !');*/
+var atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
+// Types availables : normal, alert, caution, confirmation, information, insertion
+function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
+{
+     // Boite notification
+     var atuiKernel_NotificationElement = document.createElement('aside');
+     atuiKernel_NotificationElement.classList.add("atuiKernel_NotificationElement");
+     var atuiKernel_NotificationElementHeader = document.createElement('div');
+     var atuiKernel_NotificationElementFooter = document.createElement('div');
 
+     // Type
+     var atuiKernel_NotificationElementHeaderTypeImg = document.createElement('img');
+     if (type != "normal")
+     {
+          atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src","atui/kernel/medias/" + type + ".png");
+     }
+     else
+     {
+          atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
+     }
+
+     // Son
+     var atuiKernel_NotificationElementSound = new Audio("atui/kernel/medias/notification.mp3");
+     
+     // Titre
+     var atuiKernel_NotificationElementHeaderTitle = document.createElement('h3');
+     atuiKernel_NotificationElementHeaderTitle.textContent = title;
+     
+     // Bouton fermer
+     var atuiKernel_NotificationElementHeaderClose = document.createElement('img');
+     atuiKernel_NotificationElementHeaderClose.setAttribute("src","atui/kernel/medias/close.png");
+     atuiKernel_NotificationElementHeaderClose.addEventListener("click",function(){atuiKernel_NotificationClose(atuiKernel_NotificationElement);return(console.log("close"))});
+
+     // Texte
+     var atuiKernel_NotificationElementText = document.createElement('p');
+     atuiKernel_NotificationElementText.textContent = text;
+
+     // Bouttons d'actions
+     if (buttons == 'default')
+     {
+          if (type == 'normal')
+          {
+               buttons = [];
+          }
+          else if (type == 'alert')
+          {
+               buttons = ['Ok','Annuler'];
+          }
+          else if (type == 'caution')
+          {
+               buttons = ['Ok','Annuler'];
+          }
+          else if (type == 'confirmation')
+          {
+               buttons = ['Oui','Non'];
+          }
+          else if (type == 'information')
+          {
+               buttons = ['Ok'];
+          }
+          else if (type == 'insertion')
+          {
+               buttons = 'insertion';
+          }
+     }
+     if (buttons != 'insertion')
+     {
+          for (let counter = 0;counter < buttons.length;counter++)
+          {
+               var atuiKernel_NotificationElementFooterButton = document.createElement('button');
+               atuiKernel_NotificationElementFooterButton.textContent = buttons[counter];
+               atuiKernel_NotificationElementFooterButton.addEventListener("click",function(){atuiKernel_NotificationClose(atuiKernel_NotificationElement);return(actions[counter]);})
+               atuiKernel_NotificationElementFooter.appendChild(atuiKernel_NotificationElementFooterButton);
+          }
+     }
+     else
+     {
+          var atuiKernel_NotificationElementFooterInput = document.createElement('input');
+          atuiKernel_NotificationElementFooterInput.setAttribute("type","text");
+     }
+
+     // Insertion des éléments dans HTML
+     atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTypeImg);
+     atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTitle);
+     atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderClose);
+     atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementHeader);
+     atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementText);
+     atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementFooter);
+     atuiKernel_Notification.appendChild(atuiKernel_NotificationElement);
+
+     // Son joué
+     atuiKernel_NotificationElementSound.play();
+
+     // Attendre puis fermer la notification
+     if (type == "normal")
+     {
+          setTimeout(function(){atuiKernel_NotificationClose(atuiKernel_NotificationElement)},5000);
+     }
+}
+
+function atuiKernel_NotificationCookies()
+{
+     atuiKernel_NotificationDisplay("cookies",["J'accepte","Je refuse cette fois-ci","Je refuse définitivement","En savoir plus"],["console.log('accept')","console.log('not accept')","console.log('always notaccept')","console.log('doc')"],"Autoriser-vous les cookies ?","Ce site utilise des traceurs collectant des informations sur vous. Selon le RGPD, vous pouvez exprimer votre consentement à l'utilisation des cookies.");
+}
+atuiKernel_NotificationCookies();*/
 
 /* Browser compatibility */
 
@@ -82,7 +136,7 @@ function IEdetection()
      {
           // IE 11, renvoie le nombre de version
           var rv = ua.indexOf('rv:');
-              return ('IE ' + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10));
+          return ('IE ' + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10));
      }
      var edge = ua.indexOf('Edge/');
      if (edge > 0) {
