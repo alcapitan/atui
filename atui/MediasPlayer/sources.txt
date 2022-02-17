@@ -1,0 +1,13 @@
+info.png > https://img.icons8.com/fluency-systems-regular/48/000000/info.png
+window.png > https://img.icons8.com/fluency-systems-regular/48/000000/application-window.png
+popup.png > https://img.icons8.com/fluency-systems-regular/48/000000/open-in-popup.png
+loop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-left.png
+noloop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-right-1-1-1.png
+playlist.png > https://img.icons8.com/fluency-systems-regular/48/000000/playlist.png
+previous.png > https://img.icons8.com/fluency-systems-regular/48/000000/rewind.png
+next.png > https://img.icons8.com/fluency-systems-regular/48/000000/fast-forward.png
+play.png > https://img.icons8.com/fluency-systems-regular/48/000000/play--v1.png
+pause.png > https://img.icons8.com/fluency-systems-regular/48/000000/pause--v1.png
+like.png > https://img.icons8.com/fluency-systems-regular/48/000000/like--v1.png
+liked.png > https://img.icons8.com/fluency-systems-filled/48/000000/like.png
+cover.png > https://img.icons8.com/fluency/144/000000/apple-music.png

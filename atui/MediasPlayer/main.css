@@ -47,13 +47,11 @@ Version : dev2
 
 #atuiMediasPlayer_AudioplayerAdditionals img
 {
+	width : 25px;
 	height : 25px;
 	margin : 5px;
-}
-
-#atuiMediasPlayer_AudioplayerMusicinformationsAdvanced *
-{
-	display : none;
+	padding : 5px;
+	border-radius: 10px;
 }
 
 #atuiMediasPlayer_Audioplayer > img
@@ -119,32 +117,27 @@ Version : dev2
 {
 	width : 30px;
 	height : 30px;
-	padding : 5px;
+	padding : 5px 10px;
 	border-radius: 10px;
 }
 
 #atuiMediasPlayer_AudioplayerButtonsBasic, #atuiMediasPlayer_AudioplayerButtonsAdvanced
 {
 	margin : 0px 20px;
+	display : flex;
+	align-items: flex-start;
 }
 
-#atuiMediasPlayer_AudioplayerButtonsBasic img:hover, #atuiMediasPlayer_AudioplayerButtonsAdvanced img:hover
+#atuiMediasPlayer_AudioplayerAdditionals img:hover, #atuiMediasPlayer_AudioplayerButtonsBasic img:hover, #atuiMediasPlayer_AudioplayerButtonsAdvanced img:hover
 {
 	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
-}
-
-#progressBarControl /* Utilité ??? */
-{
-	background-color : #00000080;
-	height : 10px;
-	margin-left : 160px;
 }
 
 	/* Progress bar */
 
 #atuiMediasPlayer_AudioplayerProgressbar
 {
-	width : calc(100% + 20px);
+	width : 100%;
 	height : 10px;
 	border-radius: 0px 0px 10px 10px;
 	transform: translateX(-10px);

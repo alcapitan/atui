@@ -1,0 +1,3 @@
+account.png > https://img.icons8.com/fluency-systems-regular/48/000000/user.png
+disconnection.png > https://img.icons8.com/fluency-systems-regular/48/000000/remove-user-male.png
+connection.png > https://img.icons8.com/fluency-systems-regular/48/000000/add-user-male.png
