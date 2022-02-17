@@ -4,3 +4,7 @@ checkmark.png > https://img.icons8.com/fluency-systems-regular/96/000000/checkma
 light.png > https://img.icons8.com/fluency-systems-regular/96/000000/sun--v1.png
 dark.png > https://img.icons8.com/fluency-systems-regular/96/000000/bright-moon.png
 cookies.png > https://img.icons8.com/fluency/96/000000/cookies.png
+close.png > https://img.icons8.com/fluency-systems-regular/48/000000/delete-sign--v1.png
+menu.png > https://img.icons8.com/fluency-systems-regular/48/000000/menu--v1.png
+section.png > https://img.icons8.com/fluency-systems-regular/96/000000/next-webpage.png
+file.png > https://img.icons8.com/fluency-systems-regular/48/000000/file.png

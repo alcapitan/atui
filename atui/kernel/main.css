@@ -169,15 +169,11 @@ a:hover, a:active
           justify-content: space-around;
      }
 
-     .atuiKernel_SectionCardBasic article, .atuiKernel_SectionCardFlat article
-     {
-          width : 25%;
-     }
-
-     .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article
+     .atuiKernel_SectionCardBasic article, .atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article, .atuiKernel_SectionCardMainColumn article
      {
           flex-direction: row;
           width : 45%;
+          height: fit-content;
      }
 
      .atuiKernel_SectionCardMainRow article img
@@ -198,12 +194,6 @@ a:hover, a:active
      .atuiKernel_SectionCardMainRow article > div > p
      {
           margin : 10px;
-     }
-
-     .atuiKernel_SectionCardMainColumn article
-     {
-          height: fit-content;
-          width : 45%;
      }
 }
 
@@ -234,6 +224,11 @@ a:hover, a:active
      .atuiKernel_SectionCardBasic,.atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop, .atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
      {
           flex-direction: column;
+     }
+     
+     .atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article
+     {
+          width : 100%;
      }
 
      .atuiKernel_SectionCardBasic article,.atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article, .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardMainColumn article
