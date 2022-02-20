@@ -264,6 +264,73 @@
                          </div>
                     </article>
                </div>
+               <div class="atuiMediasPlayer_Video">
+                    <video>
+                         <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
+                         Votre navigateur web ne peut pas lire cette vidéo. Veuillez changer de navigateur et revenir sur ce site web.
+                    </video>
+                    <aside>
+                         <div id="atuiMediasPlayer_VideoplayerProgressbar">
+                              <div></div>
+                         </div>
+                         <div>
+                              <div id="atuiMediasPlayer_VideoplayerTimer">
+                                   <p>00:00</p>
+                                   <p> - </p>
+                                   <p>00:00</p>
+                              </div>
+                              <div id="atuiMediasPlayer_VideoplayerButtonsBasic">
+                                   <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédante">
+                                   <img src="atui/MediasPlayer/medias/play.png" alt="Play music">
+                                   <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante">
+                              </div>
+                              <div id="atuiMediasPlayer_VideoplayerButtonsAdvanced">
+                                   <nav class="atuiKernel_ToolsSelector" id="atuiMediasPlayer_VideoplayerPlaylists">
+                                        <img src="atui/MediasPlayer/medias/playlist.png" alt="Playlists">
+                                        <aside>
+                                             <a href="#">
+                                                  <div>
+                                                       <p>Playlist</p>
+                                                  </div>
+                                             </a>
+                                             <a href="#">
+                                                  <div>
+                                                       <p>Playlist</p>
+                                                  </div>
+                                             </a>
+                                             <a href="#">
+                                                  <div>
+                                                       <p>Playlist</p>
+                                                  </div>
+                                             </a>
+                                        </aside>
+                                   </nav>
+                                   <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique">
+                                   <img src="atui/MediasPlayer/medias/sound.png" alt="Son activé">
+                              </div>
+                              <div id="atuiMediasPlayer_VideoplayerAdditionals">
+                                   <nav class="atuiKernel_ToolsSelector" id="atuiMediasPlayer_VideoplayerInfos">
+                                        <img src="atui/MediasPlayer/medias/info.png" alt="Infos album">
+                                        <aside id="atuiMediasPlayer_VideoplayerMusicinformationsAdvanced">
+                                             <a href="#">
+                                                  <div>
+                                                       <p>License</p>
+                                                  </div>
+                                             </a>
+                                             <a href="#">
+                                                  <div>
+                                                       <p>Lien YouTube</p>
+                                                  </div>
+                                             </a>
+                                        </aside>
+                                   </nav>
+                                   <div>
+                                        <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher Audio Player dans Pop-up">
+                                   </div>
+                              </div>
+                         </div>
+                    </aside>
+               </div>
                <div class="atuiKernel_SectionCardFlat">
                     <article>
                          <img src="patch/illustrations/randomimgver (3).jpg" alt="illustration présentation">
@@ -312,7 +379,7 @@
                          </div>
                     </article>
                </div>
-               <div class="atuiKernel_SectionCardOverlayTop">
+               <!--<div class="atuiKernel_SectionCardOverlayTop">
                     <article>
                          <img src="patch/illustrations/randomimghor (2).jpg">
                          <div>
@@ -335,7 +402,7 @@
                               </div>
                          </div>
                     </article>
-               </div>
+               </div>-->
                <nav class="atuiKernel_NavigatorSectionWithoutimg">
                     <a href="#">
                          <p>Catégorie</p>
@@ -377,7 +444,7 @@
                          </div>
                     </article>
                </div>
-               <div class="atuiKernel_SectionCardMainRow">
+               <!--<div class="atuiKernel_SectionCardMainRow">
                     <article>
                          <div>
                               <h3>Titre</h3>
@@ -400,7 +467,7 @@
                          </div>
                          <img src="patch/illustrations/randomimghor (2).jpg">
                     </article>
-               </div>
+               </div>-->
                <div class="atuiKernel_SectionCardMainColumn">
                     <article>
                          <img src="patch/illustrations/randomimghor (1).jpg">
@@ -425,7 +492,7 @@
                          </div>
                     </article>
                </div>
-               <div class="atuiKernel_SectionCardMainColumn">
+               <!--<div class="atuiKernel_SectionCardMainColumn">
                     <article>
                          <div>
                               <h3>Titre</h3>
@@ -448,7 +515,7 @@
                          </div>
                          <img src="patch/illustrations/randomimghor (2).jpg">
                     </article>
-               </div>
+               </div>-->
                <nav class="atuiKernel_NavigatorSectionImgsmall">
                     <a href="#">
                          <img src="atui/kernel/medias/section.png" alt="icone categorie">
@@ -481,25 +548,28 @@
                </div>
                <div class="atuiKernel_SectionDownload">
                     <img src="atui/kernel/medias/file.png" alt="Icone fichier">
-                    <p>test.txt</p>
-                    <a download="" href="">Télécharger</a>
+                    <p>File name</p>
+                    <div>
+                         <a href=""><img src="atui/kernel/medias/open.png" alt="Ouvrir le fichier"></a>
+                         <a href="" download=""><img src="atui/kernel/medias/download.png" alt="Télécharger le fichier"></a>
+                    </div>
                </div>
                <div class="atuiKernel_SectionDownload">
                     <img src="atui/kernel/medias/file.png" alt="Icone fichier">
-                    <p>test.jpg</p>
-                    <a download="" href="">Télécharger</a>
+                    <p>File name</p>
+                    <div>
+                         <a href=""><img src="atui/kernel/medias/open.png" alt="Ouvrir le fichier"></a>
+                         <a href="" download=""><img src="atui/kernel/medias/download.png" alt="Télécharger le fichier"></a>
+                    </div>
                </div>
                <div class="atuiKernel_SectionDownload">
                     <img src="atui/kernel/medias/file.png" alt="Icone fichier">
-                    <p>test.mp3</p>
-                    <a download="" href="">Télécharger</a>
+                    <p>File name</p>
+                    <div>
+                         <a href=""><img src="atui/kernel/medias/open.png" alt="Ouvrir le fichier"></a>
+                         <a href="" download=""><img src="atui/kernel/medias/download.png" alt="Télécharger le fichier"></a>
+                    </div>
                </div>
-               <!--<div class="atuiMediasPlayer_Video">
-                    <video controls muted>
-                         <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
-                         Votre navigateur web ne peut pas lire cette vidéo. Veuillez changer de navigateur et revenir sur ce site web.
-                    </video>
-               </div>-->
           </section>
           <footer>
                <a href="#atuiKernel_Header" id="atuiKernel_FooterBackup">
@@ -557,7 +627,7 @@
                     <div>
                          <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher Audio Player dans Pop-up">
                     </div>
-                    <div onclick="atuiMediasPlayer_AudioplayerClose()">
+                    <div id="atuiMediasPlayer_AudioplayerClose">
 				     <img src="atui/kernel/medias/close.png" alt="Fermer Audio Player">
                     </div>
                </div>
@@ -601,7 +671,7 @@
 				     <img src="atui/MediasPlayer/medias/noloop.png" alt="Boucle musique désactivé">
                     </div>
 			</div>
-               <div id="atuiMediasPlayer_AudioplayerProgressbar" onclick="atuiMediasPlayer_AudioplayerControlsProgressChange(this, event)">
+               <div id="atuiMediasPlayer_AudioplayerProgressbar">
                     <div></div>
                </div>
 		</aside>

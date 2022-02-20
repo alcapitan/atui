@@ -194,8 +194,8 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
 {
      cible = element.childNodes[3];
      element = element.childNodes[1];
-     offsetTop = element.offsetTop + 20;
-     offsetLeft = element.offsetLeft;
+     offsetTop = element.getBoundingClientRect().y + 20;
+     offsetLeft = element.getBoundingClientRect().offsetLeft;
      if (wish == false)
      {
           cible.style.visibility = "hidden";
@@ -206,6 +206,7 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
      {
           element.style.fontWeight = "bold";
           element.style.textDecoration = "underline";
+          /* Normal que ça marche pas, j'ai voulu mettre en commentaire après
           if (offsetLeft + cible.offsetWidth > document.body.clientWidth)
           {
                offsetLeft = document.body.clientWidth - cible.offsetWidth - 20;
@@ -213,7 +214,7 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
           if (offsetTop + cible.offsetHeight > window.innerHeight)
           {
                offsetTop = window.innerHeight - cible.offsetHeight - 20;
-          }
+          }*/
           offsetTop = offsetTop + "px";
           offsetLeft = offsetLeft + "px";
           cible.style.top = offsetTop;

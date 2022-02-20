@@ -157,27 +157,93 @@ Version : dev2
 
 .atuiMediasPlayer_Video
 {
-	margin : 10px;
+	margin : 20px 0;
 }
 
-.atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
+.atuiMediasPlayer_Video video
 {
-     border-radius: 10px;
+     border-radius: 10px 10px 0 0;
+	width : 100%;
+}
+
+.atuiMediasPlayer_Video aside
+{
+	margin-top : -4px;
+	border-radius : 0 0 10px 10px;
+	display : flex;
+	flex-direction: column;
+	background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+	box-shadow: var(--atuiKernel_Shadow);
+}
+
+#atuiMediasPlayer_VideoplayerProgressbar
+{
+	width : 100%;
+	height : 10px;
+	overflow: hidden;
+}
+
+#atuiMediasPlayer_VideoplayerProgressbar div
+{
+	width : 100%;
+	height : 10px;
+	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+.atuiMediasPlayer_Video aside div:nth-child(2)
+{
+	padding : 5px;
+	flex-wrap: wrap;
+}
+
+.atuiMediasPlayer_Video aside div:nth-child(2)
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.atuiMediasPlayer_Video aside div:nth-child(2) img
+{
+	width : 30px;
+	height : 30px;
+}
+
+.atuiMediasPlayer_Video aside div:nth-child(2) > div
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.atuiMediasPlayer_Video aside div:nth-child(2) div p, .atuiMediasPlayer_Video aside div:nth-child(2) div img
+{
+	margin : 5px;
 }
 
 @media (min-width : 768px) /* Computers */
 {
-	.atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
+	.atuiMediasPlayer_Video aside div:nth-child(2) > div
 	{
-		margin : 20px 10%;
-		width : 80%;
+		margin : 10px 15px;
+	}
+
+	#atuiMediasPlayer_VideoplayerButtonsBasic
+	{
+		flex : 1;
 	}
 }
 
 @media (max-width : 767px) /* Smartphones */
 {
-	.atuiMediasPlayer_Video video, .atuiMediasPlayer_Video iframe
+	.atuiMediasPlayer_Video aside div:nth-child(2)
 	{
-		margin : 20px 0;
+		justify-content: space-between;
+	}
+
+	#atuiMediasPlayer_VideoplayerTimer
+	{
+		margin : 0 10px;
 	}
 }
+
