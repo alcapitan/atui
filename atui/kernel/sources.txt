@@ -8,3 +8,6 @@ close.png > https://img.icons8.com/fluency-systems-regular/48/000000/delete-sign
 menu.png > https://img.icons8.com/fluency-systems-regular/48/000000/menu--v1.png
 section.png > https://img.icons8.com/fluency-systems-regular/96/000000/next-webpage.png
 file.png > https://img.icons8.com/fluency-systems-regular/48/000000/file.png
+download.png > https://img.icons8.com/fluency-systems-regular/48/000000/downloading-updates.png
+open.png > https://img.icons8.com/fluency-systems-regular/48/000000/external-link.png
+youtube.png > https://img.icons8.com/fluency-systems-regular/48/000000/youtube-play.png

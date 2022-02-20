@@ -103,7 +103,7 @@ body *
      --atuiKernel_ToolsSettingsAccentcolorOpacity : rgb(230, 51, 0, 0.8);
      --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
      --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
-     --atuiKernel_Shadow : rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
+     --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
      font-size : 16px;
 }
 
@@ -921,14 +921,14 @@ section
      background-color: rgb(230, 230, 230);
 }
 
-.atuiKernel_SectionDownload img
+.atuiKernel_SectionDownload > img
 {
+     width : 50px;
      height : 50px;
-     margin-right : 10px;
-     flex-grow: 0;
+     margin-right : 20px;
 }
 
-.atuiKernel_SectionDownload p
+.atuiKernel_SectionDownload > p
 {
      font-weight : bold;
      font-size: 1.2rem;
@@ -936,16 +936,23 @@ section
      white-space: nowrap;
      text-overflow: ellipsis;
      margin : 0;
-     flex-grow: 1;
+     flex : 1;
 }
 
-.atuiKernel_SectionDownload a
+.atuiKernel_SectionDownload div
 {
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
-     font-size: 1.2rem;
      justify-content: flex-end;
-     margin : 0 10px 0 20px;
-     flex-grow: 0;
+     flex : 0;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.atuiKernel_SectionDownload div img
+{
+     width : 30px;
+     height : 30px;
+     margin : 10px;
 }
 
      /* Card */
