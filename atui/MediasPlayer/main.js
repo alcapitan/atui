@@ -138,7 +138,7 @@ function atuiMediasPlayer_AudioplayerControlsProgressChange(control) // Fonction
 	var atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	var diff = atuiMouseX - atuiMediasPlayer_AudioplayerControlsProgressX; 
 	var wrapperWidth = atuiMediasPlayer_AudioplayerControlsProgress.offsetWidth;
-	var percent = Math.round(((diff / wrapperWidth) * 100) + 51);    
+	var percent = Math.round(((diff / wrapperWidth) * 100) + 50); 
 	var duration = atuiMediasPlayer_AudioplayerMusic.duration;
 	atuiMediasPlayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
@@ -243,7 +243,7 @@ function atuiMediasPlayer_VideoplayerControlsProgressChange(control) // Fonction
 	var atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	var diff = atuiMouseX - atuiMediasPlayer_VideoplayerControlsProgressX; 
 	var wrapperWidth = atuiMediasPlayer_VideoplayerControlsProgress.offsetWidth;
-	var percent = Math.round((diff / wrapperWidth) * 100);    
+	var percent = Math.round(((diff / wrapperWidth) * 100) + 50);    
 	var duration = atuiMediasPlayer_VideoplayerVideo.duration;
 	atuiMediasPlayer_VideoplayerVideo.currentTime = (duration * percent) / 100;
 }
@@ -279,7 +279,7 @@ function atuiMediasPlayer_VideoplayerVideoLike()
 
 	/* Sound */
 
-var atuiMediasPlayer_VideoplayerVideoSoundStatus = false;
+var atuiMediasPlayer_VideoplayerVideoSoundStatus = true;
 var atuiMediasPlayer_VideoplayerVideoSoundIcon = document.getElementById("atuiMediasPlayer_VideoplayerButtonsAdvanced").childNodes[5];
 atuiMediasPlayer_VideoplayerVideoSoundIcon.addEventListener("click",atuiMediasPlayer_VideoplayerVideoSound);
 function atuiMediasPlayer_VideoplayerVideoSound()

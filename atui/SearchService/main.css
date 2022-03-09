@@ -18,7 +18,7 @@ Version : dev2
      #atuiSearchServices_Header > div
      {
           background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
-          backdrop-filter: blur(10px);
+          backdrop-filter: var(--atuiKernel_Blur);
      }
 
      #atuiSearchServices_Header > div input

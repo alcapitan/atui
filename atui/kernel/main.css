@@ -104,6 +104,7 @@ body *
      --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
      --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
      --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     --atuiKernel_Blur : blur(5px);
      font-size : 16px;
 }
 
@@ -301,7 +302,7 @@ a:hover, a:active
      width : 280px;
      visibility: hidden;
      background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
-     backdrop-filter: blur(10px);
+     backdrop-filter: var(--atuiKernel_Blur);
      border-radius: 10px;
      box-shadow: var(--atuiKernel_Shadow);
      top : 0;
@@ -576,7 +577,7 @@ a:hover, a:active
      font-size : 1.1rem;
      border : none;
 }
-/*
+/* Je sais pas, on supprime, revoir de faire des notifications...
 
 .atuiKernel_NotificationElementFooter *
 {
@@ -610,7 +611,7 @@ a:hover, a:active
 #atuiKernel_Header > aside
 {
      background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
-     backdrop-filter: blur(10px);
+     backdrop-filter: var(--atuiKernel_Blur);
      min-height : 50px;
      position: absolute;
      width : calc(100% - 20px);
@@ -820,7 +821,7 @@ a:hover, a:active
      width : calc(100vw - 100px);
      visibility: hidden;
      background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
-     backdrop-filter: blur(10px);
+     backdrop-filter: var(--atuiKernel_Blur);
      border-radius: 10px;
      box-shadow: var(--atuiKernel_Shadow);
      justify-content: space-around;

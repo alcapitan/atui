@@ -26,11 +26,11 @@ Version : dev2
 	display: none;
 	position : fixed;
 	background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
-	backdrop-filter : blur(10px);
+	backdrop-filter : var(--atuiKernel_Blur);
 	border-radius : 10px;
 	width : 90%;
 	padding : 10px;
-	bottom : 10px;
+	bottom : 15px;
 	height : 150px;
 	margin-left : 50%;
 	transform: translateX(-50%);
@@ -158,6 +158,9 @@ Version : dev2
 .atuiMediasPlayer_Video
 {
 	margin : 20px 0;
+	max-height: 100vh;
+	margin-left: 50%;
+	transform: translateX(-50%);
 }
 
 .atuiMediasPlayer_Video video
@@ -166,7 +169,7 @@ Version : dev2
 	width : 100%;
 }
 
-.atuiMediasPlayer_Video aside
+.atuiMediasPlayer_Video > aside
 {
 	margin-top : -4px;
 	border-radius : 0 0 10px 10px;
@@ -190,40 +193,40 @@ Version : dev2
 	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
-.atuiMediasPlayer_Video aside div:nth-child(2)
+.atuiMediasPlayer_Video > aside div:nth-child(2)
 {
 	padding : 5px;
 	flex-wrap: wrap;
 }
 
-.atuiMediasPlayer_Video aside div:nth-child(2)
+.atuiMediasPlayer_Video > aside div:nth-child(2)
 {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-.atuiMediasPlayer_Video aside div:nth-child(2) img
+.atuiMediasPlayer_Video > aside div:nth-child(2) img
 {
 	width : 30px;
 	height : 30px;
 }
 
-.atuiMediasPlayer_Video aside div:nth-child(2) > div
+.atuiMediasPlayer_Video > aside div:nth-child(2) > div
 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
 
-.atuiMediasPlayer_Video aside div:nth-child(2) div p, .atuiMediasPlayer_Video aside div:nth-child(2) div img
+.atuiMediasPlayer_Video > aside div:nth-child(2) div p, .atuiMediasPlayer_Video > aside div:nth-child(2) div img
 {
 	margin : 5px;
 }
 
 @media (min-width : 768px) /* Computers */
 {
-	.atuiMediasPlayer_Video aside div:nth-child(2) > div
+	.atuiMediasPlayer_Video > aside div:nth-child(2) > div
 	{
 		margin : 10px 15px;
 	}
@@ -236,7 +239,7 @@ Version : dev2
 
 @media (max-width : 767px) /* Smartphones */
 {
-	.atuiMediasPlayer_Video aside div:nth-child(2)
+	.atuiMediasPlayer_Video > aside div:nth-child(2)
 	{
 		justify-content: space-between;
 	}
