@@ -6,7 +6,7 @@ Version : dev2
 
 /* Notifications */
 
-/*function atuiKernel_NotificationClose(element)
+function atuiKernel_NotificationClose(element)
 {
      element.remove();
 }
@@ -115,46 +115,11 @@ function atuiKernel_NotificationCookies()
 {
      atuiKernel_NotificationDisplay("cookies",["J'accepte","Je refuse cette fois-ci","Je refuse définitivement","En savoir plus"],["console.log('accept')","console.log('not accept')","console.log('always notaccept')","console.log('doc')"],"Autoriser-vous les cookies ?","Ce site utilise des traceurs collectant des informations sur vous. Selon le RGPD, vous pouvez exprimer votre consentement à l'utilisation des cookies.");
 }
-atuiKernel_NotificationCookies();*/
+/*atuiKernel_NotificationCookies();*/
 
 /* Browser compatibility */
 
-/*
-atuiBanIE = document.getElementById('atuiKernel_PriorityBrowserCompatibility');
-//renvoie version de IE ou false, si le navigateur n'est pas IE
-function IEdetection()
-{
-     var ua = window.navigator.userAgent;
-     var msie = ua.indexOf('MSIE ');
-     if (msie > 0)
-     {
-          // IE 10 ou plus ancien, renvoie le nombre de version
-          return ('IE ' + parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10));
-     }
-     var trident = ua.indexOf('Trident/');
-     if (trident > 0)
-     {
-          // IE 11, renvoie le nombre de version
-          var rv = ua.indexOf('rv:');
-          return ('IE ' + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10));
-     }
-     var edge = ua.indexOf('Edge/');
-     if (edge > 0) {
-          //Edge (IE 12+), renvoie le nombre de version
-          return ('IE ' + parseInt(ua.substring(
-          edge + 5, ua.indexOf('.', edge)), 10));
-     }
-     // L'utilisateur utilise un autre navigateur
-     return ('Not IE');
-}
-var result = IEdetection();
-console.log(result);
-if (result != "Not IE")
-{
-     atuiBanIE.style.display = "block";
-}
-*/
-
+/* Un nouveau script bientôt */
 
 /* Display mode */
 
@@ -192,10 +157,10 @@ if (!atuiKernel_ToolsSettingsDisplaymodeStatus)
 
 function atuiKernel_ToolsSelectorDisplay(element,wish)
 {
-     cible = element.childNodes[3];
-     element = element.childNodes[1];
-     offsetTop = element.offsetTop + 20;
-     offsetLeft = element.offsetLeft;
+     cible = element.childNodes[3]; /* Selecteur */
+     element = element.childNodes[1]; /* Récepteur */
+     elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
+     elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
      if (wish == false)
      {
           cible.style.visibility = "hidden";
@@ -206,26 +171,39 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
      {
           element.style.fontWeight = "bold";
           element.style.textDecoration = "underline";
-          if (offsetLeft + cible.offsetWidth > document.body.clientWidth)
+
+          if (elementPositionX + cible.clientWidth > document.documentElement.clientWidth)  // Overflow droite
           {
-               offsetLeft = document.body.clientWidth - cible.offsetWidth - 20;
+               elementPositionX = elementPositionX - cible.clientWidth;
           }
-          if (offsetTop + cible.offsetHeight > window.innerHeight)
+          elementPositionX = elementPositionX + "px";
+          cible.style.left = elementPositionX;
+
+          console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
+          console.log("trop bas : ",(elementPositionY + cible.clientHeight > window.innerHeight));
+          if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
           {
-               offsetTop = window.innerHeight - cible.offsetHeight - 20;
+               elementPositionY = elementPositionY - cible.clientHeight;
+               console.log(elementPositionY);
           }
-          offsetTop = offsetTop + "px";
-          offsetLeft = offsetLeft + "px";
-          cible.style.top = offsetTop;
-          cible.style.left = offsetLeft;
+          console.log("");
+          elementPositionY = elementPositionY + "px";
+          cible.style.top = elementPositionY;
+
           cible.style.visibility = "visible";
+
+          /*console.log("pos left recep:",elementPositionX,"  width elem:",cible.clientWidth,"  width client:",document.documentElement.clientWidth);
+          console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
+          console.log("trop droite : ",(elementPositionX + cible.clientWidth > document.documentElement.clientWidth));
+          console.log("trop bas : ",(elementPositionY + cible.clientHeight > document.documentElement.clientHeight));
+          console.log("");*/
      }
 }
 
 function atuiKernel_ToolsSelector(cible)
 {
-     document.getElementById(cible).addEventListener("mouseover",function(){atuiKernel_ToolsSelectorDisplay(this,true);});
-     document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_ToolsSelectorDisplay(this,false);});     
+     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsSelectorDisplay(this,true);});
+     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsSelectorDisplay(this,false);});     
 }
 
 atuiKernel_ToolsSelector("atuiKernel_NavigatorImg");
