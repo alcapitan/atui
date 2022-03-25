@@ -155,12 +155,27 @@ Version : dev2
 
 /* Video */
 
+@media (min-width : 768px) /* Computers */
+{
+	.atuiMediasPlayer_Video
+	{
+		max-height: 100vh;
+		margin-left: 50% !important;
+		transform: translateX(-50%);
+	}
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+	.atuiMediasPlayer_Video
+	{
+		width: 100%;
+	}
+}
+
 .atuiMediasPlayer_Video
 {
 	margin : 20px 0;
-	max-height: 100vh;
-	margin-left: 50%;
-	transform: translateX(-50%);
 }
 
 .atuiMediasPlayer_Video video
@@ -188,7 +203,7 @@ Version : dev2
 
 #atuiMediasPlayer_VideoplayerProgressbar div
 {
-	width : 100%;
+	width : 0;
 	height : 10px;
 	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }
