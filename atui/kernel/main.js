@@ -4,6 +4,12 @@ Nom du module : Kernel ATUI
 Version : dev2
 */
 
+/* Height carousel */
+
+var atuiKernel_HeaderAside = document.getElementById("atuiKernel_Header").childNodes[1];
+var atuiKernel_Carousel = document.getElementById("atuiKernel_Header").childNodes[3];
+atuiKernel_Carousel.style.height = atuiKernel_HeaderAside.clientHeight * 4 + "px";
+
 /* Notifications */
 
 function atuiKernel_NotificationClose(element)
@@ -159,6 +165,7 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
 {
      cible = element.childNodes[3]; /* Selecteur */
      element = element.childNodes[1]; /* Récepteur */
+     console.log(element.getBoundingClientRect());
      elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
      elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
      if (wish == false)
@@ -176,27 +183,30 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
           {
                elementPositionX = elementPositionX - cible.clientWidth;
           }
+          console.log("pos left recep:",elementPositionX,"  width elem:",cible.clientWidth,"  width client:",document.documentElement.clientWidth);
+          console.log("trop droite : ",(elementPositionX + cible.clientWidth > document.documentElement.clientWidth));
+
           elementPositionX = elementPositionX + "px";
           cible.style.left = elementPositionX;
 
-          console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
-          console.log("trop bas : ",(elementPositionY + cible.clientHeight > window.innerHeight));
           if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
           {
                elementPositionY = elementPositionY - cible.clientHeight;
-               console.log(elementPositionY);
           }
+          console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
+          console.log("trop bas : ",(elementPositionY + cible.clientHeight > document.documentElement.clientHeight));
           console.log("");
           elementPositionY = elementPositionY + "px";
           cible.style.top = elementPositionY;
 
           cible.style.visibility = "visible";
 
-          /*console.log("pos left recep:",elementPositionX,"  width elem:",cible.clientWidth,"  width client:",document.documentElement.clientWidth);
+          /*
+          console.log("pos left recep:",elementPositionX,"  width elem:",cible.clientWidth,"  width client:",document.documentElement.clientWidth);
           console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
           console.log("trop droite : ",(elementPositionX + cible.clientWidth > document.documentElement.clientWidth));
           console.log("trop bas : ",(elementPositionY + cible.clientHeight > document.documentElement.clientHeight));
-          console.log("");*/
+          */
      }
 }
 

@@ -232,11 +232,6 @@ a:hover, a:active
           width : 100%;
      }
 
-     .atuiKernel_SectionCardBasic article,.atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article, .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardMainColumn article
-     {
-          margin : 5px 0;
-     }
-
      .atuiKernel_SectionCardMainRow article
      {
           flex-direction: column;
@@ -361,9 +356,8 @@ a:hover, a:active
 .atuiKernel_ToolsSelector aside hr
 {
      background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
-     width : 80%;
      height : 2px;
-     margin : 5px 10%;
+     margin : 5px 0;
      border : 0;
 }
 
@@ -467,16 +461,10 @@ a:hover, a:active
      background-attachment: fixed;
 }
 
-#atuiKernel_Header > .atuiKernel_ToolsCarousel
-{
-     height : calc(50vh + 50px);
-}
-
 .atuiKernel_ToolsCarousel > div
 {
      width : 100%;
      padding : 50px 10%;
-     padding-top : 80px;
      background : linear-gradient(to top, rgb(51, 51, 51),transparent);
 }
 
@@ -613,9 +601,10 @@ a:hover, a:active
      background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      backdrop-filter: var(--atuiKernel_Blur);
      min-height : 50px;
-     position: absolute;
+     position: fixed;
      width : calc(100% - 20px);
      padding : 0 10px;
+     z-index: 10;
 }
 
 #atuiKernel_Header img 
@@ -779,7 +768,7 @@ a:hover, a:active
 {
      display : flex;
      min-height : 30px;
-     margin : 5px 0;
+     padding : 5px 0;
      flex-wrap: wrap;
      justify-content: space-around;
 }
@@ -958,14 +947,19 @@ section
 
      /* Card */
 
-          /* Basic */
-
-.atuiKernel_SectionCardBasic
+.atuiKernel_SectionCardBasic, .atuiKernel_SectionCardFlat, .atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop, .atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
 {
+     margin : 20px 0;
      display: flex;
      flex-wrap : wrap;
-     margin : 20px 0;
 }
+
+.atuiKernel_SectionCardBasic article,.atuiKernel_SectionCardFlat article, .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article, .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardMainColumn article
+{
+     margin : 5px 0;
+}
+
+          /* Basic */
 
 .atuiKernel_SectionCardBasic article
 {
@@ -1020,13 +1014,6 @@ section
 
           /* Flat */
 
-.atuiKernel_SectionCardFlat
-{
-     display: flex;
-     flex-wrap : wrap;
-     margin : 20px 0;
-}
-
 .atuiKernel_SectionCardFlat article
 {
      display: flex;
@@ -1077,13 +1064,6 @@ section
 
           /* Minimal Bottom & Top */
 
-.atuiKernel_SectionCardOverlayBottom, .atuiKernel_SectionCardOverlayTop
-{
-     display: flex;
-     flex-wrap : wrap;
-     margin : 20px 0;
-}
-
 .atuiKernel_SectionCardOverlayBottom article, .atuiKernel_SectionCardOverlayTop article
 {
      display: flex;
@@ -1097,8 +1077,9 @@ section
 
 .atuiKernel_SectionCardOverlayBottom img, .atuiKernel_SectionCardOverlayTop img
 {
-     background-size: cover;
-     background-position: center;
+     width: inherit;
+     object-fit: cover;
+     object-position: center;
 }
 
 .atuiKernel_SectionCardOverlayBottom article > div, .atuiKernel_SectionCardOverlayTop article > div
@@ -1158,13 +1139,6 @@ section
 }
 
           /* Main Row & Column */
-
-.atuiKernel_SectionCardMainRow, .atuiKernel_SectionCardMainColumn
-{
-     display : flex;
-     flex-wrap : wrap;
-     margin : 20px 0;
-}
 
 .atuiKernel_SectionCardMainRow article, .atuiKernel_SectionCardMainColumn article
 {
