@@ -149,11 +149,6 @@ a:hover, a:active
           justify-content: space-around;
      }
 
-     #atuiKernel_Header > .atuiKernel_ToolsCarousel
-     {
-          padding-top : 100px;
-     }
-
      #atuiKernel_HeaderBlockLeft,#atuiKernel_HeaderBlockCenter,#atuiKernel_HeaderBlockRight
      {
           flex : 1;
@@ -289,11 +284,12 @@ a:hover, a:active
 {
      font-weight: bold;
      text-decoration: underline;
+     transition: font-weight 500ms;
 }
 
 .atuiKernel_ToolsSelector aside 
 {
-     position : absolute;
+     position : fixed;
      width : 280px;
      visibility: hidden;
      background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
@@ -324,6 +320,7 @@ a:hover, a:active
 .atuiKernel_ToolsSelector aside a div:hover
 {
      background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
+     transition: background-color 500ms;
 }
 
 .atuiKernel_ToolsSelector aside a div
@@ -1077,14 +1074,12 @@ section
 
 .atuiKernel_SectionCardOverlayBottom img, .atuiKernel_SectionCardOverlayTop img
 {
-     width: inherit;
      object-fit: cover;
-     object-position: center;
+     width: 100%;
 }
 
 .atuiKernel_SectionCardOverlayBottom article > div, .atuiKernel_SectionCardOverlayTop article > div
 {
-     max-height: 60%;
      position: absolute;
      left : 0;
      right : 0;

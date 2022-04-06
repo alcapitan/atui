@@ -6,9 +6,17 @@ Version : dev2
 
 /* Height carousel */
 
-var atuiKernel_HeaderAside = document.getElementById("atuiKernel_Header").childNodes[1];
-var atuiKernel_Carousel = document.getElementById("atuiKernel_Header").childNodes[3];
-atuiKernel_Carousel.style.height = atuiKernel_HeaderAside.clientHeight * 4 + "px";
+var atuiKernel_Header = document.getElementById("atuiKernel_Header");
+var atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
+atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
+var atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
+if (document.documentElement.clientWidth > 767)
+{
+     var atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderAside.clientHeight * 2);
+     atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
+}
+atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
+
 
 /* Notifications */
 
@@ -178,35 +186,19 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
      {
           element.style.fontWeight = "bold";
           element.style.textDecoration = "underline";
-
           if (elementPositionX + cible.clientWidth > document.documentElement.clientWidth)  // Overflow droite
           {
                elementPositionX = elementPositionX - cible.clientWidth;
           }
-          console.log("pos left recep:",elementPositionX,"  width elem:",cible.clientWidth,"  width client:",document.documentElement.clientWidth);
-          console.log("trop droite : ",(elementPositionX + cible.clientWidth > document.documentElement.clientWidth));
-
           elementPositionX = elementPositionX + "px";
           cible.style.left = elementPositionX;
-
           if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
           {
                elementPositionY = elementPositionY - cible.clientHeight;
           }
-          console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
-          console.log("trop bas : ",(elementPositionY + cible.clientHeight > document.documentElement.clientHeight));
-          console.log("");
           elementPositionY = elementPositionY + "px";
           cible.style.top = elementPositionY;
-
           cible.style.visibility = "visible";
-
-          /*
-          console.log("pos left recep:",elementPositionX,"  width elem:",cible.clientWidth,"  width client:",document.documentElement.clientWidth);
-          console.log("pos top recep:",elementPositionY,"  height elem:",cible.clientHeight,"  height client:",document.documentElement.clientHeight);
-          console.log("trop droite : ",(elementPositionX + cible.clientWidth > document.documentElement.clientWidth));
-          console.log("trop bas : ",(elementPositionY + cible.clientHeight > document.documentElement.clientHeight));
-          */
      }
 }
 

@@ -138,7 +138,7 @@ function atuiMediasPlayer_AudioplayerControlsProgressChange(control) // Fonction
 	var atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	var diff = atuiMouseX - atuiMediasPlayer_AudioplayerControlsProgressX; 
 	var wrapperWidth = atuiMediasPlayer_AudioplayerControlsProgress.offsetWidth;
-	var percent = Math.round(((diff / wrapperWidth) * 100) + 50); 
+	var percent = Math.round(((diff / wrapperWidth) * 100) + 51); 
 	var duration = atuiMediasPlayer_AudioplayerMusic.duration;
 	atuiMediasPlayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
@@ -196,7 +196,7 @@ function atuiMediasPlayer_AudioplayerMusicLoop()
 
 /* Video */
 
-var atuiMediasPlayer_Videoplayer = document.getElementsByClassName('atuiMediasPlayer_Video')[0]; // Element VideoPlayer
+var atuiMediasPlayer_Videoplayer = document.getElementsByClassName('atuiMediasPlayer_Video')[0].childNodes[1]; // Element VideoPlayer
 var atuiMediasPlayer_VideoplayerVideo = atuiMediasPlayer_Videoplayer.childNodes[1]; // Balise HTML <Video> diffusant la musique
 atuiMediasPlayer_VideoplayerVideo.addEventListener("timeupdate",atuiMediasPlayer_VideoplayerVideoUpdate); // Met à jour le minuteur
 
@@ -243,7 +243,7 @@ function atuiMediasPlayer_VideoplayerControlsProgressChange(control) // Fonction
 	var atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	var diff = atuiMouseX - atuiMediasPlayer_VideoplayerControlsProgressX; 
 	var wrapperWidth = atuiMediasPlayer_VideoplayerControlsProgress.offsetWidth;
-	var percent = Math.round(((diff / wrapperWidth) * 100) + 50);    
+	var percent = Math.round((diff / wrapperWidth) * 100);    
 	var duration = atuiMediasPlayer_VideoplayerVideo.duration;
 	atuiMediasPlayer_VideoplayerVideo.currentTime = (duration * percent) / 100;
 }
