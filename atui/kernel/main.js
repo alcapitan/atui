@@ -173,29 +173,34 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
 {
      cible = element.childNodes[3]; /* Selecteur */
      element = element.childNodes[1]; /* Récepteur */
-     console.log(element.getBoundingClientRect());
-     elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
-     elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
      if (wish == false)
      {
           cible.style.visibility = "hidden";
+          cible.style.top = "0";
+          cible.style.left = "0";
           element.style.fontWeight = "normal";
           element.style.textDecoration = "none";
      }
      else
      {
+          elementPositionXShift = cible.getBoundingClientRect().x; /* Décalage X écran conteneur */
+          elementPositionYShift = cible.getBoundingClientRect().y; /* Décalage Y écran conteneur */
+          elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
+          elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
           element.style.fontWeight = "bold";
           element.style.textDecoration = "underline";
           if (elementPositionX + cible.clientWidth > document.documentElement.clientWidth)  // Overflow droite
           {
                elementPositionX = elementPositionX - cible.clientWidth;
           }
+          elementPositionX = elementPositionX - elementPositionXShift;
           elementPositionX = elementPositionX + "px";
           cible.style.left = elementPositionX;
           if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
           {
                elementPositionY = elementPositionY - cible.clientHeight;
           }
+          elementPositionY = elementPositionY - elementPositionYShift;
           elementPositionY = elementPositionY + "px";
           cible.style.top = elementPositionY;
           cible.style.visibility = "visible";
