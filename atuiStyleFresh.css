@@ -1,0 +1,282 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+
+body
+{
+     margin : 0px;
+}
+
+body *
+{
+     font-family: 'Red Hat Display', Arial;
+}
+
+@media (min-width : 650px) /* Ordi */
+{
+     section
+     {
+          display: inline-flex;
+     }
+
+     section article
+     {
+          width : 40%;
+	  margin : 5px;
+     }
+}
+
+/* En-tête */
+
+header
+{
+     background-color : #bfbfbf;
+     background-image : url(atuiPresentation.jpg);
+     height : 50vh;
+     background-size : cover;
+     background-position : center;
+}
+
+header aside
+{
+     background-color : #FFF7;
+     height : 50px;
+}
+
+img[alt="Icone du site"]
+{
+     float: left;
+     height : 50px;
+}
+
+header aside > a
+{
+     margin : 0px;
+     padding-top : 4px;
+     margin-left : 60px;
+     color : black;
+     text-decoration : none;
+     font-size : 30px;
+     font-weight : bold;
+     display : block;
+}
+
+#atuiSettings
+{
+     float : right;
+     margin : 5px;
+     transform: translateY(-43.5px);
+}
+
+#atuiSettingsModeVisuel
+{
+     display: inline-flex;
+}
+
+#atuiSettingsModeVisuel img
+{
+     margin : 5px;
+     display : none;
+     transform : translateY(-5px);
+}
+
+#atuiProfilSettings:before
+{
+     content : '▲';
+     position : absolute;
+     color : white;
+     font-size : 20px;
+     top : -20px;
+     right : 7px;
+}
+
+#atuiProfilSettings
+{
+     position : fixed;
+     top : 55px;
+     right : 3px;
+     width : 200px;
+     background-color : white;
+     border-radius : 10px;
+     padding : 5px;
+     display : none;
+     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#atuiProfilSettings a
+{
+     margin : 5px;
+     display : block;
+     color : black;
+     text-decoration : none;
+}
+
+#atuiProfilSettings img
+{
+     float : left;
+     margin : 5px;
+     height : 21px;
+}
+
+#atuiProfilSettings hr
+{
+     border : 1px silver solid;
+     margin : 0px 15px;
+}
+
+/* Illustration */
+
+header article > *
+{
+     width : 100%;
+     color : white;
+     display : flex;
+     justify-content : center;
+}
+
+header article button
+{
+     border : none;
+     background-color : #FF000070;
+     font-size : 21px;
+     padding : 10px;
+     color : white;
+     width : 200px;
+}
+
+/* Navigateur */
+
+nav
+{
+     display : flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     margin : 5px;
+}
+
+nav a
+{
+     color : black;
+     text-decoration : none;
+}
+
+nav a img
+{
+     width : 100px;
+}
+
+nav a p
+{
+     text-align : center;
+     margin : 0px;
+     margin-top : -10px;
+}
+
+/* Contenu */
+
+section
+{
+     margin : 10px;
+     flex-wrap : wrap;
+     justify-content: space-around;
+}
+
+section article
+{
+     margin-bottom : 20px;
+}
+
+section article img
+{
+     width : 100%;
+}
+
+section article h3
+{
+     margin : 0px;
+     margin-top : 5px;
+}
+
+section article p, section article a
+{
+     margin : 5px 0px;
+}
+
+section article a
+{
+     color : red;
+     font-weight: bold;
+     font-size : 16px;
+     text-decoration : none;
+}
+
+section article a:after
+{
+     content : " >";
+}
+
+section article a:hover
+{
+     text-decoration : underline;
+}
+
+/* Pied de page */
+
+footer
+{
+     background-color : #c0c0c0;
+     border-top : 3px solid red;
+     margin-top : 40px;
+     padding: 5px;
+     padding-top : 20px;
+     padding-bottom : 80px;
+}
+
+footer img
+{
+     width : 50px;
+     border-radius : 100%;
+     border : 3px solid red;
+     background-color: white;
+     position: absolute;
+     left : 50%;
+     transform : translate(-50%, -70px);
+}
+
+footer div
+{
+     display : flex;
+     justify-content: flex-end;
+     flex-wrap : wrap;
+     margin-top : 20px;
+}
+
+footer select
+{
+     border : 2px black solid;
+     background-color: white;
+     padding : 5px;
+     width : 100px;
+     height : 40px;
+}
+
+footer div a
+{
+     text-align: right;
+     margin : 10px;
+     width : min-content;
+     margin-left : 40px;
+     margin-top : 0px;
+     color : black;
+     text-decoration: none;
+}
+
+footer > a
+{
+     margin : 20px;
+     float : right;
+     color : #666666;
+     font-weight : bold;
+     font-size : 14px;
+     text-decoration : none;
+}
