@@ -11,7 +11,7 @@ Ainsi, ATUI est conçu dans l'esprit de s'adapter aux connexions internet faible
 ## Attention ! Informations développement !
 ATUI est un projet qui est encore en phase de développement. Ainsi, il est déconseillé d'utiliser ce projet pour l'instant.  
 Si vous êtes curieux de découvrir ATUI, d'abord je vous en remercie de l'interêt porté !  
-La branche actuelle nommée ```dev``` contient les modifications les plus récentes ! Veuillez y rester !
+La branche actuelle nommée ```beta``` contient le travail suite à la seconde phase de beta ! Pour voir les avancés de conception les plus récentes, <a href="https://github.com/alcapitan/atui/tree/dev">veuillez aller vers la branche ```dev``` !</a> 
   
 Comme écrit ci-dessus, ATUI est un projet en développement. Rassurez-vous, à l'avenir, le projet bénéficira d'une documentation complète ! De plus, sachez que la première version stable sera dans la future branche ```lts```.
 
