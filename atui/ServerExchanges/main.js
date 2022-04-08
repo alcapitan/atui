@@ -1,7 +1,7 @@
 /* Metadata : 
 Auteur (github) : alcapitan
 Nom du module : Server Exchanges
-Version : dev2
+Version : developer branch
 */
 
 
