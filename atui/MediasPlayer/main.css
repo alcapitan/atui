@@ -1,0 +1,255 @@
+/* Metadata : 
+Auteur (github) : alcapitan
+Nom du module : Medias Player
+Version : dev2
+*/
+
+/* Contents :
+- atuiMediasPlayerAudio
+     - Player / atuiMediasPlayer_Audioplayer
+     - Additionals Informations / atuiMediasPlayer_AudioplayerAdditionals
+     - Music Informations / #atuiMediasPlayer_AudioplayerMusicinformations
+     - Audio Controls / atuiMediasPlayer_AudioplayerControls
+     - Timer / atuiMediasPlayer_AudioplayerTimer
+     - Audio > Basic Buttons / atuiMediasPlayer_AudioplayerButtonsBasic
+     - Advanced Buttons / atuiMediasPlayer_AudioplayerButtonsAdvanced
+     - Audio > Progress Bar / atuiMediasPlayer_AudioplayerProgressbar
+- atuiMediasPlayerVideo
+*/
+
+/* Audio */
+
+	/* Player */
+
+#atuiMediasPlayer_Audioplayer
+{
+	display: none;
+	position : fixed;
+	z-index: 10;
+	background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+	backdrop-filter : var(--atuiKernel_Blur);
+	border-radius : 10px;
+	width : 90%;
+	padding : 10px;
+	bottom : 15px;
+	min-height : 150px;
+	margin-left : 50%;
+	transform: translateX(-50%);
+	box-shadow: var(--atuiKernel_Shadow);
+}
+
+	/* Additionals Informations */
+
+#atuiMediasPlayer_AudioplayerAdditionals
+{
+	float : right;
+	display: flex;
+}
+
+#atuiMediasPlayer_AudioplayerAdditionals img
+{
+	width : 25px;
+	height : 25px;
+	margin : 5px;
+	padding : 5px;
+	border-radius: 10px;
+}
+
+#atuiMediasPlayer_Audioplayer > img
+{
+	border-radius : 10px;
+	width : 140px;
+	height : 140px;
+	float : left;
+}
+
+#atuiMediasPlayer_AudioplayerMusicinformations
+{
+	margin-left : 160px;
+}
+
+#atuiMediasPlayer_AudioplayerMusicinformations p
+{
+	font-family: "Red Hat Display";
+	margin : 10px 0px;
+	width : 50%;
+}
+
+#atuiMediasPlayer_AudioplayerMusicinformations p:first-child
+{
+	font-size: 20px;
+}
+
+#atuiMediasPlayer_AudioplayerMusicinformations p:last-child
+{
+	font-size: 30px;
+	font-weight: bold;
+	color : var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+#atuiMediasPlayer_AudioplayerControls
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+	/* Timer */
+
+#atuiMediasPlayer_AudioplayerTimer
+{
+	display: flex;
+	margin : 15px;
+	transform: translate(10px, -4px);
+}
+
+#atuiMediasPlayer_AudioplayerTimer p
+{
+	margin : 0px;
+	font-size : 16px;
+}
+
+#atuiMediasPlayer_AudioplayerTimer p:nth-child(2)
+{
+	margin : 0px 5px;
+}
+
+	/* Controls */
+
+#atuiMediasPlayer_AudioplayerControls img
+{
+	width : 30px;
+	height : 30px;
+	padding : 5px 10px;
+	border-radius: 10px;
+}
+
+#atuiMediasPlayer_AudioplayerButtonsBasic, #atuiMediasPlayer_AudioplayerButtonsAdvanced
+{
+	margin : 0px 20px;
+	display : flex;
+	align-items: flex-start;
+}
+
+#atuiMediasPlayer_AudioplayerAdditionals img:hover, #atuiMediasPlayer_AudioplayerButtonsBasic img:hover, #atuiMediasPlayer_AudioplayerButtonsAdvanced img:hover
+{
+	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+	/* Progress bar */
+
+#atuiMediasPlayer_AudioplayerProgressbar
+{
+	width : 100%;
+	height : 10px;
+	border-radius: 0px 0px 10px 10px;
+	transform: translateX(-10px);
+	overflow: hidden;
+	position: absolute;
+	bottom : 0px;
+}
+
+#atuiMediasPlayer_AudioplayerProgressbar div
+{
+	width : 0;
+	height : 10px;
+	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+	transition: width 500ms;
+}
+
+/* Video */
+
+@media (min-width : 768px) /* Computers */
+{
+	.atuiMediasPlayer_Video
+	{
+		display: flex;
+		justify-content: center;
+	}
+
+	.atuiMediasPlayer_Video article
+	{
+		width : 750px;
+	}
+
+	.atuiMediasPlayer_Video article > aside div:nth-child(2) > div
+	{
+		margin : 10px 15px;
+	}
+
+	#atuiMediasPlayer_VideoplayerButtonsBasic
+	{
+		flex : 1;
+	}
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+	#atuiMediasPlayer_VideoplayerTimer
+	{
+		margin : 0 10px;
+	}
+}
+
+.atuiMediasPlayer_Video
+{
+	margin : 20px 0;
+}
+
+.atuiMediasPlayer_Video article > video
+{
+     border-radius: 10px 10px 0 0;
+	width : 100%;
+}
+
+.atuiMediasPlayer_Video article > aside
+{
+	margin-top : -4px;
+	border-radius : 0 0 10px 10px;
+	display : flex;
+	flex-direction: column;
+	background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+	box-shadow: var(--atuiKernel_Shadow);
+}
+
+#atuiMediasPlayer_VideoplayerProgressbar
+{
+	width : 100%;
+	height : 10px;
+	overflow: hidden;
+}
+
+#atuiMediasPlayer_VideoplayerProgressbar div
+{
+	width : 0;
+	height : 10px;
+	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+	transition: width 500ms;
+}
+
+.atuiMediasPlayer_Video article > aside > div:nth-child(2)
+{
+	padding : 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.atuiMediasPlayer_Video article > aside div:nth-child(2) img
+{
+	width : 30px;
+	height : 30px;
+}
+
+.atuiMediasPlayer_Video article > aside div:nth-child(2) > div
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.atuiMediasPlayer_Video article > aside div:nth-child(2) div p, .atuiMediasPlayer_Video article > aside div:nth-child(2) div img
+{
+	margin : 5px;
+}
+

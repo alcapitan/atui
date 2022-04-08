@@ -1,0 +1,128 @@
+/* Metadata : 
+Auteur (github) : alcapitan
+Nom du module : Search Service
+Version : dev2
+*/
+
+/* Contents :
+- Responsives
+- SearchBar Header
+- Extras
+*/
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
+{
+     #atuiSearchServices_Header > div
+     {
+          background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+          backdrop-filter: var(--atuiKernel_Blur);
+     }
+
+     #atuiSearchServices_Header > div input
+     {
+          display: inline;
+     }
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+     #atuiSearchServices_Header > div input
+     {
+          display : none;
+     }
+}
+
+
+/* Search bar header */
+
+#atuiSearchServices_Header
+{
+     background-color: transparent;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     top : 5px;
+}
+
+#atuiSearchServices_Header > div
+{
+     border-radius: 10px;
+     width : 100%;
+     height : 40px;
+}
+
+#atuiSearchServices_Header > div form input
+{
+     background-color: transparent;
+     font-size: 1.5rem;
+     padding : 5px;
+     width : calc(100% - 60px);
+     height: 30px;
+     border: none;
+     padding-left: 10px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     color : rgb(128, 128, 128);
+}
+
+#atuiSearchServices_Header > div form input:active
+{
+     background-color: transparent;
+     border : none;
+}
+
+#atuiSearchServices_Header > div form button
+{
+     height : 40px;
+     width : 40px;
+     padding : 0;
+     background-color: transparent;
+     border: none;
+     float : right;
+}
+
+#atuiSearchServices_Header > div form button img
+{
+     height : 30px;
+     width : 30px;
+}
+
+
+/* Extras */
+
+#atuiSearchServices_Header aside
+{
+     display : none;
+     margin : 10px;
+}
+
+#atuiSearchServices_Header aside article
+{
+     margin : 0 10px 20px 10px;
+}
+
+#atuiSearchServices_Header aside article > p
+{
+     margin : 0;
+     font-family: 'Red Hat Display';
+     font-weight : bold;
+     font-size : 1.25rem;
+}
+
+#atuiSearchServices_Header aside article > div
+{
+     margin : 15px;
+}
+
+#atuiSearchServices_Header aside article > div a
+{
+     color : black;
+     display : block;
+     padding : 5px 0;
+}
+
