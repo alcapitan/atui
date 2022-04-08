@@ -1,7 +1,7 @@
 /* Metadata : 
 Auteur (github) : alcapitan
 Nom du module : Medias Player
-Version : dev2
+Version : 0.2
 */
 
 /* Contents : 
