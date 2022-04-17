@@ -86,6 +86,20 @@ Version : developer branch
 
      /* Root */
 
+:root
+{
+     --atuiKernel_Blur : blur(5px);
+     font-size : 16px;
+     --atuiKernel_FontsTitle : 'Red Hat Display','Montserrat',Arial;
+     --atuiKernel_FontsText : 'Montserrat',Arial;
+     --atuiKernel_FontsSpecial : 'Lobster','Montserrat',Arial;
+     --atuiKernel_ToolsSettingsAccentcolor : rgb(230, 51, 0);
+     --atuiKernel_ToolsSettingsAccentcolorOpacity : rgb(230, 51, 0, 0.8);
+     --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
+     --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
+     --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 body
 {
      margin : 0;
@@ -94,18 +108,7 @@ body
 
 body *
 {
-     font-family: 'Montserrat',Arial;
-}
-
-:root
-{
-	--atuiKernel_ToolsSettingsAccentcolor : rgb(230, 51, 0);
-     --atuiKernel_ToolsSettingsAccentcolorOpacity : rgb(230, 51, 0, 0.8);
-     --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
-     --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
-     --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-     --atuiKernel_Blur : blur(5px);
-     font-size : 16px;
+     font-family: var(--atuiKernel_FontsText);
 }
 
 a
@@ -275,7 +278,7 @@ a:hover, a:active
 
 .atuiKernel_ToolsSelector > p
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-size : 1.4rem;
      margin : 0 15px;
 }
@@ -384,7 +387,7 @@ a:hover, a:active
 
 #atuiKernel_ToolsContact > p
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
      font-size: 1.5rem;
      margin : 0;
@@ -423,7 +426,7 @@ a:hover, a:active
      font-weight: bold;
      font-size : 1.5rem;
      margin : 15px 0;
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      margin : 0;
 }
 
@@ -475,7 +478,7 @@ a:hover, a:active
 
 .atuiKernel_ToolsCarousel div h2
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-size: 1.5rem;
 }
 
@@ -492,7 +495,7 @@ a:hover, a:active
      padding : 10px 20px;
      color : white;
      width : 200px;
-     font-family : "Red Hat Display";
+     font-family : var(--atuiKernel_FontsTitle);
      border-radius: 10px;
 }
 
@@ -533,7 +536,7 @@ a:hover, a:active
 .atuiKernel_NotificationElement div:first-child h3
 {
      margin : 0 20px;
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
      font-size : 1.3rem;
      color : var(--atuiKernel_ToolsSettingsAccentcolor);
@@ -558,7 +561,7 @@ a:hover, a:active
      background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
      border-radius: 10px;
      padding : 10px 20px;
-     font-family : "Red Hat Display";
+     font-family : var(--atuiKernel_FontsTitle);
      font-size : 1.1rem;
      border : none;
 }
@@ -582,7 +585,7 @@ a:hover, a:active
 {
      background-color: var(--atuiKernel_ToolsSettingsAccentcolor) !important;
      font-weight: bold;
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
 }*/
 
 /* Header */
@@ -655,7 +658,7 @@ a:hover, a:active
      font-size : 1.875rem;
      font-weight : bold;
      display : inline-block;
-     font-family : "Red Hat Display";
+     font-family : var(--atuiKernel_FontsTitle);
      overflow: hidden;
      white-space: nowrap;
      text-overflow: ellipsis;
@@ -823,7 +826,7 @@ a:hover, a:active
 
 #atuiKernel_Header > aside > nav > div aside > div p
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
      font-size: 1.4rem;
 }
@@ -854,7 +857,7 @@ section
      font-weight: bold;
      font-size : 1.5rem;
      color : var(--atuiKernel_ToolsSettingsAccentcolor);
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      margin : 10px 0;
 }
 
@@ -981,7 +984,7 @@ section
 
 .atuiKernel_SectionCardBasic article h3
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-size: 1.3rem;
      margin : 0;
      padding : 10px 20px;
@@ -1006,7 +1009,7 @@ section
 {
      margin : 5px 10px;
      font-size : 1.2rem;
-     font-family : "Red Hat Display";
+     font-family : var(--atuiKernel_FontsTitle);
 }
 
           /* Flat */
@@ -1034,7 +1037,7 @@ section
 
 .atuiKernel_SectionCardFlat article > div h3
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-size: 1.3rem;
      margin : 10px;
 }
@@ -1056,7 +1059,7 @@ section
 {
      margin : 5px 10px;
      font-size : 1.2rem;
-     font-family : "Red Hat Display";
+     font-family : var(--atuiKernel_FontsTitle);
 }
 
           /* Minimal Bottom & Top */
@@ -1094,7 +1097,7 @@ section
 
 .atuiKernel_SectionCardOverlayBottom article div h3, .atuiKernel_SectionCardOverlayTop article div h3
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      margin : 0 5px 10px 5px;
      font-size: 1.3rem;
 }
@@ -1117,7 +1120,7 @@ section
      margin : 5px 10px;
      font-size : 1.2rem;
      color : var(--atuiKernel_ToolsSettingsAccentcolor);
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
 }
 
@@ -1163,7 +1166,7 @@ section
 
 .atuiKernel_SectionCardMainRow article > div h3, .atuiKernel_SectionCardMainColumn article > div h3
 {
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
      font-size : 1.3rem;
      margin : 5px;
 }
@@ -1188,7 +1191,7 @@ section
      border : none;
      border-radius: 10px;
      font-size : 1.2rem;
-     font-family: "Red Hat Display";
+     font-family: var(--atuiKernel_FontsTitle);
 }
 
 .atuiKernel_SectionCardMainRow article > div div > button, .atuiKernel_SectionCardMainColumn article > div div > button

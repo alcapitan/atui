@@ -109,7 +109,7 @@ Version : developer branch
 #atuiSearchServices_Header aside article > p
 {
      margin : 0;
-     font-family: 'Red Hat Display';
+     font-family: var(--atuiKernel_FontsTitle);
      font-weight : bold;
      font-size : 1.25rem;
 }

@@ -70,7 +70,7 @@ Version : developer branch
 
 #atuiMediasPlayer_AudioplayerMusicinformations p
 {
-	font-family: "Red Hat Display";
+	font-family: var(--atuiKernel_FontsTitle);
 	margin : 10px 0px;
 	width : 50%;
 }

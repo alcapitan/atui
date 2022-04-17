@@ -1,3 +1,12 @@
+:root
+{
+     /*--atuiKernel_FontsTitle : 'Times New Roman';
+     --atuiKernel_FontsText : Arial;
+     --atuiKernel_FontsSpecial : 'Ubuntu';*/
+     /* --atuiKernel_ToolsSettingsAccentcolor : rgb(0, 81, 230);
+     --atuiKernel_ToolsSettingsAccentcolorOpacity : rgb(0, 81, 230, 0.8); */
+}
+
 .atuiKernel_ToolsCarousel
 {
      background-image: url(illustrations/presentation.jpg)
