@@ -1,44 +1,42 @@
-# ATUI (Alex Technologies User Interface)
+# ATUI (Alex Tech User Interface)
   
 <p align="center">
   <img src="https://alcapitan.github.io/atui/patch/icons/logo.png" alt="Logo ATUI" width="200" height="200">
 </p>
-<p align="center">Framework web pour créer de nombreux types de sites web, facilement est simplement.</p>
+<p align="center">Framework web fournissant des feuilles de styles et des scripts prêts à l'emploi pour de nombreux sites internet.</p>
 
-Les objectifs du framework sont une simplicité d'utilisation pour le grand public, une performance optimale et une compatibilité fiable envers les navigateurs récents (Chrome, Edge, Firefox, Safari, Opera, ect... et dans des versions datant de moins de 2 ans).  
-Ainsi, ATUI est conçu dans l'esprit de s'adapter aux connexions internet faibles et aux appareils avec de mauvaises performances).  
+Les objectifs du framework sont une performance optimale (y compris pour des faibles connexions internet et pour de vieux appareils), une simplicité d'utilisation pour des débutants dans la programmation, une fiabilité pour les utilisateurs, et une compatibilité pour les navigateurs populaires sous une version de moins de 7 ans.  
 
-## Attention ! Informations développement !
-ATUI est un projet qui est encore en phase de développement. Ainsi, il est déconseillé d'utiliser ce projet pour l'instant.  
-Si vous êtes curieux de découvrir ATUI, d'abord je vous en remercie de l'interêt porté !  
-La branche actuelle nommée ```beta``` contient le travail suite à la seconde phase de beta ! Pour voir les avancés de conception les plus récentes, <a href="https://github.com/alcapitan/atui/tree/dev">veuillez aller vers la branche ```dev``` !</a> 
-  
-Comme écrit ci-dessus, ATUI est un projet en développement. Rassurez-vous, à l'avenir, le projet bénéficira d'une documentation complète ! De plus, sachez que la première version stable sera dans la future branche ```lts```.
-
-<p align="center">
-    <img src="/patch/documents/organisation branches.png" alt="Organisation des branches jusqu'à la première version stable. Daté du 30/10/21." width="720" height="405">
-</p>
+## Ce framework est encore en phase de développement
+Actuellement, il n'existe pas de version stable destiné aux grands public, ni de documentation. 
+En revanche, les développeurs ou les curieux peuvent contribuer aux projets ou apporter leurs idées dans ce projet !
+La branche nommée ```beta``` représente la deuxième phase de bêta.
+Pour voir les avancées de conception les plus récentes, <a href="https://github.com/alcapitan/atui/tree/dev">veuillez aller vers la branche ```dev```</a> !
   
 ## Télécharger le projet (avec Git)
 
-### Dans la version beta (version la plus stable disponible à ce jour mais incomplète pour le grand public)
-```git clone https://github.com/alcapitan/atui.git beta```
-### Dans la version dev (version la plus récente mais la plus instable)
-```git clone https://github.com/alcapitan/atui.git dev```
+### Branche bêta  (relativement stable mais sans les dernières nouveautés)
+```git clone https://github.com/alcapitan/atui.git -b beta```
+### Branche dev  (peut être instable mais contient les dernières nouveautés)
+```git clone https://github.com/alcapitan/atui.git -b dev```
+
 
 ## Comment l'utiliser ?
 
-Comme dit ci-dessus, le projet est en développement. Par conséquent, je ne peux pas faire de documentation fiable car l'utilisation n'est aujourd'hui pas ouverte au grand public.  
+Comme dit ci-dessus, il n'existe pas encore de documentation car il n'y a pas encore de version stable.
   
-Ceci dit, ATUI est conçu de manière à fractionner votre site web final de la manière suivante : le dossier ```patch``` (c'est à dire toutes les données nécéssaires pour créer votre site à partir d'ATUI) et le dossier ```atui``` comportant le ```kernel``` (le noyau de fonctionnement d'ATUI) ainsi que autant d'extensions dont l'utilisateur à besoin.  
+Ceci dit, ATUI est conçu de manière à être facilement compréhensif par le plus grand nombre.
+Pour ajouter ce framework à votre site web : ajoutez le dossier ```atui``` comportant le ```kernel``` (les fichiers de base d'ATUI) ainsi que d'éventuelles extensions. Pour l'organisation, l'ajout du dossier ```patch``` (avec tout vos fichiers à l'exception de ceux en HTML). Quant aux fichiers HTML, vous devrez les mettre dans le répertoire racine de votre site web.
   
-En effet, ATUI offre la possibilité d'intégrer des extensions à son site web pour ajouter diverses fonctionnalités supplémentaires. Avec ATUI, je propose des extensions mais chaque développeur est libre d'en créer de la manière qu'il veut. A la condition de respecter les normes de fragmentation des variables (pas de documentation disponible à ce sujet là mais allez voir le code CSS par exemple et vous comprendrez comment la norme des variables fonctionne).
+## Extensions
+
+Comme dit ci-dessus, ATUI permet l'ajout d'extensions. Les extensions sont des fonctionnalités utilitaires supplémentaires, qui sont réfléchies pour fonctionner au mieux avec ATUI, pour optimiser ce que vous pouvez faire avec ATUI.
+  
+Des extensions sont proposés nativement avec ATUI. Cependant chacun peut créer une extension, sous les conditions du respect des normes de nommages de variables, et des normes de positionnement dans les répertoires. 
   
 ## Contribuer au projet
   
-ATUI est évidemment un projet open-source et compte bien profiter de votre aide pour mieux avancer.  
-N'hésitez pas à m'envoyer vos signalements de bogues, idées de nouvelles fonctionnalités ou d'amélioration de fonctionnalités existantes et vos questions, dans la rubrique <a href="https://github.com/alcapitan/atui/issues">Issues</a>, cela m'aiderai beaucoup dans le développement.  
-De plus, comme écrit ci-dessus, vous pouvez créer vos propres extensions à associer avec le kernel d'ATUI.
+ATUI est un projet open-source qui invite à la collaboration. Vous pouvez aider au développement du projet même sans savoir coder. Ainsi vous pouvez tester ATUI, pour signaler des bogues ou donner vos avis et idées d'amélioration. Tout vos signalement devront se faire dans <a href="https://github.com/alcapitan/atui/issues">Issues</a>.  
   
 ## Licence & Utilisation de service externe
 
@@ -46,8 +44,8 @@ License du projet : <a href="https://github.com/alcapitan/atui/blob/public/LICEN
 
 Sites web externes utilisés pour concevoir ATUI : 
 - Apprendre la programmation : <a href="https://www.w3schools.com/">W3Schools</a>, <a href="https://openclassrooms.com/fr/">OpenClassRooms</a>
-- Connaitre la compatibilité des navigateurs web envers différentes notions de programmation : <a href="https://caniuse.com/">Caniuse</a>
-- Icones : <a href="https://icones8.fr/">Icones8</a>
+- Connaître la compatibilité des navigateurs web envers différentes notions de programmation : <a href="https://caniuse.com/">Caniuse</a>
+- Icônes : <a href="https://icones8.fr/">Icônes8</a>
 - Illustrations : <a href="https://www.pexels.com/fr-fr/">Pexels</a>
 - Mesure des performances et conseils d'amélioration : <a href="https://developers.google.com/speed/pagespeed/insights/?hl=fr">Google Insights</a>
 - Polices d'écriture : <a href="https://fonts.google.com/">Google Fonts</a>
@@ -56,6 +54,6 @@ Sites web externes utilisés pour concevoir ATUI :
 - Vérificateur du code CSS : https://jigsaw.w3.org/css-validator/
   
 Logiciels utilisés pour concevoir ATUI : 
-- Editeur de code : <a href="https://code.visualstudio.com/">Visual Studio Code 2019</a>
+- Éditeur de code : <a href="https://code.visualstudio.com/">Visual Studio Code 2019</a>
 - Version control : <a href="https://git-scm.com/">Git</a>
   
