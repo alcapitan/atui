@@ -13,8 +13,8 @@ Version : developer branch
      - Computers > min-width 768px
      - Smartphones > max-width 767px
 - Tools
-     - atuiKernel_ToolsSelector / Selector
-     - atuiKernel_ToolsSelectorSeparator / Selector Separator
+     - atuiKernel_ToolsContextmenu / Contextmenu
+     - atuiKernel_ToolsContextmenuSeparator / Contextmenu Separator
      - atuiKernel_ToolsSettingsDisplaymode / Settings > Display Mode
      - atuiKernel_ToolsContact / Contact
      - atuiKernel_ToolsExplorer / Explorer
@@ -268,29 +268,29 @@ a:hover, a:active
 
 /* Tools */
 
-     /* Selector */
+     /* Context Menu */
 
-.atuiKernel_ToolsSelector
+.atuiKernel_ToolsContextmenu
 {
      display: flex;
      align-items: center;
 }
 
-.atuiKernel_ToolsSelector > p
+.atuiKernel_ToolsContextmenu > p
 {
      font-family: var(--atuiKernel_FontsTitle);
      font-size : 1.4rem;
      margin : 0 15px;
 }
 
-.atuiKernel_ToolsSelector > p:hover, .atuiKernel_ToolsSelector > p:active
+.atuiKernel_ToolsContextmenu > p:hover, .atuiKernel_ToolsContextmenu > p:active
 {
      font-weight: bold;
      text-decoration: underline;
      transition: font-weight 500ms;
 }
 
-.atuiKernel_ToolsSelector aside 
+.atuiKernel_ToolsContextmenu aside 
 {
      position : fixed;
      width : 280px;
@@ -304,29 +304,29 @@ a:hover, a:active
      z-index : 1;
 }
 
-.atuiKernel_ToolsSelector aside a
+.atuiKernel_ToolsContextmenu aside a
 {
      display : block;
      text-decoration: none;
 }
 
-.atuiKernel_ToolsSelector aside a:first-child
+.atuiKernel_ToolsContextmenu aside a:first-child
 {
      margin-top : 10px;
 }
 
-.atuiKernel_ToolsSelector aside a:last-child
+.atuiKernel_ToolsContextmenu aside a:last-child
 {
      margin-bottom : 10px;
 }
 
-.atuiKernel_ToolsSelector aside a div:hover
+.atuiKernel_ToolsContextmenu aside a div:hover
 {
      background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
      transition: background-color 500ms;
 }
 
-.atuiKernel_ToolsSelector aside a div
+.atuiKernel_ToolsContextmenu aside a div
 {
      min-height : 35px;
      padding : 5px 15px;
@@ -336,7 +336,7 @@ a:hover, a:active
      justify-content: flex-end;
 }
 
-.atuiKernel_ToolsSelector aside a div p
+.atuiKernel_ToolsContextmenu aside a div p
 {
      font-size : 1.25rem;
      margin : 0;
@@ -345,7 +345,7 @@ a:hover, a:active
      overflow-wrap: anywhere;
 }
 
-.atuiKernel_ToolsSelector aside a div img
+.atuiKernel_ToolsContextmenu aside a div img
 {
      margin : 0 !important;
      margin-right: 10px !important;
@@ -353,7 +353,7 @@ a:hover, a:active
      height : 28px !important;
 }
 
-.atuiKernel_ToolsSelector aside hr
+.atuiKernel_ToolsContextmenu aside hr
 {
      background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
      height : 2px;

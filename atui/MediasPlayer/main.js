@@ -145,11 +145,11 @@ function atuiMediasPlayer_AudioplayerControlsProgressChange(control) // Fonction
 
 	/* Playlist */
 
-atuiKernel_ToolsSelector("atuiMediasPlayer_AudioplayerPlaylists");
+atuiKernel_ToolsContextmenu("atuiMediasPlayer_AudioplayerPlaylists");
 
 	/* Infos */
 
-atuiKernel_ToolsSelector("atuiMediasPlayer_AudioplayerInfos");
+atuiKernel_ToolsContextmenu("atuiMediasPlayer_AudioplayerInfos");
 
 	/* Je n'aime / Je n'aime pas cette musique */
 
@@ -250,11 +250,11 @@ function atuiMediasPlayer_VideoplayerControlsProgressChange(control) // Fonction
 
 	/* Playlist */
 
-atuiKernel_ToolsSelector("atuiMediasPlayer_VideoplayerPlaylists");
+atuiKernel_ToolsContextmenu("atuiMediasPlayer_VideoplayerPlaylists");
 
 	/* Infos */
 
-atuiKernel_ToolsSelector("atuiMediasPlayer_VideoplayerInfos");
+atuiKernel_ToolsContextmenu("atuiMediasPlayer_VideoplayerInfos");
 
 	/* Je n'aime / Je n'aime pas cette musique */
 

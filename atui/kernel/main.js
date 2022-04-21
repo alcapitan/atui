@@ -167,9 +167,9 @@ if (!atuiKernel_ToolsSettingsDisplaymodeStatus)
 }
 
 
-/* Selector */
+/* Context Menu */
 
-function atuiKernel_ToolsSelectorDisplay(element,wish)
+function atuiKernel_ToolsContextmenuDisplay(element,wish)
 {
      cible = element.childNodes[3]; /* Selecteur */
      element = element.childNodes[1]; /* Récepteur */
@@ -207,14 +207,14 @@ function atuiKernel_ToolsSelectorDisplay(element,wish)
      }
 }
 
-function atuiKernel_ToolsSelector(cible)
+function atuiKernel_ToolsContextmenu(cible)
 {
-     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsSelectorDisplay(this,true);});
-     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsSelectorDisplay(this,false);});     
+     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsContextmenuDisplay(this,true);});
+     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
 }
 
-atuiKernel_ToolsSelector("atuiKernel_NavigatorImg");
-atuiKernel_ToolsSelector("atuiKernel_NavigatorText");
+atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg");
+atuiKernel_ToolsContextmenu("atuiKernel_NavigatorText");
 
 
 /* Global Panel */

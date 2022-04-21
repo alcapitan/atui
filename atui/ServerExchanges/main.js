@@ -5,5 +5,5 @@ Version : developer branch
 */
 
 
-atuiKernel_ToolsSelector("atuiServerExchanges_AccountActions");
+atuiKernel_ToolsContextmenu("atuiServerExchanges_AccountActions");
 
