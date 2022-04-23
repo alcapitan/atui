@@ -1,8 +1,24 @@
-/* Metadata : 
-Auteur (github) : alcapitan
-Nom du module : Kernel ATUI
-Version : developer branch
-*/
+/* Metadata */
+
+const atuiKernel_Metadata = {
+     name : "ATUI",
+     author : "alcapitan (on GitHub)",
+     version : "developer branch",
+     website : "https://github.com/alcapitan/atui",
+}
+atuiKernel_MetadataDisplay(atuiKernel_Metadata);
+
+
+/* Metadata display */
+
+function atuiKernel_MetadataDisplay(infos)
+{
+     console.group("Metadata of " + infos["name"]);
+     console.log("Author : " + infos["author"]);
+     console.log("Version : " + infos["version"]);
+     console.log("Website : " + infos["website"]);
+     console.groupEnd();
+}
 
 /* Height carousel */
 
@@ -16,6 +32,26 @@ if (document.documentElement.clientWidth > 767)
      atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
 }
 atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
+
+
+/* Footer info */
+
+function atuiKernel_FooterLastedited(day,month,year)
+{
+     var atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
+
+     var atuiKernel_FooterInfoBased = document.createElement("a");
+     atuiKernel_FooterInfoBased.setAttribute('src',atuiKernel_Metadata["website"]);
+     atuiKernel_FooterInfoBased.setAttribute('target','_blank');
+     atuiKernel_FooterInfoBased.innerHTML = "Ce site est basé sur " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + ", en savoir plus...";
+     atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
+
+     var atuiKernel_FooterInfoLasteditedText = document.createElement("p");
+     var atuiKernel_FooterInfoLasteditedConvertMonth = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+     month = atuiKernel_FooterInfoLasteditedConvertMonth[month-1];
+     atuiKernel_FooterInfoLasteditedText.innerHTML = 'Dernière modification le ' + day + ' ' + month + ' ' + year;
+     atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText,atuiKernel_FooterInfo.firstChild);
+}
 
 
 /* Notifications */

@@ -1,9 +1,13 @@
-/* Metadata : 
-Auteur (github) : alcapitan
-Nom du module : Server Exchanges
-Version : developer branch
-*/
+/* Metadata */
+
+const atuiServerexchanges_Metadata = {
+     name : "Server Exchanges",
+     author : "alcapitan (on GitHub)",
+     version : "developer branch",
+     website : "https://github.com/alcapitan/atui",
+}
+//atuiKernel_MetadataDisplay(atuiServerexchanges_Metadata);
 
 
-atuiKernel_ToolsContextmenu("atuiServerExchanges_AccountActions");
+atuiKernel_ToolsContextmenu("atuiServerexchanges_AccountActions");
 

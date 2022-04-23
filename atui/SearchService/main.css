@@ -15,13 +15,13 @@ Version : developer branch
 
 @media (min-width : 768px) /* Computers */
 {
-     #atuiSearchServices_Header > div
+     #atuiSearchservices_Header > div
      {
           background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
           backdrop-filter: var(--atuiKernel_Blur);
      }
 
-     #atuiSearchServices_Header > div input
+     #atuiSearchservices_Header > div input
      {
           display: inline;
      }
@@ -29,7 +29,7 @@ Version : developer branch
 
 @media (max-width : 767px) /* Smartphones */
 {
-     #atuiSearchServices_Header > div input
+     #atuiSearchservices_Header > div input
      {
           display : none;
      }
@@ -38,7 +38,7 @@ Version : developer branch
 
 /* Search bar header */
 
-#atuiSearchServices_Header
+#atuiSearchservices_Header
 {
      background-color: transparent;
      border-radius: 10px;
@@ -48,14 +48,14 @@ Version : developer branch
      top : 5px;
 }
 
-#atuiSearchServices_Header > div
+#atuiSearchservices_Header > div
 {
      border-radius: 10px;
      width : 100%;
      height : 40px;
 }
 
-#atuiSearchServices_Header > div form input
+#atuiSearchservices_Header > div form input
 {
      background-color: transparent;
      font-size: 1.5rem;
@@ -70,13 +70,13 @@ Version : developer branch
      color : rgb(128, 128, 128);
 }
 
-#atuiSearchServices_Header > div form input:active
+#atuiSearchservices_Header > div form input:active
 {
      background-color: transparent;
      border : none;
 }
 
-#atuiSearchServices_Header > div form button
+#atuiSearchservices_Header > div form button
 {
      height : 40px;
      width : 40px;
@@ -86,7 +86,7 @@ Version : developer branch
      float : right;
 }
 
-#atuiSearchServices_Header > div form button img
+#atuiSearchservices_Header > div form button img
 {
      height : 30px;
      width : 30px;
@@ -95,18 +95,18 @@ Version : developer branch
 
 /* Extras */
 
-#atuiSearchServices_Header aside
+#atuiSearchservices_Header aside
 {
      display : none;
      margin : 10px;
 }
 
-#atuiSearchServices_Header aside article
+#atuiSearchservices_Header aside article
 {
      margin : 0 10px 20px 10px;
 }
 
-#atuiSearchServices_Header aside article > p
+#atuiSearchservices_Header aside article > p
 {
      margin : 0;
      font-family: var(--atuiKernel_FontsTitle);
@@ -114,12 +114,12 @@ Version : developer branch
      font-size : 1.25rem;
 }
 
-#atuiSearchServices_Header aside article > div
+#atuiSearchservices_Header aside article > div
 {
      margin : 15px;
 }
 
-#atuiSearchServices_Header aside article > div a
+#atuiSearchservices_Header aside article > div a
 {
      color : black;
      display : block;

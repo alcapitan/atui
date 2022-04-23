@@ -5,23 +5,23 @@ Version : developer branch
 */
 
 /* Contents :
-- atuiMediasPlayerAudio
-     - Player / atuiMediasPlayer_Audioplayer
-     - Additionals Informations / atuiMediasPlayer_AudioplayerAdditionals
-     - Music Informations / #atuiMediasPlayer_AudioplayerMusicinformations
-     - Audio Controls / atuiMediasPlayer_AudioplayerControls
-     - Timer / atuiMediasPlayer_AudioplayerTimer
-     - Audio > Basic Buttons / atuiMediasPlayer_AudioplayerButtonsBasic
-     - Advanced Buttons / atuiMediasPlayer_AudioplayerButtonsAdvanced
-     - Audio > Progress Bar / atuiMediasPlayer_AudioplayerProgressbar
-- atuiMediasPlayerVideo
+- atuiMediasplayerAudio
+     - Player / atuiMediasplayer_Audioplayer
+     - Additionals Informations / atuiMediasplayer_AudioplayerAdditionals
+     - Music Informations / #atuiMediasplayer_AudioplayerMusicinformations
+     - Audio Controls / atuiMediasplayer_AudioplayerControls
+     - Timer / atuiMediasplayer_AudioplayerTimer
+     - Audio > Basic Buttons / atuiMediasplayer_AudioplayerButtonsBasic
+     - Advanced Buttons / atuiMediasplayer_AudioplayerButtonsAdvanced
+     - Audio > Progress Bar / atuiMediasplayer_AudioplayerProgressbar
+- atuiMediasplayerVideo
 */
 
 /* Audio */
 
 	/* Player */
 
-#atuiMediasPlayer_Audioplayer
+#atuiMediasplayer_Audioplayer
 {
 	display: none;
 	position : fixed;
@@ -40,13 +40,13 @@ Version : developer branch
 
 	/* Additionals Informations */
 
-#atuiMediasPlayer_AudioplayerAdditionals
+#atuiMediasplayer_AudioplayerAdditionals
 {
 	float : right;
 	display: flex;
 }
 
-#atuiMediasPlayer_AudioplayerAdditionals img
+#atuiMediasplayer_AudioplayerAdditionals img
 {
 	width : 25px;
 	height : 25px;
@@ -55,7 +55,7 @@ Version : developer branch
 	border-radius: 10px;
 }
 
-#atuiMediasPlayer_Audioplayer > img
+#atuiMediasplayer_Audioplayer > img
 {
 	border-radius : 10px;
 	width : 140px;
@@ -63,31 +63,31 @@ Version : developer branch
 	float : left;
 }
 
-#atuiMediasPlayer_AudioplayerMusicinformations
+#atuiMediasplayer_AudioplayerMusicinformations
 {
 	margin-left : 160px;
 }
 
-#atuiMediasPlayer_AudioplayerMusicinformations p
+#atuiMediasplayer_AudioplayerMusicinformations p
 {
 	font-family: var(--atuiKernel_FontsTitle);
 	margin : 10px 0px;
 	width : 50%;
 }
 
-#atuiMediasPlayer_AudioplayerMusicinformations p:first-child
+#atuiMediasplayer_AudioplayerMusicinformations p:first-child
 {
 	font-size: 20px;
 }
 
-#atuiMediasPlayer_AudioplayerMusicinformations p:last-child
+#atuiMediasplayer_AudioplayerMusicinformations p:last-child
 {
 	font-size: 30px;
 	font-weight: bold;
 	color : var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
-#atuiMediasPlayer_AudioplayerControls
+#atuiMediasplayer_AudioplayerControls
 {
 	display: flex;
 	flex-wrap: wrap;
@@ -95,27 +95,27 @@ Version : developer branch
 
 	/* Timer */
 
-#atuiMediasPlayer_AudioplayerTimer
+#atuiMediasplayer_AudioplayerTimer
 {
 	display: flex;
 	margin : 15px;
 	transform: translate(10px, -4px);
 }
 
-#atuiMediasPlayer_AudioplayerTimer p
+#atuiMediasplayer_AudioplayerTimer p
 {
 	margin : 0px;
 	font-size : 16px;
 }
 
-#atuiMediasPlayer_AudioplayerTimer p:nth-child(2)
+#atuiMediasplayer_AudioplayerTimer p:nth-child(2)
 {
 	margin : 0px 5px;
 }
 
 	/* Controls */
 
-#atuiMediasPlayer_AudioplayerControls img
+#atuiMediasplayer_AudioplayerControls img
 {
 	width : 30px;
 	height : 30px;
@@ -123,21 +123,21 @@ Version : developer branch
 	border-radius: 10px;
 }
 
-#atuiMediasPlayer_AudioplayerButtonsBasic, #atuiMediasPlayer_AudioplayerButtonsAdvanced
+#atuiMediasplayer_AudioplayerButtonsBasic, #atuiMediasplayer_AudioplayerButtonsAdvanced
 {
 	margin : 0px 20px;
 	display : flex;
 	align-items: flex-start;
 }
 
-#atuiMediasPlayer_AudioplayerAdditionals img:hover, #atuiMediasPlayer_AudioplayerButtonsBasic img:hover, #atuiMediasPlayer_AudioplayerButtonsAdvanced img:hover
+#atuiMediasplayer_AudioplayerAdditionals img:hover, #atuiMediasplayer_AudioplayerButtonsBasic img:hover, #atuiMediasplayer_AudioplayerButtonsAdvanced img:hover
 {
 	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
 	/* Progress bar */
 
-#atuiMediasPlayer_AudioplayerProgressbar
+#atuiMediasplayer_AudioplayerProgressbar
 {
 	width : 100%;
 	height : 10px;
@@ -148,7 +148,7 @@ Version : developer branch
 	bottom : 0px;
 }
 
-#atuiMediasPlayer_AudioplayerProgressbar div
+#atuiMediasplayer_AudioplayerProgressbar div
 {
 	width : 0;
 	height : 10px;
@@ -160,23 +160,23 @@ Version : developer branch
 
 @media (min-width : 768px) /* Computers */
 {
-	.atuiMediasPlayer_Video
+	.atuiMediasplayer_Video
 	{
 		display: flex;
 		justify-content: center;
 	}
 
-	.atuiMediasPlayer_Video article
+	.atuiMediasplayer_Video article
 	{
 		width : 750px;
 	}
 
-	.atuiMediasPlayer_Video article > aside div:nth-child(2) > div
+	.atuiMediasplayer_Video article > aside div:nth-child(2) > div
 	{
 		margin : 10px 15px;
 	}
 
-	#atuiMediasPlayer_VideoplayerButtonsBasic
+	#atuiMediasplayer_VideoplayerButtonsBasic
 	{
 		flex : 1;
 	}
@@ -184,24 +184,24 @@ Version : developer branch
 
 @media (max-width : 767px) /* Smartphones */
 {
-	#atuiMediasPlayer_VideoplayerTimer
+	#atuiMediasplayer_VideoplayerTimer
 	{
 		margin : 0 10px;
 	}
 }
 
-.atuiMediasPlayer_Video
+.atuiMediasplayer_Video
 {
 	margin : 20px 0;
 }
 
-.atuiMediasPlayer_Video article > video
+.atuiMediasplayer_Video article > video
 {
      border-radius: 10px 10px 0 0;
 	width : 100%;
 }
 
-.atuiMediasPlayer_Video article > aside
+.atuiMediasplayer_Video article > aside
 {
 	margin-top : -4px;
 	border-radius : 0 0 10px 10px;
@@ -211,14 +211,14 @@ Version : developer branch
 	box-shadow: var(--atuiKernel_Shadow);
 }
 
-#atuiMediasPlayer_VideoplayerProgressbar
+#atuiMediasplayer_VideoplayerProgressbar
 {
 	width : 100%;
 	height : 10px;
 	overflow: hidden;
 }
 
-#atuiMediasPlayer_VideoplayerProgressbar div
+#atuiMediasplayer_VideoplayerProgressbar div
 {
 	width : 0;
 	height : 10px;
@@ -226,7 +226,7 @@ Version : developer branch
 	transition: width 500ms;
 }
 
-.atuiMediasPlayer_Video article > aside > div:nth-child(2)
+.atuiMediasplayer_Video article > aside > div:nth-child(2)
 {
 	padding : 5px;
 	display: flex;
@@ -235,20 +235,20 @@ Version : developer branch
 	flex-wrap: wrap;
 }
 
-.atuiMediasPlayer_Video article > aside div:nth-child(2) img
+.atuiMediasplayer_Video article > aside div:nth-child(2) img
 {
 	width : 30px;
 	height : 30px;
 }
 
-.atuiMediasPlayer_Video article > aside div:nth-child(2) > div
+.atuiMediasplayer_Video article > aside div:nth-child(2) > div
 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
 
-.atuiMediasPlayer_Video article > aside div:nth-child(2) div p, .atuiMediasPlayer_Video article > aside div:nth-child(2) div img
+.atuiMediasplayer_Video article > aside div:nth-child(2) div p, .atuiMediasplayer_Video article > aside div:nth-child(2) div img
 {
 	margin : 5px;
 }

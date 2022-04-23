@@ -8,7 +8,7 @@ Version : developer branch
 - Priority
      - atuiKernel_PriorityBrowserCompatibility / Browser Compatibility
      - X / Global StyleSheets
-     - atuiKernel_PriorityLabel / Label
+     - atuiKernel_FooterInfo / Label
 - Responsives
      - Computers > min-width 768px
      - Smartphones > max-width 767px
@@ -125,14 +125,14 @@ a:hover, a:active
 
      /* Plug-in */
 
-#atuiKernel_PriorityLabel
+#atuiKernel_FooterInfo
 {
      text-align : center;
      margin : 10px;
      margin-top : 20px;
 }
 
-#atuiKernel_PriorityLabel *
+#atuiKernel_FooterInfo *
 {
      color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-size : 1.2rem;
