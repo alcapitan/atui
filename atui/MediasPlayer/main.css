@@ -7,7 +7,7 @@ Version : developer branch
 /* Contents :
 - atuiMediasplayerAudio
      - Player / atuiMediasplayer_Audioplayer
-     - Additionals Informations / atuiMediasplayer_AudioplayerAdditionals
+     - Additional Informations / atuiMediasplayer_AudioplayerAdditional
      - Music Informations / #atuiMediasplayer_AudioplayerMusicinformations
      - Audio Controls / atuiMediasplayer_AudioplayerControls
      - Timer / atuiMediasplayer_AudioplayerTimer
@@ -38,15 +38,15 @@ Version : developer branch
 	box-shadow: var(--atuiKernel_Shadow);
 }
 
-	/* Additionals Informations */
+	/* Additional Informations */
 
-#atuiMediasplayer_AudioplayerAdditionals
+#atuiMediasplayer_AudioplayerAdditional
 {
 	float : right;
 	display: flex;
 }
 
-#atuiMediasplayer_AudioplayerAdditionals img
+#atuiMediasplayer_AudioplayerAdditional img
 {
 	width : 25px;
 	height : 25px;
@@ -130,7 +130,7 @@ Version : developer branch
 	align-items: flex-start;
 }
 
-#atuiMediasplayer_AudioplayerAdditionals img:hover, #atuiMediasplayer_AudioplayerButtonsBasic img:hover, #atuiMediasplayer_AudioplayerButtonsAdvanced img:hover
+#atuiMediasplayer_AudioplayerAdditional img:hover, #atuiMediasplayer_AudioplayerButtonsBasic img:hover, #atuiMediasplayer_AudioplayerButtonsAdvanced img:hover
 {
 	background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }

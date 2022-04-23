@@ -80,7 +80,7 @@ atuiMediasplayer_AudioplayerMusic.addEventListener("ended",atuiMediasplayer_Audi
 function atuiMediasplayer_AudioplayerMusicChange(atuiMediasplayer_AudioplayerMusicChosen)
 {
 	atuiMediasplayer_Audioplayer.style.display = "block";
-	if (atuiMediasplayer_AudioplayerMusic.src != atuiMediasplayer_AudioplayerMusicChosen[0]) /* Si la musique n'est pas la même que celle précédement sélectionné */
+	if (atuiMediasplayer_AudioplayerMusic.src != atuiMediasplayer_AudioplayerMusicChosen[0]) /* Si la musique n'est pas la même que celle précédemment sélectionné */
 	{
 		atuiMediasplayer_AudioplayerMusic.src = atuiMediasplayer_AudioplayerMusicChosen[0]; /* Chemin vers la musique */
 		atuiMediasplayer_Audioplayer.childNodes[3].src = atuiMediasplayer_AudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
@@ -107,7 +107,7 @@ function atuiMediasplayer_AudioplayerMusicUpdate()
 	var atuiMediasplayer_AudioplayerMusicDuration = atuiMediasplayer_AudioplayerMusic.duration; // Durée totale de la musique
 	var atuiMediasplayer_AudioplayerMusicListened = atuiMediasplayer_AudioplayerMusic.currentTime; // Temps écoulé de la musique
 	var atuiMediasplayer_AudioplayerMusicPercentlistened = atuiMediasplayer_AudioplayerMusicListened / atuiMediasplayer_AudioplayerMusicDuration;
-	var atuiMediasplayer_AudioplayerMusicPercentlistened  = Math.round(atuiMediasplayer_AudioplayerMusicPercentlistened * 100); // Converti la valeur en poucentage
+	var atuiMediasplayer_AudioplayerMusicPercentlistened  = Math.round(atuiMediasplayer_AudioplayerMusicPercentlistened * 100); // Converti la valeur en pourcentage
 	document.getElementById("atuiMediasplayer_AudioplayerProgressbar").childNodes[1].style.width = atuiMediasplayer_AudioplayerMusicPercentlistened + '%'; // Actualise le width de la progressbar selon le temps écoulé de la musique
 	document.getElementById("atuiMediasplayer_AudioplayerTimer").childNodes[1].textContent = convertTime(atuiMediasplayer_AudioplayerMusicListened);
 	document.getElementById("atuiMediasplayer_AudioplayerTimer").childNodes[5].textContent = convertTime(atuiMediasplayer_AudioplayerMusicDuration);
@@ -212,7 +212,7 @@ function atuiMediasplayer_VideoplayerVideoUpdate()
 	var atuiMediasplayer_VideoplayerVideoDuration = atuiMediasplayer_VideoplayerVideo.duration; // Durée totale de la musique
 	var atuiMediasplayer_VideoplayerVideoListened = atuiMediasplayer_VideoplayerVideo.currentTime; // Temps écoulé de la musique
 	var atuiMediasplayer_VideoplayerVideoPercentlistened = atuiMediasplayer_VideoplayerVideoListened / atuiMediasplayer_VideoplayerVideoDuration;
-	var atuiMediasplayer_VideoplayerVideoPercentlistened  = Math.round(atuiMediasplayer_VideoplayerVideoPercentlistened * 100); // Converti la valeur en poucentage
+	var atuiMediasplayer_VideoplayerVideoPercentlistened  = Math.round(atuiMediasplayer_VideoplayerVideoPercentlistened * 100); // Converti la valeur en pourcentage
 	document.getElementById("atuiMediasplayer_VideoplayerProgressbar").childNodes[1].style.width = atuiMediasplayer_VideoplayerVideoPercentlistened + '%'; // Actualise le width de la progressbar selon le temps écoulé de la musique
 	document.getElementById("atuiMediasplayer_VideoplayerTimer").childNodes[1].textContent = convertTime(atuiMediasplayer_VideoplayerVideoListened);
 	document.getElementById("atuiMediasplayer_VideoplayerTimer").childNodes[5].textContent = convertTime(atuiMediasplayer_VideoplayerVideoDuration);

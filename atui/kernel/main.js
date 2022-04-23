@@ -62,7 +62,7 @@ function atuiKernel_NotificationClose(element)
 }
 
 var atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
-// Types availables : normal, alert, caution, confirmation, information, insertion
+// Types available : normal, alert, caution, confirmation, information, insertion
 function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
 {
      // Boite notification
@@ -98,7 +98,7 @@ function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
      var atuiKernel_NotificationElementText = document.createElement('p');
      atuiKernel_NotificationElementText.textContent = text;
 
-     // Bouttons d'actions
+     // Boutons d'actions
      if (buttons == 'default')
      {
           if (type == 'normal')
@@ -207,7 +207,7 @@ if (!atuiKernel_ToolsSettingsDisplaymodeStatus)
 
 function atuiKernel_ToolsContextmenuDisplay(element,wish)
 {
-     cible = element.childNodes[3]; /* Selecteur */
+     cible = element.childNodes[3]; /* Sélecteur */
      element = element.childNodes[1]; /* Récepteur */
      if (wish == false)
      {
