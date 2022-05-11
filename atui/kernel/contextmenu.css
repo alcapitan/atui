@@ -1,3 +1,5 @@
+/* Global */
+
 .atuiKernel_ToolsContextmenu
 {
      display: flex;
@@ -88,3 +90,4 @@
      margin : 5px 0;
      border : 0;
 }
+

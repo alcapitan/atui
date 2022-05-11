@@ -110,6 +110,7 @@
      font-size: 1.2rem;
 }
 
+
 /* Left block */
 
 #atuiKernel_HeaderBlockLeft
@@ -147,6 +148,7 @@
      text-overflow: ellipsis;
 }
 
+
 /* Center block */
 
 #atuiKernel_HeaderBlockCenter
@@ -154,6 +156,7 @@
      justify-content: center;
      order : 2;
 }
+
 
 /* Right block */
 
@@ -163,3 +166,4 @@
      order: 3;
      justify-content: flex-end;
 }
+

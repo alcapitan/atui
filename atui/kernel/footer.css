@@ -1,4 +1,4 @@
-/* Footer */
+/* Global */
 
 body > footer
 {
@@ -7,6 +7,18 @@ body > footer
      margin-top : 50px;
      padding: 0 5%;
      padding-bottom: 5px;
+}
+
+
+/* Responsives */
+
+@media (max-width : 767px) /* Smartphones */
+{
+     #atuiKernel_ToolsExplorer
+     {
+          margin : 0 5%;
+          justify-content: flex-start;
+     }
 }
 
 

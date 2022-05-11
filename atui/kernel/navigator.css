@@ -84,7 +84,7 @@
 
 /* Global Panel */
 
-#atuiKernel_Header > aside > nav > div aside
+.atuiKernel_NavigatorGlobalpanel aside
 {
      align-items: normal;
      padding : 20px;
@@ -101,28 +101,29 @@
      flex-wrap: wrap;
 }
 
-#atuiKernel_Header > aside > nav > div aside > div
+.atuiKernel_NavigatorGlobalpanel aside > div
 {
      display: block;
      margin : 10px;
      min-width : 20%;
 }
 
-#atuiKernel_Header > aside > nav > div aside > div p
+.atuiKernel_NavigatorGlobalpanel aside > div p
 {
      font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
      font-size: 1.4rem;
 }
 
-#atuiKernel_Header > aside > nav > div aside > div div
+.atuiKernel_NavigatorGlobalpanel aside > div div
 {
      margin : 10px 20px;
 }
 
-#atuiKernel_Header > aside > nav > div aside > div div a
+.atuiKernel_NavigatorGlobalpanel aside > div div a
 {
      display: block;
      margin : 5px;
      font-size : 1.1rem;
 }
+

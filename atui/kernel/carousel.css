@@ -1,3 +1,5 @@
+/* Global */
+
 .atuiKernel_ToolsCarousel
 {
      background-size : cover;
@@ -45,3 +47,4 @@
      font-family : var(--atuiKernel_FontsTitle);
      border-radius: 10px;
 }
+
