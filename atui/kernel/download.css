@@ -1,0 +1,45 @@
+.atuiKernel_SectionDownload
+{
+     border-radius: 10px;
+     border : 2px var(--atuiKernel_ToolsSettingsAccentcolor) solid;
+     margin : 10px;
+     padding: 10px;
+     height : 50px;
+     display: flex;
+     align-items: center;
+     background-color: rgb(230, 230, 230);
+}
+
+.atuiKernel_SectionDownload > img
+{
+     width : 50px;
+     height : 50px;
+     margin-right : 20px;
+}
+
+.atuiKernel_SectionDownload > p
+{
+     font-weight : bold;
+     font-size: 1.2rem;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     margin : 0;
+     flex : 1;
+}
+
+.atuiKernel_SectionDownload div
+{
+     justify-content: flex-end;
+     flex : 0;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.atuiKernel_SectionDownload div img
+{
+     width : 30px;
+     height : 30px;
+     margin : 10px;
+}

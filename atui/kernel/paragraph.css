@@ -1,0 +1,24 @@
+.atuiKernel_SectionText h3
+{
+     font-weight: bold;
+     font-size : 1.5rem;
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     font-family: var(--atuiKernel_FontsTitle);
+     margin : 10px 0;
+}
+
+.atuiKernel_SectionText p
+{
+     font-size : 1rem;
+     margin : 10px;
+}
+
+.atuiKernel_SectionText a
+{
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+.atuiKernel_SectionText a:hover
+{
+     font-weight: bold;
+}

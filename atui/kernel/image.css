@@ -1,0 +1,17 @@
+.atuiKernel_SectionImage
+{
+     padding : 10px;
+}
+
+.atuiKernel_SectionImage img
+{
+     border-radius: 10px;
+}
+     
+.atuiKernel_SectionImage p
+{
+     text-align: center;
+     color: #333333;
+     margin : 5px;
+     font-size: 1rem;
+}

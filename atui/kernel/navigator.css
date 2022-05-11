@@ -1,0 +1,128 @@
+/* Global without Global Panel */
+
+.atuiKernel_NavigatorSectionWithoutimg, .atuiKernel_NavigatorSectionImgbig, .atuiKernel_NavigatorSectionImgsmall
+{
+     display : flex;
+     justify-content: space-around;
+     margin : 15px;
+     flex-wrap: wrap;
+}
+
+.atuiKernel_NavigatorSectionWithoutimg a, .atuiKernel_NavigatorSectionImgbig a, .atuiKernel_NavigatorSectionImgsmall a
+{
+     color : black;
+     text-decoration : none;
+     padding : 10px;
+     border-radius: 10px;
+}
+
+.atuiKernel_NavigatorSectionWithoutimg a:hover,
+.atuiKernel_NavigatorSectionImgbig a:hover,
+.atuiKernel_NavigatorSectionImgsmall a:hover,
+.atuiKernel_NavigatorSectionWithoutimg a:active,
+.atuiKernel_NavigatorSectionImgbig a:active,
+.atuiKernel_NavigatorSectionImgsmall a:active
+{
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+.atuiKernel_NavigatorSectionWithoutimg a p, .atuiKernel_NavigatorSectionImgbig a p, .atuiKernel_NavigatorSectionImgsmall a p
+{
+     text-align : center;
+     margin : 0;
+     font-size : 1.2rem;
+}
+
+/* Without image */
+
+.atuiKernel_NavigatorSectionWithoutimg a p
+{
+     margin : 0 10px;
+}
+
+/* Imgbig */
+
+.atuiKernel_NavigatorSectionImgbig a
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.atuiKernel_NavigatorSectionImgbig a img
+{
+     width : 100px;
+     height : 100px;
+}
+
+.atuiKernel_NavigatorSectionImgbig a p
+{
+     margin : 5px 10px 0 10px;
+}
+
+/* Imgsmall */
+
+.atuiKernel_NavigatorSectionImgsmall a
+{
+     display : flex;
+     align-items: center;
+}
+
+.atuiKernel_NavigatorSectionImgsmall a img
+{
+     width : 30px;
+     height : 30px;
+     margin : 0 5px 0 10px;
+}
+
+.atuiKernel_NavigatorSectionImgsmall a p
+{
+     margin-left : 5px;
+     margin-right : 10px;
+     
+}
+
+/* Global Panel */
+
+#atuiKernel_Header > aside > nav > div aside
+{
+     align-items: normal;
+     padding : 20px;
+     position: absolute;
+     left : 20px;
+     right : 20px;
+     width : calc(100vw - 100px);
+     visibility: hidden;
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     backdrop-filter: var(--atuiKernel_Blur);
+     border-radius: 10px;
+     box-shadow: var(--atuiKernel_Shadow);
+     justify-content: space-around;
+     flex-wrap: wrap;
+}
+
+#atuiKernel_Header > aside > nav > div aside > div
+{
+     display: block;
+     margin : 10px;
+     min-width : 20%;
+}
+
+#atuiKernel_Header > aside > nav > div aside > div p
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-weight: bold;
+     font-size: 1.4rem;
+}
+
+#atuiKernel_Header > aside > nav > div aside > div div
+{
+     margin : 10px 20px;
+}
+
+#atuiKernel_Header > aside > nav > div aside > div div a
+{
+     display: block;
+     margin : 5px;
+     font-size : 1.1rem;
+}

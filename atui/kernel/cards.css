@@ -1,0 +1,318 @@
+/* Global */
+
+.atuiKernel_SectionCardBasic,
+.atuiKernel_SectionCardFlat,
+.atuiKernel_SectionCardOverlayBottom,
+.atuiKernel_SectionCardOverlayTop,
+.atuiKernel_SectionCardMainRow,
+.atuiKernel_SectionCardMainColumn
+{
+     margin : 20px 0;
+     display: flex;
+     flex-wrap : wrap;
+}
+
+.atuiKernel_SectionCardBasic article,
+.atuiKernel_SectionCardFlat article,
+.atuiKernel_SectionCardOverlayBottom article,
+.atuiKernel_SectionCardOverlayTop article,
+.atuiKernel_SectionCardMainRow article,
+.atuiKernel_SectionCardMainColumn article
+{
+     margin : 5px 0;
+}
+
+
+/* Basic */
+
+.atuiKernel_SectionCardBasic article
+{
+     display: flex;
+     flex-direction: column;
+     border : 1px rgb(179, 179, 179) solid;
+     border-radius: 10px;
+     overflow: hidden;
+     background-color: rgb(230, 230, 230);
+}
+
+/* Pourquoi cela a été commenté ?
+.atuiKernel_SectionCardBasic article > div
+{
+     margin : 10px;
+     margin-top : 5px;
+} */
+
+.atuiKernel_SectionCardBasic article *
+{
+     overflow-wrap: break-word;
+}
+
+.atuiKernel_SectionCardBasic article h3
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-size: 1.3rem;
+     margin : 0;
+     padding : 10px 20px;
+     border-bottom : 1px rgb(179, 179, 179) solid;
+     background-color: rgb(204, 204, 204);
+}
+
+.atuiKernel_SectionCardBasic article p
+{
+     margin : 10px 20px;
+     text-align: justify;
+}
+
+.atuiKernel_SectionCardBasic article div
+{
+     margin : 10px;
+     display : flex;
+     flex-wrap: wrap;
+}
+
+.atuiKernel_SectionCardBasic article a
+{
+     margin : 5px 10px;
+     font-size : 1.2rem;
+     font-family : var(--atuiKernel_FontsTitle);
+}
+
+
+/* Flat */
+
+.atuiKernel_SectionCardFlat article
+{
+     display: flex;
+     flex-direction: column;
+     border : 1px rgb(179, 179, 179) solid;
+     border-radius: 10px;
+     overflow: hidden;
+     background-color: rgb(230, 230, 230);
+}
+
+.atuiKernel_SectionCardFlat article > div
+{
+     margin : 10px;
+     margin-top : 5px;
+}
+
+.atuiKernel_SectionCardFlat article > div *
+{
+     overflow-wrap: break-word;
+}
+
+.atuiKernel_SectionCardFlat article > div h3
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-size: 1.3rem;
+     margin : 10px;
+}
+
+.atuiKernel_SectionCardFlat article > div p
+{
+     margin : 10px;
+     text-align: justify;
+}
+
+.atuiKernel_SectionCardFlat article > div div
+{
+     margin : 5px;
+     display : flex;
+     flex-wrap: wrap;
+}
+
+.atuiKernel_SectionCardFlat article > div div a
+{
+     margin : 5px 10px;
+     font-size : 1.2rem;
+     font-family : var(--atuiKernel_FontsTitle);
+}
+
+
+/* Overlay */
+
+.atuiKernel_SectionCardOverlayBottom article,
+.atuiKernel_SectionCardOverlayTop article
+{
+     display: flex;
+     overflow: hidden;
+     border-radius : 10px;
+     min-height: 300px;
+     max-height: 400px;
+     position: relative;
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+}
+
+.atuiKernel_SectionCardOverlayBottom img,
+.atuiKernel_SectionCardOverlayTop img
+{
+     object-fit: cover;
+     width: 100%;
+}
+
+.atuiKernel_SectionCardOverlayBottom article > div,
+.atuiKernel_SectionCardOverlayTop article > div
+{
+     position: absolute;
+     left : 0;
+     right : 0;
+     padding : 15px;
+}
+
+.atuiKernel_SectionCardOverlayBottom article div *,
+.atuiKernel_SectionCardOverlayTop article div *
+{
+     color : white;
+     overflow-wrap: break-word;
+}
+
+.atuiKernel_SectionCardOverlayBottom article div h3,
+.atuiKernel_SectionCardOverlayTop article div h3
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     margin : 0 5px 10px 5px;
+     font-size: 1.3rem;
+}
+
+.atuiKernel_SectionCardOverlayBottom article div p,
+.atuiKernel_SectionCardOverlayTop article div p
+{
+     margin : 10px 5px;
+     text-align: justify;
+}
+
+.atuiKernel_SectionCardOverlayBottom article div div,
+.atuiKernel_SectionCardOverlayTop article div div
+{
+     margin : 5px;
+     display : flex;
+     flex-wrap: wrap;
+}
+
+.atuiKernel_SectionCardOverlayBottom article div div a,
+.atuiKernel_SectionCardOverlayTop article div div a
+{
+     margin : 5px 10px;
+     font-size : 1.2rem;
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     font-family: var(--atuiKernel_FontsTitle);
+     font-weight: bold;
+}
+
+.atuiKernel_SectionCardOverlayBottom article > div
+{
+     bottom : 0;
+     background : linear-gradient(to top, rgba(51,51,51,0.8) 50%,transparent 100%);
+}
+
+.atuiKernel_SectionCardOverlayTop article > div
+{
+     top : 0;
+     background : linear-gradient(to bottom, rgba(51,51,51,0.8) 50%,transparent 100%);
+}
+
+
+/* Main */
+
+.atuiKernel_SectionCardMainRow article,
+.atuiKernel_SectionCardMainColumn article
+{
+     display : flex;
+     border : 1px rgb(179, 179, 179) solid;
+     border-radius: 10px;
+     overflow: hidden;
+     background-color: rgb(230, 230, 230);
+}
+
+.atuiKernel_SectionCardMainRow article img,
+.atuiKernel_SectionCardMainColumn article img
+{
+     margin : 10px;
+     border-radius: 10px;
+     height : fit-content;
+}
+
+.atuiKernel_SectionCardMainRow article > div,
+.atuiKernel_SectionCardMainColumn article > div
+{
+     margin : 10px;
+}
+
+.atuiKernel_SectionCardMainRow article > div *,
+.atuiKernel_SectionCardMainColumn article > div *
+{
+     overflow-wrap: break-word;
+}
+
+.atuiKernel_SectionCardMainRow article > div h3,
+.atuiKernel_SectionCardMainColumn article > div h3
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-size : 1.3rem;
+     margin : 5px;
+}
+
+.atuiKernel_SectionCardMainRow article > div p,
+.atuiKernel_SectionCardMainColumn article > div p
+{
+     margin : 10px 5px;
+     text-align: justify;
+}
+
+.atuiKernel_SectionCardMainRow article > div div,
+.atuiKernel_SectionCardMainColumn article > div div
+{
+     margin : 5px;
+     display : flex;
+     flex-wrap: wrap;
+}
+
+.atuiKernel_SectionCardMainRow article > div div > *,
+.atuiKernel_SectionCardMainColumn article > div div > *
+{
+     margin : 10px;
+     padding : 10px 20px;
+     border : none;
+     border-radius: 10px;
+     font-size : 1.2rem;
+     font-family: var(--atuiKernel_FontsTitle);
+}
+
+.atuiKernel_SectionCardMainRow article > div div > button,
+.atuiKernel_SectionCardMainColumn article > div div > button
+{
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+.atuiKernel_SectionCardMainRow article > div div > button a,
+.atuiKernel_SectionCardMainColumn article > div div > button a
+{
+     color : black;
+     text-decoration: none;
+}
+
+.atuiKernel_SectionCardMainColumn article
+{
+     flex-direction: column;
+}
+
+.atuiKernel_SectionCardMainColumn article img
+{
+     width : calc(100% - 20px);
+}
+
+.atuiKernel_SectionCardMainColumn article > div
+{
+     margin-top : 5px;
+}
+
+.atuiKernel_SectionCardMainColumn article > div h3
+{
+     margin : 10px;
+}
+
+.atuiKernel_SectionCardMainColumn article > div > p
+{
+     margin : 10px;
+}
+

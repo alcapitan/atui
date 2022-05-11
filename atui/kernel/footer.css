@@ -1,0 +1,119 @@
+/* Footer */
+
+body > footer
+{
+     background-color : #c0c0c0;
+     border-top : 3px solid var(--atuiKernel_ToolsSettingsAccentcolor);
+     margin-top : 50px;
+     padding: 0 5%;
+     padding-bottom: 5px;
+}
+
+
+/* Scroll Top */
+
+#atuiKernel_FooterScrolltop
+{
+     position: absolute;
+     left : 50%;
+     transform : translate(-50%, -30px);
+}
+
+#atuiKernel_FooterScrolltop img
+{
+     border-radius : 100%;
+     border : 3px solid var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color: white;
+     width : 50px;
+     height : 50px;
+}
+
+
+/* Contacts */
+
+#atuiKernel_ToolsContact
+{
+     margin : 10px;
+     margin-top : 40px !important;
+}
+
+#atuiKernel_ToolsContact > p
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-weight: bold;
+     font-size: 1.5rem;
+     margin : 0;
+}
+
+#atuiKernel_ToolsContact a
+{
+     width : 50px;
+     height : 50px;
+     margin : 10px;
+     display: inline-block;
+}
+
+#atuiKernel_ToolsContact a img
+{
+     width : 50px;
+     height : 50px;
+}
+
+
+/* Explorer */
+
+#atuiKernel_ToolsExplorer
+{
+     display : flex;
+     flex-wrap : wrap;
+     margin-top : 20px;
+}
+
+#atuiKernel_ToolsExplorer div
+{
+     margin : 10px;
+}
+
+#atuiKernel_ToolsExplorer div p
+{
+     font-weight: bold;
+     font-size : 1.5rem;
+     margin : 15px 0;
+     font-family: var(--atuiKernel_FontsTitle);
+     margin : 0;
+}
+
+#atuiKernel_ToolsExplorer div ul
+{
+     list-style: none;
+     margin : 8px;
+     margin-left : 15px;
+     font-size : 1.1rem;
+     padding-left : 20px;
+}
+
+#atuiKernel_ToolsExplorer div ul li
+{
+     margin : 5px;
+}
+
+#atuiKernel_ToolsExplorer div ul li a
+{
+     color : black;
+}
+
+/* Info */
+
+#atuiKernel_FooterInfo
+{
+     text-align : center;
+     margin : 10px;
+     margin-top : 20px;
+}
+
+#atuiKernel_FooterInfo *
+{
+     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     font-size : 1.2rem;
+}
+

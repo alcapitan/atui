@@ -1,0 +1,90 @@
+.atuiKernel_ToolsContextmenu
+{
+     display: flex;
+     align-items: center;
+}
+
+.atuiKernel_ToolsContextmenu > p
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-size : 1.4rem;
+     margin : 0 15px;
+}
+
+.atuiKernel_ToolsContextmenu > p:hover, .atuiKernel_ToolsContextmenu > p:active
+{
+     font-weight: bold;
+     text-decoration: underline;
+     transition: font-weight 500ms;
+}
+
+.atuiKernel_ToolsContextmenu aside 
+{
+     position : fixed;
+     width : 280px;
+     visibility: hidden;
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     backdrop-filter: var(--atuiKernel_Blur);
+     border-radius: 10px;
+     box-shadow: var(--atuiKernel_Shadow);
+     top : 0;
+     left : 0;
+     z-index : 1;
+}
+
+.atuiKernel_ToolsContextmenu aside a
+{
+     display : block;
+     text-decoration: none;
+}
+
+.atuiKernel_ToolsContextmenu aside a:first-child
+{
+     margin-top : 10px;
+}
+
+.atuiKernel_ToolsContextmenu aside a:last-child
+{
+     margin-bottom : 10px;
+}
+
+.atuiKernel_ToolsContextmenu aside a div:hover
+{
+     background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
+     transition: background-color 500ms;
+}
+
+.atuiKernel_ToolsContextmenu aside a div
+{
+     min-height : 35px;
+     padding : 5px 15px;
+     margin : 0;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+}
+
+.atuiKernel_ToolsContextmenu aside a div p
+{
+     font-size : 1.25rem;
+     margin : 0;
+     color : black;
+     width : calc(100% - 38px);
+     overflow-wrap: anywhere;
+}
+
+.atuiKernel_ToolsContextmenu aside a div img
+{
+     margin : 0 !important;
+     margin-right: 10px !important;
+     width : 28px !important;
+     height : 28px !important;
+}
+
+.atuiKernel_ToolsContextmenu aside hr
+{
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     height : 2px;
+     margin : 5px 0;
+     border : 0;
+}
