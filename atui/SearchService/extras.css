@@ -1,0 +1,33 @@
+/* Global */
+
+#atuiSearchservices_Header aside
+{
+     display : none;
+     margin : 10px;
+}
+
+#atuiSearchservices_Header aside article
+{
+     margin : 0 10px 20px 10px;
+}
+
+#atuiSearchservices_Header aside article > p
+{
+     margin : 0;
+     font-family: var(--atuiKernel_FontsTitle);
+     font-weight : bold;
+     font-size : 1.25rem;
+}
+
+#atuiSearchservices_Header aside article > div
+{
+     margin : 15px;
+}
+
+#atuiSearchservices_Header aside article > div a
+{
+     color : black;
+     display : block;
+     padding : 5px 0;
+}
+
