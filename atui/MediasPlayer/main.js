@@ -36,9 +36,9 @@ const atuiMediasplayer_Metadata = {
 
 function convertTime(time) // Converti les nombres en format de durée
 {
-	var hours = Math.floor(time / 3600);
-	var mins  = Math.floor((time % 3600) / 60);
- 	var secs  = Math.floor(time % 60);
+	let hours = Math.floor(time / 3600);
+	let mins  = Math.floor((time % 3600) / 60);
+ 	let secs  = Math.floor(time % 60);
 	if (secs < 10)
 	{
 		secs = "0" + secs;
@@ -59,7 +59,7 @@ function convertTime(time) // Converti les nombres en format de durée
 
 function getPosition(element)
 {
-	var left = 0;
+	let left = 0;
 	do {
 	    left += element.offsetLeft;
 	} while (element = element.offsetParent);
@@ -70,8 +70,8 @@ function getPosition(element)
 
 /* Audio */
 
-var atuiMediasplayer_Audioplayer = document.getElementById('atuiMediasplayer_Audioplayer'); // Element audioPlayer
-var atuiMediasplayer_AudioplayerMusic = document.getElementById('atuiMediasplayer_AudioplayerMusic'); // Balise HTML <audio> diffusant la musique
+const atuiMediasplayer_Audioplayer = document.getElementById('atuiMediasplayer_Audioplayer'); // Element audioPlayer
+const atuiMediasplayer_AudioplayerMusic = document.getElementById('atuiMediasplayer_AudioplayerMusic'); // Balise HTML <audio> diffusant la musique
 atuiMediasplayer_AudioplayerMusic.addEventListener("timeupdate",atuiMediasplayer_AudioplayerMusicUpdate); // Met à jour le minuteur
 atuiMediasplayer_AudioplayerMusic.addEventListener("ended",atuiMediasplayer_AudioplayerClose); // Ferme AudioPlayer quand la musique est finie
 
@@ -104,10 +104,10 @@ function atuiMediasplayer_AudioplayerClose() // Ferme l'audioplayer
 
 function atuiMediasplayer_AudioplayerMusicUpdate()
 {	
-	var atuiMediasplayer_AudioplayerMusicDuration = atuiMediasplayer_AudioplayerMusic.duration; // Durée totale de la musique
-	var atuiMediasplayer_AudioplayerMusicListened = atuiMediasplayer_AudioplayerMusic.currentTime; // Temps écoulé de la musique
-	var atuiMediasplayer_AudioplayerMusicPercentlistened = atuiMediasplayer_AudioplayerMusicListened / atuiMediasplayer_AudioplayerMusicDuration;
-	var atuiMediasplayer_AudioplayerMusicPercentlistened  = Math.round(atuiMediasplayer_AudioplayerMusicPercentlistened * 100); // Converti la valeur en pourcentage
+	const atuiMediasplayer_AudioplayerMusicDuration = atuiMediasplayer_AudioplayerMusic.duration; // Durée totale de la musique
+	const atuiMediasplayer_AudioplayerMusicListened = atuiMediasplayer_AudioplayerMusic.currentTime; // Temps écoulé de la musique
+	let atuiMediasplayer_AudioplayerMusicPercentlistened = atuiMediasplayer_AudioplayerMusicListened / atuiMediasplayer_AudioplayerMusicDuration;
+	atuiMediasplayer_AudioplayerMusicPercentlistened  = Math.round(atuiMediasplayer_AudioplayerMusicPercentlistened * 100); // Converti la valeur en pourcentage
 	document.getElementById("atuiMediasplayer_AudioplayerProgressbar").childNodes[1].style.width = atuiMediasplayer_AudioplayerMusicPercentlistened + '%'; // Actualise le width de la progressbar selon le temps écoulé de la musique
 	document.getElementById("atuiMediasplayer_AudioplayerTimer").childNodes[1].textContent = convertTime(atuiMediasplayer_AudioplayerMusicListened);
 	document.getElementById("atuiMediasplayer_AudioplayerTimer").childNodes[5].textContent = convertTime(atuiMediasplayer_AudioplayerMusicDuration);
@@ -118,7 +118,7 @@ function atuiMediasplayer_AudioplayerMusicUpdate()
 document.getElementById("atuiMediasplayer_AudioplayerButtonsBasic").childNodes[3].addEventListener("click",atuiMediasplayer_AudioplayerMusicPlayPause);
 function atuiMediasplayer_AudioplayerMusicPlayPause()
 {
-	var atuiMediasplayer_AudioplayerControlsButtonsPlayPause = document.getElementById('atuiMediasplayer_AudioplayerButtonsBasic').childNodes[3];
+	const atuiMediasplayer_AudioplayerControlsButtonsPlayPause = document.getElementById('atuiMediasplayer_AudioplayerButtonsBasic').childNodes[3];
 	if (atuiMediasplayer_AudioplayerMusic.paused)
 	{
  		atuiMediasplayer_AudioplayerMusic.play();
@@ -138,13 +138,13 @@ function atuiMediasplayer_AudioplayerMusicPlayPause()
 document.getElementById("atuiMediasplayer_AudioplayerProgressbar").addEventListener("click",function(){atuiMediasplayer_AudioplayerControlsProgressChange(this);});
 function atuiMediasplayer_AudioplayerControlsProgressChange(control) // Fonctionnalité à totalement nettoyer
 {
-	var atuiMediasplayer_AudioplayerControlsProgress = document.getElementById("atuiMediasplayer_AudioplayerProgressbar");
-	var atuiMediasplayer_AudioplayerControlsProgressX = getPosition(atuiMediasplayer_AudioplayerControlsProgress); // La position absolue de la progressBar
-	var atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
-	var diff = atuiMouseX - atuiMediasplayer_AudioplayerControlsProgressX; 
-	var wrapperWidth = atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
-	var percent = Math.round(((diff / wrapperWidth) * 100) + 51); 
-	var duration = atuiMediasplayer_AudioplayerMusic.duration;
+	const atuiMediasplayer_AudioplayerControlsProgress = document.getElementById("atuiMediasplayer_AudioplayerProgressbar");
+	const atuiMediasplayer_AudioplayerControlsProgressX = getPosition(atuiMediasplayer_AudioplayerControlsProgress); // La position absolue de la progressBar
+	const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
+	const diff = atuiMouseX - atuiMediasplayer_AudioplayerControlsProgressX; 
+	const wrapperWidth = atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
+	const percent = Math.round(((diff / wrapperWidth) * 100) + 51); 
+	const duration = atuiMediasplayer_AudioplayerMusic.duration;
 	atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
 
@@ -158,8 +158,8 @@ atuiKernel_ToolsContextmenu("atuiMediasplayer_AudioplayerInfos");
 
 	/* Je n'aime / Je n'aime pas cette musique */
 
-var atuiMediasplayer_AudioplayerMusicLikeStatus = false;
-var atuiMediasplayer_AudioplayerMusicLikeIcon = document.getElementById("atuiMediasplayer_AudioplayerButtonsAdvanced").childNodes[3];
+let atuiMediasplayer_AudioplayerMusicLikeStatus = false;
+const atuiMediasplayer_AudioplayerMusicLikeIcon = document.getElementById("atuiMediasplayer_AudioplayerButtonsAdvanced").childNodes[3];
 atuiMediasplayer_AudioplayerMusicLikeIcon.addEventListener("click",atuiMediasplayer_AudioplayerMusicLike);
 function atuiMediasplayer_AudioplayerMusicLike()
 {
@@ -179,8 +179,8 @@ function atuiMediasplayer_AudioplayerMusicLike()
 
 	/* Loop */
 
-var atuiMediasplayer_AudioplayerMusicLoopStatus = false;
-var atuiMediasplayer_AudioplayerMusicLoopIcon = document.getElementById("atuiMediasplayer_AudioplayerButtonsAdvanced").childNodes[5];
+let atuiMediasplayer_AudioplayerMusicLoopStatus = false;
+const atuiMediasplayer_AudioplayerMusicLoopIcon = document.getElementById("atuiMediasplayer_AudioplayerButtonsAdvanced").childNodes[5];
 atuiMediasplayer_AudioplayerMusicLoopIcon.addEventListener("click",atuiMediasplayer_AudioplayerMusicLoop);
 function atuiMediasplayer_AudioplayerMusicLoop()
 {
@@ -201,18 +201,18 @@ function atuiMediasplayer_AudioplayerMusicLoop()
 
 /* Video */
 
-var atuiMediasplayer_Videoplayer = document.getElementsByClassName('atuiMediasplayer_Video')[0].childNodes[1]; // Element VideoPlayer
-var atuiMediasplayer_VideoplayerVideo = atuiMediasplayer_Videoplayer.childNodes[1]; // Balise HTML <Video> diffusant la musique
+const atuiMediasplayer_Videoplayer = document.getElementsByClassName('atuiMediasplayer_Video')[0].childNodes[1]; // Element VideoPlayer
+const atuiMediasplayer_VideoplayerVideo = atuiMediasplayer_Videoplayer.childNodes[1]; // Balise HTML <Video> diffusant la musique
 atuiMediasplayer_VideoplayerVideo.addEventListener("timeupdate",atuiMediasplayer_VideoplayerVideoUpdate); // Met à jour le minuteur
 
 	/* Update progress time and bar */
 
 function atuiMediasplayer_VideoplayerVideoUpdate()
 {	
-	var atuiMediasplayer_VideoplayerVideoDuration = atuiMediasplayer_VideoplayerVideo.duration; // Durée totale de la musique
-	var atuiMediasplayer_VideoplayerVideoListened = atuiMediasplayer_VideoplayerVideo.currentTime; // Temps écoulé de la musique
-	var atuiMediasplayer_VideoplayerVideoPercentlistened = atuiMediasplayer_VideoplayerVideoListened / atuiMediasplayer_VideoplayerVideoDuration;
-	var atuiMediasplayer_VideoplayerVideoPercentlistened  = Math.round(atuiMediasplayer_VideoplayerVideoPercentlistened * 100); // Converti la valeur en pourcentage
+	const atuiMediasplayer_VideoplayerVideoDuration = atuiMediasplayer_VideoplayerVideo.duration; // Durée totale de la musique
+	const atuiMediasplayer_VideoplayerVideoListened = atuiMediasplayer_VideoplayerVideo.currentTime; // Temps écoulé de la musique
+	let atuiMediasplayer_VideoplayerVideoPercentlistened = atuiMediasplayer_VideoplayerVideoListened / atuiMediasplayer_VideoplayerVideoDuration;
+	atuiMediasplayer_VideoplayerVideoPercentlistened = Math.round(atuiMediasplayer_VideoplayerVideoPercentlistened * 100); // Converti la valeur en pourcentage
 	document.getElementById("atuiMediasplayer_VideoplayerProgressbar").childNodes[1].style.width = atuiMediasplayer_VideoplayerVideoPercentlistened + '%'; // Actualise le width de la progressbar selon le temps écoulé de la musique
 	document.getElementById("atuiMediasplayer_VideoplayerTimer").childNodes[1].textContent = convertTime(atuiMediasplayer_VideoplayerVideoListened);
 	document.getElementById("atuiMediasplayer_VideoplayerTimer").childNodes[5].textContent = convertTime(atuiMediasplayer_VideoplayerVideoDuration);
@@ -223,7 +223,7 @@ function atuiMediasplayer_VideoplayerVideoUpdate()
 document.getElementById("atuiMediasplayer_VideoplayerButtonsBasic").childNodes[3].addEventListener("click",atuiMediasplayer_VideoplayerVideoPlayPause);
 function atuiMediasplayer_VideoplayerVideoPlayPause()
 {
-	var atuiMediasplayer_VideoplayerControlsButtonsPlayPause = document.getElementById('atuiMediasplayer_VideoplayerButtonsBasic').childNodes[3];
+	const atuiMediasplayer_VideoplayerControlsButtonsPlayPause = document.getElementById('atuiMediasplayer_VideoplayerButtonsBasic').childNodes[3];
 	if (atuiMediasplayer_VideoplayerVideo.paused)
 	{
  		atuiMediasplayer_VideoplayerVideo.play();
@@ -243,13 +243,13 @@ function atuiMediasplayer_VideoplayerVideoPlayPause()
 document.getElementById("atuiMediasplayer_VideoplayerProgressbar").addEventListener("click",function(){atuiMediasplayer_VideoplayerControlsProgressChange(this);});
 function atuiMediasplayer_VideoplayerControlsProgressChange(control) // Fonctionnalité à totalement nettoyer
 {
-	var atuiMediasplayer_VideoplayerControlsProgress = document.getElementById("atuiMediasplayer_VideoplayerProgressbar");
-	var atuiMediasplayer_VideoplayerControlsProgressX = getPosition(atuiMediasplayer_VideoplayerControlsProgress); // La position absolue de la progressBar
-	var atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
-	var diff = atuiMouseX - atuiMediasplayer_VideoplayerControlsProgressX; 
-	var wrapperWidth = atuiMediasplayer_VideoplayerControlsProgress.offsetWidth;
-	var percent = Math.round((diff / wrapperWidth) * 100);    
-	var duration = atuiMediasplayer_VideoplayerVideo.duration;
+	const atuiMediasplayer_VideoplayerControlsProgress = document.getElementById("atuiMediasplayer_VideoplayerProgressbar");
+	const atuiMediasplayer_VideoplayerControlsProgressX = getPosition(atuiMediasplayer_VideoplayerControlsProgress); // La position absolue de la progressBar
+	const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
+	const diff = atuiMouseX - atuiMediasplayer_VideoplayerControlsProgressX; 
+	const wrapperWidth = atuiMediasplayer_VideoplayerControlsProgress.offsetWidth;
+	const percent = Math.round((diff / wrapperWidth) * 100);    
+	const duration = atuiMediasplayer_VideoplayerVideo.duration;
 	atuiMediasplayer_VideoplayerVideo.currentTime = (duration * percent) / 100;
 }
 
@@ -263,8 +263,8 @@ atuiKernel_ToolsContextmenu("atuiMediasplayer_VideoplayerInfos");
 
 	/* Je n'aime / Je n'aime pas cette musique */
 
-var atuiMediasplayer_VideoplayerVideoLikeStatus = false;
-var atuiMediasplayer_VideoplayerVideoLikeIcon = document.getElementById("atuiMediasplayer_VideoplayerButtonsAdvanced").childNodes[3];
+let atuiMediasplayer_VideoplayerVideoLikeStatus = false;
+const atuiMediasplayer_VideoplayerVideoLikeIcon = document.getElementById("atuiMediasplayer_VideoplayerButtonsAdvanced").childNodes[3];
 atuiMediasplayer_VideoplayerVideoLikeIcon.addEventListener("click",atuiMediasplayer_VideoplayerVideoLike);
 function atuiMediasplayer_VideoplayerVideoLike()
 {
@@ -284,8 +284,8 @@ function atuiMediasplayer_VideoplayerVideoLike()
 
 	/* Sound */
 
-var atuiMediasplayer_VideoplayerVideoSoundStatus = true;
-var atuiMediasplayer_VideoplayerVideoSoundIcon = document.getElementById("atuiMediasplayer_VideoplayerButtonsAdvanced").childNodes[5];
+let atuiMediasplayer_VideoplayerVideoSoundStatus = true;
+const atuiMediasplayer_VideoplayerVideoSoundIcon = document.getElementById("atuiMediasplayer_VideoplayerButtonsAdvanced").childNodes[5];
 atuiMediasplayer_VideoplayerVideoSoundIcon.addEventListener("click",atuiMediasplayer_VideoplayerVideoSound);
 function atuiMediasplayer_VideoplayerVideoSound()
 {

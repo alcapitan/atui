@@ -22,13 +22,13 @@ function atuiKernel_MetadataDisplay(infos)
 
 /* Height carousel */
 
-var atuiKernel_Header = document.getElementById("atuiKernel_Header");
-var atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
+const atuiKernel_Header = document.getElementById("atuiKernel_Header");
+const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
 atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
-var atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
+const atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
 if (document.documentElement.clientWidth > 767)
 {
-     var atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderAside.clientHeight * 2);
+     const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderAside.clientHeight * 2);
      atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
 }
 atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
@@ -36,18 +36,17 @@ atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px
 
 /* Footer info */
 
+const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
 function atuiKernel_FooterLastedited(day,month,year)
 {
-     var atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
-
-     var atuiKernel_FooterInfoBased = document.createElement("a");
+     const atuiKernel_FooterInfoBased = document.createElement("a");
      atuiKernel_FooterInfoBased.setAttribute('src',atuiKernel_Metadata["website"]);
      atuiKernel_FooterInfoBased.setAttribute('target','_blank');
      atuiKernel_FooterInfoBased.innerHTML = "Ce site est basé sur " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + ", en savoir plus...";
      atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
 
-     var atuiKernel_FooterInfoLasteditedText = document.createElement("p");
-     var atuiKernel_FooterInfoLasteditedConvertMonth = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+     const atuiKernel_FooterInfoLasteditedText = document.createElement("p");
+     const atuiKernel_FooterInfoLasteditedConvertMonth = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
      month = atuiKernel_FooterInfoLasteditedConvertMonth[month-1];
      atuiKernel_FooterInfoLasteditedText.innerHTML = 'Dernière modification le ' + day + ' ' + month + ' ' + year;
      atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText,atuiKernel_FooterInfo.firstChild);
@@ -61,18 +60,18 @@ function atuiKernel_NotificationClose(element)
      element.remove();
 }
 
-var atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
+const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
 // Types available : normal, alert, caution, confirmation, information, insertion
 function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
 {
      // Boite notification
-     var atuiKernel_NotificationElement = document.createElement('aside');
+     const atuiKernel_NotificationElement = document.createElement('aside');
      atuiKernel_NotificationElement.classList.add("atuiKernel_NotificationElement");
-     var atuiKernel_NotificationElementHeader = document.createElement('div');
-     var atuiKernel_NotificationElementFooter = document.createElement('div');
+     const atuiKernel_NotificationElementHeader = document.createElement('div');
+     const atuiKernel_NotificationElementFooter = document.createElement('div');
 
      // Type
-     var atuiKernel_NotificationElementHeaderTypeImg = document.createElement('img');
+     const atuiKernel_NotificationElementHeaderTypeImg = document.createElement('img');
      if (type != "normal")
      {
           atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src","atui/kernel/medias/" + type + ".png");
@@ -83,19 +82,19 @@ function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
      }
 
      // Son
-     var atuiKernel_NotificationElementSound = new Audio("atui/kernel/medias/notification.mp3");
+     const atuiKernel_NotificationElementSound = new Audio("atui/kernel/medias/notification.mp3");
      
      // Titre
-     var atuiKernel_NotificationElementHeaderTitle = document.createElement('h3');
+     const atuiKernel_NotificationElementHeaderTitle = document.createElement('h3');
      atuiKernel_NotificationElementHeaderTitle.textContent = title;
      
      // Bouton fermer
-     var atuiKernel_NotificationElementHeaderClose = document.createElement('img');
+     const atuiKernel_NotificationElementHeaderClose = document.createElement('img');
      atuiKernel_NotificationElementHeaderClose.setAttribute("src","atui/kernel/medias/close.png");
      atuiKernel_NotificationElementHeaderClose.addEventListener("click",function(){atuiKernel_NotificationClose(atuiKernel_NotificationElement);return(console.log("close"))});
 
      // Texte
-     var atuiKernel_NotificationElementText = document.createElement('p');
+     const atuiKernel_NotificationElementText = document.createElement('p');
      atuiKernel_NotificationElementText.textContent = text;
 
      // Boutons d'actions
@@ -130,7 +129,7 @@ function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
      {
           for (let counter = 0;counter < buttons.length;counter++)
           {
-               var atuiKernel_NotificationElementFooterButton = document.createElement('button');
+               const atuiKernel_NotificationElementFooterButton = document.createElement('button');
                atuiKernel_NotificationElementFooterButton.textContent = buttons[counter];
                atuiKernel_NotificationElementFooterButton.addEventListener("click",function(){atuiKernel_NotificationClose(atuiKernel_NotificationElement);return(actions[counter]);})
                atuiKernel_NotificationElementFooter.appendChild(atuiKernel_NotificationElementFooterButton);
@@ -138,7 +137,7 @@ function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
      }
      else
      {
-          var atuiKernel_NotificationElementFooterInput = document.createElement('input');
+          const atuiKernel_NotificationElementFooterInput = document.createElement('input');
           atuiKernel_NotificationElementFooterInput.setAttribute("type","text");
      }
 
@@ -173,9 +172,9 @@ function atuiKernel_NotificationCookies()
 
 /* Display mode */
 
-var atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
-var atuiKernel_ToolsSettingsDisplaymodeRoot = document.documentElement;
-var atuiKernel_ToolsSettingsDisplaymodeStatus = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+const atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
+const atuiKernel_ToolsSettingsDisplaymodeRoot = document.documentElement;
+let atuiKernel_ToolsSettingsDisplaymodeStatus = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 function atuiKernel_ToolsSettingsDisplaymodeChange()
 {
      if (atuiKernel_ToolsSettingsDisplaymodeStatus)

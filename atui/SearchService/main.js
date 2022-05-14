@@ -19,8 +19,8 @@ function atuiSearchservice_HeaderGenerateinfo(element)
      atuiSearchservice_HeaderGenerateinfoRecentsearchesContainer.textContent = "";
      for (let counter in atuiSearchservice_HeaderGenerateinfoRecentsearches)
      {
-          var atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink = document.createElement("a");
-          var atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlinkText = document.createTextNode(atuiSearchservice_HeaderGenerateinfoRecentsearches[counter][0]);
+          const atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink = document.createElement("a");
+          const atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlinkText = document.createTextNode(atuiSearchservice_HeaderGenerateinfoRecentsearches[counter][0]);
           atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink.appendChild(atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlinkText);
           atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink.setAttribute("href",atuiSearchservice_HeaderGenerateinfoRecentsearches[counter][1]);
           atuiSearchservice_HeaderGenerateinfoRecentsearchesContainer.appendChild(atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink);
@@ -30,8 +30,8 @@ function atuiSearchservice_HeaderGenerateinfo(element)
      atuiSearchservice_HeaderGenerateinfoSuggestedsearchesContainer.textContent = "";
      for (let counter in atuiSearchservice_HeaderGenerateinfoSuggestedsearches)
      {
-          var atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlink = document.createElement("a");
-          var atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlinkText = document.createTextNode(atuiSearchservice_HeaderGenerateinfoSuggestedsearches[counter][0]);
+          const atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlink = document.createElement("a");
+          const atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlinkText = document.createTextNode(atuiSearchservice_HeaderGenerateinfoSuggestedsearches[counter][0]);
           atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlink.appendChild(atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlinkText);
           atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlink.setAttribute("href",atuiSearchservice_HeaderGenerateinfoRecentsearches[counter][1]);
           atuiSearchservice_HeaderGenerateinfoSuggestedsearchesContainer.appendChild(atuiSearchservice_HeaderGenerateinfoSuggestedsearchesNewlink);
