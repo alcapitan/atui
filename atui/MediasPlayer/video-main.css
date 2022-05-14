@@ -1,0 +1,40 @@
+/* Global */
+
+.atuiMediasplayer_Video
+{
+	margin : 20px 0;
+}
+
+.atuiMediasplayer_Video article > video
+{
+     border-radius: 10px 10px 0 0;
+	width : 100%;
+}
+
+.atuiMediasplayer_Video article > aside
+{
+	margin-top : -4px;
+	border-radius : 0 0 10px 10px;
+	display : flex;
+	flex-direction: column;
+	background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+	box-shadow: var(--atuiKernel_Shadow);
+}
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
+{
+	.atuiMediasplayer_Video
+	{
+		display: flex;
+		justify-content: center;
+	}
+
+	.atuiMediasplayer_Video article
+	{
+		width : 750px;
+	}
+}
+

@@ -1,0 +1,24 @@
+/* Global */
+
+#atuiMediasplayer_AudioplayerAdditionals
+{
+     float : right;
+     display: flex;
+     flex-direction: row;
+}
+
+#atuiMediasplayer_AudioplayerAdditionals > * /* Tout les éléments */
+{
+     width : 49px;
+     height: 49px;
+}
+
+#atuiMediasplayer_AudioplayerAdditionals img /* Icones */
+{
+     width : 25px;
+     height : 25px;
+     margin : 5px;
+     padding : 5px;
+     border-radius: 10px;
+}
+

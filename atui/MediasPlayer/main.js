@@ -79,7 +79,7 @@ atuiMediasplayer_AudioplayerMusic.addEventListener("ended",atuiMediasplayer_Audi
 
 function atuiMediasplayer_AudioplayerMusicChange(atuiMediasplayer_AudioplayerMusicChosen)
 {
-	atuiMediasplayer_Audioplayer.style.display = "block";
+	atuiMediasplayer_Audioplayer.style.display = "flex";
 	if (atuiMediasplayer_AudioplayerMusic.src != atuiMediasplayer_AudioplayerMusicChosen[0]) /* Si la musique n'est pas la même que celle précédemment sélectionné */
 	{
 		atuiMediasplayer_AudioplayerMusic.src = atuiMediasplayer_AudioplayerMusicChosen[0]; /* Chemin vers la musique */

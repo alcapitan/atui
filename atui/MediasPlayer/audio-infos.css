@@ -1,0 +1,42 @@
+/* Global */
+
+#atuiMediasplayer_Audioplayer > aside > div > img  /* Image d'album */
+{
+	border-radius : 10px;
+	width : 150px;
+	height : 150px;
+}
+
+#atuiMediasplayer_Audioplayer > aside > div > div  /* Player sans progressbar et image */
+{
+     flex : 1;
+	margin-left: 20px;
+}
+
+#atuiMediasplayer_AudioplayerMusicinformations
+{
+	display : flex;
+	flex-direction : column;
+	margin : 10px 0;
+	padding-right : 20px;
+}
+
+#atuiMediasplayer_AudioplayerMusicinformations p  /* Artiste & Titre */
+{
+	font-family: var(--atuiKernel_FontsTitle);
+	margin : 5px 0px;
+	overflow-wrap: break-word;
+}
+
+#atuiMediasplayer_AudioplayerMusicinformations p:first-child  /* Artiste */
+{
+	font-size: 20px;
+}
+
+#atuiMediasplayer_AudioplayerMusicinformations p:last-child  /* Titre */
+{
+	font-size: 30px;
+	font-weight: bold;
+	color : var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+

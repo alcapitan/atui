@@ -1,0 +1,49 @@
+/* Global */
+
+#atuiMediasplayer_AudioplayerControls
+{
+	display: flex;
+     flex-direction: row;
+	flex-wrap: wrap;
+     align-items: center;
+}
+
+#atuiMediasplayer_AudioplayerControls > *  /* Tout les éléments */
+{
+     margin : 0 20px;
+     display: flex;
+     flex-direction: row;
+}
+
+#atuiMediasplayer_AudioplayerControls img
+{
+     width : 30px;
+     height : 30px;
+     padding : 5px 10px;
+     border-radius: 10px;
+}
+
+
+/* Timer */
+
+#atuiMediasplayer_AudioplayerTimer p
+{
+     margin : 0px;
+     font-size : 16px;
+}
+
+#atuiMediasplayer_AudioplayerTimer p:nth-child(2) /* Tiret */
+{
+     margin : 0px 10px;
+}
+
+
+/* Boutons */
+
+#atuiMediasplayer_AudioplayerAdditionals img:hover,
+#atuiMediasplayer_AudioplayerButtonsBasic img:hover,
+#atuiMediasplayer_AudioplayerButtonsAdvanced img:hover
+{
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+

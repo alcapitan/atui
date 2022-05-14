@@ -1,0 +1,54 @@
+/* Global */
+
+.atuiMediasplayer_VideoplayerControls
+{
+	padding : 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.atuiMediasplayer_VideoplayerControls img
+{
+	width : 30px;
+	height : 30px;
+}
+
+.atuiMediasplayer_VideoplayerControls > div
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.atuiMediasplayer_VideoplayerControls div p,
+.atuiMediasplayer_VideoplayerControls div img
+{
+	margin : 5px;
+}
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
+{
+	.atuiMediasplayer_VideoplayerControls > div
+	{
+		margin : 10px 15px;
+	}
+
+	#atuiMediasplayer_VideoplayerButtonsBasic
+	{
+		flex : 1;
+	}
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+	#atuiMediasplayer_VideoplayerTimer
+	{
+		margin : 0 10px;
+	}
+}
+

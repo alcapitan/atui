@@ -1,0 +1,31 @@
+/* Global */
+
+#atuiMediasplayer_Audioplayer /* Conteneur */
+{
+     width : 100vw;
+     position : fixed;
+     bottom : 15px;
+     z-index : 10;
+     display : none;
+     justify-content : center;
+}
+
+#atuiMediasplayer_Audioplayer > aside /* Player */
+{
+     display: flex;
+     flex-direction: column;
+     background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     backdrop-filter : var(--atuiKernel_Blur);
+     border-radius : 10px;
+     box-shadow: var(--atuiKernel_Shadow);
+     width : 90vw;
+     padding : 10px;
+     padding-bottom: 20px;
+}
+
+#atuiMediasplayer_Audioplayer > aside > div /* Player sans progressbar */
+{
+     display: flex;
+     flex-direction: row;
+}
+

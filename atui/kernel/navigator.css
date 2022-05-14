@@ -33,12 +33,14 @@
      font-size : 1.2rem;
 }
 
+
 /* Without image */
 
 .atuiKernel_NavigatorSectionWithoutimg a p
 {
      margin : 0 10px;
 }
+
 
 /* Imgbig */
 
@@ -59,6 +61,7 @@
 {
      margin : 5px 10px 0 10px;
 }
+
 
 /* Imgsmall */
 
@@ -81,6 +84,7 @@
      margin-right : 10px;
      
 }
+
 
 /* Global Panel */
 
