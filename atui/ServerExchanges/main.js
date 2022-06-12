@@ -1,5 +1,3 @@
-import {atuiKernel_ToolsContextmenu} from '../kernel/main.js';
-
 /* Metadata */
 
 const atuiServerexchanges_Metadata = {

@@ -68,7 +68,7 @@
                          <div id="atuiKernel_HeaderBlockCenter">
                               <nav id="atuiSearchservices_Header">
                                    <div>
-                                        <form action="" method="post">
+                                        <form action="" method="post"><!-- Lier le fichier PHP dans action -->
                                              <input name="atuiSearchservices_Request" type="text" placeholder="Faites une recherche...">
                                              <button type="submit">
                                                   <img src="atui/SearchService/medias/search.png" alt="Rechercher">
@@ -267,8 +267,8 @@
                <div class="atuiMediasplayer_Video">
                     <article>
                          <video>
-                              <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
-                              Votre navigateur web ne peut pas lire cette vidéo. Veuillez changer de navigateur et revenir sur ce site web.
+                         <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
+                         Votre navigateur web ne peut pas lire cette vidéo. Veuillez changer de navigateur et revenir sur ce site web.
                          </video>
                          <aside>
                          <div id="atuiMediasplayer_VideoplayerProgressbar">
@@ -326,10 +326,7 @@
                                         </aside>
                                    </nav>
                                    <div>
-                                        <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher dans un pop-up">
-                                   </div>
-                                   <div>
-                                        <!--<img src="atui/MediasPlayer/medias/" alt="Afficher en plein-écran">-->
+                                        <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher Audio Player dans Pop-up">
                                    </div>
                               </div>
                          </div>
@@ -687,10 +684,10 @@
 		</div>
           <aside id="atuiKernel_Notification">
           </aside>
-          <script type="module" src="atui/kernel/main.js"></script>
-          <script type="module" src="atui/MediasPlayer/main.js"></script>
-          <script type="module" src="atui/ServerExchanges/main.js"></script>
-          <script type="module" src="atui/SearchService/main.js"></script>
-          <script type="module" src="patch/main.js"></script>
+          <script src="atui/kernel/main.js"></script>
+          <script src="atui/MediasPlayer/main.js"></script>
+          <script src="atui/ServerExchanges/main.js"></script>
+          <script src="atui/SearchService/main.js"></script>
+          <script src="patch/main.js"></script>
      </body>
 </html>
