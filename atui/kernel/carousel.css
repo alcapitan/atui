@@ -7,7 +7,7 @@
      display: flex;
      align-items: flex-end;
      justify-content: center;
-     background-attachment: fixed;
+     background-attachment: fixed; /* Créé option pour cette propriété / Peut créer bogue sur mobile car changement window height */
 }
 
 .atuiKernel_ToolsCarousel > div

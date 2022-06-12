@@ -43,24 +43,39 @@ function atuiSearchservice_HeaderDevelop(element,wish)
 {
      searchBarHeaderBar = element.childNodes[1];
      searchBarHeaderExtras = element.childNodes[3];
+     console.log(searchBarHeaderBar.childNodes[1].childNodes[2]);
      if (!wish)
      {
-          element.style.position = "relative";
-          element.style.backgroundColor = "transparent";
-          element.style.boxShadow = "none";
           searchBarHeaderBar.style.width = "100%";
           searchBarHeaderBar.style.margin = "0px";
+          if (document.documentElement.clientWidth < 767)
+          {
+               searchBarHeaderBar.style.backgroundColor = "transparent";
+               searchBarHeaderBar.childNodes[1].childNodes[2].style.display = "none";
+          }
           searchBarHeaderExtras.style.display = "none";
+          element.style.position = "initial";
+          element.style.left = "";
+          element.style.right = "";
+          element.style.backgroundColor = "transparent";
+          element.style.boxShadow = "none";
      }
      else
      {
-          element.style.position = "absolute";
-          element.style.backgroundColor = "var(--atuiKernel_ToolsSettingsAccentcolor)";
-          element.style.boxShadow = "var(--atuiKernel_Shadow)";
           searchBarHeaderBar.style.width = "calc(100% - 20px)";
           searchBarHeaderBar.style.margin = "10px";
-          atuiSearchservice_HeaderGenerateinfo(searchBarHeaderExtras);
           searchBarHeaderExtras.style.display = "block";
+          element.style.position = "absolute";
+          if (document.documentElement.clientWidth < 767)
+          {
+               searchBarHeaderBar.style.backgroundColor = "var(--atuiKernel_ToolsSettingsDisplaymodeColor)";
+               searchBarHeaderBar.childNodes[1].childNodes[2].style.display = "inline";
+               element.style.left = "40px";
+               element.style.right = "40px";
+          }
+          element.style.backgroundColor = "var(--atuiKernel_ToolsSettingsAccentcolor)";
+          element.style.boxShadow = "var(--atuiKernel_Shadow)";
+          atuiSearchservice_HeaderGenerateinfo(searchBarHeaderExtras);
      }
 }
 

@@ -37,8 +37,8 @@ const atuiMediasplayer_Metadata = {
 function convertTime(time) // Converti les nombres en format de durée
 {
 	let hours = Math.floor(time / 3600);
-	let mins  = Math.floor((time % 3600) / 60);
- 	let secs  = Math.floor(time % 60);
+	let mins = Math.floor((time % 3600) / 60);
+ 	let secs = Math.floor(time % 60);
 	if (secs < 10)
 	{
 		secs = "0" + secs;
@@ -107,7 +107,7 @@ function atuiMediasplayer_AudioplayerMusicUpdate()
 	const atuiMediasplayer_AudioplayerMusicDuration = atuiMediasplayer_AudioplayerMusic.duration; // Durée totale de la musique
 	const atuiMediasplayer_AudioplayerMusicListened = atuiMediasplayer_AudioplayerMusic.currentTime; // Temps écoulé de la musique
 	let atuiMediasplayer_AudioplayerMusicPercentlistened = atuiMediasplayer_AudioplayerMusicListened / atuiMediasplayer_AudioplayerMusicDuration;
-	atuiMediasplayer_AudioplayerMusicPercentlistened  = Math.round(atuiMediasplayer_AudioplayerMusicPercentlistened * 100); // Converti la valeur en pourcentage
+	atuiMediasplayer_AudioplayerMusicPercentlistened = Math.round(atuiMediasplayer_AudioplayerMusicPercentlistened * 100); // Converti la valeur en pourcentage
 	document.getElementById("atuiMediasplayer_AudioplayerProgressbar").childNodes[1].style.width = atuiMediasplayer_AudioplayerMusicPercentlistened + '%'; // Actualise le width de la progressbar selon le temps écoulé de la musique
 	document.getElementById("atuiMediasplayer_AudioplayerTimer").childNodes[1].textContent = convertTime(atuiMediasplayer_AudioplayerMusicListened);
 	document.getElementById("atuiMediasplayer_AudioplayerTimer").childNodes[5].textContent = convertTime(atuiMediasplayer_AudioplayerMusicDuration);
@@ -143,7 +143,7 @@ function atuiMediasplayer_AudioplayerControlsProgressChange(control) // Fonction
 	const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	const diff = atuiMouseX - atuiMediasplayer_AudioplayerControlsProgressX; 
 	const wrapperWidth = atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
-	const percent = Math.round(((diff / wrapperWidth) * 100) + 51); 
+	const percent = Math.round(((diff / wrapperWidth) * 100)); 
 	const duration = atuiMediasplayer_AudioplayerMusic.duration;
 	atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
@@ -248,7 +248,7 @@ function atuiMediasplayer_VideoplayerControlsProgressChange(control) // Fonction
 	const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	const diff = atuiMouseX - atuiMediasplayer_VideoplayerControlsProgressX; 
 	const wrapperWidth = atuiMediasplayer_VideoplayerControlsProgress.offsetWidth;
-	const percent = Math.round((diff / wrapperWidth) * 100);    
+	const percent = Math.round((diff / wrapperWidth) * 100);
 	const duration = atuiMediasplayer_VideoplayerVideo.duration;
 	atuiMediasplayer_VideoplayerVideo.currentTime = (duration * percent) / 100;
 }

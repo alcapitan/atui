@@ -10,6 +10,16 @@
 @import url('./paragraph.css');
 @import url('./settings.css');
 
+@font-face {
+     font-family: 'Montserrat';
+     src: url('../../patch/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+     font-family: 'Red Hat Display';
+     src: url('../../patch/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf');
+}
+
 
 /* Global */
 
