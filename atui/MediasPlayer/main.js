@@ -1,3 +1,5 @@
+import {atuiKernel_ToolsContextmenu} from '../kernel/main.js'
+
 /* Metadata */
 
 const atuiMediasplayer_Metadata = {
@@ -143,7 +145,7 @@ function atuiMediasplayer_AudioplayerControlsProgressChange(control) // Fonction
 	const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
 	const diff = atuiMouseX - atuiMediasplayer_AudioplayerControlsProgressX; 
 	const wrapperWidth = atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
-	const percent = Math.round(((diff / wrapperWidth) * 100)); 
+	const percent = Math.round((diff / wrapperWidth) * 100); 
 	const duration = atuiMediasplayer_AudioplayerMusic.duration;
 	atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
