@@ -13,3 +13,5 @@ liked.png > https://img.icons8.com/fluency-systems-filled/48/000000/like.png
 cover.png > https://img.icons8.com/fluency/144/000000/apple-music.png
 sound.png > https://img.icons8.com/fluency-systems-regular/48/000000/medium-volume.png
 nosound.png > https://img.icons8.com/fluency-systems-regular/48/000000/no-audio.png
+collapse.png > https://img.icons8.com/fluency-systems-regular/48/collapse.png
+expand.png > https://img.icons8.com/fluency-systems-regular/48/expand--v3.png
