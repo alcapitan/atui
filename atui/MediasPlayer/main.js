@@ -305,3 +305,25 @@ function atuiMediasplayer_VideoplayerVideoSound()
 	}
 }
 
+
+/* Full screen */
+
+let atuiMediasplayer_VideoplayerVideoFullscreenStatus = false;
+const atuiMediasplayer_VideoplayerVideoFullscreenButton = document.getElementById("atuiMediasplayer_VideoplayerVideoFullscreen").childNodes[1];
+atuiMediasplayer_VideoplayerVideoFullscreenButton.addEventListener("click",atuiMediasplayer_VideoplayerVideoFullscreenChange);
+function atuiMediasplayer_VideoplayerVideoFullscreenChange()
+{
+	if (!atuiMediasplayer_VideoplayerVideoFullscreenStatus)
+	{
+		atuiMediasplayer_VideoplayerVideoFullscreenStatus = true;
+		atuiMediasplayer_VideoplayerVideoFullscreenButton.setAttribute("src","atui/MediasPlayer/medias/collapse.png");
+		atuiMediasplayer_VideoplayerVideoFullscreenButton.setAttribute("alt","Désactiver le mode plein écran");
+	}
+	else
+	{
+		atuiMediasplayer_VideoplayerVideoFullscreenStatus = false;
+		atuiMediasplayer_VideoplayerVideoFullscreenButton.setAttribute("src","atui/MediasPlayer/medias/expand.png");
+		atuiMediasplayer_VideoplayerVideoFullscreenButton.setAttribute("alt","Activer le mode plein écran");
+	}
+}
+
