@@ -40,15 +40,17 @@ const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
 function atuiKernel_FooterLastedited(day,month,year)
 {
      const atuiKernel_FooterInfoBased = document.createElement("a");
-     atuiKernel_FooterInfoBased.setAttribute('src',atuiKernel_Metadata["website"]);
+     atuiKernel_FooterInfoBased.setAttribute('href',atuiKernel_Metadata["website"]);
      atuiKernel_FooterInfoBased.setAttribute('target','_blank');
      atuiKernel_FooterInfoBased.innerHTML = "Ce site est basé sur " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + ", en savoir plus...";
      atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
 
-     const atuiKernel_FooterInfoLasteditedText = document.createElement("p");
+     const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
      const atuiKernel_FooterInfoLasteditedConvertMonth = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
      month = atuiKernel_FooterInfoLasteditedConvertMonth[month-1];
      atuiKernel_FooterInfoLasteditedText.innerHTML = 'Dernière modification le ' + day + ' ' + month + ' ' + year;
+     atuiKernel_FooterInfoLasteditedText.setAttribute('href','./atui/kernel/about.html');
+     atuiKernel_FooterInfoLasteditedText.setAttribute('target','_blank');
      atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText,atuiKernel_FooterInfo.firstChild);
 }
 

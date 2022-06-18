@@ -80,6 +80,7 @@
 #atuiKernel_ToolsContactNewsletter form input[type="email"] /* Input */
 {
      border-radius : var(--atuiKernel_Borderradius);
+     background-color: transparent;
      border : none;
      font-size: 1.1rem;
      margin : 10px;

@@ -87,6 +87,7 @@ body > footer
 
 #atuiKernel_FooterInfo
 {
+     display: block;
      text-align : center;
      margin : 10px;
      margin-top : 20px;
@@ -94,7 +95,9 @@ body > footer
 
 #atuiKernel_FooterInfo *
 {
+     display: block;
      color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-size : 1.2rem;
+     margin : 10px;
 }
 
