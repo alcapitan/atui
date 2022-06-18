@@ -141,9 +141,9 @@ function atuiMediasplayer_AudioplayerControlsProgressChange(control) // Fonction
 	const atuiMediasplayer_AudioplayerControlsProgress = document.getElementById("atuiMediasplayer_AudioplayerProgressbar");
 	const atuiMediasplayer_AudioplayerControlsProgressX = getPosition(atuiMediasplayer_AudioplayerControlsProgress); // La position absolue de la progressBar
 	const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
-	const diff = atuiMouseX - atuiMediasplayer_AudioplayerControlsProgressX; 
+	const diff = atuiMouseX - atuiMediasplayer_AudioplayerControlsProgressX + 10; /* +10 est très important car empêche décalage/temps à cause du transform X dans CSS */
 	const wrapperWidth = atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
-	const percent = Math.round(((diff / wrapperWidth) * 100)); 
+	const percent = Math.round((diff / wrapperWidth) * 100); 
 	const duration = atuiMediasplayer_AudioplayerMusic.duration;
 	atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
