@@ -27,7 +27,7 @@
      visibility: hidden;
      background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      backdrop-filter: var(--atuiKernel_Blur);
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
      top : 0;
      left : 0;

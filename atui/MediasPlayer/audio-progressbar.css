@@ -4,7 +4,7 @@
 {
      width : 100%;
      height : 10px;
-     border-radius: 0 0 10px 10px;
+     border-radius: 0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
      transform: translateX(-10px);
      overflow: hidden;
      position: absolute;

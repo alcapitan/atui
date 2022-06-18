@@ -15,7 +15,7 @@
      margin : 10px;
      background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      width : 70vw;
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
      padding : 15px 30px;
 }
@@ -58,7 +58,7 @@
 {
      margin : 5px 10px;
      background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
      padding : 10px 20px;
      font-family : var(--atuiKernel_FontsTitle);
      font-size : 1.1rem;
@@ -75,7 +75,7 @@
 .atuiKernel_NotificationElementFooter button
 {
      padding : 10px;
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
      background-color: rgb(230, 230, 230);
      border : none;
      font-size : 1rem;

@@ -2,7 +2,7 @@
 
 .atuiKernel_SectionDownload
 {
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
      border : 2px var(--atuiKernel_ToolsSettingsAccentcolor) solid;
      margin : 10px;
      padding: 10px;

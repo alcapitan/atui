@@ -1,0 +1,115 @@
+/* Global */
+
+#atuiKernel_ToolsContact
+{
+     margin : 10px;
+     margin-top : 40px !important;
+}
+
+#atuiKernel_ToolsContact > p /* Title */
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-weight: bold;
+     font-size: 1.5rem;
+     margin : 0;
+}
+
+#atuiKernel_ToolsContact > * /* Tout les types */
+{
+     display : flex;
+     flex-direction : row;
+     flex-wrap: wrap;
+     margin : 5px;
+}
+
+/* Broad */
+
+#atuiKernel_ToolsContactBroad div /* Element */
+{
+     border-radius : var(--atuiKernel_Borderradius);
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+     display: flex;
+     align-items: center;
+     margin : 5px 10px;
+     padding : 10px;
+     padding-right: 15px;
+}
+
+#atuiKernel_ToolsContactBroad div > img /* Icon */
+{
+     border-radius : var(--atuiKernel_Borderradius);
+     width : 30px;
+     height : 30px;
+}
+
+#atuiKernel_ToolsContactBroad div > a /* Text */
+{
+     color : black;
+     font-weight: bold;
+     margin-left : 5px;
+}
+
+
+/* Newsletter */
+
+#atuiKernel_ToolsContactNewsletter /* Element */
+{
+     border-radius : var(--atuiKernel_Borderradius);
+     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+     display: flex;
+     align-items: center;
+     margin : 5px 15px;
+     padding : 0 10px;
+     width : 380px;
+}
+
+#atuiKernel_ToolsContactNewsletter > img /* Icons */
+{
+     border-radius : var(--atuiKernel_Borderradius);
+     width : 40px;
+     height : 40px;
+}
+
+#atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */
+{
+     display: flex;
+     align-items: center;
+     flex : 1;
+}
+
+#atuiKernel_ToolsContactNewsletter form input[type="email"] /* Input */
+{
+     border-radius : var(--atuiKernel_Borderradius);
+     border : none;
+     font-size: 1.1rem;
+     margin : 10px;
+     padding : 10px;
+     flex : 1;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+}
+
+#atuiKernel_ToolsContactNewsletter form input[type="image"] /* Send icon */
+{
+     border-radius : var(--atuiKernel_Borderradius);
+     width : 30px;
+     height : 30px;
+}
+
+
+/* Compact */
+
+#atuiKernel_ToolsContactCompact > a
+{
+     width : 50px;
+     height : 50px;
+     margin : 5px 10px;
+}
+
+#atuiKernel_ToolsContactCompact > a > img
+{
+     width : 50px;
+     height : 50px;
+}
+

@@ -45,6 +45,6 @@
      color : white;
      width : 200px;
      font-family : var(--atuiKernel_FontsTitle);
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
 }
 

@@ -7,14 +7,14 @@
 
 .atuiMediasplayer_Video article > video
 {
-     border-radius: 10px 10px 0 0;
+     border-radius : var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0 0;
 	width : 100%;
 }
 
 .atuiMediasplayer_Video article > aside
 {
 	margin-top : -4px;
-	border-radius : 0 0 10px 10px;
+	border-radius : 0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
 	display : flex;
 	flex-direction: column;
 	background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);

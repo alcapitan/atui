@@ -1,5 +1,6 @@
 @import url('./cards.css');
 @import url('./carousel.css');
+@import url('./contacts.css');
 @import url('./contextmenu.css');
 @import url('./download.css');
 @import url('./footer.css');
@@ -25,7 +26,6 @@
 
 :root
 {
-     --atuiKernel_Blur : blur(5px);
      font-size : 16px;
      --atuiKernel_FontsTitle : 'Red Hat Display','Montserrat',Arial;
      --atuiKernel_FontsText : 'Montserrat',Arial;
@@ -35,6 +35,8 @@
      --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
      --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
      --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     --atuiKernel_Blur : blur(5px);
+     --atuiKernel_Borderradius : 10px;
 }
 
 @media (prefers-color-scheme: dark) /* Dark theme */

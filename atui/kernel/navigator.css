@@ -13,7 +13,7 @@
      color : black;
      text-decoration : none;
      padding : 10px;
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
 }
 
 .atuiKernel_NavigatorSectionWithoutimg a:hover,
@@ -99,7 +99,7 @@
      visibility: hidden;
      background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
      backdrop-filter: var(--atuiKernel_Blur);
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
      justify-content: space-around;
      flex-wrap: wrap;

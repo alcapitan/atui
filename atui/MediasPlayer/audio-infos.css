@@ -2,7 +2,7 @@
 
 #atuiMediasplayer_Audioplayer > aside > div > img  /* Image d'album */
 {
-	border-radius : 10px;
+	border-radius : var(--atuiKernel_Borderradius);
 	width : 150px;
 	height : 150px;
 }

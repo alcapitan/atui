@@ -7,7 +7,7 @@
 
 .atuiKernel_SectionImage img
 {
-     border-radius: 10px;
+     border-radius : var(--atuiKernel_Borderradius);
 }
      
 .atuiKernel_SectionImage p
