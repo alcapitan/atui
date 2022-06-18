@@ -11,8 +11,15 @@
 
 .atuiMediasplayer_VideoplayerControls img
 {
+	border-radius: var(--atuiKernel_Borderradius);
+	padding: 5px;
 	width : 30px;
 	height : 30px;
+}
+
+.atuiMediasplayer_VideoplayerControls img:hover
+{
+     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
 .atuiMediasplayer_VideoplayerControls > div
@@ -22,8 +29,7 @@
 	flex-wrap: nowrap;
 }
 
-.atuiMediasplayer_VideoplayerControls div p,
-.atuiMediasplayer_VideoplayerControls div img
+.atuiMediasplayer_VideoplayerControls div p
 {
 	margin : 5px;
 }
