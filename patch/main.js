@@ -1,2 +1,2 @@
 /*atuiKernel_NotificationDisplay('alert','default',["console.log('ok')"],["console.log('annuler')"],'Maecenas dictum felis tristique lectus imperdiet aliquet. ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, turpis vel efficitur dictum, ipsum tortor pharetra velit, at mollis nisl ligula pellentesque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ');*/
-atuiKernel_FooterLastedited(18,6,2022);
+atuiKernel_FooterLastedited(29,6,2022);

@@ -49,16 +49,6 @@
           height: fit-content;
      }
 
-     .atuiKernel_SectionCardMainRow article img
-     {
-          width : 40%;
-     }
-
-     .atuiKernel_SectionCardMainRow article > div
-     {
-          width : 60%;
-     }
-
      .atuiKernel_SectionCardMainRow article > div h3
      {
           margin : 0;

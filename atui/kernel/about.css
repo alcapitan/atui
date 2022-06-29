@@ -2,7 +2,6 @@
 
 body
 {
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
      display: flex;
      justify-content: center;
      align-items: center;
@@ -14,9 +13,6 @@ body > article
 {
      width : 400px;
      padding : 20px;
-     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
-     border-radius: var(--atuiKernel_Borderradius);
-     box-shadow: var(--atuiKernel_Shadow);
      display: flex;
      align-items: center;
      flex-direction: column;
@@ -46,3 +42,22 @@ body > article > a /* Link */
 {
      margin : 5px 0;
 }
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
+{
+     body
+     {
+          background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     }
+
+     body > article
+     {
+          background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+          border-radius: var(--atuiKernel_Borderradius);
+          box-shadow: var(--atuiKernel_Shadow);
+     }
+}
+
