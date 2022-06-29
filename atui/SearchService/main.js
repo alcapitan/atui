@@ -25,7 +25,7 @@ function atuiSearchservice_HeaderGenerateinfo(element)
           atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink.setAttribute("href",atuiSearchservice_HeaderGenerateinfoRecentsearches[counter][1]);
           atuiSearchservice_HeaderGenerateinfoRecentsearchesContainer.appendChild(atuiSearchservice_HeaderGenerateinfoRecentsearchesNewlink);
      }
-     /* Suggested searches */
+     /* Suggested searches */  // Sensible à la casse
      atuiSearchservice_HeaderGenerateinfoSuggestedsearchesContainer = element.childNodes[3].childNodes[3];
      atuiSearchservice_HeaderGenerateinfoSuggestedsearchesContainer.textContent = "";
      for (let counter in atuiSearchservice_HeaderGenerateinfoSuggestedsearches)
@@ -43,7 +43,6 @@ function atuiSearchservice_HeaderDevelop(element,wish)
 {
      searchBarHeaderBar = element.childNodes[1];
      searchBarHeaderExtras = element.childNodes[3];
-     console.log(searchBarHeaderBar.childNodes[1].childNodes[2]);
      if (!wish)
      {
           searchBarHeaderBar.style.width = "100%";
@@ -51,7 +50,7 @@ function atuiSearchservice_HeaderDevelop(element,wish)
           if (document.documentElement.clientWidth < 767)
           {
                searchBarHeaderBar.style.backgroundColor = "transparent";
-               searchBarHeaderBar.childNodes[1].childNodes[2].style.display = "none";
+               searchBarHeaderBar.childNodes[1].childNodes[2].style.display = "none"; // Sensible à la casse
           }
           searchBarHeaderExtras.style.display = "none";
           element.style.position = "initial";
@@ -69,7 +68,7 @@ function atuiSearchservice_HeaderDevelop(element,wish)
           if (document.documentElement.clientWidth < 767)
           {
                searchBarHeaderBar.style.backgroundColor = "var(--atuiKernel_ToolsSettingsDisplaymodeColor)";
-               searchBarHeaderBar.childNodes[1].childNodes[2].style.display = "inline";
+               searchBarHeaderBar.childNodes[1].childNodes[2].style.display = "inline"; // Sensible à la casse
                element.style.left = "40px";
                element.style.right = "40px";
           }

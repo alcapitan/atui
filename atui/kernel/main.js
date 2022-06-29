@@ -250,8 +250,8 @@ function atuiKernel_ToolsContextmenu(cible)
      document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
 }
 
-atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg");
-atuiKernel_ToolsContextmenu("atuiKernel_NavigatorText");
+atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg"); // Sensible à la casse
+atuiKernel_ToolsContextmenu("atuiKernel_NavigatorText"); // Sensible à la casse
 
 
 /* Global Panel */
@@ -283,5 +283,5 @@ function atuiKernel_NavigatorGlobalpanel(cible)
      document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,false);});     
 }
 
-atuiKernel_NavigatorGlobalpanel("atuiKernel_NavigatorGlobalpanel1");
+atuiKernel_NavigatorGlobalpanel("atuiKernel_NavigatorGlobalpanel1"); // Sensible à la casse
 
