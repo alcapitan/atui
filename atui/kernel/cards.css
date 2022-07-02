@@ -140,24 +140,10 @@
      background-color: rgb(204, 204, 204);
 }
 
-.atuiKernel_SectionCardBasic article p
+.atuiKernel_SectionCardBasic article > p
 {
      margin : 10px 20px;
      text-align: justify;
-}
-
-.atuiKernel_SectionCardBasic article div
-{
-     margin : 10px;
-     display : flex;
-     flex-wrap: wrap;
-}
-
-.atuiKernel_SectionCardBasic article a
-{
-     margin : 5px 10px;
-     font-size : 1.2rem;
-     font-family : var(--atuiKernel_FontsTitle);
 }
 
 
@@ -191,24 +177,10 @@
      margin : 10px;
 }
 
-.atuiKernel_SectionCardFlat article > div p
+.atuiKernel_SectionCardFlat article > div > p
 {
      margin : 10px;
      text-align: justify;
-}
-
-.atuiKernel_SectionCardFlat article > div div
-{
-     margin : 5px;
-     display : flex;
-     flex-wrap: wrap;
-}
-
-.atuiKernel_SectionCardFlat article > div div a
-{
-     margin : 5px 10px;
-     font-size : 1.2rem;
-     font-family : var(--atuiKernel_FontsTitle);
 }
 
 
@@ -242,8 +214,20 @@
      padding : 15px;
 }
 
-.atuiKernel_SectionCardOverlayBottom article div *,
-.atuiKernel_SectionCardOverlayTop article div *
+.atuiKernel_SectionCardOverlayBottom article > div
+{
+     bottom : 0;
+     background : linear-gradient(to top, rgba(51,51,51,0.8) 50%,transparent 100%);
+}
+
+.atuiKernel_SectionCardOverlayTop article > div
+{
+     top : 0;
+     background : linear-gradient(to bottom, rgba(51,51,51,0.8) 50%,transparent 100%);
+}
+
+.atuiKernel_SectionCardOverlayBottom article > div > *,
+.atuiKernel_SectionCardOverlayTop article > div > *
 {
      color : white;
      overflow-wrap: break-word;
@@ -257,41 +241,11 @@
      font-size: 1.3rem;
 }
 
-.atuiKernel_SectionCardOverlayBottom article div p,
-.atuiKernel_SectionCardOverlayTop article div p
+.atuiKernel_SectionCardOverlayBottom article > div > p,
+.atuiKernel_SectionCardOverlayTop article > div > p
 {
      margin : 10px 5px;
      text-align: justify;
-}
-
-.atuiKernel_SectionCardOverlayBottom article div div,
-.atuiKernel_SectionCardOverlayTop article div div
-{
-     margin : 5px;
-     display : flex;
-     flex-wrap: wrap;
-}
-
-.atuiKernel_SectionCardOverlayBottom article div div a,
-.atuiKernel_SectionCardOverlayTop article div div a
-{
-     margin : 5px 10px;
-     font-size : 1.2rem;
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
-     font-family: var(--atuiKernel_FontsTitle);
-     font-weight: bold;
-}
-
-.atuiKernel_SectionCardOverlayBottom article > div
-{
-     bottom : 0;
-     background : linear-gradient(to top, rgba(51,51,51,0.8) 50%,transparent 100%);
-}
-
-.atuiKernel_SectionCardOverlayTop article > div
-{
-     top : 0;
-     background : linear-gradient(to bottom, rgba(51,51,51,0.8) 50%,transparent 100%);
 }
 
 
@@ -335,43 +289,11 @@
      margin : 5px;
 }
 
-.atuiKernel_SectionCardMainRow article > div p,
-.atuiKernel_SectionCardMainColumn article > div p
+.atuiKernel_SectionCardMainRow article > div > p,
+.atuiKernel_SectionCardMainColumn article > div > p
 {
      margin : 10px 5px;
      text-align: justify;
-}
-
-.atuiKernel_SectionCardMainRow article > div div,
-.atuiKernel_SectionCardMainColumn article > div div
-{
-     margin : 5px;
-     display : flex;
-     flex-wrap: wrap;
-}
-
-.atuiKernel_SectionCardMainRow article > div div > *,
-.atuiKernel_SectionCardMainColumn article > div div > *
-{
-     margin : 10px;
-     padding : 10px 20px;
-     border : none;
-     border-radius : var(--atuiKernel_Borderradius);
-     font-size : 1.2rem;
-     font-family: var(--atuiKernel_FontsTitle);
-}
-
-.atuiKernel_SectionCardMainRow article > div div > button,
-.atuiKernel_SectionCardMainColumn article > div div > button
-{
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
-}
-
-.atuiKernel_SectionCardMainRow article > div div > button a,
-.atuiKernel_SectionCardMainColumn article > div div > button a
-{
-     color : black;
-     text-decoration: none;
 }
 
 .atuiKernel_SectionCardMainColumn article

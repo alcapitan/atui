@@ -1,6 +1,6 @@
 /* Global */
 
-.atuiKernel_ToolsCarousel
+.atuiKernel_ToolsCarousel /* Surface image */
 {
      background-size : cover;
      background-position : center;
@@ -10,41 +10,35 @@
      background-attachment: fixed; /* Créé option pour cette propriété / Peut créer bogue sur mobile car changement window height */
 }
 
-.atuiKernel_ToolsCarousel > div
+.atuiKernel_ToolsCarousel > div /* Text container */
 {
-     width : 100%;
      padding : 50px 10%;
      background : linear-gradient(to top, rgb(51, 51, 51),transparent);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 }
 
-.atuiKernel_ToolsCarousel div *
+.atuiKernel_ToolsCarousel > div > * /* All elements in text container */
 {
      color : white;
      text-align : center;
-     margin : 0;
-     padding: 10px;
+     margin : 10px;
 }
 
-.atuiKernel_ToolsCarousel div h2
+.atuiKernel_ToolsCarousel > div > h2 /* Title */
 {
      font-family: var(--atuiKernel_FontsTitle);
      font-size: 1.5rem;
 }
 
-.atuiKernel_ToolsCarousel div p
+.atuiKernel_ToolsCarousel > div > p /* Description */
 {
      font-size : 1.1rem;
 }
 
-.atuiKernel_ToolsCarousel div a
+.atuiKernel_ToolsCarousel > div a /* Link */
 {
-     border : none;
-     background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
-     font-size : 1.3rem;
-     padding : 10px 20px;
-     color : white;
-     width : 200px;
-     font-family : var(--atuiKernel_FontsTitle);
-     border-radius : var(--atuiKernel_Borderradius);
+     font-size : 1.2rem;
 }
 

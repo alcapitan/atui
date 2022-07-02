@@ -20,8 +20,9 @@
      color : var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
-.atuiKernel_SectionText a:hover
+.atuiKernel_SectionText a:hover, .atuiKernel_SectionText a:active
 {
      font-weight: bold;
+     text-decoration: underline;
 }
 
