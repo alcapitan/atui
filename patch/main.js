@@ -4,4 +4,5 @@ atuiKernel_FooterLastedited(5,7,2022);
 atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg");
 atuiKernel_ToolsContextmenu("atuiKernel_NavigatorText");
 atuiKernel_NavigatorGlobalpanel("atuiKernel_NavigatorGlobalpanel1");
+document.getElementById('testRunMusic').addEventListener("click",function(){atuiMediasplayer_AudioplayerMusicChange(['patch/musics/santé.mp3','patch/musics/santé.png','Stromaé','Santé','Multitude','2022'])});
 /*atuiKernel_NotificationCookies();*/

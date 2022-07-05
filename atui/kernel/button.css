@@ -7,14 +7,6 @@
 .atuiKernel_ButtonSecondaryDisabled,
 .atuiKernel_ButtonTertiary,
 .atuiKernel_ButtonTertiaryDisabled
-
-.atuiKernel_Button,
-.atuiKernel_ButtonPrimary,
-.atuiKernel_ButtonPrimaryDisabled,
-.atuiKernel_ButtonSecondary,
-.atuiKernel_ButtonSecondaryDisabled,
-.atuiKernel_ButtonTertiary,
-.atuiKernel_ButtonTertiaryDisabled
 {
      margin : 10px;
      padding : 10px 20px;
@@ -23,6 +15,7 @@
      display : inline-flex;
      align-items: center;
      flex-direction: row;
+     cursor : pointer;
 }
 
 .atuiKernel_Button *,

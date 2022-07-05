@@ -1,24 +1,28 @@
 /* Global */
 
-.atuiMediasplayer_Video
+.atuiMediasplayer_Videoplayer /* Container */
 {
 	margin : 20px 0;
 }
 
-.atuiMediasplayer_Video article > video
+.atuiMediasplayer_Videoplayer > article /* Element */
 {
-     border-radius : var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0 0;
+	border : 1px rgb(179, 179, 179) solid;
+	border-radius: var(--atuiKernel_Borderradius);
+	overflow : hidden;
+}
+
+#atuiMediasplayer_VideoplayerVideo /* Video */
+{
 	width : 100%;
 }
 
-.atuiMediasplayer_Video article > aside
+#atuiMediasplayer_VideoplayerDashboard /* Dashboard */
 {
 	margin-top : -4px;
-	border-radius : 0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
 	display : flex;
 	flex-direction: column;
-	background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
-	box-shadow: var(--atuiKernel_Shadow);
+	background-color: rgb(230, 230, 230);
 }
 
 
@@ -26,15 +30,25 @@
 
 @media (min-width : 768px) /* Computers */
 {
-	.atuiMediasplayer_Video
+	.atuiMediasplayer_Videoplayer /* Container */
 	{
 		display: flex;
 		justify-content: center;
 	}
 
-	.atuiMediasplayer_Video article
+	.atuiMediasplayer_Videoplayer article /* Video player */
 	{
 		width : 750px;
 	}
 }
+
+@media print
+{
+     .atuiMediasplayer_Videoplayer /* Container */
+     {
+          display: none;
+     }
+}
+
+
 

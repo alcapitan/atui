@@ -1,42 +1,71 @@
 /* Global */
 
-#atuiMediasplayer_Audioplayer > aside > div > img  /* Image d'album */
-{
-	border-radius : var(--atuiKernel_Borderradius);
-	width : 150px;
-	height : 150px;
-}
-
 #atuiMediasplayer_Audioplayer > aside > div > div  /* Player sans progressbar et image */
 {
      flex : 1;
-	margin-left: 20px;
 }
 
-#atuiMediasplayer_AudioplayerMusicinformations
+#atuiMediasplayer_AudioplayerMusicinformations /* Conteneur avec artiste et titre */
 {
 	display : flex;
 	flex-direction : column;
-	margin : 10px 0;
-	padding-right : 20px;
 }
 
 #atuiMediasplayer_AudioplayerMusicinformations p  /* Artiste & Titre */
 {
 	font-family: var(--atuiKernel_FontsTitle);
 	margin : 5px 0px;
-	overflow-wrap: break-word;
+	overflow-wrap: anywhere;
 }
 
 #atuiMediasplayer_AudioplayerMusicinformations p:first-child  /* Artiste */
 {
-	font-size: 20px;
+	font-size: 1.2rem;
 }
 
 #atuiMediasplayer_AudioplayerMusicinformations p:last-child  /* Titre */
 {
-	font-size: 30px;
+	font-size: 2rem;
 	font-weight: bold;
 	color : var(--atuiKernel_ToolsSettingsAccentcolor);
+}
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
+{
+	#atuiMediasplayer_Audioplayer > aside > div > img  /* Image d'album */
+	{
+		border-radius : var(--atuiKernel_Borderradius);
+		width : 150px;
+		height : 150px;
+	}
+
+	#atuiMediasplayer_Audioplayer > aside > div > div  /* Player sans progressbar et image */
+	{
+		margin-left: 20px;
+	}
+
+	#atuiMediasplayer_AudioplayerMusicinformations /* Conteneur avec artiste et titre */
+	{
+		padding-right : 20px;
+		margin : 10px 0;
+	}
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+	#atuiMediasplayer_AudioplayerPopup, /* Pop-up button */
+	#atuiMediasplayer_Audioplayer > aside > div > img  /* Image d'album */
+	{
+		display: none;
+	}
+
+	#atuiMediasplayer_AudioplayerMusicinformations /* Conteneur avec artiste et titre */
+	{
+		padding-right : 10px;
+		margin : 5px 0 5px 10px;
+	}
 }
 

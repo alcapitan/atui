@@ -1,19 +1,19 @@
 /* Global */
 
-#atuiMediasplayer_AudioplayerAdditionals
+#atuiMediasplayer_AudioplayerAdditionals /* Conteneur */
 {
      float : right;
-     display: flex;
-     flex-direction: row;
+     display : flex;
+     flex-direction : row;
 }
 
 #atuiMediasplayer_AudioplayerAdditionals > * /* Tout les éléments */
 {
-     width : 49px;
-     height: 49px;
+     width : 45px;
+     height : 45px;
 }
 
-#atuiMediasplayer_AudioplayerAdditionals img /* Icones */
+#atuiMediasplayer_AudioplayerAdditionals img /* Icônes */
 {
      width : 25px;
      height : 25px;

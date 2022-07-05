@@ -1,13 +1,13 @@
 /* Global */
 
-#atuiMediasplayer_VideoplayerProgressbar
+#atuiMediasplayer_VideoplayerProgressbar /* Container */
 {
 	width : 100%;
 	height : 10px;
 	overflow: hidden;
 }
 
-#atuiMediasplayer_VideoplayerProgressbar div
+#atuiMediasplayer_VideoplayerProgressbarInside /* Progress bar */
 {
 	width : 0;
 	height : 10px;

@@ -29,3 +29,14 @@
      flex-direction: row;
 }
 
+
+/* Responsives */
+
+@media print
+{
+     #atuiMediasplayer_Audioplayer /* Conteneur */
+     {
+          display: none;
+     }
+}
+

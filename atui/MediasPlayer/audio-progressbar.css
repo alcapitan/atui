@@ -1,6 +1,6 @@
 /* Global */
 
-#atuiMediasplayer_AudioplayerProgressbar
+#atuiMediasplayer_AudioplayerProgressbar /* Container */
 {
      width : 100%;
      height : 10px;
@@ -11,7 +11,7 @@
      bottom : 0;
 }
 
-#atuiMediasplayer_AudioplayerProgressbar > div
+#atuiMediasplayer_AudioplayerProgressbarInside /* Progressbar */
 {
      width : 0;
      height : 10px;

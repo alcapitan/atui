@@ -245,7 +245,7 @@
                          <p>Catégorie</p>
                     </a>
                </nav>
-               <div class="atuiKernel_ButtonPrimary" onclick="atuiMediasplayer_AudioplayerMusicChange(['patch/musics/santé.mp3','patch/musics/santé.png','Stromaé','Santé','Multitude','2022'])">
+               <div class="atuiKernel_ButtonPrimary" id="testRunMusic">
                     <p>Jouer musique</p>
                </div>
                <div>
@@ -444,75 +444,71 @@
                          </div>
                     </article>
                </div>
-               <div class="atuiMediasplayer_Video">
+               <div class="atuiMediasplayer_Videoplayer">
                     <article>
-                         <video>
-                         <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
-                         Votre navigateur web ne peut pas lire cette vidéo. Veuillez changer de navigateur et revenir sur ce site web.
+                         <video id="atuiMediasplayer_VideoplayerVideo">
+                              <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
+                              Navigateur incompatible pour lire cette vidéo.
                          </video>
-                         <aside>
-                         <div id="atuiMediasplayer_VideoplayerProgressbar">
-                              <div></div>
-                         </div>
-                         <div class="atuiMediasplayer_VideoplayerControls">
-                              <div id="atuiMediasplayer_VideoplayerTimer">
-                                   <p>00:00</p>
-                                   <p> - </p>
-                                   <p>00:00</p>
+                         <aside id="atuiMediasplayer_VideoplayerDashboard">
+                              <div id="atuiMediasplayer_VideoplayerProgressbar">
+                                   <div id="atuiMediasplayer_VideoplayerProgressbarInside"></div>
                               </div>
-                              <div id="atuiMediasplayer_VideoplayerButtonsBasic">
-                                   <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédente">
-                                   <img src="atui/MediasPlayer/medias/play.png" alt="Play music">
-                                   <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante">
-                              </div>
-                              <div id="atuiMediasplayer_VideoplayerButtonsAdvanced">
-                                   <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_VideoplayerPlaylists">
-                                        <img src="atui/MediasPlayer/medias/playlist.png" alt="Playlists">
-                                        <aside>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>Playlist</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>Playlist</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>Playlist</p>
-                                                  </div>
-                                             </a>
-                                        </aside>
-                                   </nav>
-                                   <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique">
-                                   <img src="atui/MediasPlayer/medias/sound.png" alt="Son activé">
-                              </div>
-                              <div id="atuiMediasplayer_VideoplayerAdditionals">
-                                   <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_VideoplayerInfos">
-                                        <img src="atui/MediasPlayer/medias/info.png" alt="Infos album">
-                                        <aside id="atuiMediasplayer_VideoplayerMusicinformationsAdvanced">
-                                             <a href="#">
-                                                  <div>
-                                                       <p>License</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>Lien YouTube</p>
-                                                  </div>
-                                             </a>
-                                        </aside>
-                                   </nav>
-                                   <div>
-                                        <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher dans un pop-up">
+                              <div class="atuiMediasplayer_VideoplayerControls">
+                                   <div id="atuiMediasplayer_VideoplayerTimer">
+                                        <p id="atuiMediasplayer_VideoplayerListened">00:00</p>
+                                        <p> - </p>
+                                        <p id="atuiMediasplayer_VideoplayerDuration">00:00</p>
                                    </div>
-                                   <div id="atuiMediasplayer_VideoplayerVideoFullscreen">
-                                        <img src="atui/MediasPlayer/medias/expand.png" alt="Activer le mode plein écran">
+                                   <div id="atuiMediasplayer_VideoplayerButtonsBasic">
+                                        <img src="atui/MediasPlayer/medias/previous.png" alt="Vidéo précédente">
+                                        <img src="atui/MediasPlayer/medias/play.png" alt="Play video" id="atuiMediasplayer_VideoplayerButtonsBasicRun">
+                                        <img src="atui/MediasPlayer/medias/next.png" alt="Vidéo suivante">
+                                   </div>
+                                   <div id="atuiMediasplayer_VideoplayerButtonsAdvanced">
+                                        <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_VideoplayerPlaylists">
+                                             <img src="atui/MediasPlayer/medias/playlist.png" alt="Playlists">
+                                             <aside>
+                                                  <a href="#">
+                                                       <div>
+                                                            <p>Playlist</p>
+                                                       </div>
+                                                  </a>
+                                                  <a href="#">
+                                                       <div>
+                                                            <p>Playlist</p>
+                                                       </div>
+                                                  </a>
+                                                  <a href="#">
+                                                       <div>
+                                                            <p>Playlist</p>
+                                                       </div>
+                                                  </a>
+                                             </aside>
+                                        </nav>
+                                        <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette vidéo" id="atuiMediasplayer_VideoplayerButtonsAdvancedLike">
+                                        <img src="atui/MediasPlayer/medias/sound.png" alt="Son activé" id="atuiMediasplayer_VideoplayerButtonsAdvancedSound">
+                                   </div>
+                                   <div id="atuiMediasplayer_VideoplayerAdditionals">
+                                        <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_VideoplayerInfos">
+                                             <img src="atui/MediasPlayer/medias/info.png" alt="Infos album">
+                                             <aside id="atuiMediasplayer_VideoplayerVideoinformationsAdvanced">
+                                                  <a href="#">
+                                                       <div>
+                                                            <p>License</p>
+                                                       </div>
+                                                  </a>
+                                                  <a href="#">
+                                                       <div>
+                                                            <p>Lien YouTube</p>
+                                                       </div>
+                                                  </a>
+                                             </aside>
+                                        </nav>
+                                        <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher dans un pop-up" id="atuiMediasplayer_VideoplayerButtonsAdditionalsPopup">
+                                        <img src="atui/MediasPlayer/medias/expand.png" alt="Activer le mode plein écran" id="atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen">
                                    </div>
                               </div>
-                         </div>
                          </aside>
                     </article>
                </div>
@@ -893,7 +889,7 @@
                                              </a>
                                         </aside>
                                    </nav>
-                                   <div>
+                                   <div id="atuiMediasplayer_AudioplayerPopup">
                                         <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher Audio Player dans Pop-up">
                                    </div>
                                    <div id="atuiMediasplayer_AudioplayerClose">
@@ -906,13 +902,13 @@
                               </div>
                               <div id="atuiMediasplayer_AudioplayerControls">
                                    <div id="atuiMediasplayer_AudioplayerTimer">
-                                        <p>00:00</p>
+                                        <p id="atuiMediasplayer_AudioplayerTimerListened">00:00</p>
                                         <p>-</p>
-                                        <p>00:00</p>
+                                        <p id="atuiMediasplayer_AudioplayerTimerDuration">00:00</p>
                                    </div>
                                    <div id="atuiMediasplayer_AudioplayerButtonsBasic">
                                         <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédente">
-                                        <img src="atui/MediasPlayer/medias/play.png" alt="Play music">
+                                        <img src="atui/MediasPlayer/medias/play.png" alt="Play music" id="atuiMediasplayer_AudioplayerButtonsBasicRun">
                                         <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante">
                                    </div>
                                    <div id="atuiMediasplayer_AudioplayerButtonsAdvanced">
@@ -936,14 +932,14 @@
                                                   </a>
                                              </aside>
                                         </nav>
-                                        <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique">
-                                        <img src="atui/MediasPlayer/medias/noloop.png" alt="Boucle musique désactivé">
+                                        <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique" id="atuiMediasplayer_AudioplayerButtonsAdvancedLike">
+                                        <img src="atui/MediasPlayer/medias/noloop.png" alt="Boucle musique désactivé" id="atuiMediasplayer_AudioplayerButtonsAdvancedLoop">
                                    </div>
                               </div>
                          </div>
                     </div>
                     <div id="atuiMediasplayer_AudioplayerProgressbar">
-                         <div></div>
+                         <div id="atuiMediasplayer_AudioplayerProgressbarInside"></div>
                     </div>
                </aside>
 		</div>
