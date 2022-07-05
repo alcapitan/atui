@@ -24,15 +24,15 @@ function atuiKernel_MetadataDisplay(infos)
 /* Height carousel */
 
 const atuiKernel_Header = document.getElementById("atuiKernel_Header");
-const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
-atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
-const atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
+const atuiKernel_HeaderBar = document.getElementById("atuiKernel_HeaderBar");
+atuiKernel_Header.style.minHeight = atuiKernel_HeaderBar.clientHeight + "px";
+const atuiKernel_Carousel = document.getElementById("atuiKernel_HeaderCarousel");
 if (document.documentElement.clientWidth > 767)
 {
-     const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderAside.clientHeight * 2);
+     const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderBar.clientHeight * 2);
      atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
 }
-atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
+atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderBar.clientHeight + "px";
 
 
 /* Footer info */
@@ -40,16 +40,18 @@ atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px
 const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
 function atuiKernel_FooterLastedited(day,month,year)
 {
+     /* Based on ATUI */
      const atuiKernel_FooterInfoBased = document.createElement("a");
      atuiKernel_FooterInfoBased.setAttribute('href',atuiKernel_Metadata["website"]);
      atuiKernel_FooterInfoBased.setAttribute('target','_blank');
-     atuiKernel_FooterInfoBased.innerHTML = "Ce site est basé sur " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + ", en savoir plus...";
+     atuiKernel_FooterInfoBased.innerHTML = "Ce site utilise " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + ". ";
      atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
 
+     /* Last modification of this website */
      const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
      const atuiKernel_FooterInfoLasteditedConvertMonth = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
      month = atuiKernel_FooterInfoLasteditedConvertMonth[month-1];
-     atuiKernel_FooterInfoLasteditedText.innerHTML = 'Dernière modification le ' + day + ' ' + month + ' ' + year;
+     atuiKernel_FooterInfoLasteditedText.innerHTML = "Dernière modification le " + day + " " + month + " " + year + ". ";
      atuiKernel_FooterInfoLasteditedText.setAttribute('href','./atui/kernel/about.html');
      atuiKernel_FooterInfoLasteditedText.setAttribute('target','_blank');
      atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText,atuiKernel_FooterInfo.firstChild);
@@ -58,16 +60,11 @@ function atuiKernel_FooterLastedited(day,month,year)
 
 /* Notifications */
 
-function atuiKernel_NotificationClose(element)
-{
-     element.remove();
-}
-
 const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
-// Types available : normal, alert, caution, confirmation, information, insertion
+// Available types : normal, alert, caution, confirmation, information, insertion
 function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
 {
-     // Boite notification
+     // Notification element
      const atuiKernel_NotificationElement = document.createElement('aside');
      atuiKernel_NotificationElement.classList.add("atuiKernel_NotificationElement");
      const atuiKernel_NotificationElementHeader = document.createElement('div');
@@ -84,23 +81,23 @@ function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
           atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
      }
 
-     // Son
+     // Sound
      const atuiKernel_NotificationElementSound = new Audio("atui/kernel/medias/notification.mp3");
      
-     // Titre
+     // Title
      const atuiKernel_NotificationElementHeaderTitle = document.createElement('h3');
      atuiKernel_NotificationElementHeaderTitle.textContent = title;
      
-     // Bouton fermer
+     // Close button
      const atuiKernel_NotificationElementHeaderClose = document.createElement('img');
      atuiKernel_NotificationElementHeaderClose.setAttribute("src","atui/kernel/medias/close.png");
      atuiKernel_NotificationElementHeaderClose.addEventListener("click",function(){atuiKernel_NotificationClose(atuiKernel_NotificationElement);return(console.log("close"))});
 
-     // Texte
+     // Text
      const atuiKernel_NotificationElementText = document.createElement('p');
      atuiKernel_NotificationElementText.textContent = text;
 
-     // Boutons d'actions
+     // Action buttons
      if (buttons == 'default')
      {
           if (type == 'normal')
@@ -163,6 +160,11 @@ function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
      }
 }
 
+function atuiKernel_NotificationClose(element)
+{
+     element.remove();
+}
+
 function atuiKernel_NotificationCookies()
 {
      atuiKernel_NotificationDisplay("cookies",["J'accepte","Je refuse cette fois-ci","Je refuse définitivement","En savoir plus"],["console.log('accept')","console.log('not accept')","console.log('always notaccept')","console.log('doc')"],"Autoriser-vous les cookies ?","Ce site utilise des traceurs collectant des informations sur vous. Selon le RGPD, vous pouvez exprimer votre consentement à l'utilisation des cookies.");
@@ -171,7 +173,7 @@ function atuiKernel_NotificationCookies()
 
 /* Shields */
 
-/* Un nouveau script bientôt */
+// Script en phase de test disponible dans la branche git dev-shields
 
 
 /* Display mode */
@@ -210,9 +212,9 @@ if (window.matchMedia && !atuiKernel_ToolsSettingsDisplaymodeStatus) /* Active a
 
 function atuiKernel_ToolsContextmenuDisplay(element,wish)
 {
-     cible = element.childNodes[3]; /* Sélecteur */
-     element = element.childNodes[1]; /* Récepteur */
-     if (wish == false)
+     cible = element.childNodes[3]; /* Context menu */
+     element = element.childNodes[1]; /* Trigger */
+     if (!wish)
      {
           cible.style.visibility = "hidden";
           cible.style.top = "0";
@@ -254,6 +256,8 @@ function atuiKernel_ToolsContextmenu(cible)
 
 
 /* Global Panel */
+
+// Va bientôt être supprimé au profit d'une fusion avec le script de Context Menu quand il supportera la responsive.
 
 function atuiKernel_NavigatorGlobalpanelDisplay(element,wish)
 {
