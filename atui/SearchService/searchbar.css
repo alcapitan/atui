@@ -1,16 +1,6 @@
 /* Global */
 
-#atuiSearchservices_Header
-{
-     background-color: transparent;
-     border-radius : var(--atuiKernel_Borderradius);
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     top : 5px;
-}
-
-#atuiSearchservices_Header > div
+#atuiSearchservices_HeaderBar /* Searchbar container */
 {
      border-radius : var(--atuiKernel_Borderradius);
      width : 100%;
@@ -18,42 +8,31 @@
      overflow: hidden;
 }
 
-#atuiSearchservices_Header > div form input
+#atuiSearchservices_HeaderBar > form /* HTML form */
 {
-     outline : none;
+     display : flex;
+     align-items: center;
+}
+
+#atuiSearchservices_Input /* Searchbar */
+{
      background-color: transparent;
      border-radius : var(--atuiKernel_Borderradius);
-     border : none !important;
+     color : rgb(128, 128, 128);
      font-size: 1.5rem;
-     padding : 5px;
-     width : calc(100% - 60px);
+     padding : 5px 5px 5px 10px; /* Obligatoire au lieu de margin car erreur visuel sur mobile quand élément développé */
      height: 30px;
-     border: none;
-     padding-left: 10px;
+     flex : 1;
+     border : none;
      overflow: hidden;
      white-space: nowrap;
      text-overflow: ellipsis;
-     color : rgb(128, 128, 128);
+     outline : none;
 }
 
-#atuiSearchservices_Header > div form input:active
+#atuiSearchservices_Submit /* Submit image */
 {
-     background-color: transparent;
-     border : none;
-}
-
-#atuiSearchservices_Header > div form button
-{
-     height : 40px;
-     width : 40px;
-     padding : 0;
-     background-color: transparent;
-     border: none;
-     float : right;
-}
-
-#atuiSearchservices_Header > div form button img
-{
+     margin : 5px 10px 5px 5px;
      height : 30px;
      width : 30px;
 }
@@ -63,13 +42,13 @@
 
 @media (min-width : 768px) /* Computers */
 {
-     #atuiSearchservices_Header > div
+     #atuiSearchservices_HeaderBar /* Searchbar container */
      {
           background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
           backdrop-filter: var(--atuiKernel_Blur);
      }
 
-     #atuiSearchservices_Header > div input
+     #atuiSearchservices_Input /* Searchbar */
      {
           display: inline;
      }
@@ -77,9 +56,22 @@
 
 @media (max-width : 767px) /* Smartphones */
 {
-     #atuiSearchservices_Header > div input
+     #atuiSearchservices_Input /* Searchbar */
      {
           display : none;
+     }
+}
+
+@media (min-width : 768px) and (max-width : 801px) /* Correctif visuel seulement quand il y a searchbar en block center */
+{
+     #atuiKernel_HeaderBlockCenter
+     {
+          order : 3 !important;
+     }
+
+     #atuiKernel_HeaderBlockRight
+     {
+          order : 2 !important;
      }
 }
 

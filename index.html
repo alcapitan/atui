@@ -67,23 +67,21 @@
                          </div>
                          <div id="atuiKernel_HeaderBlockCenter">
                               <nav id="atuiSearchservices_Header">
-                                   <div>
+                                   <div id="atuiSearchservices_HeaderBar">
                                         <form action="" method="post"><!-- Lier le fichier PHP dans action -->
-                                             <input name="atuiSearchservices_Request" type="text" placeholder="Faites une recherche...">
-                                             <button type="submit">
-                                                  <img src="atui/SearchService/medias/search.png" alt="Rechercher">
-                                             </button>
+                                             <input id="atuiSearchservices_Input" name="atuiSearchservices_Request" type="text" placeholder="Faites une recherche..." required>
+                                             <input id="atuiSearchservices_Submit" type="image" src="atui/SearchService/medias/search.png" alt="Rechercher">
                                         </form>
                                    </div>
-                                   <aside>
-                                        <article>
+                                   <aside id="atuiSearchservices_HeaderPropositions">
+                                        <article id="atuiSearchservices_HeaderPropositionsRecents">
                                              <p>Recherches récentes</p>
-                                             <div>
+                                             <div id="atuiSearchservices_HeaderPropositionsRecentsContainer">
                                              </div>
                                         </article>
-                                        <article>
+                                        <article id="atuiSearchservices_HeaderPropositionsSuggested">
                                              <p>Suggestions</p>
-                                             <div>
+                                             <div id="atuiSearchservices_HeaderPropositionsSuggestedContainer">
                                              </div>
                                         </article>
                                    </aside>

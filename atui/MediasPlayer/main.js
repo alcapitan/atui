@@ -6,7 +6,7 @@ const atuiMediasplayer_Metadata = {
      version : "developer branch",
      website : "https://github.com/alcapitan/atui",
 }
-//atuiKernel_MetadataDisplay(atuiMediasplayer_Metadata);
+// atuiKernel_MetadataDisplay(atuiMediasplayer_Metadata);
 
 
 /* Contents : 

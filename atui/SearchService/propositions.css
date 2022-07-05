@@ -1,0 +1,41 @@
+/* Global */
+
+#atuiSearchservices_HeaderPropositions /* Container of propositions */
+{
+     display : none;
+     margin : 10px;
+}
+
+#atuiSearchservices_HeaderPropositionsRecents,
+#atuiSearchservices_HeaderPropositionsSuggested
+/* Containers of propositions recents & suggested */
+{
+     margin : 0 10px 20px 10px;
+}
+
+#atuiSearchservices_HeaderPropositionsRecents > p,
+#atuiSearchservices_HeaderPropositionsSuggested > p
+/* Title of containers */
+{
+     margin : 0;
+     font-family: var(--atuiKernel_FontsTitle);
+     font-weight : bold;
+     font-size : 1.25rem;
+}
+
+#atuiSearchservices_HeaderPropositionsRecentsContainer,
+#atuiSearchservices_HeaderPropositionsSuggestedContainer
+/* Lists of propositions */
+{
+     margin : 15px;
+}
+
+#atuiSearchservices_HeaderPropositionsRecentsContainer > a,
+#atuiSearchservices_HeaderPropositionsSuggestedContainer > a
+/* Propositions */
+{
+     color : black;
+     display : block;
+     padding : 5px 0;
+}
+

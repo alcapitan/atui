@@ -6,7 +6,7 @@ const atuiServerexchanges_Metadata = {
      version : "developer branch",
      website : "https://github.com/alcapitan/atui",
 }
-//atuiKernel_MetadataDisplay(atuiServerexchanges_Metadata);
+// atuiKernel_MetadataDisplay(atuiServerexchanges_Metadata);
 
 
 atuiKernel_ToolsContextmenu("atuiServerexchanges_AccountActions");

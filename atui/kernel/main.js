@@ -20,6 +20,7 @@ function atuiKernel_MetadataDisplay(infos)
      console.groupEnd();
 }
 
+
 /* Height carousel */
 
 const atuiKernel_Header = document.getElementById("atuiKernel_Header");
@@ -166,11 +167,12 @@ function atuiKernel_NotificationCookies()
 {
      atuiKernel_NotificationDisplay("cookies",["J'accepte","Je refuse cette fois-ci","Je refuse définitivement","En savoir plus"],["console.log('accept')","console.log('not accept')","console.log('always notaccept')","console.log('doc')"],"Autoriser-vous les cookies ?","Ce site utilise des traceurs collectant des informations sur vous. Selon le RGPD, vous pouvez exprimer votre consentement à l'utilisation des cookies.");
 }
-/*atuiKernel_NotificationCookies();*/
 
-/* Browser compatibility */
+
+/* Shields */
 
 /* Un nouveau script bientôt */
+
 
 /* Display mode */
 
@@ -197,7 +199,7 @@ function atuiKernel_ToolsSettingsDisplaymodeChange()
      }
 }
 atuiKernel_ToolsSettingsDisplaymodeElement.addEventListener("click",atuiKernel_ToolsSettingsDisplaymodeChange);
-if (!atuiKernel_ToolsSettingsDisplaymodeStatus)
+if (window.matchMedia && !atuiKernel_ToolsSettingsDisplaymodeStatus) /* Active automatiquement le mode sombre */
 {
      atuiKernel_ToolsSettingsDisplaymodeStatus = true;
      atuiKernel_ToolsSettingsDisplaymodeChange()
@@ -250,9 +252,6 @@ function atuiKernel_ToolsContextmenu(cible)
      document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
 }
 
-atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg"); // Sensible à la casse
-atuiKernel_ToolsContextmenu("atuiKernel_NavigatorText"); // Sensible à la casse
-
 
 /* Global Panel */
 
@@ -282,6 +281,4 @@ function atuiKernel_NavigatorGlobalpanel(cible)
      document.getElementById(cible).addEventListener("mouseover",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,true);});
      document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,false);});     
 }
-
-atuiKernel_NavigatorGlobalpanel("atuiKernel_NavigatorGlobalpanel1"); // Sensible à la casse
 
