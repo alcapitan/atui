@@ -7,7 +7,7 @@
 
 .atuiMediasplayer_Videoplayer > article /* Element */
 {
-	border : 1px rgb(179, 179, 179) solid;
+	border : 1px var(--atuiKernel_ColorschemeOB5) solid;
 	border-radius: var(--atuiKernel_Borderradius);
 	overflow : hidden;
 }
@@ -22,7 +22,7 @@
 	margin-top : -4px;
 	display : flex;
 	flex-direction: column;
-	background-color: rgb(230, 230, 230);
+	background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 

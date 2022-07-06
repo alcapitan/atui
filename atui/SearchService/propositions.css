@@ -34,7 +34,7 @@
 #atuiSearchservices_HeaderPropositionsSuggestedContainer > a
 /* Propositions */
 {
-     color : black;
+     color : var(--atuiKernel_ColorschemeOBF);;
      display : block;
      padding : 5px 0;
 }

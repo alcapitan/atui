@@ -23,21 +23,182 @@ function atuiKernel_MetadataDisplay(infos)
 
 /* Height carousel */
 
-const atuiKernel_Header = document.getElementById("atuiKernel_Header");
-const atuiKernel_HeaderBar = document.getElementById("atuiKernel_HeaderBar");
-atuiKernel_Header.style.minHeight = atuiKernel_HeaderBar.clientHeight + "px";
-const atuiKernel_Carousel = document.getElementById("atuiKernel_HeaderCarousel");
-if (document.documentElement.clientWidth > 767)
+try // Ne peut pas fonctionner sous about.html du kernel
 {
-     const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderBar.clientHeight * 2);
-     atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
+     const atuiKernel_Header = document.getElementById("atuiKernel_Header");
+     const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
+     atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
+     const atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
+     if (document.documentElement.clientWidth > 767)
+     {
+          const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + (atuiKernel_HeaderAside.clientHeight * 2);
+          atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
+     }
+     atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
 }
-atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderBar.clientHeight + "px";
+catch{}
 
+/* Display mode */
+
+try
+{
+     const atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
+     atuiKernel_ToolsSettingsDisplaymodeElement.addEventListener("click",atuiKernel_ToolsSettingsDisplaymodeChange);
+     let atuiKernel_ToolsSettingsDisplaymodeStatus = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+     if (!atuiKernel_ToolsSettingsDisplaymodeStatus)
+     {
+          atuiKernel_ToolsSettingsDisplaymodeStatus = true;
+          atuiKernel_ToolsSettingsDisplaymodeChange()
+     }
+}
+catch{}
+
+function atuiKernel_ToolsSettingsDisplaymodeChange()
+{
+     const atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
+     if (atuiKernel_ToolsSettingsDisplaymodeStatus)
+     {
+          atuiKernel_ToolsSettingsDisplaymodeStatus = false;
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src","atui/kernel/medias/dark.png");
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt","Mode sombre activé");
+          atuiKernel_ColorschemeGeneratorAuto(undefined);
+     }
+     else
+     {
+          atuiKernel_ToolsSettingsDisplaymodeStatus = true;
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src","atui/kernel/medias/light.png");
+          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt","Mode clair activé");
+          atuiKernel_ColorschemeGeneratorAuto(undefined);
+     }
+}
+
+
+/* Color scheme */
+
+function atuiKernel_ColorschemeGenerator(base,isDarkMode,wantOpacity)
+{
+     // Diff color
+     diffColor = [];
+     for (let counter = 0;counter < 3;counter++)
+     {
+          diffColor.push(base[counter]);
+     }
+     for (let counter = 0;counter < 3;counter++)
+     {
+          diffColor.push(255 - base[counter]);
+     }
+
+     // Step color
+     stepColor = []
+     for (let counter = 0;counter < 6;counter++)
+     {
+          stepColor.push(diffColor[counter] / 5);
+     }
+     
+     // Color scheme
+     schemeColor = [[0,0,0]];
+     for (let tones = 1;tones < 5;tones++)
+     {
+          tone = [];
+          for (let primary = 0;primary < 3;primary++)
+          {
+               tone.push(Math.round(stepColor[primary]*tones));
+          }
+          schemeColor.push(tone);
+     }
+     schemeColor.push([Math.round(base[0]),Math.round(base[1]),Math.round(base[2])]);
+     for (let tones = 1;tones < 5;tones++)
+     {
+          tone = [];
+          for (let primary = 0;primary < 3;primary++)
+          {
+               tone.push(Math.round(base[primary] + (stepColor[primary + 3] * tones)));
+          }
+          schemeColor.push(tone);
+     }
+     schemeColor.push([255,255,255]);
+     if (isDarkMode)
+     {
+          schemeColor = schemeColor.reverse();
+     }
+     
+     // Apply
+     const root = document.documentElement;
+     for (let variable = 0;variable < 11;variable++)
+     {
+          // Replace 10 by F
+          variableText = variable;
+          if (variable == 10)
+          {
+               variableText = "F";
+          }
+
+          // Set opacity or no
+          if (wantOpacity)
+          {
+               opacity = 0.8;
+               codeColor = 'rgba(' + schemeColor[variable][0] + ',' + schemeColor[variable][1] + ',' + schemeColor[variable][2] + ',' + opacity + ')';
+               opacityText = "B";
+          }
+          else
+          {
+               codeColor = 'rgb(' + schemeColor[variable][0] + ',' + schemeColor[variable][1] + ',' + schemeColor[variable][2] + ')';
+               opacityText = "O";
+          }
+
+          // Is an accent color or no
+          if (base.toString() == [127.5,127.5,127.5].toString())
+          {
+               accentText = "B";
+          }
+          else
+          {
+               accentText = "A";
+          }
+
+          nameColor = '--atuiKernel_Colorscheme' + opacityText + accentText + variableText;
+
+          root.style.setProperty(nameColor,codeColor);
+     }
+}
+
+function atuiKernel_ColorschemeGeneratorPack(bicolor,accent,isDarkMode)
+{
+     if (bicolor)
+     {
+          atuiKernel_ColorschemeGenerator([127.5,127.5,127.5],isDarkMode,false);
+          atuiKernel_ColorschemeGenerator([127.5,127.5,127.5],isDarkMode,true);
+     }
+     if (accent != undefined)
+     {
+          atuiKernel_ColorschemeGenerator(accent,isDarkMode,false);
+          atuiKernel_ColorschemeGenerator(accent,isDarkMode,true);
+     }
+}
+
+let defaultAccent = [230, 51, 0];
+function atuiKernel_ColorschemeGeneratorAuto(accent)
+{
+     if (accent != undefined)
+     {
+          defaultAccent = accent;
+     }
+     if (typeof(atuiKernel_ToolsSettingsDisplaymodeStatus) == 'undefined') // Pour about.html dans kernel
+     {
+          atuiKernel_ToolsSettingsDisplaymodeStatus = true;
+     }
+     atuiKernel_ColorschemeGeneratorPack(true,defaultAccent,atuiKernel_ToolsSettingsDisplaymodeStatus);
+}
+atuiKernel_ColorschemeGeneratorAuto(undefined);
 
 /* Footer info */
 
-const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
+try
+{
+     const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
+}
+catch{}
+
 function atuiKernel_FooterLastedited(day,month,year)
 {
      /* Based on ATUI */
@@ -60,8 +221,17 @@ function atuiKernel_FooterLastedited(day,month,year)
 
 /* Notifications */
 
-const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
-// Available types : normal, alert, caution, confirmation, information, insertion
+function atuiKernel_NotificationClose(element)
+{
+     element.remove();
+}
+
+try
+{
+     const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
+}
+catch{}
+// Types available : normal, alert, caution, confirmation, information, insertion
 function atuiKernel_NotificationDisplay(type,buttons,actions,title,text)
 {
      // Notification element
@@ -174,38 +344,6 @@ function atuiKernel_NotificationCookies()
 /* Shields */
 
 // Script en phase de test disponible dans la branche git dev-shields
-
-
-/* Display mode */
-
-const atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").childNodes[1];
-const atuiKernel_ToolsSettingsDisplaymodeRoot = document.documentElement;
-let atuiKernel_ToolsSettingsDisplaymodeStatus = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-function atuiKernel_ToolsSettingsDisplaymodeChange()
-{
-     if (atuiKernel_ToolsSettingsDisplaymodeStatus)
-     {
-          atuiKernel_ToolsSettingsDisplaymodeStatus = false;
-          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src","atui/kernel/medias/dark.png");
-          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt","Mode sombre activé");
-          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColor","rgb(102,102,102)");
-          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColorOpacity","rgb(102,102,102,0.8)");
-     }
-     else
-     {
-          atuiKernel_ToolsSettingsDisplaymodeStatus = true;
-          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src","atui/kernel/medias/light.png");
-          atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt","Mode clair activé");
-          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColor","rgb(255,255,255)");
-          atuiKernel_ToolsSettingsDisplaymodeRoot.style.setProperty("--atuiKernel_ToolsSettingsDisplaymodeColorOpacity","rgb(255,255,255,0.8)");
-     }
-}
-atuiKernel_ToolsSettingsDisplaymodeElement.addEventListener("click",atuiKernel_ToolsSettingsDisplaymodeChange);
-if (window.matchMedia && !atuiKernel_ToolsSettingsDisplaymodeStatus) /* Active automatiquement le mode sombre */
-{
-     atuiKernel_ToolsSettingsDisplaymodeStatus = true;
-     atuiKernel_ToolsSettingsDisplaymodeChange()
-}
 
 
 /* Context Menu */

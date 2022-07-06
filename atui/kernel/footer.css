@@ -2,8 +2,8 @@
 
 body > footer
 {
-     background-color : #c0c0c0;
-     border-top : 3px solid var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color : var(--atuiKernel_ColorschemeOB2);
+     border-top : 3px solid var(--atuiKernel_ColorschemeOA6);
      margin-top : 50px;
      padding: 0 5%;
      padding-bottom: 5px;
@@ -34,8 +34,8 @@ body > footer
 #atuiKernel_FooterScrolltop img
 {
      border-radius : 100%;
-     border : 3px solid var(--atuiKernel_ToolsSettingsAccentcolor);
-     background-color: white;
+     border : 3px solid var(--atuiKernel_ColorschemeOA6);
+     background-color: var(--atuiKernel_ColorschemeOB1);
      width : 50px;
      height : 50px;
 }
@@ -80,7 +80,7 @@ body > footer
 
 #atuiKernel_ToolsExplorer div ul li a
 {
-     color : black;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 /* Info */
@@ -96,8 +96,8 @@ body > footer
 #atuiKernel_FooterInfo *
 {
      display: block;
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
      font-size : 1.1rem;
+     color : var(--atuiKernel_ColorschemeOA6);
      margin : 10px;
 }
 

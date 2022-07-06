@@ -13,7 +13,7 @@
 .atuiKernel_NotificationElement
 {
      margin : 10px;
-     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     background-color: var(--atuiKernel_ColorschemeBB1);
      width : 70vw;
      border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
@@ -38,7 +38,7 @@
      font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
      font-size : 1.3rem;
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     color : var(--atuiKernel_ColorschemeOA7);
      flex : 1;
 }
 
@@ -57,7 +57,7 @@
 .atuiKernel_NotificationElement div:last-child button
 {
      margin : 5px 10px;
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color: var(--atuiKernel_ColorschemeOA6);
      border-radius : var(--atuiKernel_Borderradius);
      padding : 10px 20px;
      font-family : var(--atuiKernel_FontsTitle);
@@ -76,14 +76,14 @@
 {
      padding : 10px;
      border-radius : var(--atuiKernel_Borderradius);
-     background-color: rgb(230, 230, 230);
+     background-color: var(--atuiKernel_ColorschemeOB1);
      border : none;
      font-size : 1rem;
 }
 
 .atuiKernel_NotificationElementFooterMain
 {
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor) !important;
+     background-color: var(--atuiKernel_ColorschemeOA6) !important;
      font-weight: bold;
      font-family: var(--atuiKernel_FontsTitle);
 }*/

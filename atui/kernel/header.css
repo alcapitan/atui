@@ -2,13 +2,13 @@
 
 #atuiKernel_Header
 {
-     background-color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color : var(--atuiKernel_ColorschemeOA7);
      min-height: 50px;
 }
 
 #atuiKernel_Header > aside
 {
-     background-color : var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     background-color : var(--atuiKernel_ColorschemeBB1);
      backdrop-filter: var(--atuiKernel_Blur);
      min-height : 50px;
      position: fixed;

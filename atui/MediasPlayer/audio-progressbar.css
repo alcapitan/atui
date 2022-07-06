@@ -15,7 +15,7 @@
 {
      width : 0;
      height : 10px;
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color: var(--atuiKernel_ColorschemeOA5);
      transition: width 500ms;
      margin : 0 !important;
      flex : none !important;

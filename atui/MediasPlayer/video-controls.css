@@ -20,7 +20,7 @@
 
 .atuiMediasplayer_VideoplayerControls img:hover /* Tout les icônes au survol */ 
 {
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color: var(--atuiKernel_ColorschemeBA4);
 }
 
 .atuiMediasplayer_VideoplayerControls > div /* Tout les groupes de contrôleurs */

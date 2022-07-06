@@ -59,7 +59,7 @@ function atuiMediasplayer_AudioplayerMusicChange(atuiMediasplayer_AudioplayerMus
 	if (atuiMediasplayer_AudioplayerMusic.src != atuiMediasplayer_AudioplayerMusicChosen[0]) /* Si la musique n'est pas la même que celle précédemment sélectionné */
 	{
 		atuiMediasplayer_AudioplayerMusic.src = atuiMediasplayer_AudioplayerMusicChosen[0]; /* Chemin vers la musique */
-		atuiMediasplayer_Audioplayer.childNodes[3].src = atuiMediasplayer_AudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
+		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsCover").src = atuiMediasplayer_AudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
 		document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[2];
 		document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[3].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[3];
 		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsAdvanced").childNodes[1].childNodes[1].childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[4];

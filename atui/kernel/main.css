@@ -31,28 +31,15 @@
      --atuiKernel_FontsTitle : 'Red Hat Display','Montserrat',Arial;
      --atuiKernel_FontsText : 'Montserrat',Arial;
      --atuiKernel_FontsSpecial : 'Lobster','Montserrat',Arial;
-     --atuiKernel_ToolsSettingsAccentcolor : rgb(230, 51, 0);
-     --atuiKernel_ToolsSettingsAccentcolorOpacity : rgb(230, 51, 0, 0.8);
-     --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(255,255,255);
-     --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(255,255,255,0.8);
      --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
      --atuiKernel_Blur : blur(5px);
      --atuiKernel_Borderradius : 10px;
 }
 
-@media (prefers-color-scheme: dark) /* Dark theme */
-{
-     :root
-     {
-          --atuiKernel_ToolsSettingsDisplaymodeColor : rgb(102,102,102);
-          --atuiKernel_ToolsSettingsDisplaymodeColorOpacity : rgba(102,102,102,0.8);
-     }
-}
-
 body
 {
      margin : 0;
-     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+     background-color: var(--atuiKernel_ColorschemeOB0);
 }
 
 body *
@@ -61,12 +48,17 @@ body *
 }
 
 
-/* Links */
+/* Default props of balises */
+
+p
+{
+     color : var(--atuiKernel_ColorschemeOBF);
+}
 
 a
 {
      text-decoration: none;
-     color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     color: var(--atuiKernel_ColorschemeOA5);
 }
 
 a:hover, a:active

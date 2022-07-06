@@ -3,13 +3,13 @@
 .atuiKernel_SectionDownload
 {
      border-radius : var(--atuiKernel_Borderradius);
-     border : 2px var(--atuiKernel_ToolsSettingsAccentcolor) solid;
+     border : 2px var(--atuiKernel_ColorschemeOA6) solid;
      margin : 10px;
      padding: 10px;
      height : 50px;
      display: flex;
      align-items: center;
-     background-color: rgb(230, 230, 230);
+     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 .atuiKernel_SectionDownload > img

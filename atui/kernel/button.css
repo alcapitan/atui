@@ -101,7 +101,7 @@
 
 .atuiKernel_Button
 {
-     background-color : var(--atuiKernel_ToolsSettingsAccentcolorOpacity);
+     background-color : var(--atuiKernel_ColorschemeOA3);
      border-radius : var(--atuiKernel_Borderradius);
 }
 
@@ -111,7 +111,7 @@
 .atuiKernel_ButtonPrimary,
 .atuiKernel_ButtonPrimaryDisabled
 {
-     background-color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color : var(--atuiKernel_ColorschemeOA4);
      border-radius : var(--atuiKernel_Borderradius);
 }
 
@@ -121,14 +121,14 @@
 .atuiKernel_ButtonSecondary,
 .atuiKernel_ButtonSecondaryDisabled
 {
-     border : 2px var(--atuiKernel_ToolsSettingsAccentcolor) solid;
+     border : 2px var(--atuiKernel_ColorschemeOA4) solid;
      border-radius : var(--atuiKernel_Borderradius);
 }
 
 .atuiKernel_ButtonSecondary *,
 .atuiKernel_ButtonSecondaryDisabled *
 {
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     color : var(--atuiKernel_ColorschemeOA4);
 }
 
 
@@ -137,6 +137,6 @@
 .atuiKernel_ButtonTertiary *,
 .atuiKernel_ButtonTertiaryDisabled *
 {
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     color : var(--atuiKernel_ColorschemeOA4);
 }
 

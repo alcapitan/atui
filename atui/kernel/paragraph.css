@@ -4,7 +4,7 @@
 {
      font-weight: bold;
      font-size : 1.5rem;
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
+     color : var(--atuiKernel_ColorschemeOA6);
      font-family: var(--atuiKernel_FontsTitle);
      margin : 10px 0;
 }
@@ -13,11 +13,6 @@
 {
      font-size : 1rem;
      margin : 10px;
-}
-
-.atuiKernel_SectionText a
-{
-     color : var(--atuiKernel_ToolsSettingsAccentcolor);
 }
 
 .atuiKernel_SectionText a:hover, .atuiKernel_SectionText a:active

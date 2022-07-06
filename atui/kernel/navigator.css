@@ -1,6 +1,8 @@
 /* Global without Global Panel */
 
-.atuiKernel_NavigatorSectionWithoutimg, .atuiKernel_NavigatorSectionImgbig, .atuiKernel_NavigatorSectionImgsmall
+.atuiKernel_NavigatorSectionWithoutimg,
+.atuiKernel_NavigatorSectionImgbig,
+.atuiKernel_NavigatorSectionImgsmall
 {
      display : flex;
      justify-content: space-around;
@@ -8,9 +10,10 @@
      flex-wrap: wrap;
 }
 
-.atuiKernel_NavigatorSectionWithoutimg a, .atuiKernel_NavigatorSectionImgbig a, .atuiKernel_NavigatorSectionImgsmall a
+.atuiKernel_NavigatorSectionWithoutimg a,
+.atuiKernel_NavigatorSectionImgbig a,
+.atuiKernel_NavigatorSectionImgsmall a
 {
-     color : black;
      text-decoration : none;
      padding : 10px;
      border-radius : var(--atuiKernel_Borderradius);
@@ -23,14 +26,17 @@
 .atuiKernel_NavigatorSectionImgbig a:active,
 .atuiKernel_NavigatorSectionImgsmall a:active
 {
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
-.atuiKernel_NavigatorSectionWithoutimg a p, .atuiKernel_NavigatorSectionImgbig a p, .atuiKernel_NavigatorSectionImgsmall a p
+.atuiKernel_NavigatorSectionWithoutimg a p,
+.atuiKernel_NavigatorSectionImgbig a p,
+.atuiKernel_NavigatorSectionImgsmall a p
 {
      text-align : center;
      margin : 0;
      font-size : 1.2rem;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 
@@ -60,6 +66,7 @@
 .atuiKernel_NavigatorSectionImgbig a p
 {
      margin : 5px 10px 0 10px;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 
@@ -82,7 +89,7 @@
 {
      margin-left : 5px;
      margin-right : 10px;
-     
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 
@@ -97,7 +104,7 @@
      right : 20px;
      width : calc(100vw - 100px);
      visibility: hidden;
-     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColorOpacity);
+     background-color: var(--atuiKernel_ColorschemeBB1);
      backdrop-filter: var(--atuiKernel_Blur);
      border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
@@ -117,6 +124,7 @@
      font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
      font-size: 1.4rem;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_NavigatorGlobalpanel aside > div div

@@ -98,11 +98,6 @@
                                         </a>
                                         <a href="#">
                                              <div>
-                                                  <p>LanguagesManager</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div>
                                                   <p>MediasPlayer</p>
                                              </div>
                                         </a>
@@ -114,6 +109,11 @@
                                         <a href="#">
                                              <div>
                                                   <p>ServerExchanges</p>
+                                             </div>
+                                        </a>
+                                        <a href="#">
+                                             <div>
+                                                  <p>Overview</p>
                                              </div>
                                         </a>
                                    </aside>
@@ -247,6 +247,23 @@
                </nav>
                <div class="atuiKernel_ButtonPrimary" id="testRunMusic">
                     <p>Jouer musique</p>
+               </div>
+               <div>
+                    <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);">
+                         <p>Rouge (par défaut)</p>
+                    </div>
+                    <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([230, 172, 0]);">
+                         <p>Jaune</p>
+                    </div>
+                    <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([204, 51, 153]);">
+                         <p>Violet</p>
+                    </div>
+                    <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([46, 184, 184]);">
+                         <p>Bleu</p>
+                    </div>
+                    <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([119, 179, 0]);">
+                         <p>Vert</p>
+                    </div>
                </div>
                <div>
                     <a href="#">
@@ -871,7 +888,7 @@
                <audio id="atuiMediasplayer_AudioplayerMusic"></audio>
                <aside>
                     <div>
-                         <img src="atui/MediasPlayer/medias/cover.png" alt="Icône Couverture d'album indisponible.">
+                         <img src="atui/MediasPlayer/medias/cover.png" alt="Icône Couverture d'album indisponible." id="atuiMediasplayer_AudioplayerMusicinformationsCover">
                          <div>
                               <div id="atuiMediasplayer_AudioplayerAdditionals">
                                    <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_AudioplayerInfos">

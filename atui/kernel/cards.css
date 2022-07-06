@@ -112,10 +112,10 @@
 {
      display: flex;
      flex-direction: column;
-     border : 1px rgb(179, 179, 179) solid;
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
      border-radius : var(--atuiKernel_Borderradius);
      overflow: hidden;
-     background-color: rgb(230, 230, 230);
+     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 /* Pourquoi cela a été commenté ?
@@ -136,8 +136,9 @@
      font-size: 1.3rem;
      margin : 0;
      padding : 10px 20px;
-     border-bottom : 1px rgb(179, 179, 179) solid;
-     background-color: rgb(204, 204, 204);
+     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     background-color: var(--atuiKernel_ColorschemeOB2);
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_SectionCardBasic article > p
@@ -153,10 +154,10 @@
 {
      display: flex;
      flex-direction: column;
-     border : 1px rgb(179, 179, 179) solid;
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
      border-radius : var(--atuiKernel_Borderradius);
      overflow: hidden;
-     background-color: rgb(230, 230, 230);
+     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 .atuiKernel_SectionCardFlat article > div
@@ -167,7 +168,7 @@
 
 .atuiKernel_SectionCardFlat article > div *
 {
-     overflow-wrap: break-word;
+     overflow-wrap: anywhere;
 }
 
 .atuiKernel_SectionCardFlat article > div h3
@@ -175,6 +176,7 @@
      font-family: var(--atuiKernel_FontsTitle);
      font-size: 1.3rem;
      margin : 10px;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_SectionCardFlat article > div > p
@@ -195,7 +197,7 @@
      min-height: 300px;
      max-height: 400px;
      position: relative;
-     background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+     background-color: var(--atuiKernel_ColorschemeOA7);
 }
 
 .atuiKernel_SectionCardOverlayBottom img,
@@ -217,19 +219,19 @@
 .atuiKernel_SectionCardOverlayBottom article > div
 {
      bottom : 0;
-     background : linear-gradient(to top, rgba(51,51,51,0.8) 50%,transparent 100%);
+     background : linear-gradient(to top, var(--atuiKernel_ColorschemeBB8) 50%, transparent 100%);
 }
 
 .atuiKernel_SectionCardOverlayTop article > div
 {
      top : 0;
-     background : linear-gradient(to bottom, rgba(51,51,51,0.8) 50%,transparent 100%);
+     background : linear-gradient(to bottom, var(--atuiKernel_ColorschemeBB8) 50%,transparent 100%);
 }
 
 .atuiKernel_SectionCardOverlayBottom article > div > *,
 .atuiKernel_SectionCardOverlayTop article > div > *
 {
-     color : white;
+     color : var(--atuiKernel_ColorschemeOB0);
      overflow-wrap: break-word;
 }
 
@@ -255,10 +257,10 @@
 .atuiKernel_SectionCardMainColumn article
 {
      display : flex;
-     border : 1px rgb(179, 179, 179) solid;
+     border : 1px var(--atuiKernel_ColorschemeOB2) solid;
      border-radius : var(--atuiKernel_Borderradius);
      overflow: hidden;
-     background-color: rgb(230, 230, 230);
+     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 .atuiKernel_SectionCardMainRow article img,
@@ -287,6 +289,7 @@
      font-family: var(--atuiKernel_FontsTitle);
      font-size : 1.3rem;
      margin : 5px;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_SectionCardMainRow article > div > p,
@@ -314,6 +317,7 @@
 .atuiKernel_SectionCardMainColumn article > div h3
 {
      margin : 10px;
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_SectionCardMainColumn article > div > p

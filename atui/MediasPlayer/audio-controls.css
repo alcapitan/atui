@@ -3,17 +3,17 @@
 #atuiMediasplayer_AudioplayerControls /* Barre de contrôleurs */
 {
 	display: flex;
+     flex-direction: row;
 	flex-wrap: wrap;
+     align-items: center;
 }
 
 #atuiMediasplayer_AudioplayerControls > *  /* Tout les groupes de contrôleurs */
 {
+     margin : 0 20px;
      display: flex;
      flex-direction: row;
 }
-
-
-/* Icons */
 
 #atuiMediasplayer_AudioplayerControls img /* Tout les icônes */
 {
@@ -25,7 +25,7 @@
 
 #atuiMediasplayer_AudioplayerControls img:hover /* Tout les icônes au survol */
 {
-     background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+     background-color: var(--atuiKernel_ColorschemeBA4);
 }
 
 
@@ -34,6 +34,7 @@
 #atuiMediasplayer_AudioplayerTimer p /* Texte du minuteur */
 {
      margin : 0px;
+     font-size : 16px;
 }
 
 #atuiMediasplayer_AudioplayerTimer p:nth-child(2) /* Tiret du minuteur */
@@ -84,4 +85,3 @@
           justify-content: space-evenly;
      }
 }
-

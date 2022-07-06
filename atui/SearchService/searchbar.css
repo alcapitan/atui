@@ -18,7 +18,6 @@
 {
      background-color: transparent;
      border-radius : var(--atuiKernel_Borderradius);
-     color : rgb(128, 128, 128);
      font-size: 1.5rem;
      padding : 5px 5px 5px 10px; /* Obligatoire au lieu de margin car erreur visuel sur mobile quand élément développé */
      height: 30px;
@@ -28,6 +27,7 @@
      white-space: nowrap;
      text-overflow: ellipsis;
      outline : none;
+     color : var(--atuiKernel_ColorschemeOB5);
 }
 
 #atuiSearchservices_Submit /* Submit image */
@@ -44,7 +44,7 @@
 {
      #atuiSearchservices_HeaderBar /* Searchbar container */
      {
-          background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+          background-color: var(--atuiKernel_ColorschemeOB0);
           backdrop-filter: var(--atuiKernel_Blur);
      }
 

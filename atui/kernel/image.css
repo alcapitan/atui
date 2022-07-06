@@ -13,7 +13,7 @@
 .atuiKernel_SectionImage p
 {
      text-align: center;
-     color: #333333;
+     color: var(--atuiKernel_ColorschemeOB7);
      margin : 5px;
      font-size: 1rem;
 }

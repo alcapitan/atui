@@ -50,12 +50,12 @@ body > article > a /* Link */
 {
      body
      {
-          background-color: var(--atuiKernel_ToolsSettingsAccentcolor);
+          background-color: var(--atuiKernel_ColorschemeOA3);
      }
 
      body > article
      {
-          background-color: var(--atuiKernel_ToolsSettingsDisplaymodeColor);
+          background-color: var(--atuiKernel_ColorschemeOB0);
           border-radius: var(--atuiKernel_Borderradius);
           box-shadow: var(--atuiKernel_Shadow);
      }

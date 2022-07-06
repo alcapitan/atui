@@ -40,12 +40,12 @@ function atuiSearchservices_HeaderDevelop(element,wish)
           element.style.position = "absolute";
           if (document.documentElement.clientWidth < 767)
           {
-               atuiSearchservices_HeaderBar.style.backgroundColor = "var(--atuiKernel_ToolsSettingsDisplaymodeColor)";
                atuiSearchservices_HeaderBarInput.style.display = "inline";
+               atuiSearchservices_HeaderBar.style.backgroundColor = "var(--atuiKernel_ColorschemeOB1)";
                element.style.left = "40px";
                element.style.right = "40px";
           }
-          element.style.backgroundColor = "var(--atuiKernel_ToolsSettingsAccentcolor)";
+          element.style.backgroundColor = "var(--atuiKernel_ColorschemeOA6)";
           element.style.boxShadow = "var(--atuiKernel_Shadow)";
           atuiSearchservices_HeaderPropositionsGenerate();
      }
