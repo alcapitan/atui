@@ -23,7 +23,7 @@ Make sure you are in the right directory to make these manipulations.
 ## Contributing
 ATUI is an open-source project that invites collaboration.  
 You can help in the development of the project even without coding ! So you can test ATUI, report bugs, give your opinions and ideas for improvement, and more...  
-Before contributing, please read <a href="https://alcapitan.github.io/atui/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+Before contributing, please read <a href="https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md">CONTRIBUTING.md</a>.
 All your reports must be done in <a href="https://github.com/alcapitan/atui/issues">Issues on GitHub</a>.
 
 ## What is this project in a nutshell ?
