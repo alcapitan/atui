@@ -123,6 +123,7 @@ function atuiKernel_ColorschemeGenerator(base,isDarkMode,wantOpacity)
      }
      
      // Apply
+     document.querySelector("meta[name=theme-color]").setAttribute("content",base);
      const root = document.documentElement;
      for (let variable = 0;variable < 11;variable++)
      {
