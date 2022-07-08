@@ -1,48 +1,70 @@
 /* Global */
 
-.atuiKernel_SectionDownload
+.atuiKernel_SectionDownload /* Element */
 {
      border-radius : var(--atuiKernel_Borderradius);
-     border : 2px var(--atuiKernel_ColorschemeOA6) solid;
-     margin : 10px;
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     background-color: var(--atuiKernel_ColorschemeOB1);
+     margin : 20px 0;
      padding: 10px;
-     height : 50px;
      display: flex;
      align-items: center;
-     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
-.atuiKernel_SectionDownload > img
+.atuiKernel_SectionDownload > div /* Containers */
 {
-     width : 50px;
-     height : 50px;
-     margin-right : 20px;
-}
-
-.atuiKernel_SectionDownload > p
-{
-     font-weight : bold;
-     font-size: 1.2rem;
-     overflow: hidden;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-     margin : 0;
-     flex : 1;
-}
-
-.atuiKernel_SectionDownload div
-{
-     justify-content: flex-end;
-     flex : 0;
      display: flex;
      flex-direction: row;
      align-items: center;
+     flex-wrap: wrap;
 }
 
-.atuiKernel_SectionDownload div img
+.atuiKernel_SectionDownload > div:first-child /* Metadata container */
 {
-     width : 30px;
-     height : 30px;
-     margin : 10px;
+     flex : 1;
+}
+
+.atuiKernel_SectionDownload > div:first-child img /* File icon */
+{
+     width : 60px;
+     height : 60px;
+     margin-right : 10px;
+}
+
+.atuiKernel_SectionDownload > div:first-child p /* File name */
+{
+     font-weight : bold;
+     font-size: 1.2rem;
+     overflow-wrap: anywhere;
+     margin : 0;
+}
+
+
+/* Responsives */
+
+@media (min-width : 768px) /* Computers */
+{
+     .atuiKernel_SectionDownload /* Element */
+     {
+          flex-direction: row;
+     }
+
+     .atuiKernel_SectionDownload > div:last-child /* Button container */
+     {
+          justify-content: flex-end;
+     }
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+     .atuiKernel_SectionDownload /* Element */
+     {
+          flex-direction: column;
+     }
+
+     .atuiKernel_SectionDownload > div:last-child /* Button container */
+     {
+          justify-content: space-around;
+     }
 }
 

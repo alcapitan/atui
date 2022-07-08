@@ -8,8 +8,6 @@ cookies.png > https://img.icons8.com/fluency/96/000000/cookies.png
 close.png > https://img.icons8.com/fluency-systems-regular/48/000000/delete-sign--v1.png
 menu.png > https://img.icons8.com/fluency-systems-regular/48/000000/menu--v1.png
 section.png > https://img.icons8.com/fluency-systems-regular/96/000000/next-webpage.png
-file.png > https://img.icons8.com/fluency-systems-regular/48/000000/file.png
-download.png > https://img.icons8.com/fluency-systems-regular/48/000000/downloading-updates.png
 open.png > https://img.icons8.com/fluency-systems-regular/48/000000/external-link.png
 comment.png > https://img.icons8.com/fluency-systems-regular/96/comments--v2.png
 ask.png > https://img.icons8.com/fluency-systems-regular/48/ask-question.png
@@ -27,6 +25,10 @@ trash.png > https://img.icons8.com/fluency-systems-regular/48/delete.png
 settings.png > https://img.icons8.com/fluency-systems-regular/96/settings.png
 right-arrow.png > https://img.icons8.com/fluency-systems-regular/96/right--v1.png
 send.png > https://img.icons8.com/fluency-systems-regular/96/sent.png
+file.png > https://img.icons8.com/fluency-systems-regular/96/file.png
+download.png > https://img.icons8.com/fluency-systems-regular/48/download--v1.png
+torrent.png > https://img.icons8.com/fluency-systems-regular/48/torrent.png
+checksum.png > https://img.icons8.com/fluency-systems-regular/48/check-document.png
 
 Contacts :
 discord.png > https://img.icons8.com/fluency-systems-regular/96/discord.png
