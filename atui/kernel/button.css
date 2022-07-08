@@ -71,21 +71,16 @@
 .atuiKernel_ButtonSecondary:hover,
 .atuiKernel_ButtonTertiary:hover
 {
-     filter : brightness(0.90);
      font-weight: bold;
      text-decoration: none;
 }
 
-
-/* Active reaction */
-
-.atuiKernel_ButtonPrimary:active,
-.atuiKernel_ButtonSecondary:active,
-.atuiKernel_ButtonTertiary:active
+.atuiKernel_ButtonPrimaryDisabled:hover,
+.atuiKernel_ButtonSecondaryDisabled:hover,
+.atuiKernel_ButtonTertiaryDisabled:hover
 {
-     filter : brightness(0.80);
+     font-weight: normal;
 }
-
 
 /* Disabled mode */
 
@@ -115,6 +110,15 @@
      border-radius : var(--atuiKernel_Borderradius);
 }
 
+.atuiKernel_ButtonPrimary:hover
+{
+     background-color: var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_ButtonPrimary:active
+{
+     background-color: var(--atuiKernel_ColorschemeOA6);
+}
 
 /* Secondary */
 
@@ -131,6 +135,26 @@
      color : var(--atuiKernel_ColorschemeOA4);
 }
 
+.atuiKernel_ButtonSecondary:hover
+{
+     border : 2px var(--atuiKernel_ColorschemeOA5) solid;
+}
+
+.atuiKernel_ButtonSecondary *:hover
+{
+     color : var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_ButtonSecondary:active
+{
+     border : 2px var(--atuiKernel_ColorschemeOA6) solid;
+}
+
+.atuiKernel_ButtonSecondary *:active
+{
+     color : var(--atuiKernel_ColorschemeOA6);
+}
+
 
 /* Tertiary */
 
@@ -138,5 +162,15 @@
 .atuiKernel_ButtonTertiaryDisabled *
 {
      color : var(--atuiKernel_ColorschemeOA4);
+}
+
+.atuiKernel_ButtonTertiary *:hover
+{
+     color : var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_ButtonTertiary *:active
+{
+     color : var(--atuiKernel_ColorschemeOA6);
 }
 

@@ -1,94 +1,42 @@
-/* Global without Global Panel */
+/* Img Big */
 
-.atuiKernel_NavigatorSectionWithoutimg,
-.atuiKernel_NavigatorSectionImgbig,
-.atuiKernel_NavigatorSectionImgsmall
+.atuiKernel_NavigatorSectionImgbig /* Container */
 {
      display : flex;
-     justify-content: space-around;
-     margin : 15px;
+     justify-content: space-evenly;
+     margin : 20px 0;
      flex-wrap: wrap;
 }
 
-.atuiKernel_NavigatorSectionWithoutimg a,
-.atuiKernel_NavigatorSectionImgbig a,
-.atuiKernel_NavigatorSectionImgsmall a
+.atuiKernel_NavigatorSectionImgbig a /* ELement */
 {
-     text-decoration : none;
-     padding : 10px;
+     padding : 10px 20px;
      border-radius : var(--atuiKernel_Borderradius);
-}
-
-.atuiKernel_NavigatorSectionWithoutimg a:hover,
-.atuiKernel_NavigatorSectionImgbig a:hover,
-.atuiKernel_NavigatorSectionImgsmall a:hover,
-.atuiKernel_NavigatorSectionWithoutimg a:active,
-.atuiKernel_NavigatorSectionImgbig a:active,
-.atuiKernel_NavigatorSectionImgsmall a:active
-{
-     background-color: var(--atuiKernel_ColorschemeOA3);
-}
-
-.atuiKernel_NavigatorSectionWithoutimg a p,
-.atuiKernel_NavigatorSectionImgbig a p,
-.atuiKernel_NavigatorSectionImgsmall a p
-{
-     text-align : center;
-     margin : 0;
-     font-size : 1.2rem;
-     color : var(--atuiKernel_ColorschemeOBF);
-}
-
-
-/* Without image */
-
-.atuiKernel_NavigatorSectionWithoutimg a p
-{
-     margin : 0 10px;
-}
-
-
-/* Imgbig */
-
-.atuiKernel_NavigatorSectionImgbig a
-{
      display: flex;
      flex-direction: column;
      align-items: center;
 }
 
-.atuiKernel_NavigatorSectionImgbig a img
+.atuiKernel_NavigatorSectionImgbig a:hover
+{
+     background-color: var(--atuiKernel_ColorschemeOA3);
+}
+
+.atuiKernel_NavigatorSectionImgbig a:active
+{
+     background-color: var(--atuiKernel_ColorschemeOA4);
+}
+
+.atuiKernel_NavigatorSectionImgbig a img /* Icon */
 {
      width : 100px;
      height : 100px;
 }
 
-.atuiKernel_NavigatorSectionImgbig a p
+.atuiKernel_NavigatorSectionImgbig a p /* Text */
 {
-     margin : 5px 10px 0 10px;
-     color : var(--atuiKernel_ColorschemeOBF);
-}
-
-
-/* Imgsmall */
-
-.atuiKernel_NavigatorSectionImgsmall a
-{
-     display : flex;
-     align-items: center;
-}
-
-.atuiKernel_NavigatorSectionImgsmall a img
-{
-     width : 30px;
-     height : 30px;
-     margin : 0 5px 0 10px;
-}
-
-.atuiKernel_NavigatorSectionImgsmall a p
-{
-     margin-left : 5px;
-     margin-right : 10px;
+     margin : 10px 0 0 0;
+     font-size : 1.2rem;
      color : var(--atuiKernel_ColorschemeOBF);
 }
 
