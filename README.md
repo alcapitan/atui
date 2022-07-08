@@ -23,6 +23,7 @@ Make sure you are in the right directory to make these manipulations.
 ## Contributing
 ATUI is an open-source project that invites collaboration.  
 You can help in the development of the project even without coding ! So you can test ATUI, report bugs, give your opinions and ideas for improvement, and more...  
+Before contributing, please read <a href="https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md">CONTRIBUTING.md</a>.
 All your reports must be done in <a href="https://github.com/alcapitan/atui/issues">Issues on GitHub</a>.
 
 ## What is this project in a nutshell ?
@@ -35,9 +36,10 @@ All your reports must be done in <a href="https://github.com/alcapitan/atui/issu
   
 ### Tree structure explanation
 - The root `/` contains HTML files.
-- The folder `/atui` contains `kernel` (ATUI core files) and some <a href="https://github.com/alcapitan/atui/edit/dev/README.md#extensions">extensions</a>.
+- The folder `/atui` contains `kernel` (ATUI core files) and some <a href="#extensions">extensions</a>.
 - The folder `/patch` contains your files like CSS, JS, icons, illustrations, and so on.
 - The folders `*/medias` contains all files about someone except CSS and JS files.
+- The files `*/sources.txt` contains all links to the icons and other medias..
 - The folder `/.vscode` is my configuration of Visual Studio Code.
 - The folder `/.github` is the stuff created by GitHub to store issue templates for example.
 
@@ -50,7 +52,7 @@ Anyone can create an extension, but you have to respect extension coding standar
 - ServerExchanges : Contains all the necessary tools to manage accounts and database.
 
 ## License & Use of external service
-Project released under <a href="https://github.com/alcapitan/atui/blob/public/LICENSE.md">GNU General Public Licence</a>.  
+Project released under <a href="https://alcapitan.github.io/atui/LICENSE.md">GNU General Public Licence</a>.  
 ### Softwares
 - Code editor : <a href="https://code.visualstudio.com/">Visual Studio Code</a>.
 - Version control : <a href="https://git-scm.com/">Git</a>
