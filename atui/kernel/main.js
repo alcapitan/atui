@@ -202,6 +202,13 @@ catch{}
 
 function atuiKernel_FooterLastedited(day,month,year)
 {
+     /* Warning date not updated */
+     const atuiKernel_FooterInfoDate = new Date();
+     if ((atuiKernel_FooterInfoDate.getDate() != day || atuiKernel_FooterInfoDate.getMonth() + 1 != month || atuiKernel_FooterInfoDate.getFullYear() != year) && atuiKernel_Metadata['version'] == 'developer branch')
+     {
+          console.warn("The last modification date may be not up to date. ");
+     }
+
      /* Based on ATUI */
      const atuiKernel_FooterInfoBased = document.createElement("a");
      atuiKernel_FooterInfoBased.setAttribute('href',atuiKernel_Metadata["website"]);
