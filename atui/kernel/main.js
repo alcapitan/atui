@@ -123,7 +123,6 @@ function atuiKernel_ColorschemeGenerator(base,isDarkMode,wantOpacity)
      }
      
      // Apply
-     document.querySelector("meta[name=theme-color]").setAttribute("content",base);
      const root = document.documentElement;
      for (let variable = 0;variable < 11;variable++)
      {
@@ -155,6 +154,7 @@ function atuiKernel_ColorschemeGenerator(base,isDarkMode,wantOpacity)
           else
           {
                accentText = "A";
+               document.querySelector("meta[name=theme-color]").setAttribute("content",'rgb(' + schemeColor[5][0] + ',' + schemeColor[5][1] + ',' + schemeColor[5][2] + ')');
           }
 
           nameColor = '--atuiKernel_Colorscheme' + opacityText + accentText + variableText;
