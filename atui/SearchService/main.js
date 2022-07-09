@@ -45,7 +45,7 @@ function atuiSearchservices_HeaderDevelop(element,wish)
                element.style.left = "40px";
                element.style.right = "40px";
           }
-          element.style.backgroundColor = "var(--atuiKernel_ColorschemeOA6)";
+          element.style.backgroundColor = "var(--atuiKernel_ColorschemeOA3)";
           element.style.boxShadow = "var(--atuiKernel_Shadow)";
           atuiSearchservices_HeaderPropositionsGenerate();
      }

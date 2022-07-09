@@ -35,7 +35,7 @@
 {
      font-weight : bold;
      font-size: 1.2rem;
-     overflow-wrap: anywhere;
+     word-wrap: anywhere;
      margin : 0;
 }
 

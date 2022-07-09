@@ -100,6 +100,10 @@
      border-radius : var(--atuiKernel_Borderradius);
 }
 
+.atuiKernel_Button *
+{
+     color : var(--atuiKernel_ColorschemeOBF);
+}
 
 /* Primary */
 
@@ -108,6 +112,12 @@
 {
      background-color : var(--atuiKernel_ColorschemeOA4);
      border-radius : var(--atuiKernel_Borderradius);
+}
+
+.atuiKernel_ButtonPrimary *,
+.atuiKernel_ButtonPrimaryDisabled *
+{
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_ButtonPrimary:hover

@@ -1,25 +1,75 @@
 /* Global */
 
-.atuiKernel_SectionCardBasic,
-.atuiKernel_SectionCardFlat,
-.atuiKernel_SectionCardOverlayBottom,
-.atuiKernel_SectionCardOverlayTop,
-.atuiKernel_SectionCardMainRow,
-.atuiKernel_SectionCardMainColumn
+.atuiKernel_SectionCardStandard,
+.atuiKernel_SectionCardContrast,
+.atuiKernel_SectionCardOverlay
+
+
+/* Container */
 {
      margin : 20px 0;
      display: flex;
      flex-wrap : wrap;
 }
 
-.atuiKernel_SectionCardBasic article,
-.atuiKernel_SectionCardFlat article,
-.atuiKernel_SectionCardOverlayBottom article,
-.atuiKernel_SectionCardOverlayTop article,
-.atuiKernel_SectionCardMainRow article,
-.atuiKernel_SectionCardMainColumn article
+.atuiKernel_SectionCardStandard article,
+.atuiKernel_SectionCardContrast article,
+.atuiKernel_SectionCardOverlay article
+/* Elements */
 {
-     margin : 5px 0;
+     display : flex;
+     flex-direction: column;
+     border-radius : var(--atuiKernel_Borderradius);
+     overflow: hidden;
+     background-color: var(--atuiKernel_ColorschemeOB1);
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     position: relative;
+}
+
+.atuiKernel_SectionCardStandard article *,
+.atuiKernel_SectionCardContrast article *,
+.atuiKernel_SectionCardOverlay article *
+/* Tout le contenu des cartes */
+{
+     word-wrap: anywhere;
+}
+
+.atuiKernel_SectionCardStandard article > div[class="image"] img,
+.atuiKernel_SectionCardContrast article > div[class="image"] img,
+.atuiKernel_SectionCardOverlay article > div[class="image"] img
+/* Images */
+{
+     width : 100%;
+}
+
+.atuiKernel_SectionCardStandard article > div[class="text"] > h3,
+.atuiKernel_SectionCardStandard article > div[class="text"] > p,
+.atuiKernel_SectionCardContrast article > div[class="text"] > h3,
+.atuiKernel_SectionCardContrast article > div[class="text"] > p,
+.atuiKernel_SectionCardOverlay article > div[class="text"] > h3,
+.atuiKernel_SectionCardOverlay article > div[class="text"] > p
+/* Texts */
+{
+     margin : 0;
+     padding : 10px 20px;
+}
+
+.atuiKernel_SectionCardStandard article > div[class="text"] > h3,
+.atuiKernel_SectionCardContrast article > div[class="text"] > h3,
+.atuiKernel_SectionCardOverlay article > div[class="text"] > h3
+/* Titles */
+{
+     font-family: var(--atuiKernel_FontsTitle);
+     font-size: 1.3rem;
+     color : var(--atuiKernel_ColorschemeOBF);
+}
+
+.atuiKernel_SectionCardStandard article > div[class="text"] > p,
+.atuiKernel_SectionCardContrast article > div[class="text"] > p,
+.atuiKernel_SectionCardOverlay article > div[class="text"] > p
+/* Paragraphs */
+{
+     text-align: justify;
 }
 
 
@@ -27,301 +77,104 @@
 
 @media (min-width : 768px) /* Computers */
 {
-     .atuiKernel_SectionCardBasic,
-     .atuiKernel_SectionCardFlat,
-     .atuiKernel_SectionCardOverlayBottom,
-     .atuiKernel_SectionCardOverlayTop,
-     .atuiKernel_SectionCardMainRow,
-     .atuiKernel_SectionCardMainColumn
+     .atuiKernel_SectionCardStandard,
+     .atuiKernel_SectionCardContrast,
+     .atuiKernel_SectionCardOverlay
+     /* Containers */
      {
           justify-content: space-around;
+          align-items: flex-start;
      }
 
-     .atuiKernel_SectionCardBasic article,
-     .atuiKernel_SectionCardFlat article,
-     .atuiKernel_SectionCardMainRow article,
-     .atuiKernel_SectionCardOverlayBottom article,
-     .atuiKernel_SectionCardOverlayTop article,
-     .atuiKernel_SectionCardMainColumn article
-     {
-          flex-direction: column;
-          width : 45%;
-          height: fit-content;
-     }
-
-     .atuiKernel_SectionCardMainRow article > div h3
-     {
-          margin : 0;
-     }
-
-     .atuiKernel_SectionCardMainRow article > div > p
+     .atuiKernel_SectionCardStandard article,
+     .atuiKernel_SectionCardContrast article,
+     .atuiKernel_SectionCardOverlay article
+     /* Elements */
      {
           margin : 10px;
+          width : min(300px);
      }
 }
 
 @media (max-width : 767px) /* Smartphones */
 {
-     .atuiKernel_SectionCardBasic,
-     .atuiKernel_SectionCardFlat,
-     .atuiKernel_SectionCardOverlayBottom,
-     .atuiKernel_SectionCardOverlayTop,
-     .atuiKernel_SectionCardMainRow,
-     .atuiKernel_SectionCardMainColumn
+     .atuiKernel_SectionCardStandard,
+     .atuiKernel_SectionCardContrast,
+     .atuiKernel_SectionCardOverlay
+     /* Containers */
      {
           flex-direction: column;
      }
      
-     .atuiKernel_SectionCardFlat article,
-     .atuiKernel_SectionCardOverlayBottom article,
-     .atuiKernel_SectionCardOverlayTop article
+     .atuiKernel_SectionCardStandard article,
+     .atuiKernel_SectionCardContrast article,
+     .atuiKernel_SectionCardOverlay article
+     /* Elements */
      {
+          margin : 10px 0;
           width : 100%;
      }
-
-     .atuiKernel_SectionCardMainRow article
-     {
-          flex-direction: column;
-     }
-
-     .atuiKernel_SectionCardMainRow article img
-     {
-          width : calc(100% - 20px);
-     }     
-
-     .atuiKernel_SectionCardMainRow article > div
-     {
-          margin-top : 5px;
-     }
-
-     .atuiKernel_SectionCardMainRow article > div h3
-     {
-          margin : 10px;
-     }
-
-     .atuiKernel_SectionCardMainRow article > div > p
-     {
-          margin : 10px 20px;
-     }
 }
 
 
-/* Basic */
+/* Standard */
 
-.atuiKernel_SectionCardBasic article
-{
-     display: flex;
-     flex-direction: column;
-     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     border-radius : var(--atuiKernel_Borderradius);
-     overflow: hidden;
-     background-color: var(--atuiKernel_ColorschemeOB1);
-}
-
-/* Pourquoi cela a été commenté ?
-.atuiKernel_SectionCardBasic article > div
+.atuiKernel_SectionCardStandard article > div[class="image"] img
+/* Image */
 {
      margin : 10px;
-     margin-top : 5px;
-} */
-
-.atuiKernel_SectionCardBasic article *
-{
-     overflow-wrap: break-word;
+     border-radius: var(--atuiKernel_Borderradius);
+     width : calc(100% - 20px);
 }
 
-.atuiKernel_SectionCardBasic article h3
+
+/* Contrast */
+
+.atuiKernel_SectionCardContrast article > div[class="image"]
+/* Image container */
 {
-     font-family: var(--atuiKernel_FontsTitle);
-     font-size: 1.3rem;
-     margin : 0;
-     padding : 10px 20px;
+     display: flex;
+     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
+}
+
+.atuiKernel_SectionCardContrast article > div[class="text"] > h3
+/* Title */
+{
      border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
      background-color: var(--atuiKernel_ColorschemeOB2);
-     color : var(--atuiKernel_ColorschemeOBF);
-}
-
-.atuiKernel_SectionCardBasic article > p
-{
-     margin : 10px 20px;
-     text-align: justify;
-}
-
-
-/* Flat */
-
-.atuiKernel_SectionCardFlat article
-{
-     display: flex;
-     flex-direction: column;
-     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     border-radius : var(--atuiKernel_Borderradius);
-     overflow: hidden;
-     background-color: var(--atuiKernel_ColorschemeOB1);
-}
-
-.atuiKernel_SectionCardFlat article > div
-{
-     margin : 10px;
-     margin-top : 5px;
-}
-
-.atuiKernel_SectionCardFlat article > div *
-{
-     overflow-wrap: anywhere;
-}
-
-.atuiKernel_SectionCardFlat article > div h3
-{
-     font-family: var(--atuiKernel_FontsTitle);
-     font-size: 1.3rem;
-     margin : 10px;
-     color : var(--atuiKernel_ColorschemeOBF);
-}
-
-.atuiKernel_SectionCardFlat article > div > p
-{
-     margin : 10px;
-     text-align: justify;
 }
 
 
 /* Overlay */
 
-.atuiKernel_SectionCardOverlayBottom article,
-.atuiKernel_SectionCardOverlayTop article
+.atuiKernel_SectionCardOverlay article
 {
-     display: flex;
-     overflow: hidden;
-     border-radius : var(--atuiKernel_Borderradius);
-     min-height: 300px;
-     max-height: 400px;
-     position: relative;
-     background-color: var(--atuiKernel_ColorschemeOA7);
+     background-color: transparent;
 }
 
-.atuiKernel_SectionCardOverlayBottom img,
-.atuiKernel_SectionCardOverlayTop img
+.atuiKernel_SectionCardOverlay article > div[class="image"]
 {
-     object-fit: cover;
      width: 100%;
-}
-
-.atuiKernel_SectionCardOverlayBottom article > div,
-.atuiKernel_SectionCardOverlayTop article > div
-{
+     height : 100%;
      position: absolute;
-     left : 0;
-     right : 0;
-     padding : 15px;
+     z-index : -1;
 }
 
-.atuiKernel_SectionCardOverlayBottom article > div
+.atuiKernel_SectionCardOverlay article > div[class="image"] img
 {
-     bottom : 0;
+     height : 100%;
+     object-fit: cover;
+}
+
+.atuiKernel_SectionCardOverlay article > div[class="text"]
+{
      background : linear-gradient(to top, var(--atuiKernel_ColorschemeBB8) 50%, transparent 100%);
+     margin-top : 30%;
 }
 
-.atuiKernel_SectionCardOverlayTop article > div
+.atuiKernel_SectionCardOverlay article > div[class="text"] > h3,
+.atuiKernel_SectionCardOverlay article > div[class="text"] > p
 {
-     top : 0;
-     background : linear-gradient(to bottom, var(--atuiKernel_ColorschemeBB8) 50%,transparent 100%);
-}
-
-.atuiKernel_SectionCardOverlayBottom article > div > *,
-.atuiKernel_SectionCardOverlayTop article > div > *
-{
-     color : var(--atuiKernel_ColorschemeOB0);
-     overflow-wrap: break-word;
-}
-
-.atuiKernel_SectionCardOverlayBottom article div h3,
-.atuiKernel_SectionCardOverlayTop article div h3
-{
-     font-family: var(--atuiKernel_FontsTitle);
-     margin : 0 5px 10px 5px;
-     font-size: 1.3rem;
-}
-
-.atuiKernel_SectionCardOverlayBottom article > div > p,
-.atuiKernel_SectionCardOverlayTop article > div > p
-{
-     margin : 10px 5px;
-     text-align: justify;
-}
-
-
-/* Main */
-
-.atuiKernel_SectionCardMainRow article,
-.atuiKernel_SectionCardMainColumn article
-{
-     display : flex;
-     border : 1px var(--atuiKernel_ColorschemeOB2) solid;
-     border-radius : var(--atuiKernel_Borderradius);
-     overflow: hidden;
-     background-color: var(--atuiKernel_ColorschemeOB1);
-}
-
-.atuiKernel_SectionCardMainRow article img,
-.atuiKernel_SectionCardMainColumn article img
-{
-     margin : 10px;
-     border-radius : var(--atuiKernel_Borderradius);
-     height : fit-content;
-}
-
-.atuiKernel_SectionCardMainRow article > div,
-.atuiKernel_SectionCardMainColumn article > div
-{
-     margin : 10px;
-}
-
-.atuiKernel_SectionCardMainRow article > div *,
-.atuiKernel_SectionCardMainColumn article > div *
-{
-     overflow-wrap: break-word;
-}
-
-.atuiKernel_SectionCardMainRow article > div h3,
-.atuiKernel_SectionCardMainColumn article > div h3
-{
-     font-family: var(--atuiKernel_FontsTitle);
-     font-size : 1.3rem;
-     margin : 5px;
-     color : var(--atuiKernel_ColorschemeOBF);
-}
-
-.atuiKernel_SectionCardMainRow article > div > p,
-.atuiKernel_SectionCardMainColumn article > div > p
-{
-     margin : 10px 5px;
-     text-align: justify;
-}
-
-.atuiKernel_SectionCardMainColumn article
-{
-     flex-direction: column;
-}
-
-.atuiKernel_SectionCardMainColumn article img
-{
-     width : calc(100% - 20px);
-}
-
-.atuiKernel_SectionCardMainColumn article > div
-{
-     margin-top : 5px;
-}
-
-.atuiKernel_SectionCardMainColumn article > div h3
-{
-     margin : 10px;
-     color : var(--atuiKernel_ColorschemeOBF);
-}
-
-.atuiKernel_SectionCardMainColumn article > div > p
-{
-     margin : 10px;
+     color : var(--atuiKernel_ColorschemeOB0) !important;
 }
 

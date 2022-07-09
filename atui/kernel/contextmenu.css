@@ -73,7 +73,7 @@
      margin : 0;
      color : var(--atuiKernel_ColorschemeOBF);
      width : calc(100% - 38px);
-     overflow-wrap: anywhere;
+     word-wrap: anywhere;
 }
 
 .atuiKernel_ToolsContextmenu aside a div img
