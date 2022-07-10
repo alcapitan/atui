@@ -1,0 +1,146 @@
+/* Global */
+
+section input[type=button],
+section input[type=checkbox],
+section input[type=color],
+section input[type=date],
+section input[type=email],
+section input[type=file],
+section input[type=image],
+section input[type=month],
+section input[type=number],
+section input[type=password],
+section input[type=radio],
+section input[type=range],
+section input[type=reset],
+section input[type=search],
+section input[type=submit],
+section input[type=tel],
+section input[type=text],
+section input[type=time],
+section input[type=url],
+section input[type=week],
+section progress
+/* All */
+{
+     margin : 10px;
+     font-size: 1rem;
+     box-sizing: border-box;
+     vertical-align: middle;
+}
+
+
+/* Fixes */
+
+section input[type=checkbox],
+section input[type=radio],
+section input[type=range],
+/* Only those input types support accent-color property */
+section progress
+{
+     accent-color: var(--atuiKernel_ColorschemeOA5);
+}
+
+section input[type=button],
+section input[type=color],
+section input[type=date],
+section input[type=email],
+section input[type=image],
+section input[type=month],
+section input[type=number],
+section input[type=password],
+section input[type=reset],
+section input[type=search],
+section input[type=submit],
+section input[type=tel],
+section input[type=text],
+section input[type=time],
+section input[type=url],
+section input[type=week]
+{
+     height: 40px;
+}
+
+section input[type=button],
+section input[type=checkbox],
+section input[type=date],
+section input[type=email],
+section input[type=image],
+section input[type=month],
+section input[type=number],
+section input[type=password],
+section input[type=radio],
+section input[type=reset],
+section input[type=search],
+section input[type=submit],
+section input[type=tel],
+section input[type=text],
+section input[type=time],
+section input[type=url],
+section input[type=week]
+{
+     padding : 10px 20px;
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     background-color : var(--atuiKernel_ColorschemeOB1);
+}
+
+section input[type=checkbox],
+section input[type=radio]
+{
+     width : 25px;
+     height : 25px;
+}
+
+section progress
+{
+     height : 30px;
+}
+
+section input[type=color]
+{
+     border : none;
+}
+
+section input[type=button],
+section input[type=date],
+section input[type=email],
+section input[type=image],
+section input[type=month],
+section input[type=number],
+section input[type=password],
+section input[type=range],
+section input[type=reset],
+section input[type=search],
+section input[type=submit],
+section input[type=tel],
+section input[type=text],
+section input[type=time],
+section input[type=url],
+section input[type=week]
+{
+     border-radius: var(--atuiKernel_Borderradius);
+}
+
+section input[type=date]:focus,
+section input[type=email]:focus,
+section input[type=image]:focus,
+section input[type=month]:focus,
+section input[type=number]:focus,
+section input[type=password]:focus,
+section input[type=reset]:focus,
+section input[type=search]:focus,
+section input[type=submit]:focus,
+section input[type=tel]:focus,
+section input[type=text]:focus,
+section input[type=time]:focus,
+section input[type=url]:focus,
+section input[type=week]:focus
+{
+     outline: solid 2px var(--atuiKernel_ColorschemeBA5);
+}
+
+section input[type=file]::-webkit-file-upload-button
+{
+     display: none;
+}
+

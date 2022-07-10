@@ -4,6 +4,7 @@
 {
      background-color : var(--atuiKernel_ColorschemeOA7);
      min-height: 50px;
+     margin-bottom : 20px;
 }
 
 #atuiKernel_Header > aside
