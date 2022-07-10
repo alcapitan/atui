@@ -3,7 +3,6 @@
 #atuiKernel_ToolsContact
 {
      margin : 10px;
-     margin-top : 40px !important;
 }
 
 #atuiKernel_ToolsContact > p /* Title */
@@ -39,7 +38,7 @@
 #atuiKernel_ToolsContactBroad div /* Element */
 {
      border-radius : var(--atuiKernel_Borderradius);
-     background-color: var(--atuiKernel_ColorschemeOB1);
+     background-color: var(--atuiKernel_ColorschemeBB0);
      display: flex;
      align-items: center;
      margin : 5px 10px;
@@ -67,7 +66,7 @@
 #atuiKernel_ToolsContactNewsletter /* Element */
 {
      border-radius : var(--atuiKernel_Borderradius);
-     background-color: var(--atuiKernel_ColorschemeOB1);
+     background-color: var(--atuiKernel_ColorschemeBB0);
      display: flex;
      align-items: center;
      margin : 5px 15px;

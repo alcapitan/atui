@@ -31,6 +31,7 @@ torrent.png > https://img.icons8.com/fluency-systems-regular/48/torrent.png
 checksum.png > https://img.icons8.com/fluency-systems-regular/48/check-document.png
 
 Contacts :
+appstore.png > https://img.icons8.com/fluency-systems-regular/96/apple-app-store.png
 discord.png > https://img.icons8.com/fluency-systems-regular/96/discord.png
 dribbble.png > https://img.icons8.com/fluency-systems-regular/96/dribbble.png
 email.png > https://img.icons8.com/fluency-systems-regular/96/email.png
@@ -44,6 +45,7 @@ maps.png > https://img.icons8.com/fluency-systems-regular/96/google-maps.png
 messenger.png > https://img.icons8.com/fluency-systems-regular/96/facebook-messenger.png
 phone.png > https://img.icons8.com/fluency-systems-regular/96/phone.png
 pinterest.png > https://img.icons8.com/fluency-systems-regular/96/pinterest.png
+playstore.png > https://img.icons8.com/fluency-systems-regular/96/google-play.png
 reddit.png > https://img.icons8.com/fluency-systems-regular/96/reddit.png
 skype.png > https://img.icons8.com/fluency-systems-regular/96/skype.png
 snapchat.png > https://img.icons8.com/fluency-systems-regular/96/snapchat.png
