@@ -21,7 +21,8 @@
      transition: font-weight 500ms;
 }
 
-.atuiKernel_ToolsContextmenu aside 
+.atuiKernel_ToolsContextmenu aside,
+.atuiKernel_ToolsInfotip aside
 {
      position : fixed;
      width : 280px;
@@ -33,6 +34,7 @@
      top : 0;
      left : 0;
      z-index : 1;
+     word-wrap: anywhere;
 }
 
 .atuiKernel_ToolsContextmenu aside a
@@ -89,5 +91,19 @@
      height : 2px;
      margin : 5px 0;
      border : 0;
+}
+
+
+/* Toolstip */
+
+.atuiKernel_ToolsInfotip aside
+{
+     padding : 20px;
+}
+
+.atuiKernel_ToolsInfotip aside *
+{
+     margin : 0;
+     font-size : 1.1rem;
 }
 

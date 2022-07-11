@@ -432,3 +432,12 @@ function atuiKernel_NavigatorGlobalpanel(cible)
      document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,false);});     
 }
 
+
+/* Infotip */
+
+function atuiKernel_ToolsInfotip(cible)
+{
+     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsContextmenuDisplay(this,true);});
+     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
+}
+
