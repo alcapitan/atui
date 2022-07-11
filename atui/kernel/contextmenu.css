@@ -54,7 +54,6 @@
 .atuiKernel_ToolsContextmenu aside a div:hover
 {
      background-color : var(--atuiKernel_ColorschemeBA3);
-     transition: background-color 500ms;
 }
 
 .atuiKernel_ToolsContextmenu aside a div

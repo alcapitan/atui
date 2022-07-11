@@ -40,21 +40,17 @@
 body
 {
      margin : 0;
-     background-color: var(--atuiKernel_ColorschemeOB0);
+     background : var(--atuiKernel_ColorschemeOB0);
 }
 
 body *
 {
      font-family: var(--atuiKernel_FontsText);
+     color : var(--atuiKernel_ColorschemeOBF);
 }
 
 
 /* Default props of balises */
-
-p
-{
-     color : var(--atuiKernel_ColorschemeOBF);
-}
 
 a
 {
