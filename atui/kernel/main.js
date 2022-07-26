@@ -441,3 +441,28 @@ function atuiKernel_ToolsInfotip(cible)
      document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
 }
 
+
+/* Tabs */
+
+const tabs = document.querySelectorAll('.atuiKernel_SectionTabsHeader a');
+for (let i = 0;i < tabs.length;i++)
+{
+     tabs[i].addEventListener('click',function(){atuiKernel_TabsDisplay(this)});
+}
+
+function atuiKernel_TabsDisplay(element)
+{
+     const container = element.parentNode.parentNode; // Tabs container
+     container.querySelector('.atuiKernel_SectionTabsHeader .active').classList.remove('active'); // Remove active class to the activated tab
+     element.classList.add('active'); // Add active class to clicked element
+     container.querySelector('.atuiKernel_SectionTabsContent .active').classList.remove('active'); // Remove active class to the activated content
+     container.querySelector(element.getAttribute('href')).classList.add('active'); // Add active element to content corresponding to clicked element
+}
+
+const urlPath = window.location.hash;
+const urlDestination = document.querySelector('a[href="' + urlPath + '"]');
+if (urlDestination !== null && !urlDestination.classList.contains('active'))
+{
+     atuiKernel_TabsDisplay(urlDestination);
+}
+

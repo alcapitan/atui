@@ -12,6 +12,7 @@
 @import url('./notification.css');
 @import url('./paragraph.css');
 @import url('./settings.css');
+@import url('./tabs.css');
 
 @font-face {
      font-family: 'Montserrat';

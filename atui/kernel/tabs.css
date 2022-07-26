@@ -1,0 +1,99 @@
+/* Global */
+
+.atuiKernel_SectionTabsContrast,
+.atuiKernel_SectionTabsStandard
+{
+     border-radius: var(--atuiKernel_Borderradius);
+     margin : 20px 0;
+     overflow: hidden;
+}
+
+
+/* Header */
+
+.atuiKernel_SectionTabsHeader
+{
+     display: flex;
+}
+
+.atuiKernel_SectionTabsHeader > a
+{
+     padding : 15px;
+     position: relative;
+     color : var(--atuiKernel_ColorschemeOBF);
+}
+
+.atuiKernel_SectionTabsHeader > a *
+{
+     margin : 0;
+     color : inherit;
+}
+
+.atuiKernel_SectionTabsHeader .active
+{
+     font-weight: bold;
+}
+
+
+/* Content */
+
+.atuiKernel_SectionTabsContent
+{
+     padding : 15px;
+}
+
+.atuiKernel_SectionTabsContent div
+{
+     display: none;
+}
+
+.atuiKernel_SectionTabsContent .active
+{
+     display: block;
+}
+
+
+/* Contrast style */
+
+.atuiKernel_SectionTabsContrast
+{
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
+}
+
+.atuiKernel_SectionTabsContrast .atuiKernel_SectionTabsHeader
+{
+     background-color: var(--atuiKernel_ColorschemeOB2);
+     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     padding : 0 10px;
+}
+
+.atuiKernel_SectionTabsContrast .atuiKernel_SectionTabsContent
+{
+     background-color: var(--atuiKernel_ColorschemeOB1);
+}
+
+
+/* Standard style */
+
+.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader
+{
+     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
+}
+
+.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader .active *
+{
+     color : var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader .active::after
+{
+     content : "";
+     width : calc(100% - 30px);
+     height : 5px;
+     background-color: var(--atuiKernel_ColorschemeOA5);
+     position: absolute;
+     border-radius: 5px 5px 0 0;
+     transform: translateY(10px);
+}
+
