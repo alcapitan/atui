@@ -11,6 +11,7 @@
 @import url('./navigator.css');
 @import url('./notification.css');
 @import url('./paragraph.css');
+@import url('./section.css');
 @import url('./settings.css');
 @import url('./tabs.css');
 
@@ -48,6 +49,7 @@ body *
 {
      font-family: var(--atuiKernel_FontsText);
      color : var(--atuiKernel_ColorschemeOBF);
+     word-wrap: anywhere;
 }
 
 
@@ -62,13 +64,5 @@ a
 a:hover, a:active
 {
      font-weight: bold;
-}
-
-
-/* Section */
-
-body > section
-{
-     margin : 15px 5%;
 }
 

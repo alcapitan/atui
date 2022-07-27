@@ -26,14 +26,6 @@
      position: relative;
 }
 
-.atuiKernel_SectionCardStandard article *,
-.atuiKernel_SectionCardContrast article *,
-.atuiKernel_SectionCardOverlay article *
-/* Tout le contenu des cartes */
-{
-     word-wrap: anywhere;
-}
-
 .atuiKernel_SectionCardStandard article > div[class="image"] img,
 .atuiKernel_SectionCardContrast article > div[class="image"] img,
 .atuiKernel_SectionCardOverlay article > div[class="image"] img

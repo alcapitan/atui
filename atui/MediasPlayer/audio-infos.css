@@ -15,7 +15,6 @@
 {
 	font-family: var(--atuiKernel_FontsTitle);
 	margin : 5px 0px;
-	word-wrap: anywhere;
 }
 
 #atuiMediasplayer_AudioplayerMusicinformations p:first-child  /* Artiste */

@@ -24,6 +24,7 @@ highlight.png > https://img.icons8.com/fluency-systems-regular/48/progress-indic
 trash.png > https://img.icons8.com/fluency-systems-regular/48/delete.png
 settings.png > https://img.icons8.com/fluency-systems-regular/96/settings.png
 right-arrow.png > https://img.icons8.com/fluency-systems-regular/96/right--v1.png
+bottom-arrow.png > https://img.icons8.com/fluency-systems-regular/96/down--v1.png
 send.png > https://img.icons8.com/fluency-systems-regular/96/sent.png
 file.png > https://img.icons8.com/fluency-systems-regular/96/file.png
 download.png > https://img.icons8.com/fluency-systems-regular/48/download--v1.png

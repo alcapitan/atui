@@ -1,0 +1,61 @@
+/* Global */
+
+body > section
+{
+     margin : 15px 5%;
+}
+
+
+/* Accordion */
+
+.atuiKernel_SectionAccordion
+{
+     border-radius: var(--atuiKernel_Borderradius);
+     margin : 20px 0;
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     overflow: hidden;
+}
+
+.atuiKernel_SectionAccordionHeader
+{
+     background-color: var(--atuiKernel_ColorschemeOB2);
+     padding : 0 20px;
+     min-height : 50px;
+     display: flex;
+     align-items: center;
+}
+
+.atuiKernel_SectionAccordionHeader *
+{
+     color : var(--atuiKernel_ColorschemeOBF);
+     margin : 0;
+     font-family: var(--atuiKernel_FontsTitle);
+     font-size : 1.2rem;
+     flex : 1;
+}
+
+.atuiKernel_SectionAccordionHeader img
+{
+     width : 35px;
+     height : 35px;
+     flex : 0;
+}
+
+.atuiKernel_SectionAccordionArrow
+{
+     margin-left : 10px;
+}
+
+.atuiKernel_SectionAccordionContent
+{
+     padding : 15px;
+     background-color: var(--atuiKernel_ColorschemeOB1);
+     border-top : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     display: none;
+}
+
+.atuiKernel_SectionAccordionContent *
+{
+     margin : 0;
+}
+
