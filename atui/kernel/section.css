@@ -59,3 +59,84 @@ body > section
      margin : 0;
 }
 
+
+/* Box */
+
+.atuiKernel_SectionBoxDefault,
+.atuiKernel_SectionBoxAccent,
+.atuiKernel_SectionBoxAlert,
+.atuiKernel_SectionBoxWarning,
+.atuiKernel_SectionBoxInfo,
+.atuiKernel_SectionBoxSuccess
+{
+     border-radius: var(--atuiKernel_Borderradius);
+     margin : 20px 0;
+     padding : 15px;
+     min-height : 30px;
+}
+
+/*.atuiKernel_SectionBoxDefault:has(.atuiKernel_SectionBoxIcon),
+.atuiKernel_SectionBoxAccent:has(.atuiKernel_SectionBoxIcon),
+.atuiKernel_SectionBoxAlert:has(.atuiKernel_SectionBoxIcon),
+.atuiKernel_SectionBoxWarning:has(.atuiKernel_SectionBoxIcon),
+.atuiKernel_SectionBoxInfo:has(.atuiKernel_SectionBoxIcon),
+.atuiKernel_SectionBoxSuccess:has(.atuiKernel_SectionBoxIcon)
+En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
+{
+     min-height : 30px;
+}*/
+
+.atuiKernel_SectionBoxDefault *,
+.atuiKernel_SectionBoxAccent *,
+.atuiKernel_SectionBoxAlert *,
+.atuiKernel_SectionBoxWarning *,
+.atuiKernel_SectionBoxInfo *,
+.atuiKernel_SectionBoxSuccess *
+{
+     margin : 0;
+}
+
+.atuiKernel_SectionBoxDefault
+{
+     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
+     background-color: var(--atuiKernel_ColorschemeOB1);
+}
+
+.atuiKernel_SectionBoxAccent
+{
+     border : 1px var(--atuiKernel_ColorschemeOA5) solid;
+     background-color: var(--atuiKernel_ColorschemeOA1);
+}
+
+.atuiKernel_SectionBoxAlert
+{
+     border : 1px rgb(255, 0, 0) solid;
+     background-color: rgb(255, 204, 204);
+}
+
+.atuiKernel_SectionBoxWarning
+{
+     border : 1px rgb(255, 128, 0) solid;
+     background-color: rgb(255, 230, 204);
+}
+
+.atuiKernel_SectionBoxInfo
+{
+     border : 1px rgb(0, 128, 255) solid;
+     background-color: rgb(204, 230, 255);
+}
+
+.atuiKernel_SectionBoxSuccess
+{
+     border : 1px rgb(0,153,51) solid;
+     background-color: rgb(204,235,214);
+}
+
+.atuiKernel_SectionBoxIcon
+{
+     width : 30px;
+     height : 30px;
+     margin : 0 10px 10px 0;
+     float : left;
+}
+

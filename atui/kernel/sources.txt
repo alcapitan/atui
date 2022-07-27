@@ -64,3 +64,9 @@ sms.png > https://img.icons8.com/fluency-systems-regular/96/chat-message.png
 teams.png > https://img.icons8.com/fluency-systems-regular/96/microsoft-teams-2019.png
 stackoverflow.png > https://img.icons8.com/fluency-systems-regular/96/stackoverflow.png
 visio.png > https://img.icons8.com/fluency-systems-regular/96/video-message.png
+
+Box : 
+alert2.png > https://img.icons8.com/fluency-systems-regular/30/box-important--v1.png
+warn.png > https://img.icons8.com/fluency-systems-regular/30/error--v1.png
+success.png > https://img.icons8.com/fluency-systems-regular/30/ok--v1.png
+info.png > https://img.icons8.com/fluency-systems-regular/30/info.png
