@@ -470,7 +470,7 @@ for (let i = 0;i < atuiKernel_SectionAccordionContainer.length;i++)
 {
      atuiKernel_SectionAccordionHeader = atuiKernel_SectionAccordionContainer[i].querySelector('.atuiKernel_SectionAccordionHeader');
      atuiKernel_SectionAccordionContent = atuiKernel_SectionAccordionContainer[i].querySelector('.atuiKernel_SectionAccordionContent');
-     atuiKernel_SectionAccordionHeader.addEventListener('click',function(){atuiKernel_SectionAccordionDisplay(atuiKernel_SectionAccordionHeader,atuiKernel_SectionAccordionContent)});
+     atuiKernel_SectionAccordionHeader.addEventListener('click',function(){atuiKernel_SectionAccordionDisplay(atuiKernel_SectionAccordionContent)});
 }
 
 function atuiKernel_SectionAccordionDisplay(content)
