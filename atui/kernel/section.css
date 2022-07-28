@@ -1,8 +1,46 @@
-/* Global */
+/* Section */
 
 body > section
 {
-     margin : 15px 5%;
+     margin : 0 5%;
+     display: flex;
+}
+
+@media (min-width : 768px) /* Computers */
+{
+     body > section
+     {
+          column-gap: 5%;
+     }
+
+     .atuiKernel_SectionMain
+     {
+          flex : 1;
+     }
+
+     .atuiKernel_SectionSide
+     {
+          min-width: 150px;
+          max-width: 30%;
+     }
+}
+
+@media (max-width : 767px) /* Smartphones */
+{
+     body > section
+     {
+          flex-direction: column;
+     }
+
+     .atuiKernel_SectionSide
+     {
+          order: 0;
+     }
+
+     .atuiKernel_SectionMain
+     {
+          order: 1;
+     }
 }
 
 
@@ -138,5 +176,30 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
      height : 30px;
      margin : 0 10px 10px 0;
      float : left;
+}
+
+
+/* Contents */
+
+.atuiKernel_SectionContents ul
+{
+     padding-left : 30px;
+}
+
+.atuiKernel_SectionContents li
+{
+     margin : 15px 0;
+}
+
+.atuiKernel_SectionContents a
+{
+     color : var(--atuiKernel_ColorschemeOBF);
+}
+
+.atuiKernel_SectionContents a:hover,
+.atuiKernel_SectionContents a:active
+{
+     color : var(--atuiKernel_ColorschemeOA5);
+     text-decoration: underline;
 }
 

@@ -44,11 +44,6 @@
 	{
 		margin : 5px 10px;
 	}
-
-	#atuiMediasplayer_VideoplayerButtonsBasic /* Groupe de contrôleurs basiques */
-	{
-		flex : 1;
-	}
 }
 
 @media (max-width : 767px) /* Smartphones */

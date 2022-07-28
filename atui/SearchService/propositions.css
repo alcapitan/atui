@@ -13,8 +13,8 @@
      margin : 0 10px 20px 10px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecents > p,
-#atuiSearchservices_HeaderPropositionsSuggested > p
+#atuiSearchservices_HeaderPropositionsRecents > h3,
+#atuiSearchservices_HeaderPropositionsSuggested > h3
 /* Title of containers */
 {
      margin : 0;

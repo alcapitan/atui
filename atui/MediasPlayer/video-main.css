@@ -38,7 +38,7 @@
 
 	.atuiMediasplayer_Videoplayer article /* Video player */
 	{
-		width : 750px;
+		max-width : 750px;
 	}
 }
 
