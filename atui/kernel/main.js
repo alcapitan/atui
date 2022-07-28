@@ -356,7 +356,7 @@ function atuiKernel_NotificationCookies()
 
 /* Context Menu */
 
-function atuiKernel_ToolsContextmenuDisplay(element,wish)
+function atuiKernel_ToolsContextmenuDisplay(element,wish,centered)
 {
      cible = element.childNodes[3]; /* Context menu */
      element = element.childNodes[1]; /* Trigger */
@@ -370,24 +370,43 @@ function atuiKernel_ToolsContextmenuDisplay(element,wish)
      }
      else
      {
-          elementPositionXShift = cible.getBoundingClientRect().x; /* Décalage X écran conteneur */
-          elementPositionYShift = cible.getBoundingClientRect().y; /* Décalage Y écran conteneur */
-          elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
-          elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
           element.style.fontWeight = "bold";
           element.style.textDecoration = "underline";
-          if (elementPositionX + cible.clientWidth > document.documentElement.clientWidth)  // Overflow droite
+          if (centered) /* Centered */
           {
-               elementPositionX = elementPositionX - cible.clientWidth;
+               elementPositionX = (document.documentElement.clientWidth - cible.clientWidth) / 2;
+               elementPositionYShift = cible.getBoundingClientRect().y; /* Décalage Y écran conteneur */
+               elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
+               if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
+               {
+                    elementPositionY = elementPositionY - cible.clientHeight;
+               }
+               elementPositionY = elementPositionY - elementPositionYShift;
           }
-          elementPositionX = elementPositionX - elementPositionXShift;
+          else if (document.documentElement.clientWidth <= 767) /* Smartphones */
+          {
+               elementPositionX = (document.documentElement.clientWidth - cible.clientWidth) / 2;
+               elementPositionY = (document.documentElement.clientHeight - cible.clientHeight) / 2;
+          }
+          else /* Computers */
+          {
+               elementPositionXShift = cible.getBoundingClientRect().x; /* Décalage X écran conteneur */
+               elementPositionYShift = cible.getBoundingClientRect().y; /* Décalage Y écran conteneur */
+               elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
+               elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
+               if (elementPositionX + cible.clientWidth > document.documentElement.clientWidth)  // Overflow droite
+               {
+                    elementPositionX = elementPositionX - cible.clientWidth;
+               }
+               elementPositionX = elementPositionX - elementPositionXShift;
+               if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
+               {
+                    elementPositionY = elementPositionY - cible.clientHeight;
+               }
+               elementPositionY = elementPositionY - elementPositionYShift;
+          }
           elementPositionX = elementPositionX + "px";
           cible.style.left = elementPositionX;
-          if (elementPositionY + cible.clientHeight > window.innerHeight)  // Overflow bas
-          {
-               elementPositionY = elementPositionY - cible.clientHeight;
-          }
-          elementPositionY = elementPositionY - elementPositionYShift;
           elementPositionY = elementPositionY + "px";
           cible.style.top = elementPositionY;
           cible.style.visibility = "visible";
@@ -396,40 +415,17 @@ function atuiKernel_ToolsContextmenuDisplay(element,wish)
 
 function atuiKernel_ToolsContextmenu(cible)
 {
-     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsContextmenuDisplay(this,true);});
-     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
+     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsContextmenuDisplay(this,true,false);});
+     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false,undefined);});     
 }
 
 
 /* Global Panel */
 
-// Va bientôt être supprimé au profit d'une fusion avec le script de Context Menu quand il supportera la responsive.
-
-function atuiKernel_NavigatorGlobalpanelDisplay(element,wish)
-{
-     cible = element.childNodes[3];
-     element = element.childNodes[1];
-     if (!wish)
-     {
-          cible.style.visibility = "hidden";
-          element.style.fontWeight = "normal";
-          element.style.textDecoration = "none";
-     }
-     else
-     {
-          element.style.fontWeight = "bold";
-          element.style.textDecoration = "underline";
-          offsetTop = element.offsetTop + 30;
-          offsetTop = offsetTop + "px";
-          cible.style.top = offsetTop;
-          cible.style.visibility = "visible";
-     }
-}
-
 function atuiKernel_NavigatorGlobalpanel(cible)
 {
-     document.getElementById(cible).addEventListener("mouseover",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,true);});
-     document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_NavigatorGlobalpanelDisplay(this,false);});     
+     document.getElementById(cible).addEventListener("mouseover",function(){atuiKernel_ToolsContextmenuDisplay(this,true,true);});
+     document.getElementById(cible).addEventListener("mouseout",function(){atuiKernel_ToolsContextmenuDisplay(this,false,undefined);});     
 }
 
 
@@ -437,8 +433,8 @@ function atuiKernel_NavigatorGlobalpanel(cible)
 
 function atuiKernel_ToolsInfotip(cible)
 {
-     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsContextmenuDisplay(this,true);});
-     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false);});     
+     document.getElementById(cible).addEventListener("mouseenter",function(){atuiKernel_ToolsContextmenuDisplay(this,true,false);});
+     document.getElementById(cible).addEventListener("mouseleave",function(){atuiKernel_ToolsContextmenuDisplay(this,false,undefined);});     
 }
 
 
@@ -453,7 +449,6 @@ for (let i = 0;i < tabs.length;i++)
 function atuiKernel_TabsDisplay(element)
 {
      const container = element.parentNode.parentNode; // Tabs container
-     container.querySelector('.atuiKernel_SectionTabsHeader .active').classList.remove('active'); // Remove active class to the activated tab
      element.classList.add('active'); // Add active class to clicked element
      container.querySelector('.atuiKernel_SectionTabsContent .active').classList.remove('active'); // Remove active class to the activated content
      container.querySelector(element.getAttribute('href')).classList.add('active'); // Add active element to content corresponding to clicked element
@@ -478,7 +473,7 @@ for (let i = 0;i < atuiKernel_SectionAccordionContainer.length;i++)
      atuiKernel_SectionAccordionHeader.addEventListener('click',function(){atuiKernel_SectionAccordionDisplay(atuiKernel_SectionAccordionHeader,atuiKernel_SectionAccordionContent)});
 }
 
-function atuiKernel_SectionAccordionDisplay(header,content)
+function atuiKernel_SectionAccordionDisplay(content)
 {
      const atuiKernel_SectionAccordionArrow = atuiKernel_SectionAccordionHeader.querySelector('.atuiKernel_SectionAccordionArrow');
      if (content.style.display == 'block')
