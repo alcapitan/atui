@@ -1,4 +1,4 @@
-atuiKernel_FooterLastedited(28,7,2022);
+atuiKernel_FooterLastedited(29,7,2022);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg");
