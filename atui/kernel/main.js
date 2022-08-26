@@ -450,6 +450,7 @@ function atuiKernel_TabsDisplay(element)
 {
      const container = element.parentNode.parentNode; // Tabs container
      element.classList.add('active'); // Add active class to clicked element
+     container.querySelector('.atuiKernel_SectionTabsHeader .active').classList.remove('active'); // Remove active class to the activated header
      container.querySelector('.atuiKernel_SectionTabsContent .active').classList.remove('active'); // Remove active class to the activated content
      container.querySelector(element.getAttribute('href')).classList.add('active'); // Add active element to content corresponding to clicked element
 }
