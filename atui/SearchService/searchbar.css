@@ -62,16 +62,3 @@
      }
 }
 
-@media (min-width : 768px) and (max-width : 818px) /* Correctif visuel seulement quand il y a searchbar en block center */
-{
-     #atuiKernel_HeaderBlockCenter
-     {
-          order : 3 !important;
-     }
-
-     #atuiKernel_HeaderBlockRight
-     {
-          order : 2 !important;
-     }
-}
-
