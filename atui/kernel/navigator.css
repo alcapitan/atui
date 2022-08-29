@@ -46,28 +46,34 @@
 .atuiKernel_NavigatorGlobalpanel aside
 {
      align-items: normal;
-     padding : 20px;
      position: absolute;
      left : 20px;
      right : 20px;
      width : calc(100vw - 100px);
      visibility: hidden;
-     background-color: var(--atuiKernel_ColorschemeBB1);
-     backdrop-filter: var(--atuiKernel_Blur);
+     background-color: var(--atuiKernel_ColorschemeBB0);
      border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
-     justify-content: space-around;
-     flex-wrap: wrap;
+     display : block !important;
 }
 
 .atuiKernel_NavigatorGlobalpanel aside > div
+{
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     padding : 20px;
+     backdrop-filter: var(--atuiKernel_Blur);
+}
+
+.atuiKernel_NavigatorGlobalpanel aside > div div
 {
      display: block;
      margin : 10px;
      min-width : 20%;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div p
+.atuiKernel_NavigatorGlobalpanel aside > div div p
 {
      font-family: var(--atuiKernel_FontsTitle);
      font-weight: bold;
@@ -75,12 +81,12 @@
      color : var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div
+.atuiKernel_NavigatorGlobalpanel aside > div div div
 {
      margin : 10px 20px;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div a
+.atuiKernel_NavigatorGlobalpanel aside > div div div a
 {
      display: block;
      margin : 5px;
