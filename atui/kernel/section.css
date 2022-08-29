@@ -20,8 +20,7 @@ body > section
 
      .atuiKernel_SectionSide
      {
-          min-width: 150px;
-          max-width: 30%;
+          flex-basis : 200px;
      }
 }
 
