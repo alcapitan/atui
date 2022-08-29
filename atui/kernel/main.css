@@ -15,25 +15,15 @@
 @import url('./settings.css');
 @import url('./tabs.css');
 
-@font-face {
-     font-family: 'Montserrat';
-     src: url('../../patch/fonts/Montserrat/Montserrat-Regular.ttf');
-}
-
-@font-face {
-     font-family: 'Red Hat Display';
-     src: url('../../patch/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf');
-}
-
 
 /* Global */
 
 :root
 {
      font-size : 16px;
-     --atuiKernel_FontsTitle : 'Red Hat Display','Montserrat',Arial;
-     --atuiKernel_FontsText : 'Montserrat',Arial;
-     --atuiKernel_FontsSpecial : 'Lobster','Montserrat',Arial;
+     --atuiKernel_FontsTitle : 'Noto Sans',Arial;
+     --atuiKernel_FontsText : 'Noto Sans',Arial;
+     --atuiKernel_FontsSpecial : 'Lobster','Noto Sans',Arial;
      --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
      --atuiKernel_Blur : blur(5px);
      --atuiKernel_Borderradius : 10px;
