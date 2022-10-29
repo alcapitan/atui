@@ -270,6 +270,7 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
 .atuiKernel_SectionBreadcrumb > *
 {
      display: inline-block;
+     margin : 0;
 }
 
 .atuiKernel_SectionBreadcrumb > *:last-child
