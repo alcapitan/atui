@@ -259,3 +259,35 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
      background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
+
+/* Breadcrumb */
+
+.atuiKernel_SectionBreadcrumb
+{
+     margin : 20px 0;
+}
+
+.atuiKernel_SectionBreadcrumb > *
+{
+     display: inline-block;
+}
+
+.atuiKernel_SectionBreadcrumb > *:last-child
+{
+     color : var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_SectionBreadcrumb > *:not(:last-child)
+{
+     color : var(--atuiKernel_ColorschemeOBF);
+     margin-right : 10px;
+}
+
+.atuiKernel_SectionBreadcrumb > *:not(:last-child)::after
+{
+     content : "/";
+     margin-left : 10px;
+     font-weight: normal;
+     font-size : 1.1rem;
+}
+
