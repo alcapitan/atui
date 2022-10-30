@@ -27,7 +27,7 @@
      position : fixed;
      width : 280px;
      visibility: hidden;
-     background-color: var(--atuiKernel_ColorschemeBB0);
+     background-color: var(--atuiKernel_ColorschemeOB0);
      border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
      top : 0;
@@ -43,7 +43,6 @@
 
 .atuiKernel_ToolsContextmenu aside > div
 {
-     backdrop-filter: var(--atuiKernel_Blur);
      padding : 10px 0;
 }
 

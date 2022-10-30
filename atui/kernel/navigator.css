@@ -51,7 +51,7 @@
      right : 20px;
      width : calc(100vw - 100px);
      visibility: hidden;
-     background-color: var(--atuiKernel_ColorschemeBB0);
+     background-color: var(--atuiKernel_ColorschemeOB0);
      border-radius : var(--atuiKernel_Borderradius);
      box-shadow: var(--atuiKernel_Shadow);
      display : block !important;
@@ -63,7 +63,6 @@
      justify-content: space-around;
      flex-wrap: wrap;
      padding : 20px;
-     backdrop-filter: var(--atuiKernel_Blur);
 }
 
 .atuiKernel_NavigatorGlobalpanel aside > div div
