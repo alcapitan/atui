@@ -1,51 +1,11 @@
 /* Global */
 
-body > footer
+#atuiKernel_Footer
 {
      position: relative;
-}
-
-
-/* Footer styles */
-
-#atuiKernel_FooterContrast
-{
      background-color : var(--atuiKernel_ColorschemeOA1);
      margin-top : 50px;
      padding: 20px 40px 5px 40px;
-}
-
-#atuiKernel_FooterFlat
-{
-     margin : 50px 5% 0 5%;
-     padding : 20px 0;
-}
-
-#atuiKernel_FooterIntegral
-{
-     background-color : var(--atuiKernel_ColorschemeOB1);
-     border-top : 3px solid var(--atuiKernel_ColorschemeOA6);
-     margin-top : 50px;
-     padding: 20px 40px 5px 40px;
-}
-
-#atuiKernel_FooterFloating
-{
-     background-color : var(--atuiKernel_ColorschemeOA1);
-     box-shadow: var(--atuiKernel_Shadow);
-     border-radius: var(--atuiKernel_Borderradius);
-     margin : 50px 5%;
-     padding: 20px 40px;
-}
-
-#atuiKernel_FooterModern
-{
-     background-color : var(--atuiKernel_ColorschemeBB1);
-     backdrop-filter: var(--atuiKernel_Blur);
-     border : 3px solid var(--atuiKernel_ColorschemeOB2);
-     border-radius: var(--atuiKernel_Borderradius);
-     margin : 50px 5%;
-     padding: 20px 40px;
 }
 
 
