@@ -62,8 +62,8 @@ function atuiMediasplayer_AudioplayerMusicChange(atuiMediasplayer_AudioplayerMus
 		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsCover").src = atuiMediasplayer_AudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
 		document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[2];
 		document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[3].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[3];
-		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsAdvanced").childNodes[1].childNodes[1].childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[4];
-		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsAdvanced").childNodes[3].childNodes[1].childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[5];
+		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsAdvanced").childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[4];
+		document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsAdvanced").childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[5];
 	}
 	atuiMediasplayer_AudioplayerMusicRun();
 }
