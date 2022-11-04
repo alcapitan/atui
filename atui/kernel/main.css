@@ -1,60 +1,54 @@
-@import url('./button.css');
-@import url('./cards.css');
-@import url('./carousel.css');
-@import url('./contacts.css');
-@import url('./contextmenu.css');
-@import url('./download.css');
-@import url('./footer.css');
-@import url('./grid.css');
-@import url('./header.css');
-@import url('./image.css');
-@import url('./input.css');
-@import url('./navigator.css');
-@import url('./notification.css');
-@import url('./pagination.css');
-@import url('./paragraph.css');
-@import url('./section.css');
-@import url('./settings.css');
-@import url('./tabs.css');
-
+@import url("./button.css");
+@import url("./cards.css");
+@import url("./carousel.css");
+@import url("./contacts.css");
+@import url("./contextmenu.css");
+@import url("./download.css");
+@import url("./footer.css");
+@import url("./grid.css");
+@import url("./header.css");
+@import url("./image.css");
+@import url("./input.css");
+@import url("./navigator.css");
+@import url("./notification.css");
+@import url("./pagination.css");
+@import url("./paragraph.css");
+@import url("./section.css");
+@import url("./settings.css");
+@import url("./tabs.css");
 
 /* Global */
 
-:root
-{
-     font-size : 16px;
-     --atuiKernel_FontsTitle : 'Noto Sans',Arial;
-     --atuiKernel_FontsText : 'Noto Sans',Arial;
-     --atuiKernel_FontsSpecial : 'Lobster','Noto Sans',Arial;
-     --atuiKernel_Shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-     --atuiKernel_Blur : blur(5px);
-     --atuiKernel_Borderradius : 10px;
+:root {
+    font-size: 16px;
+    --atuiKernel_FontsTitle: "Noto Sans", Arial;
+    --atuiKernel_FontsText: "Noto Sans", Arial;
+    --atuiKernel_FontsSpecial: "Lobster", "Noto Sans", Arial;
+    --atuiKernel_Shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    --atuiKernel_Blur: blur(5px);
+    --atuiKernel_Borderradius: 10px;
 }
 
-body
-{
-     margin : 0;
-     background : var(--atuiKernel_ColorschemeOB0);
+body {
+    margin: 0;
+    background: var(--atuiKernel_ColorschemeOB0);
 }
 
-body *
-{
-     font-family: var(--atuiKernel_FontsText);
-     color : var(--atuiKernel_ColorschemeOBF);
-     word-wrap: anywhere;
+body * {
+    font-family: var(--atuiKernel_FontsText);
+    color: var(--atuiKernel_ColorschemeOBF);
+    word-wrap: anywhere;
 }
-
 
 /* Default props of balises */
 
-a
-{
-     text-decoration: none;
-     color: var(--atuiKernel_ColorschemeOA5);
+a {
+    text-decoration: none;
+    color: var(--atuiKernel_ColorschemeOA5);
 }
 
-a:hover, a:active
-{
-     font-weight: bold;
+a:hover,
+a:active {
+    font-weight: bold;
 }
-

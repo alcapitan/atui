@@ -1,62 +1,50 @@
 /* Global */
 
-.atuiMediasplayer_VideoplayerControls /* Toute la barre de contrôleurs */
-{
-	padding : 5px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-wrap: wrap;
+.atuiMediasplayer_VideoplayerControls /* Toute la barre de contrôleurs */ {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.atuiMediasplayer_VideoplayerControls img /* Tout les icônes */
-{
-	border-radius: var(--atuiKernel_Borderradius);
-	margin : 5px;
-	padding: 5px;
-	width : 30px;
-	height : 30px;
+.atuiMediasplayer_VideoplayerControls img /* Tout les icônes */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    margin: 5px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
 }
 
-.atuiMediasplayer_VideoplayerControls img:hover /* Tout les icônes au survol */ 
-{
-     background-color: var(--atuiKernel_ColorschemeBA4);
+.atuiMediasplayer_VideoplayerControls img:hover /* Tout les icônes au survol */ {
+    background-color: var(--atuiKernel_ColorschemeBA4);
 }
 
-.atuiMediasplayer_VideoplayerControls > div /* Tout les groupes de contrôleurs */
-{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+.atuiMediasplayer_VideoplayerControls > div /* Tout les groupes de contrôleurs */ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-#atuiMediasplayer_VideoplayerTimer p /* Texte dans le minuteur */
-{
-	margin : 5px;
+#atuiMediasplayer_VideoplayerTimer p /* Texte dans le minuteur */ {
+    margin: 5px;
 }
-
 
 /* Responsives */
 
-@media (min-width : 768px) /* Computers */
-{
-	.atuiMediasplayer_VideoplayerControls > div /* Tout les groupes de contrôleurs */
-	{
-		margin : 5px 10px;
-	}
+@media (min-width: 768px) /* Computers */ {
+    .atuiMediasplayer_VideoplayerControls > div /* Tout les groupes de contrôleurs */ {
+        margin: 5px 10px;
+    }
 }
 
-@media (max-width : 767px) /* Smartphones */
-{
-	#atuiMediasplayer_VideoplayerTimer /* Conteneur du minuteur */
-	{
-		margin : 0 10px;
-	}
+@media (max-width: 767px) /* Smartphones */ {
+    #atuiMediasplayer_VideoplayerTimer /* Conteneur du minuteur */ {
+        margin: 0 10px;
+    }
 
-	#atuiMediasplayer_VideoplayerButtonsAdditionalsPopup /* Icône du pop-up */,
-	#atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen /* Icône du plein écran */
-	{
-		display : none;
-	}
+    #atuiMediasplayer_VideoplayerButtonsAdditionalsPopup /* Icône du pop-up */,
+	#atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen /* Icône du plein écran */ {
+        display: none;
+    }
 }
-

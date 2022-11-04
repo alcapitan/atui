@@ -1,146 +1,70 @@
-/* Global */
-
-section input[type=button],
-section input[type=checkbox],
-section input[type=color],
-section input[type=date],
-section input[type=email],
-section input[type=file],
-section input[type=image],
-section input[type=month],
-section input[type=number],
-section input[type=password],
-section input[type=radio],
-section input[type=range],
-section input[type=reset],
-section input[type=search],
-section input[type=submit],
-section input[type=tel],
-section input[type=text],
-section input[type=time],
-section input[type=url],
-section input[type=week],
-section progress
-/* All */
-{
-     margin : 10px;
-     font-size: 1rem;
-     box-sizing: border-box;
-     vertical-align: middle;
+form,
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
 }
 
-
-/* Fixes */
-
-section input[type=checkbox],
-section input[type=radio],
-section input[type=range],
-/* Only those input types support accent-color property */
-section progress
-{
-     accent-color: var(--atuiKernel_ColorschemeOA5);
+form > div,
+fieldset > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-section input[type=button],
-section input[type=color],
-section input[type=date],
-section input[type=email],
-section input[type=image],
-section input[type=month],
-section input[type=number],
-section input[type=password],
-section input[type=reset],
-section input[type=search],
-section input[type=submit],
-section input[type=tel],
-section input[type=text],
-section input[type=time],
-section input[type=url],
-section input[type=week]
-{
-     height: 40px;
+input,
+progress,
+textarea,
+select,
+input[type="file"]::file-selector-button {
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: var(--atuiKernel_ColorschemeOB0);
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    padding: 10px 15px;
+    font-size: 1rem;
+    height: 40px;
+    box-sizing: border-box;
+    accent-color: var(--atuiKernel_ColorschemeOA5);
 }
 
-section input[type=button],
-section input[type=checkbox],
-section input[type=date],
-section input[type=email],
-section input[type=image],
-section input[type=month],
-section input[type=number],
-section input[type=password],
-section input[type=radio],
-section input[type=reset],
-section input[type=search],
-section input[type=submit],
-section input[type=tel],
-section input[type=text],
-section input[type=time],
-section input[type=url],
-section input[type=week]
-{
-     padding : 10px 20px;
-     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     background-color : var(--atuiKernel_ColorschemeOB1);
+input[type="checkbox"],
+input[type="radio"] {
+    width: 30px;
 }
 
-section input[type=checkbox],
-section input[type=radio]
-{
-     width : 25px;
-     height : 25px;
+progress {
+    border-radius: revert;
+    border: revert;
+    background-color: revert;
 }
 
-section progress
-{
-     height : 30px;
+input[type="color"],
+input[type="file"] {
+    padding: 0;
+    border: none;
 }
 
-section input[type=color]
-{
-     border : none;
+input[type="color"]::-webkit-color-swatch {
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
-section input[type=button],
-section input[type=date],
-section input[type=email],
-section input[type=image],
-section input[type=month],
-section input[type=number],
-section input[type=password],
-section input[type=range],
-section input[type=reset],
-section input[type=search],
-section input[type=submit],
-section input[type=tel],
-section input[type=text],
-section input[type=time],
-section input[type=url],
-section input[type=week]
-{
-     border-radius: var(--atuiKernel_Borderradius);
+input:focus:not([type="checkbox"], [type="radio"], [type="range"]),
+progress:focus,
+textarea:focus,
+select:focus {
+    outline: solid 2px var(--atuiKernel_ColorschemeBA4);
 }
 
-section input[type=date]:focus,
-section input[type=email]:focus,
-section input[type=image]:focus,
-section input[type=month]:focus,
-section input[type=number]:focus,
-section input[type=password]:focus,
-section input[type=reset]:focus,
-section input[type=search]:focus,
-section input[type=submit]:focus,
-section input[type=tel]:focus,
-section input[type=text]:focus,
-section input[type=time]:focus,
-section input[type=url]:focus,
-section input[type=week]:focus
-{
-     outline: solid 2px var(--atuiKernel_ColorschemeBA5);
+fieldset {
+    border: 1px solid var(--atuiKernel_ColorschemeBA6);
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 15px;
+    margin: 0;
 }
 
-section input[type=file]::-webkit-file-upload-button
-{
-     display: none;
+fieldset legend {
+    font-weight: bold;
+    font-family: var(--atuiKernel_FontsTitle);
+    padding: 0 10px;
 }
-

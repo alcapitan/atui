@@ -3,33 +3,30 @@
 .atuiKernel_SectionCardStandard,
 .atuiKernel_SectionCardContrast,
 .atuiKernel_SectionCardOverlay
-/* Container */
-{
-     margin : 20px 0;
-     display: flex;
-     flex-wrap : wrap;
+/* Container */ {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .atuiKernel_SectionCardStandard article,
 .atuiKernel_SectionCardContrast article,
 .atuiKernel_SectionCardOverlay article
-/* Elements */
-{
-     display : flex;
-     flex-direction: column;
-     border-radius : var(--atuiKernel_Borderradius);
-     overflow: hidden;
-     background-color: var(--atuiKernel_ColorschemeOB1);
-     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     position: relative;
+/* Elements */ {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--atuiKernel_Borderradius);
+    overflow: hidden;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    position: relative;
 }
 
 .atuiKernel_SectionCardStandard article > div[class="image"] img,
 .atuiKernel_SectionCardContrast article > div[class="image"] img,
 .atuiKernel_SectionCardOverlay article > div[class="image"] img
-/* Images */
-{
-     width : 100%;
+/* Images */ {
+    width: 100%;
 }
 
 .atuiKernel_SectionCardStandard article > div[class="text"] > h3,
@@ -38,133 +35,115 @@
 .atuiKernel_SectionCardContrast article > div[class="text"] > p,
 .atuiKernel_SectionCardOverlay article > div[class="text"] > h3,
 .atuiKernel_SectionCardOverlay article > div[class="text"] > p
-/* Texts */
-{
-     margin : 0;
-     padding : 10px 20px;
+/* Texts */ {
+    margin: 0;
+    padding: 10px 20px;
 }
 
 .atuiKernel_SectionCardStandard article > div[class="text"] > h3,
 .atuiKernel_SectionCardContrast article > div[class="text"] > h3,
 .atuiKernel_SectionCardOverlay article > div[class="text"] > h3
-/* Titles */
-{
-     font-family: var(--atuiKernel_FontsTitle);
-     font-size: 1.3rem;
-     color : var(--atuiKernel_ColorschemeOBF);
+/* Titles */ {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-size: 1.3rem;
+    color: var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_SectionCardStandard article > div[class="text"] > p,
 .atuiKernel_SectionCardContrast article > div[class="text"] > p,
 .atuiKernel_SectionCardOverlay article > div[class="text"] > p
-/* Paragraphs */
-{
-     text-align: justify;
+/* Paragraphs */ {
+    text-align: justify;
 }
-
 
 /* Responsives */
 
-@media (min-width : 768px) /* Computers */
-{
-     .atuiKernel_SectionCardStandard,
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionCardStandard,
      .atuiKernel_SectionCardContrast,
      .atuiKernel_SectionCardOverlay
-     /* Containers */
-     {
-          justify-content: space-around;
-          align-items: flex-start;
-     }
+     /* Containers */ {
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 
-     .atuiKernel_SectionCardStandard article,
+    .atuiKernel_SectionCardStandard article,
      .atuiKernel_SectionCardContrast article,
      .atuiKernel_SectionCardOverlay article
-     /* Elements */
-     {
-          margin : 10px;
-          width : min(300px);
-     }
+     /* Elements */ {
+        margin: 10px;
+        width: min(300px);
+    }
 }
 
-@media (max-width : 767px) /* Smartphones */
-{
-     .atuiKernel_SectionCardStandard,
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionCardStandard,
      .atuiKernel_SectionCardContrast,
      .atuiKernel_SectionCardOverlay
-     /* Containers */
-     {
-          flex-direction: column;
-     }
-     
-     .atuiKernel_SectionCardStandard article,
+     /* Containers */ {
+        flex-direction: column;
+    }
+
+    .atuiKernel_SectionCardStandard article,
      .atuiKernel_SectionCardContrast article,
      .atuiKernel_SectionCardOverlay article
-     /* Elements */
-     {
-          margin : 10px 0;
-          width : 100%;
-     }
+     /* Elements */ {
+        margin: 10px 0;
+        width: 100%;
+    }
 }
-
 
 /* Standard */
 
 .atuiKernel_SectionCardStandard article > div[class="image"] img
-/* Image */
-{
-     margin : 10px;
-     border-radius: var(--atuiKernel_Borderradius);
-     width : calc(100% - 20px);
+/* Image */ {
+    margin: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    width: calc(100% - 20px);
 }
-
 
 /* Contrast */
 
 .atuiKernel_SectionCardContrast article > div[class="image"]
-/* Image container */
-{
-     display: flex;
-     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
+/* Image container */ {
+    display: flex;
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
 }
 
 .atuiKernel_SectionCardContrast article > div[class="text"] > h3
-/* Title */
-{
-     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     background-color: var(--atuiKernel_ColorschemeOB2);
+/* Title */ {
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    background-color: var(--atuiKernel_ColorschemeOB2);
 }
-
 
 /* Overlay */
 
-.atuiKernel_SectionCardOverlay article
-{
-     background-color: transparent;
+.atuiKernel_SectionCardOverlay article {
+    background-color: transparent;
 }
 
-.atuiKernel_SectionCardOverlay article > div[class="image"]
-{
-     width: 100%;
-     height : 100%;
-     position: absolute;
-     z-index : -1;
+.atuiKernel_SectionCardOverlay article > div[class="image"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
-.atuiKernel_SectionCardOverlay article > div[class="image"] img
-{
-     height : 100%;
-     object-fit: cover;
+.atuiKernel_SectionCardOverlay article > div[class="image"] img {
+    height: 100%;
+    object-fit: cover;
 }
 
-.atuiKernel_SectionCardOverlay article > div[class="text"]
-{
-     background : linear-gradient(to top, var(--atuiKernel_ColorschemeBB8) 50%, transparent 100%);
-     margin-top : 30%;
+.atuiKernel_SectionCardOverlay article > div[class="text"] {
+    background: linear-gradient(
+        to top,
+        var(--atuiKernel_ColorschemeBB8) 50%,
+        transparent 100%
+    );
+    margin-top: 30%;
 }
 
 .atuiKernel_SectionCardOverlay article > div[class="text"] > h3,
-.atuiKernel_SectionCardOverlay article > div[class="text"] > p
-{
-     color : var(--atuiKernel_ColorschemeOB0) !important;
+.atuiKernel_SectionCardOverlay article > div[class="text"] > p {
+    color: var(--atuiKernel_ColorschemeOB0) !important;
 }
-

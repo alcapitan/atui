@@ -1,16 +1,13 @@
-@import url('./propositions.css');
-@import url('./searchbar.css');
-
+@import url("./propositions.css");
+@import url("./searchbar.css");
 
 /* Global */
 
-#atuiSearchservices_Header
-{
-     background-color: transparent;
-     border-radius : var(--atuiKernel_Borderradius);
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     top : 5px;
+#atuiSearchservices_Header {
+    background-color: transparent;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 5px;
 }
-

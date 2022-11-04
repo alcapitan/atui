@@ -1,24 +1,20 @@
 /* Global */
 
-#atuiMediasplayer_AudioplayerAdditionals /* Conteneur */
-{
-     float : right;
-     display : flex;
-     flex-direction : row;
+#atuiMediasplayer_AudioplayerAdditionals /* Conteneur */ {
+    float: right;
+    display: flex;
+    flex-direction: row;
 }
 
-#atuiMediasplayer_AudioplayerAdditionals > * /* Tout les éléments */
-{
-     width : 45px;
-     height : 45px;
+#atuiMediasplayer_AudioplayerAdditionals > * /* Tout les éléments */ {
+    width: 45px;
+    height: 45px;
 }
 
-#atuiMediasplayer_AudioplayerAdditionals img /* Icônes */
-{
-     width : 25px;
-     height : 25px;
-     margin : 5px;
-     padding : 5px;
-     border-radius : var(--atuiKernel_Borderradius);
+#atuiMediasplayer_AudioplayerAdditionals img /* Icônes */ {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: var(--atuiKernel_Borderradius);
 }
-

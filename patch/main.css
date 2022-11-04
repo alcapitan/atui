@@ -10,14 +10,11 @@
      background : var(--atuiKernel_ColorschemeOA1);
 }*/
 
-.atuiKernel_ToolsCarousel
-{
-     background-image: url(illustrations/presentation.jpg)
+.atuiKernel_ToolsCarousel {
+    background-image: url(illustrations/presentation.jpg);
 }
 
-.gridTest
-{
-     border : 1px solid var(--atuiKernel_ColorschemeOBF);
-     border-radius: var(--atuiKernel_Borderradius);
+.gridTest {
+    border: 1px solid var(--atuiKernel_ColorschemeOBF);
+    border-radius: var(--atuiKernel_Borderradius);
 }
-

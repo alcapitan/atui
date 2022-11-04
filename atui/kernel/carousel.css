@@ -1,45 +1,42 @@
 /* Global */
 
-.atuiKernel_ToolsCarousel /* Surface image */
-{
-     background-size : cover;
-     background-position : center;
-     display: flex;
-     align-items: flex-end;
-     justify-content: center;
-     background-attachment: fixed; /* Créé option pour cette propriété / Peut créer bogue sur mobile car changement window height */
+.atuiKernel_ToolsCarousel /* Surface image */ {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-attachment: fixed; /* Créé option pour cette propriété / Peut créer bogue sur mobile car changement window height */
 }
 
-.atuiKernel_ToolsCarousel > div /* Text container */
-{
-     width : 100%;
-     padding : 50px 10%;
-     background : linear-gradient(to top, var(--atuiKernel_ColorschemeBB8),transparent);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+.atuiKernel_ToolsCarousel > div /* Text container */ {
+    width: 100%;
+    padding: 50px 10%;
+    background: linear-gradient(
+        to top,
+        var(--atuiKernel_ColorschemeBB8),
+        transparent
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.atuiKernel_ToolsCarousel > div > * /* All elements in text container */
-{
-     color : white;
-     text-align : center;
-     margin : 10px;
+.atuiKernel_ToolsCarousel > div > * /* All elements in text container */ {
+    color: white;
+    text-align: center;
+    margin: 10px;
 }
 
-.atuiKernel_ToolsCarousel > div > h2 /* Title */
-{
-     font-family: var(--atuiKernel_FontsTitle);
-     font-size: 1.5rem;
+.atuiKernel_ToolsCarousel > div > h2 /* Title */ {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-size: 1.5rem;
 }
 
-.atuiKernel_ToolsCarousel > div > p /* Description */
-{
-     font-size : 1.1rem;
+.atuiKernel_ToolsCarousel > div > p /* Description */ {
+    font-size: 1.1rem;
 }
 
-.atuiKernel_ToolsCarousel > div a /* Link */
-{
-     font-size : 1.2rem;
+.atuiKernel_ToolsCarousel > div a /* Link */ {
+    font-size: 1.2rem;
 }
-

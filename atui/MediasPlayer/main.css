@@ -1,10 +1,9 @@
-@import url('./audio-additionals.css');
-@import url('./audio-controls.css');
-@import url('./audio-infos.css');
-@import url('./audio-main.css');
-@import url('./audio-progressbar.css');
+@import url("./audio-additionals.css");
+@import url("./audio-controls.css");
+@import url("./audio-infos.css");
+@import url("./audio-main.css");
+@import url("./audio-progressbar.css");
 
-@import url('./video-main.css');
-@import url('./video-progressbar.css');
-@import url('./video-controls.css');
-
+@import url("./video-main.css");
+@import url("./video-progressbar.css");
+@import url("./video-controls.css");

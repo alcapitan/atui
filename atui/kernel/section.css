@@ -1,101 +1,83 @@
 /* Section */
 
-body > section
-{
-     margin : 0 5%;
-     display: flex;
+body > section {
+    margin: 0 5%;
+    display: flex;
 }
 
-@media (min-width : 768px) /* Computers */
-{
-     body > section
-     {
-          column-gap: 5%;
-     }
+@media (min-width: 768px) /* Computers */ {
+    body > section {
+        column-gap: 5%;
+    }
 
-     .atuiKernel_SectionMain
-     {
-          flex : 1;
-     }
+    .atuiKernel_SectionMain {
+        flex: 1;
+    }
 
-     .atuiKernel_SectionSide
-     {
-          flex-basis : 200px;
-     }
+    .atuiKernel_SectionSide {
+        flex-basis: 200px;
+    }
 }
 
-@media (max-width : 767px) /* Smartphones */
-{
-     body > section
-     {
-          flex-direction: column;
-     }
+@media (max-width: 767px) /* Smartphones */ {
+    body > section {
+        flex-direction: column;
+    }
 
-     .atuiKernel_SectionSide
-     {
-          order: 0;
-     }
+    .atuiKernel_SectionSide {
+        order: 0;
+    }
 
-     .atuiKernel_SectionMain
-     {
-          order: 1;
-     }
+    .atuiKernel_SectionMain {
+        order: 1;
+    }
 }
-
 
 /* Accordion */
 
-.atuiKernel_SectionAccordion
-{
-     border-radius: var(--atuiKernel_Borderradius);
-     margin : 20px 0;
-     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     overflow: hidden;
+.atuiKernel_SectionAccordion {
+    border-radius: var(--atuiKernel_Borderradius);
+    margin: 20px 0;
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    overflow: hidden;
 }
 
-.atuiKernel_SectionAccordionHeader
-{
-     background-color: var(--atuiKernel_ColorschemeOB2);
-     padding : 0 20px;
-     min-height : 50px;
-     display: flex;
-     align-items: center;
+.atuiKernel_SectionAccordionHeader {
+    background-color: var(--atuiKernel_ColorschemeOB2);
+    padding: 0 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
 }
 
-.atuiKernel_SectionAccordionHeader *
-{
-     color : var(--atuiKernel_ColorschemeOBF);
-     margin : 0;
-     font-family: var(--atuiKernel_FontsTitle);
-     font-size : 1.2rem;
-     flex : 1;
+.atuiKernel_SectionAccordionHeader * {
+    color: var(--atuiKernel_ColorschemeOBF);
+    margin: 0;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-size: 1.2rem;
+    flex: 1;
 }
 
-.atuiKernel_SectionAccordionHeader img
-{
-     width : 35px;
-     height : 35px;
-     flex : 0;
+.atuiKernel_SectionAccordionHeader img {
+    width: 35px;
+    height: 35px;
+    flex: 0;
 }
 
-.atuiKernel_SectionAccordionArrow
-{
-     margin-left : 10px;
+.atuiKernel_SectionAccordionArrow {
+    margin-left: 10px;
 }
 
-.atuiKernel_SectionAccordionContent
-{
-     padding : 15px;
-     background-color: var(--atuiKernel_ColorschemeOB1);
-     border-top : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     display: none;
+.atuiKernel_SectionAccordionContent {
+    padding: 15px;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    display: none;
 }
 
-.atuiKernel_SectionAccordionContent *
-{
-     margin : 0;
+.atuiKernel_SectionAccordionContent * {
+    margin: 0;
 }
-
 
 /* Box */
 
@@ -104,12 +86,11 @@ body > section
 .atuiKernel_SectionBoxAlert,
 .atuiKernel_SectionBoxWarning,
 .atuiKernel_SectionBoxInfo,
-.atuiKernel_SectionBoxSuccess
-{
-     border-radius: var(--atuiKernel_Borderradius);
-     margin : 20px 0;
-     padding : 15px;
-     min-height : 30px;
+.atuiKernel_SectionBoxSuccess {
+    border-radius: var(--atuiKernel_Borderradius);
+    margin: 20px 0;
+    padding: 15px;
+    min-height: 30px;
 }
 
 /*.atuiKernel_SectionBoxDefault:has(.atuiKernel_SectionBoxIcon),
@@ -128,167 +109,139 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
 .atuiKernel_SectionBoxAlert *,
 .atuiKernel_SectionBoxWarning *,
 .atuiKernel_SectionBoxInfo *,
-.atuiKernel_SectionBoxSuccess *
-{
-     margin : 0;
+.atuiKernel_SectionBoxSuccess * {
+    margin: 0;
 }
 
-.atuiKernel_SectionBoxDefault
-{
-     border : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     background-color: var(--atuiKernel_ColorschemeOB1);
+.atuiKernel_SectionBoxDefault {
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
-.atuiKernel_SectionBoxAccent
-{
-     border : 1px var(--atuiKernel_ColorschemeOA5) solid;
-     background-color: var(--atuiKernel_ColorschemeOA1);
+.atuiKernel_SectionBoxAccent {
+    border: 1px var(--atuiKernel_ColorschemeOA5) solid;
+    background-color: var(--atuiKernel_ColorschemeOA1);
 }
 
-.atuiKernel_SectionBoxAlert
-{
-     border : 1px rgb(255, 0, 0) solid;
-     background-color: rgb(255, 204, 204);
+.atuiKernel_SectionBoxAlert {
+    border: 1px rgb(255, 0, 0) solid;
+    background-color: rgb(255, 204, 204);
 }
 
-.atuiKernel_SectionBoxWarning
-{
-     border : 1px rgb(255, 128, 0) solid;
-     background-color: rgb(255, 230, 204);
+.atuiKernel_SectionBoxWarning {
+    border: 1px rgb(255, 128, 0) solid;
+    background-color: rgb(255, 230, 204);
 }
 
-.atuiKernel_SectionBoxInfo
-{
-     border : 1px rgb(0, 128, 255) solid;
-     background-color: rgb(204, 230, 255);
+.atuiKernel_SectionBoxInfo {
+    border: 1px rgb(0, 128, 255) solid;
+    background-color: rgb(204, 230, 255);
 }
 
-.atuiKernel_SectionBoxSuccess
-{
-     border : 1px rgb(0,153,51) solid;
-     background-color: rgb(204,235,214);
+.atuiKernel_SectionBoxSuccess {
+    border: 1px rgb(0, 153, 51) solid;
+    background-color: rgb(204, 235, 214);
 }
 
-.atuiKernel_SectionBoxIcon
-{
-     width : 30px;
-     height : 30px;
-     margin : 0 10px 10px 0;
-     float : left;
+.atuiKernel_SectionBoxIcon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 10px 0;
+    float: left;
 }
-
 
 /* Contents */
 
-.atuiKernel_SectionContents ul
-{
-     padding-left : 30px;
+.atuiKernel_SectionContents ul {
+    padding-left: 30px;
 }
 
-.atuiKernel_SectionContents li
-{
-     margin : 15px 0;
+.atuiKernel_SectionContents li {
+    margin: 15px 0;
 }
 
-.atuiKernel_SectionContents a
-{
-     color : var(--atuiKernel_ColorschemeOBF);
+.atuiKernel_SectionContents a {
+    color: var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_SectionContents a:hover,
-.atuiKernel_SectionContents a:active
-{
-     color : var(--atuiKernel_ColorschemeOA5);
-     text-decoration: underline;
+.atuiKernel_SectionContents a:active {
+    color: var(--atuiKernel_ColorschemeOA5);
+    text-decoration: underline;
 }
-
 
 /* Table */
 
 .atuiKernel_SectionTableDefault table,
-.atuiKernel_SectionTableContrast table
-{
-     border-collapse: collapse;
-     margin : 20px 0;
+.atuiKernel_SectionTableContrast table {
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
 .atuiKernel_SectionTableDefault td,
 .atuiKernel_SectionTableDefault th,
 .atuiKernel_SectionTableContrast td,
-.atuiKernel_SectionTableContrast th
-{
-     padding : 10px 20px;
-     font-size : 1rem;
-     text-align: center;
-     vertical-align: middle;
+.atuiKernel_SectionTableContrast th {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .atuiKernel_SectionTableDefault td,
-.atuiKernel_SectionTableDefault th
-{
-     border-top : 1px var(--atuiKernel_ColorschemeOB5) solid;
-     border-bottom : 1px var(--atuiKernel_ColorschemeOB5) solid;
+.atuiKernel_SectionTableDefault th {
+    border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
 }
 
 .atuiKernel_SectionTableContrast td,
-.atuiKernel_SectionTableContrast th
-{
-     border : 1px var(--atuiKernel_ColorschemeOBF) solid;
-     background-color: var(--atuiKernel_ColorschemeOA1);
+.atuiKernel_SectionTableContrast th {
+    border: 1px var(--atuiKernel_ColorschemeOBF) solid;
+    background-color: var(--atuiKernel_ColorschemeOA1);
 }
 
 .atuiKernel_SectionTableDefault caption,
-.atuiKernel_SectionTableContrast caption
-{
-     color : var(--atuiKernel_ColorschemeOB5);
-     font-style: italic;
-     margin : 10px 0;
-     font-size : 1rem;
-     caption-side: bottom;
+.atuiKernel_SectionTableContrast caption {
+    color: var(--atuiKernel_ColorschemeOB5);
+    font-style: italic;
+    margin: 10px 0;
+    font-size: 1rem;
+    caption-side: bottom;
 }
 
 .atuiKernel_SectionTableDefault th,
-.atuiKernel_SectionTableContrast th
-{
-     font-weight: bold;
-     font-family: var(--atuiKernel_FontsTitle);
+.atuiKernel_SectionTableContrast th {
+    font-weight: bold;
+    font-family: var(--atuiKernel_FontsTitle);
 }
 
-.atuiKernel_SectionTableContrast th
-{
-     background-color: var(--atuiKernel_ColorschemeOA3);
+.atuiKernel_SectionTableContrast th {
+    background-color: var(--atuiKernel_ColorschemeOA3);
 }
-
 
 /* Breadcrumb */
 
-.atuiKernel_SectionBreadcrumb
-{
-     margin : 20px 0;
+.atuiKernel_SectionBreadcrumb {
+    margin: 20px 0;
 }
 
-.atuiKernel_SectionBreadcrumb > *
-{
-     display: inline-block;
-     margin : 0;
+.atuiKernel_SectionBreadcrumb > * {
+    display: inline-block;
+    margin: 0;
 }
 
-.atuiKernel_SectionBreadcrumb > *:last-child
-{
-     color : var(--atuiKernel_ColorschemeOA5);
+.atuiKernel_SectionBreadcrumb > *:last-child {
+    color: var(--atuiKernel_ColorschemeOA5);
 }
 
-.atuiKernel_SectionBreadcrumb > *:not(:last-child)
-{
-     color : var(--atuiKernel_ColorschemeOBF);
-     margin-right : 10px;
+.atuiKernel_SectionBreadcrumb > *:not(:last-child) {
+    color: var(--atuiKernel_ColorschemeOBF);
+    margin-right: 10px;
 }
 
-.atuiKernel_SectionBreadcrumb > *:not(:last-child)::after
-{
-     content : "/";
-     margin-left : 10px;
-     font-weight: normal;
-     font-size : 1.1rem;
+.atuiKernel_SectionBreadcrumb > *:not(:last-child)::after {
+    content: "/";
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 1.1rem;
 }
-

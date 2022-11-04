@@ -1,68 +1,60 @@
 /* Global */
 
-#atuiKernel_Notification
-{
-     position: fixed;
-     top : 10px;
-     width : 100vw;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+#atuiKernel_Notification {
+    position: fixed;
+    top: 10px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.atuiKernel_NotificationElement
-{
-     margin : 10px;
-     background-color: var(--atuiKernel_ColorschemeBB1);
-     width : 70vw;
-     border-radius : var(--atuiKernel_Borderradius);
-     box-shadow: var(--atuiKernel_Shadow);
-     padding : 15px 30px;
+.atuiKernel_NotificationElement {
+    margin: 10px;
+    background-color: var(--atuiKernel_ColorschemeBB1);
+    width: 70vw;
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: var(--atuiKernel_Shadow);
+    padding: 15px 30px;
 }
 
-.atuiKernel_NotificationElement div:first-child
-{
-     display : flex;
-     align-items: center;
+.atuiKernel_NotificationElement div:first-child {
+    display: flex;
+    align-items: center;
 }
 
-.atuiKernel_NotificationElement div:first-child img
-{
-     width : 30px;
-     height : 30px;
+.atuiKernel_NotificationElement div:first-child img {
+    width: 30px;
+    height: 30px;
 }
 
-.atuiKernel_NotificationElement div:first-child h3
-{
-     margin : 0 20px;
-     font-family: var(--atuiKernel_FontsTitle);
-     font-weight: bold;
-     font-size : 1.3rem;
-     color : var(--atuiKernel_ColorschemeOA7);
-     flex : 1;
+.atuiKernel_NotificationElement div:first-child h3 {
+    margin: 0 20px;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--atuiKernel_ColorschemeOA7);
+    flex: 1;
 }
 
-.atuiKernel_NotificationElement > p
-{
-     margin : 15px 0;
+.atuiKernel_NotificationElement > p {
+    margin: 15px 0;
 }
 
-.atuiKernel_NotificationElement div:last-child
-{
-     display: flex;
-     flex-direction: row;
-     justify-content: flex-end;
+.atuiKernel_NotificationElement div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.atuiKernel_NotificationElement div:last-child button
-{
-     margin : 5px 10px;
-     background-color: var(--atuiKernel_ColorschemeOA6);
-     border-radius : var(--atuiKernel_Borderradius);
-     padding : 10px 20px;
-     font-family : var(--atuiKernel_FontsTitle);
-     font-size : 1.1rem;
-     border : none;
+.atuiKernel_NotificationElement div:last-child button {
+    margin: 5px 10px;
+    background-color: var(--atuiKernel_ColorschemeOA6);
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 10px 20px;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-size: 1.1rem;
+    border: none;
 }
 
 /* Je sais pas, on supprime, revoir de faire des notifications...
@@ -87,4 +79,3 @@
      font-weight: bold;
      font-family: var(--atuiKernel_FontsTitle);
 }*/
-

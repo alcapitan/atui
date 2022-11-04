@@ -1,109 +1,92 @@
 /* Responsives */
 
-@media (min-width : 768px) /* Computers */
-{
-     #atuiKernel_ToolsContactNewsletter /* Element */
-     {
-          width : 380px;
-     }
+@media (min-width: 768px) /* Computers */ {
+    #atuiKernel_ToolsContactNewsletter /* Element */ {
+        width: 380px;
+    }
 }
-
 
 /* Broad */
 
-#atuiKernel_ToolsContactBroad /* Container */
-{
-     display: flex;
-     flex-wrap : wrap;
+#atuiKernel_ToolsContactBroad /* Container */ {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#atuiKernel_ToolsContactBroad div /* Element */
-{
-     border-radius : var(--atuiKernel_Borderradius);
-     background-color: var(--atuiKernel_ColorschemeBB0);
-     display: flex;
-     align-items: center;
-     margin : 5px 10px 5px 0;
-     padding : 10px 15px 10px 10px;
+#atuiKernel_ToolsContactBroad div /* Element */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: var(--atuiKernel_ColorschemeBB0);
+    display: flex;
+    align-items: center;
+    margin: 5px 10px 5px 0;
+    padding: 10px 15px 10px 10px;
 }
 
-#atuiKernel_ToolsContactBroad div > img /* Icon */
-{
-     border-radius : var(--atuiKernel_Borderradius);
-     width : 30px;
-     height : 30px;
+#atuiKernel_ToolsContactBroad div > img /* Icon */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 30px;
+    height: 30px;
 }
 
-#atuiKernel_ToolsContactBroad div > a /* Text */
-{
-     color : var(--atuiKernel_ColorschemeOBF);
-     font-weight: bold;
-     margin-left : 5px;
+#atuiKernel_ToolsContactBroad div > a /* Text */ {
+    color: var(--atuiKernel_ColorschemeOBF);
+    font-weight: bold;
+    margin-left: 5px;
 }
-
 
 /* Newsletter */
 
-#atuiKernel_ToolsContactNewsletter /* Element */
-{
-     border-radius : var(--atuiKernel_Borderradius);
-     background-color: var(--atuiKernel_ColorschemeBB0);
-     display: flex;
-     align-items: center;
-     padding : 0 10px;
+#atuiKernel_ToolsContactNewsletter /* Element */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: var(--atuiKernel_ColorschemeBB0);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
 
-#atuiKernel_ToolsContactNewsletter > img /* Icons */
-{
-     border-radius : var(--atuiKernel_Borderradius);
-     width : 40px;
-     height : 40px;
+#atuiKernel_ToolsContactNewsletter > img /* Icons */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 40px;
+    height: 40px;
 }
 
-#atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */
-{
-     display: flex;
-     align-items: center;
-     flex : 1;
+#atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */ {
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
-#atuiKernel_ToolsContactNewsletter form input[type="email"] /* Input */
-{
-     border-radius : var(--atuiKernel_Borderradius);
-     background-color: transparent;
-     color : var(--atuiKernel_ColorschemeOB5);
-     border : none;
-     font-size: 1.1rem;
-     margin : 10px;
-     padding : 10px;
-     flex : 1;
-     overflow: hidden;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-     width : 0; /* Fix bogue width sur mobile */
-     outline: none;
+#atuiKernel_ToolsContactNewsletter form input[type="email"] /* Input */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: transparent;
+    color: var(--atuiKernel_ColorschemeOB5);
+    border: none;
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 0; /* Fix bogue width sur mobile */
+    outline: none;
 }
 
-#atuiKernel_ToolsContactNewsletter form input[type="image"] /* Send icon */
-{
-     border-radius : var(--atuiKernel_Borderradius);
-     width : 30px;
-     height : 30px;
+#atuiKernel_ToolsContactNewsletter form input[type="image"] /* Send icon */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 30px;
+    height: 30px;
 }
-
 
 /* Compact */
 
-#atuiKernel_ToolsContactCompact > a
-{
-     width : 50px;
-     height : 50px;
-     margin-right : 15px;
+#atuiKernel_ToolsContactCompact > a {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
 }
 
-#atuiKernel_ToolsContactCompact > a > img
-{
-     width : 50px;
-     height : 50px;
+#atuiKernel_ToolsContactCompact > a > img {
+    width: 50px;
+    height: 50px;
 }
-

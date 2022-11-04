@@ -1,483 +1,796 @@
 <!DOCTYPE html>
 <html lang="fr">
-     <head>
-          <meta charset="UTF-8">
-          <meta name="description" content="ATUI est un framework web. Créez votre site avec ATUI facilement rapidement et à la hauteur de vos attentes !">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="robots" content="index,follow">
-          <link rel="canonical" href="https://alcapitan.github.io/atui">
-          <meta name="theme-color" content="#e63300">
-          <title>ATUI</title>
-          <link rel="stylesheet" type="text/css" href="atui/kernel/main.css" >
-          <link rel="stylesheet" type="text/css" href="atui/MediasPlayer/main.css">
-          <link rel="stylesheet" type="text/css" href="atui/SearchService/main.css">
-          <link rel="stylesheet" type="text/css" href="atui/ServerExchanges/main.css">
-          <link rel="stylesheet" type="text/css" href="patch/main.css">
-          <link rel="icon" type="img/png" href="patch/icons/logo.png">
-     </head>
-     <body>
-          <header id="atuiKernel_Header">
-               <aside id="atuiKernel_HeaderBar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="ATUI est un framework web. Créez votre site avec ATUI facilement rapidement et à la hauteur de vos attentes !"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://alcapitan.github.io/atui" />
+        <meta name="theme-color" content="#e63300" />
+        <title>ATUI</title>
+        <link rel="stylesheet" type="text/css" href="atui/kernel/main.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="atui/MediasPlayer/main.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="atui/SearchService/main.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="atui/ServerExchanges/main.css"
+        />
+        <link rel="stylesheet" type="text/css" href="patch/main.css" />
+        <link rel="icon" type="img/png" href="patch/icons/logo.png" />
+    </head>
+    <body>
+        <header id="atuiKernel_Header">
+            <aside id="atuiKernel_HeaderBar">
+                <div>
+                    <div id="atuiKernel_HeaderBlockLeft">
+                        <nav
+                            class="atuiKernel_ToolsContextmenu"
+                            id="atuiKernel_NavigatorImg"
+                        >
+                            <img
+                                src="atui/kernel/medias/menu.png"
+                                alt="menu"
+                                width="40"
+                                height="40"
+                            />
+                            <aside>
+                                <div>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/kernel/medias/section.png"
+                                                alt="Icône catégorie"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Catégorie</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/kernel/medias/section.png"
+                                                alt="Icône catégorie"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Catégorie</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/kernel/medias/section.png"
+                                                alt="Icône catégorie"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Catégorie</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/kernel/medias/section.png"
+                                                alt="Icône catégorie"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Catégorie</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/kernel/medias/section.png"
+                                                alt="Icône catégorie"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Catégorie</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </aside>
+                        </nav>
+                        <div id="atuiKernel_HeaderLogotype">
+                            <a href="https://alcapitan.github.io/atui">
+                                <img
+                                    alt="Icône du site"
+                                    src="patch/icons/logo.png"
+                                    width="40"
+                                    height="40"
+                                />
+                                <p>ATUI</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="atuiKernel_HeaderBlockCenter">
+                        <nav id="atuiSearchservices_Header">
+                            <div id="atuiSearchservices_HeaderBar">
+                                <form action="" method="post">
+                                    <!-- Lier le fichier PHP dans action -->
+                                    <input
+                                        id="atuiSearchservices_Input"
+                                        name="atuiSearchservices_Request"
+                                        type="text"
+                                        placeholder="Faites une recherche..."
+                                        required
+                                    />
+                                    <input
+                                        id="atuiSearchservices_Submit"
+                                        type="image"
+                                        src="atui/SearchService/medias/search.png"
+                                        alt="Rechercher"
+                                    />
+                                </form>
+                            </div>
+                            <aside id="atuiSearchservices_HeaderPropositions">
+                                <article
+                                    id="atuiSearchservices_HeaderPropositionsRecents"
+                                >
+                                    <h3>Recherches récentes</h3>
+                                    <div
+                                        id="atuiSearchservices_HeaderPropositionsRecentsContainer"
+                                    ></div>
+                                </article>
+                                <article
+                                    id="atuiSearchservices_HeaderPropositionsSuggested"
+                                >
+                                    <h3>Suggestions</h3>
+                                    <div
+                                        id="atuiSearchservices_HeaderPropositionsSuggestedContainer"
+                                    ></div>
+                                </article>
+                            </aside>
+                        </nav>
+                    </div>
+                    <div id="atuiKernel_HeaderBlockRight">
+                        <nav
+                            class="atuiKernel_ToolsContextmenu"
+                            id="atuiKernel_NavigatorText"
+                        >
+                            <p>Produits</p>
+                            <aside>
+                                <div>
+                                    <a href="#">
+                                        <div>
+                                            <p>Kernel</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <p>MediasPlayer</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <p>SearchService</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <p>ServerExchanges</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <p>Overview</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </aside>
+                        </nav>
+                        <div id="atuiKernel_ToolsSettingsDisplaymode">
+                            <img
+                                alt="Mode clair activé"
+                                src="atui/kernel/medias/light.png"
+                                width="35"
+                                height="35"
+                            />
+                        </div>
+                        <nav
+                            class="atuiKernel_ToolsContextmenu"
+                            id="atuiServerexchanges_AccountActions"
+                        >
+                            <img
+                                alt="Aucun compte connecté"
+                                src="atui/ServerExchanges/medias/account.png"
+                                width="40"
+                                height="40"
+                            />
+                            <aside>
+                                <div>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/ServerExchanges/medias/connection.png"
+                                                alt="se connecter / s'inscrire"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Se connecter<br />S'inscrire</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/ServerExchanges/medias/disconnection.png"
+                                                alt="se déconnecter"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Se déconnecter</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/ServerExchanges/medias/account.png"
+                                                alt="profil"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Profil</p>
+                                        </div>
+                                    </a>
+                                    <hr />
+                                    <a href="#">
+                                        <div>
+                                            <img
+                                                src="atui/kernel/medias/shop.png"
+                                                alt="boutique"
+                                                width="28"
+                                                height="28"
+                                            />
+                                            <p>Boutique</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </aside>
+                        </nav>
+                    </div>
+                </div>
+                <nav>
+                    <div
+                        class="atuiKernel_NavigatorGlobalpanel"
+                        id="atuiKernel_NavigatorGlobalpanel1"
+                    >
+                        <div>
+                            <img
+                                src="atui/kernel/medias/section.png"
+                                alt="Icône catégorie"
+                                width="20"
+                                height="20"
+                            />
+                            <p>Global Panel</p>
+                        </div>
+                        <aside>
+                            <div>
+                                <div>
+                                    <p>Titre</p>
+                                    <div>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Titre</p>
+                                    <div>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Titre</p>
+                                    <div>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Titre</p>
+                                    <div>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Titre</p>
+                                    <div>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                        <a href="#">Lien</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
                     <div>
-                         <div id="atuiKernel_HeaderBlockLeft">
-                              <nav class="atuiKernel_ToolsContextmenu" id="atuiKernel_NavigatorImg">
-                                   <img src="atui/kernel/medias/menu.png" alt="menu" width="40" height="40">
-                                   <aside>
-                                        <div>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="28" height="28">
-                                                       <p>Catégorie</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="28" height="28">
-                                                       <p>Catégorie</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="28" height="28">
-                                                       <p>Catégorie</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="28" height="28">
-                                                       <p>Catégorie</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="28" height="28">
-                                                       <p>Catégorie</p>
-                                                  </div>
-                                             </a>
-                                        </div>
-                                   </aside>
-                              </nav>
-                              <div id="atuiKernel_HeaderLogotype">
-                                   <a href="https://alcapitan.github.io/atui">
-                                        <img alt="Icône du site" src="patch/icons/logo.png" width="40" height="40">
-                                        <p>ATUI</p>
-                                   </a>
-                              </div>
-                         </div>
-                         <div id="atuiKernel_HeaderBlockCenter">
-                              <nav id="atuiSearchservices_Header">
-                                   <div id="atuiSearchservices_HeaderBar">
-                                        <form action="" method="post"><!-- Lier le fichier PHP dans action -->
-                                             <input id="atuiSearchservices_Input" name="atuiSearchservices_Request" type="text" placeholder="Faites une recherche..." required>
-                                             <input id="atuiSearchservices_Submit" type="image" src="atui/SearchService/medias/search.png" alt="Rechercher">
-                                        </form>
-                                   </div>
-                                   <aside id="atuiSearchservices_HeaderPropositions">
-                                        <article id="atuiSearchservices_HeaderPropositionsRecents">
-                                             <h3>Recherches récentes</h3>
-                                             <div id="atuiSearchservices_HeaderPropositionsRecentsContainer">
-                                             </div>
-                                        </article>
-                                        <article id="atuiSearchservices_HeaderPropositionsSuggested">
-                                             <h3>Suggestions</h3>
-                                             <div id="atuiSearchservices_HeaderPropositionsSuggestedContainer">
-                                             </div>
-                                        </article>
-                                   </aside>
-                              </nav>
-                         </div>
-                         <div id="atuiKernel_HeaderBlockRight">
-                              <nav class="atuiKernel_ToolsContextmenu" id="atuiKernel_NavigatorText">
-                                   <p>Produits</p>
-                                   <aside>
-                                        <div>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>Kernel</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>MediasPlayer</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>SearchService</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>ServerExchanges</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <p>Overview</p>
-                                                  </div>
-                                             </a>
-                                        </div>
-                                   </aside>
-                              </nav>
-                              <div id="atuiKernel_ToolsSettingsDisplaymode">
-                                   <img alt="Mode clair activé" src="atui/kernel/medias/light.png" width="35" height="35">
-                              </div>
-                              <nav class="atuiKernel_ToolsContextmenu" id="atuiServerexchanges_AccountActions">
-                                   <img alt="Aucun compte connecté" src="atui/ServerExchanges/medias/account.png" width="40" height="40">
-                                   <aside>
-                                        <div>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/ServerExchanges/medias/connection.png" alt="se connecter / s'inscrire" width="28" height="28">
-                                                       <p>Se connecter<br>S'inscrire</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/ServerExchanges/medias/disconnection.png" alt="se déconnecter" width="28" height="28">
-                                                       <p>Se déconnecter</p>
-                                                  </div>
-                                             </a>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/ServerExchanges/medias/account.png" alt="profil" width="28" height="28">
-                                                       <p>Profil</p>
-                                                  </div>
-                                             </a>
-                                             <hr>
-                                             <a href="#">
-                                                  <div>
-                                                       <img src="atui/kernel/medias/shop.png" alt="boutique" width="28" height="28">
-                                                       <p>Boutique</p>
-                                                  </div>
-                                             </a>
-                                        </div>
-                                   </aside>
-                              </nav>
-                         </div>
+                        <a href="#">
+                            <img
+                                src="atui/kernel/medias/section.png"
+                                alt="Icône catégorie"
+                                width="20"
+                                height="20"
+                            />
+                            <p>Catégorie</p>
+                        </a>
                     </div>
-                    <nav>
-                         <div class="atuiKernel_NavigatorGlobalpanel" id="atuiKernel_NavigatorGlobalpanel1">
-                              <div>
-                                   <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="20" height="20">
-                                   <p>Global Panel</p>
-                              </div>
-                              <aside>
-                                   <div>
-                                        <div>
-                                             <p>Titre</p>
-                                             <div>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                             </div>
-                                        </div>
-                                        <div>
-                                             <p>Titre</p>
-                                             <div>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                             </div>
-                                        </div>
-                                        <div>
-                                             <p>Titre</p>
-                                             <div>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                             </div>
-                                        </div>
-                                        <div>
-                                             <p>Titre</p>
-                                             <div>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                             </div>
-                                        </div>
-                                        <div>
-                                             <p>Titre</p>
-                                             <div>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                                  <a href="#">Lien</a>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </aside>
-                         </div>
-                         <div>
-                              <a href="#">
-                                   <img src="atui/kernel/medias/section.png" alt="Icône catégorie" width="20" height="20">
-                                   <p>Catégorie</p>
-                              </a>
-                         </div>
-                    </nav>
-               </aside>
-               <article class="atuiKernel_ToolsCarousel" id="atuiKernel_HeaderCarousel">
-                    <div>
-                         <h2>Découvrez ATUI</h2>
-                         <p>Voici la première version du framework web ultra-fonctionnel pour construire vos pages web rapidement.</p>
-                         <a href="#">
-                              <div class="atuiKernel_ButtonPrimary">
-                                   <p>En savoir plus</p>
-                              </div>
-                         </a>
+                </nav>
+            </aside>
+            <article
+                class="atuiKernel_ToolsCarousel"
+                id="atuiKernel_HeaderCarousel"
+            >
+                <div>
+                    <h2>Découvrez ATUI</h2>
+                    <p>
+                        Voici la première version du framework web
+                        ultra-fonctionnel pour construire vos pages web
+                        rapidement.
+                    </p>
+                    <a href="#">
+                        <div class="atuiKernel_ButtonPrimary">
+                            <p>En savoir plus</p>
+                        </div>
+                    </a>
+                </div>
+            </article>
+        </header>
+        <section>
+            <div class="atuiKernel_SectionSide">
+                <div class="atuiKernel_SectionContents">
+                    <h2>Sommaire</h2>
+                    <ul>
+                        <li><a href="#">Something</a></li>
+                        <ul>
+                            <li><a href="#">Something</a></li>
+                            <li><a href="#">Something</a></li>
+                            <li><a href="#">Something</a></li>
+                        </ul>
+                        <li><a href="#">Something</a></li>
+                        <ul>
+                            <li><a href="#">Something</a></li>
+                            <li><a href="#">Something</a></li>
+                            <li><a href="#">Something</a></li>
+                        </ul>
+                        <li><a href="#">Something</a></li>
+                        <ul>
+                            <li><a href="#">Something</a></li>
+                            <li><a href="#">Something</a></li>
+                            <li><a href="#">Something</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="atuiKernel_SectionMain">
+                <div class="atuiKernel_SectionText">
+                    <h3>Form's inputs follow are stylized now !</h3>
+                    <p>
+                        That helps to standardize the interface.<br />Some
+                        follow the accent color.
+                    </p>
+                    <form>
+                        <div>
+                            <label>Default</label>
+                            <input />
+                        </div>
+                        <div>
+                            <label>Button</label>
+                            <input type="button" value="Button" />
+                        </div>
+                        <div>
+                            <label>Checkbox</label>
+                            <input type="checkbox" />
+                        </div>
+                        <div>
+                            <label>Color</label>
+                            <input type="color" />
+                        </div>
+                        <div>
+                            <label>Date</label>
+                            <input type="date" />
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" />
+                        </div>
+                        <div>
+                            <label>File</label>
+                            <input type="file" />
+                        </div>
+                        <div>
+                            <label>Image</label>
+                            <input
+                                type="image"
+                                src="atui/kernel/medias/highlight.png"
+                            />
+                        </div>
+                        <div>
+                            <label>Month</label>
+                            <input type="month" />
+                        </div>
+                        <div>
+                            <label>Number</label>
+                            <input type="number" />
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" />
+                        </div>
+                        <div>
+                            <label>Radio</label>
+                            <input type="radio" />
+                        </div>
+                        <div>
+                            <label>Range</label>
+                            <input type="range" />
+                        </div>
+                        <div>
+                            <label>Reset</label>
+                            <input type="reset" />
+                        </div>
+                        <div>
+                            <label>Search</label>
+                            <input type="search" />
+                        </div>
+                        <div>
+                            <label>Submit</label>
+                            <input type="submit" />
+                        </div>
+                        <div>
+                            <label>Tel</label>
+                            <input type="tel" />
+                        </div>
+                        <div>
+                            <label>Text</label>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <label>Time</label>
+                            <input type="time" />
+                        </div>
+                        <div>
+                            <label>Url</label>
+                            <input type="url" />
+                        </div>
+                        <div>
+                            <label>Week</label>
+                            <input type="week" />
+                        </div>
+                        <div>
+                            <label>Progress</label>
+                            <progress></progress>
+                        </div>
+                        <fieldset>
+                            <legend>New form elements</legend>
+                            <div>
+                                <label>Textarea</label>
+                                <textarea></textarea>
+                            </div>
+                            <div>
+                                <label>Select</label>
+                                <select>
+                                    <optgroup label="Group">
+                                        <option>Choose</option>
+                                        <option>Choose</option>
+                                    </optgroup>
+                                    <optgroup label="Group">
+                                        <option>Choose</option>
+                                        <option>Choose</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Datalist</label>
+                                <input list="datalist" />
+                                <datalist id="datalist">
+                                    <option value="Choose"></option>
+                                    <option value="Choose"></option>
+                                    <option value="Choose"></option>
+                                    <option value="Choose"></option>
+                                </datalist>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="atuiKernel_SectionGrid">
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-               </article>
-          </header>
-          <section>
-               <div class="atuiKernel_SectionSide">
-                    <div class="atuiKernel_SectionContents">
-                         <h2>Sommaire</h2>
-                         <ul>
-                              <li><a href="#">Something</a></li>
-                              <ul>
-                                   <li><a href="#">Something</a></li>
-                                   <li><a href="#">Something</a></li>
-                                   <li><a href="#">Something</a></li>
-                              </ul>
-                              <li><a href="#">Something</a></li>
-                              <ul>
-                                   <li><a href="#">Something</a></li>
-                                   <li><a href="#">Something</a></li>
-                                   <li><a href="#">Something</a></li>
-                              </ul>
-                              <li><a href="#">Something</a></li>
-                              <ul>
-                                   <li><a href="#">Something</a></li>
-                                   <li><a href="#">Something</a></li>
-                                   <li><a href="#">Something</a></li>
-                              </ul>
-                         </ul>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-               </div>
-               <div class="atuiKernel_SectionMain">
-                    <div class="atuiKernel_SectionGrid">
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionGrid3">
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionGrid2">
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
-                         <div class="gridTest">
-                              <p>Something.</p>
-                         </div>
+                </div>
+                <div class="atuiKernel_SectionGrid3">
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionBreadcrumb">
-                         <a href="#">Page</a>
-                         <a href="#">Page</a>
-                         <p>Page</p>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionPaginationNumber">
-                         <a href="#">1</a>
-                         <a href="#">2</a>
-                         <p>3</p>
-                         <a href="#">4</a>
-                         <a href="#">5</a>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionPaginationText">
-                         <a href="#">
-                              <div>
-                                   <p>Previous</p>
-                                   <p>This is the previous page.</p>
-                              </div>
-                         </a>
-                         <a href="#">
-                              <div>
-                                   <p>Next</p>
-                                   <p>This is the next page.</p>
-                              </div>
-                         </a>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionTableDefault">
-                         <table>
-                              <thead>
-                                   <tr>
-                                        <th>Something</th>
-                                        <th>Something</th>
-                                        <th>Something</th>
-                                   </tr>
-                              </thead>
-                              <tbody>
-                                   <tr>
-                                        <td colspan="3">Something</td>
-                                   </tr>
-                                   <tr>
-                                        <td>Something</td>
-                                        <td>Something</td>
-                                        <td rowspan="2">Something</td>
-                                   </tr>
-                                   <tr>
-                                        <td colspan="2">Something</td>
-                                   </tr>
-                              </tbody>
-                              <tfoot>
-                                   <tr>
-                                        <td>Something</td>
-                                        <td>Something</td>
-                                        <td>Something</td>
-                                   </tr>
-                              </tfoot>
-                              <caption>Légende du tableau</caption>
-                         </table>
+                </div>
+                <div class="atuiKernel_SectionGrid2">
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionTableContrast">
-                         <table>
-                              <thead>
-                                   <tr>
-                                        <th>Something</th>
-                                        <th>Something</th>
-                                        <th>Something</th>
-                                   </tr>
-                              </thead>
-                              <tbody>
-                                   <tr>
-                                        <td colspan="3">Something</td>
-                                   </tr>
-                                   <tr>
-                                        <td>Something</td>
-                                        <td>Something</td>
-                                        <td rowspan="2">Something</td>
-                                   </tr>
-                                   <tr>
-                                        <td colspan="2">Something</td>
-                                   </tr>
-                              </tbody>
-                              <tfoot>
-                                   <tr>
-                                        <td>Something</td>
-                                        <td>Something</td>
-                                        <td>Something</td>
-                                   </tr>
-                              </tfoot>
-                              <caption>Légende du tableau</caption>
-                         </table>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionBoxDefault">
-                         <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionBoxAccent">
-                         <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
+                    <div class="gridTest">
+                        <p>Something.</p>
                     </div>
-                    <div class="atuiKernel_SectionBoxAlert">
-                         <img src="atui/kernel/medias/alert2.png" alt="Alert icon" class="atuiKernel_SectionBoxIcon" width="30" height="30">
-                         <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
+                </div>
+                <div class="atuiKernel_SectionBreadcrumb">
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                    <p>Page</p>
+                </div>
+                <div class="atuiKernel_SectionPaginationNumber">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <p>3</p>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                </div>
+                <div class="atuiKernel_SectionPaginationText">
+                    <a href="#">
+                        <div>
+                            <p>Previous</p>
+                            <p>This is the previous page.</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div>
+                            <p>Next</p>
+                            <p>This is the next page.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="atuiKernel_SectionTableDefault">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Something</th>
+                                <th>Something</th>
+                                <th>Something</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3">Something</td>
+                            </tr>
+                            <tr>
+                                <td>Something</td>
+                                <td>Something</td>
+                                <td rowspan="2">Something</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Something</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Something</td>
+                                <td>Something</td>
+                                <td>Something</td>
+                            </tr>
+                        </tfoot>
+                        <caption>
+                            Légende du tableau
+                        </caption>
+                    </table>
+                </div>
+                <div class="atuiKernel_SectionTableContrast">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Something</th>
+                                <th>Something</th>
+                                <th>Something</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3">Something</td>
+                            </tr>
+                            <tr>
+                                <td>Something</td>
+                                <td>Something</td>
+                                <td rowspan="2">Something</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Something</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Something</td>
+                                <td>Something</td>
+                                <td>Something</td>
+                            </tr>
+                        </tfoot>
+                        <caption>
+                            Légende du tableau
+                        </caption>
+                    </table>
+                </div>
+                <div class="atuiKernel_SectionBoxDefault">
+                    <p>
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionBoxAccent">
+                    <p>
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionBoxAlert">
+                    <img
+                        src="atui/kernel/medias/alert2.png"
+                        alt="Alert icon"
+                        class="atuiKernel_SectionBoxIcon"
+                        width="30"
+                        height="30"
+                    />
+                    <p>
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionBoxWarning">
+                    <img
+                        src="atui/kernel/medias/warn.png"
+                        alt="Warn icon"
+                        class="atuiKernel_SectionBoxIcon"
+                        width="30"
+                        height="30"
+                    />
+                    <p>
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionBoxInfo">
+                    <img
+                        src="atui/kernel/medias/info.png"
+                        alt="Info icon"
+                        class="atuiKernel_SectionBoxIcon"
+                        width="30"
+                        height="30"
+                    />
+                    <p>
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionBoxSuccess">
+                    <img
+                        src="atui/kernel/medias/success.png"
+                        alt="Success icon"
+                        class="atuiKernel_SectionBoxIcon"
+                        width="30"
+                        height="30"
+                    />
+                    <p>
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                        Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionAccordion">
+                    <div class="atuiKernel_SectionAccordionHeader">
+                        <h3>Title</h3>
+                        <img
+                            src="atui/kernel/medias/bottom-arrow.png"
+                            class="atuiKernel_SectionAccordionArrow"
+                            alt="Develop icon"
+                            width="35"
+                            height="35"
+                        />
                     </div>
-                    <div class="atuiKernel_SectionBoxWarning">
-                         <img src="atui/kernel/medias/warn.png" alt="Warn icon" class="atuiKernel_SectionBoxIcon" width="30" height="30">
-                         <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
+                    <div class="atuiKernel_SectionAccordionContent">
+                        <p>
+                            Text. Text. Text. Text. Text. Text. Text. Text.
+                            Text. Text. Text. Text. Text. Text. Text. Text.
+                            Text. Text.
+                        </p>
                     </div>
-                    <div class="atuiKernel_SectionBoxInfo">
-                         <img src="atui/kernel/medias/info.png" alt="Info icon" class="atuiKernel_SectionBoxIcon" width="30" height="30">
-                         <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
+                </div>
+                <div class="atuiKernel_SectionTabsContrast">
+                    <div class="atuiKernel_SectionTabsHeader">
+                        <a href="#firstTab" class="active">
+                            <p>Categorie</p>
+                        </a>
+                        <a href="#secondTab">
+                            <p>Categorie</p>
+                        </a>
+                        <a href="#thirdTab">
+                            <p>Categorie</p>
+                        </a>
+                        <a href="#fourthTab">
+                            <p>Categorie</p>
+                        </a>
                     </div>
-                    <div class="atuiKernel_SectionBoxSuccess">
-                         <img src="atui/kernel/medias/success.png" alt="Success icon" class="atuiKernel_SectionBoxIcon" width="30" height="30">
-                         <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
+                    <div class="atuiKernel_SectionTabsContent">
+                        <div id="firstTab" class="active">
+                            <p>The first tab.</p>
+                        </div>
+                        <div id="secondTab">
+                            <p>The second tab.</p>
+                        </div>
+                        <div id="thirdTab">
+                            <p>The third tab.</p>
+                        </div>
+                        <div id="fourthTab">
+                            <p>The fourth tab.</p>
+                        </div>
                     </div>
-                    <div class="atuiKernel_SectionAccordion">
-                         <div class="atuiKernel_SectionAccordionHeader">
-                              <h3>Title</h3>
-                              <img src="atui/kernel/medias/bottom-arrow.png" class="atuiKernel_SectionAccordionArrow" alt="Develop icon" width="35" height="35">
-                         </div>
-                         <div class="atuiKernel_SectionAccordionContent">
-                              <p>Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. </p>
-                         </div>
+                </div>
+                <div class="atuiKernel_SectionTabsStandard">
+                    <div class="atuiKernel_SectionTabsHeader">
+                        <a href="#firstTab2" class="active">
+                            <p>Categorie</p>
+                        </a>
+                        <a href="#secondTab2">
+                            <p>Categorie</p>
+                        </a>
+                        <a href="#thirdTab2">
+                            <p>Categorie</p>
+                        </a>
+                        <a href="#fourthTab2">
+                            <p>Categorie</p>
+                        </a>
                     </div>
-                    <div class="atuiKernel_SectionTabsContrast">
-                         <div class="atuiKernel_SectionTabsHeader">
-                              <a href="#firstTab" class="active">
-                                   <p>Categorie</p>
-                              </a>
-                              <a href="#secondTab">
-                                   <p>Categorie</p>
-                              </a>
-                              <a href="#thirdTab">
-                                   <p>Categorie</p>
-                              </a>
-                              <a href="#fourthTab">
-                                   <p>Categorie</p>
-                              </a>
-                         </div>
-                         <div class="atuiKernel_SectionTabsContent">
-                              <div id="firstTab" class="active">
-                                   <p>The first tab.</p>
-                              </div>
-                              <div id="secondTab">
-                                   <p>The second tab.</p>
-                              </div>
-                              <div id="thirdTab">
-                                   <p>The third tab.</p>
-                              </div>
-                              <div id="fourthTab">
-                                   <p>The fourth tab.</p>
-                              </div>
-                         </div>
+                    <div class="atuiKernel_SectionTabsContent">
+                        <div id="firstTab2" class="active">
+                            <p>The first tab.</p>
+                        </div>
+                        <div id="secondTab2">
+                            <p>The second tab.</p>
+                        </div>
+                        <div id="thirdTab2">
+                            <p>The third tab.</p>
+                        </div>
+                        <div id="fourthTab2">
+                            <p>The fourth tab.</p>
+                        </div>
                     </div>
-                    <div class="atuiKernel_SectionTabsStandard">
-                         <div class="atuiKernel_SectionTabsHeader">
-                              <a href="#firstTab2" class="active">
-                                   <p>Categorie</p>
-                              </a>
-                              <a href="#secondTab2">
-                                   <p>Categorie</p>
-                              </a>
-                              <a href="#thirdTab2">
-                                   <p>Categorie</p>
-                              </a>
-                              <a href="#fourthTab2">
-                                   <p>Categorie</p>
-                              </a>
-                         </div>
-                         <div class="atuiKernel_SectionTabsContent">
-                              <div id="firstTab2" class="active">
-                                   <p>The first tab.</p>
-                              </div>
-                              <div id="secondTab2">
-                                   <p>The second tab.</p>
-                              </div>
-                              <div id="thirdTab2">
-                                   <p>The third tab.</p>
-                              </div>
-                              <div id="fourthTab2">
-                                   <p>The fourth tab.</p>
-                              </div>
-                         </div>
-                    </div>
-                    <!--<div class="atuiKernel_SectionText">
+                </div>
+                <!--<div class="atuiKernel_SectionText">
                          <h3>Form's inputs follow are stylized now !</h3>
                          <p>That helps to standardize the interface.<br>Some follow the accent color.</p>
                          <form>
@@ -504,7 +817,7 @@
                               <label>Progress</label><progress></progress>
                          </form>
                     </div>-->
-                    <!--<nav class="atuiKernel_NavigatorSectionImgbig">
+                <!--<nav class="atuiKernel_NavigatorSectionImgbig">
                          <a href="#">
                               <img src="atui/kernel/medias/section.png" alt="Icône catégorie">
                               <p>Catégorie</p>
@@ -526,27 +839,42 @@
                               <p>Catégorie</p>
                          </a>
                     </nav>-->
-                    <div class="atuiKernel_ButtonPrimary" id="testRunMusic">
-                         <p>Jouer musique</p>
+                <div class="atuiKernel_ButtonPrimary" id="testRunMusic">
+                    <p>Jouer musique</p>
+                </div>
+                <div>
+                    <div
+                        class="atuiKernel_Button"
+                        onclick="atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);"
+                    >
+                        <p>Rouge (par défaut)</p>
                     </div>
-                    <div>
-                         <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);">
-                              <p>Rouge (par défaut)</p>
-                         </div>
-                         <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([230, 172, 0]);">
-                              <p>Jaune</p>
-                         </div>
-                         <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([204, 51, 153]);">
-                              <p>Violet</p>
-                         </div>
-                         <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([46, 184, 184]);">
-                              <p>Bleu</p>
-                         </div>
-                         <div class="atuiKernel_Button" onclick="atuiKernel_ColorschemeGeneratorAuto([119, 179, 0]);">
-                              <p>Vert</p>
-                         </div>
+                    <div
+                        class="atuiKernel_Button"
+                        onclick="atuiKernel_ColorschemeGeneratorAuto([230, 172, 0]);"
+                    >
+                        <p>Jaune</p>
                     </div>
-                    <!--<div>
+                    <div
+                        class="atuiKernel_Button"
+                        onclick="atuiKernel_ColorschemeGeneratorAuto([204, 51, 153]);"
+                    >
+                        <p>Violet</p>
+                    </div>
+                    <div
+                        class="atuiKernel_Button"
+                        onclick="atuiKernel_ColorschemeGeneratorAuto([46, 184, 184]);"
+                    >
+                        <p>Bleu</p>
+                    </div>
+                    <div
+                        class="atuiKernel_Button"
+                        onclick="atuiKernel_ColorschemeGeneratorAuto([119, 179, 0]);"
+                    >
+                        <p>Vert</p>
+                    </div>
+                </div>
+                <!--<div>
                          <a href="#">
                               <div class="atuiKernel_Button">
                                    <p>Default</p>
@@ -708,214 +1036,384 @@
                               </div>
                          </a>
                     </div>-->
-                    <div class="atuiKernel_SectionCardStandard">
-                         <article>
-                              <div class="image">
-                                   <img src="patch/illustrations/cards_hor_1.jpg" alt="illustration présentation" width="280" height="280">
-                              </div>
-                              <div class="text">
-                                   <h3>Titre</h3>
-                                   <p>Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte.</p>
-                                   <div>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                   </div>
-                              </div>
-                         </article>
-                         <article>
-                              <div class="image">
-                                   <img src="patch/illustrations/cards_ver_1.jpg" alt="illustration présentation" width="280" height="280">
-                              </div>
-                              <div class="text">
-                                   <h3>Titre</h3>
-                                   <p>Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte.</p>
-                                   <div>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                   </div>
-                              </div>
-                         </article>
-                    </div>
-                    <div class="atuiKernel_SectionCardContrast">
-                         <article>
-                              <div class="image">
-                                   <img src="patch/illustrations/cards_hor_2.jpg" alt="illustration présentation" width="300" height="300">
-                              </div>
-                              <div class="text">
-                                   <h3>Titre</h3>
-                                   <p>Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. </p>
-                                   <div>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                   </div>
-                              </div>
-                         </article>
-                         <article>
-                              <div class="image">
-                                   <img src="patch/illustrations/cards_ver_2.jpg" alt="illustration présentation" width="300" height="300">
-                              </div>
-                              <div class="text">
-                                   <h3>Titre</h3>
-                                   <p>Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. </p>
-                                   <div>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                   </div>
-                              </div>
-                         </article>
-                    </div>
-                    <div class="atuiKernel_SectionCardOverlay">
-                         <article>
-                              <div class="image">
-                                   <img src="patch/illustrations/cards_hor_3.jpg" alt="illustration présentation" width="300" height="300">
-                              </div>
-                              <div class="text">
-                                   <h3>Titre</h3>
-                                   <p>Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte.</p>
-                                   <div>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                   </div>
-                              </div>
-                         </article>
-                         <article>
-                              <div class="image">
-                                   <img src="patch/illustrations/cards_ver_3.jpg" alt="illustration présentation" width="300" height="300">
-                              </div>
-                              <div class="text">
-                                   <h3>Titre</h3>
-                                   <p>Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte. Texte.</p>
-                                   <div>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                        <a href="#">
-                                             <div class="atuiKernel_ButtonTertiary">
-                                                  <p>Lien</p>
-                                             </div>
-                                        </a>
-                                   </div>
-                              </div>
-                         </article>
-                    </div>
-                    <div class="atuiMediasplayer_Videoplayer">
-                         <article>
-                              <video id="atuiMediasplayer_VideoplayerVideo">
-                                   <source src="patch/videos/test-videoplayer.mp4" type="video/mp4">
-                                   Navigateur incompatible pour lire cette vidéo.
-                              </video>
-                              <aside id="atuiMediasplayer_VideoplayerDashboard">
-                                   <div id="atuiMediasplayer_VideoplayerProgressbar">
-                                        <div id="atuiMediasplayer_VideoplayerProgressbarInside"></div>
-                                   </div>
-                                   <div class="atuiMediasplayer_VideoplayerControls">
-                                        <div id="atuiMediasplayer_VideoplayerTimer">
-                                             <p id="atuiMediasplayer_VideoplayerListened">00:00</p>
-                                             <p> - </p>
-                                             <p id="atuiMediasplayer_VideoplayerDuration">00:00</p>
-                                        </div>
-                                        <div id="atuiMediasplayer_VideoplayerButtonsBasic">
-                                             <img src="atui/MediasPlayer/medias/previous.png" alt="Vidéo précédente" width="30" height="30">
-                                             <img src="atui/MediasPlayer/medias/play.png" alt="Play video" id="atuiMediasplayer_VideoplayerButtonsBasicRun" width="30" height="30">
-                                             <img src="atui/MediasPlayer/medias/next.png" alt="Vidéo suivante" width="30" height="30">
-                                        </div>
-                                        <div id="atuiMediasplayer_VideoplayerButtonsAdvanced">
-                                             <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_VideoplayerPlaylists" width="30" height="30">
-                                                  <img src="atui/MediasPlayer/medias/playlist.png" alt="Playlists" width="30" height="30">
-                                                  <aside>
-                                                       <div>
-                                                            <a href="#">
-                                                                 <div>
-                                                                      <p>Playlist</p>
-                                                                 </div>
-                                                            </a>
-                                                            <a href="#">
-                                                                 <div>
-                                                                      <p>Playlist</p>
-                                                                 </div>
-                                                            </a>
-                                                            <a href="#">
-                                                                 <div>
-                                                                      <p>Playlist</p>
-                                                                 </div>
-                                                            </a>
-                                                       </div>
-                                                  </aside>
-                                             </nav>
-                                             <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette vidéo" id="atuiMediasplayer_VideoplayerButtonsAdvancedLike" width="30" height="30">
-                                             <img src="atui/MediasPlayer/medias/sound.png" alt="Son activé" id="atuiMediasplayer_VideoplayerButtonsAdvancedSound" width="30" height="30">
-                                        </div>
-                                        <div id="atuiMediasplayer_VideoplayerAdditionals">
-                                             <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_VideoplayerInfos">
-                                                  <img src="atui/MediasPlayer/medias/info.png" alt="Infos album" width="30" height="30">
-                                                  <aside id="atuiMediasplayer_VideoplayerVideoinformationsAdvanced">
-                                                       <div>
-                                                            <a href="https://pixabay.com/users/justyøu-587443/">
-                                                                 <div>
-                                                                      <p>Credits</p>
-                                                                 </div>
-                                                            </a>
-                                                       </div>
-                                                  </aside>
-                                             </nav>
-                                             <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher dans un pop-up" id="atuiMediasplayer_VideoplayerButtonsAdditionalsPopup" width="30" height="30">
-                                             <img src="atui/MediasPlayer/medias/expand.png" alt="Activer le mode plein écran" id="atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen" width="30" height="30">
-                                        </div>
-                                   </div>
-                              </aside>
-                         </article>
-                    </div>
-                    <div class="atuiKernel_SectionText">
-                         <h3>Soutenez le développement d'ATUI</h3>
-                         <p>Afin de rendre ATUI meilleur, contribuez au projet ! Faites moi par de vos bogues rencontrés ou de vos idées, et pour les plus expérimentés, améliorez le code d'ATUI ; Tout ça sur le <a href="https://github.com/alcapitan/atui">GitHub d'ATUI</a>.</p>
-                    </div>
-                    <div class="atuiKernel_SectionImage">
-                         <img src="patch/illustrations/community.jpg" alt="Illustration communauté. Source : Ingo Joseph sur Pexels.">
-                         <p>Source : Ingo Joseph sur Pexels</p>
-                    </div>
-                    <!--<div class="atuiKernel_SectionDownload">
+                <div class="atuiKernel_SectionCardStandard">
+                    <article>
+                        <div class="image">
+                            <img
+                                src="patch/illustrations/cards_hor_1.jpg"
+                                alt="illustration présentation"
+                                width="280"
+                                height="280"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3>Titre</h3>
+                            <p>
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte.
+                            </p>
+                            <div>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image">
+                            <img
+                                src="patch/illustrations/cards_ver_1.jpg"
+                                alt="illustration présentation"
+                                width="280"
+                                height="280"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3>Titre</h3>
+                            <p>
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte.
+                            </p>
+                            <div>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="atuiKernel_SectionCardContrast">
+                    <article>
+                        <div class="image">
+                            <img
+                                src="patch/illustrations/cards_hor_2.jpg"
+                                alt="illustration présentation"
+                                width="300"
+                                height="300"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3>Titre</h3>
+                            <p>
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte.
+                            </p>
+                            <div>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image">
+                            <img
+                                src="patch/illustrations/cards_ver_2.jpg"
+                                alt="illustration présentation"
+                                width="300"
+                                height="300"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3>Titre</h3>
+                            <p>
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte.
+                            </p>
+                            <div>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="atuiKernel_SectionCardOverlay">
+                    <article>
+                        <div class="image">
+                            <img
+                                src="patch/illustrations/cards_hor_3.jpg"
+                                alt="illustration présentation"
+                                width="300"
+                                height="300"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3>Titre</h3>
+                            <p>
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte.
+                            </p>
+                            <div>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image">
+                            <img
+                                src="patch/illustrations/cards_ver_3.jpg"
+                                alt="illustration présentation"
+                                width="300"
+                                height="300"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3>Titre</h3>
+                            <p>
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte. Texte. Texte. Texte. Texte. Texte.
+                                Texte. Texte.
+                            </p>
+                            <div>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="atuiKernel_ButtonTertiary">
+                                        <p>Lien</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="atuiMediasplayer_Videoplayer">
+                    <article>
+                        <video id="atuiMediasplayer_VideoplayerVideo">
+                            <source
+                                src="patch/videos/test-videoplayer.mp4"
+                                type="video/mp4"
+                            />
+                            Navigateur incompatible pour lire cette vidéo.
+                        </video>
+                        <aside id="atuiMediasplayer_VideoplayerDashboard">
+                            <div id="atuiMediasplayer_VideoplayerProgressbar">
+                                <div
+                                    id="atuiMediasplayer_VideoplayerProgressbarInside"
+                                ></div>
+                            </div>
+                            <div class="atuiMediasplayer_VideoplayerControls">
+                                <div id="atuiMediasplayer_VideoplayerTimer">
+                                    <p
+                                        id="atuiMediasplayer_VideoplayerListened"
+                                    >
+                                        00:00
+                                    </p>
+                                    <p>-</p>
+                                    <p
+                                        id="atuiMediasplayer_VideoplayerDuration"
+                                    >
+                                        00:00
+                                    </p>
+                                </div>
+                                <div
+                                    id="atuiMediasplayer_VideoplayerButtonsBasic"
+                                >
+                                    <img
+                                        src="atui/MediasPlayer/medias/previous.png"
+                                        alt="Vidéo précédente"
+                                        width="30"
+                                        height="30"
+                                    />
+                                    <img
+                                        src="atui/MediasPlayer/medias/play.png"
+                                        alt="Play video"
+                                        id="atuiMediasplayer_VideoplayerButtonsBasicRun"
+                                        width="30"
+                                        height="30"
+                                    />
+                                    <img
+                                        src="atui/MediasPlayer/medias/next.png"
+                                        alt="Vidéo suivante"
+                                        width="30"
+                                        height="30"
+                                    />
+                                </div>
+                                <div
+                                    id="atuiMediasplayer_VideoplayerButtonsAdvanced"
+                                >
+                                    <nav
+                                        class="atuiKernel_ToolsContextmenu"
+                                        id="atuiMediasplayer_VideoplayerPlaylists"
+                                        width="30"
+                                        height="30"
+                                    >
+                                        <img
+                                            src="atui/MediasPlayer/medias/playlist.png"
+                                            alt="Playlists"
+                                            width="30"
+                                            height="30"
+                                        />
+                                        <aside>
+                                            <div>
+                                                <a href="#">
+                                                    <div>
+                                                        <p>Playlist</p>
+                                                    </div>
+                                                </a>
+                                                <a href="#">
+                                                    <div>
+                                                        <p>Playlist</p>
+                                                    </div>
+                                                </a>
+                                                <a href="#">
+                                                    <div>
+                                                        <p>Playlist</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </aside>
+                                    </nav>
+                                    <img
+                                        src="atui/MediasPlayer/medias/like.png"
+                                        alt="J'aime cette vidéo"
+                                        id="atuiMediasplayer_VideoplayerButtonsAdvancedLike"
+                                        width="30"
+                                        height="30"
+                                    />
+                                    <img
+                                        src="atui/MediasPlayer/medias/sound.png"
+                                        alt="Son activé"
+                                        id="atuiMediasplayer_VideoplayerButtonsAdvancedSound"
+                                        width="30"
+                                        height="30"
+                                    />
+                                </div>
+                                <div
+                                    id="atuiMediasplayer_VideoplayerAdditionals"
+                                >
+                                    <nav
+                                        class="atuiKernel_ToolsContextmenu"
+                                        id="atuiMediasplayer_VideoplayerInfos"
+                                    >
+                                        <img
+                                            src="atui/MediasPlayer/medias/info.png"
+                                            alt="Infos album"
+                                            width="30"
+                                            height="30"
+                                        />
+                                        <aside
+                                            id="atuiMediasplayer_VideoplayerVideoinformationsAdvanced"
+                                        >
+                                            <div>
+                                                <a
+                                                    href="https://pixabay.com/users/justyøu-587443/"
+                                                >
+                                                    <div>
+                                                        <p>Credits</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </aside>
+                                    </nav>
+                                    <img
+                                        src="atui/MediasPlayer/medias/popup.png"
+                                        alt="Afficher dans un pop-up"
+                                        id="atuiMediasplayer_VideoplayerButtonsAdditionalsPopup"
+                                        width="30"
+                                        height="30"
+                                    />
+                                    <img
+                                        src="atui/MediasPlayer/medias/expand.png"
+                                        alt="Activer le mode plein écran"
+                                        id="atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen"
+                                        width="30"
+                                        height="30"
+                                    />
+                                </div>
+                            </div>
+                        </aside>
+                    </article>
+                </div>
+                <div class="atuiKernel_SectionText">
+                    <h3>Soutenez le développement d'ATUI</h3>
+                    <p>
+                        Afin de rendre ATUI meilleur, contribuez au projet !
+                        Faites moi par de vos bogues rencontrés ou de vos idées,
+                        et pour les plus expérimentés, améliorez le code d'ATUI
+                        ; Tout ça sur le
+                        <a href="https://github.com/alcapitan/atui"
+                            >GitHub d'ATUI</a
+                        >.
+                    </p>
+                </div>
+                <div class="atuiKernel_SectionImage">
+                    <img
+                        src="patch/illustrations/community.jpg"
+                        alt="Illustration communauté. Source : Ingo Joseph sur Pexels."
+                    />
+                    <p>Source : Ingo Joseph sur Pexels</p>
+                </div>
+                <!--<div class="atuiKernel_SectionDownload">
                          <div>
                               <img src="atui/kernel/medias/file.png" alt="Icône du fichier">
                               <p>file.png</p>
@@ -1019,193 +1517,346 @@
                               </nav>
                          </div>
                     </div>-->
-               </div>
-               <div class="atuiKernel_SectionSide">
-                    <div class="atuiKernel_SectionContents">
-                         <h2>Right side</h2>
-                         <p>This is the right side.</p>
-                         <p>You can insert many things like tendances !</p>
-                    </div>
-               </div>
-          </section>
-          <footer id="atuiKernel_Footer">
-               <div id="atuiKernel_FooterScrolltop">
-                    <nav class="atuiKernel_ToolsInfotip" id="atuiKernel_FooterScrolltopInfotip">
-                         <a href="#">
-                              <img alt="Revenir au début" src="atui/kernel/medias/scrolltop.png" class="atuiKernel_ToolsInfotip" width="50" height="50">
-                         </a>
-                         <aside>
-                              <div>
-                                   <p>Vous pouvez remonter tout en haut de la page avec ceci !</p>
-                              </div>
-                         </aside>
-                    </nav>
-               </div>
-               <div class="atuiKernel_FooterContentsRow">
-                    <div class="atuiKernel_FooterLogotype">
-                         <a href="https://alcapitan.github.io/atui">
-                              <img alt="Icône du site" src="patch/icons/logo.png" width="40" height="40">
-                              <p>ATUI</p>
-                         </a>
-                    </div>
-                    <h3>Contacts</h3>
-                    <div id="atuiKernel_ToolsContactBroad">
-                         <div>
-                              <img src="atui/kernel/medias/phone.png" alt="Phone icon" width="30" height="30">
-                              <a href="tel:0606060606">06.02.87.52.40</a>
-                         </div>
-                         <div>
-                              <img src="atui/kernel/medias/email.png" alt="Email icon" width="30" height="30">
-                              <a href="mailto:prenom.nom@mail.com">prenom.nom@mail.com</a>
-                         </div>
-                         <div>
-                              <img src="atui/kernel/medias/twitter.png" alt="Twitter icon" width="30" height="30">
-                              <a href="https://twitter.com/my_twitter">@my_twitter</a>
-                         </div>
-                    </div>
-                    <div id="atuiKernel_ToolsContactNewsletter">
-                         <img src="atui/kernel/medias/email.png" alt="Email icon" width="40" height="40">
-                         <form action="" method="get">
-                              <input type="email" placeholder="Abonnez-vous à la newsletter !">
-                              <input type="image" src="atui/kernel/medias/send.png" alt="S'abonner">
-                         </form>
-                    </div>
-                    <div id="atuiKernel_ToolsContactCompact">
-                         <a href="https://github.com/alcapitan/atui"><img src="atui/kernel/medias/github.png" alt="Allez voir mon compte GitHub. " width="50" height="50"></a>
-                         <a href="https://instagram.com/al.capitan"><img src="atui/kernel/medias/instagram.png" alt="Allez voir mon compte Instagram. " width="50" height="50"></a>
-                         <a href="https://twitter.com/alcapitan84"><img src="atui/kernel/medias/twitter.png" alt="Allez voir mon compte Twitter. " width="50" height="50"></a>
-                         <a href="https://www.facebook.com/profile.php?id=100073597717888"><img src="atui/kernel/medias/facebook.png" alt="Allez voir mon compte Facebook. " width="50" height="50"></a>
-                    </div>
-               </div>
-               <div class="atuiKernel_FooterContentsColumn">
-                    <div class="atuiKernel_FooterDescription">
-                         <a href="https://alcapitan.github.io/atui">
-                              <img alt="Icône du site" src="patch/icons/logo.png" width="40" height="40">
-                              <p>ATUI</p>
-                         </a>
-                         <div>
-                              <p>Front-end library to help you to build your website with more lighter and easier tools.</p>
-                              <a href="https://alcapitan.github.io/atui/">https://alcapitan.github.io/atui/</a>
-                         </div>
+            </div>
+            <div class="atuiKernel_SectionSide">
+                <div class="atuiKernel_SectionContents">
+                    <h2>Right side</h2>
+                    <p>This is the right side.</p>
+                    <p>You can insert many things like tendances !</p>
+                </div>
+            </div>
+        </section>
+        <footer id="atuiKernel_Footer">
+            <div id="atuiKernel_FooterScrolltop">
+                <nav
+                    class="atuiKernel_ToolsInfotip"
+                    id="atuiKernel_FooterScrolltopInfotip"
+                >
+                    <a href="#">
+                        <img
+                            alt="Revenir au début"
+                            src="atui/kernel/medias/scrolltop.png"
+                            class="atuiKernel_ToolsInfotip"
+                            width="50"
+                            height="50"
+                        />
+                    </a>
+                    <aside>
+                        <div>
+                            <p>
+                                Vous pouvez remonter tout en haut de la page
+                                avec ceci !
+                            </p>
+                        </div>
+                    </aside>
+                </nav>
+            </div>
+            <div class="atuiKernel_FooterContentsRow">
+                <div class="atuiKernel_FooterLogotype">
+                    <a href="https://alcapitan.github.io/atui">
+                        <img
+                            alt="Icône du site"
+                            src="patch/icons/logo.png"
+                            width="40"
+                            height="40"
+                        />
+                        <p>ATUI</p>
+                    </a>
+                </div>
+                <h3>Contacts</h3>
+                <div id="atuiKernel_ToolsContactBroad">
+                    <div>
+                        <img
+                            src="atui/kernel/medias/phone.png"
+                            alt="Phone icon"
+                            width="30"
+                            height="30"
+                        />
+                        <a href="tel:0606060606">06.02.87.52.40</a>
                     </div>
                     <div>
-                         <h3>Categorie</h3>
-                         <ul class="atuiKernel_FooterList">
-                              <li><a href="#">Link</a></li>
-                              <li><a href="#">Link</a></li>
-                              <li><a href="#">Link</a></li>
-                         </ul>
+                        <img
+                            src="atui/kernel/medias/email.png"
+                            alt="Email icon"
+                            width="30"
+                            height="30"
+                        />
+                        <a href="mailto:prenom.nom@mail.com"
+                            >prenom.nom@mail.com</a
+                        >
                     </div>
                     <div>
-                         <h3>Categorie</h3>
-                         <ul class="atuiKernel_FooterList">
-                              <li><a href="#">Link</a></li>
-                              <li><a href="#">Link</a></li>
-                              <li><a href="#">Link</a></li>
-                         </ul>
+                        <img
+                            src="atui/kernel/medias/twitter.png"
+                            alt="Twitter icon"
+                            width="30"
+                            height="30"
+                        />
+                        <a href="https://twitter.com/my_twitter">@my_twitter</a>
                     </div>
-               </div>
-               <div id="atuiKernel_FooterLegals">
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
-               </div>
-               <div id="atuiKernel_FooterInfo">
-               </div>
-          </footer>
-		<div id="atuiMediasplayer_Audioplayer">
-               <audio id="atuiMediasplayer_AudioplayerMusic"></audio>
-               <aside>
+                </div>
+                <div id="atuiKernel_ToolsContactNewsletter">
+                    <img
+                        src="atui/kernel/medias/email.png"
+                        alt="Email icon"
+                        width="40"
+                        height="40"
+                    />
+                    <form action="" method="get">
+                        <input
+                            type="email"
+                            placeholder="Abonnez-vous à la newsletter !"
+                        />
+                        <input
+                            type="image"
+                            src="atui/kernel/medias/send.png"
+                            alt="S'abonner"
+                        />
+                    </form>
+                </div>
+                <div id="atuiKernel_ToolsContactCompact">
+                    <a href="https://github.com/alcapitan/atui"
+                        ><img
+                            src="atui/kernel/medias/github.png"
+                            alt="Allez voir mon compte GitHub. "
+                            width="50"
+                            height="50"
+                    /></a>
+                    <a href="https://instagram.com/al.capitan"
+                        ><img
+                            src="atui/kernel/medias/instagram.png"
+                            alt="Allez voir mon compte Instagram. "
+                            width="50"
+                            height="50"
+                    /></a>
+                    <a href="https://twitter.com/alcapitan84"
+                        ><img
+                            src="atui/kernel/medias/twitter.png"
+                            alt="Allez voir mon compte Twitter. "
+                            width="50"
+                            height="50"
+                    /></a>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100073597717888"
+                        ><img
+                            src="atui/kernel/medias/facebook.png"
+                            alt="Allez voir mon compte Facebook. "
+                            width="50"
+                            height="50"
+                    /></a>
+                </div>
+            </div>
+            <div class="atuiKernel_FooterContentsColumn">
+                <div class="atuiKernel_FooterDescription">
+                    <a href="https://alcapitan.github.io/atui">
+                        <img
+                            alt="Icône du site"
+                            src="patch/icons/logo.png"
+                            width="40"
+                            height="40"
+                        />
+                        <p>ATUI</p>
+                    </a>
                     <div>
-                         <img src="atui/MediasPlayer/medias/cover.png" alt="Icône Couverture d'album indisponible." id="atuiMediasplayer_AudioplayerMusicinformationsCover" width="150" height="150">
-                         <div>
-                              <div id="atuiMediasplayer_AudioplayerAdditionals">
-                                   <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_AudioplayerInfos">
-                                        <img src="atui/MediasPlayer/medias/info.png" alt="Infos album" width="25" height="25">
-                                        <aside id="atuiMediasplayer_AudioplayerMusicinformationsAdvanced">
-                                             <div>
-                                                  <a href="#">
-                                                       <div>
-                                                            <p>Nom Album</p>
-                                                       </div>
-                                                  </a>
-                                                  <a href="#">
-                                                       <div>
-                                                            <p>Date Sortie</p>
-                                                       </div>
-                                                  </a>
-                                                  <a href="http://ncs.io/SinkingShip">
-                                                       <div>
-                                                            <p>Original music</p>
-                                                       </div>
-                                                  </a>
-                                             </div>
-                                        </aside>
-                                   </nav>
-                                   <div id="atuiMediasplayer_AudioplayerPopup">
-                                        <img src="atui/MediasPlayer/medias/popup.png" alt="Afficher Audio Player dans Pop-up" width="25" height="25">
-                                   </div>
-                                   <div id="atuiMediasplayer_AudioplayerClose">
-                                        <img src="atui/kernel/medias/close.png" alt="Fermer Audio Player" width="25" height="25">
-                                   </div>
-                              </div>
-                              <div id="atuiMediasplayer_AudioplayerMusicinformations">
-                                   <p>Nom Artiste</p>
-                                   <p>Nom Musique</p>
-                              </div>
-                              <div id="atuiMediasplayer_AudioplayerControls">
-                                   <div id="atuiMediasplayer_AudioplayerTimer">
-                                        <p id="atuiMediasplayer_AudioplayerTimerListened">00:00</p>
-                                        <p>-</p>
-                                        <p id="atuiMediasplayer_AudioplayerTimerDuration">00:00</p>
-                                   </div>
-                                   <div id="atuiMediasplayer_AudioplayerButtonsBasic">
-                                        <img src="atui/MediasPlayer/medias/previous.png" alt="Musique précédente" width="30" height="30">
-                                        <img src="atui/MediasPlayer/medias/play.png" alt="Play music" id="atuiMediasplayer_AudioplayerButtonsBasicRun" width="30" height="30">
-                                        <img src="atui/MediasPlayer/medias/next.png" alt="Musique suivante" width="30" height="30">
-                                   </div>
-                                   <div id="atuiMediasplayer_AudioplayerButtonsAdvanced">
-                                        <nav class="atuiKernel_ToolsContextmenu" id="atuiMediasplayer_AudioplayerPlaylists">
-                                             <img src="atui/MediasPlayer/medias/playlist.png" alt="Playlists" width="30" height="30">
-                                             <aside>
-                                                  <div>
-                                                       <a href="#">
-                                                            <div>
-                                                                 <p>Playlist</p>
-                                                            </div>
-                                                       </a>
-                                                       <a href="#">
-                                                            <div>
-                                                                 <p>Playlist</p>
-                                                            </div>
-                                                       </a>
-                                                       <a href="#">
-                                                            <div>
-                                                                 <p>Playlist</p>
-                                                            </div>
-                                                       </a>
-                                                  </div>
-                                             </aside>
-                                        </nav>
-                                        <img src="atui/MediasPlayer/medias/like.png" alt="J'aime cette musique" id="atuiMediasplayer_AudioplayerButtonsAdvancedLike" width="30" height="30">
-                                        <img src="atui/MediasPlayer/medias/noloop.png" alt="Boucle musique désactivé" id="atuiMediasplayer_AudioplayerButtonsAdvancedLoop" width="30" height="30">
-                                   </div>
-                              </div>
-                         </div>
+                        <p>
+                            Front-end library to help you to build your website
+                            with more lighter and easier tools.
+                        </p>
+                        <a href="https://alcapitan.github.io/atui/"
+                            >https://alcapitan.github.io/atui/</a
+                        >
                     </div>
-                    <div id="atuiMediasplayer_AudioplayerProgressbar">
-                         <div id="atuiMediasplayer_AudioplayerProgressbarInside"></div>
+                </div>
+                <div>
+                    <h3>Categorie</h3>
+                    <ul class="atuiKernel_FooterList">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Categorie</h3>
+                    <ul class="atuiKernel_FooterList">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="atuiKernel_FooterLegals">
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </div>
+            <div id="atuiKernel_FooterInfo"></div>
+        </footer>
+        <div id="atuiMediasplayer_Audioplayer">
+            <audio id="atuiMediasplayer_AudioplayerMusic"></audio>
+            <aside>
+                <div>
+                    <img
+                        src="atui/MediasPlayer/medias/cover.png"
+                        alt="Icône Couverture d'album indisponible."
+                        id="atuiMediasplayer_AudioplayerMusicinformationsCover"
+                        width="150"
+                        height="150"
+                    />
+                    <div>
+                        <div id="atuiMediasplayer_AudioplayerAdditionals">
+                            <nav
+                                class="atuiKernel_ToolsContextmenu"
+                                id="atuiMediasplayer_AudioplayerInfos"
+                            >
+                                <img
+                                    src="atui/MediasPlayer/medias/info.png"
+                                    alt="Infos album"
+                                    width="25"
+                                    height="25"
+                                />
+                                <aside
+                                    id="atuiMediasplayer_AudioplayerMusicinformationsAdvanced"
+                                >
+                                    <div>
+                                        <a href="#">
+                                            <div>
+                                                <p>Nom Album</p>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div>
+                                                <p>Date Sortie</p>
+                                            </div>
+                                        </a>
+                                        <a href="http://ncs.io/SinkingShip">
+                                            <div>
+                                                <p>Original music</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </aside>
+                            </nav>
+                            <div id="atuiMediasplayer_AudioplayerPopup">
+                                <img
+                                    src="atui/MediasPlayer/medias/popup.png"
+                                    alt="Afficher Audio Player dans Pop-up"
+                                    width="25"
+                                    height="25"
+                                />
+                            </div>
+                            <div id="atuiMediasplayer_AudioplayerClose">
+                                <img
+                                    src="atui/kernel/medias/close.png"
+                                    alt="Fermer Audio Player"
+                                    width="25"
+                                    height="25"
+                                />
+                            </div>
+                        </div>
+                        <div id="atuiMediasplayer_AudioplayerMusicinformations">
+                            <p>Nom Artiste</p>
+                            <p>Nom Musique</p>
+                        </div>
+                        <div id="atuiMediasplayer_AudioplayerControls">
+                            <div id="atuiMediasplayer_AudioplayerTimer">
+                                <p
+                                    id="atuiMediasplayer_AudioplayerTimerListened"
+                                >
+                                    00:00
+                                </p>
+                                <p>-</p>
+                                <p
+                                    id="atuiMediasplayer_AudioplayerTimerDuration"
+                                >
+                                    00:00
+                                </p>
+                            </div>
+                            <div id="atuiMediasplayer_AudioplayerButtonsBasic">
+                                <img
+                                    src="atui/MediasPlayer/medias/previous.png"
+                                    alt="Musique précédente"
+                                    width="30"
+                                    height="30"
+                                />
+                                <img
+                                    src="atui/MediasPlayer/medias/play.png"
+                                    alt="Play music"
+                                    id="atuiMediasplayer_AudioplayerButtonsBasicRun"
+                                    width="30"
+                                    height="30"
+                                />
+                                <img
+                                    src="atui/MediasPlayer/medias/next.png"
+                                    alt="Musique suivante"
+                                    width="30"
+                                    height="30"
+                                />
+                            </div>
+                            <div
+                                id="atuiMediasplayer_AudioplayerButtonsAdvanced"
+                            >
+                                <nav
+                                    class="atuiKernel_ToolsContextmenu"
+                                    id="atuiMediasplayer_AudioplayerPlaylists"
+                                >
+                                    <img
+                                        src="atui/MediasPlayer/medias/playlist.png"
+                                        alt="Playlists"
+                                        width="30"
+                                        height="30"
+                                    />
+                                    <aside>
+                                        <div>
+                                            <a href="#">
+                                                <div>
+                                                    <p>Playlist</p>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div>
+                                                    <p>Playlist</p>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div>
+                                                    <p>Playlist</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </aside>
+                                </nav>
+                                <img
+                                    src="atui/MediasPlayer/medias/like.png"
+                                    alt="J'aime cette musique"
+                                    id="atuiMediasplayer_AudioplayerButtonsAdvancedLike"
+                                    width="30"
+                                    height="30"
+                                />
+                                <img
+                                    src="atui/MediasPlayer/medias/noloop.png"
+                                    alt="Boucle musique désactivé"
+                                    id="atuiMediasplayer_AudioplayerButtonsAdvancedLoop"
+                                    width="30"
+                                    height="30"
+                                />
+                            </div>
+                        </div>
                     </div>
-               </aside>
-		</div>
-          <aside id="atuiKernel_Notification">
-          </aside>
-          <script src="atui/kernel/main.js"></script>
-          <script src="atui/MediasPlayer/main.js"></script>
-          <script src="atui/ServerExchanges/main.js"></script>
-          <script src="atui/SearchService/main.js"></script>
-          <script src="patch/main.js"></script>
-     </body>
+                </div>
+                <div id="atuiMediasplayer_AudioplayerProgressbar">
+                    <div
+                        id="atuiMediasplayer_AudioplayerProgressbarInside"
+                    ></div>
+                </div>
+            </aside>
+        </div>
+        <aside id="atuiKernel_Notification"></aside>
+        <script src="atui/kernel/main.js"></script>
+        <script src="atui/MediasPlayer/main.js"></script>
+        <script src="atui/ServerExchanges/main.js"></script>
+        <script src="atui/SearchService/main.js"></script>
+        <script src="patch/main.js"></script>
+    </body>
 </html>

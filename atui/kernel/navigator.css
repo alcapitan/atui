@@ -1,94 +1,80 @@
 /* Img Big */
 
-.atuiKernel_NavigatorSectionImgbig /* Container */
-{
-     display : flex;
-     justify-content: space-evenly;
-     margin : 20px 0;
-     flex-wrap: wrap;
+.atuiKernel_NavigatorSectionImgbig /* Container */ {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
-.atuiKernel_NavigatorSectionImgbig a /* ELement */
-{
-     padding : 10px 20px;
-     border-radius : var(--atuiKernel_Borderradius);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+.atuiKernel_NavigatorSectionImgbig a /* ELement */ {
+    padding: 10px 20px;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.atuiKernel_NavigatorSectionImgbig a:hover
-{
-     background-color: var(--atuiKernel_ColorschemeOA3);
+.atuiKernel_NavigatorSectionImgbig a:hover {
+    background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
-.atuiKernel_NavigatorSectionImgbig a:active
-{
-     background-color: var(--atuiKernel_ColorschemeOA4);
+.atuiKernel_NavigatorSectionImgbig a:active {
+    background-color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_NavigatorSectionImgbig a img /* Icon */
-{
-     width : 100px;
-     height : 100px;
+.atuiKernel_NavigatorSectionImgbig a img /* Icon */ {
+    width: 100px;
+    height: 100px;
 }
 
-.atuiKernel_NavigatorSectionImgbig a p /* Text */
-{
-     margin : 10px 0 0 0;
-     font-size : 1.2rem;
-     color : var(--atuiKernel_ColorschemeOBF);
+.atuiKernel_NavigatorSectionImgbig a p /* Text */ {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    color: var(--atuiKernel_ColorschemeOBF);
 }
-
 
 /* Global Panel */
 
-.atuiKernel_NavigatorGlobalpanel aside
-{
-     align-items: normal;
-     position: absolute;
-     left : 20px;
-     right : 20px;
-     width : calc(100vw - 100px);
-     visibility: hidden;
-     background-color: var(--atuiKernel_ColorschemeOB0);
-     border-radius : var(--atuiKernel_Borderradius);
-     box-shadow: var(--atuiKernel_Shadow);
-     display : block !important;
+.atuiKernel_NavigatorGlobalpanel aside {
+    align-items: normal;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    width: calc(100vw - 100px);
+    visibility: hidden;
+    background-color: var(--atuiKernel_ColorschemeOB0);
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: var(--atuiKernel_Shadow);
+    display: block !important;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div
-{
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-     padding : 20px;
+.atuiKernel_NavigatorGlobalpanel aside > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div
-{
-     display: block;
-     margin : 10px;
-     min-width : 20%;
+.atuiKernel_NavigatorGlobalpanel aside > div div {
+    display: block;
+    margin: 10px;
+    min-width: 20%;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div p
-{
-     font-family: var(--atuiKernel_FontsTitle);
-     font-weight: bold;
-     font-size: 1.4rem;
-     color : var(--atuiKernel_ColorschemeOBF);
+.atuiKernel_NavigatorGlobalpanel aside > div div p {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div div
-{
-     margin : 10px 20px;
+.atuiKernel_NavigatorGlobalpanel aside > div div div {
+    margin: 10px 20px;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div div a
-{
-     display: block;
-     margin : 5px;
-     font-size : 1.1rem;
+.atuiKernel_NavigatorGlobalpanel aside > div div div a {
+    display: block;
+    margin: 5px;
+    font-size: 1.1rem;
 }
-
