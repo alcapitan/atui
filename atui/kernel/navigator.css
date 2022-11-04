@@ -78,3 +78,67 @@
     margin: 5px;
     font-size: 1.1rem;
 }
+
+/* Rail */
+
+.atuiKernel_NavigatorRail {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    padding: 10px;
+    row-gap: 5px;
+}
+
+.atuiKernel_NavigatorRail a {
+    padding: 5px;
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+.atuiKernel_NavigatorRail a:hover {
+    background-color: var(--atuiKernel_ColorschemeOA3);
+}
+
+.atuiKernel_NavigatorRail img {
+    width: 36px;
+}
+
+/* Drawer */
+
+.atuiKernel_NavigatorDrawer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    padding: 10px;
+    row-gap: 5px;
+}
+
+.atuiKernel_NavigatorDrawer a {
+    padding: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.atuiKernel_NavigatorDrawer a:hover {
+    background-color: var(--atuiKernel_ColorschemeOA3);
+}
+
+.atuiKernel_NavigatorDrawer img {
+    width: 36px;
+}
+
+.atuiKernel_NavigatorDrawer p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_NavigatorDrawer p {
+        display: none;
+    }
+
+    .atuiKernel_NavigatorDrawer:hover p {
+        display: block;
+    }
+}

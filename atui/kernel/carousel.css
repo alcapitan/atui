@@ -12,11 +12,7 @@
 .atuiKernel_ToolsCarousel > div /* Text container */ {
     width: 100%;
     padding: 50px 10%;
-    background: linear-gradient(
-        to top,
-        var(--atuiKernel_ColorschemeBB8),
-        transparent
-    );
+    background: linear-gradient(to top, rgba(51, 51, 51, 0.8), transparent);
     display: flex;
     flex-direction: column;
     align-items: center;
