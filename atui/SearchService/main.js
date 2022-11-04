@@ -41,7 +41,7 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
         if (document.documentElement.clientWidth < 767) {
             atuiSearchservices_HeaderBarInput.style.display = "inline";
             atuiSearchservices_HeaderBar.style.backgroundColor =
-                "var(--atuiKernel_ColorschemeOB1)";
+                "var(--atuiKernel_ColorschemeOB0)";
             element.style.left = "40px";
             element.style.right = "40px";
         }

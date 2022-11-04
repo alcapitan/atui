@@ -41,41 +41,40 @@
     background-color: var(--atuiKernel_ColorschemeBB0);
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding-left: 10px;
+    gap: 10px;
 }
 
 #atuiKernel_ToolsContactNewsletter > img /* Icons */ {
     border-radius: var(--atuiKernel_Borderradius);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 #atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */ {
     display: flex;
     align-items: center;
     flex: 1;
+    gap: 5px;
 }
 
 #atuiKernel_ToolsContactNewsletter form input[type="email"] /* Input */ {
-    border-radius: var(--atuiKernel_Borderradius);
-    background-color: transparent;
-    color: var(--atuiKernel_ColorschemeOB5);
-    border: none;
-    font-size: 1.1rem;
-    margin: 10px;
-    padding: 10px;
     flex: 1;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 0; /* Fix bogue width sur mobile */
-    outline: none;
+    border: none;
+    background-color: transparent;
 }
 
 #atuiKernel_ToolsContactNewsletter form input[type="image"] /* Send icon */ {
     border-radius: var(--atuiKernel_Borderradius);
     width: 30px;
     height: 30px;
+    background-color: transparent;
+    border: none;
+    box-sizing: content-box;
 }
 
 /* Compact */
