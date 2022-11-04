@@ -245,3 +245,48 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
     font-weight: normal;
     font-size: 1.1rem;
 }
+
+/* Square link */
+
+.atuiKernel_SectionSquarelink {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.atuiKernel_SectionSquarelink > a {
+    text-decoration: none;
+    min-width: 100px;
+    height: 100px;
+    padding: 15px;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    row-gap: 15px;
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    color: var(--atuiKernel_ColorschemeOBF);
+}
+
+.atuiKernel_SectionSquarelink > a:hover {
+    border-color: var(--atuiKernel_ColorschemeOA5);
+    background-color: var(--atuiKernel_ColorschemeOA1);
+    color: var(--atuiKernel_ColorschemeOA5);
+    font-weight: bold;
+}
+
+.atuiKernel_SectionSquarelink > a * {
+    margin: 0;
+    color: inherit;
+    font-weight: inherit;
+}
+
+.atuiKernel_SectionSquarelink > a img {
+    height: 48px;
+}
+
+.atuiKernel_SectionSquarelink > a p {
+    font-family: var(--atuiKernel_FontsTitle);
+}
