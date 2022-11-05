@@ -1,3 +1,5 @@
+@import url("./accordion.css");
+@import url("./box.css");
 @import url("./button.css");
 @import url("./cards.css");
 @import url("./carousel.css");
@@ -15,6 +17,7 @@
 @import url("./paragraph.css");
 @import url("./section.css");
 @import url("./settings.css");
+@import url("./table.css");
 @import url("./tabs.css");
 
 /* Global */
