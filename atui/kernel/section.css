@@ -7,11 +7,14 @@ body > section {
     overflow: hidden;
 }
 
+body > section > * > * {
+    margin: 20px 0;
+}
+
 /* Accordion */
 
 .atuiKernel_SectionAccordion {
     border-radius: var(--atuiKernel_Borderradius);
-    margin: 20px 0;
     border: 1px var(--atuiKernel_ColorschemeOB5) solid;
     overflow: hidden;
 }
@@ -62,7 +65,6 @@ body > section {
 .atuiKernel_SectionBoxInfo,
 .atuiKernel_SectionBoxSuccess {
     border-radius: var(--atuiKernel_Borderradius);
-    margin: 20px 0;
     padding: 15px;
     min-height: 30px;
 }
@@ -126,36 +128,25 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
 
 /* Table */
 
-.atuiKernel_SectionTableDefault table,
-.atuiKernel_SectionTableContrast table {
+.atuiKernel_SectionTable table {
     border-collapse: collapse;
-    margin: 20px 0;
 }
 
-.atuiKernel_SectionTableDefault td,
-.atuiKernel_SectionTableDefault th,
-.atuiKernel_SectionTableContrast td,
-.atuiKernel_SectionTableContrast th {
+.atuiKernel_SectionTable td,
+.atuiKernel_SectionTable th {
     padding: 10px 20px;
     font-size: 1rem;
     text-align: center;
     vertical-align: middle;
 }
 
-.atuiKernel_SectionTableDefault td,
-.atuiKernel_SectionTableDefault th {
+.atuiKernel_SectionTable td,
+.atuiKernel_SectionTable th {
     border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
     border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
 }
 
-.atuiKernel_SectionTableContrast td,
-.atuiKernel_SectionTableContrast th {
-    border: 1px var(--atuiKernel_ColorschemeOBF) solid;
-    background-color: var(--atuiKernel_ColorschemeOA1);
-}
-
-.atuiKernel_SectionTableDefault caption,
-.atuiKernel_SectionTableContrast caption {
+.atuiKernel_SectionTable caption {
     color: var(--atuiKernel_ColorschemeOB5);
     font-style: italic;
     margin: 10px 0;
@@ -163,21 +154,12 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
     caption-side: bottom;
 }
 
-.atuiKernel_SectionTableDefault th,
-.atuiKernel_SectionTableContrast th {
+.atuiKernel_SectionTable th {
     font-weight: bold;
     font-family: var(--atuiKernel_FontsTitle);
 }
 
-.atuiKernel_SectionTableContrast th {
-    background-color: var(--atuiKernel_ColorschemeOA3);
-}
-
 /* Breadcrumb */
-
-.atuiKernel_SectionBreadcrumb {
-    margin: 20px 0;
-}
 
 .atuiKernel_SectionBreadcrumb > * {
     display: inline-block;
@@ -206,7 +188,6 @@ En attendant que has sorte de l'expérimental dans Chrome 105 et Firefox
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 20px 0;
 }
 
 .atuiKernel_SectionSquarelink > a {

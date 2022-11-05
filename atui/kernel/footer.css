@@ -64,7 +64,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 20px 0;
 }
 
 .atuiKernel_FooterContentsColumn h3,
@@ -165,7 +164,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px 0;
 }
 
 #atuiKernel_FooterLegals * {
@@ -184,7 +182,6 @@
 #atuiKernel_FooterInfo {
     display: block;
     text-align: center;
-    margin: 20px 0;
 }
 
 #atuiKernel_FooterInfo * {

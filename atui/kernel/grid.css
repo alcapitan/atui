@@ -5,7 +5,6 @@
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     align-items: baseline;
-    margin: 20px 0;
 }
 
 @media (min-width: 768px) /* Computers */ {

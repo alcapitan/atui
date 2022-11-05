@@ -3,7 +3,6 @@
 .atuiKernel_NavigatorSectionImgbig /* Container */ {
     display: flex;
     justify-content: space-evenly;
-    margin: 20px 0;
     flex-wrap: wrap;
 }
 
@@ -79,31 +78,9 @@
     font-size: 1.1rem;
 }
 
-/* Rail */
+/* Common to rail and drawer */
 
-.atuiKernel_NavigatorRail {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid var(--atuiKernel_ColorschemeOB5);
-    padding: 10px;
-    row-gap: 5px;
-}
-
-.atuiKernel_NavigatorRail a {
-    padding: 5px;
-    border-radius: var(--atuiKernel_Borderradius);
-}
-
-.atuiKernel_NavigatorRail a:hover {
-    background-color: var(--atuiKernel_ColorschemeOA3);
-}
-
-.atuiKernel_NavigatorRail img {
-    width: 36px;
-}
-
-/* Drawer */
-
+.atuiKernel_NavigatorRail,
 .atuiKernel_NavigatorDrawer {
     display: flex;
     flex-direction: column;
@@ -112,20 +89,34 @@
     row-gap: 5px;
 }
 
+.atuiKernel_NavigatorRail a,
 .atuiKernel_NavigatorDrawer a {
-    padding: 10px;
     border-radius: var(--atuiKernel_Borderradius);
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+    margin: 0;
 }
 
+.atuiKernel_NavigatorRail a:hover,
 .atuiKernel_NavigatorDrawer a:hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
+.atuiKernel_NavigatorRail img,
 .atuiKernel_NavigatorDrawer img {
     width: 36px;
+}
+
+.atuiKernel_NavigatorRail a,
+.atuiKernel_NavigatorDrawer a {
+    padding: 10px;
+}
+
+/* Drawer */
+
+.atuiKernel_NavigatorDrawer a {
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
 .atuiKernel_NavigatorDrawer p {

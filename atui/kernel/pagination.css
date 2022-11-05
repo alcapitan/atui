@@ -3,7 +3,6 @@
 .atuiKernel_SectionPaginationNumber {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
 }
 
 .atuiKernel_SectionPaginationNumber > * {
@@ -44,7 +43,6 @@
 
 .atuiKernel_SectionPaginationText {
     display: flex;
-    margin: 20px 0;
     gap: 15px;
     width: 100%;
 }

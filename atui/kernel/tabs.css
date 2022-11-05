@@ -3,7 +3,6 @@
 .atuiKernel_SectionTabsContrast,
 .atuiKernel_SectionTabsStandard {
     border-radius: var(--atuiKernel_Borderradius);
-    margin: 20px 0;
     overflow: hidden;
 }
 

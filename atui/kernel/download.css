@@ -4,7 +4,6 @@
     border-radius: var(--atuiKernel_Borderradius);
     border: 1px var(--atuiKernel_ColorschemeOB5) solid;
     background-color: var(--atuiKernel_ColorschemeOB1);
-    margin: 20px 0;
     padding: 10px;
     display: flex;
     align-items: center;

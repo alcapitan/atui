@@ -1,9 +1,5 @@
 /* Global */
 
-.atuiMediasplayer_Videoplayer /* Container */ {
-    margin: 20px 0;
-}
-
 .atuiMediasplayer_Videoplayer > article /* Element */ {
     border: 1px var(--atuiKernel_ColorschemeOB5) solid;
     border-radius: var(--atuiKernel_Borderradius);
