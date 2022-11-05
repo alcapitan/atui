@@ -4,6 +4,7 @@ body > section {
     display: grid;
     column-gap: 20px;
     grid-auto-flow: column;
+    overflow: hidden;
 }
 
 /* Accordion */

@@ -84,7 +84,7 @@
 .atuiKernel_NavigatorRail {
     display: flex;
     flex-direction: column;
-    background-color: var(--atuiKernel_ColorschemeOB1);
+    border-right: 1px solid var(--atuiKernel_ColorschemeOB5);
     padding: 10px;
     row-gap: 5px;
 }
@@ -107,7 +107,7 @@
 .atuiKernel_NavigatorDrawer {
     display: flex;
     flex-direction: column;
-    background-color: var(--atuiKernel_ColorschemeOB1);
+    border-right: 1px solid var(--atuiKernel_ColorschemeOB5);
     padding: 10px;
     row-gap: 5px;
 }
@@ -133,9 +133,19 @@
     margin: 0;
 }
 
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_NavigatorDrawer {
+        width: 20vw;
+    }
+}
+
 @media (max-width: 767px) /* Smartphones */ {
     .atuiKernel_NavigatorDrawer p {
         display: none;
+    }
+
+    .atuiKernel_NavigatorDrawer:hover {
+        width: 60vw;
     }
 
     .atuiKernel_NavigatorDrawer:hover p {
