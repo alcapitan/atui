@@ -1,6 +1,4 @@
-.atuiKernel_SectionGrid,
-.atuiKernel_SectionGrid3,
-.atuiKernel_SectionGrid2 {
+.atuiKernel_SectionGrid {
     display: grid;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
@@ -12,19 +10,17 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .atuiKernel_SectionGrid3 {
+    .atuiKernel_SectionGrid.optionColumns3 {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .atuiKernel_SectionGrid2 {
+    .atuiKernel_SectionGrid.optionColumns2 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_SectionGrid,
-    .atuiKernel_SectionGrid3,
-    .atuiKernel_SectionGrid2 {
+    .atuiKernel_SectionGrid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
