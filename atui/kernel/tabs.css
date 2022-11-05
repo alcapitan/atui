@@ -1,7 +1,6 @@
 /* Global */
 
-.atuiKernel_SectionTabsContrast,
-.atuiKernel_SectionTabsStandard {
+.atuiKernel_SectionTabs {
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
 }
@@ -11,6 +10,8 @@
 .atuiKernel_SectionTabsHeader {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 5px;
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB2) solid;
 }
 
 .atuiKernel_SectionTabsHeader > a {
@@ -30,6 +31,21 @@
     font-weight: bold;
 }
 
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .active * {
+    color: var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .active::after {
+    content: "";
+    width: calc(100% - 30px);
+    height: 5px;
+    background-color: var(--atuiKernel_ColorschemeOA5);
+    position: absolute;
+    border-radius: 5px;
+    transform: translateY(10px);
+}
+
 /* Content */
 
 .atuiKernel_SectionTabsContent {
@@ -46,38 +62,27 @@
 
 /* Contrast style */
 
-.atuiKernel_SectionTabsContrast {
+.atuiKernel_SectionTabs.optionContrast {
     border: 1px var(--atuiKernel_ColorschemeOB5) solid;
 }
 
-.atuiKernel_SectionTabsContrast .atuiKernel_SectionTabsHeader {
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader {
     background-color: var(--atuiKernel_ColorschemeOB2);
     border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
     padding: 0 10px;
 }
 
-.atuiKernel_SectionTabsContrast .atuiKernel_SectionTabsContent {
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsContent {
     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
-/* Standard style */
-
-.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader {
-    padding-bottom: 5px;
-    border-bottom: 1px var(--atuiKernel_ColorschemeOB2) solid;
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .active * {
+    color: var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader > *:hover,
-.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader .active * {
-    color: var(--atuiKernel_ColorschemeOA5);
-}
-
-.atuiKernel_SectionTabsStandard .atuiKernel_SectionTabsHeader .active::after {
-    content: "";
-    width: calc(100% - 30px);
-    height: 5px;
-    background-color: var(--atuiKernel_ColorschemeOA5);
-    position: absolute;
-    border-radius: 5px;
-    transform: translateY(10px);
+.atuiKernel_SectionTabs.optionContrast
+    .atuiKernel_SectionTabsHeader
+    .active::after {
+    all: unset;
 }
