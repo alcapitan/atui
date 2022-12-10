@@ -10,6 +10,7 @@ fieldset > div {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 input,
@@ -39,7 +40,7 @@ progress {
 }
 
 input[type="color"],
-input[type="file"] {
+input[type="file"]::before {
     padding: 0;
     border: none;
 }
