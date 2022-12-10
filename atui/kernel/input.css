@@ -40,7 +40,7 @@ progress {
 }
 
 input[type="color"],
-input[type="file"]::before {
+input[type="file"] {
     padding: 0;
     border: none;
 }
