@@ -488,14 +488,7 @@ function atuiKernel_ToolsContextmenuDisplay(element, wish, centered) {
                 elementPositionY = elementPositionY - cible.clientHeight;
             }
             elementPositionY = elementPositionY - elementPositionYShift;
-        } else if (document.documentElement.clientWidth <= 767) {
-            /* Smartphones */
-            elementPositionX =
-                (document.documentElement.clientWidth - cible.clientWidth) / 2;
-            elementPositionY =
-                (document.documentElement.clientHeight - cible.clientHeight) /
-                2;
-        } /* Computers */ else {
+        } else {
             elementPositionXShift =
                 cible.getBoundingClientRect()
                     .x; /* Décalage X écran conteneur */

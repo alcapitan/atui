@@ -78,68 +78,77 @@
     font-size: 1.1rem;
 }
 
-/* Common to rail and drawer */
+/* Bar */
 
-.atuiKernel_NavigatorRail,
-.atuiKernel_NavigatorDrawer {
+.atuiKernel_NavigatorBar {
     display: flex;
-    flex-direction: column;
-    border-right: 1px solid var(--atuiKernel_ColorschemeOB5);
-    padding: 10px;
     row-gap: 5px;
 }
 
-.atuiKernel_NavigatorRail a,
-.atuiKernel_NavigatorDrawer a {
+.atuiKernel_NavigatorBar a {
     border-radius: var(--atuiKernel_Borderradius);
     margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.atuiKernel_NavigatorRail a:hover,
-.atuiKernel_NavigatorDrawer a:hover {
+.atuiKernel_NavigatorBar a:hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
-.atuiKernel_NavigatorRail img,
-.atuiKernel_NavigatorDrawer img {
-    width: 36px;
-}
-
-.atuiKernel_NavigatorRail a,
-.atuiKernel_NavigatorDrawer a {
-    padding: 10px;
-}
-
-/* Drawer */
-
-.atuiKernel_NavigatorDrawer a {
-    border-radius: var(--atuiKernel_Borderradius);
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-}
-
-.atuiKernel_NavigatorDrawer p {
-    font-size: 1.2rem;
+.atuiKernel_NavigatorBar p {
     margin: 0;
 }
 
 @media (min-width: 768px) /* Computers */ {
-    .atuiKernel_NavigatorDrawer {
-        width: 20vw;
+    .atuiKernel_NavigatorBar {
+        width: 20%;
+        flex-direction: column;
+    }
+
+    .atuiKernel_NavigatorBar a{
+        column-gap: 10px;
+    }
+
+    .atuiKernel_NavigatorBar img {
+        width: 36px;
+    }
+
+    .atuiKernel_NavigatorBar p {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_NavigatorDrawer p {
-        display: none;
+    .atuiKernel_NavigatorBar
+    {
+        width : calc(100% - 10px);
+        padding: 5px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        background-color: var(--atuiKernel_ColorschemeOA2);
+        border-top: 1px solid var(--atuiKernel_ColorschemeOA4);
     }
 
-    .atuiKernel_NavigatorDrawer:hover {
-        width: 60vw;
+    .atuiKernel_NavigatorBar a
+    {
+        flex-direction: column;
+        row-gap: 5px;
     }
 
-    .atuiKernel_NavigatorDrawer:hover p {
-        display: block;
+    .atuiKernel_NavigatorBar img {
+        width: 30px;
+    }
+
+    .atuiKernel_NavigatorBar p
+    {
+        font-size: 0.75rem;
+        text-align: center;
     }
 }
+
