@@ -131,14 +131,15 @@
         position: fixed;
         bottom: 0;
         z-index: 10;
-        background-color: var(--atuiKernel_ColorschemeOA2);
-        border-top: 1px solid var(--atuiKernel_ColorschemeOA4);
+        background-color: var(--atuiKernel_ColorschemeOB1);
+        border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
     }
 
     .atuiKernel_NavigationBar a
     {
         flex-direction: column;
         row-gap: 5px;
+        padding : 5px 10px;
     }
 
     .atuiKernel_NavigationBar img {
