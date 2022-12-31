@@ -138,6 +138,7 @@
     .atuiKernel_NavigationBar a
     {
         flex-direction: column;
+        justify-content: center;
         row-gap: 5px;
         padding : 5px 10px;
     }
