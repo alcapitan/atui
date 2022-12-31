@@ -1,12 +1,12 @@
 /* Img Big */
 
-.atuiKernel_NavigatorSectionImgbig /* Container */ {
+.atuiKernel_NavigationSectionImgbig /* Container */ {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.atuiKernel_NavigatorSectionImgbig a /* ELement */ {
+.atuiKernel_NavigationSectionImgbig a /* ELement */ {
     padding: 10px 20px;
     border-radius: var(--atuiKernel_Borderradius);
     display: flex;
@@ -14,20 +14,20 @@
     align-items: center;
 }
 
-.atuiKernel_NavigatorSectionImgbig a:hover {
+.atuiKernel_NavigationSectionImgbig a:hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
-.atuiKernel_NavigatorSectionImgbig a:active {
+.atuiKernel_NavigationSectionImgbig a:active {
     background-color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_NavigatorSectionImgbig a img /* Icon */ {
+.atuiKernel_NavigationSectionImgbig a img /* Icon */ {
     width: 100px;
     height: 100px;
 }
 
-.atuiKernel_NavigatorSectionImgbig a p /* Text */ {
+.atuiKernel_NavigationSectionImgbig a p /* Text */ {
     margin: 10px 0 0 0;
     font-size: 1.2rem;
     color: var(--atuiKernel_ColorschemeOBF);
@@ -35,7 +35,7 @@
 
 /* Global Panel */
 
-.atuiKernel_NavigatorGlobalpanel aside {
+.atuiKernel_NavigationGlobalpanel aside {
     align-items: normal;
     position: absolute;
     left: 20px;
@@ -48,31 +48,31 @@
     display: block !important;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div {
+.atuiKernel_NavigationGlobalpanel aside > div {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div {
+.atuiKernel_NavigationGlobalpanel aside > div div {
     display: block;
     margin: 10px;
     min-width: 20%;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div p {
+.atuiKernel_NavigationGlobalpanel aside > div div p {
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: bold;
     font-size: 1.4rem;
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div div {
+.atuiKernel_NavigationGlobalpanel aside > div div div {
     margin: 10px 20px;
 }
 
-.atuiKernel_NavigatorGlobalpanel aside > div div div a {
+.atuiKernel_NavigationGlobalpanel aside > div div div a {
     display: block;
     margin: 5px;
     font-size: 1.1rem;
@@ -80,12 +80,12 @@
 
 /* Bar */
 
-.atuiKernel_NavigatorBar {
+.atuiKernel_NavigationBar {
     display: flex;
     row-gap: 5px;
 }
 
-.atuiKernel_NavigatorBar a {
+.atuiKernel_NavigationBar a {
     border-radius: var(--atuiKernel_Borderradius);
     margin: 0;
     padding: 10px;
@@ -93,35 +93,35 @@
     align-items: center;
 }
 
-.atuiKernel_NavigatorBar a:hover {
+.atuiKernel_NavigationBar a:hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
-.atuiKernel_NavigatorBar p {
+.atuiKernel_NavigationBar p {
     margin: 0;
 }
 
 @media (min-width: 768px) /* Computers */ {
-    .atuiKernel_NavigatorBar {
+    .atuiKernel_NavigationBar {
         width: 20%;
         flex-direction: column;
     }
 
-    .atuiKernel_NavigatorBar a{
+    .atuiKernel_NavigationBar a{
         column-gap: 10px;
     }
 
-    .atuiKernel_NavigatorBar img {
+    .atuiKernel_NavigationBar img {
         width: 36px;
     }
 
-    .atuiKernel_NavigatorBar p {
+    .atuiKernel_NavigationBar p {
         font-size: 1.2rem;
     }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_NavigatorBar
+    .atuiKernel_NavigationBar
     {
         width : calc(100% - 10px);
         padding: 5px;
@@ -135,17 +135,17 @@
         border-top: 1px solid var(--atuiKernel_ColorschemeOA4);
     }
 
-    .atuiKernel_NavigatorBar a
+    .atuiKernel_NavigationBar a
     {
         flex-direction: column;
         row-gap: 5px;
     }
 
-    .atuiKernel_NavigatorBar img {
+    .atuiKernel_NavigationBar img {
         width: 30px;
     }
 
-    .atuiKernel_NavigatorBar p
+    .atuiKernel_NavigationBar p
     {
         font-size: 0.75rem;
         text-align: center;

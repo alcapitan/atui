@@ -1,10 +1,10 @@
-atuiKernel_FooterLastedited(27, 12, 2022);
+atuiKernel_FooterLastedited(31, 12, 2022);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
-atuiKernel_ToolsContextmenu("atuiKernel_NavigatorImg");
-atuiKernel_ToolsContextmenu("atuiKernel_NavigatorText");
+atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
+atuiKernel_ToolsContextmenu("atuiKernel_NavigationText");
 atuiKernel_ToolsInfotip("atuiKernel_FooterScrolltopInfotip");
-atuiKernel_NavigatorGlobalpanel("atuiKernel_NavigatorGlobalpanel1");
+atuiKernel_NavigationGlobalpanel("atuiKernel_NavigationGlobalpanel1");
 
 document.getElementById("testRunMusic").addEventListener("click", function () {
     atuiMediasplayer_AudioplayerMusicChange([

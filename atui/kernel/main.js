@@ -534,7 +534,7 @@ function atuiKernel_ToolsContextmenu(cible) {
 
 /* Global Panel */
 
-function atuiKernel_NavigatorGlobalpanel(cible) {
+function atuiKernel_NavigationGlobalpanel(cible) {
     document.getElementById(cible).addEventListener("mouseover", function () {
         atuiKernel_ToolsContextmenuDisplay(this, true, true);
     });
