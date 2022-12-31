@@ -107,8 +107,9 @@
         flex-direction: column;
     }
 
-    .atuiKernel_NavigationBar a{
+    .atuiKernel_NavigationBar a {
         column-gap: 10px;
+        width: max-content;
     }
 
     .atuiKernel_NavigationBar img {
