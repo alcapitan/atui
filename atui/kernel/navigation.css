@@ -93,10 +93,6 @@
     align-items: center;
 }
 
-.atuiKernel_NavigationBar a:hover {
-    background-color: var(--atuiKernel_ColorschemeOA3);
-}
-
 .atuiKernel_NavigationBar p {
     margin: 0;
 }
@@ -109,7 +105,14 @@
 
     .atuiKernel_NavigationBar a {
         column-gap: 10px;
+    }
+
+    .atuiKernel_NavigationBar a:not(:has(p)) {
         width: max-content;
+    }
+
+    .atuiKernel_NavigationBar a:hover {
+        background-color: var(--atuiKernel_ColorschemeOA2);
     }
 
     .atuiKernel_NavigationBar img {
@@ -122,36 +125,38 @@
 }
 
 @media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_NavigationBar
-    {
-        width : calc(100% - 10px);
+    .atuiKernel_NavigationBar {
+        width: calc(100% - 10px);
         padding: 5px;
         justify-content: space-around;
         flex-wrap: nowrap;
         flex-direction: row;
         position: fixed;
+        left : 0;
+        right : 0;
         bottom: 0;
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
         border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
     }
 
-    .atuiKernel_NavigationBar a
-    {
+    .atuiKernel_NavigationBar a {
         flex-direction: column;
         justify-content: center;
         row-gap: 5px;
-        padding : 5px 10px;
+        padding: 5px 10px;
+    }
+
+    .atuiKernel_NavigationBar a:hover {
+        background-color: var(--atuiKernel_ColorschemeOB2);
     }
 
     .atuiKernel_NavigationBar img {
         width: 30px;
     }
 
-    .atuiKernel_NavigationBar p
-    {
+    .atuiKernel_NavigationBar p {
         font-size: 0.75rem;
         text-align: center;
     }
 }
-

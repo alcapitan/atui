@@ -190,3 +190,9 @@
     color: var(--atuiKernel_ColorschemeOA6);
     margin: 10px;
 }
+
+@media (max-width: 767px) /* Smartphones */ {
+    #atuiKernel_FooterInfo {
+        margin-bottom: 100px; /* Due to the possible navbar over the footer info */
+    }
+}
