@@ -5,12 +5,12 @@
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
     position: relative;
-    width: 100%;
 }
 
 #atuiMediasplayer_VideoplayerVideo /* Video */ {
-    width: inherit;
     display: block;
+    max-width: 100%;
+    max-height: 65vh;
 }
 
 #atuiMediasplayer_VideoplayerDashboard /* Dashboard */ {
