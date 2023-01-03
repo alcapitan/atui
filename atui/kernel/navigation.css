@@ -103,11 +103,12 @@
         flex-direction: column;
     }
 
-    .atuiKernel_NavigationBar a.optionMobileonly {
-        display: none;
+    .atuiKernel_NavigationBar div {
+        position: sticky;
+        top: 100px; /* Due to the header height which hide navbar elements */
     }
 
-    .atuiKernel_NavigationBar a:not(.optionMobileonly) {
+    .atuiKernel_NavigationBar a {
         column-gap: 10px;
     }
 
@@ -126,29 +127,50 @@
     .atuiKernel_NavigationBar p {
         font-size: 1.2rem;
     }
+
+    .atuiKernel_NavigationBar.optionDrawer {
+        width: initial;
+    }
+
+    .atuiKernel_NavigationBar.optionDrawer p {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar.optionDrawer:hover {
+        width: 20%;
+    }
+
+    .atuiKernel_NavigationBar.optionDrawer:hover p {
+        display: initial;
+    }
+
+    .atuiKernel_NavigationBar *.optionMobileonly {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
     .atuiKernel_NavigationBar {
         width: calc(100% - 10px);
         padding: 5px;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        flex-direction: row;
         position: fixed;
-        left : 0;
-        right : 0;
+        left: 0;
+        right: 0;
         bottom: 0;
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
         border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
     }
 
-    .atuiKernel_NavigationBar a.optionDesktoponly {
-        display: none;
+    .atuiKernel_NavigationBar div {
+        flex : 1;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: row;
     }
 
-    .atuiKernel_NavigationBar a:not(.optionDesktoponly) {
+    .atuiKernel_NavigationBar a {
         flex-direction: column;
         justify-content: center;
         row-gap: 5px;
@@ -166,5 +188,9 @@
     .atuiKernel_NavigationBar p {
         font-size: 0.75rem;
         text-align: center;
+    }
+
+    .atuiKernel_NavigationBar *.optionDesktoponly {
+        display: none;
     }
 }
