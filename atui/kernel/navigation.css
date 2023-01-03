@@ -103,7 +103,11 @@
         flex-direction: column;
     }
 
-    .atuiKernel_NavigationBar a {
+    .atuiKernel_NavigationBar a.optionMobileonly {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar a:not(.optionMobileonly) {
         column-gap: 10px;
     }
 
@@ -140,7 +144,11 @@
         border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
     }
 
-    .atuiKernel_NavigationBar a {
+    .atuiKernel_NavigationBar a.optionDesktoponly {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar a:not(.optionDesktoponly) {
         flex-direction: column;
         justify-content: center;
         row-gap: 5px;
