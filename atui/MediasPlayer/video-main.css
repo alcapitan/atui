@@ -5,15 +5,15 @@
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
 #atuiMediasplayer_VideoplayerVideo /* Video */ {
-    width: 100%;
-    height: 200px;
+    width: inherit;
+    display: block;
 }
 
 #atuiMediasplayer_VideoplayerDashboard /* Dashboard */ {
-    margin-top: -4px;
     display: flex;
     flex-direction: column;
     background-color: var(--atuiKernel_ColorschemeOB1);
@@ -26,10 +26,6 @@
     .atuiMediasplayer_Videoplayer /* Container */ {
         display: flex;
         justify-content: center;
-    }
-
-    .atuiMediasplayer_Videoplayer article /* Video player */ {
-        max-width: 750px;
     }
 }
 
@@ -47,6 +43,7 @@
     bottom: 0;
     background-color: rgba(51, 51, 51, 0.8);
     opacity: 0.5;
+    margin-top: -4px;
 }
 
 .atuiMediasplayer_Videoplayer.optionOverlay
