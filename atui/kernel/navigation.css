@@ -82,7 +82,6 @@
 
 .atuiKernel_NavigationBar {
     display: flex;
-    row-gap: 5px;
 }
 
 .atuiKernel_NavigationBar a {
@@ -99,13 +98,14 @@
 
 @media (min-width: 768px) /* Computers */ {
     .atuiKernel_NavigationBar {
-        width: 20%;
         flex-direction: column;
+        max-width: 20%;
+        flex-direction: column;
+        row-gap: 5px;
     }
 
-    .atuiKernel_NavigationBar div {
-        position: sticky;
-        top: 100px; /* Due to the header height which hide navbar elements */
+    .atuiKernel_NavigationBar:has(p) {
+        width: 20%;
     }
 
     .atuiKernel_NavigationBar a {
@@ -128,6 +128,18 @@
         font-size: 1.2rem;
     }
 
+    .atuiKernel_NavigationBar hr {
+        background-color: var(--atuiKernel_ColorschemeOA4);
+        height: 2px;
+        margin: 0;
+        border: 0;
+    }
+    
+    .atuiKernel_NavigationBar hr.optionSplit {
+        flex : 1;
+        background-color: transparent;
+    }
+
     .atuiKernel_NavigationBar.optionDrawer {
         width: initial;
     }
@@ -137,6 +149,10 @@
     }
 
     .atuiKernel_NavigationBar.optionDrawer:hover {
+        max-width: 20%;
+    }
+
+    .atuiKernel_NavigationBar.optionDrawer:hover:has(p) {
         width: 20%;
     }
 
@@ -160,10 +176,7 @@
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
         border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
-    }
-
-    .atuiKernel_NavigationBar div {
-        flex : 1;
+        border-bottom: none !important;
         display: flex;
         justify-content: space-around;
         flex-wrap: nowrap;
@@ -191,6 +204,10 @@
     }
 
     .atuiKernel_NavigationBar *.optionDesktoponly {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar hr {
         display: none;
     }
 }
