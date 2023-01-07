@@ -53,7 +53,7 @@
     .atuiKernel_SectionCard article
      /* Elements */ {
         margin: 10px;
-        width: min(300px);
+        width: calc(50% - 22px);
     }
 }
 
