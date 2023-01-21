@@ -3,8 +3,9 @@
 const atuiKernel_Metadata = {
     name: "ATUI",
     author: "alcapitan (on GitHub)",
-    version: "developer branch",
+    version: "v0.3.0",
     website: "https://github.com/alcapitan/atui",
+    in_development: true,
 };
 atuiKernel_MetadataDisplay(atuiKernel_Metadata);
 
@@ -246,9 +247,9 @@ function atuiKernel_FooterLastedited(day, month, year) {
         (atuiKernel_FooterInfoDate.getDate() != day ||
             atuiKernel_FooterInfoDate.getMonth() + 1 != month ||
             atuiKernel_FooterInfoDate.getFullYear() != year) &&
-        atuiKernel_Metadata["version"] == "developer branch"
+        atuiKernel_Metadata["in_development"]
     ) {
-        console.warn("The last modification date may be not up to date. ");
+        console.warn("The last modification date isn't up to date. ");
     }
 
     /* Based on ATUI */
@@ -263,7 +264,7 @@ function atuiKernel_FooterLastedited(day, month, year) {
         atuiKernel_Metadata["name"] +
         " " +
         atuiKernel_Metadata["version"] +
-        ". ";
+        " . ";
     atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
 
     /* Last modification of this website */

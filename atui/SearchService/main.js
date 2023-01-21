@@ -3,8 +3,9 @@
 const atuiSearchservices_Metadata = {
     name: "Search Service",
     author: "alcapitan (on GitHub)",
-    version: "developer branch",
+    version: "v0.3.0",
     website: "https://github.com/alcapitan/atui",
+    in_development: true,
 };
 // atuiKernel_MetadataDisplay(atuiSearchservices_Metadata);
 
