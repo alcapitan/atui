@@ -1,3 +1,8 @@
+/*!
+ * ATUI v0.3.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
 /* Metadata */
 
 const atuiServerexchanges_Metadata = {
