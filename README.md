@@ -19,13 +19,17 @@ You should display your website with an VScode extension like <a href="https://m
 
 ### With CDN (for users)
 
-Put this line to your HTML `<head>` : `<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.css" />`  
-Put this line at the end of `<body>` in your HTML : `<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.js"></script>`  
+Put this line to your HTML `<head>` :  
+`<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.css" />`
+
+Put this line at the end of `<body>` in your HTML :  
+`<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.js"></script>`
+
 Then, change the links above for reach extensions files.
 
 ### With release package (for users)
 
-<a href="https://github.com/alcapitan/atui/releases">Download the lastest release.</a>  
+<a href="https://github.com/alcapitan/atui/releases">Download the latest release.</a>  
 After downloading ATUI, copy the `/atui` folder and paste it into your website root.
 
 ### With git (for developers)
