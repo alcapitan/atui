@@ -461,10 +461,6 @@ function atuiKernel_NotificationCookies() {
     );
 }
 
-/* Shields */
-
-// Script en phase de test disponible dans la branche git dev-shields
-
 /* Context Menu */
 
 function atuiKernel_ToolsContextmenuDisplay(element, wish, centered) {

@@ -15,7 +15,9 @@
     backdrop-filter: var(--atuiKernel_Blur);
     min-height: 50px;
     position: fixed;
-    width: calc(100% - 20px);
+    top: 0;
+    width : -webkit-fill-available;
+    width : -moz-available;
     padding: 0 10px;
     z-index: 10;
 }

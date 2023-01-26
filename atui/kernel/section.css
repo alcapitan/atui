@@ -3,18 +3,21 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Section */
+/* Section containers management */
 
+#atuiKernel_Body,
 #atuiKernel_Section {
     display: flex;
     flex-wrap: nowrap;
 }
 
 @media (min-width: 768px) /* Computers */ {
+    #atuiKernel_Body,
     #atuiKernel_Section{
         flex-direction: row;
     }
 
+    #atuiKernel_Body > *:not(:last-child),
     #atuiKernel_Section > *:not(:last-child)
     {
         border-right : 1px solid var(--atuiKernel_ColorschemeOB2);
@@ -22,20 +25,24 @@
 }
 
 @media (max-width: 767px) /* Smartphones */ {
+    #atuiKernel_Body,
     #atuiKernel_Section{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
+    #atuiKernel_Body > *:not(:last-child)
     #atuiKernel_Section > *:not(:last-child)
     {
         border-bottom : 1px solid var(--atuiKernel_ColorschemeOB2);
     }
 }
 
+#atuiKernel_Body > *:not(.atuiKernel_BodyContent),
 #atuiKernel_Section > *{
     padding: 10px;
 }
 
+.atuiKernel_BodyContent,
 .atuiKernel_SectionContent
 {
     flex : 1;
@@ -45,10 +52,12 @@
     margin: 20px 0;
 }
 
+.atuiKernel_BodyContent > *:first-child,
 .atuiKernel_SectionContent > *:first-child {
     margin-top: 0;
 }
 
+.atuiKernel_BodyContent > *:last-child,
 .atuiKernel_SectionContent > *:last-child {
     margin-bottom: 0;
 }

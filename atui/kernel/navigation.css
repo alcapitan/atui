@@ -191,7 +191,6 @@
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
         border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
-        border-bottom: none !important;
         display: flex;
         justify-content: space-around;
         flex-wrap: nowrap;
