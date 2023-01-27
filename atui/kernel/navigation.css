@@ -86,32 +86,38 @@
 
 .atuiKernel_NavigationBar {
     display: flex;
+    row-gap: 5px;
 }
 
 .atuiKernel_NavigationBar a {
     border-radius: var(--atuiKernel_Borderradius);
-    margin: 0;
     padding: 10px;
     display: flex;
     align-items: center;
+    column-gap: 10px;
+    row-gap: 5px;
 }
 
 .atuiKernel_NavigationBar p {
     margin: 0;
 }
 
+.atuiKernel_NavigationBar hr {
+    background-color: var(--atuiKernel_ColorschemeOA4);
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    border: 0;
+}
+
+.atuiKernel_NavigationBar hr.optionSplit {
+    flex: 1;
+    background-color: transparent;
+}
+
 @media (min-width: 768px) /* Computers */ {
     .atuiKernel_NavigationBar {
         flex-direction: column;
-        row-gap: 5px;
-    }
-
-    .atuiKernel_NavigationBar a {
-        column-gap: 10px;
-    }
-
-    .atuiKernel_NavigationBar a:not(:has(p)) {
-        width: max-content;
     }
 
     .atuiKernel_NavigationBar a:hover {
@@ -126,49 +132,25 @@
         font-size: 1.2rem;
     }
 
-    .atuiKernel_NavigationBar hr {
-        background-color: var(--atuiKernel_ColorschemeOA4);
-        height: 2px;
-        margin: 0;
-        border: 0;
-    }
-
-    .atuiKernel_NavigationBar hr.optionSplit {
-        flex: 1;
-        background-color: transparent;
-    }
-
-    .atuiKernel_NavigationBar.optionDrawer {
-        width: initial;
+    .atuiKernel_NavigationBar *.optionMobileonly {
+        display: none;
     }
 
     .atuiKernel_NavigationBar.optionDrawer p {
         display: none;
     }
 
-    .atuiKernel_NavigationBar:not(
-            .optionMobilestyle,
-            .atuiKernel_NavigationBar.optionDrawer
-        ):has(p),
-    .atuiKernel_NavigationBar.optionDrawer:hover:has(p) {
-        width: 20%;
-    }
-
-    .atuiKernel_NavigationBar.optionMobilestyle {
-        align-items: center;
-    }
-
     .atuiKernel_NavigationBar.optionDrawer:hover p {
-        display: initial;
+        display: block;
     }
 
-    .atuiKernel_NavigationBar *.optionMobileonly {
-        display: none;
+    .atuiKernel_NavigationBar:not(.optionMobilestyle, .optionDrawer),
+    .atuiKernel_NavigationBar.optionDrawer:hover {
+        width: 20%;
     }
 
     .atuiKernel_NavigationBar.optionMobilestyle a {
         flex-direction: column;
-        justify-content: center;
         row-gap: 5px;
         padding: 5px 10px;
     }
@@ -199,7 +181,6 @@
     .atuiKernel_NavigationBar a {
         flex-direction: column;
         justify-content: center;
-        row-gap: 5px;
         padding: 5px 10px;
     }
 
@@ -216,11 +197,11 @@
         text-align: center;
     }
 
-    .atuiKernel_NavigationBar *.optionDesktoponly {
+    .atuiKernel_NavigationBar hr {
         display: none;
     }
 
-    .atuiKernel_NavigationBar hr {
+    .atuiKernel_NavigationBar *.optionDesktoponly {
         display: none;
     }
 }
