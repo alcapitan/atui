@@ -477,8 +477,9 @@ function atuiKernel_ToolsContextmenuDisplay(element, wish, centered) {
         element.style.textDecoration = "underline";
         if (centered) {
             /* Centered */
-            elementPositionX =
-                (document.documentElement.clientWidth - cible.clientWidth) / 2;
+            /*elementPositionX =
+                (document.documentElement.clientWidth - cible.clientWidth) / 2;*/
+            elementPositionX = 20;
             elementPositionYShift =
                 cible.getBoundingClientRect()
                     .y; /* Décalage Y écran conteneur */
@@ -541,7 +542,7 @@ function atuiKernel_NavigationGlobalpanel(cible) {
         atuiKernel_ToolsContextmenuDisplay(this, true, true);
     });
     document.getElementById(cible).addEventListener("mouseout", function () {
-        atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
+        atuiKernel_ToolsContextmenuDisplay(this, false, true);
     });
 }
 

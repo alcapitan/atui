@@ -45,7 +45,6 @@
     position: absolute;
     left: 20px;
     right: 20px;
-    width: calc(100vw - 100px);
     visibility: hidden;
     background-color: var(--atuiKernel_ColorschemeOB0);
     border-radius: var(--atuiKernel_Borderradius);
