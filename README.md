@@ -71,7 +71,6 @@ Anyone can create an extension, but you have to respect extension coding standar
 
 -   MediasPlayer : Contains all necessary tools to play music or video.
 -   SearchServices : Contains all the necessary tools to search anything by sending a query to a server.
--   ServerExchanges : Contains all the necessary tools to manage accounts and database.
 
 ## License & Use of external service
 
@@ -88,7 +87,6 @@ Project released under <a href="https://alcapitan.github.io/atui/LICENSE.md">GNU
 -   Icons : <a href="https://icons8.com/">Icons8</a>.
 -   Illustrations : <a href="https://www.pexels.com">Pexels</a>.
 -   Performance measurement and advices for improvement : <a href="https://developers.google.com/speed/pagespeed/insights">Google Insights</a>.
--   Fonts : <a href="https://fonts.google.com/">Google Fonts</a>.
 -   Checking HTML code : <a href="https://validator.w3.org/">W3C Markup Validation Service</a>.
 -   Checking CSS code : <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a>.
 -   And a lot of more...

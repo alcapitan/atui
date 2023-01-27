@@ -22,11 +22,6 @@
             type="text/css"
             href="atui/SearchService/main.css"
         />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="atui/ServerExchanges/main.css"
-        />
         <link rel="stylesheet" type="text/css" href="patch/main.css" />
         <link rel="icon" type="img/png" href="patch/icons/logo.png" />
     </head>
@@ -212,11 +207,6 @@
                                         </a>
                                         <a href="#">
                                             <div>
-                                                <p>ServerExchanges</p>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div>
                                                 <p>Overview</p>
                                             </div>
                                         </a>
@@ -231,68 +221,6 @@
                                     height="35"
                                 />
                             </div>
-                            <nav
-                                class="atuiKernel_ToolsContextmenu"
-                                id="atuiServerexchanges_AccountActions"
-                            >
-                                <img
-                                    alt="Aucun compte connecté"
-                                    src="atui/ServerExchanges/medias/account.png"
-                                    width="40"
-                                    height="40"
-                                />
-                                <aside>
-                                    <div>
-                                        <a href="#">
-                                            <div>
-                                                <img
-                                                    src="atui/ServerExchanges/medias/connection.png"
-                                                    alt="se connecter / s'inscrire"
-                                                    width="28"
-                                                    height="28"
-                                                />
-                                                <p>
-                                                    Se connecter<br />S'inscrire
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div>
-                                                <img
-                                                    src="atui/ServerExchanges/medias/disconnection.png"
-                                                    alt="se déconnecter"
-                                                    width="28"
-                                                    height="28"
-                                                />
-                                                <p>Se déconnecter</p>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div>
-                                                <img
-                                                    src="atui/ServerExchanges/medias/account.png"
-                                                    alt="profil"
-                                                    width="28"
-                                                    height="28"
-                                                />
-                                                <p>Profil</p>
-                                            </div>
-                                        </a>
-                                        <hr />
-                                        <a href="#">
-                                            <div>
-                                                <img
-                                                    src="atui/kernel/medias/shop.png"
-                                                    alt="boutique"
-                                                    width="28"
-                                                    height="28"
-                                                />
-                                                <p>Boutique</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </aside>
-                            </nav>
                         </div>
                     </div>
                     <nav>
@@ -1434,45 +1362,6 @@
                                     <div
                                         id="atuiMediasplayer_VideoplayerButtonsAdvanced"
                                     >
-                                        <nav
-                                            class="atuiKernel_ToolsContextmenu"
-                                            id="atuiMediasplayer_VideoplayerPlaylists"
-                                            width="30"
-                                            height="30"
-                                        >
-                                            <img
-                                                src="atui/MediasPlayer/medias/playlist.png"
-                                                alt="Playlists"
-                                                width="30"
-                                                height="30"
-                                            />
-                                            <aside>
-                                                <div>
-                                                    <a href="#">
-                                                        <div>
-                                                            <p>Playlist</p>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#">
-                                                        <div>
-                                                            <p>Playlist</p>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#">
-                                                        <div>
-                                                            <p>Playlist</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </aside>
-                                        </nav>
-                                        <img
-                                            src="atui/MediasPlayer/medias/like.png"
-                                            alt="J'aime cette vidéo"
-                                            id="atuiMediasplayer_VideoplayerButtonsAdvancedLike"
-                                            width="30"
-                                            height="30"
-                                        />
                                         <img
                                             src="atui/MediasPlayer/medias/sound.png"
                                             alt="Son activé"
@@ -1926,43 +1815,6 @@
                             <div
                                 id="atuiMediasplayer_AudioplayerButtonsAdvanced"
                             >
-                                <nav
-                                    class="atuiKernel_ToolsContextmenu"
-                                    id="atuiMediasplayer_AudioplayerPlaylists"
-                                >
-                                    <img
-                                        src="atui/MediasPlayer/medias/playlist.png"
-                                        alt="Playlists"
-                                        width="30"
-                                        height="30"
-                                    />
-                                    <aside>
-                                        <div>
-                                            <a href="#">
-                                                <div>
-                                                    <p>Playlist</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div>
-                                                    <p>Playlist</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div>
-                                                    <p>Playlist</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </aside>
-                                </nav>
-                                <img
-                                    src="atui/MediasPlayer/medias/like.png"
-                                    alt="J'aime cette musique"
-                                    id="atuiMediasplayer_AudioplayerButtonsAdvancedLike"
-                                    width="30"
-                                    height="30"
-                                />
                                 <img
                                     src="atui/MediasPlayer/medias/noloop.png"
                                     alt="Boucle musique désactivé"
@@ -1984,7 +1836,6 @@
         <aside id="atuiKernel_Notification"></aside>
         <script src="atui/kernel/main.js"></script>
         <script src="atui/MediasPlayer/main.js"></script>
-        <script src="atui/ServerExchanges/main.js"></script>
         <script src="atui/SearchService/main.js"></script>
         <script src="patch/main.js"></script>
     </body>

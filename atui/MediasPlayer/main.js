@@ -190,47 +190,9 @@ function atuiMediasplayer_AudioplayerControlsProgressChange() {
     atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
 }
 
-/* Playlist */
-
-atuiKernel_ToolsContextmenu("atuiMediasplayer_AudioplayerPlaylists");
-
 /* Infos */
 
 atuiKernel_ToolsContextmenu("atuiMediasplayer_AudioplayerInfos");
-
-/* Je n'aime / Je n'aime pas cette musique */
-
-let atuiMediasplayer_AudioplayerMusicLikeStatus = false;
-const atuiMediasplayer_AudioplayerMusicLikeIcon = document.getElementById(
-    "atuiMediasplayer_AudioplayerButtonsAdvancedLike"
-);
-atuiMediasplayer_AudioplayerMusicLikeIcon.addEventListener(
-    "click",
-    atuiMediasplayer_AudioplayerMusicLike
-);
-function atuiMediasplayer_AudioplayerMusicLike() {
-    if (!atuiMediasplayer_AudioplayerMusicLikeStatus) {
-        atuiMediasplayer_AudioplayerMusicLikeStatus = true;
-        atuiMediasplayer_AudioplayerMusicLikeIcon.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/liked.png"
-        );
-        atuiMediasplayer_AudioplayerMusicLikeIcon.setAttribute(
-            "alt",
-            "J'aime cette musique"
-        );
-    } else {
-        atuiMediasplayer_AudioplayerMusicLikeStatus = false;
-        atuiMediasplayer_AudioplayerMusicLikeIcon.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/like.png"
-        );
-        atuiMediasplayer_AudioplayerMusicLikeIcon.setAttribute(
-            "alt",
-            "Je n'aime pas cette musique"
-        );
-    }
-}
 
 /* Loop */
 
@@ -359,47 +321,9 @@ function atuiMediasplayer_VideoplayerControlsProgressChange() {
     atuiMediasplayer_VideoplayerVideo.currentTime = (duration * percent) / 100;
 }
 
-/* Playlist */
-
-atuiKernel_ToolsContextmenu("atuiMediasplayer_VideoplayerPlaylists");
-
 /* Infos */
 
 atuiKernel_ToolsContextmenu("atuiMediasplayer_VideoplayerInfos");
-
-/* Je n'aime / Je n'aime pas cette musique */
-
-let atuiMediasplayer_VideoplayerVideoLikeStatus = false;
-const atuiMediasplayer_VideoplayerButtonsAdvancedLike = document.getElementById(
-    "atuiMediasplayer_VideoplayerButtonsAdvancedLike"
-);
-atuiMediasplayer_VideoplayerButtonsAdvancedLike.addEventListener(
-    "click",
-    atuiMediasplayer_VideoplayerVideoLike
-);
-function atuiMediasplayer_VideoplayerVideoLike() {
-    if (!atuiMediasplayer_VideoplayerVideoLikeStatus) {
-        atuiMediasplayer_VideoplayerVideoLikeStatus = true;
-        atuiMediasplayer_VideoplayerButtonsAdvancedLike.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/liked.png"
-        );
-        atuiMediasplayer_VideoplayerButtonsAdvancedLike.setAttribute(
-            "alt",
-            "J'aime cette vidéo. "
-        );
-    } else {
-        atuiMediasplayer_VideoplayerVideoLikeStatus = false;
-        atuiMediasplayer_VideoplayerButtonsAdvancedLike.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/like.png"
-        );
-        atuiMediasplayer_VideoplayerButtonsAdvancedLike.setAttribute(
-            "alt",
-            "Je n'aime pas cette vidéo. "
-        );
-    }
-}
 
 /* Sound */
 
