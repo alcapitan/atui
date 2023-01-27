@@ -53,13 +53,10 @@
 }
 
 .atuiKernel_BodyContent > *:first-child,
-.atuiKernel_SectionContent > *:first-child {
-    margin-top: 0;
-}
-
+.atuiKernel_SectionContent > *:first-child,
 .atuiKernel_BodyContent > *:last-child,
 .atuiKernel_SectionContent > *:last-child {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 /* Breadcrumb */
