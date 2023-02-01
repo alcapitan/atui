@@ -3,12 +3,6 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/*@import url("./audio-additionals.css");
-@import url("./audio-controls.css");
-@import url("./audio-infos.css");
-@import url("./audio-main.css");
-@import url("./audio-overlay.css");
-@import url("./audio-progressbar.css");*/
 @import url("./audio-main.css");
 @import url("./audio-floating.css");
 
