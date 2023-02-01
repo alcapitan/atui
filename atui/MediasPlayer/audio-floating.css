@@ -1,0 +1,22 @@
+/*!
+ * ATUI v0.3.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiMediasplayer_Audioplayer.optionFloating {
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    margin: 0;
+    border: none;
+    box-shadow: var(--atuiKernel_Shadow);
+    background-color: var(--atuiKernel_ColorschemeBB1);
+    backdrop-filter: var(--atuiKernel_Blur);
+}
+
+.atuiMediasplayer_Audioplayer.optionFloating .atuiMediasplayer_AudioplayerClose
+{
+    display: block;
+}
