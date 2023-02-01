@@ -7,11 +7,7 @@
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
     background-color: var(--atuiKernel_ColorschemeOB1);
     border-radius: var(--atuiKernel_Borderradius);
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
     position: relative;
-    padding: 15px 15px 25px 15px;
 }
 
 .atuiMediasplayer_Audioplayer * {
@@ -33,11 +29,14 @@
 .atuiMediasplayer_AudioplayerPanel {
     flex-direction: row;
     column-gap: 15px;
+    padding: 10px;
 }
+
 .atuiMediasplayer_AudioplayerDashboard {
     flex: 1;
     flex-direction: column;
-    row-gap : 15px;
+    row-gap: 10px;
+    margin: 5px 0;
 }
 
 .atuiMediasplayer_AudioplayerInformation > p {
@@ -49,7 +48,7 @@
     color: var(--atuiKernel_ColorschemeOA6);
 }
 
-.atuiMediasplayer_AudioplayerControls{
+.atuiMediasplayer_AudioplayerControls {
     justify-content: space-evenly;
 }
 
@@ -57,7 +56,7 @@
 .atuiMediasplayer_AudioplayerControls,
 .atuiMediasplayer_AudioplayerControls > div {
     display: flex;
-    column-gap: 10px;
+    gap: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -70,18 +69,13 @@
 }
 
 .atuiMediasplayer_AudioplayerControls img:hover /* Tout les icônes au survol */ {
-    background-color: var(--atuiKernel_ColorschemeBA4);
+    background-color: var(--atuiKernel_ColorschemeOA3);
 }
 
 .atuiMediasplayer_AudioplayerProgressbar /* Container */ {
-    width: 100%;
-    height: 10px;
     border-radius: 0 0 var(--atuiKernel_Borderradius)
         var(--atuiKernel_Borderradius);
-    transform: translateX(-15px);
     overflow: hidden;
-    position: absolute;
-    bottom: 0;
 }
 
 .atuiMediasplayer_AudioplayerProgressbar > div /* Progressbar */ {
@@ -89,6 +83,4 @@
     height: 10px;
     background-color: var(--atuiKernel_ColorschemeOA5);
     transition: width 500ms;
-    margin: 0 !important;
-    flex: none !important;
 }
