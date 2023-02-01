@@ -27,16 +27,45 @@
 }
 
 .atuiMediasplayer_AudioplayerPanel {
-    flex-direction: row;
-    column-gap: 15px;
+    gap: 15px;
     padding: 10px;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiMediasplayer_AudioplayerPanel {
+        flex-direction: row;
+    }
+
+    .atuiMediasplayer_AudioplayerDashboard {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiMediasplayer_AudioplayerPanel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atuiMediasplayer_AudioplayerCover  /* Image d'album */ {
+        display: flex;
+        justify-content: center;
+    }
+
+    .atuiMediasplayer_AudioplayerInformation {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .atuiMediasplayer_AudioplayerControls {
+        flex-direction: column;
+    }
 }
 
 .atuiMediasplayer_AudioplayerDashboard {
     flex: 1;
     flex-direction: column;
     row-gap: 10px;
-    margin: 5px 0;
 }
 
 .atuiMediasplayer_AudioplayerInformation > p {
