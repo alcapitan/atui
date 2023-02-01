@@ -350,81 +350,23 @@
                         <p>Jouer musique</p>
                     </div>
                     <div class="atuiMediasplayer_Audioplayer">
-                        <audio class="atuiMediasplayer_AudioplayerMusic"></audio>
+                        <audio
+                            class="atuiMediasplayer_AudioplayerMusic"
+                        ></audio>
                         <aside>
-                            <div>
+                            <div class="atuiMediasplayer_AudioplayerPanel">
                                 <div class="atuiMediasplayer_AudioplayerCover">
                                     <img
-                                        src=""
+                                        src="/patch/icons/logo.png"
                                         alt="Icône Couverture d'album indisponible."
                                         class="atuiMediasplayer_AudioplayerMusicinformationsCover"
                                         width="150"
                                         height="150"
                                     />
                                 </div>
-                                <div>
+                                <div class="atuiMediasplayer_AudioplayerDashboard">
                                     <div
-                                        class="atuiMediasplayer_AudioplayerAdditionals"
-                                    >
-                                        <nav
-                                            class="atuiKernel_ToolsContextmenu"
-                                            class="atuiMediasplayer_AudioplayerInfos"
-                                        >
-                                            <img
-                                                src="atui/MediasPlayer/medias/info.png"
-                                                alt="Infos album"
-                                                width="25"
-                                                height="25"
-                                            />
-                                            <aside
-                                                class="atuiMediasplayer_AudioplayerMusicinformationsAdvanced"
-                                            >
-                                                <div>
-                                                    <a href="#">
-                                                        <div>
-                                                            <p>Nom Album</p>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#">
-                                                        <div>
-                                                            <p>Date Sortie</p>
-                                                        </div>
-                                                    </a>
-                                                    <a
-                                                        href="http://ncs.io/SinkingShip"
-                                                    >
-                                                        <div>
-                                                            <p>
-                                                                Original music
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </aside>
-                                        </nav>
-                                        <div
-                                            class="atuiMediasplayer_AudioplayerPopup"
-                                        >
-                                            <img
-                                                src="atui/MediasPlayer/medias/popup.png"
-                                                alt="Afficher Audio Player dans Pop-up"
-                                                width="25"
-                                                height="25"
-                                            />
-                                        </div>
-                                        <div
-                                            class="atuiMediasplayer_AudioplayerClose"
-                                        >
-                                            <img
-                                                src="atui/kernel/medias/close.png"
-                                                alt="Fermer Audio Player"
-                                                width="25"
-                                                height="25"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="atuiMediasplayer_AudioplayerMusicinformations"
+                                        class="atuiMediasplayer_AudioplayerInformation"
                                     >
                                         <p>Nom Artiste</p>
                                         <p>Nom Musique</p>
@@ -480,11 +422,72 @@
                                                 width="30"
                                                 height="30"
                                             />
+                                            <nav
+                                                class="atuiKernel_ToolsContextmenu"
+                                                class="atuiMediasplayer_AudioplayerInfos"
+                                            >
+                                                <img
+                                                    src="atui/MediasPlayer/medias/info.png"
+                                                    alt="Infos album"
+                                                    width="25"
+                                                    height="25"
+                                                />
+                                                <aside
+                                                    class="atuiMediasplayer_AudioplayerMusicinformationsAdvanced"
+                                                >
+                                                    <div>
+                                                        <a href="#">
+                                                            <div>
+                                                                <p>Nom Album</p>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#">
+                                                            <div>
+                                                                <p>
+                                                                    Date Sortie
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                        <a
+                                                            href="http://ncs.io/SinkingShip"
+                                                        >
+                                                            <div>
+                                                                <p>
+                                                                    Original
+                                                                    music
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </aside>
+                                            </nav>
+                                            <div
+                                                class="atuiMediasplayer_AudioplayerPopup"
+                                            >
+                                                <img
+                                                    src="atui/MediasPlayer/medias/popup.png"
+                                                    alt="Afficher Audio Player dans Pop-up"
+                                                    width="25"
+                                                    height="25"
+                                                />
+                                            </div>
+                                            <!--<div
+                                                class="atuiMediasplayer_AudioplayerClose"
+                                            >
+                                                <img
+                                                    src="atui/kernel/medias/close.png"
+                                                    alt="Fermer Audio Player"
+                                                    width="25"
+                                                    height="25"
+                                                />
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="atuiMediasplayer_AudioplayerProgressbar">
+                            <div
+                                class="atuiMediasplayer_AudioplayerProgressbar"
+                            >
                                 <div
                                     class="atuiMediasplayer_AudioplayerProgressbarInside"
                                 ></div>
@@ -1827,7 +1830,7 @@
         </div>
         <aside id="atuiKernel_Notification"></aside>
         <script src="atui/kernel/main.js"></script>
-        <script src="atui/MediasPlayer/main.js"></script>
+        <!--<script src="atui/MediasPlayer/main.js"></script>-->
         <script src="atui/SearchService/main.js"></script>
         <script src="patch/main.js"></script>
     </body>

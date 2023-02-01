@@ -18,13 +18,39 @@
     margin: 0;
 }
 
-@media (min-width: 768px) /* Computers */ {
-    .atuiMediasplayer_AudioplayerCover  /* Image d'album */ {
-        border-radius: var(--atuiKernel_Borderradius);
-        width: 150px;
-        height: 150px;
-        background-color: var(--atuiKernel_ColorschemeOB4);
-    }
+.atuiMediasplayer_AudioplayerCover  /* Image d'album */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 150px;
+    height: 150px;
+    background-color: var(--atuiKernel_ColorschemeOB4);
+}
+
+.atuiMediasplayer_AudioplayerPanel,
+.atuiMediasplayer_AudioplayerDashboard {
+    display: flex;
+}
+
+.atuiMediasplayer_AudioplayerPanel {
+    flex-direction: row;
+    column-gap: 15px;
+}
+.atuiMediasplayer_AudioplayerDashboard {
+    flex: 1;
+    flex-direction: column;
+    row-gap : 15px;
+}
+
+.atuiMediasplayer_AudioplayerInformation > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.atuiMediasplayer_AudioplayerInformation > p:last-child {
+    color: var(--atuiKernel_ColorschemeOA6);
+}
+
+.atuiMediasplayer_AudioplayerControls{
+    justify-content: space-evenly;
 }
 
 .atuiMediasplayer_AudioplayerInformation,
@@ -33,10 +59,7 @@
     display: flex;
     column-gap: 10px;
     align-items: center;
-}
-
-.atuiMediasplayer_AudioplayerInformation > p:last-child {
-    color: var(--atuiKernel_ColorschemeOA6);
+    flex-wrap: wrap;
 }
 
 .atuiMediasplayer_AudioplayerControls img /* Tout les icônes */ {
