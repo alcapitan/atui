@@ -89,7 +89,7 @@ function atuiMediasplayer_AudioplayerMusicChange(
 
 /* Hide Audioplayer */
 
-document
+/*document
     .getElementById("atuiMediasplayer_AudioplayerClose")
     .addEventListener("click", atuiMediasplayer_AudioplayerClose);
 atuiMediasplayer_AudioplayerMusic.addEventListener(
@@ -101,11 +101,11 @@ function atuiMediasplayer_AudioplayerClose() {
     atuiMediasplayer_AudioplayerMusic.pause();
     // Le minuteur n'est pas remis à 0 ici, car prochainement si la prochaine musique est différente le compteur reviendra automatiquement à 0, si c'est la même ça reprend là où c'était pour la praticité.
     atuiMediasplayer_Audioplayer.style.display = "none";
-}
+}*/
 
 /* Update progress time and bar */
 
-atuiMediasplayer_AudioplayerMusic.addEventListener(
+/*atuiMediasplayer_AudioplayerMusic.addEventListener(
     "timeupdate",
     atuiMediasplayer_AudioplayerMusicUpdate
 ); // Met à jour le minuteur
@@ -129,11 +129,11 @@ function atuiMediasplayer_AudioplayerMusicUpdate() {
     document.getElementById(
         "atuiMediasplayer_AudioplayerTimerDuration"
     ).textContent = convertTime(atuiMediasplayer_AudioplayerMusicDuration);
-}
+}*/
 
 /* Gestionnaire Play/Pause */
 
-const atuiMediasplayer_AudioplayerControlsButtonsRun = document.getElementById(
+/*const atuiMediasplayer_AudioplayerControlsButtonsRun = document.getElementById(
     "atuiMediasplayer_AudioplayerButtonsBasicRun"
 );
 atuiMediasplayer_AudioplayerButtonsBasicRun.addEventListener(
@@ -162,11 +162,11 @@ function atuiMediasplayer_AudioplayerMusicRun() {
             "Play music"
         );
     }
-}
+}*/
 
 /* Renvoi de durée écoulée de musique */
 
-const atuiMediasplayer_AudioplayerControlsProgress = document.getElementById(
+/*const atuiMediasplayer_AudioplayerControlsProgress = document.getElementById(
     "atuiMediasplayer_AudioplayerProgressbar"
 );
 atuiMediasplayer_AudioplayerControlsProgress.addEventListener(
@@ -182,51 +182,45 @@ function atuiMediasplayer_AudioplayerControlsProgressChange() {
     const diff =
         atuiMouseX -
         atuiMediasplayer_AudioplayerControlsProgressX +
-        10; /* +10 est très important car empêche décalage/temps à cause du transform X dans CSS */
+        10; /* +10 est très important car empêche décalage/temps à cause du transform X dans CSS *
     const wrapperWidth =
         atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
     const percent = Math.round((diff / wrapperWidth) * 100);
     const duration = atuiMediasplayer_AudioplayerMusic.duration;
     atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
-}
+}*/
 
 /* Infos */
 
-atuiKernel_ToolsContextmenu("atuiMediasplayer_AudioplayerInfos");
+document
+    .querySelectorAll(".atuiMediasplayer_AudioplayerInfos")
+    .forEach(function (button) {
+        button.addEventListener("mouseenter", function () {
+            atuiKernel_ToolsContextmenuDisplay(this, true, false);
+        });
+        button.addEventListener("mouseleave", function () {
+            atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
+        });
+    });
 
 /* Loop */
 
-let atuiMediasplayer_AudioplayerMusicLoopStatus = false;
-const atuiMediasplayer_AudioplayerMusicLoopIcon = document.getElementById(
-    "atuiMediasplayer_AudioplayerButtonsAdvancedLoop"
-);
-atuiMediasplayer_AudioplayerMusicLoopIcon.addEventListener(
-    "click",
-    atuiMediasplayer_AudioplayerMusicLoop
-);
-function atuiMediasplayer_AudioplayerMusicLoop() {
-    if (!atuiMediasplayer_AudioplayerMusicLoopStatus) {
-        atuiMediasplayer_AudioplayerMusicLoopStatus = true;
-        atuiMediasplayer_AudioplayerMusicLoopIcon.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/loop.png"
-        );
-        atuiMediasplayer_AudioplayerMusicLoopIcon.setAttribute(
-            "alt",
-            "Boucle musique activé"
-        );
-    } else {
-        atuiMediasplayer_AudioplayerMusicLoopStatus = false;
-        atuiMediasplayer_AudioplayerMusicLoopIcon.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/noloop.png"
-        );
-        atuiMediasplayer_AudioplayerMusicLoopIcon.setAttribute(
-            "alt",
-            "Boucle musique désactivé"
-        );
-    }
-}
+document
+    .querySelectorAll(".atuiMediasplayer_AudioplayerButtonsAdvancedLoop")
+    .forEach(function (button) {
+        button.addEventListener("click", function () {
+            if (
+                this.getAttribute("src") ==
+                "atui/MediasPlayer/medias/noloop.png"
+            ) {
+                this.setAttribute("src", "atui/MediasPlayer/medias/loop.png");
+                this.setAttribute("alt", "Boucle musique activé");
+            } else {
+                this.setAttribute("src", "atui/MediasPlayer/medias/noloop.png");
+                this.setAttribute("alt", "Boucle musique désactivé");
+            }
+        });
+    });
 
 /* Video */
 
