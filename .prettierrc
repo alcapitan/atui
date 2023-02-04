@@ -3,5 +3,6 @@
     "useTabs": false,
     "semi": true,
     "singleQuote": false,
-    "proseWrap": "preserve"
+    "proseWrap": "preserve",
+    "printWidth": 120
 }

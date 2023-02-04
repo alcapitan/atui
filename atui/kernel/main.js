@@ -24,6 +24,22 @@ function atuiKernel_MetadataDisplay(infos) {
     console.groupEnd();
 }
 
+/* Find associated element */
+
+function findElement(element, query, stopClass) {
+    var children = element.querySelectorAll(query);
+    if (children.length > 0) {
+        return children[0];
+    } else {
+        if (element.parentNode !== null && element.className !== stopClass) {
+            return findElement(element.parentNode, query, stopClass);
+        } else {
+            console.error("Element with the class " + stopClass + "not found.");
+            return null;
+        }
+    }
+}
+
 /* Height carousel */
 
 try {

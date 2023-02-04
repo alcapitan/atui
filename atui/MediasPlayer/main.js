@@ -45,36 +45,22 @@ function getPosition(element) {
 
 /* Audio */
 
-const atuiMediasplayer_Audioplayer = document.getElementById(
-    "atuiMediasplayer_Audioplayer"
-); // Element audioPlayer
-const atuiMediasplayer_AudioplayerMusic = document.getElementById(
-    "atuiMediasplayer_AudioplayerMusic"
-); // Balise HTML <audio> diffusant la musique
+const atuiMediasplayer_Audioplayer = document.getElementById("atuiMediasplayer_Audioplayer"); // Element audioPlayer
+const atuiMediasplayer_AudioplayerMusic = document.getElementById("atuiMediasplayer_AudioplayerMusic"); // Balise HTML <audio> diffusant la musique
 
 /* Execution d'une musique */
 
-function atuiMediasplayer_AudioplayerMusicChange(
-    atuiMediasplayer_AudioplayerMusicChosen
-) {
+function atuiMediasplayer_AudioplayerMusicChange(atuiMediasplayer_AudioplayerMusicChosen) {
     atuiMediasplayer_Audioplayer.style.display = "flex";
-    if (
-        atuiMediasplayer_AudioplayerMusic.src !=
-        atuiMediasplayer_AudioplayerMusicChosen[0]
-    ) {
+    if (atuiMediasplayer_AudioplayerMusic.src != atuiMediasplayer_AudioplayerMusicChosen[0]) {
         /* Si la musique n'est pas la même que celle précédemment sélectionné */
-        atuiMediasplayer_AudioplayerMusic.src =
-            atuiMediasplayer_AudioplayerMusicChosen[0]; /* Chemin vers la musique */
-        document.getElementById(
-            "atuiMediasplayer_AudioplayerMusicinformationsCover"
-        ).src =
+        atuiMediasplayer_AudioplayerMusic.src = atuiMediasplayer_AudioplayerMusicChosen[0]; /* Chemin vers la musique */
+        document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsCover").src =
             atuiMediasplayer_AudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
-        document.getElementById(
-            "atuiMediasplayer_AudioplayerMusicinformations"
-        ).childNodes[1].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[2];
-        document.getElementById(
-            "atuiMediasplayer_AudioplayerMusicinformations"
-        ).childNodes[3].innerHTML = atuiMediasplayer_AudioplayerMusicChosen[3];
+        document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[1].innerHTML =
+            atuiMediasplayer_AudioplayerMusicChosen[2];
+        document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[3].innerHTML =
+            atuiMediasplayer_AudioplayerMusicChosen[3];
         document.getElementById(
             "atuiMediasplayer_AudioplayerMusicinformationsAdvanced"
         ).childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML =
@@ -131,38 +117,27 @@ function atuiMediasplayer_AudioplayerMusicUpdate() {
     ).textContent = convertTime(atuiMediasplayer_AudioplayerMusicDuration);
 }*/
 
-/* Gestionnaire Play/Pause */
+/* Play and pause an audio */
 
-/*const atuiMediasplayer_AudioplayerControlsButtonsRun = document.getElementById(
-    "atuiMediasplayer_AudioplayerButtonsBasicRun"
-);
-atuiMediasplayer_AudioplayerButtonsBasicRun.addEventListener(
-    "click",
-    atuiMediasplayer_AudioplayerMusicRun
-);
-function atuiMediasplayer_AudioplayerMusicRun() {
-    if (atuiMediasplayer_AudioplayerMusic.paused) {
-        atuiMediasplayer_AudioplayerMusic.play();
-        atuiMediasplayer_AudioplayerControlsButtonsRun.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/pause.png"
-        );
-        atuiMediasplayer_AudioplayerControlsButtonsRun.setAttribute(
-            "alt",
-            "Pause music"
-        );
-    } else {
-        atuiMediasplayer_AudioplayerMusic.pause();
-        atuiMediasplayer_AudioplayerControlsButtonsRun.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/play.png"
-        );
-        atuiMediasplayer_AudioplayerControlsButtonsRun.setAttribute(
-            "alt",
-            "Play music"
-        );
-    }
-}*/
+document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEach(function (button) {
+    button.addEventListener("click", function () {
+        let audio;
+        if (this.getAttribute("data-audio") !== null) {
+            audio = document.querySelector(`audio[data-audio="${this.getAttribute("data-audio")}"]`);
+        } else {
+            audio = findElement(this, "audio", ".atuiMediasplayer_Audioplayer");
+        }
+        if (this.getAttribute("src") == "atui/MediasPlayer/medias/play.png") {
+            audio.play();
+            this.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
+            this.setAttribute("alt", "Musique lancée");
+        } else {
+            audio.pause();
+            this.setAttribute("src", "atui/MediasPlayer/medias/play.png");
+            this.setAttribute("alt", "Musique arrêtée");
+        }
+    });
+});
 
 /* Renvoi de durée écoulée de musique */
 
@@ -192,71 +167,53 @@ function atuiMediasplayer_AudioplayerControlsProgressChange() {
 
 /* Infos */
 
-document
-    .querySelectorAll(".atuiMediasplayer_AudioplayerInfos")
-    .forEach(function (button) {
-        button.addEventListener("mouseenter", function () {
-            atuiKernel_ToolsContextmenuDisplay(this, true, false);
-        });
-        button.addEventListener("mouseleave", function () {
-            atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
-        });
+document.querySelectorAll(".atuiMediasplayer_AudioplayerInfos").forEach(function (button) {
+    button.addEventListener("mouseenter", function () {
+        atuiKernel_ToolsContextmenuDisplay(this, true, false);
     });
+    button.addEventListener("mouseleave", function () {
+        atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
+    });
+});
 
 /* Loop */
 
-document
-    .querySelectorAll(".atuiMediasplayer_AudioplayerButtonsAdvancedLoop")
-    .forEach(function (button) {
-        button.addEventListener("click", function () {
-            if (
-                this.getAttribute("src") ==
-                "atui/MediasPlayer/medias/noloop.png"
-            ) {
-                this.setAttribute("src", "atui/MediasPlayer/medias/loop.png");
-                this.setAttribute("alt", "Boucle musique activé");
-            } else {
-                this.setAttribute("src", "atui/MediasPlayer/medias/noloop.png");
-                this.setAttribute("alt", "Boucle musique désactivé");
-            }
-        });
+document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsAdvancedLoop").forEach(function (button) {
+    button.addEventListener("click", function () {
+        if (this.getAttribute("src") == "atui/MediasPlayer/medias/noloop.png") {
+            this.setAttribute("src", "atui/MediasPlayer/medias/loop.png");
+            this.setAttribute("alt", "Boucle musique activé");
+        } else {
+            this.setAttribute("src", "atui/MediasPlayer/medias/noloop.png");
+            this.setAttribute("alt", "Boucle musique désactivé");
+        }
     });
+});
 
 /* Video */
 
-const atuiMediasplayer_Videoplayer = document.getElementsByClassName(
-    "atuiMediasplayer_Videoplayer"
-)[0].childNodes[1]; // Element VideoPlayer
-const atuiMediasplayer_VideoplayerVideo = document.getElementById(
-    "atuiMediasplayer_VideoplayerVideo"
-); // Balise HTML <video>
+const atuiMediasplayer_Videoplayer = document.getElementsByClassName("atuiMediasplayer_Videoplayer")[0].childNodes[1]; // Element VideoPlayer
+const atuiMediasplayer_VideoplayerVideo = document.getElementById("atuiMediasplayer_VideoplayerVideo"); // Balise HTML <video>
 
 /* Update progress time and bar */
 
-atuiMediasplayer_VideoplayerVideo.addEventListener(
-    "timeupdate",
-    atuiMediasplayer_VideoplayerVideoUpdate
-); // Met à jour le minuteur
+atuiMediasplayer_VideoplayerVideo.addEventListener("timeupdate", atuiMediasplayer_VideoplayerVideoUpdate); // Met à jour le minuteur
 function atuiMediasplayer_VideoplayerVideoUpdate() {
-    const atuiMediasplayer_VideoplayerVideoListened =
-        atuiMediasplayer_VideoplayerVideo.currentTime; // Temps écoulé de la musique
-    const atuiMediasplayer_VideoplayerVideoDuration =
-        atuiMediasplayer_VideoplayerVideo.duration; // Durée totale de la musique
+    const atuiMediasplayer_VideoplayerVideoListened = atuiMediasplayer_VideoplayerVideo.currentTime; // Temps écoulé de la musique
+    const atuiMediasplayer_VideoplayerVideoDuration = atuiMediasplayer_VideoplayerVideo.duration; // Durée totale de la musique
     let atuiMediasplayer_VideoplayerVideoPercentlistened =
-        atuiMediasplayer_VideoplayerVideoListened /
-        atuiMediasplayer_VideoplayerVideoDuration;
+        atuiMediasplayer_VideoplayerVideoListened / atuiMediasplayer_VideoplayerVideoDuration;
     atuiMediasplayer_VideoplayerVideoPercentlistened = Math.round(
         atuiMediasplayer_VideoplayerVideoPercentlistened * 100
     ); // Converti la valeur en pourcentage
-    document.getElementById(
-        "atuiMediasplayer_VideoplayerProgressbarInside"
-    ).style.width = atuiMediasplayer_VideoplayerVideoPercentlistened + "%"; // Actualise le width de la progressbar selon le temps écoulé de la musique
-    document.getElementById(
-        "atuiMediasplayer_VideoplayerListened"
-    ).textContent = convertTime(atuiMediasplayer_VideoplayerVideoListened);
-    document.getElementById(
-        "atuiMediasplayer_VideoplayerDuration"
-    ).textContent = convertTime(atuiMediasplayer_VideoplayerVideoDuration);
+    document.getElementById("atuiMediasplayer_VideoplayerProgressbarInside").style.width =
+        atuiMediasplayer_VideoplayerVideoPercentlistened + "%"; // Actualise le width de la progressbar selon le temps écoulé de la musique
+    document.getElementById("atuiMediasplayer_VideoplayerListened").textContent = convertTime(
+        atuiMediasplayer_VideoplayerVideoListened
+    );
+    document.getElementById("atuiMediasplayer_VideoplayerDuration").textContent = convertTime(
+        atuiMediasplayer_VideoplayerVideoDuration
+    );
 }
 
 /* Gestionnaire Play/Pause */
@@ -270,24 +227,12 @@ document
 function atuiMediasplayer_VideoplayerVideoPlayPause() {
     if (atuiMediasplayer_VideoplayerVideo.paused) {
         atuiMediasplayer_VideoplayerVideo.play();
-        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/pause.png"
-        );
-        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute(
-            "alt",
-            "Pause Video"
-        );
+        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
+        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute("alt", "Pause Video");
     } else {
         atuiMediasplayer_VideoplayerVideo.pause();
-        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/play.png"
-        );
-        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute(
-            "alt",
-            "Play Video"
-        );
+        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute("src", "atui/MediasPlayer/medias/play.png");
+        atuiMediasplayer_VideoplayerButtonsBasicRun.setAttribute("alt", "Play Video");
     }
 }
 
@@ -295,21 +240,16 @@ function atuiMediasplayer_VideoplayerVideoPlayPause() {
 
 document
     .getElementById("atuiMediasplayer_VideoplayerProgressbar")
-    .addEventListener(
-        "click",
-        atuiMediasplayer_VideoplayerControlsProgressChange
-    );
+    .addEventListener("click", atuiMediasplayer_VideoplayerControlsProgressChange);
 function atuiMediasplayer_VideoplayerControlsProgressChange() {
     // Fonctionnalité à totalement nettoyer
-    const atuiMediasplayer_VideoplayerControlsProgress =
-        document.getElementById("atuiMediasplayer_VideoplayerProgressbar");
-    const atuiMediasplayer_VideoplayerControlsProgressX = getPosition(
-        atuiMediasplayer_VideoplayerControlsProgress
-    ); // La position absolue de la progressBar
+    const atuiMediasplayer_VideoplayerControlsProgress = document.getElementById(
+        "atuiMediasplayer_VideoplayerProgressbar"
+    );
+    const atuiMediasplayer_VideoplayerControlsProgressX = getPosition(atuiMediasplayer_VideoplayerControlsProgress); // La position absolue de la progressBar
     const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
     const diff = atuiMouseX - atuiMediasplayer_VideoplayerControlsProgressX;
-    const wrapperWidth =
-        atuiMediasplayer_VideoplayerControlsProgress.offsetWidth;
+    const wrapperWidth = atuiMediasplayer_VideoplayerControlsProgress.offsetWidth;
     const percent = Math.round((diff / wrapperWidth) * 100);
     const duration = atuiMediasplayer_VideoplayerVideo.duration;
     atuiMediasplayer_VideoplayerVideo.currentTime = (duration * percent) / 100;
@@ -322,45 +262,30 @@ atuiKernel_ToolsContextmenu("atuiMediasplayer_VideoplayerInfos");
 /* Sound */
 
 let atuiMediasplayer_VideoplayerVideoSoundStatus = true;
-const atuiMediasplayer_VideoplayerButtonsAdvancedSound =
-    document.getElementById("atuiMediasplayer_VideoplayerButtonsAdvancedSound");
-atuiMediasplayer_VideoplayerButtonsAdvancedSound.addEventListener(
-    "click",
-    atuiMediasplayer_VideoplayerVideoSound
+const atuiMediasplayer_VideoplayerButtonsAdvancedSound = document.getElementById(
+    "atuiMediasplayer_VideoplayerButtonsAdvancedSound"
 );
+atuiMediasplayer_VideoplayerButtonsAdvancedSound.addEventListener("click", atuiMediasplayer_VideoplayerVideoSound);
 function atuiMediasplayer_VideoplayerVideoSound() {
     if (!atuiMediasplayer_VideoplayerVideoSoundStatus) {
         atuiMediasplayer_VideoplayerVideoSoundStatus = true;
         atuiMediasplayer_VideoplayerVideo.muted = false;
-        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/sound.png"
-        );
-        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute(
-            "alt",
-            "Son activé. "
-        );
+        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute("src", "atui/MediasPlayer/medias/sound.png");
+        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute("alt", "Son activé. ");
     } else {
         atuiMediasplayer_VideoplayerVideoSoundStatus = false;
         atuiMediasplayer_VideoplayerVideo.muted = true;
-        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute(
-            "src",
-            "atui/MediasPlayer/medias/nosound.png"
-        );
-        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute(
-            "alt",
-            "Son désactivé. "
-        );
+        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute("src", "atui/MediasPlayer/medias/nosound.png");
+        atuiMediasplayer_VideoplayerButtonsAdvancedSound.setAttribute("alt", "Son désactivé. ");
     }
 }
 
 /* Full screen */
 
 let atuiMediasplayer_VideoplayerVideoFullscreenStatus = false;
-const atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen =
-    document.getElementById(
-        "atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen"
-    );
+const atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen = document.getElementById(
+    "atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen"
+);
 atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen.addEventListener(
     "click",
     atuiMediasplayer_VideoplayerVideoFullscreenChange
@@ -372,19 +297,13 @@ function atuiMediasplayer_VideoplayerVideoFullscreenChange() {
             "src",
             "atui/MediasPlayer/medias/collapse.png"
         );
-        atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen.setAttribute(
-            "alt",
-            "Désactiver le mode plein écran"
-        );
+        atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen.setAttribute("alt", "Désactiver le mode plein écran");
     } else {
         atuiMediasplayer_VideoplayerVideoFullscreenStatus = false;
         atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen.setAttribute(
             "src",
             "atui/MediasPlayer/medias/expand.png"
         );
-        atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen.setAttribute(
-            "alt",
-            "Activer le mode plein écran"
-        );
+        atuiMediasplayer_VideoplayerButtonsAdditionalsFullscreen.setAttribute("alt", "Activer le mode plein écran");
     }
 }
