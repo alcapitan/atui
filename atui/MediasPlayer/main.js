@@ -122,20 +122,39 @@ function atuiMediasplayer_AudioplayerMusicUpdate() {
 document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEach(function (button) {
     button.addEventListener("click", function () {
         let audio;
-        if (this.getAttribute("data-audio") !== null) {
-            audio = document.querySelector(`audio[data-audio="${this.getAttribute("data-audio")}"]`);
+        if (this.getAttribute("data-mp-target") !== null) {
+            audio = document.querySelector(`${this.getAttribute("data-mp-target")} audio`);
+            button = findElement(
+                audio,
+                ".atuiMediasplayer_AudioplayerButtonsBasicRun",
+                ".atuiMediasplayer_Audioplayer"
+            );
         } else {
             audio = findElement(this, "audio", ".atuiMediasplayer_Audioplayer");
+            button = this;
         }
-        if (this.getAttribute("src") == "atui/MediasPlayer/medias/play.png") {
+        if (audio.paused === true) {
             audio.play();
-            this.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
-            this.setAttribute("alt", "Musique lancée");
-        } else {
+            button.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
+            button.setAttribute("alt", "Pause the audio.");
+        } else if (audio.paused === false) {
             audio.pause();
-            this.setAttribute("src", "atui/MediasPlayer/medias/play.png");
-            this.setAttribute("alt", "Musique arrêtée");
+            button.setAttribute("src", "atui/MediasPlayer/medias/play.png");
+            button.setAttribute("alt", "Play the audio.");
+        } else {
+            console.error("An unexpected error has occurred.");
         }
+    });
+});
+
+/* Manage when audio ends */
+
+document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
+    let button = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicRun");
+    let audio = player.querySelector("audio");
+    audio.addEventListener("ended", () => {
+        button.setAttribute("src", "atui/MediasPlayer/medias/play.png");
+        button.setAttribute("alt", "Play the audio.");
     });
 });
 
@@ -180,12 +199,17 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerInfos").forEach(function
 
 document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsAdvancedLoop").forEach(function (button) {
     button.addEventListener("click", function () {
-        if (this.getAttribute("src") == "atui/MediasPlayer/medias/noloop.png") {
-            this.setAttribute("src", "atui/MediasPlayer/medias/loop.png");
-            this.setAttribute("alt", "Boucle musique activé");
-        } else {
+        let audio = findElement(this, "audio", ".atuiMediasplayer_Audioplayer");
+        if (audio.loop === false) {
+            audio.loop = true;
             this.setAttribute("src", "atui/MediasPlayer/medias/noloop.png");
-            this.setAttribute("alt", "Boucle musique désactivé");
+            this.setAttribute("alt", "Stop playing the audio in a loop.");
+        } else if (audio.loop === true) {
+            audio.loop = false;
+            this.setAttribute("src", "atui/MediasPlayer/medias/loop.png");
+            this.setAttribute("alt", "Play the audio in a loop.");
+        } else {
+            console.error("An unexpected error has occurred.");
         }
     });
 });

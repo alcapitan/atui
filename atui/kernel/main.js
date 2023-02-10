@@ -26,15 +26,21 @@ function atuiKernel_MetadataDisplay(infos) {
 
 /* Find associated element */
 
-function findElement(element, query, stopClass) {
-    var children = element.querySelectorAll(query);
-    if (children.length > 0) {
-        return children[0];
+function findElement(element, query, stopClass = null) {
+    let children = element.querySelector(query);
+    if (children !== null) {
+        return children;
     } else {
         if (element.parentNode !== null && element.className !== stopClass) {
             return findElement(element.parentNode, query, stopClass);
         } else {
-            console.error("Element with the class " + stopClass + "not found.");
+            if (element.className !== stopClass) {
+                console.error(`No "${query}" element was found in "${stopClass}".`);
+            } else if (element.parentNode !== null) {
+                console.error(`No "${query}" element was found.`);
+            } else {
+                console.error("An unexpected error has occurred.");
+            }
             return null;
         }
     }
