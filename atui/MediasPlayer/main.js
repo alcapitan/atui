@@ -127,6 +127,19 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
     });
 });
 
+/* Go forward or backward */
+
+document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
+    let backward = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicBackward");
+    let forward = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicForward");
+    let audio = player.querySelector("audio");
+    backward.addEventListener("click", () => {
+        audio.currentTime -= 10;
+    });
+    forward.addEventListener("click", () => {
+        audio.currentTime += 10;
+    });
+});
 
 /* Renvoi de durée écoulée de musique */
 
