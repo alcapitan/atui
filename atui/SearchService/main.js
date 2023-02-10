@@ -17,15 +17,9 @@ const atuiSearchservices_Metadata = {
 /* Display search elements */
 
 function atuiSearchservices_HeaderDevelop(element, wish) {
-    atuiSearchservices_HeaderBar = document.getElementById(
-        "atuiSearchservices_HeaderBar"
-    );
-    atuiSearchservices_HeaderPropositions = document.getElementById(
-        "atuiSearchservices_HeaderPropositions"
-    );
-    atuiSearchservices_HeaderBarInput = document.getElementById(
-        "atuiSearchservices_Input"
-    );
+    atuiSearchservices_HeaderBar = document.getElementById("atuiSearchservices_HeaderBar");
+    atuiSearchservices_HeaderPropositions = document.getElementById("atuiSearchservices_HeaderPropositions");
+    atuiSearchservices_HeaderBarInput = document.getElementById("atuiSearchservices_Input");
     if (!wish) {
         atuiSearchservices_HeaderBar.style.width = "100%";
         atuiSearchservices_HeaderBar.style.margin = "0px";
@@ -46,8 +40,7 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
         element.style.position = "absolute";
         if (document.documentElement.clientWidth < 767) {
             atuiSearchservices_HeaderBarInput.style.display = "inline";
-            atuiSearchservices_HeaderBar.style.backgroundColor =
-                "var(--atuiKernel_ColorschemeOB0)";
+            atuiSearchservices_HeaderBar.style.backgroundColor = "var(--atuiKernel_ColorschemeOB0)";
             element.style.left = "40px";
             element.style.right = "40px";
         }
@@ -57,16 +50,12 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
     }
 }
 
-document
-    .getElementById("atuiSearchservices_Header")
-    .addEventListener("mouseenter", function () {
-        atuiSearchservices_HeaderDevelop(this, true);
-    });
-document
-    .getElementById("atuiSearchservices_Header")
-    .addEventListener("mouseleave", function () {
-        atuiSearchservices_HeaderDevelop(this, false);
-    });
+document.getElementById("atuiSearchservices_Header").addEventListener("mouseenter", function () {
+    atuiSearchservices_HeaderDevelop(this, true);
+});
+document.getElementById("atuiSearchservices_Header").addEventListener("mouseleave", function () {
+    atuiSearchservices_HeaderDevelop(this, false);
+});
 
 /* Propositions */
 
@@ -88,21 +77,15 @@ const atuiSearchservices_HeaderPropositionsSuggestedInfos = [
 function atuiSearchservices_HeaderPropositionsGenerate() {
     try {
         /* Recent searches */
-        atuiSearchservices_HeaderPropositionsRecentsInfosContainer =
-            document.getElementById(
-                "atuiSearchservices_HeaderPropositionsRecentsContainer"
-            );
-        atuiSearchservices_HeaderPropositionsRecentsInfosContainer.textContent =
-            "";
+        atuiSearchservices_HeaderPropositionsRecentsInfosContainer = document.getElementById(
+            "atuiSearchservices_HeaderPropositionsRecentsContainer"
+        );
+        atuiSearchservices_HeaderPropositionsRecentsInfosContainer.textContent = "";
         for (let counter in atuiSearchservices_HeaderPropositionsRecentsInfos) {
-            const atuiSearchservices_HeaderPropositionsRecentsInfosNewlink =
-                document.createElement("a");
-            const atuiSearchservices_HeaderPropositionsRecentsInfosNewlinkText =
-                document.createTextNode(
-                    atuiSearchservices_HeaderPropositionsRecentsInfos[
-                        counter
-                    ][0]
-                );
+            const atuiSearchservices_HeaderPropositionsRecentsInfosNewlink = document.createElement("a");
+            const atuiSearchservices_HeaderPropositionsRecentsInfosNewlinkText = document.createTextNode(
+                atuiSearchservices_HeaderPropositionsRecentsInfos[counter][0]
+            );
             atuiSearchservices_HeaderPropositionsRecentsInfosNewlink.appendChild(
                 atuiSearchservices_HeaderPropositionsRecentsInfosNewlinkText
             );
@@ -117,21 +100,15 @@ function atuiSearchservices_HeaderPropositionsGenerate() {
     } catch {}
     try {
         /* Suggested searches */
-        atuiSearchservices_HeaderPropositionsSuggestedInfosContainer =
-            document.getElementById(
-                "atuiSearchservices_HeaderPropositionsSuggestedContainer"
-            );
-        atuiSearchservices_HeaderPropositionsSuggestedInfosContainer.textContent =
-            "";
+        atuiSearchservices_HeaderPropositionsSuggestedInfosContainer = document.getElementById(
+            "atuiSearchservices_HeaderPropositionsSuggestedContainer"
+        );
+        atuiSearchservices_HeaderPropositionsSuggestedInfosContainer.textContent = "";
         for (let counter in atuiSearchservices_HeaderPropositionsSuggestedInfos) {
-            const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink =
-                document.createElement("a");
-            const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText =
-                document.createTextNode(
-                    atuiSearchservices_HeaderPropositionsSuggestedInfos[
-                        counter
-                    ][0]
-                );
+            const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink = document.createElement("a");
+            const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText = document.createTextNode(
+                atuiSearchservices_HeaderPropositionsSuggestedInfos[counter][0]
+            );
             atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink.appendChild(
                 atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText
             );
