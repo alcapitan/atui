@@ -5,6 +5,7 @@
 ![GitHub release (latest by SemVer including pre-releases)](https://img.shields.io/github/downloads-pre/alcapitan/atui/latest/total?label=latest%20release)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsdelivr%20hits)
 ![GitHub issues](https://img.shields.io/github/issues-raw/alcapitan/atui)
+![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/2?label=current%20milestone%20progress)
 ![GitHub repo size](https://img.shields.io/github/repo-size/alcapitan/atui)
 
 ## This library is still under development !
