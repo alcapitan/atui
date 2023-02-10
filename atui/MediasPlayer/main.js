@@ -16,24 +16,6 @@ const atuiMediasplayer_Metadata = {
 
 /* Common */
 
-function convertTime(time) {
-    // Converti les nombres en format de durée
-    let hours = Math.floor(time / 3600);
-    let mins = Math.floor((time % 3600) / 60);
-    let secs = Math.floor(time % 60);
-    if (secs < 10) {
-        secs = "0" + secs;
-    }
-    if (hours) {
-        if (mins < 10) {
-            mins = "0" + mins;
-        }
-        return hours + ":" + mins + ":" + secs; // hh:mm:ss
-    } else {
-        return mins + ":" + secs; // mm:ss
-    }
-}
-
 function getPosition(element) {
     let left = 0;
     do {
@@ -89,34 +71,6 @@ function atuiMediasplayer_AudioplayerClose() {
     atuiMediasplayer_Audioplayer.style.display = "none";
 }*/
 
-/* Update progress time and bar */
-
-/*atuiMediasplayer_AudioplayerMusic.addEventListener(
-    "timeupdate",
-    atuiMediasplayer_AudioplayerMusicUpdate
-); // Met à jour le minuteur
-function atuiMediasplayer_AudioplayerMusicUpdate() {
-    const atuiMediasplayer_AudioplayerMusicListened =
-        atuiMediasplayer_AudioplayerMusic.currentTime; // Temps écoulé de la musique
-    const atuiMediasplayer_AudioplayerMusicDuration =
-        atuiMediasplayer_AudioplayerMusic.duration; // Durée totale de la musique
-    let atuiMediasplayer_AudioplayerMusicPercentlistened =
-        atuiMediasplayer_AudioplayerMusicListened /
-        atuiMediasplayer_AudioplayerMusicDuration;
-    atuiMediasplayer_AudioplayerMusicPercentlistened = Math.round(
-        atuiMediasplayer_AudioplayerMusicPercentlistened * 100
-    ); // Converti la valeur en pourcentage
-    document.getElementById(
-        "atuiMediasplayer_AudioplayerProgressbarInside"
-    ).style.width = atuiMediasplayer_AudioplayerMusicPercentlistened + "%"; // Actualise le width de la progressbar selon le temps écoulé de la musique
-    document.getElementById(
-        "atuiMediasplayer_AudioplayerTimerListened"
-    ).textContent = convertTime(atuiMediasplayer_AudioplayerMusicListened);
-    document.getElementById(
-        "atuiMediasplayer_AudioplayerTimerDuration"
-    ).textContent = convertTime(atuiMediasplayer_AudioplayerMusicDuration);
-}*/
-
 /* Play and pause an audio */
 
 document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEach(function (button) {
@@ -157,6 +111,22 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
         button.setAttribute("alt", "Play the audio.");
     });
 });
+
+/* Update timer */
+
+document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
+    let audio = player.querySelector("audio");
+    let timer = player.querySelector(".atuiMediasplayer_AudioplayerTimer");
+    let progressBar = player.querySelector(".atuiMediasplayer_AudioplayerProgressbarInside");
+    audio.addEventListener("timeupdate", () => {
+        let listened = audio.currentTime;
+        let duration = audio.duration;
+        let percent = Math.round((listened / duration) * 100);
+        timer.innerText = `${convertTime(listened)} - ${convertTime(duration)}`;
+        progressBar.style.width = `${percent}%`;
+    });
+});
+
 
 /* Renvoi de durée écoulée de musique */
 

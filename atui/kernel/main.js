@@ -46,6 +46,26 @@ function findElement(element, query, stopClass = null) {
     }
 }
 
+/* Convert time data to be readable by humans */
+
+function convertTime(time) {
+    // Converti les nombres en format de durée
+    let hours = Math.floor(time / 3600);
+    let mins = Math.floor((time % 3600) / 60);
+    let secs = Math.floor(time % 60);
+    if (secs < 10) {
+        secs = "0" + secs;
+    }
+    if (hours) {
+        if (mins < 10) {
+            mins = "0" + mins;
+        }
+        return hours + ":" + mins + ":" + secs; // hh:mm:ss
+    } else {
+        return mins + ":" + secs; // mm:ss
+    }
+}
+
 /* Height carousel */
 
 try {
