@@ -31,18 +31,14 @@ function findElement(element, query, stopClass = null) {
     if (children !== null) {
         return children;
     } else {
-        if (element.parentNode !== null && element.className !== stopClass) {
-            return findElement(element.parentNode, query, stopClass);
+        if (Array.from(document.querySelectorAll(stopClass)).includes(element)) {
+            console.error(`No "${query}" element was found in "${stopClass}".`);
+        } else if (element.parentNode === null) {
+            console.error(`No "${query}" element was found.`);
         } else {
-            if (element.className !== stopClass) {
-                console.error(`No "${query}" element was found in "${stopClass}".`);
-            } else if (element.parentNode !== null) {
-                console.error(`No "${query}" element was found.`);
-            } else {
-                console.error("An unexpected error has occurred.");
-            }
-            return null;
+            return findElement(element.parentNode, query, stopClass);
         }
+        return null;
     }
 }
 

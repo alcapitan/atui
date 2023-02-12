@@ -113,7 +113,7 @@
 }
 
 .atuiMediasplayer_AudioplayerProgressbar > div /* Progressbar */ {
-    width: 40%;
+    width: 0%;
     height: 10px;
     background-color: var(--atuiKernel_ColorschemeOA5);
     transition: width 500ms;
