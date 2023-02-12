@@ -141,31 +141,16 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
     });
 });
 
-/* Renvoi de durée écoulée de musique */
+/* Change playback */
 
-/*const atuiMediasplayer_AudioplayerControlsProgress = document.getElementById(
-    "atuiMediasplayer_AudioplayerProgressbar"
-);
-atuiMediasplayer_AudioplayerControlsProgress.addEventListener(
-    "click",
-    atuiMediasplayer_AudioplayerControlsProgressChange
-);
-function atuiMediasplayer_AudioplayerControlsProgressChange() {
-    // Fonctionnalité à totalement nettoyer
-    const atuiMediasplayer_AudioplayerControlsProgressX = getPosition(
-        atuiMediasplayer_AudioplayerControlsProgress
-    ); // La position absolue de la progressBar
-    const atuiMouseX = event.pageX; // L'endroit de la progressBar où on a cliqué
-    const diff =
-        atuiMouseX -
-        atuiMediasplayer_AudioplayerControlsProgressX +
-        10; /* +10 est très important car empêche décalage/temps à cause du transform X dans CSS *
-    const wrapperWidth =
-        atuiMediasplayer_AudioplayerControlsProgress.offsetWidth;
-    const percent = Math.round((diff / wrapperWidth) * 100);
-    const duration = atuiMediasplayer_AudioplayerMusic.duration;
-    atuiMediasplayer_AudioplayerMusic.currentTime = (duration * percent) / 100;
-}*/
+document.querySelectorAll(".atuiMediasplayer_AudioplayerProgressbar").forEach((progressbar) => {
+    progressbar.addEventListener("click", (event) => {
+        let audio = findElement(progressbar, "audio", ".atuiMediasplayer_Audioplayer");
+        let percent = (event.offsetX / progressbar.offsetWidth) * 100;
+        audio.currentTime = (audio.duration * percent) / 100;
+        progressbar.querySelector(".atuiMediasplayer_AudioplayerProgressbarInside").style.width = `${percent}%`;
+    });
+});
 
 /* Infos */
 
