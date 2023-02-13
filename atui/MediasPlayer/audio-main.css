@@ -15,10 +15,11 @@
 }
 
 .atuiMediasplayer_AudioplayerCover  /* Image d'album */ {
-    border-radius: var(--atuiKernel_Borderradius);
     width: 150px;
     height: 150px;
     background-color: var(--atuiKernel_ColorschemeOB3);
+    border-radius: var(--atuiKernel_Borderradius);
+    overflow: hidden;
 }
 
 .atuiMediasplayer_AudioplayerPanel,
@@ -73,7 +74,7 @@
     font-weight: bold;
 }
 
-.atuiMediasplayer_AudioplayerInformation > p:last-child {
+.atuiMediasplayer_AudioplayerInformationTitle {
     color: var(--atuiKernel_ColorschemeOA6);
 }
 

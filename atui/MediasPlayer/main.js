@@ -71,6 +71,28 @@ function atuiMediasplayer_AudioplayerClose() {
     atuiMediasplayer_Audioplayer.style.display = "none";
 }*/
 
+/* Assign an audio to an audioplayer */
+
+function atuiMediasplayer_AudioplayerMusicAssign(data) {
+    player = document.getElementById(data['player']);
+    audio = player.querySelector("audio");
+    button = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicRun");
+    cover = player.querySelector(".atuiMediasplayer_AudioplayerCover img");
+    title = player.querySelector(".atuiMediasplayer_AudioplayerInformationTitle");
+    author = player.querySelector(".atuiMediasplayer_AudioplayerInformationAuthor");
+    albumName = player.querySelector(".atuiMediasplayer_AudioplayerInformationAlbumName");
+    releaseDate = player.querySelector(".atuiMediasplayer_AudioplayerInformationReleaseDate");
+    origin = player.querySelector(".atuiMediasplayer_AudioplayerInformationOrigin");
+    
+    audio.setAttribute("src", data["music"]);
+    cover.setAttribute("src", data["cover"]);
+    title.innerHTML = data["title"];
+    author.innerHTML = data["author"];
+    albumName.innerHTML = data["albumName"];
+    releaseDate.innerHTML = data["releaseDate"];
+    origin.setAttribute("href", data["origin"]);
+}
+
 /* Play and pause an audio */
 
 document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEach(function (button) {
@@ -83,6 +105,11 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEac
                 ".atuiMediasplayer_AudioplayerButtonsBasicRun",
                 ".atuiMediasplayer_Audioplayer"
             );
+            if (this.getAttribute("data-mp-assign") !== null)
+            {
+                data = JSON.parse(this.getAttribute("data-mp-assign"));
+                atuiMediasplayer_AudioplayerMusicAssign(data);
+            }
         } else {
             audio = findElement(this, "audio", ".atuiMediasplayer_Audioplayer");
             button = this;
@@ -121,6 +148,10 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
     audio.addEventListener("timeupdate", () => {
         let listened = audio.currentTime;
         let duration = audio.duration;
+        if (isNaN(duration))
+        {
+            listened, duration = 0;
+        }
         let percent = Math.round((listened / duration) * 100);
         timer.innerText = `${convertTime(listened)} - ${convertTime(duration)}`;
         progressBar.style.width = `${percent}%`;

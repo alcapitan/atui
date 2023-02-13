@@ -328,11 +328,11 @@
                             </div>
                             <div class="atuiMediasplayer_AudioplayerDashboard">
                                 <div class="atuiMediasplayer_AudioplayerInformation">
-                                    <p>Nom Artiste</p>
-                                    <p>Nom Musique</p>
+                                    <p class="atuiMediasplayer_AudioplayerInformationAuthor">Author</p>
+                                    <p class="atuiMediasplayer_AudioplayerInformationTitle">Title</p>
                                 </div>
                                 <div class="atuiMediasplayer_AudioplayerControls">
-                                    <p class="atuiMediasplayer_AudioplayerTimer">00:00 - 00:00</p>
+                                    <p class="atuiMediasplayer_AudioplayerTimer">0:00 - 0:00</p>
                                     <div class="atuiMediasplayer_AudioplayerButtonsBasic">
                                         <img
                                             src="atui/MediasPlayer/medias/previous.png"
@@ -375,15 +375,15 @@
                                                 <div>
                                                     <a href="#">
                                                         <div>
-                                                            <p>Nom Album</p>
+                                                            <p class="atuiMediasplayer_AudioplayerInformationAlbumName">Nom Album</p>
                                                         </div>
                                                     </a>
                                                     <a href="#">
                                                         <div>
-                                                            <p>Date Sortie</p>
+                                                            <p class="atuiMediasplayer_AudioplayerInformationReleaseDate">Date Sortie</p>
                                                         </div>
                                                     </a>
-                                                    <a href="http://ncs.io/SinkingShip">
+                                                    <a class="atuiMediasplayer_AudioplayerInformationOrigin" href="">
                                                         <div>
                                                             <p>Original music</p>
                                                         </div>
@@ -420,6 +420,7 @@
                             class="atuiKernel_Button optionPrimary atuiMediasplayer_AudioplayerButtonsBasicRun"
                             id="testRunMusic2"
                             data-mp-target="#audioplayer2"
+                            data-mp-assign='{"player": "audioplayer2", "music": "patch/musics/test-audioplayer.mp3", "cover": "patch/musics/test-audioplayer.png", "title": "Uplink", "author": "Sinking Ship", "albumName": "undefined", "releaseDate": "2022", "origin": "http://ncs.io/SinkingShip"}'
                         >
                             <p>Jouer la 2eme musique</p>
                         </div>
@@ -441,11 +442,11 @@
                             </div>
                             <div class="atuiMediasplayer_AudioplayerDashboard">
                                 <div class="atuiMediasplayer_AudioplayerInformation">
-                                    <p>Nom Artiste</p>
-                                    <p>Nom Musique</p>
+                                    <p class="atuiMediasplayer_AudioplayerInformationAuthor">Author</p>
+                                    <p class="atuiMediasplayer_AudioplayerInformationTitle">Title</p>
                                 </div>
                                 <div class="atuiMediasplayer_AudioplayerControls">
-                                    <p class="atuiMediasplayer_AudioplayerTimer">00:00 - 00:00</p>
+                                    <p class="atuiMediasplayer_AudioplayerTimer">0:00 - 0:00</p>
                                     <div class="atuiMediasplayer_AudioplayerButtonsBasic">
                                         <img
                                             src="atui/MediasPlayer/medias/previous.png"
@@ -488,15 +489,15 @@
                                                 <div>
                                                     <a href="#">
                                                         <div>
-                                                            <p>Nom Album</p>
+                                                            <p class="atuiMediasplayer_AudioplayerInformationAlbumName">Nom Album</p>
                                                         </div>
                                                     </a>
                                                     <a href="#">
                                                         <div>
-                                                            <p>Date Sortie</p>
+                                                            <p class="atuiMediasplayer_AudioplayerInformationReleaseDate">Date Sortie</p>
                                                         </div>
                                                     </a>
-                                                    <a href="http://ncs.io/SinkingShip">
+                                                    <a class="atuiMediasplayer_AudioplayerInformationOrigin" href="">
                                                         <div>
                                                             <p>Original music</p>
                                                         </div>
@@ -1015,21 +1016,21 @@
             </div>-->
                     <div class="atuiKernel_SectionTabs optionContrast">
                         <div class="atuiKernel_SectionTabsHeader">
-                            <a href="#firstTab" class="active">
+                            <a data-tabs-assign="firstTab" class="optionActive">
                                 <p>Categorie</p>
                             </a>
-                            <a href="#secondTab">
+                            <a data-tabs-assign="secondTab">
                                 <p>Categorie</p>
                             </a>
-                            <a href="#thirdTab">
+                            <a data-tabs-assign="thirdTab">
                                 <p>Categorie</p>
                             </a>
-                            <a href="#fourthTab">
+                            <a data-tabs-assign="fourthTab">
                                 <p>Categorie</p>
                             </a>
                         </div>
                         <div class="atuiKernel_SectionTabsContent">
-                            <div id="firstTab" class="active">
+                            <div id="firstTab" class="optionActive">
                                 <p>The first tab.</p>
                             </div>
                             <div id="secondTab">
@@ -1045,21 +1046,21 @@
                     </div>
                     <div class="atuiKernel_SectionTabs">
                         <div class="atuiKernel_SectionTabsHeader">
-                            <a href="#firstTab2" class="active">
+                            <a data-tabs-assign="firstTab2" class="optionActive">
                                 <p>Categorie</p>
                             </a>
-                            <a href="#secondTab2">
+                            <a data-tabs-assign="secondTab2">
                                 <p>Categorie</p>
                             </a>
-                            <a href="#thirdTab2">
+                            <a data-tabs-assign="thirdTab2">
                                 <p>Categorie</p>
                             </a>
-                            <a href="#fourthTab2">
+                            <a data-tabs-assign="fourthTab2">
                                 <p>Categorie</p>
                             </a>
                         </div>
                         <div class="atuiKernel_SectionTabsContent">
-                            <div id="firstTab2" class="active">
+                            <div id="firstTab2" class="optionActive">
                                 <p>The first tab.</p>
                             </div>
                             <div id="secondTab2">
@@ -1286,9 +1287,9 @@
                                 </div>
                                 <div class="atuiMediasplayer_VideoplayerControls">
                                     <div id="atuiMediasplayer_VideoplayerTimer">
-                                        <p id="atuiMediasplayer_VideoplayerListened">00:00</p>
+                                        <p id="atuiMediasplayer_VideoplayerListened">0:00</p>
                                         <p>-</p>
-                                        <p id="atuiMediasplayer_VideoplayerDuration">00:00</p>
+                                        <p id="atuiMediasplayer_VideoplayerDuration">0:00</p>
                                     </div>
                                     <div id="atuiMediasplayer_VideoplayerButtonsBasic">
                                         <img

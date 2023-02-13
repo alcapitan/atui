@@ -466,26 +466,28 @@ function atuiKernel_ToolsInfotip(cible) {
 
 /* Tabs */
 
-const tabs = document.querySelectorAll(".atuiKernel_SectionTabsHeader a");
-for (let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener("click", function () {
-        atuiKernel_TabsDisplay(this);
+const tabsContainers = document.querySelectorAll(".atuiKernel_SectionTabs");
+
+tabsContainers.forEach((tabsContainer) => {
+    const tabsHeader = tabsContainer.querySelector(".atuiKernel_SectionTabsHeader");
+    const tabsHeaderLinks = tabsHeader.querySelectorAll("a");
+    const tabsContent = tabsContainer.querySelector(".atuiKernel_SectionTabsContent");
+    const tabsContentTexts = tabsContent.querySelectorAll("div");
+
+    tabsHeaderLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            tabsHeaderLinks.forEach((tab) => {
+                tab.classList.remove("optionActive");
+            });
+            tabsContentTexts.forEach((content) => {
+                content.classList.remove("optionActive");
+            });
+
+            link.classList.add("optionActive");
+            document.getElementById(link.getAttribute("data-tabs-assign")).classList.add("optionActive");
+        });
     });
-}
-
-function atuiKernel_TabsDisplay(element) {
-    const container = element.parentNode.parentNode; // Tabs container
-    container.querySelector(".atuiKernel_SectionTabsHeader .active").classList.remove("active"); // Remove active class to the activated tab
-    element.classList.add("active"); // Add active class to clicked element
-    container.querySelector(".atuiKernel_SectionTabsContent .active").classList.remove("active"); // Remove active class to the activated content
-    container.querySelector(element.getAttribute("href")).classList.add("active"); // Add active element to content corresponding to clicked element
-}
-
-const urlPath = window.location.hash;
-const urlDestination = document.querySelector('a[href="' + urlPath + '"]');
-if (urlDestination !== null && !urlDestination.classList.contains("active")) {
-    atuiKernel_TabsDisplay(urlDestination);
-}
+});
 
 /* Accordion */
 
