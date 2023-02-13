@@ -27,34 +27,6 @@ function getPosition(element) {
 
 /* Audio */
 
-const atuiMediasplayer_Audioplayer = document.getElementById("atuiMediasplayer_Audioplayer"); // Element audioPlayer
-const atuiMediasplayer_AudioplayerMusic = document.getElementById("atuiMediasplayer_AudioplayerMusic"); // Balise HTML <audio> diffusant la musique
-
-/* Execution d'une musique */
-
-function atuiMediasplayer_AudioplayerMusicChange(atuiMediasplayer_AudioplayerMusicChosen) {
-    atuiMediasplayer_Audioplayer.style.display = "flex";
-    if (atuiMediasplayer_AudioplayerMusic.src != atuiMediasplayer_AudioplayerMusicChosen[0]) {
-        /* Si la musique n'est pas la même que celle précédemment sélectionné */
-        atuiMediasplayer_AudioplayerMusic.src = atuiMediasplayer_AudioplayerMusicChosen[0]; /* Chemin vers la musique */
-        document.getElementById("atuiMediasplayer_AudioplayerMusicinformationsCover").src =
-            atuiMediasplayer_AudioplayerMusicChosen[1]; /* Chemin vers la couverture d'album */
-        document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[1].innerHTML =
-            atuiMediasplayer_AudioplayerMusicChosen[2];
-        document.getElementById("atuiMediasplayer_AudioplayerMusicinformations").childNodes[3].innerHTML =
-            atuiMediasplayer_AudioplayerMusicChosen[3];
-        document.getElementById(
-            "atuiMediasplayer_AudioplayerMusicinformationsAdvanced"
-        ).childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML =
-            atuiMediasplayer_AudioplayerMusicChosen[4];
-        document.getElementById(
-            "atuiMediasplayer_AudioplayerMusicinformationsAdvanced"
-        ).childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerHTML =
-            atuiMediasplayer_AudioplayerMusicChosen[5];
-    }
-    atuiMediasplayer_AudioplayerMusicRun();
-}
-
 /* Hide Audioplayer */
 
 /*document
@@ -105,8 +77,7 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEac
                 ".atuiMediasplayer_AudioplayerButtonsBasicRun",
                 ".atuiMediasplayer_Audioplayer"
             );
-            if (this.getAttribute("data-mp-assign") !== null)
-            {
+            if (this.getAttribute("data-mp-assign") !== null) {
                 data = JSON.parse(this.getAttribute("data-mp-assign"));
                 atuiMediasplayer_AudioplayerMusicAssign(data);
             }
@@ -115,6 +86,7 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEac
             button = this;
         }
         if (audio.paused === true) {
+            stopAllMedia();
             audio.play();
             button.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
             button.setAttribute("alt", "Pause the audio.");
@@ -138,6 +110,19 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
         button.setAttribute("alt", "Play the audio.");
     });
 });
+
+/* Stop all others medias when playing a new one */
+
+function stopAllMedia() {
+    const medias = document.querySelectorAll("audio, video");
+    medias.forEach(function (media) {
+        media.pause();
+    });
+    document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEach(function (button) {
+        button.setAttribute("src", "atui/MediasPlayer/medias/play.png");
+        button.setAttribute("alt", "Play the audio.");
+    });
+}
 
 /* Update timer */
 
