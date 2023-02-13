@@ -31,8 +31,8 @@ function getPosition(element) {
 
 document.querySelectorAll(".atuiMediasplayer_AudioplayerClose").forEach(function (button) {
     button.addEventListener("click", function () {
-        let player = findElement(this, ".atuiMediasplayer_Audioplayer", ".atuiMediasplayer_Audioplayer");
-        let audio = player.querySelector("audio");
+        const player = findElement(this, ".atuiMediasplayer_Audioplayer", ".atuiMediasplayer_Audioplayer");
+        const audio = player.querySelector("audio");
         audio.pause();
         player.style.display = "none";
     });
@@ -41,15 +41,14 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerClose").forEach(function
 /* Assign an audio to an audioplayer */
 
 function atuiMediasplayer_AudioplayerMusicAssign(data) {
-    player = document.getElementById(data["player"]);
-    audio = player.querySelector("audio");
-    button = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicRun");
-    cover = player.querySelector(".atuiMediasplayer_AudioplayerCover img");
-    title = player.querySelector(".atuiMediasplayer_AudioplayerInformationTitle");
-    author = player.querySelector(".atuiMediasplayer_AudioplayerInformationAuthor");
-    albumName = player.querySelector(".atuiMediasplayer_AudioplayerInformationAlbumName");
-    releaseDate = player.querySelector(".atuiMediasplayer_AudioplayerInformationReleaseDate");
-    origin = player.querySelector(".atuiMediasplayer_AudioplayerInformationOrigin");
+    const player = document.getElementById(data["player"]);
+    const audio = player.querySelector("audio");
+    const cover = player.querySelector(".atuiMediasplayer_AudioplayerCover img");
+    const title = player.querySelector(".atuiMediasplayer_AudioplayerInformationTitle");
+    const author = player.querySelector(".atuiMediasplayer_AudioplayerInformationAuthor");
+    const albumName = player.querySelector(".atuiMediasplayer_AudioplayerInformationAlbumName");
+    const releaseDate = player.querySelector(".atuiMediasplayer_AudioplayerInformationReleaseDate");
+    const origin = player.querySelector(".atuiMediasplayer_AudioplayerInformationOrigin");
 
     audio.setAttribute("src", data["music"]);
     cover.setAttribute("src", data["cover"]);
@@ -83,7 +82,7 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEac
         if (audio.paused === true) {
             stopAllMedia();
             audio.play();
-            player = findElement(audio, ".atuiMediasplayer_Audioplayer", ".atuiMediasplayer_Audioplayer");
+            const player = findElement(audio, ".atuiMediasplayer_Audioplayer", ".atuiMediasplayer_Audioplayer");
             if (window.getComputedStyle(player).display === "none") {
                 player.style.display = "block";
             }
@@ -102,8 +101,8 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEac
 /* Manage when audio ends */
 
 document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
-    let button = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicRun");
-    let audio = player.querySelector("audio");
+    const button = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicRun");
+    const audio = player.querySelector("audio");
     audio.addEventListener("ended", () => {
         button.setAttribute("src", "atui/MediasPlayer/medias/play.png");
         button.setAttribute("alt", "Play the audio.");
@@ -129,17 +128,16 @@ function stopAllMedia() {
 /* Update timer */
 
 document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
-    let audio = player.querySelector("audio");
-    let timer = player.querySelector(".atuiMediasplayer_AudioplayerTimer");
-    let progressBar = player.querySelector(".atuiMediasplayer_AudioplayerProgressbarInside");
+    const audio = player.querySelector("audio");
+    const timer = player.querySelector(".atuiMediasplayer_AudioplayerTimer");
+    const progressBar = player.querySelector(".atuiMediasplayer_AudioplayerProgressbarInside");
     audio.addEventListener("timeupdate", () => {
         let listened = audio.currentTime;
         let duration = audio.duration;
-        if (isNaN(duration))
-        {
-            listened, duration = 0;
+        if (isNaN(duration)) {
+            (listened = 0), (duration = 0);
         }
-        let percent = Math.round((listened / duration) * 100);
+        const percent = Math.round((listened / duration) * 100);
         timer.innerText = `${convertTime(listened)} - ${convertTime(duration)}`;
         progressBar.style.width = `${percent}%`;
     });
@@ -148,9 +146,9 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
 /* Go forward or backward */
 
 document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
-    let backward = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicBackward");
-    let forward = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicForward");
-    let audio = player.querySelector("audio");
+    const backward = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicBackward");
+    const forward = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicForward");
+    const audio = player.querySelector("audio");
     backward.addEventListener("click", () => {
         audio.currentTime -= 10;
     });
@@ -163,8 +161,8 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
 
 document.querySelectorAll(".atuiMediasplayer_AudioplayerProgressbar").forEach((progressbar) => {
     progressbar.addEventListener("click", (event) => {
-        let audio = findElement(progressbar, "audio", ".atuiMediasplayer_Audioplayer");
-        let percent = (event.offsetX / progressbar.offsetWidth) * 100;
+        const audio = findElement(progressbar, "audio", ".atuiMediasplayer_Audioplayer");
+        const percent = (event.offsetX / progressbar.offsetWidth) * 100;
         audio.currentTime = (audio.duration * percent) / 100;
         progressbar.querySelector(".atuiMediasplayer_AudioplayerProgressbarInside").style.width = `${percent}%`;
     });
@@ -185,7 +183,7 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerInfos").forEach(function
 
 document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsAdvancedLoop").forEach(function (button) {
     button.addEventListener("click", function () {
-        let audio = findElement(this, "audio", ".atuiMediasplayer_Audioplayer");
+        const audio = findElement(this, "audio", ".atuiMediasplayer_Audioplayer");
         if (audio.loop === false) {
             audio.loop = true;
             this.setAttribute("src", "atui/MediasPlayer/medias/noloop.png");
