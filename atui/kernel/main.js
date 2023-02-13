@@ -26,19 +26,30 @@ function atuiKernel_MetadataDisplay(infos) {
 
 /* Find associated element */
 
-function findElement(element, query, stopClass = null) {
-    let children = element.querySelector(query);
-    if (children !== null) {
-        return children;
-    } else {
-        if (Array.from(document.querySelectorAll(stopClass)).includes(element)) {
-            console.error(`No "${query}" element was found in "${stopClass}".`);
-        } else if (element.parentNode === null) {
-            console.error(`No "${query}" element was found.`);
-        } else {
-            return findElement(element.parentNode, query, stopClass);
+function findElement(element, query, stop = null) {
+    if (element.querySelectorAll(query).length === 1) {
+        // If element has query.
+        return element.querySelector(query);
+    } else if (element.querySelectorAll(query).length > 1) {
+        // If element has several query.
+        let list = [];
+        for (let counter = 0; counter < element.querySelectorAll(query).length; counter++) {
+            list.push(element.querySelectorAll(query)[counter]);
         }
+        return list;
+    } else if (Array.from(document.querySelectorAll(query)).includes(element)) {
+        // If element is query.
+        return element;
+    } else if (Array.from(document.querySelectorAll(stop)).includes(element)) {
+        // If element is stop.
+        console.error(`No "${query}" element was found in "${stop}".`);
         return null;
+    } else if (element.parentNode === null) {
+        // If element is root.
+        console.error(`No "${query}" element was found in the webpage.`);
+    } else {
+        // The parent of element may have query.
+        return findElement(element.parentNode, query, stop);
     }
 }
 

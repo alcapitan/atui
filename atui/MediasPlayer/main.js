@@ -27,26 +27,21 @@ function getPosition(element) {
 
 /* Audio */
 
-/* Hide Audioplayer */
+/* Close Audioplayer */
 
-/*document
-    .getElementById("atuiMediasplayer_AudioplayerClose")
-    .addEventListener("click", atuiMediasplayer_AudioplayerClose);
-atuiMediasplayer_AudioplayerMusic.addEventListener(
-    "ended",
-    atuiMediasplayer_AudioplayerClose
-); // Ferme AudioPlayer quand la musique est finie
-function atuiMediasplayer_AudioplayerClose() {
-    // Arrête la musique et ferme l'audioplayer.
-    atuiMediasplayer_AudioplayerMusic.pause();
-    // Le minuteur n'est pas remis à 0 ici, car prochainement si la prochaine musique est différente le compteur reviendra automatiquement à 0, si c'est la même ça reprend là où c'était pour la praticité.
-    atuiMediasplayer_Audioplayer.style.display = "none";
-}*/
+document.querySelectorAll(".atuiMediasplayer_AudioplayerClose").forEach(function (button) {
+    button.addEventListener("click", function () {
+        let player = findElement(this, ".atuiMediasplayer_Audioplayer", ".atuiMediasplayer_Audioplayer");
+        let audio = player.querySelector("audio");
+        audio.pause();
+        player.style.display = "none";
+    });
+});
 
 /* Assign an audio to an audioplayer */
 
 function atuiMediasplayer_AudioplayerMusicAssign(data) {
-    player = document.getElementById(data['player']);
+    player = document.getElementById(data["player"]);
     audio = player.querySelector("audio");
     button = player.querySelector(".atuiMediasplayer_AudioplayerButtonsBasicRun");
     cover = player.querySelector(".atuiMediasplayer_AudioplayerCover img");
@@ -55,7 +50,7 @@ function atuiMediasplayer_AudioplayerMusicAssign(data) {
     albumName = player.querySelector(".atuiMediasplayer_AudioplayerInformationAlbumName");
     releaseDate = player.querySelector(".atuiMediasplayer_AudioplayerInformationReleaseDate");
     origin = player.querySelector(".atuiMediasplayer_AudioplayerInformationOrigin");
-    
+
     audio.setAttribute("src", data["music"]);
     cover.setAttribute("src", data["cover"]);
     title.innerHTML = data["title"];
@@ -88,6 +83,10 @@ document.querySelectorAll(".atuiMediasplayer_AudioplayerButtonsBasicRun").forEac
         if (audio.paused === true) {
             stopAllMedia();
             audio.play();
+            player = findElement(audio, ".atuiMediasplayer_Audioplayer", ".atuiMediasplayer_Audioplayer");
+            if (window.getComputedStyle(player).display === "none") {
+                player.style.display = "block";
+            }
             button.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
             button.setAttribute("alt", "Pause the audio.");
         } else if (audio.paused === false) {
@@ -108,6 +107,9 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer").forEach((player) => {
     audio.addEventListener("ended", () => {
         button.setAttribute("src", "atui/MediasPlayer/medias/play.png");
         button.setAttribute("alt", "Play the audio.");
+        if (player.classList.contains("optionFloating")) {
+            player.style.display = "none";
+        }
     });
 });
 
