@@ -3,9 +3,90 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@import url("./audio-main.css");
 @import url("./audio-floating.css");
+@import url("./audio-main.css");
 
 @import url("./video-main.css");
-@import url("./video-progressbar.css");
-@import url("./video-controls.css");
+@import url("./video-overlay.css");
+
+/* Common */
+
+/* Container */
+
+.atuiMediasplayer_Audioplayer,
+.atuiMediasplayer_Videoplayer > article {
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    border-radius: var(--atuiKernel_Borderradius);
+    position: relative;
+}
+
+.atuiMediasplayer_Audioplayer,
+.atuiMediasplayer_Videoplayer .atuiMediasplayer_Dashboard {
+    background-color: var(--atuiKernel_ColorschemeOB1);
+}
+
+.atuiMediasplayer_Audioplayer *,
+.atuiMediasplayer_Videoplayer * {
+    margin: 0;
+}
+
+/* Controls */
+
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
+.atuiMediasplayer_Videoplayer .atuiMediasplayer_Controls {
+    padding: 10px;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
+    .atuiMediasplayer_Videoplayer .atuiMediasplayer_Controls {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiMediasplayer_Controls {
+        flex-direction: column;
+    }
+}
+
+.atuiMediasplayer_Dashboard {
+    flex-direction: column;
+}
+
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Information,
+.atuiMediasplayer_Controls,
+.atuiMediasplayer_Controls > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.atuiMediasplayer_Controls {
+    justify-content: space-evenly;
+}
+
+.atuiMediasplayer_Controls img {
+    width: 30px;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+.atuiMediasplayer_Controls img:hover {
+    background-color: var(--atuiKernel_ColorschemeOA3);
+}
+
+/* Progressbar */
+
+.atuiMediasplayer_Progressbar,
+.atuiMediasplayer_ProgressbarInside {
+    height: 10px;
+}
+
+.atuiMediasplayer_ProgressbarInside {
+    width: 0;
+    background-color: var(--atuiKernel_ColorschemeOA5);
+    transition: width 500ms;
+}

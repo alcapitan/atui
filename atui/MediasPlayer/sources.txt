@@ -1,6 +1,5 @@
 info.png > https://img.icons8.com/fluency-systems-regular/48/000000/info.png
-window.png > https://img.icons8.com/fluency-systems-regular/48/000000/application-window.png
-popup.png > https://img.icons8.com/fluency-systems-regular/48/000000/open-in-popup.png
+pip.png > https://img.icons8.com/fluency-systems-regular/48/picture-in-picture-alternative.png
 loop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-left.png
 noloop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-right-1-1-1.png
 previous.png > https://img.icons8.com/fluency-systems-regular/48/000000/rewind.png
@@ -10,5 +9,4 @@ pause.png > https://img.icons8.com/fluency-systems-regular/48/000000/pause--v1.p
 cover.png > https://img.icons8.com/fluency/144/000000/apple-music.png
 sound.png > https://img.icons8.com/fluency-systems-regular/48/000000/medium-volume.png
 nosound.png > https://img.icons8.com/fluency-systems-regular/48/000000/no-audio.png
-collapse.png > https://img.icons8.com/fluency-systems-regular/48/collapse.png
-expand.png > https://img.icons8.com/fluency-systems-regular/48/expand--v3.png
+fullscreen.png > https://img.icons8.com/fluency-systems-regular/48/full-page-view.png

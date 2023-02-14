@@ -3,6 +3,8 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+/* Option style floating */
+
 .atuiMediasplayer_Audioplayer.optionFloating {
     position: fixed;
     z-index: 10;
@@ -17,7 +19,6 @@
     display: none;
 }
 
-.atuiMediasplayer_Audioplayer.optionFloating .atuiMediasplayer_AudioplayerClose
-{
+.atuiMediasplayer_Audioplayer.optionFloating .atuiMediasplayer_Close {
     display: block;
 }

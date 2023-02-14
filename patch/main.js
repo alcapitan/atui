@@ -3,7 +3,7 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(13, 2, 2023);
+atuiKernel_FooterLastedited(14, 2, 2023);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
@@ -11,9 +11,9 @@ atuiKernel_ToolsContextmenu("atuiKernel_NavigationText");
 atuiKernel_ToolsInfotip("atuiKernel_FooterScrolltopInfotip");
 atuiKernel_NavigationGlobalpanel("atuiKernel_NavigationGlobalpanel1");
 
-/*atuiMediasplayer_AudioplayerMusicAssign({
+/*atuiMediasplayer_Assign({
     player: 'audioplayer2',
-    music: 'patch/musics/test-audioplayer.mp3',
+    media: 'patch/musics/test-audioplayer.mp3',
     cover: 'patch/musics/test-audioplayer.png',
     title: 'Uplink',
     author: 'Sinking Ship',

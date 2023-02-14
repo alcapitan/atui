@@ -1,0 +1,17 @@
+/*!
+ * ATUI v0.3.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Option style overlay */
+
+.atuiMediasplayer_Videoplayer.optionOverlay .atuiMediasplayer_Dashboard {
+    background-color: var(--atuiKernel_ColorschemeBB1);
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0;
+}
+
+.atuiMediasplayer_Videoplayer.optionOverlay .atuiMediasplayer_Dashboard:hover {
+    opacity: 1;
+}

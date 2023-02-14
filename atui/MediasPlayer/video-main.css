@@ -3,55 +3,35 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-.atuiMediasplayer_Videoplayer > article /* Element */ {
-    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
-    border-radius: var(--atuiKernel_Borderradius);
-    overflow: hidden;
-    position: relative;
-}
-
-#atuiMediasplayer_VideoplayerVideo /* Video */ {
-    display: block;
-    max-width: 100%;
-    max-height: 65vh;
-}
-
-#atuiMediasplayer_VideoplayerDashboard /* Dashboard */ {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--atuiKernel_ColorschemeOB1);
-    width: 100%;
-}
-
-/* Responsives */
+/* Container */
 
 @media (min-width: 768px) /* Computers */ {
-    .atuiMediasplayer_Videoplayer /* Container */ {
+    .atuiMediasplayer_Videoplayer {
         display: flex;
         justify-content: center;
     }
 }
 
-@media print {
-    .atuiMediasplayer_Videoplayer /* Container */ {
-        display: none;
-    }
+.atuiMediasplayer_Videoplayer > article {
+    overflow: hidden;
 }
 
-/* Style Overlay */
-
-.atuiMediasplayer_Videoplayer.optionOverlay
-    #atuiMediasplayer_VideoplayerDashboard {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(51, 51, 51, 0.8);
-    opacity: 0.5;
-    margin-top: -4px;
+.atuiMediasplayer_Videoplayer video {
+    max-width: 100%;
+    max-height: 65vh;
+    display: block;
 }
 
-.atuiMediasplayer_Videoplayer.optionOverlay
-    #atuiMediasplayer_VideoplayerDashboard:hover {
-    opacity: 1;
+/* Controls */
+
+.atuiMediasplayer_Videoplayer .atuiMediasplayer_Dashboard {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Progressbar */
+
+.atuiMediasplayer_Videoplayer .atuiMediasplayer_Progressbar {
+    width: 100%;
 }

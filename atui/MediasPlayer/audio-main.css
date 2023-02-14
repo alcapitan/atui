@@ -3,18 +3,9 @@
  * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiMediasplayer_Audioplayer {
-    border: 1px solid var(--atuiKernel_ColorschemeOB5);
-    background-color: var(--atuiKernel_ColorschemeOB1);
-    border-radius: var(--atuiKernel_Borderradius);
-    position: relative;
-}
+/* Audioplayer */
 
-.atuiMediasplayer_Audioplayer * {
-    margin: 0;
-}
-
-.atuiMediasplayer_AudioplayerCover  /* Image d'album */ {
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover {
     width: 150px;
     height: 150px;
     background-color: var(--atuiKernel_ColorschemeOB3);
@@ -22,100 +13,54 @@
     overflow: hidden;
 }
 
-.atuiMediasplayer_AudioplayerPanel,
-.atuiMediasplayer_AudioplayerDashboard {
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
     display: flex;
 }
 
-.atuiMediasplayer_AudioplayerPanel {
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel {
     gap: 15px;
-    padding: 10px;
 }
 
 @media (min-width: 768px) /* Computers */ {
-    .atuiMediasplayer_AudioplayerPanel {
-        flex-direction: row;
-    }
-
-    .atuiMediasplayer_AudioplayerDashboard {
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
         margin: 10px 0;
     }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
-    .atuiMediasplayer_AudioplayerPanel {
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel {
         flex-direction: column;
         align-items: center;
     }
 
-    .atuiMediasplayer_AudioplayerCover  /* Image d'album */ {
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover,
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Information {
         display: flex;
-        justify-content: center;
-    }
-
-    .atuiMediasplayer_AudioplayerInformation {
         justify-content: center;
         text-align: center;
     }
-
-    .atuiMediasplayer_AudioplayerControls {
-        flex-direction: column;
-    }
 }
 
-.atuiMediasplayer_AudioplayerDashboard {
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
     flex: 1;
-    flex-direction: column;
     row-gap: 10px;
 }
 
-.atuiMediasplayer_AudioplayerInformation > p {
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Information > p {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.atuiMediasplayer_AudioplayerInformationTitle {
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_InformationTitle {
     color: var(--atuiKernel_ColorschemeOA6);
 }
 
-.atuiMediasplayer_AudioplayerControls {
-    justify-content: space-evenly;
-}
-
-.atuiMediasplayer_AudioplayerInformation,
-.atuiMediasplayer_AudioplayerControls,
-.atuiMediasplayer_AudioplayerControls > div {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.atuiMediasplayer_AudioplayerControls img /* Tout les icônes */ {
-    width: 30px;
-    height: 30px;
-    padding: 5px 10px;
-    border-radius: var(--atuiKernel_Borderradius);
-}
-
-.atuiMediasplayer_AudioplayerControls img:hover /* Tout les icônes au survol */ {
-    background-color: var(--atuiKernel_ColorschemeOA3);
-}
-
-.atuiMediasplayer_AudioplayerClose
-{
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Close {
     display: none;
 }
 
-.atuiMediasplayer_AudioplayerProgressbar /* Container */ {
-    border-radius: 0 0 var(--atuiKernel_Borderradius)
-        var(--atuiKernel_Borderradius);
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Progressbar {
+    border-radius: 0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
     overflow: hidden;
-}
-
-.atuiMediasplayer_AudioplayerProgressbar > div /* Progressbar */ {
-    width: 0%;
-    height: 10px;
-    background-color: var(--atuiKernel_ColorschemeOA5);
-    transition: width 500ms;
 }
