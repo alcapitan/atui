@@ -42,7 +42,7 @@ After downloading ATUI, copy the `/atui` folder and paste it into your website r
 ATUI is an open-source project that invites collaboration.  
 You can help in the development of the project even without coding ! So you can test ATUI, report bugs, give your opinions and ideas for improvement, and more...  
 Before contributing, please read <a href="https://alcapitan.github.io/atui/CONTRIBUTING.md">CONTRIBUTING.md</a>.
-All your reports must be done in <a href="https://github.com/alcapitan/atui/issues">Issues on GitHub</a>. The roadmap is also in the Issues page.
+All your reports must be done in <a href="https://github.com/alcapitan/atui/issues">Issues on GitHub</a>. The road map is also in the Issues page.
 
 ## What is this project in a nutshell ?
 
@@ -75,7 +75,7 @@ Anyone can create an extension, but you have to respect extension coding standar
 
 ## License & Use of external service
 
-Project released under <a href="https://alcapitan.github.io/atui/LICENSE.md">GNU General Public Licence</a>.
+Project released under <a href="https://alcapitan.github.io/atui/LICENSE.md">GNU General Public License</a>.
 
 ### Softwares
 

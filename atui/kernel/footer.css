@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Global */
@@ -39,18 +39,18 @@
     height: 50px;
 }
 
-/* Responsives */
+/* Responsive */
 
 @media (min-width: 768px) /* Computers */ {
     .atuiKernel_FooterContentsColumn /* Containers */ {
         flex-direction: row;
     }
 
-    .atuiKernel_FooterContentsColumn > div /* Categorie */ {
+    .atuiKernel_FooterContentsColumn > div /* Menu */ {
         max-width: 30%;
     }
 
-    .atuiKernel_FooterContentsRow > div /* Categorie */ {
+    .atuiKernel_FooterContentsRow > div /* Menu */ {
         max-height: 30%;
     }
 }
@@ -86,13 +86,13 @@
     flex-direction: column;
 }
 
-.atuiKernel_FooterContentsRow > div /* Categorie */ {
+.atuiKernel_FooterContentsRow > div /* Menu */ {
     margin: 5px 0;
 }
 
 /* Column contents */
 
-.atuiKernel_FooterContentsColumn > div /* Categorie */ {
+.atuiKernel_FooterContentsColumn > div /* Menu */ {
     margin: 0 5px;
 }
 

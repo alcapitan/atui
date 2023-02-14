@@ -63,7 +63,7 @@ git push origin {branch}
 ```
 5. Open a Pull Request with a link to your issue and with a clear title and description.
 
-**IMPORTANT** : By submitting a patch, you agree to allow the project owners to license your work under the licence [GNU General Public Licence](https://github.com/alcapitan/atui/blob/beta/LICENSE.md).
+**IMPORTANT** : By submitting a patch, you agree to allow the project owners to license your work under the License [GNU General Public License](https://github.com/alcapitan/atui/blob/beta/LICENSE.md).
 
 ## Code guidelines
 ### Common

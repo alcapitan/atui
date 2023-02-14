@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Global */
@@ -10,13 +10,13 @@
     margin: 10px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecents,
+#atuiSearchservices_HeaderPropositionsRecent,
 #atuiSearchservices_HeaderPropositionsSuggested
-/* Containers of propositions recents & suggested */ {
+/* Containers of propositions Recent & suggested */ {
     margin: 0 10px 20px 10px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecents > h3,
+#atuiSearchservices_HeaderPropositionsRecent > h3,
 #atuiSearchservices_HeaderPropositionsSuggested > h3
 /* Title of containers */ {
     margin: 0;
@@ -25,13 +25,13 @@
     font-size: 1.25rem;
 }
 
-#atuiSearchservices_HeaderPropositionsRecentsContainer,
+#atuiSearchservices_HeaderPropositionsRecentContainer,
 #atuiSearchservices_HeaderPropositionsSuggestedContainer
 /* Lists of propositions */ {
     margin: 15px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecentsContainer > a,
+#atuiSearchservices_HeaderPropositionsRecentContainer > a,
 #atuiSearchservices_HeaderPropositionsSuggestedContainer > a
 /* Propositions */ {
     color: var(--atuiKernel_ColorschemeOBF);

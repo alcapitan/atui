@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Global */
@@ -46,7 +46,7 @@
     text-align: justify;
 }
 
-/* Responsives */
+/* Responsive */
 
 @media (min-width: 768px) /* Computers */ {
     .atuiKernel_SectionCard
@@ -117,11 +117,7 @@
 }
 
 .atuiKernel_SectionCard.optionOverlay article > div[class="text"] {
-    background: linear-gradient(
-        to top,
-        var(--atuiKernel_ColorschemeBB8) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(to top, var(--atuiKernel_ColorschemeBB8) 50%, transparent 100%);
     margin-top: 30%;
 }
 

@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Metadata */
@@ -96,11 +96,11 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
                 player.style.display = "block";
             }
             button.setAttribute("src", "atui/MediasPlayer/medias/pause.png");
-            button.setAttribute("alt", "Pause the media.");
+            button.setAttribute("alt", "Pause the media");
         } else if (media.paused === false) {
             media.pause();
             button.setAttribute("src", "atui/MediasPlayer/medias/play.png");
-            button.setAttribute("alt", "Play the media.");
+            button.setAttribute("alt", "Play the media");
         } else {
             console.error("An unexpected error has occurred.");
         }
@@ -199,12 +199,12 @@ document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
         const media = findElement(this, "audio, video", ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
         if (media.loop === false) {
             media.loop = true;
-            this.setAttribute("src", "atui/MediasPlayer/medias/noloop.png");
-            this.setAttribute("alt", "Stop playing the media in a loop.");
+            this.setAttribute("src", "atui/MediasPlayer/medias/no_loop.png");
+            this.setAttribute("alt", "Stop playing the media in a loop");
         } else if (media.loop === true) {
             media.loop = false;
             this.setAttribute("src", "atui/MediasPlayer/medias/loop.png");
-            this.setAttribute("alt", "Play the media in a loop.");
+            this.setAttribute("alt", "Play the media in a loop");
         } else {
             console.error("An unexpected error has occurred.");
         }

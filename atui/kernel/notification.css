@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Global */
@@ -61,26 +61,3 @@
     font-size: 1.1rem;
     border: none;
 }
-
-/* Je sais pas, on supprime, revoir de faire des notifications...
-
-.atuiKernel_NotificationElementFooter *
-{
-     margin : 10px;
-}
-
-.atuiKernel_NotificationElementFooter button
-{
-     padding : 10px;
-     border-radius : var(--atuiKernel_Borderradius);
-     background-color: var(--atuiKernel_ColorschemeOB1);
-     border : none;
-     font-size : 1rem;
-}
-
-.atuiKernel_NotificationElementFooterMain
-{
-     background-color: var(--atuiKernel_ColorschemeOA6) !important;
-     font-weight: bold;
-     font-family: var(--atuiKernel_FontsTitle);
-}*/

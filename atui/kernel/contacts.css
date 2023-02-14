@@ -1,9 +1,9 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Responsives */
+/* Responsive */
 
 @media (min-width: 768px) /* Computers */ {
     #atuiKernel_ToolsContactNewsletter /* Element */ {
@@ -68,7 +68,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 0; /* Fix bogue width sur mobile */
+    width: 0;
     border: none;
     background-color: transparent;
 }

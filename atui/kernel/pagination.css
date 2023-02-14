@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Number */
@@ -21,14 +21,12 @@
 }
 
 .atuiKernel_SectionPaginationNumber > *:first-child {
-    border-radius: var(--atuiKernel_Borderradius) 0 0
-        var(--atuiKernel_Borderradius);
+    border-radius: var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
     border-left: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
 .atuiKernel_SectionPaginationNumber > *:last-child {
-    border-radius: 0 var(--atuiKernel_Borderradius)
-        var(--atuiKernel_Borderradius) 0;
+    border-radius: 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0;
 }
 
 .atuiKernel_SectionPaginationNumber > *:hover {

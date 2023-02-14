@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Metadata */
@@ -59,7 +59,7 @@ document.getElementById("atuiSearchservices_Header").addEventListener("mouseleav
 
 /* Propositions */
 
-const atuiSearchservices_HeaderPropositionsRecentsInfos = [
+const atuiSearchservices_HeaderPropositionsRecentInfos = [
     ["satisfied drop room", "https://www.at.ma"],
     ["era assumption grow", "https://www.at.ma"],
     ["score wheel shaft", "https://www.at.ma"],
@@ -77,24 +77,24 @@ const atuiSearchservices_HeaderPropositionsSuggestedInfos = [
 function atuiSearchservices_HeaderPropositionsGenerate() {
     try {
         /* Recent searches */
-        atuiSearchservices_HeaderPropositionsRecentsInfosContainer = document.getElementById(
-            "atuiSearchservices_HeaderPropositionsRecentsContainer"
+        atuiSearchservices_HeaderPropositionsRecentInfosContainer = document.getElementById(
+            "atuiSearchservices_HeaderPropositionsRecentContainer"
         );
-        atuiSearchservices_HeaderPropositionsRecentsInfosContainer.textContent = "";
-        for (let counter in atuiSearchservices_HeaderPropositionsRecentsInfos) {
-            const atuiSearchservices_HeaderPropositionsRecentsInfosNewlink = document.createElement("a");
-            const atuiSearchservices_HeaderPropositionsRecentsInfosNewlinkText = document.createTextNode(
-                atuiSearchservices_HeaderPropositionsRecentsInfos[counter][0]
+        atuiSearchservices_HeaderPropositionsRecentInfosContainer.textContent = "";
+        for (let counter in atuiSearchservices_HeaderPropositionsRecentInfos) {
+            const atuiSearchservices_HeaderPropositionsRecentInfosNewlink = document.createElement("a");
+            const atuiSearchservices_HeaderPropositionsRecentInfosNewlinkText = document.createTextNode(
+                atuiSearchservices_HeaderPropositionsRecentInfos[counter][0]
             );
-            atuiSearchservices_HeaderPropositionsRecentsInfosNewlink.appendChild(
-                atuiSearchservices_HeaderPropositionsRecentsInfosNewlinkText
+            atuiSearchservices_HeaderPropositionsRecentInfosNewlink.appendChild(
+                atuiSearchservices_HeaderPropositionsRecentInfosNewlinkText
             );
-            atuiSearchservices_HeaderPropositionsRecentsInfosNewlink.setAttribute(
+            atuiSearchservices_HeaderPropositionsRecentInfosNewlink.setAttribute(
                 "href",
-                atuiSearchservices_HeaderPropositionsRecentsInfos[counter][1]
+                atuiSearchservices_HeaderPropositionsRecentInfos[counter][1]
             );
-            atuiSearchservices_HeaderPropositionsRecentsInfosContainer.appendChild(
-                atuiSearchservices_HeaderPropositionsRecentsInfosNewlink
+            atuiSearchservices_HeaderPropositionsRecentInfosContainer.appendChild(
+                atuiSearchservices_HeaderPropositionsRecentInfosNewlink
             );
         }
     } catch {}
@@ -114,7 +114,7 @@ function atuiSearchservices_HeaderPropositionsGenerate() {
             );
             atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink.setAttribute(
                 "href",
-                atuiSearchservices_HeaderPropositionsRecentsInfos[counter][1]
+                atuiSearchservices_HeaderPropositionsRecentInfos[counter][1]
             );
             atuiSearchservices_HeaderPropositionsSuggestedInfosContainer.appendChild(
                 atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink

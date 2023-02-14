@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 @import url("./accordion.css");
@@ -32,8 +32,7 @@
     --atuiKernel_FontsTitle: "Noto Sans", Arial;
     --atuiKernel_FontsText: "Noto Sans", Arial;
     --atuiKernel_FontsSpecial: "Lobster", "Noto Sans", Arial;
-    --atuiKernel_Shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    --atuiKernel_Shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     --atuiKernel_Blur: blur(5px);
     --atuiKernel_Borderradius: 10px;
 }
@@ -49,7 +48,7 @@ body * {
     word-wrap: anywhere;
 }
 
-/* Default props of balises */
+/* Default props of HTML tags */
 
 a {
     text-decoration: none;

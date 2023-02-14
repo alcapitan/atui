@@ -1,7 +1,7 @@
 info.png > https://img.icons8.com/fluency-systems-regular/48/000000/info.png
 pip.png > https://img.icons8.com/fluency-systems-regular/48/picture-in-picture-alternative.png
 loop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-left.png
-noloop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-right-1-1-1.png
+no_loop.png > https://img.icons8.com/fluency-systems-regular/48/000000/rotate-right-1-1-1.png
 previous.png > https://img.icons8.com/fluency-systems-regular/48/000000/rewind.png
 next.png > https://img.icons8.com/fluency-systems-regular/48/000000/fast-forward.png
 play.png > https://img.icons8.com/fluency-systems-regular/48/000000/play--v1.png

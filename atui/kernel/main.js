@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Metadata */
@@ -56,7 +56,6 @@ function findElement(element, query, stop = null) {
 /* Convert time data to be readable by humans */
 
 function convertTime(time) {
-    // Converti les nombres en format de durée
     let hours = Math.floor(time / 3600);
     let mins = Math.floor((time % 3600) / 60);
     let secs = Math.floor(time % 60);
@@ -76,7 +75,6 @@ function convertTime(time) {
 /* Height carousel */
 
 try {
-    // Ne peut pas fonctionner sous about.html du kernel
     const atuiKernel_Header = document.getElementById("atuiKernel_Header");
     const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
     atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
@@ -108,12 +106,12 @@ function atuiKernel_ToolsSettingsDisplaymodeChange() {
     if (atuiKernel_ToolsSettingsDisplaymodeStatus) {
         atuiKernel_ToolsSettingsDisplaymodeStatus = false;
         atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src", "atui/kernel/medias/dark.png");
-        atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Mode sombre activé");
+        atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Enable light mode");
         atuiKernel_ColorschemeGeneratorAuto(undefined);
     } else {
         atuiKernel_ToolsSettingsDisplaymodeStatus = true;
         atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src", "atui/kernel/medias/light.png");
-        atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Mode clair activé");
+        atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Enable dark mode");
         atuiKernel_ColorschemeGeneratorAuto(undefined);
     }
 }
@@ -229,7 +227,6 @@ function atuiKernel_ColorschemeGeneratorAuto(accent) {
         defaultAccent = accent;
     }
     if (typeof atuiKernel_ToolsSettingsDisplaymodeStatus == "undefined") {
-        // Pour about.html dans kernel
         atuiKernel_ToolsSettingsDisplaymodeStatus = true;
     }
     atuiKernel_ColorschemeGeneratorPack(true, defaultAccent, atuiKernel_ToolsSettingsDisplaymodeStatus);
@@ -259,27 +256,27 @@ function atuiKernel_FooterLastedited(day, month, year) {
     atuiKernel_FooterInfoBased.setAttribute("href", atuiKernel_Metadata["website"]);
     atuiKernel_FooterInfoBased.setAttribute("target", "_blank");
     atuiKernel_FooterInfoBased.innerHTML =
-        "Ce site utilise " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + " . ";
+        "This website uses " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + " . ";
     atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
 
     /* Last modification of this website */
     const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
     const atuiKernel_FooterInfoLasteditedConvertMonth = [
-        "janvier",
-        "février",
-        "mars",
-        "avril",
-        "mai",
-        "juin",
-        "juillet",
-        "août",
-        "septembre",
-        "octobre",
-        "novembre",
-        "décembre",
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december",
     ];
     month = atuiKernel_FooterInfoLasteditedConvertMonth[month - 1];
-    atuiKernel_FooterInfoLasteditedText.innerHTML = "Dernière modification le " + day + " " + month + " " + year + ". ";
+    atuiKernel_FooterInfoLasteditedText.innerHTML = "Latest modification on " + day + " " + month + " " + year + ". ";
     atuiKernel_FooterInfoLasteditedText.setAttribute("href", "./atui/kernel/about.html");
     atuiKernel_FooterInfoLasteditedText.setAttribute("target", "_blank");
     atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText, atuiKernel_FooterInfo.firstChild);
@@ -360,7 +357,7 @@ function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
         atuiKernel_NotificationElementFooterInput.setAttribute("type", "text");
     }
 
-    // Insertion des éléments dans HTML
+    // Inserting elements in HTML
     atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTypeImg);
     atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTitle);
     atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderClose);
@@ -369,10 +366,10 @@ function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
     atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementFooter);
     atuiKernel_Notification.appendChild(atuiKernel_NotificationElement);
 
-    // Son joué
+    // Play sound
     atuiKernel_NotificationElementSound.play();
 
-    // Attendre puis fermer la notification
+    // Wait and close the notification
     if (type == "normal") {
         setTimeout(function () {
             atuiKernel_NotificationClose(atuiKernel_NotificationElement);
@@ -387,22 +384,27 @@ function atuiKernel_NotificationClose(element) {
 function atuiKernel_NotificationCookies() {
     atuiKernel_NotificationDisplay(
         "cookies",
-        ["J'accepte", "Je refuse cette fois-ci", "Je refuse définitivement", "En savoir plus"],
-        ["console.log('accept')", "console.log('not accept')", "console.log('always notaccept')", "console.log('doc')"],
-        "Autoriser-vous les cookies ?",
-        "Ce site utilise des traceurs collectant des informations sur vous. Selon le RGPD, vous pouvez exprimer votre consentement à l'utilisation des cookies."
+        ["I agree", "I disagree this time", "I disagree definitely", "Read more"],
+        [
+            "console.log('accept')",
+            "console.log('not accept')",
+            "console.log('always not accept')",
+            "console.log('doc')",
+        ],
+        "Accept cookies ?",
+        "This site uses trackers that collect information about you. According to the GDPR, you can express your consent to the use of cookies."
     );
 }
 
 /* Context Menu */
 
 function atuiKernel_ToolsContextmenuDisplay(element, wish, centered) {
-    cible = element.childNodes[3]; /* Context menu */
+    target = element.childNodes[3]; /* Context menu */
     element = element.childNodes[1]; /* Trigger */
     if (!wish) {
-        cible.style.visibility = "hidden";
-        cible.style.top = "0";
-        cible.style.left = "0";
+        target.style.visibility = "hidden";
+        target.style.top = "0";
+        target.style.left = "0";
         element.style.fontWeight = "normal";
         element.style.textDecoration = "none";
     } else {
@@ -411,66 +413,66 @@ function atuiKernel_ToolsContextmenuDisplay(element, wish, centered) {
         if (centered) {
             /* Centered */
             /*elementPositionX =
-                (document.documentElement.clientWidth - cible.clientWidth) / 2;*/
+                (document.documentElement.clientWidth - target.clientWidth) / 2;*/
             elementPositionX = 20;
-            elementPositionYShift = cible.getBoundingClientRect().y; /* Décalage Y écran conteneur */
-            elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
-            if (elementPositionY + cible.clientHeight > window.innerHeight) {
-                // Overflow bas
-                elementPositionY = elementPositionY - cible.clientHeight;
+            elementPositionYShift = target.getBoundingClientRect().y;
+            elementPositionY = element.getBoundingClientRect().y + 20;
+            if (elementPositionY + target.clientHeight > window.innerHeight) {
+                // Overflow bottom
+                elementPositionY = elementPositionY - target.clientHeight;
             }
             elementPositionY = elementPositionY - elementPositionYShift;
         } else {
-            elementPositionXShift = cible.getBoundingClientRect().x; /* Décalage X écran conteneur */
-            elementPositionYShift = cible.getBoundingClientRect().y; /* Décalage Y écran conteneur */
-            elementPositionX = element.getBoundingClientRect().x + 20; /* Position left sur l'écran du récepteur */
-            elementPositionY = element.getBoundingClientRect().y + 20; /* Position top sur l'écran du récepteur */
-            if (elementPositionX + cible.clientWidth > document.documentElement.clientWidth) {
-                // Overflow droite
-                elementPositionX = elementPositionX - cible.clientWidth;
+            elementPositionXShift = target.getBoundingClientRect().x;
+            elementPositionYShift = target.getBoundingClientRect().y;
+            elementPositionX = element.getBoundingClientRect().x + 20;
+            elementPositionY = element.getBoundingClientRect().y + 20;
+            if (elementPositionX + target.clientWidth > document.documentElement.clientWidth) {
+                // Overflow right
+                elementPositionX = elementPositionX - target.clientWidth;
             }
             elementPositionX = elementPositionX - elementPositionXShift;
-            if (elementPositionY + cible.clientHeight > window.innerHeight) {
-                // Overflow bas
-                elementPositionY = elementPositionY - cible.clientHeight;
+            if (elementPositionY + target.clientHeight > window.innerHeight) {
+                // Overflow bottom
+                elementPositionY = elementPositionY - target.clientHeight;
             }
             elementPositionY = elementPositionY - elementPositionYShift;
         }
         elementPositionX = elementPositionX + "px";
-        cible.style.left = elementPositionX;
+        target.style.left = elementPositionX;
         elementPositionY = elementPositionY + "px";
-        cible.style.top = elementPositionY;
-        cible.style.visibility = "visible";
+        target.style.top = elementPositionY;
+        target.style.visibility = "visible";
     }
 }
 
-function atuiKernel_ToolsContextmenu(cible) {
-    document.getElementById(cible).addEventListener("mouseenter", function () {
+function atuiKernel_ToolsContextmenu(target) {
+    document.getElementById(target).addEventListener("mouseenter", function () {
         atuiKernel_ToolsContextmenuDisplay(this, true, false);
     });
-    document.getElementById(cible).addEventListener("mouseleave", function () {
+    document.getElementById(target).addEventListener("mouseleave", function () {
         atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
     });
 }
 
 /* Global Panel */
 
-function atuiKernel_NavigationGlobalpanel(cible) {
-    document.getElementById(cible).addEventListener("mouseover", function () {
+function atuiKernel_NavigationGlobalpanel(target) {
+    document.getElementById(target).addEventListener("mouseover", function () {
         atuiKernel_ToolsContextmenuDisplay(this, true, true);
     });
-    document.getElementById(cible).addEventListener("mouseout", function () {
+    document.getElementById(target).addEventListener("mouseout", function () {
         atuiKernel_ToolsContextmenuDisplay(this, false, true);
     });
 }
 
 /* Infotip */
 
-function atuiKernel_ToolsInfotip(cible) {
-    document.getElementById(cible).addEventListener("mouseenter", function () {
+function atuiKernel_ToolsInfotip(target) {
+    document.getElementById(target).addEventListener("mouseenter", function () {
         atuiKernel_ToolsContextmenuDisplay(this, true, false);
     });
-    document.getElementById(cible).addEventListener("mouseleave", function () {
+    document.getElementById(target).addEventListener("mouseleave", function () {
         atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
     });
 }

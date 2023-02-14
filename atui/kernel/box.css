@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 .atuiKernel_SectionBox {
@@ -12,9 +12,8 @@
 }
 
 /*.atuiKernel_SectionBox:has(.atuiKernel_SectionBoxIcon)
-En attendant que :has() soit disponible nativement sur Firefox (https://caniuse.com/?search=%3Ahas())
 {
-     min-height : 30px;
+    min-height : 30px;
 }*/
 
 .atuiKernel_SectionBox * {

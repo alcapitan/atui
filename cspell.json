@@ -1,0 +1,28 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "useGitignore": true,
+    "words": [
+        "alcapitan",
+        "ATUI",
+        "audioplayer",
+        "Borderradius",
+        "Caniuse",
+        "Contextmenu",
+        "Delivr",
+        "Desktoponly",
+        "Displaymode",
+        "Globalpanel",
+        "Imgbig",
+        "Infotip",
+        "Lastedited",
+        "Mediasplayer",
+        "Mobileonly",
+        "Mobilestyle",
+        "Progressbar",
+        "Scrolltop",
+        "searchbar",
+        "Searchservices",
+        "videoplayer"
+    ]
+}

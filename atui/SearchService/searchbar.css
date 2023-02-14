@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Global */
@@ -33,7 +33,7 @@
     outline: none;
 }
 
-/* Responsives */
+/* Responsive */
 
 @media (min-width: 768px) /* Computers */ {
     #atuiSearchservices_HeaderBar {

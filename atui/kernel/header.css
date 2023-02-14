@@ -1,6 +1,6 @@
 /*!
  * ATUI v0.3.0 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public Licence (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Global */
@@ -16,8 +16,8 @@
     min-height: 50px;
     position: fixed;
     top: 0;
-    width : -webkit-fill-available;
-    width : -moz-available;
+    width: -webkit-fill-available;
+    width: -moz-available;
     padding: 0 10px;
     z-index: 10;
 }
@@ -39,7 +39,7 @@
     align-items: center;
 }
 
-/* Responsives */
+/* Responsive */
 
 @media (min-width: 768px) /* Computers */ {
     #atuiKernel_Header > aside > div {
