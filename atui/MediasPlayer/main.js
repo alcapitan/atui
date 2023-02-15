@@ -1,5 +1,5 @@
 /*!
- * ATUI v0.3.0 (https://github.com/alcapitan/atui)
+ * ATUI v0.3.1 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
@@ -8,9 +8,9 @@
 const atuiMediasplayer_Metadata = {
     name: "Medias Player",
     author: "alcapitan (on GitHub)",
-    version: "v0.3.0",
+    version: "v0.3.1",
     website: "https://github.com/alcapitan/atui",
-    in_development: false,
+    in_development: true,
 };
 // atuiKernel_MetadataDisplay(atuiMediasplayer_Metadata);
 
