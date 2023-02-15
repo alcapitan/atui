@@ -2,10 +2,10 @@
 <h3 align="center">ATUI (Alex Tech User Interface)</h3>
 <p align="center"><i>Front-end library to build your website easier.</i></p>
 
-![GitHub release (latest by SemVer including pre-releases)](https://img.shields.io/github/downloads-pre/alcapitan/atui/latest/total?label=latest%20release)
+![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/alcapitan/atui?include_prereleases&label=latest%20release)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsdelivr%20hits)
 ![GitHub issues](https://img.shields.io/github/issues-raw/alcapitan/atui)
-![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/2?label=current%20milestone%20progress)
+![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/4?label=issues%20in%20milestone)
 ![GitHub repo size](https://img.shields.io/github/repo-size/alcapitan/atui)
 
 ## This library is still under development !
@@ -25,7 +25,6 @@ Put this line to your HTML `<head>` :
 
 Put this line at the end of `<body>` in your HTML :  
 `<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.js"></script>`
-
 Then, change the links above for reach extensions files.
 
 ### With release package (for users)
