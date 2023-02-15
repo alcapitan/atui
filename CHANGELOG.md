@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Rename badge on README for number of opened issues in the related milestone.
+-   Rename badge on README for number of opened issues in the related milestone.
 
 ### Fixed
 
-- Fix badge on README for latest version.
+-   Fix badge on README for latest version.
+-   Update installation instructions in README.
 
 ## [0.3.0] - 2023-02-15
 
