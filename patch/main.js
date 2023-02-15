@@ -1,9 +1,9 @@
 /*!
- * ATUI v0.3.0 (https://github.com/alcapitan/atui)
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(14, 2, 2023);
+atuiKernel_FooterLastedited(15, 2, 2023);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
