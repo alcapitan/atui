@@ -5,38 +5,10 @@
 
 /* Global */
 
-#atuiKernel_Footer {
+.atuiKernel_Footer {
     position: relative;
     background-color: var(--atuiKernel_ColorschemeOA1);
-    margin-top: 50px;
     padding: 20px 40px 5px 40px;
-}
-
-/* Scroll Top */
-
-#atuiKernel_FooterScrolltop {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: -30px;
-    left: 0;
-    right: 0;
-}
-
-#atuiKernel_FooterScrolltop a {
-    display: block;
-    border-radius: 100%;
-    border: 3px solid var(--atuiKernel_ColorschemeOA6);
-    background-color: var(--atuiKernel_ColorschemeOA1);
-    padding: 2.5px;
-    box-sizing: border-box;
-    width: 60px;
-    height: 60px;
-}
-
-#atuiKernel_FooterScrolltop a img {
-    width: 50px;
-    height: 50px;
 }
 
 /* Responsive */

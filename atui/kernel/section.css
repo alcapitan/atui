@@ -44,6 +44,16 @@
     flex: 1;
 }
 
+.atuiKernel_BodyContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#atuiKernel_Section {
+    flex : 1;
+}
+
 .atuiKernel_SectionContent > * {
     margin: 20px 0;
 }

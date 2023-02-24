@@ -8,7 +8,6 @@ atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationText");
-atuiKernel_ToolsInfotip("atuiKernel_FooterScrolltopInfotip");
 atuiKernel_NavigationGlobalpanel("atuiKernel_NavigationGlobalpanel1");
 
 /*atuiMediasplayer_Assign({
