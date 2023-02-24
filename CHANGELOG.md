@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Add list.
+
 ### Changed
 
 -   Rename badge on README for number of opened issues in the related milestone. _(from v0.3.1)_
