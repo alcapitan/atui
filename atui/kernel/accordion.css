@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-.atuiKernel_SectionAccordionHeader {
+.atuiKernel_SectionAccordion > header {
     background-color: var(--atuiKernel_ColorschemeOB2);
     padding: 0 20px;
     min-height: 50px;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.atuiKernel_SectionAccordionHeader * {
+.atuiKernel_SectionAccordion > header * {
     color: var(--atuiKernel_ColorschemeOBF);
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
@@ -25,23 +25,20 @@
     flex: 1;
 }
 
-.atuiKernel_SectionAccordionHeader img {
+.atuiKernel_SectionAccordion > header img {
     width: 35px;
     height: 35px;
     flex: 0;
-}
-
-.atuiKernel_SectionAccordionArrow {
     margin-left: 10px;
 }
 
-.atuiKernel_SectionAccordionContent {
+.atuiKernel_SectionAccordion > section {
     padding: 15px;
     background-color: var(--atuiKernel_ColorschemeOB1);
     border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
     display: none;
 }
 
-.atuiKernel_SectionAccordionContent * {
+.atuiKernel_SectionAccordion > section * {
     margin: 0;
 }

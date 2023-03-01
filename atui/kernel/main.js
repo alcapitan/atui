@@ -504,29 +504,19 @@ tabsContainers.forEach((tabsContainer) => {
 
 /* Accordion */
 
-const atuiKernel_SectionAccordionContainer = document.getElementsByClassName("atuiKernel_SectionAccordion");
-let atuiKernel_SectionAccordionHeader;
-for (let i = 0; i < atuiKernel_SectionAccordionContainer.length; i++) {
-    atuiKernel_SectionAccordionHeader = atuiKernel_SectionAccordionContainer[i].querySelector(
-        ".atuiKernel_SectionAccordionHeader"
-    );
-    atuiKernel_SectionAccordionContent = atuiKernel_SectionAccordionContainer[i].querySelector(
-        ".atuiKernel_SectionAccordionContent"
-    );
-    atuiKernel_SectionAccordionHeader.addEventListener("click", function () {
-        atuiKernel_SectionAccordionDisplay(atuiKernel_SectionAccordionContent);
+document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) => {
+    const header = accordion.querySelector("header");
+    const button = header.querySelector("img");
+    const content = accordion.querySelector("section");
+    header.addEventListener("click", () => {
+        if (window.getComputedStyle(content).display === "none") {
+            content.style.display = "block";
+            button.style.transform = "rotate(180deg)";
+        } else if (window.getComputedStyle(content).display === "block") {
+            content.style.display = "none";
+            button.style.transform = "rotate(0deg)";
+        } else {
+            console.error("An unexpected error has occurred.");
+        }
     });
-}
-
-function atuiKernel_SectionAccordionDisplay(content) {
-    const atuiKernel_SectionAccordionArrow = atuiKernel_SectionAccordionHeader.querySelector(
-        ".atuiKernel_SectionAccordionArrow"
-    );
-    if (content.style.display == "block") {
-        content.style.display = "none";
-        atuiKernel_SectionAccordionArrow.style.transform = "rotate(0deg)";
-    } else {
-        content.style.display = "block";
-        atuiKernel_SectionAccordionArrow.style.transform = "rotate(180deg)";
-    }
-}
+});

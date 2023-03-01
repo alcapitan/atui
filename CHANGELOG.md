@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Rename badge on README for number of opened issues in the related milestone. _(from v0.3.1)_
 -   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway.
 -   Replace id by class for tools (footer).
+-   Rewrite accordion.
 
 ### Removed
 
