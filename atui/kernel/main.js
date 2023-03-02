@@ -520,3 +520,25 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
         }
     });
 });
+
+/* Spinner resize */
+
+document.querySelectorAll(".atuiKernel_Spinner").forEach((spinner) => {
+    if (spinner.getAttribute("data-atui-resize") !== null) {
+        spinner.style.setProperty("width", `${spinner.getAttribute("data-atui-resize")}px`);
+        spinner.style.setProperty("height", `${spinner.getAttribute("data-atui-resize")}px`);
+        width_adjust = spinner.getAttribute("data-atui-resize") / 5;
+        spinner.style.setProperty(
+            "background",
+            `radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOA5) 94%, #0000) top/${width_adjust}px ${width_adjust}px no-repeat, conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOA5))`
+        );
+        spinner.style.setProperty(
+            "mask",
+            `radial-gradient(farthest-side, #0000 calc(100% - ${width_adjust}px), #000 0)`
+        );
+        spinner.style.setProperty(
+            "-webkit-mask",
+            `radial-gradient(farthest-side, #0000 calc(100% - ${width_adjust}px), #000 0)`
+        );
+    }
+});
