@@ -147,7 +147,7 @@
 .atuiKernel_SectionList > *:not(:last-child) {
     border-color: var(--atuiKernel_ColorschemeOB2);
     border-style: solid;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 2px 0;
 }
 
 /* Snipper */
