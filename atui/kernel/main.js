@@ -526,11 +526,10 @@ document.querySelectorAll(".atuiKernel_Spinner").forEach((spinner) => {
         spinner.style.setProperty("width", `${spinner.getAttribute("data-atui-resize")}px`);
         spinner.style.setProperty("height", `${spinner.getAttribute("data-atui-resize")}px`);
         const width_adjust = spinner.getAttribute("data-atui-resize") / 5;
+        let background_adjust = window.getComputedStyle(spinner).background;
+        background_adjust = background_adjust.replaceAll("10px", `${width_adjust}px`);
         const mask_adjust = `radial-gradient(farthest-side, #0000 calc(100% - ${width_adjust}px), #000 0)`;
-        spinner.style.setProperty(
-            "background",
-            `radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOA5) 94%, #0000) top/${width_adjust}px ${width_adjust}px no-repeat, conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOA5))`
-        );
+        spinner.style.setProperty("background", background_adjust);
         spinner.style.setProperty("mask", mask_adjust);
         spinner.style.setProperty("-webkit-mask", mask_adjust);
     }

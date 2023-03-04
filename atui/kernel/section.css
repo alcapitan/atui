@@ -161,11 +161,22 @@
     mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
     -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
     animation: spinner-animation 1s infinite linear;
-    /* background mask -webkit-mask width height properties are copied in js, take care of that when change that */
+    /* background mask -webkit-mask width height properties are copied in js, please if you change that, change it in the js too */
+    /* 10px is copied in the js, please if you change that, change it in the js too */
 }
 
 @keyframes spinner-animation {
     100% {
         transform: rotate(1turn);
     }
+}
+
+.atuiKernel_Spinner.optionMonochromeLight {
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB1) 94%, #0000) top/10px 10px no-repeat,
+        conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOB1));
+}
+
+.atuiKernel_Spinner.optionMonochromeDark {
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB9) 94%, #0000) top/10px 10px no-repeat,
+        conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOB9));
 }
