@@ -172,11 +172,11 @@
 }
 
 .atuiKernel_Spinner.optionMonochromeLight {
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB1) 94%, #0000) top/10px 10px no-repeat,
-        conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOB1));
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB2) 94%, #0000) top/10px 10px no-repeat,
+        conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOB2));
 }
 
 .atuiKernel_Spinner.optionMonochromeDark {
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB9) 94%, #0000) top/10px 10px no-repeat,
-        conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOB9));
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB8) 94%, #0000) top/10px 10px no-repeat,
+        conic-gradient(#0000 30%, var(--atuiKernel_ColorschemeOB8));
 }
