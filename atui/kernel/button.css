@@ -32,6 +32,13 @@
     font-weight: bold;
 }
 
+.atuiKernel_Button:hover,
+.atuiKernel_Button:active {
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+
 /* Disabled */
 
 .atuiKernel_Button.optionDisabled {
@@ -52,14 +59,15 @@
     color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_Button.optionSecondary:not(.optionDisabled) *:hover,
-.atuiKernel_Button.optionTertiary:not(.optionDisabled) *:hover {
+.atuiKernel_Button.optionSecondary:not(.optionDisabled):hover,
+.atuiKernel_Button.optionTertiary:not(.optionDisabled):hover {
+    background-color: var(--atuiKernel_ColorschemeOA1);
     color: var(--atuiKernel_ColorschemeOA5);
 }
-
-.atuiKernel_Button.optionSecondary:not(.optionDisabled) *:active,
-.atuiKernel_Button.optionTertiary:not(.optionDisabled) *:active {
+.atuiKernel_Button.optionSecondary:not(.optionDisabled):active,
+.atuiKernel_Button.optionTertiary:not(.optionDisabled):active {
     color: var(--atuiKernel_ColorschemeOA6);
+    background-color: var(--atuiKernel_ColorschemeOA2);
 }
 
 /* Primary */

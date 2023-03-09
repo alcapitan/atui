@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Rewrite accordion (html structure has a bit changed).
 -   Change style for a tag.
 -   Rename SectionText into SectionParagraph.
+-   Improve animation on hover and active for button.
 
 ### Removed
 
