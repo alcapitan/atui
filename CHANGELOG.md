@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Fix badge on README for latest version. _(from v0.4.0)_
 -   Update installation instructions in README.
+-   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway. _(from v0.4.0)_
 
 ## [0.3.0] - 2023-02-15
 
