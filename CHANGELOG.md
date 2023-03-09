@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   All title tags are stylized in SectionText. _(from v0.4.0)_
+
 ### Changed
 
 -   Rename badge on README for number of opened issues in the related milestone. _(from v0.4.0)_

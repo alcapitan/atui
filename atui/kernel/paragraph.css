@@ -5,17 +5,21 @@
 
 /* Global */
 
-.atuiKernel_SectionText h3 {
+.atuiKernel_SectionText h1,
+.atuiKernel_SectionText h2,
+.atuiKernel_SectionText h3,
+.atuiKernel_SectionText h4,
+.atuiKernel_SectionText h5,
+.atuiKernel_SectionText h6 {
     font-weight: bold;
-    font-size: 1.5rem;
     color: var(--atuiKernel_ColorschemeOA6);
     font-family: var(--atuiKernel_FontsTitle);
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .atuiKernel_SectionText p {
     font-size: 1rem;
-    margin: 10px;
+    margin: 0 5px;
 }
 
 .atuiKernel_SectionText a:hover,
