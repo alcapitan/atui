@@ -5,21 +5,38 @@
 
 /* Global */
 
-.atuiKernel_SectionText h3 {
+.atuiKernel_SectionParagraph h1,
+.atuiKernel_SectionParagraph h2,
+.atuiKernel_SectionParagraph h3,
+.atuiKernel_SectionParagraph h4,
+.atuiKernel_SectionParagraph h5,
+.atuiKernel_SectionParagraph h6 {
     font-weight: bold;
-    font-size: 1.5rem;
     color: var(--atuiKernel_ColorschemeOA6);
     font-family: var(--atuiKernel_FontsTitle);
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
-.atuiKernel_SectionText p {
+.atuiKernel_SectionParagraph p {
     font-size: 1rem;
-    margin: 10px;
+    margin: 0 5px;
 }
 
-.atuiKernel_SectionText a:hover,
-.atuiKernel_SectionText a:active {
-    font-weight: bold;
+.atuiKernel_SectionParagraph a {
     text-decoration: underline;
+}
+
+/* Quote */
+
+.atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote {
+    font-family: var(--atuiKernel_FontsSpecial);
+    margin: 15px 20px;
+    font-size: 1.1rem;
+}
+
+.atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote em {
+    color: var(--atuiKernel_ColorschemeOB7);
+    display: block;
+    margin: 5px 0 0 10px;
+    font-size: 0.9rem;
 }

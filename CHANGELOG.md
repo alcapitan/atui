@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Add list.
 -   Add spinner.
+-   Add quote for paragraph.
 
 ### Changed
 
@@ -18,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway.
 -   Replace id by class for tools (footer).
 -   Rewrite accordion (html structure has a bit changed).
+-   Change style for a tag.
+-   Rename SectionText into SectionParagraph.
 
 ### Removed
 

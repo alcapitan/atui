@@ -19,6 +19,12 @@
     align-items: center;
 }
 
+.atuiKernel_NavigationSectionImgbig a:hover,
+.atuiKernel_NavigationSectionImgbig a:active, 
+.atuiKernel_NavigationSectionImgbig a:visited {
+    text-decoration: none;
+}
+
 .atuiKernel_NavigationSectionImgbig a:hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
@@ -96,6 +102,12 @@
     align-items: center;
     column-gap: 10px;
     row-gap: 5px;
+}
+
+.atuiKernel_NavigationBar a:hover,
+.atuiKernel_NavigationBar a:active, 
+.atuiKernel_NavigationBar a:visited {
+    text-decoration: none;
 }
 
 .atuiKernel_NavigationBar p {

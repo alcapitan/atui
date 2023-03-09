@@ -111,6 +111,13 @@
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
+
+.atuiKernel_SectionSquarelink > a:hover,
+.atuiKernel_SectionSquarelink > a:active, 
+.atuiKernel_SectionSquarelink > a:visited {
+    text-decoration: none;
+}
+
 .atuiKernel_SectionSquarelink > a:hover {
     border-color: var(--atuiKernel_ColorschemeOA5);
     background-color: var(--atuiKernel_ColorschemeOA1);
