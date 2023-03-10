@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Change style for a tag.
 -   Rename SectionText into SectionParagraph.
 -   Improve animation on hover and active for button.
+-   Add gradient for section content split bar.
 
 ### Removed
 
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   Fix badge on README for latest version.
+-   Fix margin exceptions mistake for first and last child when there is only one child.
 
 ## [0.3.0] - 2023-02-15
 
