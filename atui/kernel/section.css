@@ -21,6 +21,17 @@
     #atuiKernel_Section > *:not(:last-child) {
         border-right: 1px solid var(--atuiKernel_ColorschemeOB2);
     }
+
+    #atuiKernel_Section > *:not(:last-child) {
+        border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
+                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0 0;
+    }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
@@ -29,8 +40,20 @@
         flex-direction: column-reverse;
     }
 
-    #atuiKernel_Body > *:not(:last-child) #atuiKernel_Section > *:not(:last-child) {
+    #atuiKernel_Body > *:not(:last-child),
+    #atuiKernel_Section > *:not(:last-child) {
         border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
+    }
+
+    #atuiKernel_Section > *:not(:last-child) {
+        border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
+                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
     }
 }
 
@@ -111,9 +134,8 @@
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
-
 .atuiKernel_SectionSquarelink > a:hover,
-.atuiKernel_SectionSquarelink > a:active, 
+.atuiKernel_SectionSquarelink > a:active,
 .atuiKernel_SectionSquarelink > a:visited {
     text-decoration: none;
 }
