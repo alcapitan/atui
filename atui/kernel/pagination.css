@@ -13,7 +13,6 @@
 .atuiKernel_SectionPaginationNumber > * {
     margin: 0;
     padding: 10px 15px;
-    font-size: 1.1rem;
     border-top: 1px solid var(--atuiKernel_ColorschemeOB5);
     border-bottom: 1px solid var(--atuiKernel_ColorschemeOB5);
     border-right: 1px solid var(--atuiKernel_ColorschemeOB5);

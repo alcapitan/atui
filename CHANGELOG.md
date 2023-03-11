@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Rename badge on README for number of opened issues in the related milestone. _(from v0.4.0)_
 -   Rewrite JS code of accordion. _(from v0.4.0)_
+-   Set up font-size guidelines. _(from v0.4.0)_
 
 ### Fixed
 

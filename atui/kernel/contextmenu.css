@@ -12,7 +12,6 @@
 
 .atuiKernel_ToolsContextmenu > p {
     font-family: var(--atuiKernel_FontsTitle);
-    font-size: 1.4rem;
     margin: 0 15px;
     color: var(--atuiKernel_ColorschemeOBF);
 }
@@ -65,7 +64,6 @@
 }
 
 .atuiKernel_ToolsContextmenu aside a div p {
-    font-size: 1.25rem;
     margin: 0;
     color: var(--atuiKernel_ColorschemeOBF);
     width: calc(100% - 38px);
@@ -94,5 +92,4 @@
 
 .atuiKernel_ToolsInfotip aside * {
     margin: 0;
-    font-size: 1.1rem;
 }

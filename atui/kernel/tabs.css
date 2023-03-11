@@ -29,7 +29,7 @@
     margin: 0;
     color: inherit;
     font-family: var(--atuiKernel_FontsTitle);
-    font-size: 1.2rem;
+    font-size: 1.125rem;
 }
 
 .atuiKernel_SectionTabsHeader .optionActive {

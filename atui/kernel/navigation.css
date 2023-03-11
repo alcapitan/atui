@@ -34,7 +34,7 @@
 
 .atuiKernel_NavigationSectionImgbig a p /* Text */ {
     margin: 10px 0 0 0;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
@@ -68,7 +68,6 @@
 .atuiKernel_NavigationGlobalpanel aside > div div p {
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: bold;
-    font-size: 1.4rem;
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
@@ -79,7 +78,6 @@
 .atuiKernel_NavigationGlobalpanel aside > div div div a {
     display: block;
     margin: 5px;
-    font-size: 1.1rem;
 }
 
 /* Bar */
@@ -129,7 +127,7 @@
     }
 
     .atuiKernel_NavigationBar p {
-        font-size: 1.2rem;
+        font-size: 1.125rem;
     }
 
     .atuiKernel_NavigationBar *.optionMobileonly {
@@ -156,7 +154,7 @@
     }
 
     .atuiKernel_NavigationBar.optionMobilestyle p {
-        font-size: 0.75rem;
+        font-size: .875rem;
         text-align: center;
     }
 }

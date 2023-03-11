@@ -37,7 +37,6 @@
 .atuiKernel_SectionCard article > div[class="text"] > h3
 /* Titles */ {
     font-family: var(--atuiKernel_FontsTitle);
-    font-size: 1.3rem;
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
