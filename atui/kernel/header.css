@@ -37,7 +37,7 @@
 #atuiKernel_Header > aside > div > * {
     display: flex;
     align-items: center;
-    font-size: 1.125;
+    font-size: 1.125rem;
 }
 
 /* Responsive */
