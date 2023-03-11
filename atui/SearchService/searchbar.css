@@ -18,13 +18,13 @@
 }
 
 #atuiSearchservices_Input /* Searchbar */ {
-    font-size: 1.5rem;
     border: none;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     outline: none;
     color: var(--atuiKernel_ColorschemeOB5);
+    font-size: 1.125rem;
 }
 
 #atuiSearchservices_Submit /* Submit image */ {

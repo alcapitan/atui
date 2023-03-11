@@ -37,6 +37,7 @@
 #atuiKernel_Header > aside > div > * {
     display: flex;
     align-items: center;
+    font-size: 1.125;
 }
 
 /* Responsive */
@@ -76,6 +77,7 @@
 #atuiKernel_Header > aside > nav > div > * {
     display: flex;
     align-items: center;
+    font-size: 1.125rem;
 }
 
 #atuiKernel_Header > aside > nav > div > a {
@@ -91,7 +93,6 @@
 
 #atuiKernel_Header > aside > nav > div p {
     margin: 0;
-    font-size: 1.2rem;
 }
 
 /* Left block */

@@ -21,7 +21,6 @@
     color: var(--atuiKernel_ColorschemeOBF);
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
-    font-size: 1.2rem;
     flex: 1;
 }
 

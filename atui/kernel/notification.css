@@ -37,7 +37,6 @@
     margin: 0 20px;
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: bold;
-    font-size: 1.3rem;
     color: var(--atuiKernel_ColorschemeOA7);
     flex: 1;
 }
@@ -58,6 +57,5 @@
     border-radius: var(--atuiKernel_Borderradius);
     padding: 10px 20px;
     font-family: var(--atuiKernel_FontsTitle);
-    font-size: 1.1rem;
     border: none;
 }

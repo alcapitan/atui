@@ -37,6 +37,20 @@
     --atuiKernel_Borderradius: 10px;
 }
 
+/* Font size list convention : 
+84px : 5.25rem
+72px : 4.5rem
+60px : 3.75rem
+48px : 3rem
+36px : 2.25rem
+30px : 1.875rem
+24px : 1.5rem
+18px : 1.125rem
+16px : 1rem
+14px : 0.875rem
+10px : 0.625rem
+*/
+
 body {
     margin: 0;
     background: var(--atuiKernel_ColorschemeOB0);
@@ -50,6 +64,12 @@ body * {
 
 /* Default props of HTML tags */
 
+p,
+a,
+label {
+    font-size: 1rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -61,4 +81,28 @@ a:active {
 
 a:visited {
     text-decoration: underline dotted;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.875rem;
+}
+
+h6 {
+    font-size: 0.625rem;
 }

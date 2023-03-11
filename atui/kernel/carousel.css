@@ -31,13 +31,4 @@
 
 .atuiKernel_ToolsCarousel > div > h2 /* Title */ {
     font-family: var(--atuiKernel_FontsTitle);
-    font-size: 1.5rem;
-}
-
-.atuiKernel_ToolsCarousel > div > p /* Description */ {
-    font-size: 1.1rem;
-}
-
-.atuiKernel_ToolsCarousel > div a /* Link */ {
-    font-size: 1.2rem;
 }

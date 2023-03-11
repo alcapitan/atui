@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Rename SectionText into SectionParagraph.
 -   Improve animation on hover and active for button.
 -   Add gradient for section content split bar.
+-   Set up font-size guidelines.
 
 ### Removed
 
