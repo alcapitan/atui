@@ -29,7 +29,8 @@
         flex-direction: column-reverse;
     }
 
-    #atuiKernel_Body > *:not(:last-child) #atuiKernel_Section > *:not(:last-child) {
+    #atuiKernel_Body > *:not(:last-child),
+    #atuiKernel_Section > *:not(:last-child) {
         border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
     }
 }
