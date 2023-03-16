@@ -1,5 +1,5 @@
 /*!
- * ATUI v0.3.1 (https://github.com/alcapitan/atui)
+ * ATUI v0.3.2 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
