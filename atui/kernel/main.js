@@ -10,7 +10,7 @@ const atuiKernel_Metadata = {
     author: "alcapitan (on GitHub)",
     version: "v0.3.2",
     website: "https://github.com/alcapitan/atui",
-    in_development: false,
+    in_development: true,
 };
 atuiKernel_MetadataDisplay(atuiKernel_Metadata);
 
