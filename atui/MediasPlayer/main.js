@@ -10,7 +10,7 @@ const atuiMediasplayer_Metadata = {
     author: "alcapitan (on GitHub)",
     version: "v0.3.1",
     website: "https://github.com/alcapitan/atui",
-    in_development: true,
+    in_development: false,
 };
 // atuiKernel_MetadataDisplay(atuiMediasplayer_Metadata);
 
