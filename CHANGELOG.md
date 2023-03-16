@@ -15,23 +15,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Rename badge on README for number of opened issues in the related milestone.
--   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway.
 -   Replace id by class for tools (footer).
--   Rewrite accordion (html structure has a bit changed).
+-   Rewrite HTML structure of accordion.
 -   Change style for a tag.
 -   Rename SectionText into SectionParagraph.
 -   Improve animation on hover and active for button.
 -   Add gradient for section content split bar.
--   Set up font-size guidelines.
 
 ### Removed
 
 -   Remove scrolltop (will be replaced later).
 
+## [0.3.1] - 2023-03-16
+
+### Changed
+
+-   Rename badge on README for number of opened issues in the related milestone.
+-   Rewrite JS code of accordion.
+-   Set up font-size guidelines.
+-   All title tags are stylized in SectionText.
+
 ### Fixed
 
 -   Fix badge on README for latest version.
+-   Update installation instructions in README.
+-   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway.
+-   Fix missing split bar for section management.
 -   Fix margin exceptions mistake for first and last child when there is only one child.
 
 ## [0.3.0] - 2023-02-15
