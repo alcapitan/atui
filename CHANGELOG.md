@@ -7,23 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
--   All title tags are stylized in SectionText. _(from v0.4.0)_
+## [0.3.1] - 2023-03-16
 
 ### Changed
 
--   Rename badge on README for number of opened issues in the related milestone. _(from v0.4.0)_
--   Rewrite JS code of accordion. _(from v0.4.0)_
--   Set up font-size guidelines. _(from v0.4.0)_
+-   Rename badge on README for number of opened issues in the related milestone.
+-   Rewrite JS code of accordion.
+-   Set up font-size guidelines.
+-   All title tags are stylized in SectionText.
 
 ### Fixed
 
--   Fix badge on README for latest version. _(from v0.4.0)_
+-   Fix badge on README for latest version.
 -   Update installation instructions in README.
--   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway. _(from v0.4.0)_
--   Fix missing split bar for section management. _(from v0.4.0)_
--   Fix margin exceptions mistake for first and last child when there is only one child. _(from v0.4.0)_
+-   If the body is shorter than the screen, the footer will be at the bottom of the screen anyway.
+-   Fix missing split bar for section management.
+-   Fix margin exceptions mistake for first and last child when there is only one child.
 
 ## [0.3.0] - 2023-02-15
 

@@ -30,7 +30,7 @@ Then, change the links above for reach extensions files.
 
 ### With release package (for users)
 
-<a href="https://github.com/alcapitan/atui/releases/tag/v0.3.0">Download the latest release.</a>  
+<a href="https://github.com/alcapitan/atui/releases/tag/v0.3.1">Download the latest release.</a>  
 After downloading ATUI, copy the `/atui` folder and paste it into your website root.
 
 ### With git (for developers)
