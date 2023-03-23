@@ -16,7 +16,7 @@ Anyway, you can already contribute to the project and give your opinions !
 ## Download and use ATUI (with Git)
 
 Don't worry, in version 0.4.0 distribution methods will be easy.  
-You should display your website with an VScode extension like <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a>.
+You should display your website with an VScode extension like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 ### With CDN (for users)
 
@@ -29,7 +29,7 @@ Then, change the links above for reach extensions files.
 
 ### With release package (for users)
 
-<a href="https://github.com/alcapitan/atui/releases">Download the latest release.</a>  
+[Download the latest release.](https://github.com/alcapitan/atui/releases)  
 After downloading ATUI, copy the `/atui` folder and paste it into your website root.
 
 ### With git (for developers)
@@ -40,8 +40,8 @@ After downloading ATUI, copy the `/atui` folder and paste it into your website r
 
 ATUI is an open-source project that invites collaboration.  
 You can help in the development of the project even without coding ! So you can test ATUI, report bugs, give your opinions and ideas for improvement, and more...  
-Before contributing, please read <a href="https://alcapitan.github.io/atui/CONTRIBUTING.md">CONTRIBUTING.md</a>.
-All your reports must be done in <a href="https://github.com/alcapitan/atui/issues">Issues on GitHub</a>. The road map is also in the Issues page.
+Before contributing, please read [CONTRIBUTING.md](https://alcapitan.github.io/atui/CONTRIBUTING.md).
+All your reports must be done in [Issues on GitHub](https://github.com/alcapitan/atui/issues). The road map is also in the Issues page.
 
 ## What is this project in a nutshell ?
 
@@ -56,7 +56,7 @@ All your reports must be done in <a href="https://github.com/alcapitan/atui/issu
 ### Tree structure explanation
 
 -   The root `/` contains HTML files and some config and meta files.
--   The folder `/atui` contains `kernel` (ATUI core files) and some <a href="#extensions">extensions</a>.
+-   The folder `/atui` contains `kernel` (ATUI core files) and some [extensions](#extensions).
 -   The folder `/patch` contains your files like CSS, JS, icons, illustrations, and so on.
 -   The folders `*/medias` contains all files about someone except CSS and JS files.
 -   The files `*/sources.txt` contains all links to the icons and other medias.
@@ -74,19 +74,19 @@ Anyone can create an extension, but you have to respect extension coding standar
 
 ## License & Use of external service
 
-Project released under <a href="https://alcapitan.github.io/atui/LICENSE.md">GNU General Public License</a>.
+Project released under [GNU General Public License](https://alcapitan.github.io/atui/LICENSE.md).
 
 ### Softwares
 
--   Code editor : <a href="https://code.visualstudio.com/">Visual Studio Code</a>.
--   Version control : <a href="https://git-scm.com/">Git</a>
+-   Code editor : [Visual Studio Code](https://code.visualstudio.com).
+-   Version control : [Git](https://git-scm.com).
 
 ### Websites
 
--   Know the compatibility of web browsers about different things : <a href="https://caniuse.com">Caniuse</a>.
--   Icons : <a href="https://icons8.com/">Icons8</a>.
--   Illustrations : <a href="https://www.pexels.com">Pexels</a>.
--   Performance measurement and advices for improvement : <a href="https://developers.google.com/speed/pagespeed/insights">Google Insights</a>.
--   Checking HTML code : <a href="https://validator.w3.org/">W3C Markup Validation Service</a>.
--   Checking CSS code : <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a>.
+-   Know the compatibility of web browsers about different things : [Caniuse](https://caniuse.com).
+-   Icons : [Icons8](https://icons8.com).
+-   Illustrations : [Pexels](https://pexels.com).
+-   Performance measurement and advices for improvement : [Google Insights](https://developers.google.com/speed/pagespeed/insights).
+-   Checking HTML code : [W3C Markup Validation Service](https://validator.w3.org).
+-   Checking CSS code : [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator).
 -   And a lot of more...
