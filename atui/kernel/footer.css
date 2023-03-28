@@ -8,7 +8,7 @@
 .atuiKernel_Footer {
     position: relative;
     background-color: var(--atuiKernel_ColorschemeOA1);
-    padding: 20px 40px 5px 40px;
+    padding: 20px 40px 5px;
 }
 
 /* Responsive */
@@ -87,6 +87,11 @@
 /* Links of elements */ {
     font-weight: normal;
     text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Logotype & Description */
@@ -149,6 +154,11 @@
 #atuiKernel_FooterLegals *:hover
 /* Links of elements */ {
     font-weight: normal;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
     text-decoration: underline;
 }
 

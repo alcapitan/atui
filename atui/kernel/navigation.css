@@ -20,8 +20,9 @@
 }
 
 .atuiKernel_NavigationSectionImgbig a:hover,
-.atuiKernel_NavigationSectionImgbig a:active, 
+.atuiKernel_NavigationSectionImgbig a:active,
 .atuiKernel_NavigationSectionImgbig a:visited {
+    text-decoration: none;
     text-decoration: none;
 }
 
@@ -39,12 +40,16 @@
 }
 
 .atuiKernel_NavigationSectionImgbig a p /* Text */ {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0;
     font-size: 1.125rem;
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
 /* Global Panel */
+
+.atuiKernel_NavigationGlobalpanel aside {
+    display: block !important;
+}
 
 .atuiKernel_NavigationGlobalpanel aside {
     align-items: normal;
@@ -55,7 +60,6 @@
     background-color: var(--atuiKernel_ColorschemeOB0);
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_Shadow);
-    display: block !important;
 }
 
 .atuiKernel_NavigationGlobalpanel aside > div {
@@ -99,12 +103,14 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    column-gap: 10px;
     row-gap: 5px;
 }
 
 .atuiKernel_NavigationBar a:hover,
-.atuiKernel_NavigationBar a:active, 
+.atuiKernel_NavigationBar a:active,
 .atuiKernel_NavigationBar a:visited {
+    text-decoration: none;
     text-decoration: none;
 }
 
@@ -166,12 +172,17 @@
     }
 
     .atuiKernel_NavigationBar.optionMobilestyle p {
-        font-size: .875rem;
+        font-size: 0.875rem;
         text-align: center;
     }
 }
 
 @media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_NavigationBar {
+        border-image: none !important;
+        border-image: none !important;
+    }
+
     .atuiKernel_NavigationBar {
         width: calc(100% - 10px);
         padding: 5px;
@@ -182,11 +193,9 @@
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
         border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
-        border-image : none !important;
         display: flex;
         justify-content: space-around;
-        flex-wrap: nowrap;
-        flex-direction: row;
+        flex-flow: row nowrap;
     }
 
     .atuiKernel_NavigationBar a {
@@ -204,7 +213,7 @@
     }
 
     .atuiKernel_NavigationBar p {
-        font-size: .875rem;
+        font-size: 0.875rem;
         text-align: center;
     }
 

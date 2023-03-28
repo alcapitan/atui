@@ -284,10 +284,6 @@ function atuiKernel_FooterLastedited(day, month, year) {
 
 /* Notifications */
 
-function atuiKernel_NotificationClose(element) {
-    element.remove();
-}
-
 try {
     const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
 } catch {}

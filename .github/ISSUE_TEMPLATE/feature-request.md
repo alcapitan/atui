@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project.
-title: ''
+title: ""
 labels: doc, feat, improve
-assignees: ''
-
+assignees: ""
 ---
 
 First, make sure your idea is useful, it relates to this directory, and it has never been suggested.

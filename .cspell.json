@@ -1,7 +1,9 @@
 {
     "version": "0.2",
+    "dictionaries": ["node", "npm", "fonts", "markdown", "html", "css"],
     "language": "en",
     "useGitignore": true,
+    "ignorePaths": ["/node_modules"],
     "words": [
         "alcapitan",
         "ATUI",
@@ -14,14 +16,19 @@
         "Displaymode",
         "Globalpanel",
         "Imgbig",
+        "Ingo",
         "Infotip",
         "Lastedited",
         "Mediasplayer",
         "Mobileonly",
         "Mobilestyle",
+        "Overstackflow",
+        "thumbsup",
+        "Pexels",
         "Progressbar",
         "searchbar",
-        "Searchservices",
+        "Searchservice",
+        "scrolltop",
         "videoplayer"
     ]
 }

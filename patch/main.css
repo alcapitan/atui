@@ -3,20 +3,20 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/*:root
+/* :root
 {
      --atuiKernel_FontsTitle : 'Times New Roman';
      --atuiKernel_FontsText : Arial;
      --atuiKernel_FontsSpecial : 'Ubuntu';
-}*/
+} */
 
-/*body
+/* body
 {
      background : var(--atuiKernel_ColorschemeOA1);
-}*/
+} */
 
 .atuiKernel_ToolsCarousel {
-    background-image: url(illustrations/presentation.jpg);
+    background-image: url("illustrations/presentation.jpg");
 }
 
 .gridTest {

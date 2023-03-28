@@ -39,6 +39,7 @@
     #atuiSearchservices_HeaderBar {
         background-color: var(--atuiKernel_ColorschemeOB0);
     }
+
     #atuiSearchservices_Input /* Searchbar */ {
         display: inline;
     }

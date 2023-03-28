@@ -1,0 +1,59 @@
+{
+    "name": "atui",
+    "version": "0.4.0",
+    "description": "Front-end library to build your website easier.",
+    "main": "index.html",
+    "engines": {
+        "node": ">=14"
+    },
+    "scripts": {
+        "cspell": "cspell lint \"*.css\" \"*.js\" \"*.md\" --cache --show-context",
+        "eslint": "eslint --ext .js ./ --fix --cache",
+        "eslint:check": "eslint --ext .js ./ --cache",
+        "postcss": "postcss **.css -r --map",
+        "prettier": "prettier -w **.css **.js **.md **.html --cache",
+        "prettier:check": "prettier -c **.css **.js **.md **.html --cache",
+        "stylelint": "stylelint \"**.css\" --cache --fix",
+        "stylelint:check": "stylelint \"**.css\" --cache",
+        "check": "npm-run-all cspell prettier:check stylelint:check eslint:check --continue-on-error",
+        "lint": "npm-run-all cspell prettier stylelint eslint --continue-on-error",
+        "test": "npm-run-all check --continue-on-error --parallel \"build:*\"",
+        "build:css": "npm-run-all postcss",
+        "build": "npm-run-all lint --continue-on-error --parallel \"build:*\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alcapitan/atui.git"
+    },
+    "keywords": [
+        "lightweight",
+        "website",
+        "front-end",
+        "library",
+        "web",
+        "easy-to-use"
+    ],
+    "author": "Al Capitan",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/alcapitan/atui/issues"
+    },
+    "homepage": "https://github.com/alcapitan/atui#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "cspell": "^6.31.1",
+        "eslint": "^8.36.0",
+        "eslint-config-prettier": "^8.8.0",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.21",
+        "postcss-cli": "^10.1.0",
+        "postcss-preset-env": "^8.2.0",
+        "prettier": "^2.8.7",
+        "stylelint": "^15.3.0",
+        "stylelint-config-standard": "^31.0.0"
+    },
+    "dependencies": {
+        "@tabler/icons-webfont": "^2.11.0",
+        "http-server": "^14.1.1"
+    }
+}

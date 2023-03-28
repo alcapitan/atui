@@ -5,8 +5,7 @@
 
 .atuiKernel_SectionGrid {
     display: grid;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    grid-gap: 15px;
     align-items: baseline;
 }
 

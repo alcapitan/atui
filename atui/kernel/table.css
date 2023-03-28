@@ -12,10 +12,6 @@
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle;
-}
-
-.atuiKernel_SectionTable td,
-.atuiKernel_SectionTable th {
     border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
     border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
 }
@@ -24,7 +20,7 @@
     color: var(--atuiKernel_ColorschemeOB5);
     font-style: italic;
     margin: 10px 0;
-    font-size: .875rem;
+    font-size: 0.875rem;
     caption-side: bottom;
 }
 

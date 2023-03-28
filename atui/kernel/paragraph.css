@@ -23,6 +23,11 @@
 
 .atuiKernel_SectionParagraph a {
     text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Quote */
@@ -36,5 +41,5 @@
     color: var(--atuiKernel_ColorschemeOB7);
     display: block;
     margin: 5px 0 0 10px;
-    font-size: .875rem;
+    font-size: 0.875rem;
 }

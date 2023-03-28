@@ -11,10 +11,10 @@
     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
-/*.atuiKernel_SectionBox:has(.atuiKernel_SectionBoxIcon)
+/* .atuiKernel_SectionBox:has(.atuiKernel_SectionBoxIcon)
 {
     min-height : 30px;
-}*/
+} */
 
 .atuiKernel_SectionBox * {
     margin: 0;
@@ -26,23 +26,23 @@
 }
 
 .atuiKernel_SectionBox.optionAlert {
-    border-color: rgb(255, 0, 0);
-    background-color: rgb(255, 204, 204);
+    border-color: rgb(255 0 0);
+    background-color: rgb(255 204 204);
 }
 
 .atuiKernel_SectionBox.optionWarning {
-    border-color: rgb(255, 128, 0);
-    background-color: rgb(255, 230, 204);
+    border-color: rgb(255 128 0);
+    background-color: rgb(255 230 204);
 }
 
 .atuiKernel_SectionBox.optionInfo {
-    border-color: rgb(0, 128, 255);
-    background-color: rgb(204, 230, 255);
+    border-color: rgb(0 128 255);
+    background-color: rgb(204 230 255);
 }
 
 .atuiKernel_SectionBox.optionSuccess {
-    border-color: rgb(0, 153, 51);
-    background-color: rgb(204, 235, 214);
+    border-color: rgb(0 153 51);
+    background-color: rgb(204 235 214);
 }
 
 .atuiKernel_SectionBoxIcon {

@@ -1,0 +1,29 @@
+name: NPM test script
+
+on:
+  push:
+  pull_request:
+
+env:
+  FORCE_COLOR: 2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+
+    - name: Install NPM dependencies
+      run: npm install
+
+    - name: Run the NPM test script
+      run: npm test
