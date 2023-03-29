@@ -73,6 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Introduce option styles.
 -   Add overlay style for videoplayer.
 -   Add findElement practical function.
+-   Add custom shadow style
 
 ### Changed
 
