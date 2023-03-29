@@ -6,21 +6,7 @@
     "engines": {
         "node": ">=14"
     },
-    "scripts": {
-        "cspell": "cspell lint \"*.css\" \"*.js\" \"*.md\" --cache --show-context",
-        "eslint": "eslint --ext .js ./ --fix --cache",
-        "eslint:check": "eslint --ext .js ./ --cache",
-        "postcss": "postcss **.css -r",
-        "prettier": "prettier -w **.css **.js **.md **.html --cache",
-        "prettier:check": "prettier -c **.css **.js **.md **.html --cache",
-        "stylelint": "stylelint \"**.css\" --cache --fix",
-        "stylelint:check": "stylelint \"**.css\" --cache",
-        "check": "npm-run-all cspell prettier:check stylelint:check eslint:check --continue-on-error",
-        "lint": "npm-run-all cspell prettier stylelint eslint --continue-on-error",
-        "test": "npm-run-all check --continue-on-error \"build:*\"",
-        "build:css": "npm-run-all postcss",
-        "build": "npm-run-all lint --continue-on-error \"build:*\""
-    },
+    "scripts": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/alcapitan/atui.git"
@@ -39,23 +25,6 @@
         "url": "https://github.com/alcapitan/atui/issues"
     },
     "homepage": "https://github.com/alcapitan/atui#readme",
-    "devDependencies": {
-        "autoprefixer": "^10.4.14",
-        "cspell": "^6.31.1",
-        "eslint": "^8.37.0",
-        "eslint-config-prettier": "^8.8.0",
-        "npm-run-all": "^4.1.5",
-        "postcss": "^8.4.21",
-        "postcss-cli": "^10.1.0",
-        "postcss-preset-env": "^8.2.0",
-        "prettier": "^2.8.7",
-        "stylelint": "^15.3.0",
-        "stylelint-config-standard": "^31.0.0"
-    },
-    "dependencies": {
-        "@tabler/icons-webfont": "^2.12.0",
-        "http-server": "^14.1.1"
-    },
     "browserslist": [
         "defaults"
     ]
