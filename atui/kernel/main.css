@@ -24,6 +24,7 @@
 @import url("./settings.css");
 @import url("./table.css");
 @import url("./tabs.css");
+@import url("./shadow.css");
 
 /* Global */
 
@@ -38,7 +39,7 @@
     --atuiKernel_Borderradius: 10px;
 }
 
-/* Font size list convention : 
+/* Font size list convention :
 84px : 5.25rem
 72px : 4.5rem
 60px : 3.75rem
