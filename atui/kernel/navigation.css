@@ -23,6 +23,7 @@
 .atuiKernel_NavigationSectionImgbig a:active,
 .atuiKernel_NavigationSectionImgbig a:visited {
     text-decoration: none;
+    -webkit-text-decoration: none;
     text-decoration: none;
 }
 
@@ -102,7 +103,8 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     column-gap: 10px;
     row-gap: 5px;
 }
@@ -111,6 +113,7 @@
 .atuiKernel_NavigationBar a:active,
 .atuiKernel_NavigationBar a:visited {
     text-decoration: none;
+    -webkit-text-decoration: none;
     text-decoration: none;
 }
 
@@ -160,7 +163,7 @@
         display: block;
     }
 
-    .atuiKernel_NavigationBar:not(.optionMobilestyle, .optionDrawer),
+    .atuiKernel_NavigationBar:not(.optionMobilestyle):not(.optionDrawer),
     .atuiKernel_NavigationBar.optionDrawer:hover {
         width: 20%;
     }
@@ -179,7 +182,8 @@
 
 @media (max-width: 767px) /* Smartphones */ {
     .atuiKernel_NavigationBar {
-        border-image: none !important;
+        -o-border-image: none !important;
+           border-image: none !important;
         border-image: none !important;
     }
 

@@ -15,9 +15,7 @@
     cursor: pointer;
     border-radius: var(--atuiKernel_Borderradius);
     text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
+    -webkit-text-decoration: none;
     text-decoration: none;
 }
 
@@ -52,7 +50,7 @@
 
 /* Default */
 
-.atuiKernel_Button:not(.optionPrimary, .optionSecondary, .optionTertiary) {
+.atuiKernel_Button:not(.optionPrimary):not(.optionSecondary):not(.optionTertiary) {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 

@@ -23,7 +23,15 @@
     }
 
     #atuiKernel_Section > *:not(:last-child) {
-        border-image: linear-gradient(
+        -o-border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
+                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0 0;
+           border-image: linear-gradient(
                 to bottom,
                 transparent calc(0% + 20px),
                 var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
@@ -54,7 +62,15 @@
     }
 
     #atuiKernel_Section > *:not(:last-child) {
-        border-image: linear-gradient(
+        -o-border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
+                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
+           border-image: linear-gradient(
                 to right,
                 transparent calc(0% + 20px),
                 var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
@@ -139,9 +155,7 @@
 
 .atuiKernel_SectionSquarelink > a {
     text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
+    -webkit-text-decoration: none;
     text-decoration: none;
     min-width: 100px;
     height: 100px;
@@ -160,9 +174,7 @@
 .atuiKernel_SectionSquarelink > a:active,
 .atuiKernel_SectionSquarelink > a:visited {
     text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
+    -webkit-text-decoration: none;
     text-decoration: none;
 }
 
@@ -211,11 +223,13 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOA5) 94%, rgb(0 0 0 / 0%)) top/10px 10px
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOA5) 94%, rgba(0, 0, 0, 0)) top/10px 10px
             no-repeat,
-        conic-gradient(rgb(0 0 0 / 0%) 30%, var(--atuiKernel_ColorschemeOA5));
-    mask: radial-gradient(farthest-side, rgb(0 0 0 / 0%) calc(100% - 10px), #000 0);
-    mask: radial-gradient(farthest-side, rgb(0 0 0 / 0%) calc(100% - 10px), #000 0);
+        conic-gradient(rgba(0, 0, 0, 0) 30%, var(--atuiKernel_ColorschemeOA5));
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 10px), #000 0);
+            mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 10px), #000 0);
+    -webkit-mask: radial-gradient(farthest-side, rgb(0 0 0 / 0%) calc(100% - 10px), #000 0);
+            mask: radial-gradient(farthest-side, rgb(0 0 0 / 0%) calc(100% - 10px), #000 0);
     animation: spinner-animation 1s infinite linear;
 
     /* background mask -webkit-mask width height properties are copied in js, please if you change that, change it in the js too */
@@ -230,13 +244,13 @@
 }
 
 .atuiKernel_Spinner.optionMonochromeLight {
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB2) 94%, rgb(0 0 0 / 0%)) top/10px 10px
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB2) 94%, rgba(0, 0, 0, 0)) top/10px 10px
             no-repeat,
-        conic-gradient(rgb(0 0 0 / 0%) 30%, var(--atuiKernel_ColorschemeOB2));
+        conic-gradient(rgba(0, 0, 0, 0) 30%, var(--atuiKernel_ColorschemeOB2));
 }
 
 .atuiKernel_Spinner.optionMonochromeDark {
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB8) 94%, rgb(0 0 0 / 0%)) top/10px 10px
+    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB8) 94%, rgba(0, 0, 0, 0)) top/10px 10px
             no-repeat,
-        conic-gradient(rgb(0 0 0 / 0%) 30%, var(--atuiKernel_ColorschemeOB8));
+        conic-gradient(rgba(0, 0, 0, 0) 30%, var(--atuiKernel_ColorschemeOB8));
 }

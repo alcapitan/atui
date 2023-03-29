@@ -20,9 +20,7 @@
 .atuiKernel_ToolsContextmenu > p:active {
     font-weight: bold;
     text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
+    -webkit-text-decoration: underline;
     text-decoration: underline;
     transition: font-weight 500ms;
 }
@@ -52,9 +50,7 @@
 .atuiKernel_ToolsContextmenu aside a {
     display: block;
     text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
+    -webkit-text-decoration: none;
     text-decoration: none;
 }
 
@@ -95,7 +91,8 @@
 
 .atuiKernel_ToolsInfotip aside {
     padding: 20px;
-    backdrop-filter: var(--atuiKernel_Blur);
+    -webkit-backdrop-filter: var(--atuiKernel_Blur);
+            backdrop-filter: var(--atuiKernel_Blur);
     backdrop-filter: var(--atuiKernel_Blur);
 }
 

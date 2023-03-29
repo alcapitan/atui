@@ -23,9 +23,7 @@
 
 .atuiKernel_SectionParagraph a {
     text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
+    -webkit-text-decoration: underline;
     text-decoration: underline;
 }
 

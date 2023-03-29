@@ -15,7 +15,8 @@
     border: none;
     box-shadow: var(--atuiKernel_Shadow);
     background-color: var(--atuiKernel_ColorschemeBB1);
-    backdrop-filter: var(--atuiKernel_Blur);
+    -webkit-backdrop-filter: var(--atuiKernel_Blur);
+            backdrop-filter: var(--atuiKernel_Blur);
     backdrop-filter: var(--atuiKernel_Blur);
     display: none;
 }

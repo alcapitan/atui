@@ -112,7 +112,8 @@
 
 .atuiKernel_SectionCard.optionOverlay article > div[class="image"] img {
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     object-fit: cover;
 }
 

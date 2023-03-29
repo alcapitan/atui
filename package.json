@@ -10,16 +10,16 @@
         "cspell": "cspell lint \"*.css\" \"*.js\" \"*.md\" --cache --show-context",
         "eslint": "eslint --ext .js ./ --fix --cache",
         "eslint:check": "eslint --ext .js ./ --cache",
-        "postcss": "postcss **.css -r --map",
+        "postcss": "postcss **.css -r",
         "prettier": "prettier -w **.css **.js **.md **.html --cache",
         "prettier:check": "prettier -c **.css **.js **.md **.html --cache",
         "stylelint": "stylelint \"**.css\" --cache --fix",
         "stylelint:check": "stylelint \"**.css\" --cache",
         "check": "npm-run-all cspell prettier:check stylelint:check eslint:check --continue-on-error",
         "lint": "npm-run-all cspell prettier stylelint eslint --continue-on-error",
-        "test": "npm-run-all check --continue-on-error --parallel \"build:*\"",
+        "test": "npm-run-all check --continue-on-error \"build:*\"",
         "build:css": "npm-run-all postcss",
-        "build": "npm-run-all lint --continue-on-error --parallel \"build:*\""
+        "build": "npm-run-all lint --continue-on-error \"build:*\""
     },
     "repository": {
         "type": "git",
@@ -55,5 +55,8 @@
     "dependencies": {
         "@tabler/icons-webfont": "^2.12.0",
         "http-server": "^14.1.1"
-    }
+    },
+    "browserslist": [
+        "defaults"
+    ]
 }

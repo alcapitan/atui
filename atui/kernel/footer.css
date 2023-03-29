@@ -87,9 +87,7 @@
 /* Links of elements */ {
     font-weight: normal;
     text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
+    -webkit-text-decoration: underline;
     text-decoration: underline;
 }
 
@@ -154,9 +152,7 @@
 /* Links of elements */ {
     font-weight: normal;
     text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
+    -webkit-text-decoration: underline;
     text-decoration: underline;
 }
 
