@@ -33,9 +33,12 @@
     --atuiKernel_FontsTitle: "Noto Sans", arial;
     --atuiKernel_FontsText: "Noto Sans", arial;
     --atuiKernel_FontsSpecial: "Lobster", "Noto Sans", arial;
-    --atuiKernel_Shadow: rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px;
     --atuiKernel_Blur: blur(5px);
     --atuiKernel_Borderradius: 10px;
+    --atuiKernel_ShadowLight: rgb(0 0 0 / 24%) 0px 3px 8px; /* #5 */
+    --atuiKernel_ShadowMedium: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px; /* #12 */
+    --atuiKernel_ShadowHeavy: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+        rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px; /* #10 */
 }
 
 /* Font size list convention : 
@@ -51,6 +54,9 @@
 14px : 0.875rem
 10px : 0.625rem
 */
+
+/* Shadows source : https://getcssscan.com/css-box-shadow-examples
+Look at the # to find the corresponding shadow */
 
 body {
     margin: 0;
@@ -77,8 +83,6 @@ a {
     text-decoration: none;
     text-decoration: none;
     text-decoration: none;
-    text-decoration: none;
-    text-decoration: none;
 }
 
 a:hover,
@@ -87,13 +91,10 @@ a:active {
     text-decoration: underline;
     text-decoration: underline;
     text-decoration: underline;
-    text-decoration: underline;
-    text-decoration: underline;
 }
 
 a:visited {
-    text-decoration: underline;
-    text-decoration: underline;
+    text-decoration: underline dotted;
     text-decoration: underline dotted;
     text-decoration: underline dotted;
     text-decoration: underline dotted;

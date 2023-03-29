@@ -19,7 +19,7 @@
     background-image: url("illustrations/presentation.jpg");
 }
 
-.gridTest {
+.boxTest {
     border: 1px solid var(--atuiKernel_ColorschemeOBF);
     border-radius: var(--atuiKernel_Borderradius);
 }
