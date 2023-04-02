@@ -1,4 +1,4 @@
-<p align="center"><img src="atui/kernel/medias/logo.png" alt="Logo ATUI" width="170" height="170"></p>
+<p align="center"><img src="atui/kernel/assets/logo.png" alt="Logo ATUI" width="170" height="170"></p>
 <h3 align="center">ATUI (Alex Tech User Interface)</h3>
 <p align="center"><i>Front-end library to build your website easier.</i></p>
 

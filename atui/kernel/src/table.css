@@ -1,0 +1,30 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionTable table {
+    border-collapse: collapse;
+}
+
+.atuiKernel_SectionTable td,
+.atuiKernel_SectionTable th {
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
+}
+
+.atuiKernel_SectionTable caption {
+    color: var(--atuiKernel_ColorschemeOB5);
+    font-style: italic;
+    margin: 10px 0;
+    font-size: 0.875rem;
+    caption-side: bottom;
+}
+
+.atuiKernel_SectionTable th {
+    font-weight: bold;
+    font-family: var(--atuiKernel_FontsTitle);
+}

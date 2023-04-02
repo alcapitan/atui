@@ -1,0 +1,87 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+form,
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    gap: 15px;
+}
+
+form > div,
+fieldset > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: var(--atuiKernel_ColorschemeOB0);
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    padding: 10px 15px;
+    height: 40px;
+    box-sizing: border-box;
+    accent-color: var(--atuiKernel_ColorschemeOA5);
+}
+
+input,
+progress,
+textarea,
+select,
+input[type="file"]::file-selector-button {
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: var(--atuiKernel_ColorschemeOB0);
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    padding: 10px 15px;
+    height: 40px;
+    box-sizing: border-box;
+    accent-color: var(--atuiKernel_ColorschemeOA5);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 30px;
+}
+
+progress {
+    border-radius: revert;
+    border: revert;
+    background-color: revert;
+}
+
+input[type="color"],
+input[type="file"] {
+    padding: 0;
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+}
+
+input:focus:not([type="checkbox"], [type="radio"], [type="range"]),
+progress:focus,
+textarea:focus,
+select:focus {
+    outline: solid 2px var(--atuiKernel_ColorschemeBA4);
+}
+
+fieldset {
+    border: 1px solid var(--atuiKernel_ColorschemeBA6);
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 15px;
+    margin: 0;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-family: var(--atuiKernel_FontsTitle);
+    padding: 0 10px;
+    font-size: 1.125rem;
+}

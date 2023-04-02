@@ -1,6 +1,6 @@
 # Large and proprietary files
 *.mp3
-!atui/kernel/medias/notification.mp3
+!atui/kernel/assets/notification.mp3
 *.mp4
 patch/musics/*
 patch/videos/*

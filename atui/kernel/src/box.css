@@ -1,0 +1,53 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionBox {
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 15px;
+    min-height: 30px;
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+}
+
+/* .atuiKernel_SectionBox:has(.atuiKernel_SectionBoxIcon)
+{
+    min-height : 30px;
+} */
+
+.atuiKernel_SectionBox * {
+    margin: 0;
+}
+
+.atuiKernel_SectionBox.optionAccent {
+    border-color: var(--atuiKernel_ColorschemeOA5);
+    background-color: var(--atuiKernel_ColorschemeOA1);
+}
+
+.atuiKernel_SectionBox.optionAlert {
+    border-color: rgb(255 0 0);
+    background-color: rgb(255 204 204);
+}
+
+.atuiKernel_SectionBox.optionWarning {
+    border-color: rgb(255 128 0);
+    background-color: rgb(255 230 204);
+}
+
+.atuiKernel_SectionBox.optionInfo {
+    border-color: rgb(0 128 255);
+    background-color: rgb(204 230 255);
+}
+
+.atuiKernel_SectionBox.optionSuccess {
+    border-color: rgb(0 153 51);
+    background-color: rgb(204 235 214);
+}
+
+.atuiKernel_SectionBoxIcon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 10px 0;
+    float: left;
+}

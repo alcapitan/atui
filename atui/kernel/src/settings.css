@@ -1,0 +1,17 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+#atuiKernel_ToolsSettingsDisplaymode {
+    width: 50px;
+    height: 50px;
+}
+
+#atuiKernel_ToolsSettingsDisplaymode img {
+    width: 35px !important;
+    height: 35px !important;
+    margin: 7.5px !important;
+}

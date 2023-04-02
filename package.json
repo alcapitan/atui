@@ -7,19 +7,38 @@
         "node": ">=14"
     },
     "scripts": {
-        "cspell": "cspell lint \"*.css\" \"*.js\" \"*.md\" --cache --show-context",
-        "eslint": "eslint --ext .js ./ --fix --cache",
-        "eslint:check": "eslint --ext .js ./ --cache",
-        "postcss": "postcss **.css -r",
-        "prettier": "prettier -w **.css **.js **.md **.html --cache",
-        "prettier:check": "prettier -c **.css **.js **.md **.html --cache",
-        "stylelint": "stylelint \"**.css\" --cache --fix",
-        "stylelint:check": "stylelint \"**.css\" --cache",
-        "check": "npm-run-all cspell prettier:check stylelint:check eslint:check --continue-on-error",
-        "lint": "npm-run-all cspell prettier stylelint eslint --continue-on-error",
-        "test": "npm-run-all check --continue-on-error \"build:*\"",
-        "build:css": "npm-run-all postcss",
-        "build": "npm-run-all lint --continue-on-error \"build:*\""
+        "babel:vk": "babel atui/kernel/src/*.js --out-dir atui/kernel/dist/ -s",
+        "babel:mp": "babel atui/MediasPlayer/src/*.js --out-dir atui/MediasPlayer/dist/ -s",
+        "babel:ss": "babel atui/SearchService/src/*.js --out-dir atui/SearchService/dist/ -s",
+        "cspell:vk": "cspell lint atui/kernel/src/*.{css,js} README.md --cache --show-context",
+        "cspell:mp": "cspell lint atui/MediasPlayer/src/*.{css,js} --cache --show-context",
+        "cspell:ss": "cspell lint atui/SearchService/src/*.{css,js} --cache --show-context",
+        "esbuild:vk": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/kernel/dist/main.css dist=atui/kernel/dist/main.js --outdir=atui/kernel/dist/",
+        "esbuild:mp": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/MediasPlayer/dist/main.css dist=atui/MediasPlayer/dist/main.js --outdir=atui/MediasPlayer/dist/",
+        "esbuild:ss": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/SearchService/dist/main.css dist=atui/SearchService/dist/main.js --outdir=atui/SearchService/dist/",
+        "eslint:vk": "eslint atui/kernel/src/*.js --cache --fix",
+        "eslint:mp": "eslint atui/MediasPlayer/src/*.js --cache --fix",
+        "eslint:ss": "eslint atui/SearchService/src/*.js --cache --fix",
+        "eslint:check:vk": "eslint atui/kernel/src/*.js --cache",
+        "eslint:check:mp": "eslint atui/MediasPlayer/src/*.js --cache",
+        "eslint:check:ss": "eslint atui/SearchService/src/*.js --cache",
+        "postcss:vk": "postcss atui/kernel/src/*.css -d atui/kernel/dist/ -m",
+        "postcss:mp": "postcss atui/MediasPlayer/src/*.css -d atui/MediasPlayer/dist/ -m",
+        "postcss:ss": "postcss atui/SearchService/src/*.css -d atui/SearchService/dist/ -m",
+        "prettier:vk": "prettier -w atui/kernel/src/**.{css,js} README.md **.html --cache",
+        "prettier:mp": "prettier -w atui/MediasPlayer/src/**.{css,js} --cache",
+        "prettier:ss": "prettier -w atui/SearchService/src/**.{css,js} --cache",
+        "prettier:check:vk": "prettier -c atui/kernel/src/**.{css,js} README.md **.html --cache",
+        "prettier:check:mp": "prettier -c atui/MediasPlayer/src/**.{css,js} --cache",
+        "prettier:check:ss": "prettier -c atui/SearchService/src/**.{css,js} --cache",
+        "stylelint:vk": "stylelint atui/kernel/src/*.css --cache --fix",
+        "stylelint:mp": "stylelint atui/MediasPlayer/src/*.css --cache --fix",
+        "stylelint:ss": "stylelint atui/SearchService/src/*.css --cache --fix",
+        "stylelint:check:vk": "stylelint atui/kernel/src/*.css --cache",
+        "stylelint:check:mp": "stylelint atui/MediasPlayer/src/*.css --cache",
+        "stylelint:check:ss": "stylelint atui/SearchService/src/*.css --cache",
+        "check": "npm-run-all cspell:* prettier:check:* stylelint:check:* eslint:check:*",
+        "build": "npm-run-all cspell:* prettier:* stylelint:* eslint:* postcss:* babel:* esbuild:*"
     },
     "repository": {
         "type": "git",
@@ -40,8 +59,13 @@
     },
     "homepage": "https://github.com/alcapitan/atui#readme",
     "devDependencies": {
+        "@babel/cli": "^7.21.0",
+        "@babel/core": "^7.21.4",
+        "@babel/eslint-parser": "^7.21.3",
+        "@babel/preset-env": "^7.21.4",
         "autoprefixer": "^10.4.14",
         "cspell": "^6.31.1",
+        "esbuild": "^0.17.14",
         "eslint": "^8.37.0",
         "eslint-config-prettier": "^8.8.0",
         "npm-run-all": "^4.1.5",
@@ -57,6 +81,6 @@
         "http-server": "^14.1.1"
     },
     "browserslist": [
-        "defaults"
+        "defaults, node >= 14"
     ]
 }

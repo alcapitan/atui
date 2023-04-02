@@ -1,0 +1,59 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionDownload /* Element */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.atuiKernel_SectionDownload > div /* Containers */ {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.atuiKernel_SectionDownload > div:first-child /* Metadata container */ {
+    flex: 1;
+}
+
+.atuiKernel_SectionDownload > div:first-child img /* File icon */ {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.atuiKernel_SectionDownload > div:first-child p /* File name */ {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionDownload /* Element */ {
+        flex-direction: row;
+    }
+
+    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionDownload /* Element */ {
+        flex-direction: column;
+    }
+
+    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
+        justify-content: space-around;
+    }
+}

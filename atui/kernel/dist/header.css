@@ -1,0 +1,148 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+#atuiKernel_Header {
+    background-color: var(--atuiKernel_ColorschemeOA7);
+    min-height: 50px;
+}
+
+#atuiKernel_Header > aside {
+    background-color: var(--atuiKernel_ColorschemeBB1);
+    -webkit-backdrop-filter: var(--atuiKernel_Blur);
+            backdrop-filter: var(--atuiKernel_Blur);
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: stretch;
+    width: available;
+    padding: 0 10px;
+    z-index: 10;
+}
+
+#atuiKernel_Header img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+#atuiKernel_Header > aside > div {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50px;
+}
+
+#atuiKernel_Header > aside > div > * {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    #atuiKernel_Header > aside > div {
+        justify-content: space-between;
+    }
+
+    #atuiKernel_HeaderBlockLeft,
+    #atuiKernel_HeaderBlockCenter,
+    #atuiKernel_HeaderBlockRight {
+        flex: 1;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    #atuiKernel_Header > aside > div {
+        justify-content: center;
+    }
+
+    #atuiKernel_Header > aside > div > * {
+        margin: 0 20px;
+    }
+}
+
+/* All blocks and theirs contents */
+
+#atuiKernel_Header > aside > nav {
+    display: flex;
+    min-height: 30px;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#atuiKernel_Header > aside > nav > div > * {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+}
+
+#atuiKernel_Header > aside > nav > div > a {
+    margin: 0 10px;
+    color: black;
+}
+
+#atuiKernel_Header > aside > nav > div img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#atuiKernel_Header > aside > nav > div p {
+    margin: 0;
+}
+
+/* Left block */
+
+#atuiKernel_HeaderBlockLeft {
+    height: 50px;
+    order: 1;
+    justify-content: flex-start;
+}
+
+#atuiKernel_HeaderLogotype {
+    height: 100%;
+    overflow: hidden;
+}
+
+#atuiKernel_HeaderLogotype a {
+    color: black;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+
+#atuiKernel_HeaderLogotype a p {
+    margin: 0 10px;
+    font-size: 1.875rem;
+    font-weight: bold;
+    display: inline-block;
+    font-family: var(--atuiKernel_FontsTitle);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Center block */
+
+#atuiKernel_HeaderBlockCenter {
+    justify-content: center;
+    order: 2;
+}
+
+/* Right block */
+
+#atuiKernel_HeaderBlockRight {
+    height: 50px;
+    order: 3;
+    justify-content: flex-end;
+}

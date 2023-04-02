@@ -1,0 +1,91 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionTabs {
+    border-radius: var(--atuiKernel_Borderradius);
+    overflow: hidden;
+}
+
+/* Header */
+
+.atuiKernel_SectionTabsHeader {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB2) solid;
+}
+
+.atuiKernel_SectionTabsHeader > a {
+    padding: 15px;
+    position: relative;
+    color: var(--atuiKernel_ColorschemeOBF);
+}
+
+.atuiKernel_SectionTabsHeader > a * {
+    margin: 0;
+    color: inherit;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-size: 1.125rem;
+}
+
+.atuiKernel_SectionTabsHeader .optionActive {
+    font-weight: bold;
+}
+
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive * {
+    color: var(--atuiKernel_ColorschemeOA5);
+}
+
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive::after {
+    content: "";
+    width: calc(100% - 30px);
+    height: 5px;
+    background-color: var(--atuiKernel_ColorschemeOA5);
+    position: absolute;
+    border-radius: 5px;
+    transform: translateY(10px);
+}
+
+/* Content */
+
+.atuiKernel_SectionTabsContent {
+    padding: 15px;
+}
+
+.atuiKernel_SectionTabsContent div {
+    display: none;
+}
+
+.atuiKernel_SectionTabsContent .optionActive {
+    display: block;
+}
+
+/* Contrast style */
+
+.atuiKernel_SectionTabs.optionContrast {
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader {
+    background-color: var(--atuiKernel_ColorschemeOB2);
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    padding: 0 10px;
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsContent {
+    background-color: var(--atuiKernel_ColorschemeOB1);
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .optionActive * {
+    color: var(--atuiKernel_ColorschemeOBF);
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .optionActive::after {
+    all: unset;
+}

@@ -1,0 +1,43 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionAccordion {
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    overflow: hidden;
+}
+
+.atuiKernel_SectionAccordion > header {
+    background-color: var(--atuiKernel_ColorschemeOB2);
+    padding: 0 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.atuiKernel_SectionAccordion > header * {
+    color: var(--atuiKernel_ColorschemeOBF);
+    margin: 0;
+    font-family: var(--atuiKernel_FontsTitle);
+    flex: 1;
+}
+
+.atuiKernel_SectionAccordion > header img {
+    width: 35px;
+    height: 35px;
+    flex: 0;
+    margin-left: 10px;
+}
+
+.atuiKernel_SectionAccordion > section {
+    padding: 15px;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    display: none;
+}
+
+.atuiKernel_SectionAccordion > section * {
+    margin: 0;
+}

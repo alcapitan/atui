@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add spinner.
 -   Add quote for paragraph.
 -   Diversify shadow styles.
+-   Setup NPM.
+-   Setup dist files.
 
 ### Changed
 
@@ -24,10 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add gradient for section content split bar.
 -   Set up font-size guidelines.
 -   Replace HTML for Markdown links.
+-   Change files architecture.
 
 ### Removed
 
 -   Remove scrolltop (will be replaced later).
+-   Fix some JS bugs highlighted by NPM compilation.
 
 ## [0.3.1] - 2023-03-16
 

@@ -1,0 +1,56 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+#atuiSearchservices_HeaderBar /* Searchbar container */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+#atuiSearchservices_HeaderBar > form /* HTML form */ {
+    display: flex;
+    align-items: center;
+}
+
+#atuiSearchservices_Input /* Searchbar */ {
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    outline: none;
+    color: var(--atuiKernel_ColorschemeOB5);
+    font-size: 1.125rem;
+}
+
+#atuiSearchservices_Submit /* Submit image */ {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    #atuiSearchservices_HeaderBar {
+        background-color: var(--atuiKernel_ColorschemeOB0);
+    }
+
+    #atuiSearchservices_Input /* Searchbar */ {
+        display: inline;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    #atuiSearchservices_Input /* Searchbar */ {
+        display: none;
+    }
+
+    #atuiSearchservices_Submit /* Submit button */ {
+        background-color: transparent;
+    }
+}

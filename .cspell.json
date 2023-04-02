@@ -22,12 +22,14 @@
         "Mediasplayer",
         "Mobileonly",
         "Mobilestyle",
+        "Newlink",
+        "nosound",
         "Overstackflow",
         "thumbsup",
         "Pexels",
         "Progressbar",
         "searchbar",
-        "Searchservice",
+        "Searchservices",
         "scrolltop",
         "videoplayer"
     ]

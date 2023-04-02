@@ -1,0 +1,18 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+@import url("./propositions.css");
+@import url("./searchbar.css");
+
+/* Global */
+
+#atuiSearchservices_Header {
+    background-color: transparent;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 5px;
+}

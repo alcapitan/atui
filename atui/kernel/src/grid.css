@@ -1,0 +1,30 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionGrid {
+    display: grid;
+    grid-gap: 15px;
+    align-items: baseline;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .atuiKernel_SectionGrid.optionColumns3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .atuiKernel_SectionGrid.optionColumns2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

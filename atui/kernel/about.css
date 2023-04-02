@@ -50,6 +50,6 @@ body > article > a /* Link */ {
     body > article {
         background-color: var(--atuiKernel_ColorschemeOB0);
         border-radius: var(--atuiKernel_Borderradius);
-        box-shadow: var(--atuiKernel_Shadow);
+        box-shadow: var(--atuiKernel_ShadowMedium);
     }
 }
