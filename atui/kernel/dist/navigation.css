@@ -34,9 +34,11 @@
     background-color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_NavigationSectionImgbig a img /* Icon */ {
-    width: 100px;
-    height: 100px;
+.atuiKernel_NavigationSectionImgbig a i,
+.atuiKernel_NavigationSectionImgbig a img {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
 }
 
 .atuiKernel_NavigationSectionImgbig a p /* Text */ {
@@ -140,8 +142,10 @@
         background-color: var(--atuiKernel_ColorschemeOA2);
     }
 
+    .atuiKernel_NavigationBar i,
     .atuiKernel_NavigationBar img {
         width: 36px;
+        font-size: 36px;
     }
 
     .atuiKernel_NavigationBar p {
@@ -207,8 +211,10 @@
         background-color: var(--atuiKernel_ColorschemeOB2);
     }
 
+    .atuiKernel_NavigationBar i,
     .atuiKernel_NavigationBar img {
         width: 30px;
+        font-size: 30px;
     }
 
     .atuiKernel_NavigationBar p {

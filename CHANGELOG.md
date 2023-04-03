@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Diversify shadow styles.
 -   Setup NPM.
 -   Setup dist files.
+-   Icon color adapt according to the color theme.
 
 ### Changed
 
@@ -27,6 +28,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Set up font-size guidelines.
 -   Replace HTML for Markdown links.
 -   Change files architecture.
+-   Replace legacy icons by Tabler icons.
+
+### Fixed
+
+-   Fix wrap text due to icon in Boxes.
+-   Fix some JS possible bugs.
 
 ### Removed
 

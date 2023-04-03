@@ -155,8 +155,10 @@
     font-weight: inherit;
 }
 
+.atuiKernel_SectionSquarelink > a i,
 .atuiKernel_SectionSquarelink > a img {
     height: 48px;
+    font-size: 48px;
 }
 
 .atuiKernel_SectionSquarelink > a p {
@@ -184,18 +186,14 @@
 /* Snipper */
 
 .atuiKernel_Spinner {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOA5) 94%, rgb(0 0 0 / 0%)) top/10px 10px
-            no-repeat,
-        conic-gradient(rgb(0 0 0 / 0%) 30%, var(--atuiKernel_ColorschemeOA5));
-    mask: radial-gradient(farthest-side, rgb(0 0 0 / 0%) calc(100% - 10px), #000 0);
     animation: spinner-animation 1s infinite linear;
+    width: fit-content;
+}
 
-    /* background mask -webkit-mask width height properties are copied in js, please if you change that, change it in the js too */
-
-    /* 10px is copied in the js, please if you change that, change it in the js too */
+.atuiKernel_Spinner i {
+    height: 50px;
+    font-size: 50px;
+    color: var(--atuiKernel_ColorschemeOA5);
 }
 
 @keyframes spinner-animation {
@@ -204,14 +202,10 @@
     }
 }
 
-.atuiKernel_Spinner.optionMonochromeLight {
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB2) 94%, rgb(0 0 0 / 0%)) top/10px 10px
-            no-repeat,
-        conic-gradient(rgb(0 0 0 / 0%) 30%, var(--atuiKernel_ColorschemeOB2));
+.atuiKernel_Spinner.optionLight > i {
+    color: var(--atuiKernel_ColorschemeOB2);
 }
 
-.atuiKernel_Spinner.optionMonochromeDark {
-    background: radial-gradient(farthest-side, var(--atuiKernel_ColorschemeOB8) 94%, rgb(0 0 0 / 0%)) top/10px 10px
-            no-repeat,
-        conic-gradient(rgb(0 0 0 / 0%) 30%, var(--atuiKernel_ColorschemeOB8));
+.atuiKernel_Spinner.optionDark > i {
+    color: var(--atuiKernel_ColorschemeOB8);
 }

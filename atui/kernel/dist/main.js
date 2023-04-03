@@ -89,17 +89,18 @@ try {
 /* Display mode */
 
 function atuiKernel_ToolsSettingsDisplaymodeChange() {
-  const atuiKernel_ToolsSettingsDisplaymodeElement = document.getElementById("atuiKernel_ToolsSettingsDisplaymode").
-  childNodes[1];
+  const atuiKernel_ToolsSettingsDisplaymodeElement = document.
+  getElementById("atuiKernel_ToolsSettingsDisplaymode").
+  querySelector("i");
   /*status = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;*/
   if (atuiKernel_ToolsSettingsDisplaymodeStatus) {
     atuiKernel_ToolsSettingsDisplaymodeStatus = false;
-    atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src", "atui/kernel/assets/dark.png");
+    atuiKernel_ToolsSettingsDisplaymodeElement.classList.replace("ti-sun", "ti-moon");
     atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Enable light mode");
     atuiKernel_ColorschemeGeneratorAuto(undefined);
   } else {
     atuiKernel_ToolsSettingsDisplaymodeStatus = true;
-    atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("src", "atui/kernel/assets/light.png");
+    atuiKernel_ToolsSettingsDisplaymodeElement.classList.replace("ti-moon", "ti-sun");
     atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Enable dark mode");
     atuiKernel_ColorschemeGeneratorAuto(undefined);
   }
@@ -109,7 +110,8 @@ let atuiKernel_ToolsSettingsDisplaymodeStatus = true;
 try {
   document.
   getElementById("atuiKernel_ToolsSettingsDisplaymode").
-  childNodes[1].addEventListener("click", atuiKernel_ToolsSettingsDisplaymodeChange);
+  querySelector("i").
+  addEventListener("click", atuiKernel_ToolsSettingsDisplaymodeChange);
   atuiKernel_ToolsSettingsDisplaymodeChange;
 } catch {}
 
@@ -292,12 +294,13 @@ function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
   const atuiKernel_NotificationElementFooter = document.createElement("div");
 
   // Type
+  /* deprecated due to icon source change
   const atuiKernel_NotificationElementHeaderTypeImg = document.createElement("img");
   if (type != "normal") {
-    atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src", "atui/kernel/assets/" + type + ".png");
+      atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src", "atui/kernel/assets/" + type + ".png");
   } else {
-    atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
-  }
+      atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
+  }*/
 
   // Sound
   const atuiKernel_NotificationElementSound = new Audio("atui/kernel/assets/notification.mp3");
@@ -307,8 +310,8 @@ function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
   atuiKernel_NotificationElementHeaderTitle.textContent = title;
 
   // Close button
-  const atuiKernel_NotificationElementHeaderClose = document.createElement("img");
-  atuiKernel_NotificationElementHeaderClose.setAttribute("src", "atui/kernel/assets/close.png");
+  const atuiKernel_NotificationElementHeaderClose = document.createElement("i");
+  atuiKernel_NotificationElementHeaderClose.classList.add("ti", "ti-x");
   atuiKernel_NotificationElementHeaderClose.addEventListener("click", function () {
     atuiKernel_NotificationClose(atuiKernel_NotificationElement);
     return console.log("close");
@@ -497,7 +500,7 @@ document.querySelectorAll(".atuiKernel_SectionTabs").forEach((tabsContainer) => 
 
 document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) => {
   const header = accordion.querySelector("header");
-  const button = header.querySelector("img");
+  const button = header.querySelector("i");
   const content = accordion.querySelector("section");
   header.addEventListener("click", () => {
     if (window.getComputedStyle(content).display === "none") {
@@ -510,21 +513,5 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
       console.error("An unexpected error has occurred.");
     }
   });
-});
-
-/* Spinner resize */
-
-document.querySelectorAll(".atuiKernel_Spinner").forEach((spinner) => {
-  if (spinner.getAttribute("data-atui-resize") !== null) {
-    spinner.style.setProperty("width", `${spinner.getAttribute("data-atui-resize")}px`);
-    spinner.style.setProperty("height", `${spinner.getAttribute("data-atui-resize")}px`);
-    const width_adjust = spinner.getAttribute("data-atui-resize") / 5;
-    let background_adjust = window.getComputedStyle(spinner).getPropertyValue("background");
-    background_adjust = background_adjust.replaceAll("10px", `${width_adjust}px`);
-    const mask_adjust = `radial-gradient(farthest-side, #0000 calc(100% - ${width_adjust}px), #000 0)`;
-    spinner.style.setProperty("background", background_adjust);
-    spinner.style.setProperty("mask", mask_adjust);
-    spinner.style.setProperty("-webkit-mask", mask_adjust);
-  }
 });
 //# sourceMappingURL=main.js.map

@@ -71,11 +71,13 @@
     width: calc(100% - 38px);
 }
 
+.atuiKernel_ToolsContextmenu aside a div i,
 .atuiKernel_ToolsContextmenu aside a div img {
     margin: 0 !important;
     margin-right: 10px !important;
     width: 28px !important;
     height: 28px !important;
+    font-size: 28px !important;
 }
 
 .atuiKernel_ToolsContextmenu aside hr {

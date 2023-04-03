@@ -66,13 +66,16 @@
     justify-content: space-evenly;
 }
 
+.atuiMediasplayer_Controls i,
 .atuiMediasplayer_Controls img {
     width: 30px;
     height: 30px;
     padding: 5px 10px;
     border-radius: var(--atuiKernel_Borderradius);
+    font-size: 30px;
 }
 
+.atuiMediasplayer_Controls i:hover,
 .atuiMediasplayer_Controls img:hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }

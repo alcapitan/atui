@@ -118,3 +118,7 @@ h5 {
 h6 {
     font-size: 0.625rem;
 }
+
+.ti {
+    color: var(--atuiKernel_ColorschemeOBF);
+}

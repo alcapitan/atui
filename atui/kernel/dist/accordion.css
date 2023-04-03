@@ -21,14 +21,19 @@
     color: var(--atuiKernel_ColorschemeOBF);
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
+}
+
+.atuiKernel_SectionAccordion > header h3 {
     flex: 1;
 }
 
+.atuiKernel_SectionAccordion > header i,
 .atuiKernel_SectionAccordion > header img {
     width: 35px;
     height: 35px;
     flex: 0;
     margin-left: 10px;
+    font-size: 35px;
 }
 
 .atuiKernel_SectionAccordion > section {

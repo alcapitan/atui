@@ -6,9 +6,11 @@
 .atuiKernel_SectionBox {
     border-radius: var(--atuiKernel_Borderradius);
     padding: 15px;
-    min-height: 30px;
     border: 1px var(--atuiKernel_ColorschemeOB5) solid;
     background-color: var(--atuiKernel_ColorschemeOB1);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
 }
 
 /* .atuiKernel_SectionBox:has(.atuiKernel_SectionBoxIcon)
@@ -45,9 +47,9 @@
     background-color: rgb(204 235 214);
 }
 
-.atuiKernel_SectionBoxIcon {
+.atuiKernel_SectionBox > i,
+.atuiKernel_SectionBox > img {
     width: 30px;
     height: 30px;
-    margin: 0 10px 10px 0;
-    float: left;
+    font-size: 30px;
 }

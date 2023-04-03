@@ -27,10 +27,12 @@
     padding: 10px 15px 10px 10px;
 }
 
-#atuiKernel_ToolsContactBroad div > img /* Icon */ {
+#atuiKernel_ToolsContactBroad div > i,
+#atuiKernel_ToolsContactBroad div > img {
     border-radius: var(--atuiKernel_Borderradius);
     width: 30px;
     height: 30px;
+    font-size: 30px;
 }
 
 #atuiKernel_ToolsContactBroad div > a /* Text */ {
@@ -50,10 +52,12 @@
     gap: 10px;
 }
 
-#atuiKernel_ToolsContactNewsletter > img /* Icons */ {
+#atuiKernel_ToolsContactNewsletter > i,
+#atuiKernel_ToolsContactNewsletter > img {
     border-radius: var(--atuiKernel_Borderradius);
     width: 30px;
     height: 30px;
+    font-size: 30px;
 }
 
 #atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */ {
@@ -88,7 +92,9 @@
     margin-right: 15px;
 }
 
+#atuiKernel_ToolsContactCompact > a > i,
 #atuiKernel_ToolsContactCompact > a > img {
     width: 50px;
     height: 50px;
+    font-size: 50px;
 }

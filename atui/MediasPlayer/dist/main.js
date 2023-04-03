@@ -34,7 +34,7 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
 function atuiMediasplayer_Assign(data) {
   const player = document.getElementById(data["player"]);
   const media = player.querySelector("audio, video");
-  const cover = player.querySelector(".atuiMediasplayer_Cover img");
+  const cover = player.querySelector(".atuiMediasplayer_Cover img, .atuiMediasplayer_Cover i");
   const title = player.querySelector(".atuiMediasplayer_InformationTitle");
   const author = player.querySelector(".atuiMediasplayer_InformationAuthor");
   const albumName = player.querySelector(".atuiMediasplayer_InformationAlbumName");
@@ -77,7 +77,7 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
       ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
 
       if (this.getAttribute("data-mp-assign") !== null) {
-        data = JSON.parse(this.getAttribute("data-mp-assign"));
+        const data = JSON.parse(this.getAttribute("data-mp-assign"));
         atuiMediasplayer_Assign(data);
       }
     } else {
@@ -95,12 +95,10 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
       if (window.getComputedStyle(player).display === "none") {
         player.style.display = "block";
       }
-      button.setAttribute("src", "atui/MediasPlayer/assets/pause.png");
-      button.setAttribute("alt", "Pause the media");
+      button.classList.replace("ti-player-play", "ti-player-pause");
     } else if (media.paused === false) {
       media.pause();
-      button.setAttribute("src", "atui/MediasPlayer/assets/play.png");
-      button.setAttribute("alt", "Play the media");
+      button.classList.replace("ti-player-pause", "ti-player-play");
     } else {
       console.error("An unexpected error has occurred.");
     }
@@ -113,8 +111,7 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
   const button = player.querySelector(".atuiMediasplayer_Run");
   const media = player.querySelector("audio, video");
   media.addEventListener("ended", () => {
-    button.setAttribute("src", "atui/MediasPlayer/assets/play.png");
-    button.setAttribute("alt", "Play the media.");
+    button.classList.replace("ti-player-pause", "ti-player-play");
     if (player.classList.contains("optionFloating")) {
       player.style.display = "none";
     }
@@ -129,8 +126,7 @@ function stopAllMedia() {
     media.pause();
   });
   document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
-    button.setAttribute("src", "atui/MediasPlayer/assets/play.png");
-    button.setAttribute("alt", "Play the audio.");
+    button.classList.replace("ti-player-pause", "ti-player-play");
   });
 }
 
@@ -199,12 +195,10 @@ document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
     const media = findElement(this, "audio, video", ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
     if (media.loop === false) {
       media.loop = true;
-      this.setAttribute("src", "atui/MediasPlayer/assets/no_loop.png");
-      this.setAttribute("alt", "Stop playing the media in a loop");
+      this.classList.replace("ti-repeat", "ti-repeat-off");
     } else if (media.loop === true) {
       media.loop = false;
-      this.setAttribute("src", "atui/MediasPlayer/assets/loop.png");
-      this.setAttribute("alt", "Play the media in a loop");
+      this.classList.replace("ti-repeat-off", "ti-repeat");
     } else {
       console.error("An unexpected error has occurred.");
     }
@@ -218,12 +212,10 @@ document.querySelectorAll(".atuiMediasplayer_Sound").forEach(function (button) {
     const media = findElement(this, "audio, video", ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
     if (media.muted === false) {
       media.muted = true;
-      this.setAttribute("src", "atui/MediasPlayer/assets/no_sound.png");
-      this.setAttribute("alt", "Mute sound.");
+      this.classList.replace("ti-volume", "ti-volume-off");
     } else if (media.muted === true) {
       media.muted = false;
-      this.setAttribute("src", "atui/MediasPlayer/assets/sound.png");
-      this.setAttribute("alt", "Enable sound.");
+      this.classList.replace("ti-volume-off", "ti-volume");
     } else {
       console.error("An unexpected error has occurred.");
     }
