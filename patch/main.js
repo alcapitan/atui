@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(3, 4, 2023);
+atuiKernel_FooterLastedited(4, 4, 2023);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
@@ -27,3 +27,9 @@ atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadTorrent");
 atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadChecksum");*/
 /*atuiKernel_NotificationDisplay('alert','default',["console.log('ok')"],["console.log('annuler')"],'Maecenas dictum felis tristique lectus imperdiet aliquet. ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, turpis vel efficitur dictum, ipsum tortor pharetra velit, at mollis nisl ligula pellentesque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ');*/
 /*atuiKernel_NotificationCookies();*/
+
+document.getElementById("clipboardButton").addEventListener("click", function () {
+    text = document.getElementById("clipboardInput").value;
+    atuiKernel_ClipboardCopy(text);
+    console.log("Paste from clipboard: " + atuiKernel_ClipboardPaste());
+});

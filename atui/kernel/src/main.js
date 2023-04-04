@@ -72,6 +72,48 @@ function convertTime(time) {
     }
 }
 
+/* Clipboard tools */
+
+function atuiKernel_ClipboardPermissionRequest() {
+    return navigator.permissions
+        .request({ name: ["clipboard-read", "clipboard-write"] })
+        .then((permissionStatus) => {
+            return permissionStatus.state === "granted";
+        })
+        .catch((error) => {
+            console.error(error);
+            return false;
+        });
+}
+
+function atuiKernel_ClipboardPermissionState() {
+    return navigator.permissions
+        .query({ name: ["clipboard-read", "clipboard-write"] })
+        .then((permissionStatus) => {
+            return permissionStatus.state === "granted";
+        })
+        .catch((error) => {
+            console.error(error);
+            return false;
+        });
+}
+
+function atuiKernel_ClipboardCopy(text) {
+    /*console.log(atuiKernel_ClipboardPermissionState());*/
+    navigator.clipboard.writeText(text);
+}
+
+function atuiKernel_ClipboardPaste() {
+    navigator.clipboard.readText()
+        .then((text) => {
+            return text;
+        })
+        .catch((error) => {
+            console.error(error);
+            return null;
+        });
+}
+
 /* Height carousel */
 
 try {

@@ -117,3 +117,8 @@ h6 {
 .ti {
     color: var(--atuiKernel_ColorschemeOBF);
 }
+
+::selection {
+    background: var(--atuiKernel_ColorschemeOA2);
+    color: var(--atuiKernel_ColorschemeOA8);
+}

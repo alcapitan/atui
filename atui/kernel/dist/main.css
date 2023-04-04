@@ -122,3 +122,13 @@ h6 {
 .ti {
     color: var(--atuiKernel_ColorschemeOBF);
 }
+
+::-moz-selection {
+    background: var(--atuiKernel_ColorschemeOA2);
+    color: var(--atuiKernel_ColorschemeOA8);
+}
+
+::selection {
+    background: var(--atuiKernel_ColorschemeOA2);
+    color: var(--atuiKernel_ColorschemeOA8);
+}
