@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(4, 4, 2023);
+atuiKernel_FooterLastedited(5, 4, 2023);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
@@ -19,7 +19,6 @@ atuiKernel_NavigationGlobalpanel("atuiKernel_NavigationGlobalpanel1");
     albumName: undefined,
     releaseDate: '2022',
     origin: 'http://ncs.io/SinkingShip',
-});*/
 
 /*atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadOpen");
 atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadDownload");
@@ -31,5 +30,5 @@ atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadChecksum");*/
 document.getElementById("clipboardButton").addEventListener("click", function () {
     text = document.getElementById("clipboardInput").value;
     atuiKernel_ClipboardCopy(text);
-    console.log("Paste from clipboard: " + atuiKernel_ClipboardPaste());
+    document.getElementById("clipboard-paste").innerText = atuiKernel_ClipboardPaste();
 });
