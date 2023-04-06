@@ -40,7 +40,7 @@
 
 /* Responsive */
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     .atuiKernel_SectionDownload /* Element */ {
         flex-direction: row;
     }
@@ -50,7 +50,7 @@
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
+@media (width <= 767px) /* Smartphones */ {
     .atuiKernel_SectionDownload /* Element */ {
         flex-direction: column;
     }

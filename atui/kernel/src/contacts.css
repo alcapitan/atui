@@ -5,7 +5,7 @@
 
 /* Responsive */
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     #atuiKernel_ToolsContactNewsletter /* Element */ {
         width: 380px;
     }

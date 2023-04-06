@@ -47,7 +47,7 @@
 
 /* Responsive */
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     .atuiKernel_SectionCard
      /* Containers */ {
         justify-content: space-around;
@@ -61,7 +61,7 @@
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
+@media (width <= 767px) /* Smartphones */ {
     .atuiKernel_SectionCard
      /* Containers */ {
         flex-direction: column;

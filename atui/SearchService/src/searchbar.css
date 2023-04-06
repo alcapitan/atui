@@ -35,7 +35,7 @@
 
 /* Responsive */
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     #atuiSearchservices_HeaderBar {
         background-color: var(--atuiKernel_ColorschemeOB0);
     }
@@ -45,7 +45,7 @@
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
+@media (width <= 767px) /* Smartphones */ {
     #atuiSearchservices_Input /* Searchbar */ {
         display: none;
     }

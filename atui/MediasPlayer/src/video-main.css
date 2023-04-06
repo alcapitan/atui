@@ -5,7 +5,7 @@
 
 /* Container */
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     .atuiMediasplayer_Videoplayer {
         display: flex;
         justify-content: center;

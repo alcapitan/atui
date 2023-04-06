@@ -127,7 +127,7 @@
     background-color: transparent;
 }
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     .atuiKernel_NavigationBar {
         flex-direction: column;
     }
@@ -175,7 +175,7 @@
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
+@media (width <= 767px) /* Smartphones */ {
     .atuiKernel_NavigationBar {
         width: calc(100% - 10px);
         padding: 5px;

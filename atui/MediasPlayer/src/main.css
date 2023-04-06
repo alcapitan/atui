@@ -36,14 +36,14 @@
     padding: 10px;
 }
 
-@media (min-width: 768px) /* Computers */ {
+@media (width >= 768px) /* Computers */ {
     .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
     .atuiMediasplayer_Videoplayer .atuiMediasplayer_Controls {
         flex-direction: row;
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
+@media (width <= 767px) /* Smartphones */ {
     .atuiMediasplayer_Controls {
         flex-direction: column;
     }
