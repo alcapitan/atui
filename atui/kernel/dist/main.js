@@ -79,9 +79,7 @@ function atuiKernel_ClipboardCopy(text) {
 }
 
 function atuiKernel_ClipboardPaste() {
-  navigator.clipboard.readText().then((text) => {
-    return text;
-  });
+  return navigator.clipboard.readText();
 }
 
 /* Height carousel */

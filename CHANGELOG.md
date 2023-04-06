@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Setup NPM.
 -   Setup dist files.
 -   Icon color adapt according to the color theme.
+-   Add clipboard JS functions.
 
 ### Changed
 
