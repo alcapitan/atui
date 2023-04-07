@@ -79,7 +79,8 @@ fieldset legend {
 }
 
 input.optionPill:not([type="file"]):not([type="color"]),
-select {
+select.optionPill,
+textarea.optionPill {
     border-radius: 20px;
     padding: 10px 20px;
 }
