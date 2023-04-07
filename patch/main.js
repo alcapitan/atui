@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(6, 4, 2023);
+atuiKernel_FooterLastedited(7, 4, 2023);
 atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
@@ -32,4 +32,8 @@ document.getElementById("clipboardButton").addEventListener("click", async funct
     atuiKernel_ClipboardCopy(text);
     const clipboardText = await atuiKernel_ClipboardPaste();
     document.getElementById("clipboard-paste").innerText = clipboardText;
+});
+
+document.getElementById("shareButton").addEventListener("click", function () {
+    atuiKernel_ShareTool("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");
 });

@@ -82,6 +82,16 @@ function atuiKernel_ClipboardPaste() {
     return navigator.clipboard.readText();
 }
 
+/* Share tool */
+
+function atuiKernel_ShareTool(title, text, url) {
+    navigator.share({
+        title: title,
+        text: text,
+        url: url,
+    });
+}
+
 /* Height carousel */
 
 try {

@@ -2,12 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <title>ATUI</title>
+        <meta name="title" content="ATUI" />
         <meta name="description" content="Front-end library to build your website easier." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alcapitan.github.io/atui" />
+        <meta property="og:title" content="ATUI" />
+        <meta property="og:description" content="Front-end library to build your website easier." />
+        <meta
+            property="og:image"
+            content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://alcapitan.github.io/atui" />
         <meta name="theme-color" content="#e63300" />
-        <title>ATUI</title>
         <link rel="stylesheet" type="text/css" href="atui/kernel/dist/dist.css" />
         <link rel="stylesheet" type="text/css" href="atui/MediasPlayer/dist/dist.css" />
         <link rel="stylesheet" type="text/css" href="atui/SearchService/dist/dist.css" />
@@ -253,6 +262,11 @@
                 </div>
                 <div class="atuiKernel_SectionContent">
                     <h3>New for v0.4</h3>
+                    <div class="atuiKernel_Button" id="shareButton">
+                        <i class="ti ti-share"></i>
+                        <p>Share</p>
+                    </div>
+                    <br />
                     <input type="text" placeholder="clipboard test" id="clipboardInput" />
                     <div class="atuiKernel_Button" id="clipboardButton">
                         <p>Copy</p>
@@ -825,87 +839,91 @@
                         <form>
                             <div>
                                 <label>Default</label>
-                                <input />
+                                <input class="optionPill" />
                             </div>
                             <div>
                                 <label>Button</label>
-                                <input type="button" value="Button" />
+                                <input class="optionPill" type="button" value="Button" />
                             </div>
                             <div>
                                 <label>Checkbox</label>
-                                <input type="checkbox" />
+                                <input class="optionPill" type="checkbox" />
                             </div>
                             <div>
                                 <label>Color</label>
-                                <input type="color" />
+                                <input class="optionPill" type="color" />
                             </div>
                             <div>
                                 <label>Date</label>
-                                <input type="date" />
+                                <input class="optionPill" type="date" />
                             </div>
                             <div>
                                 <label>Email</label>
-                                <input type="email" />
+                                <input class="optionPill" type="email" />
                             </div>
                             <div>
                                 <label>File</label>
-                                <input type="file" />
+                                <input class="optionPill" type="file" />
                             </div>
                             <div>
                                 <label>Image</label>
-                                <input type="image" src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/icons.svg" />
+                                <input
+                                    class="optionPill"
+                                    type="image"
+                                    src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/icons.svg"
+                                />
                             </div>
                             <div>
                                 <label>Month</label>
-                                <input type="month" />
+                                <input class="optionPill" type="month" />
                             </div>
                             <div>
                                 <label>Number</label>
-                                <input type="number" />
+                                <input class="optionPill" type="number" />
                             </div>
                             <div>
                                 <label>Password</label>
-                                <input type="password" />
+                                <input class="optionPill" type="password" />
                             </div>
                             <div>
                                 <label>Radio</label>
-                                <input type="radio" />
+                                <input class="optionPill" type="radio" />
                             </div>
                             <div>
                                 <label>Range</label>
-                                <input type="range" />
+                                <input class="optionPill" type="range" />
                             </div>
                             <div>
                                 <label>Reset</label>
-                                <input type="reset" />
+                                <input class="optionPill" type="reset" />
                             </div>
                             <div>
                                 <label>Search</label>
-                                <input type="search" />
+                                <input class="optionPill" type="search" />
                             </div>
                             <div>
                                 <label>Submit</label>
-                                <input type="submit" />
+                                <input class="optionPill" type="submit" />
                             </div>
                             <div>
                                 <label>Tel</label>
-                                <input type="tel" />
+                                <input class="optionPill" type="tel" />
                             </div>
                             <div>
                                 <label>Text</label>
-                                <input type="text" />
+                                <input class="optionPill" type="text" />
                             </div>
                             <div>
                                 <label>Time</label>
-                                <input type="time" />
+                                <input class="optionPill" type="time" />
                             </div>
                             <div>
                                 <label>Url</label>
-                                <input type="url" />
+                                <input class="optionPill" type="url" />
                             </div>
                             <div>
                                 <label>Week</label>
-                                <input type="week" />
+                                <input class="optionPill" type="week" />
                             </div>
                             <div>
                                 <label>Progress</label>
@@ -919,7 +937,7 @@
                                 </div>
                                 <div>
                                     <label>Select</label>
-                                    <select>
+                                    <select class="optionPill">
                                         <optgroup label="Group">
                                             <option>Choose</option>
                                             <option>Choose</option>
@@ -932,7 +950,7 @@
                                 </div>
                                 <div>
                                     <label>Datalist</label>
-                                    <input list="datalist" />
+                                    <input class="optionPill" list="datalist" />
                                     <datalist id="datalist">
                                         <option value="Choose"></option>
                                         <option value="Choose"></option>

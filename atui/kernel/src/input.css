@@ -37,6 +37,7 @@ input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: var(--atuiKernel_ColorschemeOB0);
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    margin: 0;
     padding: 10px 15px;
     height: 40px;
     box-sizing: border-box;
@@ -46,6 +47,7 @@ input[type="file"]::file-selector-button {
 input[type="checkbox"],
 input[type="radio"] {
     width: 30px;
+    height: 30px;
 }
 
 progress {
@@ -84,4 +86,10 @@ fieldset legend {
     font-family: var(--atuiKernel_FontsTitle);
     padding: 0 10px;
     font-size: 1.125rem;
+}
+
+input.optionPill:not([type="file"], [type="color"]),
+select {
+    border-radius: 20px;
+    padding: 10px 20px;
 }
