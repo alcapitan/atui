@@ -21,6 +21,7 @@
     color: var(--atuiKernel_ColorschemeOBF);
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
 }
 
 .atuiKernel_SectionAccordion > header h3 {

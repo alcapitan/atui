@@ -31,4 +31,5 @@
 
 .atuiKernel_ToolsCarousel > div > h2 /* Title */ {
     font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
 }

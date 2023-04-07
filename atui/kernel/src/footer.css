@@ -46,8 +46,8 @@
 .atuiKernel_FooterContentsColumn h3,
 .atuiKernel_FooterContentsRow h3
 /* Title */ {
-    font-weight: bold;
     font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
     margin: 10px 0;
 }
 
@@ -107,9 +107,9 @@
 .atuiKernel_FooterDescription > a p {
     margin: 0 10px;
     font-size: 1.875rem;
-    font-weight: bold;
     display: inline-block;
     font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

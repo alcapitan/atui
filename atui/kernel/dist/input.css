@@ -7,8 +7,8 @@ form,
 fieldset {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
-    gap: 15px;
+    grid-gap: 10px;
+    gap: 10px;
 }
 
 form > div,
@@ -29,9 +29,15 @@ input[type="file"]::file-selector-button {
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
     margin: 0;
     padding: 10px 15px;
-    height: 40px;
     box-sizing: border-box;
     accent-color: var(--atuiKernel_ColorschemeOA5);
+}
+
+input,
+progress,
+select,
+input[type="file"]::file-selector-button {
+    height: 40px;
 }
 
 input[type="checkbox"],
@@ -72,7 +78,6 @@ fieldset {
 }
 
 fieldset legend {
-    font-weight: bold;
     font-family: var(--atuiKernel_FontsTitle);
     padding: 0 10px;
     font-size: 1.125rem;

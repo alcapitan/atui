@@ -14,12 +14,16 @@
     background-color: var(--atuiKernel_ColorschemeBB1);
     backdrop-filter: var(--atuiKernel_Blur);
     min-height: 50px;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: stretch;
     width: available;
     padding: 0 10px;
     z-index: 10;
+}
+
+#atuiKernel_Header > aside.optionFixed {
+    position: fixed;
 }
 
 #atuiKernel_Header i,
@@ -70,7 +74,7 @@
 
 #atuiKernel_Header > aside > nav {
     display: flex;
-    min-height: 30px;
+    align-items: center;
     padding: 5px 0;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -124,9 +128,9 @@
 #atuiKernel_HeaderLogotype a p {
     margin: 0 10px;
     font-size: 1.875rem;
-    font-weight: bold;
     display: inline-block;
     font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
