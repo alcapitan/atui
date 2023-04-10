@@ -3,15 +3,13 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-form,
-fieldset {
+:is(form, fieldset) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
 }
 
-form > div,
-fieldset > div {
+:is(form, fieldset) > div {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -72,10 +70,7 @@ input[type="color"]::-webkit-color-swatch {
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
-input:focus:not([type="checkbox"], [type="radio"], [type="range"]),
-progress:focus,
-textarea:focus,
-select:focus {
+:is(input:not([type="checkbox"], [type="radio"], [type="range"]), progress:focus, textarea:focus, select):focus {
     outline: solid 2px var(--atuiKernel_ColorschemeBA4);
 }
 
@@ -92,9 +87,7 @@ fieldset legend {
     font-size: 1.125rem;
 }
 
-input.optionPill:not([type="file"], [type="color"]),
-select.optionPill,
-textarea.optionPill {
+:is(input:not([type="file"], [type="color"]), select, textarea).optionPill {
     border-radius: 20px;
     padding: 10px 20px;
 }

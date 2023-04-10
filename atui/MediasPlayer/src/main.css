@@ -24,8 +24,7 @@
     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
-.atuiMediasplayer_Audioplayer *,
-.atuiMediasplayer_Videoplayer * {
+:is(.atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer) * {
     margin: 0;
 }
 
@@ -66,8 +65,7 @@
     justify-content: space-evenly;
 }
 
-.atuiMediasplayer_Controls i,
-.atuiMediasplayer_Controls img {
+.atuiMediasplayer_Controls :is(i, img) {
     width: 30px;
     height: 30px;
     padding: 5px 10px;
@@ -75,8 +73,7 @@
     font-size: 30px;
 }
 
-.atuiMediasplayer_Controls i:hover,
-.atuiMediasplayer_Controls img:hover {
+.atuiMediasplayer_Controls :is(i, img):hover {
     background-color: var(--atuiKernel_ColorschemeOA3);
 }
 

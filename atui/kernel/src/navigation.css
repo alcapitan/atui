@@ -19,9 +19,7 @@
     align-items: center;
 }
 
-.atuiKernel_NavigationSectionImgbig a:hover,
-.atuiKernel_NavigationSectionImgbig a:active,
-.atuiKernel_NavigationSectionImgbig a:visited {
+.atuiKernel_NavigationSectionImgbig a:is(:hover, :active, :visited) {
     text-decoration: none;
 }
 
@@ -33,8 +31,7 @@
     background-color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_NavigationSectionImgbig a i,
-.atuiKernel_NavigationSectionImgbig a img {
+.atuiKernel_NavigationSectionImgbig a :is(i, img) {
     width: 80px;
     height: 80px;
     font-size: 80px;
@@ -104,9 +101,7 @@
     row-gap: 5px;
 }
 
-.atuiKernel_NavigationBar a:hover,
-.atuiKernel_NavigationBar a:active,
-.atuiKernel_NavigationBar a:visited {
+.atuiKernel_NavigationBar a:is(:hover, :active, :visited) {
     text-decoration: none;
 }
 
@@ -136,8 +131,7 @@
         background-color: var(--atuiKernel_ColorschemeOA2);
     }
 
-    .atuiKernel_NavigationBar i,
-    .atuiKernel_NavigationBar img {
+    .atuiKernel_NavigationBar :is(i, img) {
         width: 36px;
         font-size: 36px;
     }
@@ -177,11 +171,9 @@
 
 @media (width <= 767px) /* Smartphones */ {
     .atuiKernel_NavigationBar {
-        width: calc(100% - 10px);
+        width: calc(100% - 20px);
         padding: 5px;
-        position: fixed;
-        left: 0;
-        right: 0;
+        position: sticky;
         bottom: 0;
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
@@ -202,8 +194,7 @@
         background-color: var(--atuiKernel_ColorschemeOB2);
     }
 
-    .atuiKernel_NavigationBar i,
-    .atuiKernel_NavigationBar img {
+    .atuiKernel_NavigationBar :is(i, img) {
         width: 30px;
         font-size: 30px;
     }

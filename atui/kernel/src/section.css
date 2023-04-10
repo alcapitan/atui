@@ -5,20 +5,17 @@
 
 /* Section containers management */
 
-#atuiKernel_Body,
-#atuiKernel_Section {
+:is(#atuiKernel_Body, #atuiKernel_Section) {
     display: flex;
     flex-wrap: nowrap;
 }
 
 @media (width >= 768px) /* Computers */ {
-    #atuiKernel_Body,
-    #atuiKernel_Section {
+    :is(#atuiKernel_Body, #atuiKernel_Section) {
         flex-direction: row;
     }
 
-    #atuiKernel_Body > *:not(:last-child),
-    #atuiKernel_Section > *:not(:last-child) {
+    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child) {
         border-right: 1px solid var(--atuiKernel_ColorschemeOB2);
     }
 
@@ -35,13 +32,11 @@
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    #atuiKernel_Body,
-    #atuiKernel_Section {
+    :is(#atuiKernel_Body, #atuiKernel_Section) {
         flex-direction: column-reverse;
     }
 
-    #atuiKernel_Body > *:not(:last-child),
-    #atuiKernel_Section > *:not(:last-child) {
+    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child) {
         border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
     }
 
@@ -62,8 +57,7 @@
     padding: 10px;
 }
 
-.atuiKernel_BodyContent,
-.atuiKernel_SectionContent {
+:is(.atuiKernel_BodyContent, .atuiKernel_SectionContent) {
     flex: 1;
 }
 
@@ -81,13 +75,11 @@
     margin: 20px 0;
 }
 
-.atuiKernel_BodyContent > *:first-child,
-.atuiKernel_SectionContent > *:first-child {
+:is(.atuiKernel_BodyContent, .atuiKernel_SectionContent) > *:first-child {
     margin-top: 0;
 }
 
-.atuiKernel_BodyContent > *:last-child,
-.atuiKernel_SectionContent > *:last-child {
+:is(.atuiKernel_BodyContent, .atuiKernel_SectionContent) > *:last-child {
     margin-bottom: 0;
 }
 
@@ -136,9 +128,7 @@
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_SectionSquarelink > a:hover,
-.atuiKernel_SectionSquarelink > a:active,
-.atuiKernel_SectionSquarelink > a:visited {
+.atuiKernel_SectionSquarelink > a:is(:hover, :active, :visited) {
     text-decoration: none;
 }
 
@@ -155,8 +145,7 @@
     font-weight: inherit;
 }
 
-.atuiKernel_SectionSquarelink > a i,
-.atuiKernel_SectionSquarelink > a img {
+.atuiKernel_SectionSquarelink > a :is(i, img) {
     height: 48px;
     font-size: 48px;
 }

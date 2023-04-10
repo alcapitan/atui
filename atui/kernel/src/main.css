@@ -72,9 +72,7 @@ body * {
 
 /* Default props of HTML tags */
 
-p,
-a,
-label {
+:is(p, a, label) {
     font-size: 1rem;
 }
 
@@ -82,8 +80,7 @@ a {
     text-decoration: none;
 }
 
-a:hover,
-a:active {
+a:is(:hover, :active) {
     text-decoration: underline;
 }
 
@@ -117,6 +114,8 @@ h6 {
 
 .ti {
     color: var(--atuiKernel_ColorschemeOBF);
+    font-weight: normal !important;
+    text-decoration: none !important;
 }
 
 ::selection {

@@ -41,9 +41,7 @@
     background-color: transparent;
 }
 
-.atuiKernel_SectionPaginationNumber a:hover,
-.atuiKernel_SectionPaginationNumber a:active,
-.atuiKernel_SectionPaginationNumber a:visited {
+.atuiKernel_SectionPaginationNumber a:is(:hover, :active, :visited) {
     text-decoration: none;
 }
 
@@ -74,9 +72,7 @@
     flex: 1;
 }
 
-.atuiKernel_SectionPaginationText a:hover,
-.atuiKernel_SectionPaginationText a:active,
-.atuiKernel_SectionPaginationText a:visited {
+.atuiKernel_SectionPaginationText a:is(:hover, :active, :visited) {
     text-decoration: none;
 }
 

@@ -3,16 +3,14 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-form,
-fieldset {
+form, fieldset {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
     gap: 10px;
 }
 
-form > div,
-fieldset > div {
+form > div, fieldset > div {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -63,10 +61,7 @@ input[type="color"]::-webkit-color-swatch {
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
-input:focus:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
-progress:focus,
-textarea:focus,
-select:focus {
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus, progress:focus:not(.does-not-exist):not(.does-not-exist):focus, textarea:focus:not(.does-not-exist):not(.does-not-exist):focus, select:not(.does-not-exist):not(.does-not-exist):not(.does-not-exist):focus {
     outline: solid 2px var(--atuiKernel_ColorschemeBA4);
 }
 
@@ -83,9 +78,7 @@ fieldset legend {
     font-size: 1.125rem;
 }
 
-input.optionPill:not([type="file"]):not([type="color"]),
-select.optionPill,
-textarea.optionPill {
+input.optionPill:not([type="file"]):not([type="color"]), select.optionPill:not(.does-not-exist):not(.does-not-exist), textarea.optionPill:not(.does-not-exist):not(.does-not-exist) {
     border-radius: 20px;
     padding: 10px 20px;
 }

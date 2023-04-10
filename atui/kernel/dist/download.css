@@ -24,7 +24,13 @@
     flex: 1;
 }
 
-.atuiKernel_SectionDownload > div:first-child i,
+.atuiKernel_SectionDownload > div:first-child i {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    font-size: 60px;
+}
+
 .atuiKernel_SectionDownload > div:first-child img {
     width: 60px;
     height: 60px;

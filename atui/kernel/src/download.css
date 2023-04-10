@@ -24,8 +24,7 @@
     flex: 1;
 }
 
-.atuiKernel_SectionDownload > div:first-child i,
-.atuiKernel_SectionDownload > div:first-child img {
+.atuiKernel_SectionDownload > div:first-child :is(i, img) {
     width: 60px;
     height: 60px;
     margin-right: 10px;

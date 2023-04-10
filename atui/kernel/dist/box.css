@@ -27,10 +27,7 @@
     background-color: var(--atuiKernel_ColorschemeOA1);
 }
 
-.atuiKernel_SectionBox.optionAlert *,
-.atuiKernel_SectionBox.optionWarning *,
-.atuiKernel_SectionBox.optionInfo *,
-.atuiKernel_SectionBox.optionSuccess * {
+.atuiKernel_SectionBox.optionAlert *, .atuiKernel_SectionBox.optionWarning *, .atuiKernel_SectionBox.optionInfo *, .atuiKernel_SectionBox.optionSuccess * {
     color: #000;
 }
 
@@ -54,8 +51,7 @@
     background-color: rgb(204, 235, 214);
 }
 
-.atuiKernel_SectionBox > i,
-.atuiKernel_SectionBox > img {
+.atuiKernel_SectionBox > i, .atuiKernel_SectionBox > img {
     width: 30px;
     height: 30px;
     font-size: 30px;

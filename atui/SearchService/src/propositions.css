@@ -10,28 +10,24 @@
     margin: 10px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecent,
-#atuiSearchservices_HeaderPropositionsSuggested
+:is(#atuiSearchservices_HeaderPropositionsRecent,#atuiSearchservices_HeaderPropositionsSuggested)
 /* Containers of propositions Recent & suggested */ {
     margin: 0 10px 20px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecent > h3,
-#atuiSearchservices_HeaderPropositionsSuggested > h3
+:is(#atuiSearchservices_HeaderPropositionsRecent,#atuiSearchservices_HeaderPropositionsSuggested) > h3
 /* Title of containers */ {
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
 }
 
-#atuiSearchservices_HeaderPropositionsRecentContainer,
-#atuiSearchservices_HeaderPropositionsSuggestedContainer
+:is(#atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer)
 /* Lists of propositions */ {
     margin: 15px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecentContainer > a,
-#atuiSearchservices_HeaderPropositionsSuggestedContainer > a
+:is(#atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer) > a
 /* Propositions */ {
     color: var(--atuiKernel_ColorschemeOBF);
     display: block;

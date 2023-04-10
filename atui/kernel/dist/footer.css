@@ -35,16 +35,14 @@
 
 /* Vertical and horizontal contents */
 
-.atuiKernel_FooterContentsColumn,
-.atuiKernel_FooterContentsRow
+.atuiKernel_FooterContentsColumn,.atuiKernel_FooterContentsRow
 /* Container */ {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.atuiKernel_FooterContentsColumn h3,
-.atuiKernel_FooterContentsRow h3
+.atuiKernel_FooterContentsColumn h3,.atuiKernel_FooterContentsRow h3
 /* Title */ {
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
@@ -92,20 +90,17 @@
 
 /* Logotype & Description */
 
-.atuiKernel_FooterLogotype > a,
-.atuiKernel_FooterDescription > a {
+.atuiKernel_FooterLogotype > a, .atuiKernel_FooterDescription > a {
     display: flex;
     align-content: center;
 }
 
-.atuiKernel_FooterLogotype > a img,
-.atuiKernel_FooterDescription > a img {
+.atuiKernel_FooterLogotype > a img, .atuiKernel_FooterDescription > a img {
     width: 40px;
     height: 40px;
 }
 
-.atuiKernel_FooterLogotype > a p,
-.atuiKernel_FooterDescription > a p {
+.atuiKernel_FooterLogotype > a p, .atuiKernel_FooterDescription > a p {
     margin: 0 10px;
     font-size: 1.875rem;
     display: inline-block;
@@ -165,10 +160,4 @@
     display: block;
     color: var(--atuiKernel_ColorschemeOA6);
     margin: 10px;
-}
-
-@media (max-width: 767px) /* Smartphones */ {
-    #atuiKernel_FooterInfo {
-        margin-bottom: 100px; /* Due to the possible navbar over the footer info */
-    }
 }

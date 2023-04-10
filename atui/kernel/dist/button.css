@@ -23,8 +23,7 @@
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_Button i,
-.atuiKernel_Button img {
+.atuiKernel_Button i, .atuiKernel_Button img {
     width: 20px;
     height: 20px;
     font-size: 20px;
@@ -34,8 +33,13 @@
     font-weight: bold;
 }
 
-.atuiKernel_Button:hover,
 .atuiKernel_Button:active {
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+
+.atuiKernel_Button:hover {
     transition-property: background-color, color;
     transition-duration: 0.1s;
     transition-timing-function: linear;
@@ -84,18 +88,20 @@
 
 /* Common to secondary and tertiary */
 
-.atuiKernel_Button.optionSecondary *,
-.atuiKernel_Button.optionTertiary * {
+.atuiKernel_Button.optionSecondary *, .atuiKernel_Button.optionTertiary * {
     color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_Button.optionSecondary:not(.optionDisabled):hover,
-.atuiKernel_Button.optionTertiary:not(.optionDisabled):hover {
+.atuiKernel_Button.optionSecondary:not(.optionDisabled):hover, .atuiKernel_Button.optionTertiary:not(.optionDisabled):hover {
     background-color: var(--atuiKernel_ColorschemeOA1);
     color: var(--atuiKernel_ColorschemeOA5);
 }
 
-.atuiKernel_Button.optionSecondary:not(.optionDisabled):active,
+.atuiKernel_Button.optionSecondary:not(.optionDisabled):active {
+    color: var(--atuiKernel_ColorschemeOA6);
+    background-color: var(--atuiKernel_ColorschemeOA2);
+}
+
 .atuiKernel_Button.optionTertiary:not(.optionDisabled):active {
     color: var(--atuiKernel_ColorschemeOA6);
     background-color: var(--atuiKernel_ColorschemeOA2);

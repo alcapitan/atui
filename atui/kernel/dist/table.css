@@ -7,8 +7,7 @@
     border-collapse: collapse;
 }
 
-.atuiKernel_SectionTable td,
-.atuiKernel_SectionTable th {
+.atuiKernel_SectionTable td, .atuiKernel_SectionTable th {
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle;

@@ -5,19 +5,20 @@
 
 /* Section containers management */
 
-#atuiKernel_Body,
-#atuiKernel_Section {
+#atuiKernel_Body, #atuiKernel_Section {
     display: flex;
     flex-wrap: nowrap;
 }
 
 @media (min-width: 768px) /* Computers */ {
-    #atuiKernel_Body,
-    #atuiKernel_Section {
+    #atuiKernel_Body, #atuiKernel_Section {
         flex-direction: row;
     }
 
-    #atuiKernel_Body > *:not(:last-child),
+    #atuiKernel_Body > *:not(:last-child) {
+        border-right: 1px solid var(--atuiKernel_ColorschemeOB2);
+    }
+
     #atuiKernel_Section > *:not(:last-child) {
         border-right: 1px solid var(--atuiKernel_ColorschemeOB2);
     }
@@ -43,12 +44,14 @@
 }
 
 @media (max-width: 767px) /* Smartphones */ {
-    #atuiKernel_Body,
-    #atuiKernel_Section {
+    #atuiKernel_Body, #atuiKernel_Section {
         flex-direction: column-reverse;
     }
 
-    #atuiKernel_Body > *:not(:last-child),
+    #atuiKernel_Body > *:not(:last-child) {
+        border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
+    }
+
     #atuiKernel_Section > *:not(:last-child) {
         border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
     }
@@ -78,8 +81,7 @@
     padding: 10px;
 }
 
-.atuiKernel_BodyContent,
-.atuiKernel_SectionContent {
+.atuiKernel_BodyContent, .atuiKernel_SectionContent {
     flex: 1;
 }
 
@@ -97,12 +99,18 @@
     margin: 20px 0;
 }
 
-.atuiKernel_BodyContent > *:first-child,
+.atuiKernel_BodyContent > *:first-child {
+    margin-top: 0;
+}
+
 .atuiKernel_SectionContent > *:first-child {
     margin-top: 0;
 }
 
-.atuiKernel_BodyContent > *:last-child,
+.atuiKernel_BodyContent > *:last-child {
+    margin-bottom: 0;
+}
+
 .atuiKernel_SectionContent > *:last-child {
     margin-bottom: 0;
 }
@@ -153,9 +161,17 @@
     color: var(--atuiKernel_ColorschemeOBF);
 }
 
-.atuiKernel_SectionSquarelink > a:hover,
-.atuiKernel_SectionSquarelink > a:active,
+.atuiKernel_SectionSquarelink > a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
 .atuiKernel_SectionSquarelink > a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionSquarelink > a:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
 }
@@ -173,8 +189,7 @@
     font-weight: inherit;
 }
 
-.atuiKernel_SectionSquarelink > a i,
-.atuiKernel_SectionSquarelink > a img {
+.atuiKernel_SectionSquarelink > a i, .atuiKernel_SectionSquarelink > a img {
     height: 48px;
     font-size: 48px;
 }

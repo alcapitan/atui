@@ -12,8 +12,7 @@
     align-items: center;
 }
 
-#atuiKernel_ToolsSettingsDisplaymode i,
-#atuiKernel_ToolsSettingsDisplaymode img {
+#atuiKernel_ToolsSettingsDisplaymode i, #atuiKernel_ToolsSettingsDisplaymode img {
     width: 35px !important;
     height: 35px !important;
     font-size: 35px !important;

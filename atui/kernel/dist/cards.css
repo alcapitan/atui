@@ -31,8 +31,7 @@
     width: 100%;
 }
 
-.atuiKernel_SectionCard article > div[class="text"] > h3,
-.atuiKernel_SectionCard article > div[class="text"] > p
+.atuiKernel_SectionCard article > div[class="text"] > h3,.atuiKernel_SectionCard article > div[class="text"] > p
 /* Texts */ {
     margin: 0;
     padding: 10px 20px;
@@ -121,7 +120,6 @@
     margin-top: 30%;
 }
 
-.atuiKernel_SectionCard.optionOverlay article > div[class="text"] > h3,
-.atuiKernel_SectionCard.optionOverlay article > div[class="text"] > p {
+.atuiKernel_SectionCard.optionOverlay article > div[class="text"] > h3, .atuiKernel_SectionCard.optionOverlay article > div[class="text"] > p {
     color: var(--atuiKernel_ColorschemeOB0);
 }

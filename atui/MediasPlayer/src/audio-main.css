@@ -13,8 +13,7 @@
     overflow: hidden;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
+.atuiMediasplayer_Audioplayer :is(.atuiMediasplayer_Panel, .atuiMediasplayer_Dashboard) {
     display: flex;
 }
 
@@ -34,8 +33,7 @@
         align-items: center;
     }
 
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover,
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Information {
+    .atuiMediasplayer_Audioplayer :is(.atuiMediasplayer_Cover, .atuiMediasplayer_Information) {
         display: flex;
         justify-content: center;
         text-align: center;

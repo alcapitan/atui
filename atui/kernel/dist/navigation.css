@@ -19,9 +19,17 @@
     align-items: center;
 }
 
-.atuiKernel_NavigationSectionImgbig a:hover,
-.atuiKernel_NavigationSectionImgbig a:active,
+.atuiKernel_NavigationSectionImgbig a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
 .atuiKernel_NavigationSectionImgbig a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationSectionImgbig a:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
 }
@@ -34,8 +42,7 @@
     background-color: var(--atuiKernel_ColorschemeOA4);
 }
 
-.atuiKernel_NavigationSectionImgbig a i,
-.atuiKernel_NavigationSectionImgbig a img {
+.atuiKernel_NavigationSectionImgbig a i, .atuiKernel_NavigationSectionImgbig a img {
     width: 80px;
     height: 80px;
     font-size: 80px;
@@ -109,9 +116,17 @@
     row-gap: 5px;
 }
 
-.atuiKernel_NavigationBar a:hover,
-.atuiKernel_NavigationBar a:active,
+.atuiKernel_NavigationBar a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
 .atuiKernel_NavigationBar a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationBar a:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
 }
@@ -142,8 +157,7 @@
         background-color: var(--atuiKernel_ColorschemeOA2);
     }
 
-    .atuiKernel_NavigationBar i,
-    .atuiKernel_NavigationBar img {
+    .atuiKernel_NavigationBar i, .atuiKernel_NavigationBar img {
         width: 36px;
         font-size: 36px;
     }
@@ -187,11 +201,9 @@
            border-image: none !important;
     }
     .atuiKernel_NavigationBar {
-        width: calc(100% - 10px);
+        width: calc(100% - 20px);
         padding: 5px;
-        position: fixed;
-        left: 0;
-        right: 0;
+        position: sticky;
         bottom: 0;
         z-index: 10;
         background-color: var(--atuiKernel_ColorschemeOB1);
@@ -211,8 +223,7 @@
         background-color: var(--atuiKernel_ColorschemeOB2);
     }
 
-    .atuiKernel_NavigationBar i,
-    .atuiKernel_NavigationBar img {
+    .atuiKernel_NavigationBar i, .atuiKernel_NavigationBar img {
         width: 30px;
         font-size: 30px;
     }

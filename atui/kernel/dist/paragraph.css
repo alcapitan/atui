@@ -9,12 +9,7 @@
     margin: 10px 5px;
 }
 
-.atuiKernel_SectionParagraph h1,
-.atuiKernel_SectionParagraph h2,
-.atuiKernel_SectionParagraph h3,
-.atuiKernel_SectionParagraph h4,
-.atuiKernel_SectionParagraph h5,
-.atuiKernel_SectionParagraph h6 {
+.atuiKernel_SectionParagraph h1, .atuiKernel_SectionParagraph h2, .atuiKernel_SectionParagraph h3, .atuiKernel_SectionParagraph h4, .atuiKernel_SectionParagraph h5, .atuiKernel_SectionParagraph h6 {
     color: var(--atuiKernel_ColorschemeOA6);
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);

@@ -28,8 +28,7 @@
     flex: 1;
 }
 
-.atuiKernel_SectionAccordion > header i,
-.atuiKernel_SectionAccordion > header img {
+.atuiKernel_SectionAccordion > header :is(i, img) {
     width: 35px;
     height: 35px;
     flex: 0;

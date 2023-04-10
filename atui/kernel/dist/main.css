@@ -73,9 +73,7 @@ body * {
 
 /* Default props of HTML tags */
 
-p,
-a,
-label {
+p, a, label {
     font-size: 1rem;
 }
 
@@ -84,8 +82,12 @@ a {
     text-decoration: none;
 }
 
-a:hover,
 a:active {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+
+a:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
 }
@@ -118,6 +120,12 @@ h5 {
 
 h6 {
     font-size: 0.625rem;
+}
+
+.ti {
+    font-weight: normal !important;
+    -webkit-text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .ti {

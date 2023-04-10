@@ -41,9 +41,17 @@
     background-color: transparent;
 }
 
-.atuiKernel_SectionPaginationNumber a:hover,
-.atuiKernel_SectionPaginationNumber a:active,
+.atuiKernel_SectionPaginationNumber a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
 .atuiKernel_SectionPaginationNumber a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationNumber a:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
 }
@@ -75,9 +83,17 @@
     flex: 1;
 }
 
-.atuiKernel_SectionPaginationText a:hover,
-.atuiKernel_SectionPaginationText a:active,
+.atuiKernel_SectionPaginationText a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
 .atuiKernel_SectionPaginationText a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationText a:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
 }

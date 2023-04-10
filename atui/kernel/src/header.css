@@ -26,10 +26,7 @@
     position: fixed;
 }
 
-#atuiKernel_Header i,
-#atuiKernel_Header img {
-    height: 40px;
-    width: 40px;
+#atuiKernel_Header i {
     margin: 5px;
     font-size: 40px;
 }
@@ -91,10 +88,7 @@
     color: black;
 }
 
-#atuiKernel_Header > aside > nav > div i,
-#atuiKernel_Header > aside > nav > div img {
-    width: 20px;
-    height: 20px;
+#atuiKernel_Header > aside > nav > div i {
     margin-right: 10px;
     font-size: 20px;
 }
