@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Replace HTML for Markdown links.
 -   Change files architecture.
 -   Replace legacy icons by Tabler icons.
+-   Add light gray color in inputs.
+-   Add light accent color in Pagination Text.
 
 ### Fixed
 

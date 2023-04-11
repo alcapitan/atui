@@ -5,7 +5,7 @@
 
 /* Global */
 
-.atuiKernel_SectionParagraph * {
+.atuiKernel_SectionParagraph > * {
     margin: 10px 5px;
 }
 

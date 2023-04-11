@@ -79,6 +79,7 @@
 .atuiKernel_SectionPaginationText a:hover {
     border-width: 2px;
     border-color: var(--atuiKernel_ColorschemeOA6);
+    background-color: var(--atuiKernel_ColorschemeOA1);
 }
 
 .atuiKernel_SectionPaginationText a p {

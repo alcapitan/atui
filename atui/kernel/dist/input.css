@@ -6,8 +6,8 @@
 form, fieldset {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    gap: 10px;
+    grid-gap: 15px;
+    gap: 15px;
 }
 
 form > div, fieldset > div {
@@ -36,6 +36,13 @@ progress,
 select,
 input[type="file"]::file-selector-button {
     height: 40px;
+}
+
+input:not([type="color"]):not([type="file"]),
+progress,
+textarea,
+select {
+    background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 input[type="checkbox"],

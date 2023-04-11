@@ -36,7 +36,8 @@
 /* Responsive */
 
 @media (width >= 768px) /* Computers */ {
-    #atuiSearchservices_HeaderBar {
+    #atuiSearchservices_HeaderBar,
+    #atuiSearchservices_HeaderBar * {
         background-color: var(--atuiKernel_ColorschemeOB0);
     }
 

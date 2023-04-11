@@ -6,7 +6,7 @@
 :is(form, fieldset) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 15px;
 }
 
 :is(form, fieldset) > div {
@@ -45,6 +45,13 @@ progress,
 select,
 input[type="file"]::file-selector-button {
     height: 40px;
+}
+
+input:not([type="color"], [type="file"]),
+progress,
+textarea,
+select {
+    background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 input[type="checkbox"],
