@@ -5,6 +5,10 @@
 
 /* Global */
 
+.atuiKernel_SectionText > * {
+    margin: 10px 5px;
+}
+
 .atuiKernel_SectionText h1,
 .atuiKernel_SectionText h2,
 .atuiKernel_SectionText h3,
@@ -15,10 +19,6 @@
     color: var(--atuiKernel_ColorschemeOA6);
     font-family: var(--atuiKernel_FontsTitle);
     margin: 15px 0;
-}
-
-.atuiKernel_SectionText p {
-    margin: 0 5px;
 }
 
 .atuiKernel_SectionText a:hover,

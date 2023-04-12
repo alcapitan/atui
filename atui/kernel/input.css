@@ -26,15 +26,23 @@ input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: var(--atuiKernel_ColorschemeOB0);
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    margin: 0;
     padding: 10px 15px;
-    height: 40px;
     box-sizing: border-box;
     accent-color: var(--atuiKernel_ColorschemeOA5);
+}
+
+input,
+progress,
+select,
+input[type="file"]::file-selector-button {
+    height: 40px;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
     width: 30px;
+    height: 30px;
 }
 
 progress {

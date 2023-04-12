@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Add fixed option for Header.
+
+### Changed
+
+-   Decrease font size of version in about page.
+-   Better size management of Card.
+-   Set Navigation bar sticky instead of fixed.
+
+### Fixed
+
+-   Texts in Box were unreadable on dark mode.
+-   There was a margin on bottom of Footer when there was no navbar.
+-   There was a margin inconsistency on bottom bar of the header.
+-   Textarea dimension style avoid HTML attributes working.
+-   The textarea dimension style was preventing the HTML dimension attributes from working.
+-   Better margin for elements in Text.
+
 ## [0.3.1] - 2023-03-16
 
 ### Changed
