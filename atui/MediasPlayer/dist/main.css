@@ -89,3 +89,9 @@
     background-color: var(--atuiKernel_ColorschemeOA5);
     transition: width 500ms;
 }
+
+/* Error */
+
+.atuiMediasplayer_Audioplayer .atuiKernel_SectionBox, .atuiMediasplayer_Videoplayer .atuiKernel_SectionBox {
+    margin: 10px;
+}

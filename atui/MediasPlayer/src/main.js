@@ -29,6 +29,24 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
     });
 });
 
+/* Display error for broken media link */
+
+function atuiMediasplayer_BrokenLink(player) {
+    const alertBox = document.createElement("div");
+    alertBox.classList.add("atuiKernel_SectionBox", "optionAlert");
+    const alertIcon = document.createElement("i");
+    alertIcon.classList.add("ti", "ti-alert-circle");
+    const alertText = document.createElement("p");
+    alertText.innerHTML = "ERROR : The media link is broken.";
+    alertBox.appendChild(alertIcon);
+    alertBox.appendChild(alertText);
+    if (player.classList.contains("atuiMediasplayer_Videoplayer")) {
+        player.querySelector("article").prepend(alertBox);
+    } else {
+        player.prepend(alertBox);
+    }
+}
+
 /* Assign an audio to an audioplayer */
 
 function atuiMediasplayer_Assign(data) {
@@ -84,14 +102,20 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
             media = findElement(this, "audio, video", ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
             button = this;
         }
+        const player = findElement(
+            media,
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+        );
+        const mediaLinkIsOk = verifyLink(media.getAttribute("src"));
+        mediaLinkIsOk.then((response) => {
+            if (!response) {
+                atuiMediasplayer_BrokenLink(player);
+            }
+        });
         if (media.paused === true) {
             stopAllMedia();
             media.play();
-            const player = findElement(
-                media,
-                ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-                ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
-            );
             if (window.getComputedStyle(player).display === "none") {
                 player.style.display = "block";
             }

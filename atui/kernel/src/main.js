@@ -53,6 +53,17 @@ function findElement(element, query, stop = null) {
     }
 }
 
+/* Verify link */
+
+async function verifyLink(url) {
+    const response = await fetch(url);
+    if (response.ok) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 /* Convert time data to be readable by humans */
 
 function convertTime(time) {

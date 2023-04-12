@@ -130,6 +130,7 @@ h6 {
 
 .ti {
     color: var(--atuiKernel_ColorschemeOBF);
+    fill: var(--atuiKernel_ColorschemeOBF);
 }
 
 ::-moz-selection {

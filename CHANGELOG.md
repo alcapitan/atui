@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add pill option style for inputs.
 -   Add share JS function.
 -   Set rich links on head tag in html.
+-   Display error for broken media link on Mediaplayer.
+-   Add verify link JS function in kernel.
 
 ### Changed
 
