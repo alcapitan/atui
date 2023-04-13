@@ -31,13 +31,17 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
 
 /* Display error for broken media link */
 
-function atuiMediasplayer_BrokenLink(player) {
+function atuiMediasplayer_BrokenLink(player, mediaLink) {
   const alertBox = document.createElement("div");
   alertBox.classList.add("atuiKernel_SectionBox", "optionAlert");
   const alertIcon = document.createElement("i");
-  alertIcon.classList.add("ti", "ti-alert-circle");
+  alertIcon.classList.add("ti", "ti-circle-x");
   const alertText = document.createElement("p");
-  alertText.innerHTML = "ERROR : The media link is broken.";
+  if (mediaLink !== null) {
+    alertText.innerHTML = `ERROR : The media "<code>${mediaLink}</code>" is not reachable.`;
+  } else {
+    alertText.innerHTML = `ERROR : There is no media in this mediasplayer.`;
+  }
   alertBox.appendChild(alertIcon);
   alertBox.appendChild(alertText);
   if (player.classList.contains("atuiMediasplayer_Videoplayer")) {
@@ -102,19 +106,23 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
       media = findElement(this, "audio, video", ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
       button = this;
     }
-    const player = findElement(
-    media,
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
-
-    const mediaLinkIsOk = verifyLink(media.getAttribute("src"));
-    mediaLinkIsOk.then((response) => {
-      if (!response) {
-        atuiMediasplayer_BrokenLink(player);
-      }
-    });
     if (media.paused === true) {
       stopAllMedia();
+      const player = findElement(
+      media,
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
+
+      player.querySelectorAll(".atuiKernel_SectionBox.optionAlert").forEach((alertBox) => {
+        alertBox.remove();
+      });
+      const mediaLink = media.getAttribute("src");
+      const mediaLinkIsOk = verifyLink(mediaLink);
+      mediaLinkIsOk.then((response) => {
+        if (!response) {
+          atuiMediasplayer_BrokenLink(player, mediaLink);
+        }
+      });
       media.play();
       if (window.getComputedStyle(player).display === "none") {
         player.style.display = "block";

@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Set rich links on head tag in html.
 -   Display error for broken media link on Mediaplayer.
 -   Add verify link JS function in kernel.
+-   Add Fonts Monospace CSS variable.
 
 ### Changed
 

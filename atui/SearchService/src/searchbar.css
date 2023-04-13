@@ -23,8 +23,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     outline: none;
+    background-color: var(--atuiKernel_ColorschemeOB0);
     color: var(--atuiKernel_ColorschemeOB5);
     font-size: 1.125rem;
+    flex: 1;
 }
 
 #atuiSearchservices_Submit /* Submit image */ {
@@ -33,11 +35,15 @@
     outline: none;
 }
 
+#atuiSearchservices_Input,
+#atuiSearchservices_Submit {
+    background-color: inherit;
+}
+
 /* Responsive */
 
 @media (width >= 768px) /* Computers */ {
-    #atuiSearchservices_HeaderBar,
-    #atuiSearchservices_HeaderBar * {
+    #atuiSearchservices_HeaderBar {
         background-color: var(--atuiKernel_ColorschemeOB0);
     }
 

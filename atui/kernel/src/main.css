@@ -32,7 +32,8 @@
 
     --atuiKernel_FontsTitle: system-ui;
     --atuiKernel_FontsText: system-ui;
-    --atuiKernel_FontsSpecial: system-ui;
+    --atuiKernel_FontsSpecial: cursive;
+    --atuiKernel_FontsMonospace: monospace;
     --atuiKernel_TitleBold: bold; /* or normal */
     --atuiKernel_Blur: blur(5px);
     --atuiKernel_Borderradius: 10px;
@@ -112,9 +113,12 @@ h6 {
     font-size: 0.625rem;
 }
 
+code {
+    font-family: var(--atuiKernel_FontsMonospace);
+}
+
 .ti {
     color: var(--atuiKernel_ColorschemeOBF);
-    fill: var(--atuiKernel_ColorschemeOBF);
     font-weight: normal !important;
     text-decoration: none !important;
 }
