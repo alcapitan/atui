@@ -22,7 +22,7 @@
     width: stretch;
     width: available;
     padding: 0 10px;
-    z-index: 10;
+    z-index: 12;
 }
 
 #atuiKernel_Header > aside.optionFixed {

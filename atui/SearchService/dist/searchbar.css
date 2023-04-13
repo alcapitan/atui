@@ -7,7 +7,6 @@
 
 #atuiSearchservices_HeaderBar /* Searchbar container */ {
     border-radius: var(--atuiKernel_Borderradius);
-    border: 1px var(--atuiKernel_ColorschemeOB3) solid;
     width: 100%;
     height: 40px;
     overflow: hidden;
@@ -51,6 +50,7 @@
 @media (min-width: 768px) /* Computers */ {
     #atuiSearchservices_HeaderBar {
         background-color: var(--atuiKernel_ColorschemeOB0);
+        border: 1px var(--atuiKernel_ColorschemeOB3) solid;
     }
 
     #atuiSearchservices_Input /* Searchbar */ {

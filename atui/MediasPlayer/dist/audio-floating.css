@@ -7,7 +7,7 @@
 
 .atuiMediasplayer_Audioplayer.optionFloating {
     position: fixed;
-    z-index: 10;
+    z-index: 11;
     bottom: 20px;
     left: 10%;
     right: 10%;
