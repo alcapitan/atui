@@ -7,6 +7,7 @@
 
 #atuiSearchservices_HeaderBar /* Searchbar container */ {
     border-radius: var(--atuiKernel_Borderradius);
+    border: 1px var(--atuiKernel_ColorschemeOB3) solid;
     width: 100%;
     height: 40px;
     overflow: hidden;
@@ -27,6 +28,11 @@
     color: var(--atuiKernel_ColorschemeOB5);
     font-size: 1.125rem;
     flex: 1;
+}
+
+#atuiSearchservices_Submit /* Submit image */ {
+    margin: 0 !important;
+    font-size: 30px !important;
 }
 
 #atuiSearchservices_Submit /* Submit image */ {

@@ -30,6 +30,7 @@ input,
 progress,
 textarea,
 select,
+.atuiKernel_InputSubmit,
 input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: var(--atuiKernel_ColorschemeOB0);
@@ -43,6 +44,7 @@ input[type="file"]::file-selector-button {
 input,
 progress,
 select,
+.atuiKernel_InputSubmit,
 input[type="file"]::file-selector-button {
     height: 40px;
 }
@@ -50,7 +52,8 @@ input[type="file"]::file-selector-button {
 input:not([type="color"], [type="file"]),
 progress,
 textarea,
-select {
+select,
+.atuiKernel_InputSubmit {
     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
@@ -77,7 +80,17 @@ input[type="color"]::-webkit-color-swatch {
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
-:is(input:not([type="checkbox"], [type="radio"], [type="range"]), progress:focus, textarea:focus, select):focus {
+.atuiKernel_InputSubmit {
+    font-size: 20px !important;
+}
+
+:is(
+        input:not([type="checkbox"], [type="radio"], [type="range"]),
+        .atuiKernel_InputSubmit,
+        progress:focus,
+        textarea:focus,
+        select
+    ):focus {
     outline: solid 2px var(--atuiKernel_ColorschemeBA4);
 }
 
@@ -94,7 +107,7 @@ fieldset legend {
     font-size: 1.125rem;
 }
 
-:is(input:not([type="file"], [type="color"]), select, textarea).optionPill {
+:is(input:not([type="file"], [type="color"]), .atuiKernel_InputSubmit, select, textarea).optionPill {
     border-radius: 20px;
     padding: 10px 20px;
 }

@@ -117,6 +117,16 @@ try {
   atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
 } catch {}
 
+/* Submit button */
+
+document.querySelectorAll(".atuiKernel_InputSubmit").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    const form = findElement(button, "form");
+    form.submit();
+  });
+});
+
 /* Display mode */
 
 function atuiKernel_ToolsSettingsDisplaymodeChange() {

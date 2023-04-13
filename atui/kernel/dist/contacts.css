@@ -51,11 +51,14 @@
     gap: 10px;
 }
 
-#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img {
+#atuiKernel_ToolsContactNewsletter i, #atuiKernel_ToolsContactNewsletter img {
+    font-size: 30px !important;
+}
+
+#atuiKernel_ToolsContactNewsletter i, #atuiKernel_ToolsContactNewsletter img {
     border-radius: var(--atuiKernel_Borderradius);
     width: 30px;
     height: 30px;
-    font-size: 30px;
 }
 
 #atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */ {
@@ -75,10 +78,7 @@
     background-color: transparent;
 }
 
-#atuiKernel_ToolsContactNewsletter form input[type="image"] /* Send icon */ {
-    border-radius: var(--atuiKernel_Borderradius);
-    width: 30px;
-    height: 30px;
+#atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit /* Send icon */ {
     background-color: transparent;
     border: none;
     box-sizing: content-box;

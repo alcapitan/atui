@@ -21,6 +21,7 @@ input,
 progress,
 textarea,
 select,
+.atuiKernel_InputSubmit,
 input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: var(--atuiKernel_ColorschemeOB0);
@@ -34,6 +35,7 @@ input[type="file"]::file-selector-button {
 input,
 progress,
 select,
+.atuiKernel_InputSubmit,
 input[type="file"]::file-selector-button {
     height: 40px;
 }
@@ -41,7 +43,8 @@ input[type="file"]::file-selector-button {
 input:not([type="color"]):not([type="file"]),
 progress,
 textarea,
-select {
+select,
+.atuiKernel_InputSubmit {
     background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
@@ -68,7 +71,15 @@ input[type="color"]::-webkit-color-swatch {
     border: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus, progress:focus:not(.does-not-exist):not(.does-not-exist):focus, textarea:focus:not(.does-not-exist):not(.does-not-exist):focus, select:not(.does-not-exist):not(.does-not-exist):not(.does-not-exist):focus {
+.atuiKernel_InputSubmit {
+    font-size: 20px !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+        .atuiKernel_InputSubmit:not(.does-not-exist):not(.does-not-exist):not(does-not-exist):focus,
+        progress:focus:not(.does-not-exist):not(.does-not-exist):focus,
+        textarea:focus:not(.does-not-exist):not(.does-not-exist):focus,
+        select:not(.does-not-exist):not(.does-not-exist):not(.does-not-exist):focus {
     outline: solid 2px var(--atuiKernel_ColorschemeBA4);
 }
 
@@ -85,7 +96,7 @@ fieldset legend {
     font-size: 1.125rem;
 }
 
-input.optionPill:not([type="file"]):not([type="color"]), select.optionPill:not(.does-not-exist):not(.does-not-exist), textarea.optionPill:not(.does-not-exist):not(.does-not-exist) {
+input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit.optionPill:not(.does-not-exist):not(does-not-exist), select.optionPill:not(.does-not-exist):not(.does-not-exist), textarea.optionPill:not(.does-not-exist):not(.does-not-exist) {
     border-radius: 20px;
     padding: 10px 20px;
 }
