@@ -23,7 +23,8 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
     if (!wish) {
         atuiSearchservices_HeaderBar.style.width = "100%";
         atuiSearchservices_HeaderBar.style.margin = "0px";
-        if (document.documentElement.clientWidth < 767) {
+        if (document.documentElement.clientWidth <= 767) {
+            atuiSearchservices_HeaderBar.style.border = "";
             atuiSearchservices_HeaderBar.style.backgroundColor = "transparent";
             atuiSearchservices_HeaderBarInput.style.display = "none";
         }
@@ -38,9 +39,10 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
         atuiSearchservices_HeaderBar.style.margin = "10px";
         atuiSearchservices_HeaderPropositions.style.display = "block";
         element.style.position = "absolute";
-        if (document.documentElement.clientWidth < 767) {
+        if (document.documentElement.clientWidth <= 767) {
             atuiSearchservices_HeaderBarInput.style.display = "inline";
             atuiSearchservices_HeaderBar.style.backgroundColor = "var(--atuiKernel_ColorschemeOB0)";
+            atuiSearchservices_HeaderBar.style.border = "1px var(--atuiKernel_ColorschemeOB3) solid";
             element.style.left = "40px";
             element.style.right = "40px";
         }

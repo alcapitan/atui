@@ -47,11 +47,11 @@
     background-color: var(--atuiKernel_ColorschemeBB0);
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding: 5px 15px;
     gap: 10px;
 }
 
-#atuiKernel_ToolsContactNewsletter :is(i, img) {
+#atuiKernel_ToolsContactNewsletter > :is(i, img) {
     border-radius: var(--atuiKernel_Borderradius);
     width: 30px;
     height: 30px;
@@ -79,6 +79,10 @@
     background-color: transparent;
     border: none;
     box-sizing: content-box;
+    font-size: 25px !important;
+    width: 25px;
+    height: 25px;
+    padding: 0;
 }
 
 /* Compact */

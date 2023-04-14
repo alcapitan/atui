@@ -47,15 +47,15 @@
     background-color: var(--atuiKernel_ColorschemeBB0);
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding: 5px 15px;
     gap: 10px;
 }
 
-#atuiKernel_ToolsContactNewsletter i, #atuiKernel_ToolsContactNewsletter img {
+#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img {
     font-size: 30px !important;
 }
 
-#atuiKernel_ToolsContactNewsletter i, #atuiKernel_ToolsContactNewsletter img {
+#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img {
     border-radius: var(--atuiKernel_Borderradius);
     width: 30px;
     height: 30px;
@@ -79,9 +79,16 @@
 }
 
 #atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit /* Send icon */ {
+    font-size: 25px !important;
+}
+
+#atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit /* Send icon */ {
     background-color: transparent;
     border: none;
     box-sizing: content-box;
+    width: 25px;
+    height: 25px;
+    padding: 0;
 }
 
 /* Compact */
