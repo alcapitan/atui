@@ -22,7 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Texts in Box were unreadable on dark mode.
 -   There was a margin on bottom of Footer when there was no navbar.
 -   There was a margin inconsistency on bottom bar of the header.
--   Textarea dimension style avoid HTML attributes working.
 -   The textarea dimension style was preventing the HTML dimension attributes from working.
 -   Better margin for elements in Text.
 
