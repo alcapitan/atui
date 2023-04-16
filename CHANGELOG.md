@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Display error for broken media link on Mediaplayer.
 -   Add verify link JS function in kernel.
 -   Add Fonts Monospace CSS variable.
+-   Add pill, tinted, grouped options.
 
 ### Changed
 
@@ -39,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add light gray color in inputs.
 -   Add light accent color in Pagination Text.
 -   Adapt shadows to dark mode.
+-   Rewrite Button.
 
 ### Fixed
 

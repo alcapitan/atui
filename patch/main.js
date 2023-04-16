@@ -9,6 +9,8 @@ atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationText");
 atuiKernel_NavigationGlobalpanel("atuiKernel_NavigationGlobalpanel1");
+atuiKernel_ToolsContextmenu("buttonContextmenu1");
+atuiKernel_ToolsContextmenu("buttonContextmenu2");
 
 /*atuiMediasplayer_Assign({
     player: 'audioplayer2',
