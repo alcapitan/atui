@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Replace legacy icons by Tabler icons.
 -   Add light gray color in inputs.
 -   Add light accent color in Pagination Text.
+-   Adapt shadows to dark mode.
 
 ### Fixed
 
