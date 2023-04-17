@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Display error for broken media link on Mediaplayer.
 -   Add verify link JS function in kernel.
 -   Add Fonts Monospace CSS variable.
--   Add pill, tinted, grouped options.
+-   Add pill, tinted, grouped options for Button.
 
 ### Changed
 
