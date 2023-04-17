@@ -39,3 +39,4 @@ document.getElementById("clipboardButton").addEventListener("click", async funct
 document.getElementById("shareButton").addEventListener("click", function () {
     atuiKernel_ShareTool("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");
 });
+

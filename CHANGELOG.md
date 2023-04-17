@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add light accent color in Pagination Text.
 -   Adapt shadows to dark mode.
 -   Rewrite Button.
+-   Rewrite color mode script. Now, it checks at startup system status then in cookies. Moreover, there is a better flexibility for toggle button.
 
 ### Fixed
 

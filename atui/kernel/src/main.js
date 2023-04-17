@@ -119,32 +119,59 @@ try {
 
 /* Display mode */
 
-function atuiKernel_ToolsSettingsDisplaymodeChange() {
-    const atuiKernel_ToolsSettingsDisplaymodeElement = document
-        .getElementById("atuiKernel_ToolsSettingsDisplaymode")
-        .querySelector("i");
-    /*status = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;*/
-    if (atuiKernel_ToolsSettingsDisplaymodeStatus) {
-        atuiKernel_ToolsSettingsDisplaymodeStatus = false;
-        atuiKernel_ToolsSettingsDisplaymodeElement.classList.replace("ti-sun", "ti-moon");
-        atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Enable light mode");
-        atuiKernel_ColorschemeGeneratorAuto(undefined);
-    } else {
-        atuiKernel_ToolsSettingsDisplaymodeStatus = true;
-        atuiKernel_ToolsSettingsDisplaymodeElement.classList.replace("ti-moon", "ti-sun");
-        atuiKernel_ToolsSettingsDisplaymodeElement.setAttribute("alt", "Enable dark mode");
-        atuiKernel_ColorschemeGeneratorAuto(undefined);
-    }
+let atuiKernel_ColormodeIsDark = false; // Default value
+
+function atuiKernel_ColormodeToggle() {
+    document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
+        if (atuiKernel_ColormodeIsDark) {
+            atuiKernel_ColormodeIsDark = false;
+            button.classList.replace("ti-moon", "ti-sun");
+        } else {
+            atuiKernel_ColormodeIsDark = true;
+            button.classList.replace("ti-sun", "ti-moon");
+        }
+    });
 }
 
-let atuiKernel_ToolsSettingsDisplaymodeStatus = true;
-try {
-    document
-        .getElementById("atuiKernel_ToolsSettingsDisplaymode")
-        .querySelector("i")
-        .addEventListener("click", atuiKernel_ToolsSettingsDisplaymodeChange);
-    atuiKernel_ToolsSettingsDisplaymodeChange;
-} catch {}
+function atuiKernel_ColormodeStartup() {
+    const systemState = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (systemState) {
+        atuiKernel_ColormodeToggle();
+        console.info("Dark mode enabled according to the system preferences.");
+        return true;
+    }
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith("atuiKernel_ColormodeIsDark=")) {
+            const value = cookie.substring("atuiKernel_ColormodeIsDark=".length, cookie.length);
+            if (value === "true") {
+                atuiKernel_ColormodeToggle();
+                console.info("Dark mode enabled according to the cookies.");
+            }
+            return value === "true";
+        }
+    }
+}
+atuiKernel_ColormodeStartup();
+
+document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
+    button.addEventListener("click", () => {
+        /* Toggles the status */
+        atuiKernel_ColormodeToggle();
+
+        /* Saves the status in cookies */
+        const date = new Date();
+        date.setTime(date.getTime() + 21600000); // Expiration time is 6 hours
+        const expires = "expires=" + date.toUTCString();
+        const cookie =
+            "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark + ";" + expires + ";path=/;SameSite=Lax;";
+        document.cookie = cookie;
+
+        /* Update color accent */
+        atuiKernel_ColorschemeGeneratorAuto(undefined);
+    });
+});
 
 /* Color scheme */
 
@@ -258,7 +285,7 @@ function atuiKernel_ColorschemeGeneratorAuto(accent) {
     if (accent != undefined) {
         defaultAccent = accent;
     }
-    atuiKernel_ColorschemeGeneratorPack(true, defaultAccent, atuiKernel_ToolsSettingsDisplaymodeStatus);
+    atuiKernel_ColorschemeGeneratorPack(true, defaultAccent, atuiKernel_ColormodeIsDark);
 }
 atuiKernel_ColorschemeGeneratorAuto(undefined);
 
