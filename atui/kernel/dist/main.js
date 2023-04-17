@@ -14,6 +14,11 @@ const atuiKernel_Metadata = {
 };
 atuiKernel_MetadataDisplay(atuiKernel_Metadata);
 
+/* Default values */
+
+let atuiKernel_ColormodeIsDark = false;
+let defaultAccent = [230, 51, 0];
+
 /* Metadata display */
 
 function atuiKernel_MetadataDisplay(infos) {
@@ -119,9 +124,8 @@ try {
 
 /* Display mode */
 
-let atuiKernel_ColormodeIsDark = false; // Default value
-
 function atuiKernel_ColormodeToggle() {
+  /* Toggles the status */
   document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
     if (atuiKernel_ColormodeIsDark) {
       atuiKernel_ColormodeIsDark = false;
@@ -131,11 +135,21 @@ function atuiKernel_ColormodeToggle() {
       button.classList.replace("ti-sun", "ti-moon");
     }
   });
+
+  /* Save the status in cookies */
+  const date = new Date();
+  date.setTime(date.getTime() + 21600000); // Expiration time is 6 hours
+  const expires = "expires=" + date.toUTCString();
+  const cookie = "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark + ";" + expires + ";path=/;SameSite=Lax;";
+  document.cookie = cookie;
+
+  /* Update color accent */
+  atuiKernel_ColorschemeGeneratorAuto(undefined);
 }
 
 function atuiKernel_ColormodeStartup() {
-  const systemState = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (systemState) {
+  const systemStatus = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (systemStatus) {
     atuiKernel_ColormodeToggle();
     console.info("Dark mode enabled according to the system preferences.");
     return true;
@@ -144,32 +158,21 @@ function atuiKernel_ColormodeStartup() {
   for (let i = 0; i < cookies.length; i++) {
     const cookie = cookies[i].trim();
     if (cookie.startsWith("atuiKernel_ColormodeIsDark=")) {
-      const value = cookie.substring("atuiKernel_ColormodeIsDark=".length, cookie.length);
-      if (value === "true") {
+      const cookieStatus = cookie.substring("atuiKernel_ColormodeIsDark=".length, cookie.length);
+      if (cookieStatus === "true") {
         atuiKernel_ColormodeToggle();
         console.info("Dark mode enabled according to the cookies.");
       }
-      return value === "true";
+      return cookieStatus === "true";
     }
   }
+  return false;
 }
 atuiKernel_ColormodeStartup();
 
 document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
   button.addEventListener("click", () => {
-    /* Toggles the status */
     atuiKernel_ColormodeToggle();
-
-    /* Saves the status in cookies */
-    const date = new Date();
-    date.setTime(date.getTime() + 21600000); // Expiration time is 6 hours
-    const expires = "expires=" + date.toUTCString();
-    const cookie =
-    "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark + ";" + expires + ";path=/;SameSite=Lax;";
-    document.cookie = cookie;
-
-    /* Update color accent */
-    atuiKernel_ColorschemeGeneratorAuto(undefined);
   });
 });
 
@@ -209,7 +212,7 @@ function atuiKernel_ColorschemeGenerator(base, isDarkMode, wantOpacity) {
     schemeColor.push(tone);
   }
   schemeColor.push([255, 255, 255]);
-  if (isDarkMode) {
+  if (!isDarkMode) {
     schemeColor = schemeColor.reverse();
   }
 
@@ -280,7 +283,6 @@ function atuiKernel_ColorschemeGeneratorPack(bicolor, accent, isDarkMode) {
   }
 }
 
-let defaultAccent = [230, 51, 0];
 function atuiKernel_ColorschemeGeneratorAuto(accent) {
   if (accent != undefined) {
     defaultAccent = accent;
