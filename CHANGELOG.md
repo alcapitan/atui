@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add verify link JS function in kernel.
 -   Add Fonts Monospace CSS variable.
 -   Add pill, tinted, grouped options for Button.
+-   For color mode, it checks at startup system status then in cookies.
+-   Color scheming now includes danger warning success and info.
 
 ### Changed
 
@@ -41,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add light accent color in Pagination Text.
 -   Adapt shadows to dark mode.
 -   Rewrite Button.
--   Rewrite color mode script. Now, it checks at startup system status then in cookies. Moreover, there is a better flexibility for toggle button.
+-   Rewrite color mode script. There is a better flexibility and management for toggle button and color variables.
+-   Rewrite color scheming script. There are completly new variables and operation.
 
 ### Fixed
 

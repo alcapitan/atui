@@ -1,0 +1,93 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/*
+
+The color codes below have been largely inspired by Material Design 3 from Google.
+Find all the information about the color with Material Design 3 on this link : 
+https://m3.material.io/styles/color/the-color-system/key-colors-tones
+
+In addition, there are also some inspirations coming from Bootstrap by Twitter.
+Find the documentation on color management here : 
+https://getbootstrap.com/docs/5.3/customize/color-modes/
+
+*/
+
+:root {
+    --atuiKernel_Color-Accent: 14;
+}
+
+:root,
+[data-atui-colormode="light"] {
+    --atuiKernel_Color-Neutral-Surface-Dim: var(--atuiKernel_Color-Accent) 0% 87%;
+    --atuiKernel_Color-Neutral-Surface: var(--atuiKernel_Color-Accent) 0% 98%;
+    --atuiKernel_Color-Neutral-Surface-Bright: var(--atuiKernel_Color-Accent) 0% 98%;
+    --atuiKernel_Color-Neutral-Surface-Container-Lowest: var(--atuiKernel_Color-Accent) 0% 100%;
+    --atuiKernel_Color-Neutral-Surface-Container-Low: var(--atuiKernel_Color-Accent) 0% 96%;
+    --atuiKernel_Color-Neutral-Surface-Container: var(--atuiKernel_Color-Accent) 0% 94%;
+    --atuiKernel_Color-Neutral-Surface-Container-High: var(--atuiKernel_Color-Accent) 0% 92%;
+    --atuiKernel_Color-Neutral-Surface-Container-Highest: var(--atuiKernel_Color-Accent) 0% 90%;
+    --atuiKernel_Color-Neutral-On-Surface: var(--atuiKernel_Color-Accent) 0% 10%;
+    --atuiKernel_Color-Neutral-On-Surface-Dim: var(--atuiKernel_Color-Accent) 0% 30%;
+    --atuiKernel_Color-Neutral-Outline: var(--atuiKernel_Color-Accent) 0% 50%;
+    --atuiKernel_Color-Neutral-Outline-Dim: var(--atuiKernel_Color-Accent) 0% 80%;
+    --atuiKernel_Color-Accent-Surface: var(--atuiKernel_Color-Accent) 100% 40%;
+    --atuiKernel_Color-Accent-On-Surface: var(--atuiKernel_Color-Accent) 100% 100%;
+    --atuiKernel_Color-Accent-Container: var(--atuiKernel_Color-Accent) 100% 90%;
+    --atuiKernel_Color-Accent-On-Container: var(--atuiKernel_Color-Accent) 100% 10%;
+    --atuiKernel_Color-Danger-Surface: 354deg 100% 40%;
+    --atuiKernel_Color-Danger-On-Surface: 354deg 100% 100%;
+    --atuiKernel_Color-Danger-Container: 354deg 100% 90%;
+    --atuiKernel_Color-Danger-On-Container: 354deg 100% 10%;
+    --atuiKernel_Color-Warning-Surface: 45deg 100% 40%;
+    --atuiKernel_Color-Warning-On-Surface: 45deg 100% 100%;
+    --atuiKernel_Color-Warning-Container: 45deg 100% 90%;
+    --atuiKernel_Color-Warning-On-Container: 45deg 100% 10%;
+    --atuiKernel_Color-Success-Surface: 152deg 100% 40%;
+    --atuiKernel_Color-Success-On-Surface: 152deg 100% 100%;
+    --atuiKernel_Color-Success-Container: 152deg 100% 90%;
+    --atuiKernel_Color-Success-On-Container: 152deg 100% 10%;
+    --atuiKernel_Color-Info-Surface: 190deg 100% 40%;
+    --atuiKernel_Color-Info-On-Surface: 190deg 100% 100%;
+    --atuiKernel_Color-Info-Container: 190deg 100% 90%;
+    --atuiKernel_Color-Info-On-Container: 190deg 100% 10%;
+}
+
+[data-atui-colormode="dark"] {
+    color-scheme: dark;
+
+    --atuiKernel_Color-Neutral-Surface-Dim: var(--atuiKernel_Color-Accent) 0% 6%;
+    --atuiKernel_Color-Neutral-Surface: var(--atuiKernel_Color-Accent) 0% 6%;
+    --atuiKernel_Color-Neutral-Surface-Bright: var(--atuiKernel_Color-Accent) 0% 24%;
+    --atuiKernel_Color-Neutral-Surface-Container-Lowest: var(--atuiKernel_Color-Accent) 0% 4%;
+    --atuiKernel_Color-Neutral-Surface-Container-Low: var(--atuiKernel_Color-Accent) 0% 10%;
+    --atuiKernel_Color-Neutral-Surface-Container: var(--atuiKernel_Color-Accent) 0% 12%;
+    --atuiKernel_Color-Neutral-Surface-Container-High: var(--atuiKernel_Color-Accent) 0% 17%;
+    --atuiKernel_Color-Neutral-Surface-Container-Highest: var(--atuiKernel_Color-Accent) 0% 22%;
+    --atuiKernel_Color-Neutral-On-Surface: var(--atuiKernel_Color-Accent) 0% 90%;
+    --atuiKernel_Color-Neutral-On-Surface-Dim: var(--atuiKernel_Color-Accent) 0% 80%;
+    --atuiKernel_Color-Neutral-Outline: var(--atuiKernel_Color-Accent) 0% 60%;
+    --atuiKernel_Color-Neutral-Outline-Dim: var(--atuiKernel_Color-Accent) 0% 30%;
+    --atuiKernel_Color-Accent-Surface: var(--atuiKernel_Color-Accent) 100% 80%;
+    --atuiKernel_Color-Accent-On-Surface: var(--atuiKernel_Color-Accent) 100% 20%;
+    --atuiKernel_Color-Accent-Container: var(--atuiKernel_Color-Accent) 100% 30%;
+    --atuiKernel_Color-Accent-On-Container: var(--atuiKernel_Color-Accent) 100% 90%;
+    --atuiKernel_Color-Danger-Surface: 354deg 100% 80%;
+    --atuiKernel_Color-Danger-On-Surface: 354deg 100% 20%;
+    --atuiKernel_Color-Danger-Container: 354deg 100% 30%;
+    --atuiKernel_Color-Danger-On-Container: 354deg 100% 90%;
+    --atuiKernel_Color-Warning-Surface: 45deg 100% 80%;
+    --atuiKernel_Color-Warning-On-Surface: 45deg 100% 20%;
+    --atuiKernel_Color-Warning-Container: 45deg 100% 30%;
+    --atuiKernel_Color-Warning-On-Container: 45deg 100% 90%;
+    --atuiKernel_Color-Success-Surface: 152deg 100% 80%;
+    --atuiKernel_Color-Success-On-Surface: 152deg 100% 20%;
+    --atuiKernel_Color-Success-Container: 152deg 100% 30%;
+    --atuiKernel_Color-Success-On-Container: 152deg 100% 90%;
+    --atuiKernel_Color-Info-Surface: 190deg 100% 80%;
+    --atuiKernel_Color-Info-On-Surface: 190deg 100% 20%;
+    --atuiKernel_Color-Info-Container: 190deg 100% 30%;
+    --atuiKernel_Color-Info-On-Container: 190deg 100% 90%;
+}

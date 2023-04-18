@@ -16,7 +16,6 @@ atuiKernel_MetadataDisplay(atuiKernel_Metadata);
 
 /* Default values */
 
-let atuiKernel_ColormodeIsDark = false;
 let defaultAccent = [230, 51, 0];
 
 /* Metadata display */
@@ -124,14 +123,23 @@ try {
 
 /* Display mode */
 
+function atuiKernel_ColormodeIsDark() {
+    const status = document.documentElement.getAttribute("data-atui-colormode");
+    if (status === "dark") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function atuiKernel_ColormodeToggle() {
     /* Toggles the status */
     document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
-        if (atuiKernel_ColormodeIsDark) {
-            atuiKernel_ColormodeIsDark = false;
+        if (atuiKernel_ColormodeIsDark()) {
+            document.documentElement.setAttribute("data-atui-colormode", "light");
             button.classList.replace("ti-moon", "ti-sun");
         } else {
-            atuiKernel_ColormodeIsDark = true;
+            document.documentElement.setAttribute("data-atui-colormode", "dark");
             button.classList.replace("ti-sun", "ti-moon");
         }
     });
@@ -140,7 +148,8 @@ function atuiKernel_ColormodeToggle() {
     const date = new Date();
     date.setTime(date.getTime() + 21600000); // Expiration time is 6 hours
     const expires = "expires=" + date.toUTCString();
-    const cookie = "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark + ";" + expires + ";path=/;SameSite=Lax;";
+    const cookie =
+        "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark() + ";" + expires + ";path=/;SameSite=Lax;";
     document.cookie = cookie;
 
     /* Update color palette */
@@ -176,7 +185,43 @@ document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
     });
 });
 
-/* Color scheme */
+/* Color accent */
+
+function atuiKernel_ColoraccentGenerate(hue, name) {
+    /* This function takes as parameter the hue part of the base color in HSL, and the name of the color palette, to declares the palette on the web page. */
+    const map = {
+        Surface: [40, 80],
+        "On-Surface": [100, 20],
+        Container: [90, 30],
+        "On-Container": [10, 90],
+    };
+    for (const [variant, lightness] of Object.entries(map)) {
+        const colorLight = `hsl(${hue}, 100%, ${lightness[0]}%)`;
+        const colorDark = `hsl(${hue}, 100%, ${lightness[1]}%)`;
+        document.querySelectorAll(":root,*[data-atui-colormode=light]").forEach((element) => {
+            element.style.setProperty(`--atuiKernel_Color-${name}-${variant}`, colorLight);
+        });
+        document.querySelectorAll("*[data-atui-colormode=dark]").forEach((element) => {
+            element.style.setProperty(`--atuiKernel_Color-${name}-${variant}`, colorDark);
+        });
+    }
+    if (name === "Accent") {
+        atuiKernel_ColoraccentMetatag();
+    }
+}
+
+function atuiKernel_ColoraccentMetatag() {
+    let metaTag = document.querySelector('meta[name="theme-color"]');
+    if (!metaTag) {
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("name", "theme-color");
+        document.head.appendChild(metaTag);
+    }
+    metaTag.setAttribute(
+        "content",
+        getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-Accent-Surface")
+    );
+}
 
 function atuiKernel_ColorschemeGenerator(base, isDarkMode, wantOpacity) {
     // Diff color
@@ -287,7 +332,7 @@ function atuiKernel_ColorschemeGeneratorAuto(accent) {
     if (accent != undefined) {
         defaultAccent = accent;
     }
-    atuiKernel_ColorschemeGeneratorPack(true, defaultAccent, atuiKernel_ColormodeIsDark);
+    atuiKernel_ColorschemeGeneratorPack(true, defaultAccent, atuiKernel_ColormodeIsDark());
 }
 atuiKernel_ColorschemeGeneratorAuto(undefined);
 
