@@ -26,7 +26,7 @@
 .atuiKernel_Button,
 .atuiKernel_Button * {
     font-size: 1rem;
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
 }
 
 .atuiKernel_Button * {
@@ -35,7 +35,7 @@
 
 .atuiKernel_Button.optionAccent,
 .atuiKernel_Button.optionAccent * {
-    color: var(--atuiKernel_ColorschemeOA8);
+    color: hsl(var(--atuiKernel_Color-Accent-Surface));
 }
 
 .atuiKernel_Button i, .atuiKernel_Button img {
@@ -46,29 +46,13 @@
 
 .atuiKernel_Button hr {
     border: 0;
-    background-color: var(--atuiKernel_ColorschemeOBF);
+    background-color: hsl(var(--atuiKernel_Color-Neutral-Outline-Dim));
     width: 1px;
     height: 1em;
 }
 
 .atuiKernel_Button.optionAccent hr {
-    background-color: var(--atuiKernel_ColorschemeOA8);
-}
-
-.atuiKernel_Button:not(.optionDisabled):not(:disabled):hover {
-    background-color: var(--atuiKernel_ColorschemeOB2);
-}
-
-.atuiKernel_Button.optionAccent:not(.optionDisabled):not(:disabled):hover {
-    background-color: var(--atuiKernel_ColorschemeOA2);
-}
-
-.atuiKernel_Button:not(.optionDisabled):not(:disabled):active {
-    background-color: var(--atuiKernel_ColorschemeOB4);
-}
-
-.atuiKernel_Button.optionAccent:not(.optionDisabled):not(:disabled):active {
-    background-color: var(--atuiKernel_ColorschemeOA4);
+    background-color: hsl(var(--atuiKernel_Color-Accent-Surface));
 }
 
 /* Disabled */
@@ -96,88 +80,44 @@
 /* Filled */
 
 .atuiKernel_Button.optionFilled {
-    background-color: var(--atuiKernel_ColorschemeOBF);
-    color: var(--atuiKernel_ColorschemeOB0);
+    background-color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
 }
 
 .atuiKernel_Button.optionAccent.optionFilled {
-    background-color: var(--atuiKernel_ColorschemeOA6);
+    background-color: hsl(var(--atuiKernel_Color-Accent-Surface));
 }
 
 .atuiKernel_Button.optionFilled,
 .atuiKernel_Button.optionFilled * {
-    color: var(--atuiKernel_ColorschemeOB0);
+    color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container-Low));
 }
 
-.atuiKernel_Button.optionFilled:not(.optionDisabled):not(:disabled):hover {
-    background-color: var(--atuiKernel_ColorschemeOB8);
-}
-
-.atuiKernel_Button.optionAccent.optionFilled:not(.optionDisabled):not(:disabled):hover {
-    background-color: var(--atuiKernel_ColorschemeOA4);
-}
-
-.atuiKernel_Button.optionFilled:not(.optionDisabled):not(:disabled):active {
-    background-color: var(--atuiKernel_ColorschemeOB6);
-}
-
-.atuiKernel_Button.optionAccent.optionFilled:not(.optionDisabled):not(:disabled):active {
-    background-color: var(--atuiKernel_ColorschemeOA2);
+.atuiKernel_Button.optionAccent.optionFilled,
+.atuiKernel_Button.optionAccent.optionFilled * {
+    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
 }
 
 /* Tinted */
 
 .atuiKernel_Button.optionTinted {
-    background-color: var(--atuiKernel_ColorschemeOB2);
+    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container-High));
 }
 
 .atuiKernel_Button.optionAccent.optionTinted {
-    background-color: var(--atuiKernel_ColorschemeOA2);
+    background-color: hsl(var(--atuiKernel_Color-Accent-Container));
 }
 
 .atuiKernel_Button.optionAccent.optionTinted,
 .atuiKernel_Button.optionAccent.optionTinted * {
-    color: var(--atuiKernel_ColorschemeOA8);
-}
-
-.atuiKernel_Button.optionTinted:not(.optionDisabled):not(:disabled):hover {
-    background-color: var(--atuiKernel_ColorschemeOB4);
-}
-
-.atuiKernel_Button.optionAccent.optionTinted:not(.optionDisabled):not(:disabled):hover {
-    background-color: var(--atuiKernel_ColorschemeOA4);
-}
-
-.atuiKernel_Button.optionTinted:not(.optionDisabled):not(:disabled):active {
-    background-color: var(--atuiKernel_ColorschemeOB6);
-}
-
-.atuiKernel_Button.optionAccent.optionTinted:not(.optionDisabled):not(:disabled):active {
-    background-color: var(--atuiKernel_ColorschemeOA6);
+    color: hsl(var(--atuiKernel_Color-Accent-On-Container));
 }
 
 /* Outlined */
 
 .atuiKernel_Button.optionOutlined {
-    border: 2px solid var(--atuiKernel_ColorschemeOBF);
+    border: 2px solid hsl(var(--atuiKernel_Color-Neutral-On-Surface));
 }
 
 .atuiKernel_Button.optionAccent.optionOutlined {
-    border-color: var(--atuiKernel_ColorschemeOA6);
-}
-
-.atuiKernel_Button.optionOutlined:not(.optionDisabled):not(:disabled):hover {
-    border-color: var(--atuiKernel_ColorschemeOB8);
-}
-
-.atuiKernel_Button.optionAccent.optionOutlined:not(.optionDisabled):not(:disabled):hover {
-    border-color: var(--atuiKernel_ColorschemeOA4);
-}
-
-.atuiKernel_Button.optionOutlined:not(.optionDisabled):not(:disabled):active {
-    border-color: var(--atuiKernel_ColorschemeOB6);
-}
-
-.atuiKernel_Button.optionAccent.optionOutlined:not(.optionDisabled):not(:disabled):active {
-    border-color: var(--atuiKernel_ColorschemeOA2);
+    border-color: hsl(var(--atuiKernel_Color-Accent-Surface));
 }

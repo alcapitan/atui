@@ -44,11 +44,11 @@ body > article > a /* Link */ {
 
 @media (min-width: 768px) /* Computers */ {
     body {
-        background-color: var(--atuiKernel_ColorschemeOA3);
+        background-color: hsl(var(--atuiKernel_Color-Accent-Surface));
     }
 
     body > article {
-        background-color: var(--atuiKernel_ColorschemeOB0);
+        background-color: hsl(var(--atuiKernel_Color-Neutral-Surface));
         border-radius: var(--atuiKernel_Borderradius);
         box-shadow: var(--atuiKernel_ShadowMedium);
     }

@@ -33,7 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Rewrite HTML structure of accordion.
 -   Change style for a tag.
 -   Rename SectionText into SectionParagraph.
--   Improve animation on hover and active for button.
 -   Add gradient for section content split bar.
 -   Set up font-size guidelines.
 -   Replace HTML for Markdown links.
@@ -55,6 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Remove scrolltop (will be replaced later).
 -   Fix some JS bugs highlighted by NPM compilation.
+-   Remove animation on hover and active for button.
 
 ## [0.3.1] - 2023-03-16
 

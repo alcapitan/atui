@@ -7,7 +7,7 @@
 
 .atuiKernel_Footer {
     position: relative;
-    background-color: var(--atuiKernel_ColorschemeOA1);
+    background-color: hsl(var(--atuiKernel_Color-Accent-Container));
     padding: 20px 40px 5px;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .atuiKernel_FooterList li a /* Links of elements */ {
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
 }
 
 .atuiKernel_FooterList li a:hover
@@ -138,7 +138,7 @@
 }
 
 #atuiKernel_FooterLegals * {
-    color: var(--atuiKernel_ColorschemeOB7);
+    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
     margin: 5px 20px;
 }
 
@@ -158,6 +158,6 @@
 
 #atuiKernel_FooterInfo * {
     display: block;
-    color: var(--atuiKernel_ColorschemeOA6);
+    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
     margin: 10px;
 }

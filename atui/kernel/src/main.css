@@ -37,9 +37,9 @@
     --atuiKernel_TitleBold: bold; /* or normal */
     --atuiKernel_Blur: blur(5px);
     --atuiKernel_Borderradius: 10px;
-    --atuiKernel_ShadowLight: var(--atuiKernel_ColorschemeBBF) 0px 3px 8px; /* #5 */
-    --atuiKernel_ShadowMedium: var(--atuiKernel_ColorschemeBBF) 0px 5px 15px; /* #3 */
-    --atuiKernel_ShadowHeavy: var(--atuiKernel_ColorschemeBBF) 0px 20px 30px -10px; /* #20 */
+    --atuiKernel_ShadowLight: hsl(var(--atuiKernel_Color-Neutral-Surface-Dim) / 80%) 0px 3px 8px; /* #5 */
+    --atuiKernel_ShadowMedium: hsl(var(--atuiKernel_Color-Neutral-Surface-Dim) / 80%) 0px 5px 15px; /* #3 */
+    --atuiKernel_ShadowHeavy: hsl(var(--atuiKernel_Color-Neutral-Surface-Dim) / 80%) 0px 20px 30px -10px; /* #20 */
 
     /* when there will be the new color script, remember to set the color opacity as before, see the git history */
 }
@@ -63,12 +63,12 @@ Look at the # to find the corresponding shadow */
 
 body {
     margin: 0;
-    background: var(--atuiKernel_ColorschemeOB0);
+    background: hsl(var(--atuiKernel_Color-Neutral-Surface));
 }
 
 body * {
     font-family: var(--atuiKernel_FontsText);
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
     word-wrap: anywhere;
 }
 
@@ -119,12 +119,12 @@ code {
 }
 
 .ti {
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
     font-weight: normal !important;
     text-decoration: none !important;
 }
 
 ::selection {
-    background: var(--atuiKernel_ColorschemeOA2);
-    color: var(--atuiKernel_ColorschemeOA8);
+    background: hsl(var(--atuiKernel_Color-Accent-Container) / 80%);
+    color: hsl(var(--atuiKernel_Color-Accent-On-Container));
 }

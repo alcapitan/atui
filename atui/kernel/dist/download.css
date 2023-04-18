@@ -7,8 +7,7 @@
 
 .atuiKernel_SectionDownload /* Element */ {
     border-radius: var(--atuiKernel_Borderradius);
-    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
-    background-color: var(--atuiKernel_ColorschemeOB1);
+    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container));
     padding: 10px;
     display: flex;
     align-items: center;

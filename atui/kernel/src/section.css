@@ -176,7 +176,7 @@
 
 .atuiKernel_Spinner {
     animation: spinner-animation 1s infinite linear;
-    width: fit-content;
+    display: inline-block;
 }
 
 .atuiKernel_Spinner i {
