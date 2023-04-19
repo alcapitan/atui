@@ -146,7 +146,7 @@ function atuiKernel_ColormodeToggle() {
 
     /* Save the status in cookies */
     const date = new Date();
-    date.setTime(date.getTime() + 21600000); // Expiration time is 6 hours
+    date.setTime(date.getTime() + 3600000); // Expiration time is 1 hour
     const expires = "expires=" + date.toUTCString();
     const cookie =
         "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark() + ";" + expires + ";path=/;SameSite=Lax;";

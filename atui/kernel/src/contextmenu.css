@@ -30,6 +30,7 @@
     box-shadow: var(--atuiKernel_ShadowMedium);
     top: 0;
     left: 0;
+    z-index: 13;
 }
 
 :is(.atuiKernel_ToolsContextmenu, .atuiKernel_ToolsInfotip) aside > div {
