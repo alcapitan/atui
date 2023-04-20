@@ -151,9 +151,6 @@ function atuiKernel_ColormodeToggle() {
   const cookie =
   "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark() + ";" + expires + ";path=/;SameSite=Lax;";
   document.cookie = cookie;
-
-  /* Update color palette */
-  atuiKernel_ColorschemeGeneratorAuto(undefined);
 }
 
 function atuiKernel_ColormodeStartup() {
