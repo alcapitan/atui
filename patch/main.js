@@ -3,8 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(19, 4, 2023);
-atuiKernel_ColorschemeGeneratorAuto([230, 51, 0]);
+atuiKernel_FooterLastedited(20, 4, 2023);
 
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
 atuiKernel_ToolsContextmenu("atuiKernel_NavigationText");

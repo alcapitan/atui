@@ -8,7 +8,7 @@
 .atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover {
     width: 150px;
     height: 150px;
-    background-color: var(--atuiKernel_ColorschemeOB3);
+    background-color: hsl(var(--atuiKernel_Color-N70));
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
 }
@@ -51,7 +51,7 @@
 }
 
 .atuiMediasplayer_Audioplayer .atuiMediasplayer_InformationTitle {
-    color: var(--atuiKernel_ColorschemeOA6);
+    color: hsl(var(--atuiKernel_Color-A40));
 }
 
 .atuiMediasplayer_Audioplayer .atuiMediasplayer_Close {

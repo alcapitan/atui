@@ -14,7 +14,7 @@
     margin: 0;
     border: none;
     box-shadow: var(--atuiKernel_ShadowMedium);
-    background-color: var(--atuiKernel_ColorschemeBB1);
+    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     -webkit-backdrop-filter: var(--atuiKernel_Blur);
             backdrop-filter: var(--atuiKernel_Blur);
     display: none;

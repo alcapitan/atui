@@ -23,8 +23,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     outline: none;
-    background-color: var(--atuiKernel_ColorschemeOB0);
-    color: var(--atuiKernel_ColorschemeOB5);
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    color: hsl(var(--atuiKernel_Color-N50));
     font-size: 1.125rem;
     flex: 1;
 }
@@ -46,8 +46,8 @@
 
 @media (width >= 768px) /* Computers */ {
     #atuiSearchservices_HeaderBar {
-        background-color: var(--atuiKernel_ColorschemeOB0);
-        border: 1px var(--atuiKernel_ColorschemeOB3) solid;
+        background-color: hsl(var(--atuiKernel_Color-NFF));
+        border: 1px hsl(var(--atuiKernel_Color-N70)) solid;
     }
 
     #atuiSearchservices_Input /* Searchbar */ {

@@ -187,31 +187,8 @@ document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
 
 /* Color accent */
 
-function atuiKernel_ColoraccentGenerate(hue, name) {
-  /* This function takes as parameter the hue part of the base color in HSL, and the name of the color palette, to declares the palette on the web page. */
-  const map = {
-    Surface: [40, 80],
-    "On-Surface": [100, 20],
-    Container: [90, 30],
-    "On-Container": [10, 90]
-  };
-  for (const [variant, lightness] of Object.entries(map)) {
-    const colorLight = `hsl(${hue}, 100%, ${lightness[0]}%)`;
-    const colorDark = `hsl(${hue}, 100%, ${lightness[1]}%)`;
-    document.querySelectorAll(":root,*[data-atui-colormode=light]").forEach((element) => {
-      element.style.setProperty(`--atuiKernel_Color-${name}-${variant}`, colorLight);
-    });
-    document.querySelectorAll("*[data-atui-colormode=dark]").forEach((element) => {
-      element.style.setProperty(`--atuiKernel_Color-${name}-${variant}`, colorDark);
-    });
-  }
-  if (name === "Accent") {
-    atuiKernel_ColoraccentMetatag();
-  }
-}
-
 function atuiKernel_ColoraccentMetatag() {
-  let metaTag = document.querySelector('meta[name="theme-color"]');
+  let metaTag = document.querySelector('meta[name="data-atui-colormode"]');
   if (!metaTag) {
     metaTag = document.createElement("meta");
     metaTag.setAttribute("name", "theme-color");
@@ -219,122 +196,9 @@ function atuiKernel_ColoraccentMetatag() {
   }
   metaTag.setAttribute(
   "content",
-  getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-Accent-Surface"));
+  `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A50")})`);
 
 }
-
-function atuiKernel_ColorschemeGenerator(base, isDarkMode, wantOpacity) {
-  // Diff color
-  let diffColor = [];
-  for (let counter = 0; counter < 3; counter++) {
-    diffColor.push(base[counter]);
-  }
-  for (let counter = 0; counter < 3; counter++) {
-    diffColor.push(255 - base[counter]);
-  }
-
-  // Step color
-  let stepColor = [];
-  for (let counter = 0; counter < 6; counter++) {
-    stepColor.push(diffColor[counter] / 5);
-  }
-
-  // Color scheme
-  let schemeColor = [[0, 0, 0]];
-  for (let tones = 1; tones < 5; tones++) {
-    let tone = [];
-    for (let primary = 0; primary < 3; primary++) {
-      tone.push(Math.round(stepColor[primary] * tones));
-    }
-    schemeColor.push(tone);
-  }
-  schemeColor.push([Math.round(base[0]), Math.round(base[1]), Math.round(base[2])]);
-  for (let tones = 1; tones < 5; tones++) {
-    let tone = [];
-    for (let primary = 0; primary < 3; primary++) {
-      tone.push(Math.round(base[primary] + stepColor[primary + 3] * tones));
-    }
-    schemeColor.push(tone);
-  }
-  schemeColor.push([255, 255, 255]);
-  if (!isDarkMode) {
-    schemeColor = schemeColor.reverse();
-  }
-
-  // Apply
-  const root = document.documentElement;
-  for (let variable = 0; variable < 11; variable++) {
-    // Replace 10 by F
-    let variableText = variable;
-    if (variable == 10) {
-      variableText = "F";
-    }
-
-    // Set opacity or no
-    let codeColor, opacityText;
-    if (wantOpacity) {
-      const opacity = 0.8;
-      codeColor =
-      "rgba(" +
-      schemeColor[variable][0] +
-      "," +
-      schemeColor[variable][1] +
-      "," +
-      schemeColor[variable][2] +
-      "," +
-      opacity +
-      ")";
-      opacityText = "B";
-    } else {
-      codeColor =
-      "rgb(" +
-      schemeColor[variable][0] +
-      "," +
-      schemeColor[variable][1] +
-      "," +
-      schemeColor[variable][2] +
-      ")";
-      opacityText = "O";
-    }
-
-    // Is an accent color or no
-    let accentText;
-    if (base.toString() == [127.5, 127.5, 127.5].toString()) {
-      accentText = "B";
-    } else {
-      accentText = "A";
-      document.
-      querySelector("meta[name=theme-color]").
-      setAttribute(
-      "content",
-      "rgb(" + schemeColor[5][0] + "," + schemeColor[5][1] + "," + schemeColor[5][2] + ")");
-
-    }
-
-    const nameColor = "--atuiKernel_Colorscheme" + opacityText + accentText + variableText;
-
-    root.style.setProperty(nameColor, codeColor);
-  }
-}
-
-function atuiKernel_ColorschemeGeneratorPack(bicolor, accent, isDarkMode) {
-  if (bicolor) {
-    atuiKernel_ColorschemeGenerator([127.5, 127.5, 127.5], isDarkMode, false);
-    atuiKernel_ColorschemeGenerator([127.5, 127.5, 127.5], isDarkMode, true);
-  }
-  if (accent != undefined) {
-    atuiKernel_ColorschemeGenerator(accent, isDarkMode, false);
-    atuiKernel_ColorschemeGenerator(accent, isDarkMode, true);
-  }
-}
-
-function atuiKernel_ColorschemeGeneratorAuto(accent) {
-  if (accent != undefined) {
-    defaultAccent = accent;
-  }
-  atuiKernel_ColorschemeGeneratorPack(true, defaultAccent, atuiKernel_ColormodeIsDark());
-}
-atuiKernel_ColorschemeGeneratorAuto(undefined);
 
 /* Footer info */
 

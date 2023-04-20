@@ -20,7 +20,7 @@
 
 #atuiKernel_ToolsContactBroad div /* Element */ {
     border-radius: var(--atuiKernel_Borderradius);
-    background-color: var(--atuiKernel_ColorschemeBB0);
+    background-color: hsl(var(--atuiKernel_Color-NFF) / 80%);
     display: flex;
     align-items: center;
     margin: 5px 10px 5px 0;
@@ -35,7 +35,7 @@
 }
 
 #atuiKernel_ToolsContactBroad div > a /* Text */ {
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
     font-weight: bold;
     margin-left: 5px;
 }
@@ -44,7 +44,7 @@
 
 #atuiKernel_ToolsContactNewsletter /* Element */ {
     border-radius: var(--atuiKernel_Borderradius);
-    background-color: var(--atuiKernel_ColorschemeBB0);
+    background-color: hsl(var(--atuiKernel_Color-NFF) / 80%);
     display: flex;
     align-items: center;
     padding: 5px 15px;

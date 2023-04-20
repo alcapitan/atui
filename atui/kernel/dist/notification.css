@@ -16,7 +16,7 @@
 
 .atuiKernel_NotificationElement {
     margin: 10px;
-    background-color: var(--atuiKernel_ColorschemeBB1);
+    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     width: 70vw;
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
@@ -37,7 +37,7 @@
     margin: 0 20px;
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
-    color: var(--atuiKernel_ColorschemeOA7);
+    color: hsl(var(--atuiKernel_Color-A30));
     flex: 1;
 }
 
@@ -53,7 +53,7 @@
 
 .atuiKernel_NotificationElement div:last-child button {
     margin: 5px 10px;
-    background-color: var(--atuiKernel_ColorschemeOA6);
+    background-color: hsl(var(--atuiKernel_Color-A40));
     border-radius: var(--atuiKernel_Borderradius);
     padding: 10px 20px;
     font-family: var(--atuiKernel_FontsTitle);

@@ -10,20 +10,15 @@
      --atuiKernel_FontsSpecial : 'Ubuntu';
 } */
 
-/* body
-{
-     background : var(--atuiKernel_ColorschemeOA1);
-} */
-
-:root {
+/*:root {
     --atuiKernel_Color-Accent : 170 !important;
-}
+}*/
 
 .atuiKernel_ToolsCarousel {
     background-image: url("illustrations/presentation.jpg");
 }
 
 .boxTest {
-    border: 1px solid var(--atuiKernel_ColorschemeOBF);
+    border: 1px solid hsl(var(--atuiKernel_Color-N00));
     border-radius: var(--atuiKernel_Borderradius);
 }

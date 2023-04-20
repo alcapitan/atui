@@ -6,53 +6,64 @@
 .atuiKernel_SectionBox {
     border-radius: var(--atuiKernel_Borderradius);
     padding: 15px;
-    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
-    background-color: var(--atuiKernel_ColorschemeOB1);
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color: hsl(var(--atuiKernel_Color-N90));
     display: flex;
     flex-flow: row nowrap;
     gap: 15px;
 }
 
-/* .atuiKernel_SectionBox:has(.atuiKernel_SectionBoxIcon)
-{
-    min-height : 30px;
-} */
-
 .atuiKernel_SectionBox * {
     margin: 0;
-}
-
-.atuiKernel_SectionBox.optionAccent {
-    border-color: var(--atuiKernel_ColorschemeOA5);
-    background-color: var(--atuiKernel_ColorschemeOA1);
-}
-
-.atuiKernel_SectionBox:is(.optionAlert, .optionWarning, .optionInfo, .optionSuccess) * {
-    color: #000;
-}
-
-.atuiKernel_SectionBox.optionAlert {
-    border-color: rgb(255 0 0);
-    background-color: rgb(255 204 204);
-}
-
-.atuiKernel_SectionBox.optionWarning {
-    border-color: rgb(255 128 0);
-    background-color: rgb(255 230 204);
-}
-
-.atuiKernel_SectionBox.optionInfo {
-    border-color: rgb(0 128 255);
-    background-color: rgb(204 230 255);
-}
-
-.atuiKernel_SectionBox.optionSuccess {
-    border-color: rgb(0 153 51);
-    background-color: rgb(204 235 214);
 }
 
 .atuiKernel_SectionBox > :is(i, img) {
     width: 30px;
     height: 30px;
     font-size: 30px;
+}
+
+.atuiKernel_SectionBox.optionAccent {
+    border-color: hsl(var(--atuiKernel_Color-A50));
+    background-color: hsl(var(--atuiKernel_Color-A90));
+}
+
+.atuiKernel_SectionBox.optionAccent * {
+    color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_SectionBox.optionAlert {
+    border-color: hsl(var(--atuiKernel_Color-D50));
+    background-color: hsl(var(--atuiKernel_Color-D90));
+}
+
+.atuiKernel_SectionBox.optionAlert * {
+    color: hsl(var(--atuiKernel_Color-D20));
+}
+
+.atuiKernel_SectionBox.optionWarning {
+    border-color: hsl(var(--atuiKernel_Color-W50));
+    background-color: hsl(var(--atuiKernel_Color-W90));
+}
+
+.atuiKernel_SectionBox.optionWarning * {
+    color: hsl(var(--atuiKernel_Color-W20));
+}
+
+.atuiKernel_SectionBox.optionSuccess {
+    border-color: hsl(var(--atuiKernel_Color-S50));
+    background-color: hsl(var(--atuiKernel_Color-S90));
+}
+
+.atuiKernel_SectionBox.optionSuccess * {
+    color: hsl(var(--atuiKernel_Color-S20));
+}
+
+.atuiKernel_SectionBox.optionInfo {
+    border-color: hsl(var(--atuiKernel_Color-I50));
+    background-color: hsl(var(--atuiKernel_Color-I90));
+}
+
+.atuiKernel_SectionBox.optionInfo * {
+    color: hsl(var(--atuiKernel_Color-I20));
 }

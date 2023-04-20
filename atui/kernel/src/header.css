@@ -6,12 +6,12 @@
 /* Global */
 
 #atuiKernel_Header {
-    background-color: var(--atuiKernel_ColorschemeOA7);
+    background-color: hsl(var(--atuiKernel_Color-A30));
     min-height: 50px;
 }
 
 #atuiKernel_Header > aside {
-    background-color: var(--atuiKernel_ColorschemeBB1);
+    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     backdrop-filter: var(--atuiKernel_Blur);
     min-height: 50px;
     position: absolute;

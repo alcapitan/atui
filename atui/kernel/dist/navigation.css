@@ -35,11 +35,11 @@
 }
 
 .atuiKernel_NavigationSectionImgbig a:hover {
-    background-color: var(--atuiKernel_ColorschemeOA3);
+    background-color: hsl(var(--atuiKernel_Color-A70));
 }
 
 .atuiKernel_NavigationSectionImgbig a:active {
-    background-color: var(--atuiKernel_ColorschemeOA4);
+    background-color: hsl(var(--atuiKernel_Color-A60));
 }
 
 .atuiKernel_NavigationSectionImgbig a i, .atuiKernel_NavigationSectionImgbig a img {
@@ -51,7 +51,7 @@
 .atuiKernel_NavigationSectionImgbig a p /* Text */ {
     margin: 10px 0 0;
     font-size: 1.125rem;
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 /* Global Panel */
@@ -66,7 +66,7 @@
     left: 20px;
     right: 20px;
     visibility: hidden;
-    background-color: var(--atuiKernel_ColorschemeOB0);
+    background-color: hsl(var(--atuiKernel_Color-NFF));
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
 }
@@ -87,7 +87,7 @@
 .atuiKernel_NavigationGlobalpanel aside > div div p {
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 .atuiKernel_NavigationGlobalpanel aside > div div div {
@@ -136,7 +136,7 @@
 }
 
 .atuiKernel_NavigationBar hr {
-    background-color: var(--atuiKernel_ColorschemeOA4);
+    background-color: hsl(var(--atuiKernel_Color-A60));
     width: 100%;
     height: 2px;
     margin: 0;
@@ -154,7 +154,7 @@
     }
 
     .atuiKernel_NavigationBar a:hover {
-        background-color: var(--atuiKernel_ColorschemeOA2);
+        background-color: hsl(var(--atuiKernel_Color-A80));
     }
 
     .atuiKernel_NavigationBar i, .atuiKernel_NavigationBar img {
@@ -206,8 +206,8 @@
         position: sticky;
         bottom: 0;
         z-index: 10;
-        background-color: var(--atuiKernel_ColorschemeOB1);
-        border-top: 1px solid var(--atuiKernel_ColorschemeOB3);
+        background-color: hsl(var(--atuiKernel_Color-N90));
+        border-top: 1px solid hsl(var(--atuiKernel_Color-N70));
         display: flex;
         justify-content: space-around;
         flex-flow: row nowrap;
@@ -220,7 +220,7 @@
     }
 
     .atuiKernel_NavigationBar a:hover {
-        background-color: var(--atuiKernel_ColorschemeOB2);
+        background-color: hsl(var(--atuiKernel_Color-N80));
     }
 
     .atuiKernel_NavigationBar i, .atuiKernel_NavigationBar img {

@@ -16,27 +16,27 @@
     }
 
     #atuiKernel_Body > *:not(:last-child) {
-        border-right: 1px solid var(--atuiKernel_ColorschemeOB2);
+        border-right: 1px solid hsl(var(--atuiKernel_Color-N80));
     }
 
     #atuiKernel_Section > *:not(:last-child) {
-        border-right: 1px solid var(--atuiKernel_ColorschemeOB2);
+        border-right: 1px solid hsl(var(--atuiKernel_Color-N80));
     }
 
     #atuiKernel_Section > *:not(:last-child) {
         -o-border-image: linear-gradient(
                 to bottom,
                 transparent calc(0% + 20px),
-                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
-                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
                 transparent calc(100% - 20px)
             )
             0 1 0 0;
            border-image: linear-gradient(
                 to bottom,
                 transparent calc(0% + 20px),
-                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
-                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
                 transparent calc(100% - 20px)
             )
             0 1 0 0;
@@ -49,27 +49,27 @@
     }
 
     #atuiKernel_Body > *:not(:last-child) {
-        border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
+        border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
     }
 
     #atuiKernel_Section > *:not(:last-child) {
-        border-bottom: 1px solid var(--atuiKernel_ColorschemeOB2);
+        border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
     }
 
     #atuiKernel_Section > *:not(:last-child) {
         -o-border-image: linear-gradient(
                 to right,
                 transparent calc(0% + 20px),
-                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
-                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
                 transparent calc(100% - 20px)
             )
             1 0 0 0;
            border-image: linear-gradient(
                 to right,
                 transparent calc(0% + 20px),
-                var(--atuiKernel_ColorschemeOB2) calc(0% + 120px),
-                var(--atuiKernel_ColorschemeOB2) calc(100% - 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
                 transparent calc(100% - 20px)
             )
             1 0 0 0;
@@ -123,11 +123,11 @@
 }
 
 .atuiKernel_SectionBreadcrumb > *:last-child {
-    color: var(--atuiKernel_ColorschemeOA5);
+    color: hsl(var(--atuiKernel_Color-A50));
 }
 
 .atuiKernel_SectionBreadcrumb > *:not(:last-child) {
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
     margin-right: 10px;
 }
 
@@ -157,8 +157,8 @@
     justify-content: flex-end;
     align-items: flex-start;
     row-gap: 15px;
-    border: 1px solid var(--atuiKernel_ColorschemeOB5);
-    color: var(--atuiKernel_ColorschemeOBF);
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 .atuiKernel_SectionSquarelink > a:active {
@@ -177,9 +177,9 @@
 }
 
 .atuiKernel_SectionSquarelink > a:hover {
-    border-color: var(--atuiKernel_ColorschemeOA5);
-    background-color: var(--atuiKernel_ColorschemeOA1);
-    color: var(--atuiKernel_ColorschemeOA5);
+    border-color: hsl(var(--atuiKernel_Color-A50));
+    background-color: hsl(var(--atuiKernel_Color-A90));
+    color: hsl(var(--atuiKernel_Color-A50));
     font-weight: bold;
 }
 
@@ -211,7 +211,7 @@
 }
 
 .atuiKernel_SectionList > *:not(:last-child) {
-    border-color: var(--atuiKernel_ColorschemeOB2);
+    border-color: hsl(var(--atuiKernel_Color-N80));
     border-style: solid;
     border-width: 0 0 2px;
 }
@@ -227,7 +227,7 @@
 .atuiKernel_Spinner i {
     height: 50px;
     font-size: 50px;
-    color: var(--atuiKernel_ColorschemeOA5);
+    color: hsl(var(--atuiKernel_Color-A50));
 }
 
 @keyframes spinner-animation {
@@ -237,9 +237,9 @@
 }
 
 .atuiKernel_Spinner.optionLight > i {
-    color: var(--atuiKernel_ColorschemeOB2);
+    color: hsl(var(--atuiKernel_Color-N80));
 }
 
 .atuiKernel_Spinner.optionDark > i {
-    color: var(--atuiKernel_ColorschemeOB8);
+    color: hsl(var(--atuiKernel_Color-N20));
 }

@@ -20,8 +20,8 @@
     flex-direction: column;
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
-    background-color: var(--atuiKernel_ColorschemeOB1);
-    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
     position: relative;
     box-sizing: border-box;
 }
@@ -40,7 +40,7 @@
 .atuiKernel_SectionCard article > div[class="text"] > h3
 /* Titles */ {
     font-family: var(--atuiKernel_FontsTitle);
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 .atuiKernel_SectionCard article > div[class="text"] > p
@@ -87,13 +87,13 @@
 .atuiKernel_SectionCard.optionContrast article > div[class="image"]
 /* Image container */ {
     display: flex;
-    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
 }
 
 .atuiKernel_SectionCard.optionContrast article > div[class="text"] > h3
 /* Title */ {
-    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
-    background-color: var(--atuiKernel_ColorschemeOB2);
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color: hsl(var(--atuiKernel_Color-N80));
 }
 
 /* Overlay */
@@ -115,10 +115,10 @@
 }
 
 .atuiKernel_SectionCard.optionOverlay article > div[class="text"] {
-    background: linear-gradient(to top, var(--atuiKernel_ColorschemeBB8) 50%, transparent 100%);
+    background: linear-gradient(to top, hsl(var(--atuiKernel_Color-N20) / 80%) ; 50%, transparent 100%);
     margin-top: 30%;
 }
 
 .atuiKernel_SectionCard.optionOverlay article > div[class="text"] > :is(h3, p) {
-    color: var(--atuiKernel_ColorschemeOB0);
+    color: hsl(var(--atuiKernel_Color-NFF));
 }

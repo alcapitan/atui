@@ -13,15 +13,15 @@
 .atuiKernel_SectionPaginationNumber > * {
     margin: 0;
     padding: 10px 15px;
-    border-top: 1px solid var(--atuiKernel_ColorschemeOB5);
-    border-bottom: 1px solid var(--atuiKernel_ColorschemeOB5);
-    border-right: 1px solid var(--atuiKernel_ColorschemeOB5);
-    color: var(--atuiKernel_ColorschemeOBF);
+    border-top: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border-right: 1px solid hsl(var(--atuiKernel_Color-N50));
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 .atuiKernel_SectionPaginationNumber > *:first-child {
     border-radius: var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
-    border-left: 1px solid var(--atuiKernel_ColorschemeOB5);
+    border-left: 1px solid hsl(var(--atuiKernel_Color-N50));
 }
 
 .atuiKernel_SectionPaginationNumber > *:last-child {
@@ -29,12 +29,12 @@
 }
 
 .atuiKernel_SectionPaginationNumber > *:hover {
-    background-color: var(--atuiKernel_ColorschemeOA1);
+    background-color: hsl(var(--atuiKernel_Color-A90));
 }
 
 .atuiKernel_SectionPaginationNumber > *:hover,
 .atuiKernel_SectionPaginationNumber > p {
-    color: var(--atuiKernel_ColorschemeOA5);
+    color: hsl(var(--atuiKernel_Color-A50));
 }
 
 .atuiKernel_SectionPaginationNumber > p:hover {
@@ -66,7 +66,7 @@
 }
 
 .atuiKernel_SectionPaginationText a {
-    border: 1px solid var(--atuiKernel_ColorschemeOBF);
+    border: 1px solid hsl(var(--atuiKernel_Color-N00));
     border-radius: var(--atuiKernel_Borderradius);
     padding: 15px;
     flex: 1;
@@ -78,18 +78,18 @@
 
 .atuiKernel_SectionPaginationText a:hover {
     border-width: 2px;
-    border-color: var(--atuiKernel_ColorschemeOA6);
-    background-color: var(--atuiKernel_ColorschemeOA1);
+    border-color: hsl(var(--atuiKernel_Color-A40));
+    background-color: hsl(var(--atuiKernel_Color-A90));
 }
 
 .atuiKernel_SectionPaginationText a p {
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
     margin: 0;
     text-align: center;
 }
 
 .atuiKernel_SectionPaginationText a:hover p {
-    color: var(--atuiKernel_ColorschemeOA6);
+    color: hsl(var(--atuiKernel_Color-A40));
 }
 
 .atuiKernel_SectionPaginationText a p:first-child {

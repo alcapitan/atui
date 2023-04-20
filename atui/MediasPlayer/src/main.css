@@ -14,14 +14,14 @@
 
 .atuiMediasplayer_Audioplayer,
 .atuiMediasplayer_Videoplayer > article {
-    border: 1px solid var(--atuiKernel_ColorschemeOB5);
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
     border-radius: var(--atuiKernel_Borderradius);
     position: relative;
 }
 
 .atuiMediasplayer_Audioplayer,
 .atuiMediasplayer_Videoplayer .atuiMediasplayer_Dashboard {
-    background-color: var(--atuiKernel_ColorschemeOB1);
+    background-color: hsl(var(--atuiKernel_Color-N90));
 }
 
 :is(.atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer) * {
@@ -74,7 +74,7 @@
 }
 
 .atuiMediasplayer_Controls :is(i, img):hover {
-    background-color: var(--atuiKernel_ColorschemeOA3);
+    background-color: hsl(var(--atuiKernel_Color-A70));
 }
 
 /* Progressbar */
@@ -86,7 +86,7 @@
 
 .atuiMediasplayer_ProgressbarInside {
     width: 0;
-    background-color: var(--atuiKernel_ColorschemeOA5);
+    background-color: hsl(var(--atuiKernel_Color-A50));
     transition: width 500ms;
 }
 

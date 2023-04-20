@@ -6,7 +6,7 @@
 /* Option style overlay */
 
 .atuiMediasplayer_Videoplayer.optionOverlay .atuiMediasplayer_Dashboard {
-    background-color: var(--atuiKernel_ColorschemeBB1);
+    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     opacity: 0.2;
     position: absolute;
     bottom: 0;

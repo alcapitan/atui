@@ -44,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Adapt shadows to dark mode.
 -   Rewrite Button.
 -   Rewrite color mode script. There is a better flexibility and management for toggle button and color variables.
--   Rewrite color scheming script. There are completly new variables and operation.
+-   Rewrite color scheming script. There are new variables and operation.
 
 ### Fixed
 
@@ -55,6 +55,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Remove scrolltop (will be replaced later).
 -   Fix some JS bugs highlighted by NPM compilation.
+
+## [0.3.2] - 2023-04-20
+
+### Added
+
+-   Add fixed option for Header.
+
+### Changed
+
+-   Decrease font size of version in about page.
+-   Better size management of Card.
+-   Set Navigation bar sticky instead of fixed.
+
+### Fixed
+
+-   Texts in Box were unreadable on dark mode.
+-   There was a margin on bottom of Footer when there was no navbar.
+-   There was a margin inconsistency on bottom bar of the header.
+-   The textarea dimension style was preventing the HTML dimension attributes from working.
+-   Better margin for elements in Text.
 
 ## [0.3.1] - 2023-03-16
 

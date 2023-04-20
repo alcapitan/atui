@@ -29,7 +29,7 @@
 
 :is(#atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer) > a
 /* Propositions */ {
-    color: var(--atuiKernel_ColorschemeOBF);
+    color: hsl(var(--atuiKernel_Color-N00));
     display: block;
     padding: 5px 0;
 }

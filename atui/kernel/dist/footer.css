@@ -7,7 +7,7 @@
 
 .atuiKernel_Footer {
     position: relative;
-    background-color: var(--atuiKernel_ColorschemeOA1);
+    background-color: hsl(var(--atuiKernel_Color-A90));
     padding: 20px 40px 5px;
 }
 
@@ -77,10 +77,6 @@
     margin: 5px 0;
 }
 
-.atuiKernel_FooterList li a /* Links of elements */ {
-    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
-}
-
 .atuiKernel_FooterList li a:hover
 /* Links of elements */ {
     font-weight: normal;
@@ -138,7 +134,6 @@
 }
 
 #atuiKernel_FooterLegals * {
-    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
     margin: 5px 20px;
 }
 
@@ -158,6 +153,5 @@
 
 #atuiKernel_FooterInfo * {
     display: block;
-    color: hsl(var(--atuiKernel_Color-Accent-On-Surface));
     margin: 10px;
 }
