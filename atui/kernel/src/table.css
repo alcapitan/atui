@@ -11,12 +11,12 @@
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle;
-    border-top: 1px hsl(var(--atuiKernel_Color-Neutral-Outline)) solid;
-    border-bottom: 1px hsl(var(--atuiKernel_Color-Neutral-Outline)) solid;
+    border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
+    border-bottom: 1px var(--atuiKernel_ColorschemeOB5) solid;
 }
 
 .atuiKernel_SectionTable caption {
-    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface-Dim));
+    color: var(--atuiKernel_ColorschemeOB5);
     font-style: italic;
     margin: 10px 0;
     font-size: 0.875rem;

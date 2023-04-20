@@ -10,7 +10,7 @@
 }
 
 .atuiKernel_SectionParagraph :is(h1, h2, h3, h4, h5, h6) {
-    color: hsl(var(--atuiKernel_Color-Accent-Surface));
+    color: var(--atuiKernel_ColorschemeOA6);
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
     margin: 15px 0;
@@ -28,7 +28,7 @@
 }
 
 .atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote em {
-    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface-Dim));
+    color: var(--atuiKernel_ColorschemeOB7);
     display: block;
     margin: 5px 0 0 10px;
     font-size: 0.875rem;
