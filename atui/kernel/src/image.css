@@ -15,7 +15,7 @@
 
 .atuiKernel_SectionImage p {
     text-align: center;
-    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface-Dim));
+    color: var(--atuiKernel_ColorschemeOB7);
     margin: 5px;
     font-size: 0.875rem;
 }

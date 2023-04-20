@@ -5,11 +5,12 @@
 
 .atuiKernel_SectionAccordion {
     border-radius: var(--atuiKernel_Borderradius);
+    border: 1px var(--atuiKernel_ColorschemeOB5) solid;
     overflow: hidden;
 }
 
 .atuiKernel_SectionAccordion > header {
-    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container-High));
+    background-color: var(--atuiKernel_ColorschemeOB2);
     padding: 0 20px;
     min-height: 50px;
     display: flex;
@@ -17,7 +18,7 @@
 }
 
 .atuiKernel_SectionAccordion > header * {
-    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
+    color: var(--atuiKernel_ColorschemeOBF);
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
@@ -37,8 +38,8 @@
 
 .atuiKernel_SectionAccordion > section {
     padding: 15px;
-    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container));
-    border-top: 1px hsl(var(--atuiKernel_Color-Neutral-Outline-Dim)) solid;
+    background-color: var(--atuiKernel_ColorschemeOB1);
+    border-top: 1px var(--atuiKernel_ColorschemeOB5) solid;
     display: none;
 }
 

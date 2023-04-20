@@ -7,7 +7,7 @@
 
 .atuiKernel_Footer {
     position: relative;
-    background-color: hsl(var(--atuiKernel_Color-Accent-Container));
+    background-color: var(--atuiKernel_ColorschemeOA1);
     padding: 20px 40px 5px;
 }
 

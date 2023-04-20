@@ -24,12 +24,12 @@ select,
 .atuiKernel_InputSubmit,
 input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
-    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container-Lowest));
-    border: 1px solid hsl(var(--atuiKernel_Color-Neutral-Outline-Dim));
+    background-color: var(--atuiKernel_ColorschemeOB0);
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
     margin: 0;
     padding: 10px 15px;
     box-sizing: border-box;
-    accent-color: hsl(var(--atuiKernel_Color-Accent-Surface));
+    accent-color: var(--atuiKernel_ColorschemeOA5);
 }
 
 input,
@@ -45,7 +45,7 @@ progress,
 textarea,
 select,
 .atuiKernel_InputSubmit {
-    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container-Low));
+    background-color: var(--atuiKernel_ColorschemeOB1);
 }
 
 input[type="checkbox"],
@@ -68,7 +68,7 @@ input[type="file"] {
 
 input[type="color"]::-webkit-color-swatch {
     border-radius: var(--atuiKernel_Borderradius);
-    border: 1px solid hsl(var(--atuiKernel_Color-Neutral-Outline-Dim));
+    border: 1px solid var(--atuiKernel_ColorschemeOB5);
 }
 
 .atuiKernel_InputSubmit {
@@ -80,11 +80,11 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
         progress:focus:not(.does-not-exist):not(.does-not-exist):focus,
         textarea:focus:not(.does-not-exist):not(.does-not-exist):focus,
         select:not(.does-not-exist):not(.does-not-exist):not(.does-not-exist):focus {
-    outline: solid 2px hsl(var(--atuiKernel_Color-Accent-Surface));
+    outline: solid 2px var(--atuiKernel_ColorschemeBA4);
 }
 
 fieldset {
-    border: 1px solid hsl(var(--atuiKernel_Color-Accent-Surface));
+    border: 1px solid var(--atuiKernel_ColorschemeBA6);
     border-radius: var(--atuiKernel_Borderradius);
     padding: 15px;
     margin: 0;

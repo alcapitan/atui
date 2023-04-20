@@ -12,7 +12,7 @@
 
 .atuiKernel_ToolsContextmenu > p {
     margin: 0 15px;
-    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
+    color: var(--atuiKernel_ColorschemeOBF);
 }
 
 .atuiKernel_ToolsContextmenu > p:is(:hover, :active) {
@@ -25,7 +25,7 @@
     position: fixed;
     width: 280px;
     visibility: hidden;
-    background-color: hsl(var(--atuiKernel_Color-Neutral-Surface-Container-Lowest));
+    background-color: var(--atuiKernel_ColorschemeOB0);
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
     top: 0;
@@ -47,7 +47,7 @@
 }
 
 .atuiKernel_ToolsContextmenu aside a div:hover {
-    background-color: hsl(var(--atuiKernel_Color-Accent-Container));
+    background-color: var(--atuiKernel_ColorschemeBA3);
 }
 
 .atuiKernel_ToolsContextmenu aside a div {
@@ -61,7 +61,7 @@
 
 .atuiKernel_ToolsContextmenu aside a div p {
     margin: 0;
-    color: hsl(var(--atuiKernel_Color-Neutral-On-Surface));
+    color: var(--atuiKernel_ColorschemeOBF);
     width: calc(100% - 38px);
 }
 
@@ -73,7 +73,7 @@
 }
 
 .atuiKernel_ToolsContextmenu aside hr {
-    background-color: hsl(var(--atuiKernel_Color-Neutral-On-Surface-Dim));
+    background-color: var(--atuiKernel_ColorschemeOA4);
     height: 2px;
     margin: 5px 0;
     border: 0;

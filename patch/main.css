@@ -10,6 +10,11 @@
      --atuiKernel_FontsSpecial : 'Ubuntu';
 } */
 
+/* body
+{
+     background : var(--atuiKernel_ColorschemeOA1);
+} */
+
 :root {
     --atuiKernel_Color-Accent : 170 !important;
 }
@@ -19,6 +24,6 @@
 }
 
 .boxTest {
-    border: 1px solid hsl(var(--atuiKernel_Color-Neutral-Outline-Dim));
+    border: 1px solid var(--atuiKernel_ColorschemeOBF);
     border-radius: var(--atuiKernel_Borderradius);
 }
