@@ -3,9 +3,6 @@
     "version": "0.4.0",
     "description": "Front-end library to build your website easier.",
     "main": "index.html",
-    "engines": {
-        "node": ">=14"
-    },
     "scripts": {
         "babel:vk": "babel atui/kernel/src/*.js --out-dir atui/kernel/dist/ -s",
         "babel:mp": "babel atui/MediasPlayer/src/*.js --out-dir atui/MediasPlayer/dist/ -s",
@@ -65,22 +62,25 @@
         "@babel/preset-env": "^7.21.4",
         "autoprefixer": "^10.4.14",
         "cspell": "^6.31.1",
-        "esbuild": "^0.17.16",
+        "esbuild": "^0.17.17",
         "eslint": "^8.38.0",
         "eslint-config-prettier": "^8.8.0",
         "npm-run-all": "^4.1.5",
-        "postcss": "^8.4.21",
+        "postcss": "^8.4.23",
         "postcss-cli": "^10.1.0",
-        "postcss-preset-env": "^8.3.1",
+        "postcss-preset-env": "^8.3.2",
         "prettier": "^2.8.7",
-        "stylelint": "^15.4.0",
+        "stylelint": "^15.5.0",
         "stylelint-config-standard": "^32.0.0"
     },
     "dependencies": {
-        "@tabler/icons-webfont": "^2.15.0",
+        "@tabler/icons-webfont": "^2.16.0",
         "http-server": "^14.1.1"
     },
     "browserslist": [
-        "defaults, node >= 14"
-    ]
+        "defaults"
+    ],
+    "engines": {
+        "node": ">=12.16"
+    }
 }
