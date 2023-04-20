@@ -8,6 +8,12 @@
 ![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/2?label=issues%20in%20milestone)
 ![GitHub repo size](https://img.shields.io/github/repo-size/alcapitan/atui)
 
+## This version is now unsupported !
+
+Attention, version 0.3 is now end of life. Its last version is v0.3.2.  
+From now on, there will be no more patches for this version.  
+It is strongly advised to update ATUI to a supported version.  
+
 ## This library is still under development !
 
 Currently, there is beta versions which you can use, but keep in mind it's still in development !  
@@ -30,8 +36,8 @@ Then, change the links above for reach extensions files.
 
 ### With release package (for users)
 
-<a href="https://github.com/alcapitan/atui/releases/tag/v0.3.1">Download the latest release.</a>  
-After downloading ATUI, copy the `/atui` folder and paste it into your website root.
+<a href="https://github.com/alcapitan/atui/releases/tag/v0.3.2">Download the ZIP file.</a>  
+After downloading the ZIP file, extract it, then copy the `/atui` folder and paste it into your website root.
 
 ### With git (for developers)
 
