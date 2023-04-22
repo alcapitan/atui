@@ -32,6 +32,10 @@
     padding: 5px 10px;
 }
 
+.atuiKernel_PopupContextmenu :is(i, img) {
+    font-size: 1em !important;
+}
+
 .atuiKernel_PopupContextmenu > a {
     display: flex;
     align-items: center;

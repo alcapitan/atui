@@ -36,6 +36,10 @@
     padding: 5px 10px;
 }
 
+.atuiKernel_PopupContextmenu i, .atuiKernel_PopupContextmenu img {
+    font-size: 1em !important;
+}
+
 .atuiKernel_PopupContextmenu > a {
     -webkit-text-decoration: none !important;
     text-decoration: none !important;

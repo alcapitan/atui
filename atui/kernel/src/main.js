@@ -14,10 +14,6 @@ const atuiKernel_Metadata = {
 };
 atuiKernel_MetadataDisplay(atuiKernel_Metadata);
 
-/* Default values */
-
-let defaultAccent = [230, 51, 0];
-
 /* Metadata display */
 
 function atuiKernel_MetadataDisplay(infos) {
