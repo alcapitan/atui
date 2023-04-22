@@ -103,20 +103,6 @@ function atuiKernel_ShareTool(title, text, url) {
     });
 }
 
-/* Height carousel */
-
-try {
-    const atuiKernel_Header = document.getElementById("atuiKernel_Header");
-    const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
-    atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
-    const atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
-    if (document.documentElement.clientWidth > 767) {
-        const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + atuiKernel_HeaderAside.clientHeight * 2;
-        atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
-    }
-    atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
-} catch {}
-
 /* Display mode */
 
 function atuiKernel_ColormodeIsDark() {
@@ -189,9 +175,109 @@ function atuiKernel_ColoraccentMetatag() {
     }
     metaTag.setAttribute(
         "content",
-        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A50")})`
+        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`
     );
 }
+
+/* Pop-up */
+
+function atuiKernel_PopupSetup(listener) {
+    const target = findElement(listener, listener.getAttribute("data-vk-popup-assign"));
+
+    let options = {};
+    if (target.classList.contains("atuiKernel_PopupGlobalpanel")) {
+        options.type = "centered-hor";
+    }
+
+    listener.addEventListener("mouseenter", function () {
+        atuiKernel_PopupPosition(listener, target, options);
+        atuiKernel_PopupDisplay(target);
+        document.addEventListener("scroll", atuiKernel_PopupScroll);
+    });
+    let outEvent;
+    if (navigator.maxTouchPoints > 0) {
+        outEvent = "mouseout";
+    } else {
+        outEvent = "mouseleave";
+    }
+    target.addEventListener(outEvent, function () {
+        atuiKernel_PopupHide(target);
+        document.removeEventListener("scroll", atuiKernel_PopupScroll);
+    });
+
+    function atuiKernel_PopupScroll() {
+        atuiKernel_PopupPosition(listener, target, options);
+    }
+
+    function atuiKernel_PopupPosition(listener, target, options) {
+        const gap = 5;
+
+        // The temporary position at 0 is very important to get the getBoundingClientRect() position at 0px;0px and thus know the shift.
+        target.style.left = "0";
+        target.style.top = "0";
+
+        // The variables windowDimensions, listenerPosition and targetPosition have been made to facilitate the reading of the code.
+        const windowDimensions = {
+            width: document.documentElement.clientWidth,
+            height: document.documentElement.clientHeight,
+        };
+        // Schema of getBoundingClientRect() : https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect#return_value
+        const listenerPosition = listener.getBoundingClientRect();
+        const targetPosition = target.getBoundingClientRect();
+
+        const overflowRight = listenerPosition.left + targetPosition.width > windowDimensions.width;
+        const overflowBottom = listenerPosition.top + targetPosition.height > windowDimensions.height;
+
+        let calculatedPosition = {
+            left: 0,
+            top: 0,
+        };
+
+        if (options.type === "centered" || options.type === "centered-hor") {
+            calculatedPosition.left = (windowDimensions.width - targetPosition.width) / 2;
+        } else if (overflowRight) {
+            calculatedPosition.left = listenerPosition.right - targetPosition.left - targetPosition.width - gap;
+        } else {
+            calculatedPosition.left = listenerPosition.left - targetPosition.left + gap;
+        }
+
+        if (options.type === "centered" || options.type === "centered-ver") {
+            calculatedPosition.top = (windowDimensions.height - targetPosition.height) / 2;
+        } else if (overflowBottom) {
+            calculatedPosition.top = listenerPosition.top - targetPosition.top - targetPosition.height - gap;
+        } else {
+            calculatedPosition.top = listenerPosition.bottom - targetPosition.top + gap;
+        }
+
+        target.style.left = calculatedPosition.left + "px";
+        target.style.top = calculatedPosition.top + "px";
+    }
+
+    function atuiKernel_PopupDisplay(target) {
+        target.style.visibility = "visible";
+    }
+
+    function atuiKernel_PopupHide(target) {
+        target.style.visibility = "hidden";
+    }
+}
+document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
+    atuiKernel_PopupSetup(listener);
+});
+
+/* Height carousel */
+
+try {
+    const atuiKernel_Header = document.getElementById("atuiKernel_Header");
+    const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
+    atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
+    const atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
+    if (document.documentElement.clientWidth > 767) {
+        const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + atuiKernel_HeaderAside.clientHeight * 2;
+        atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
+    }
+    atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
+} catch {}
 
 /* Footer info */
 
@@ -352,86 +438,6 @@ function atuiKernel_NotificationCookies() {
         "This site uses trackers that collect information about you. According to the GDPR, you can express your consent to the use of cookies."
     );
 }
-
-/* Pop-up */
-
-function atuiKernel_PopupSetup(listener) {
-    const target = findElement(listener, listener.getAttribute("data-vk-popup-assign"));
-
-    let options = {};
-    if (target.classList.contains("atuiKernel_PopupGlobalpanel")) {
-        options.type = "centered-hor";
-    }
-
-    listener.addEventListener("mouseenter", function () {
-        atuiKernel_PopupPosition(listener, target, options);
-        atuiKernel_PopupDisplay(target);
-        document.addEventListener("scroll", atuiKernel_PopupScroll);
-    });
-    target.addEventListener("mouseleave", function () {
-        atuiKernel_PopupHide(target);
-        document.removeEventListener("scroll", atuiKernel_PopupScroll);
-    });
-
-    function atuiKernel_PopupScroll() {
-        atuiKernel_PopupPosition(listener, target, options);
-    }
-
-    function atuiKernel_PopupPosition(listener, target, options) {
-        const gap = 5;
-
-        // The temporary position at 0 is very important to get the getBoundingClientRect() position at 0px;0px and thus know the shift.
-        target.style.left = "0";
-        target.style.top = "0";
-
-        // The variables windowDimensions, listenerPosition and targetPosition have been made to facilitate the reading of the code.
-        const windowDimensions = {
-            width: document.documentElement.clientWidth,
-            height: document.documentElement.clientHeight,
-        };
-        // Schema of getBoundingClientRect() : https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect#return_value
-        const listenerPosition = listener.getBoundingClientRect();
-        const targetPosition = target.getBoundingClientRect();
-
-        const overflowRight = listenerPosition.left + targetPosition.width > windowDimensions.width;
-        const overflowBottom = listenerPosition.top + targetPosition.height > windowDimensions.height;
-
-        let calculatedPosition = {
-            left: 0,
-            top: 0,
-        };
-
-        if (options.type === "centered" || options.type === "centered-hor") {
-            calculatedPosition.left = (windowDimensions.width - targetPosition.width) / 2;
-        } else if (overflowRight) {
-            calculatedPosition.left = listenerPosition.right - targetPosition.left - targetPosition.width - gap;
-        } else {
-            calculatedPosition.left = listenerPosition.left - targetPosition.left + gap;
-        }
-
-        if (options.type === "centered" || options.type === "centered-ver") {
-            calculatedPosition.top = (windowDimensions.height - targetPosition.height) / 2;
-        } else if (overflowBottom) {
-            calculatedPosition.top = listenerPosition.top - targetPosition.top - targetPosition.height - gap;
-        } else {
-            calculatedPosition.top = listenerPosition.bottom - targetPosition.top + gap;
-        }
-
-        target.style.left = calculatedPosition.left + "px";
-        target.style.top = calculatedPosition.top + "px";
-    }
-
-    function atuiKernel_PopupDisplay(target) {
-        target.style.visibility = "visible";
-    }
-
-    function atuiKernel_PopupHide(target) {
-        target.style.visibility = "hidden";
-    }
-}
-document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
-    atuiKernel_PopupSetup(listener);
-});
 
 /* Tabs */
 

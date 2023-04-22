@@ -86,9 +86,8 @@
     font-size: 1.125rem;
 }
 
-#atuiKernel_Header > aside > nav a {
+#atuiKernel_Header > aside > nav > a {
     margin: 0 10px;
-    color: black;
 }
 
 #atuiKernel_Header > aside > nav i {
@@ -114,7 +113,6 @@
 }
 
 #atuiKernel_HeaderLogotype a {
-    color: black;
     -webkit-text-decoration: none;
     text-decoration: none;
     display: flex;
