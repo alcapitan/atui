@@ -1,0 +1,97 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Common to context menu and tooltip */
+
+:is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+    position: fixed; /* fixed position is obligatory for centered option */
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: var(--atuiKernel_ShadowMedium);
+    width: max-content;
+    max-width: 30%;
+    visibility: hidden;
+}
+
+:is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) * {
+    color: hsl(var(--atuiKernel_Color-N00)) !important;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Context menu */
+
+.atuiKernel_PopupContextmenu {
+    z-index: 14;
+    padding: 10px 0;
+}
+
+.atuiKernel_PopupContextmenu > * {
+    padding: 5px 10px;
+}
+
+.atuiKernel_PopupContextmenu > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none !important;
+}
+
+.atuiKernel_PopupContextmenu > a:hover {
+    background-color: hsl(var(--atuiKernel_Color-A60) / 80%);
+}
+
+.atuiKernel_PopupContextmenu > hr {
+    background-color: hsl(var(--atuiKernel_Color-A60));
+    height: 2px;
+    border: 0;
+    margin: 5px 10%;
+    padding: 0;
+}
+
+/* Global Panel */
+
+.atuiKernel_PopupGlobalpanel {
+    align-items: normal;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    visibility: hidden;
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: var(--atuiKernel_ShadowMedium);
+    display: block !important;
+}
+
+.atuiKernel_PopupGlobalpanel > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.atuiKernel_PopupGlobalpanel > div div {
+    display: block;
+    margin: 10px;
+    min-width: 20%;
+}
+
+.atuiKernel_PopupGlobalpanel > div div p {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_PopupGlobalpanel > div div div a {
+    display: block;
+    margin: 5px;
+}
+
+/* Tooltip */
+
+.atuiKernel_PopupTooltip {
+    z-index: 13;
+    padding: 10px;
+}

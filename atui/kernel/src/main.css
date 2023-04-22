@@ -10,7 +10,6 @@
 @import url("./carousel.css");
 @import url("./color.css");
 @import url("./contacts.css");
-@import url("./contextmenu.css");
 @import url("./download.css");
 @import url("./footer.css");
 @import url("./grid.css");
@@ -21,6 +20,7 @@
 @import url("./notification.css");
 @import url("./pagination.css");
 @import url("./paragraph.css");
+@import url("./popup.css");
 @import url("./section.css");
 @import url("./table.css");
 @import url("./tabs.css");
@@ -122,6 +122,9 @@ code {
     color: hsl(var(--atuiKernel_Color-N00));
     font-weight: normal !important;
     text-decoration: none !important;
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
 }
 
 ::selection {

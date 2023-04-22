@@ -80,23 +80,23 @@
     justify-content: space-around;
 }
 
-#atuiKernel_Header > aside > nav > div > * {
+#atuiKernel_Header > aside > nav > * {
     display: flex;
     align-items: center;
     font-size: 1.125rem;
 }
 
-#atuiKernel_Header > aside > nav > div > a {
+#atuiKernel_Header > aside > nav a {
     margin: 0 10px;
     color: black;
 }
 
-#atuiKernel_Header > aside > nav > div i {
+#atuiKernel_Header > aside > nav i {
     margin-right: 10px;
     font-size: 20px;
 }
 
-#atuiKernel_Header > aside > nav > div p {
+#atuiKernel_Header > aside > nav p {
     margin: 0;
 }
 

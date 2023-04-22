@@ -45,6 +45,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Rewrite Button.
 -   Rewrite color mode script. There is a better flexibility and management for toggle button and color variables.
 -   Rewrite color scheming script. There are new variables and operation.
+-   Entirely rewrite popup management script. Much more flexible and simpler to use (HTML structure, JS call function, possibilities of content).
+-   Move Global Panel from Navigation to Popup & Context Menu from Tools to Popup. So, these components has been renamed.
+-   ToolsInfotip has been moved and renamed to PopupTooltip. This component has been completly rewritten with the same improvements as Contextmenu.
 
 ### Fixed
 

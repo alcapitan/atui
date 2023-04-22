@@ -43,48 +43,6 @@
     color: hsl(var(--atuiKernel_Color-N00));
 }
 
-/* Global Panel */
-
-.atuiKernel_NavigationGlobalpanel aside {
-    align-items: normal;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    visibility: hidden;
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
-    display: block !important;
-}
-
-.atuiKernel_NavigationGlobalpanel aside > div {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.atuiKernel_NavigationGlobalpanel aside > div div {
-    display: block;
-    margin: 10px;
-    min-width: 20%;
-}
-
-.atuiKernel_NavigationGlobalpanel aside > div div p {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    color: hsl(var(--atuiKernel_Color-N00));
-}
-
-.atuiKernel_NavigationGlobalpanel aside > div div div {
-    margin: 10px 20px;
-}
-
-.atuiKernel_NavigationGlobalpanel aside > div div div a {
-    display: block;
-    margin: 5px;
-}
-
 /* Bar */
 
 .atuiKernel_NavigationBar {

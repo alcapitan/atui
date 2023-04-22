@@ -209,17 +209,6 @@ document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar)
   });
 });
 
-/* Infos */
-
-document.querySelectorAll(".atuiMediasplayer_Infos").forEach(function (button) {
-  button.addEventListener("mouseenter", function () {
-    atuiKernel_ToolsContextmenuDisplay(this, true, false);
-  });
-  button.addEventListener("mouseleave", function () {
-    atuiKernel_ToolsContextmenuDisplay(this, false, undefined);
-  });
-});
-
 /* Loop */
 
 document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {

@@ -35,6 +35,9 @@
     outline: none;
     margin: 0 !important;
     font-size: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    box-sizing: content-box;
 }
 
 #atuiSearchservices_Input,

@@ -3,13 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(20, 4, 2023);
-
-atuiKernel_ToolsContextmenu("atuiKernel_NavigationImg");
-atuiKernel_ToolsContextmenu("atuiKernel_NavigationText");
-atuiKernel_NavigationGlobalpanel("atuiKernel_NavigationGlobalpanel1");
-atuiKernel_ToolsContextmenu("buttonContextmenu1");
-atuiKernel_ToolsContextmenu("buttonContextmenu2");
+atuiKernel_FooterLastedited(22, 4, 2023);
 
 /*atuiMediasplayer_Assign({
     player: 'audioplayer2',
@@ -21,10 +15,6 @@ atuiKernel_ToolsContextmenu("buttonContextmenu2");
     releaseDate: '2022',
     origin: 'http://ncs.io/SinkingShip',
 
-/*atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadOpen");
-atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadDownload");
-atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadTorrent");
-atuiKernel_ToolsInfotip("atuiKernel_SectionDownloadChecksum");*/
 /*atuiKernel_NotificationDisplay('alert','default',["console.log('ok')"],["console.log('annuler')"],'Maecenas dictum felis tristique lectus imperdiet aliquet. ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, turpis vel efficitur dictum, ipsum tortor pharetra velit, at mollis nisl ligula pellentesque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ');*/
 /*atuiKernel_NotificationCookies();*/
 

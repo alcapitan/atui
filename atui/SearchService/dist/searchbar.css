@@ -32,12 +32,15 @@
 #atuiSearchservices_Submit /* Submit image */ {
     margin: 0 !important;
     font-size: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
 }
 
 #atuiSearchservices_Submit /* Submit image */ {
     border: none;
     padding: 5px 10px;
     outline: none;
+    box-sizing: content-box;
 }
 
 #atuiSearchservices_Input,
