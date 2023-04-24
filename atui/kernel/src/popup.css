@@ -11,8 +11,19 @@
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
     width: max-content;
-    max-width: 30%;
     visibility: hidden;
+}
+
+@media (480px <= width) /* Tablets and computers */ {
+    :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+        max-width: 30%;
+    }
+}
+
+@media (width < 480px) /* Smartphones */ {
+    :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+        max-width: 70%;
+    }
 }
 
 :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) * {
@@ -32,12 +43,12 @@
     padding: 5px 10px;
 }
 
-.atuiKernel_PopupContextmenu > * :first-child:is(i,img) {
-    margin-left : 0 !important;
+.atuiKernel_PopupContextmenu > * :first-child:is(i, img) {
+    margin-left: 0 !important;
 }
 
-.atuiKernel_PopupContextmenu > * :last-child:is(i,img) {
-    margin-right : 0 !important;
+.atuiKernel_PopupContextmenu > * :last-child:is(i, img) {
+    margin-right: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu :is(i, img) {

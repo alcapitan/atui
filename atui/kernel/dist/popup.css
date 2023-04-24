@@ -12,8 +12,19 @@
     box-shadow: var(--atuiKernel_ShadowMedium);
     width: -moz-max-content;
     width: max-content;
-    max-width: 30%;
     visibility: hidden;
+}
+
+@media (min-width: 480px) /* Tablets and computers */ {
+    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 479.98px) /* Smartphones */ {
+    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+        max-width: 70%;
+    }
 }
 
 .atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip * {
@@ -37,19 +48,19 @@
 }
 
 .atuiKernel_PopupContextmenu > * i:first-child {
-    margin-left : 0 !important;
+    margin-left: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu > * img:first-child {
-    margin-left : 0 !important;
+    margin-left: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu > * i:last-child {
-    margin-right : 0 !important;
+    margin-right: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu > * img:last-child {
-    margin-right : 0 !important;
+    margin-right: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu i, .atuiKernel_PopupContextmenu img {

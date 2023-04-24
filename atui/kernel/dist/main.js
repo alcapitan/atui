@@ -182,51 +182,75 @@ function atuiKernel_ColoraccentMetatag() {
 /* Pop-up */
 
 function atuiKernel_PopupSetup(listener) {
-  const target = findElement(listener, listener.getAttribute("data-vk-popup-assign"));
+  const popup = findElement(listener, listener.getAttribute("data-vk-popup-assign"));
 
-  let options = {};
-  if (target.classList.contains("atuiKernel_PopupGlobalpanel")) {
+  let options = {
+    type: "default",
+    triggerEvent: "mouseenter",
+    outEvent: "click"
+  };
+
+  if (popup.classList.contains("atuiKernel_PopupGlobalpanel")) {
     options.type = "centered-hor";
   }
 
-  listener.addEventListener("mouseenter", function () {
-    atuiKernel_PopupPosition(listener, target, options);
-    atuiKernel_PopupDisplay(target);
-    document.addEventListener("scroll", atuiKernel_PopupScroll);
-  });
-  let outEvent;
-  if (navigator.maxTouchPoints > 0) {
-    outEvent = "mouseout";
-  } else {
-    outEvent = "mouseleave";
+  if (listener.classList.contains("optionRightclick")) {
+    options.triggerEvent = "contextmenu";
   }
-  target.addEventListener(outEvent, function () {
-    atuiKernel_PopupHide(target);
-    document.removeEventListener("scroll", atuiKernel_PopupScroll);
+
+  listener.addEventListener(options.triggerEvent, (event) => {
+    // Prevent default context menu on right click
+    if (options.triggerEvent === "contextmenu") {
+      event.preventDefault();
+    }
+
+    // Hide all popups
+    document.
+    querySelectorAll(".atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip, .atuiKernel_PopupGlobalpanel").
+    forEach((popup) => {
+      atuiKernel_PopupHide(popup);
+    });
+
+    atuiKernel_PopupPosition(listener, popup, options);
+    atuiKernel_PopupDisplay(popup);
+    document.addEventListener("scroll", atuiKernel_PopupScroll);
+
+    // Close when the user clicks outside the popup
+    if (options.outEvent === "click") {
+      document.addEventListener(options.outEvent, detectOutsideClick);
+    }
+
+    function detectOutsideClick(event) {
+      if (!popup.contains(event.target)) {
+        atuiKernel_PopupHide(popup);
+        document.removeEventListener("scroll", atuiKernel_PopupScroll);
+        document.removeEventListener("click", detectOutsideClick);
+      }
+    }
   });
 
   function atuiKernel_PopupScroll() {
-    atuiKernel_PopupPosition(listener, target, options);
+    atuiKernel_PopupPosition(listener, popup, options);
   }
 
-  function atuiKernel_PopupPosition(listener, target, options) {
+  function atuiKernel_PopupPosition(listener, popup, options) {
     const gap = 5;
 
     // The temporary position at 0 is very important to get the getBoundingClientRect() position at 0px;0px and thus know the shift.
-    target.style.left = "0";
-    target.style.top = "0";
+    popup.style.left = "0";
+    popup.style.top = "0";
 
-    // The variables windowDimensions, listenerPosition and targetPosition have been made to facilitate the reading of the code.
+    // The variables windowDimensions, listenerPosition and popupPosition have been made to facilitate the reading of the code.
     const windowDimensions = {
       width: document.documentElement.clientWidth,
       height: document.documentElement.clientHeight
     };
     // Schema of getBoundingClientRect() : https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect#return_value
     const listenerPosition = listener.getBoundingClientRect();
-    const targetPosition = target.getBoundingClientRect();
+    const popupPosition = popup.getBoundingClientRect();
 
-    const overflowRight = listenerPosition.left + targetPosition.width > windowDimensions.width;
-    const overflowBottom = listenerPosition.top + targetPosition.height > windowDimensions.height;
+    const overflowRight = listenerPosition.left + popupPosition.width > windowDimensions.width;
+    const overflowBottom = listenerPosition.top + popupPosition.height > windowDimensions.height;
 
     let calculatedPosition = {
       left: 0,
@@ -234,31 +258,31 @@ function atuiKernel_PopupSetup(listener) {
     };
 
     if (options.type === "centered" || options.type === "centered-hor") {
-      calculatedPosition.left = (windowDimensions.width - targetPosition.width) / 2;
+      calculatedPosition.left = (windowDimensions.width - popupPosition.width) / 2;
     } else if (overflowRight) {
-      calculatedPosition.left = listenerPosition.right - targetPosition.left - targetPosition.width - gap;
+      calculatedPosition.left = listenerPosition.right - popupPosition.left - popupPosition.width - gap;
     } else {
-      calculatedPosition.left = listenerPosition.left - targetPosition.left + gap;
+      calculatedPosition.left = listenerPosition.left - popupPosition.left + gap;
     }
 
     if (options.type === "centered" || options.type === "centered-ver") {
-      calculatedPosition.top = (windowDimensions.height - targetPosition.height) / 2;
+      calculatedPosition.top = (windowDimensions.height - popupPosition.height) / 2;
     } else if (overflowBottom) {
-      calculatedPosition.top = listenerPosition.top - targetPosition.top - targetPosition.height - gap;
+      calculatedPosition.top = listenerPosition.top - popupPosition.top - popupPosition.height - gap;
     } else {
-      calculatedPosition.top = listenerPosition.bottom - targetPosition.top + gap;
+      calculatedPosition.top = listenerPosition.bottom - popupPosition.top + gap;
     }
 
-    target.style.left = calculatedPosition.left + "px";
-    target.style.top = calculatedPosition.top + "px";
+    popup.style.left = calculatedPosition.left + "px";
+    popup.style.top = calculatedPosition.top + "px";
   }
 
-  function atuiKernel_PopupDisplay(target) {
-    target.style.visibility = "visible";
+  function atuiKernel_PopupDisplay(popup) {
+    popup.style.visibility = "visible";
   }
 
-  function atuiKernel_PopupHide(target) {
-    target.style.visibility = "hidden";
+  function atuiKernel_PopupHide(popup) {
+    popup.style.visibility = "hidden";
   }
 }
 document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
