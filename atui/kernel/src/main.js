@@ -215,14 +215,13 @@ function atuiKernel_PopupSetup(listener) {
         atuiKernel_PopupDisplay(popup);
         document.addEventListener("scroll", atuiKernel_PopupScroll);
 
-        // Close when the user clicks outside the popup
-        if (options.outEvent === "click") {
-            document.addEventListener(options.outEvent, detectOutsideClick);
-        }
+        document.addEventListener(options.outEvent, (event) => {
+            detectOutsideClick(event);
+        });
     });
 
     function detectOutsideClick(event) {
-        if (!popup.contains(event.target)) {
+        if (!popup.contains(event.target) && !listener.contains(event.target)) {
             atuiKernel_PopupHide(popup);
         }
     }
