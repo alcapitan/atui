@@ -115,10 +115,6 @@
 }
 
 .atuiKernel_SectionCard.optionOverlay article > div[class="text"] {
-    background: linear-gradient(to top, hsl(var(--atuiKernel_Color-N20) / 80%) ; 50%, transparent 100%);
+    background: linear-gradient(to top, hsl(var(--atuiKernel_Color-N80) / 80%) 50%, transparent 100%);
     margin-top: 30%;
-}
-
-.atuiKernel_SectionCard.optionOverlay article > div[class="text"] > :is(h3, p) {
-    color: hsl(var(--atuiKernel_Color-NFF));
 }

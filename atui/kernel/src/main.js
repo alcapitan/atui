@@ -186,7 +186,7 @@ function atuiKernel_PopupSetup(listener) {
 
     let options = {
         type: "default",
-        triggerEvent: "mouseenter",
+        triggerEvent: "mouseover",
         outEvent: "click",
     };
 
@@ -219,18 +219,26 @@ function atuiKernel_PopupSetup(listener) {
         if (options.outEvent === "click") {
             document.addEventListener(options.outEvent, detectOutsideClick);
         }
-
-        function detectOutsideClick(event) {
-            if (!popup.contains(event.target)) {
-                atuiKernel_PopupHide(popup);
-                document.removeEventListener("scroll", atuiKernel_PopupScroll);
-                document.removeEventListener("click", detectOutsideClick);
-            }
-        }
     });
+
+    function detectOutsideClick(event) {
+        if (!popup.contains(event.target)) {
+            atuiKernel_PopupHide(popup);
+        }
+    }
 
     function atuiKernel_PopupScroll() {
         atuiKernel_PopupPosition(listener, popup, options);
+    }
+
+    function atuiKernel_PopupHide(popup) {
+        document.removeEventListener("scroll", atuiKernel_PopupScroll);
+        document.removeEventListener("click", detectOutsideClick);
+        popup.style.visibility = "hidden";
+    }
+
+    function atuiKernel_PopupDisplay(popup) {
+        popup.style.visibility = "visible";
     }
 
     function atuiKernel_PopupPosition(listener, popup, options) {
@@ -275,14 +283,6 @@ function atuiKernel_PopupSetup(listener) {
 
         popup.style.left = calculatedPosition.left + "px";
         popup.style.top = calculatedPosition.top + "px";
-    }
-
-    function atuiKernel_PopupDisplay(popup) {
-        popup.style.visibility = "visible";
-    }
-
-    function atuiKernel_PopupHide(popup) {
-        popup.style.visibility = "hidden";
     }
 }
 document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {

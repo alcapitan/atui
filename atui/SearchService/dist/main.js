@@ -20,6 +20,7 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
   const atuiSearchservices_HeaderBar = document.getElementById("atuiSearchservices_HeaderBar");
   const atuiSearchservices_HeaderPropositions = document.getElementById("atuiSearchservices_HeaderPropositions");
   const atuiSearchservices_HeaderBarInput = document.getElementById("atuiSearchservices_Input");
+
   if (!wish) {
     atuiSearchservices_HeaderBar.style.width = "100%";
     atuiSearchservices_HeaderBar.style.margin = "0px";
@@ -41,7 +42,7 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
     element.style.position = "absolute";
     if (document.documentElement.clientWidth <= 767) {
       atuiSearchservices_HeaderBarInput.style.display = "inline";
-      atuiSearchservices_HeaderBar.style.backgroundColor = "hsl(var(--atuiKernel_Color-NFF));";
+      atuiSearchservices_HeaderBar.style.backgroundColor = "hsl(var(--atuiKernel_Color-NFF))";
       atuiSearchservices_HeaderBar.style.border = "1px hsl(var(--atuiKernel_Color-N70)) solid";
       element.style.left = "40px";
       element.style.right = "40px";
