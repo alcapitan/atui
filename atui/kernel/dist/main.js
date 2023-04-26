@@ -275,9 +275,9 @@ function atuiKernel_PopupSetup(listener) {
     if (options.type === "centered" || options.type === "centered-ver") {
       calculatedPosition.top = (windowDimensions.height - popupPosition.height) / 2;
     } else if (overflowBottom) {
-      calculatedPosition.top = listenerPosition.top - popupPosition.top - popupPosition.height - gap;
+      calculatedPosition.top = listenerPosition.top - popupPosition.top - popupPosition.height + gap;
     } else {
-      calculatedPosition.top = listenerPosition.bottom - popupPosition.top + gap;
+      calculatedPosition.top = listenerPosition.bottom - popupPosition.top - gap;
     }
 
     popup.style.left = calculatedPosition.left + "px";

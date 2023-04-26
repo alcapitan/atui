@@ -14,7 +14,7 @@
     --atuiKernel_Color-Accent : 170 !important;
 }*/
 
-.atuiKernel_ToolsCarousel {
+#carouselHeader {
     background-image: url("illustrations/presentation.jpg");
 }
 

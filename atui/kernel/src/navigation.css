@@ -65,6 +65,7 @@
 
 .atuiKernel_NavigationBar p {
     margin: 0;
+    width: max-content;
 }
 
 .atuiKernel_NavigationBar hr {

@@ -41,6 +41,7 @@
     padding: 5px 10px;
     outline: none;
     box-sizing: content-box;
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 #atuiSearchservices_Input,

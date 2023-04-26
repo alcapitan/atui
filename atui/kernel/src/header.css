@@ -9,7 +9,12 @@
     width: available;
     width: stretch;
     z-index: 12;
-    padding: 5px 10px;
+    padding: 0 5px;
+    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Header * {
+    margin: 0;
 }
 
 .atuiKernel_Header.optionFixed {
@@ -18,20 +23,53 @@
     position: fixed;
 }
 
+.atuiKernel_Header.optionAccent {
+    background-color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_Header.optionDark {
+    background-color: hsl(var(--atuiKernel_Color-N20));
+}
+
+.atuiKernel_Header.optionTransparent {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.atuiKernel_Header:is(.optionAccent, .optionDark) * {
+    color: hsl(var(--atuiKernel_Color-NFF));
+}
+
 .atuiKernel_Header :is(i, img) {
     font-size: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
 }
 
-.atuiKernel_Header * {
-    margin: 0;
-}
-
 .atuiKernel_Header > div /* Levels */ {
     display: flex;
     align-items: center;
-    gap: 10px;
+    column-gap: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.atuiKernel_Header > div.optionSpaced {
+    justify-content: space-around;
+}
+
+.atuiKernel_Header > div > * {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: max-content;
+}
+
+.atuiKernel_Header > div > *:has(> p) > :is(i, img) {
+    font-size: 1.125rem;
+    width: 1.125rem;
+    height: 1.125rem;
 }
 
 .atuiKernel_HeaderSpace {
@@ -44,11 +82,17 @@
 .atuiKernel_Header .atuiKernel_Logotype {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .atuiKernel_Header .atuiKernel_Logotype * {
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
     font-size: 1.5em;
+}
+
+.atuiKernel_Header .atuiKernel_Logotype :is(i, img) {
+    font-size: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
 }

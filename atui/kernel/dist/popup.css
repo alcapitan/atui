@@ -6,6 +6,10 @@
 /* Common to context menu and tooltip */
 
 .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+    display: block !important;
+}
+
+.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
     position: fixed; /* fixed position is obligatory for centered option */
     background-color: hsl(var(--atuiKernel_Color-NFF));
     border-radius: var(--atuiKernel_Borderradius);
@@ -39,8 +43,11 @@
 /* Context menu */
 
 .atuiKernel_PopupContextmenu {
+    padding: 10px 0 !important;
+}
+
+.atuiKernel_PopupContextmenu {
     z-index: 14;
-    padding: 10px 0;
 }
 
 .atuiKernel_PopupContextmenu > * {

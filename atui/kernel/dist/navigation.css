@@ -88,6 +88,8 @@
 
 .atuiKernel_NavigationBar p {
     margin: 0;
+    width: -moz-max-content;
+    width: max-content;
 }
 
 .atuiKernel_NavigationBar hr {

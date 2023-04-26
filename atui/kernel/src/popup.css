@@ -12,6 +12,7 @@
     box-shadow: var(--atuiKernel_ShadowMedium);
     width: max-content;
     visibility: hidden;
+    display: block !important;
 }
 
 @media (480px <= width) /* Tablets and computers */ {
@@ -36,7 +37,7 @@
 
 .atuiKernel_PopupContextmenu {
     z-index: 14;
-    padding: 10px 0;
+    padding: 10px 0 !important;
 }
 
 .atuiKernel_PopupContextmenu > * {
