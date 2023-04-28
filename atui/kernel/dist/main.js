@@ -288,6 +288,17 @@ document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
   atuiKernel_PopupSetup(listener);
 });
 
+/* Carousel */
+
+/*document.querySelectorAll(".atuiKernel_Carousel").forEach((carousel) => {
+    const carouselWidth = carousel.parentNode.clientWidth;
+    console.log(carouselWidth);
+    carousel.style.width = carouselWidth + "px";
+    carousel.querySelectorAll(".atuiKernel_CarouselSlide").forEach((slide) => {
+        slide.style.width = carouselWidth + "px";
+    });
+});*/
+
 /* Height carousel */
 
 try {

@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover img {
+    height: 100%;
+}
+
 .atuiMediasplayer_Audioplayer :is(.atuiMediasplayer_Panel, .atuiMediasplayer_Dashboard) {
     display: flex;
 }

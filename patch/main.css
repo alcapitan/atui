@@ -14,10 +14,6 @@
     --atuiKernel_Color-Accent : 170 !important;
 }*/
 
-#carouselHeader {
-    background-image: url("illustrations/presentation.jpg");
-}
-
 .boxTest {
     border: 1px solid hsl(var(--atuiKernel_Color-N00));
     border-radius: var(--atuiKernel_Borderradius);

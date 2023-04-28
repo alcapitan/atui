@@ -82,6 +82,9 @@ input[type="color"]::-webkit-color-swatch {
 
 .atuiKernel_InputSubmit {
     font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    box-sizing: content-box;
 }
 
 :is(

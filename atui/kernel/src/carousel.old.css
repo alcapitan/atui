@@ -1,0 +1,35 @@
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_ToolsCarousel /* Image surface */ {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.atuiKernel_ToolsCarousel > div /* Text container */ {
+    width: 100%;
+    padding: 50px 10%;
+    background: linear-gradient(to top, rgb(51 51 51 / 80%), transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.atuiKernel_ToolsCarousel > div > * /* All elements in text container */ {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.atuiKernel_ToolsCarousel > div > h2 /* Title */ {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
+}
