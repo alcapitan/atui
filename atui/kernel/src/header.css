@@ -17,9 +17,13 @@
     margin: 0;
 }
 
-.atuiKernel_Header.optionFixed {
+.atuiKernel_Header.optionCarousel {
+    position: absolute;
     background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     backdrop-filter: var(--atuiKernel_Blur);
+}
+
+.atuiKernel_Header.optionFixed {
     position: fixed;
 }
 

@@ -89,6 +89,7 @@
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
     display: block !important;
+    width: auto !important;
 }
 
 .atuiKernel_PopupGlobalpanel > div {

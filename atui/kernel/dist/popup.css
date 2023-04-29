@@ -103,6 +103,7 @@
 
 .atuiKernel_PopupGlobalpanel {
     display: block !important;
+    width: auto !important;
 }
 
 .atuiKernel_PopupGlobalpanel {

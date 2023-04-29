@@ -288,30 +288,6 @@ document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
     atuiKernel_PopupSetup(listener);
 });
 
-/* Carousel */
-
-/*document.querySelectorAll(".atuiKernel_Carousel").forEach((carousel) => {
-    const carouselWidth = carousel.parentNode.clientWidth;
-    carousel.style.width = carouselWidth + "px";
-    carousel.querySelectorAll(".atuiKernel_CarouselSlide").forEach((slide) => {
-        slide.style.width = carouselWidth + "px";
-    });
-});*/
-
-/* Height carousel */
-
-try {
-    const atuiKernel_Header = document.getElementById("atuiKernel_Header");
-    const atuiKernel_HeaderAside = atuiKernel_Header.childNodes[1];
-    atuiKernel_Header.style.minHeight = atuiKernel_HeaderAside.clientHeight + "px";
-    const atuiKernel_Carousel = atuiKernel_Header.childNodes[3];
-    if (document.documentElement.clientWidth > 767) {
-        const atuiKernel_CarouselHeight = atuiKernel_Carousel.clientHeight + atuiKernel_HeaderAside.clientHeight * 2;
-        atuiKernel_Carousel.style.height = atuiKernel_CarouselHeight + "px";
-    }
-    atuiKernel_Carousel.style.paddingTop = atuiKernel_HeaderAside.clientHeight + "px";
-} catch {}
-
 /* Footer info */
 
 try {
