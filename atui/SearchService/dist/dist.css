@@ -1,5 +1,5 @@
 @import"./propositions.css";@import"./searchbar.css";/*!
  * ATUI v0.4.0 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
- */#atuiSearchservices_Header{background-color:transparent;border-radius:var(--atuiKernel_Borderradius);display:flex;justify-content:center;flex-direction:column;top:5px}
+ */#atuiSearchservices_Header{background-color:transparent;border-radius:var(--atuiKernel_Borderradius);display:flex;justify-content:center;flex-direction:column;align-items:flex-start;gap:0;top:5px;padding:0}
 /*# sourceMappingURL=dist.css.map */

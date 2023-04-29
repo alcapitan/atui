@@ -21,6 +21,7 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
     const atuiSearchservices_HeaderPropositions = document.getElementById("atuiSearchservices_HeaderPropositions");
     const atuiSearchservices_HeaderBarInput = document.getElementById("atuiSearchservices_Input");
 
+    /* wish = true; // To block hiding for development tests */
     if (!wish) {
         atuiSearchservices_HeaderBar.style.width = "100%";
         atuiSearchservices_HeaderBar.style.margin = "0px";

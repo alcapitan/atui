@@ -7,12 +7,14 @@
 
 #atuiSearchservices_HeaderPropositions /* Container of propositions */ {
     display: none;
-    margin: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #atuiSearchservices_HeaderPropositionsRecent,#atuiSearchservices_HeaderPropositionsSuggested
 /* Containers of propositions Recent & suggested */ {
-    margin: 0 10px 20px;
+    margin: 0 20px;
 }
 
 #atuiSearchservices_HeaderPropositionsRecent > h3,#atuiSearchservices_HeaderPropositionsSuggested > h3
@@ -24,7 +26,7 @@
 
 #atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer
 /* Lists of propositions */ {
-    margin: 15px;
+    margin: 10px;
 }
 
 #atuiSearchservices_HeaderPropositionsRecentContainer > a,#atuiSearchservices_HeaderPropositionsSuggestedContainer > a

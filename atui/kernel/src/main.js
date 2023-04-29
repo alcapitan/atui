@@ -213,7 +213,8 @@ function atuiKernel_PopupSetup(listener) {
 
         atuiKernel_PopupPosition(listener, popup, options);
         atuiKernel_PopupDisplay(popup);
-        document.addEventListener("scroll", atuiKernel_PopupScroll);
+        document.addEventListener("scroll", atuiKernel_PopupReload);
+        window.addEventListener("resize", atuiKernel_PopupReload);
 
         document.addEventListener(options.outEvent, (event) => {
             detectOutsideClick(event);
@@ -226,12 +227,13 @@ function atuiKernel_PopupSetup(listener) {
         }
     }
 
-    function atuiKernel_PopupScroll() {
+    function atuiKernel_PopupReload() {
         atuiKernel_PopupPosition(listener, popup, options);
     }
 
     function atuiKernel_PopupHide(popup) {
-        document.removeEventListener("scroll", atuiKernel_PopupScroll);
+        document.removeEventListener("scroll", atuiKernel_PopupReload);
+        window.removeEventListener("resize", atuiKernel_PopupReload);
         document.removeEventListener("click", detectOutsideClick);
         popup.style.visibility = "hidden";
     }

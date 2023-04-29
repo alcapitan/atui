@@ -48,6 +48,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Entirely rewrite popup management script. Much more flexible and simpler to use (HTML structure, JS call function, possibilities of content).
 -   Move Global Panel from Navigation to Popup & Context Menu from Tools to Popup. So, these components has been renamed.
 -   ToolsInfotip has been moved and renamed to PopupTooltip. This component has been completly rewritten with the same improvements as Contextmenu.
+-   Rewrite Carousel. It's more flexible and supports several slides now.
+-   Colors are more adapted (less bright) on dark mode.
+-   Rewrite Header. There are now separators, specific displaying, style options, proper levels and better stability and ergonomics.
+-   Light style refinements for search panel.
 
 ### Fixed
 

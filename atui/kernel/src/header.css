@@ -3,6 +3,8 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+/* Global */
+
 .atuiKernel_Header {
     background-color: hsl(var(--atuiKernel_Color-N90));
     position: relative;
@@ -16,6 +18,49 @@
 .atuiKernel_Header * {
     margin: 0;
 }
+
+.atuiKernel_Header :is(i, img) {
+    font-size: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.atuiKernel_Header > div > *:has(> p) > :is(i, img) /* Text with an icon */ {
+    font-size: 1.125rem;
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+/* Separators */
+
+.atuiKernel_HeaderSpace {
+    flex: 1;
+    border: none;
+}
+
+.atuiKernel_HeaderSplit {
+    border: 0;
+    background-color: hsl(var(--atuiKernel_Color-N60));
+    width: 1px !important;
+    height: 1.875rem;
+    padding: 0 !important;
+}
+
+/* Display on specific devices */
+
+@media (width >= 768px) /* Computers */ {
+    .atuiKernel_Header *.optionMobileonly {
+        display: none;
+    }
+}
+
+@media (width <= 767px) /* Smartphones */ {
+    .atuiKernel_Header *.optionDesktoponly {
+        display: none;
+    }
+}
+
+/* Options */
 
 .atuiKernel_Header.optionCarousel {
     position: absolute;
@@ -44,22 +89,14 @@
     color: hsl(var(--atuiKernel_Color-NFF));
 }
 
-.atuiKernel_Header :is(i, img) {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
-}
+/* Levels */
 
-.atuiKernel_Header > div /* Levels */ {
+.atuiKernel_Header > div {
     display: flex;
     align-items: center;
     column-gap: 5px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.atuiKernel_Header > div.optionSpaced {
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .atuiKernel_Header > div > * {
@@ -68,17 +105,6 @@
     align-items: center;
     gap: 5px;
     width: max-content;
-}
-
-.atuiKernel_Header > div > *:has(> p) > :is(i, img) {
-    font-size: 1.125rem;
-    width: 1.125rem;
-    height: 1.125rem;
-}
-
-.atuiKernel_HeaderSpace {
-    flex: 1;
-    border: none;
 }
 
 /* Logotype */

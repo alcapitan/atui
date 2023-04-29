@@ -14,5 +14,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
     top: 5px;
+    padding: 0;
 }
