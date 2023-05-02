@@ -131,3 +131,32 @@ code {
     background: hsl(var(--atuiKernel_Color-A80));
     color: hsl(var(--atuiKernel_Color-A20));
 }
+
+/* Scrollbar */
+
+/* stylelint-disable no-duplicate-selectors */
+
+:root {
+    /* Firefox syntax */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--atuiKernel_Color-N80)) hsl(var(--atuiKernel_Color-N40)); /* colors order : thumb, container */
+}
+
+/* stylelint-enable no-duplicate-selectors */
+
+::-webkit-scrollbar {
+    background-color: hsl(var(--atuiKernel_Color-N80));
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--atuiKernel_Color-N40));
+    border-width: 5px;
+    border-radius: 10px;
+    margin: 5px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--atuiKernel_Color-N20));
+}

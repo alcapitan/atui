@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add pill, tinted, grouped options for Button.
 -   For color mode, it checks at startup system status then in cookies.
 -   Color scheming now includes danger warning success and info.
+-   Supports scrollbar styling (both Firefox and Webkit syntax).
 
 ### Changed
 
@@ -57,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Fix wrap text due to icon in Boxes.
 -   Fix some JS possible bugs.
+-   Better color contrast on Card Overlay.
 
 ### Removed
 

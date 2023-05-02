@@ -45,8 +45,6 @@ function atuiSearchservices_HeaderDevelop(element, wish) {
       atuiSearchservices_HeaderBarInput.style.display = "inline";
       atuiSearchservices_HeaderBar.style.backgroundColor = "hsl(var(--atuiKernel_Color-NFF))";
       atuiSearchservices_HeaderBar.style.border = "1px hsl(var(--atuiKernel_Color-N70)) solid";
-      element.style.left = "40px";
-      element.style.right = "40px";
     }
     element.style.backgroundColor = "hsl(var(--atuiKernel_Color-A70))";
     element.style.boxShadow = "var(--atuiKernel_ShadowMedium)";

@@ -40,7 +40,7 @@
 
 .atuiKernel_HeaderSplit {
     border: 0;
-    background-color: hsl(var(--atuiKernel_Color-N60));
+    background-color: hsl(var(--atuiKernel_Color-N20));
     width: 1px !important;
     height: 1.875rem;
     padding: 0 !important;
@@ -72,21 +72,30 @@
     position: fixed;
 }
 
+.atuiKernel_Header:is(.optionAccent, .optionDark) * {
+    color: hsl(var(--atuiKernel_Color-NFF));
+}
+
 .atuiKernel_Header.optionAccent {
     background-color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_Header.optionAccent .atuiKernel_HeaderSplit {
+    background-color: hsl(var(--atuiKernel_Color-A40));
 }
 
 .atuiKernel_Header.optionDark {
     background-color: hsl(var(--atuiKernel_Color-N20));
 }
 
+.atuiKernel_Header.optionDark .atuiKernel_HeaderSplit {
+    background-color: hsl(var(--atuiKernel_Color-N80));
+}
+
 .atuiKernel_Header.optionTransparent {
     background-color: transparent;
     border-bottom: none;
-}
-
-.atuiKernel_Header:is(.optionAccent, .optionDark) * {
-    color: hsl(var(--atuiKernel_Color-NFF));
+    backdrop-filter: none;
 }
 
 /* Levels */

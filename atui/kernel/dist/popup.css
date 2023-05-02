@@ -54,6 +54,12 @@
     padding: 5px 10px;
 }
 
+@media (pointer: coarse) /* Touch screen */ {
+    .atuiKernel_PopupContextmenu > * {
+        padding: 10px 15px !important;
+    }
+}
+
 .atuiKernel_PopupContextmenu > * i:first-child {
     margin-left: 0 !important;
 }

@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(29, 4, 2023);
+atuiKernel_FooterLastedited(2, 5, 2023);
 
 /*atuiMediasplayer_Assign({
     player: 'audioplayer2',
