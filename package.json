@@ -56,10 +56,10 @@
     },
     "homepage": "https://github.com/alcapitan/atui#readme",
     "devDependencies": {
-        "@babel/cli": "^7.21.0",
-        "@babel/core": "^7.21.4",
-        "@babel/eslint-parser": "^7.21.3",
-        "@babel/preset-env": "^7.21.4",
+        "@babel/cli": "^7.21.5",
+        "@babel/core": "^7.21.8",
+        "@babel/eslint-parser": "^7.21.8",
+        "@babel/preset-env": "^7.21.5",
         "autoprefixer": "^10.4.14",
         "cspell": "^6.31.1",
         "esbuild": "^0.17.18",
@@ -70,8 +70,8 @@
         "postcss-cli": "^10.1.0",
         "postcss-preset-env": "^8.3.2",
         "prettier": "^2.8.8",
-        "stylelint": "^15.6.0",
-        "stylelint-config-standard": "^32.0.0"
+        "stylelint": "^15.6.1",
+        "stylelint-config-standard": "^33.0.0"
     },
     "dependencies": {
         "@tabler/icons-webfont": "^2.17.0",
