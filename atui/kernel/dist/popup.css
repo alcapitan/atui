@@ -56,7 +56,7 @@
 
 @media (pointer: coarse) /* Touch screen */ {
     .atuiKernel_PopupContextmenu > * {
-        padding: 10px 15px !important;
+        padding: 10px 15px;
     }
 }
 

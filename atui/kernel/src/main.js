@@ -491,3 +491,22 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
         }
     });
 });
+
+/* Patch height superposition issue between header and carousel */
+
+const atuiKernel_HeaderFixCarousel = () => {
+    document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
+        const headerHeight = header.offsetHeight + 20; // Add default margin
+        let carousel = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
+
+        // To avoid QuerySelectorAll error
+        // Header is the first element of its parent because it has position absolute with top 0, so it takes the first carousel of its parent.
+        if (Array.isArray(carousel)) {
+            carousel = carousel[0];
+        }
+
+        carousel.style.paddingTop = headerHeight + "px";
+    });
+};
+atuiKernel_HeaderFixCarousel();
+window.addEventListener("resize", atuiKernel_HeaderFixCarousel);

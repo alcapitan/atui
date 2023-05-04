@@ -80,47 +80,47 @@ function atuiSearchservices_HeaderPropositionsGenerate() {
   try {
     /* Recent searches */
     let atuiSearchservices_HeaderPropositionsRecentInfosContainer = document.getElementById(
-    "atuiSearchservices_HeaderPropositionsRecentContainer");
-
+    "atuiSearchservices_HeaderPropositionsRecentContainer"
+    );
     atuiSearchservices_HeaderPropositionsRecentInfosContainer.textContent = "";
     for (let counter in atuiSearchservices_HeaderPropositionsRecentInfos) {
       const atuiSearchservices_HeaderPropositionsRecentInfosNewlink = document.createElement("a");
       const atuiSearchservices_HeaderPropositionsRecentInfosNewlinkText = document.createTextNode(
-      atuiSearchservices_HeaderPropositionsRecentInfos[counter][0]);
-
+      atuiSearchservices_HeaderPropositionsRecentInfos[counter][0]
+      );
       atuiSearchservices_HeaderPropositionsRecentInfosNewlink.appendChild(
-      atuiSearchservices_HeaderPropositionsRecentInfosNewlinkText);
-
+      atuiSearchservices_HeaderPropositionsRecentInfosNewlinkText
+      );
       atuiSearchservices_HeaderPropositionsRecentInfosNewlink.setAttribute(
       "href",
-      atuiSearchservices_HeaderPropositionsRecentInfos[counter][1]);
-
+      atuiSearchservices_HeaderPropositionsRecentInfos[counter][1]
+      );
       atuiSearchservices_HeaderPropositionsRecentInfosContainer.appendChild(
-      atuiSearchservices_HeaderPropositionsRecentInfosNewlink);
-
+      atuiSearchservices_HeaderPropositionsRecentInfosNewlink
+      );
     }
   } catch {}
   try {
     /* Suggested searches */
     let atuiSearchservices_HeaderPropositionsSuggestedInfosContainer = document.getElementById(
-    "atuiSearchservices_HeaderPropositionsSuggestedContainer");
-
+    "atuiSearchservices_HeaderPropositionsSuggestedContainer"
+    );
     atuiSearchservices_HeaderPropositionsSuggestedInfosContainer.textContent = "";
     for (let counter in atuiSearchservices_HeaderPropositionsSuggestedInfos) {
       const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink = document.createElement("a");
       const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText = document.createTextNode(
-      atuiSearchservices_HeaderPropositionsSuggestedInfos[counter][0]);
-
+      atuiSearchservices_HeaderPropositionsSuggestedInfos[counter][0]
+      );
       atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink.appendChild(
-      atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText);
-
+      atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText
+      );
       atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink.setAttribute(
       "href",
-      atuiSearchservices_HeaderPropositionsRecentInfos[counter][1]);
-
+      atuiSearchservices_HeaderPropositionsRecentInfos[counter][1]
+      );
       atuiSearchservices_HeaderPropositionsSuggestedInfosContainer.appendChild(
-      atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink);
-
+      atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink
+      );
     }
   } catch {}
 }

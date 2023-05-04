@@ -7,9 +7,9 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    width: 100%;
     min-height: 25vh;
     max-height: 75vh;
-    width: 100%;
 }
 
 .atuiKernel_Carousel > div /* Slide */ {

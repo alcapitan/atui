@@ -21,8 +21,8 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
     const player = findElement(
     this,
     ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
-
+    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+    );
     const media = player.querySelector("audio, video");
     media.pause();
     player.style.display = "none";
@@ -91,13 +91,13 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
     let media;
     if (this.getAttribute("data-mp-target") !== null) {
       media = document.querySelector(
-      `${this.getAttribute("data-mp-target")} audio, ${this.getAttribute("data-mp-target")} video`);
-
+      `${this.getAttribute("data-mp-target")} audio, ${this.getAttribute("data-mp-target")} video`
+      );
       button = findElement(
       media,
       ".atuiMediasplayer_Run",
-      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
-
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+      );
       if (this.getAttribute("data-mp-assign") !== null) {
         const data = JSON.parse(this.getAttribute("data-mp-assign"));
         atuiMediasplayer_Assign(data);
@@ -111,8 +111,8 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
       const player = findElement(
       media,
       ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
-
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+      );
       player.querySelectorAll(".atuiKernel_SectionBox.optionAlert").forEach((alertBox) => {
         alertBox.remove();
       });
@@ -201,8 +201,8 @@ document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar)
     const media = findElement(
     progressbar,
     "audio, video",
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer");
-
+    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+    );
     const percent = event.offsetX / progressbar.offsetWidth * 100;
     media.currentTime = media.duration * percent / 100;
     progressbar.querySelector(".atuiMediasplayer_ProgressbarInside").style.width = `${percent}%`;
