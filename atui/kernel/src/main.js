@@ -341,6 +341,24 @@ function atuiKernel_FooterLastedited(day, month, year) {
 
 /* Notifications */
 
+function atuiKernel_NotificationPush(options) {
+    function systemPush() {
+        return new Notification(options.title, {
+            title: options.title,
+            body: options.text,
+            icon: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${options.icon}.svg`,
+        });
+    }
+
+    if (options.system) {
+        if (Notification.permission === "granted") {
+            return systemPush();
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(systemPush());
+        }
+    }
+}
+
 /*try {
     const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
 } catch {}

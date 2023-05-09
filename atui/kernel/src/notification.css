@@ -8,9 +8,16 @@
 .atuiKernel_NotificationContainer {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 20%;
+    right: 20%;
     z-index: 13;
+}
+
+@media (width < 480px) /* Smartphones */ {
+    .atuiKernel_NotificationContainer {
+        left: 0;
+        right: 0;
+    }
 }
 
 .atuiKernel_Notification {
@@ -42,10 +49,10 @@
     font-family: var(--atuiKernel_FontsTitle);
 }
 
-.atuiKernel_Notification > div {
+.atuiKernel_Notification > section {
     margin: 10px;
 }
 
-.atuiKernel_Notification > div p {
+.atuiKernel_Notification > section p {
     margin: 0;
 }

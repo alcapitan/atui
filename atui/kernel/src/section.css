@@ -15,7 +15,7 @@
         flex-direction: row;
     }
 
-    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child) {
+    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child, .atuiKernel_NotificationContainer) {
         border-right: 1px solid hsl(var(--atuiKernel_Color-N80));
     }
 
@@ -36,7 +36,7 @@
         flex-direction: column-reverse;
     }
 
-    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child) {
+    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child, .atuiKernel_NotificationContainer) {
         border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
     }
 
