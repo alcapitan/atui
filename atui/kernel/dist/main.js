@@ -341,95 +341,95 @@ function atuiKernel_FooterLastedited(day, month, year) {
 
 /* Notifications */
 
-try {
-  const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
+/*try {
+    const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
 } catch {}
 // Types available : normal, alert, caution, confirmation, information, insertion
 function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
-  // Notification element
-  const atuiKernel_NotificationElement = document.createElement("aside");
-  atuiKernel_NotificationElement.classList.add("atuiKernel_NotificationElement");
-  const atuiKernel_NotificationElementHeader = document.createElement("div");
-  const atuiKernel_NotificationElementFooter = document.createElement("div");
+    // Notification element
+    const atuiKernel_NotificationElement = document.createElement("aside");
+    atuiKernel_NotificationElement.classList.add("atuiKernel_NotificationElement");
+    const atuiKernel_NotificationElementHeader = document.createElement("div");
+    const atuiKernel_NotificationElementFooter = document.createElement("div");
 
-  // Type
-  /* deprecated due to icon source change
-  const atuiKernel_NotificationElementHeaderTypeImg = document.createElement("img");
-  if (type != "normal") {
-      atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src", "atui/kernel/assets/" + type + ".png");
-  } else {
-      atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
-  }*/
+    // Type
+    /* deprecated due to icon source change
+    const atuiKernel_NotificationElementHeaderTypeImg = document.createElement("img");
+    if (type != "normal") {
+        atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src", "atui/kernel/assets/" + type + ".png");
+    } else {
+        atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
+    }*
 
-  // Sound
-  const atuiKernel_NotificationElementSound = new Audio("atui/kernel/assets/notification.mp3");
+    // Sound
+    const atuiKernel_NotificationElementSound = new Audio("atui/kernel/assets/notification.mp3");
 
-  // Title
-  const atuiKernel_NotificationElementHeaderTitle = document.createElement("h3");
-  atuiKernel_NotificationElementHeaderTitle.textContent = title;
+    // Title
+    const atuiKernel_NotificationElementHeaderTitle = document.createElement("h3");
+    atuiKernel_NotificationElementHeaderTitle.textContent = title;
 
-  // Close button
-  const atuiKernel_NotificationElementHeaderClose = document.createElement("i");
-  atuiKernel_NotificationElementHeaderClose.classList.add("ti", "ti-x");
-  atuiKernel_NotificationElementHeaderClose.addEventListener("click", function () {
-    atuiKernel_NotificationClose(atuiKernel_NotificationElement);
-    return console.log("close");
-  });
-
-  // Text
-  const atuiKernel_NotificationElementText = document.createElement("p");
-  atuiKernel_NotificationElementText.textContent = text;
-
-  // Action buttons
-  if (buttons == "default") {
-    if (type == "normal") {
-      buttons = [];
-    } else if (type == "alert") {
-      buttons = ["Ok", "Annuler"];
-    } else if (type == "caution") {
-      buttons = ["Ok", "Annuler"];
-    } else if (type == "confirmation") {
-      buttons = ["Oui", "Non"];
-    } else if (type == "information") {
-      buttons = ["Ok"];
-    } else if (type == "insertion") {
-      buttons = "insertion";
-    }
-  }
-  if (buttons != "insertion") {
-    for (let counter = 0; counter < buttons.length; counter++) {
-      const atuiKernel_NotificationElementFooterButton = document.createElement("button");
-      atuiKernel_NotificationElementFooterButton.textContent = buttons[counter];
-      atuiKernel_NotificationElementFooterButton.addEventListener("click", function () {
+    // Close button
+    const atuiKernel_NotificationElementHeaderClose = document.createElement("i");
+    atuiKernel_NotificationElementHeaderClose.classList.add("ti", "ti-x");
+    atuiKernel_NotificationElementHeaderClose.addEventListener("click", function () {
         atuiKernel_NotificationClose(atuiKernel_NotificationElement);
-        return actions[counter];
-      });
-      atuiKernel_NotificationElementFooter.appendChild(atuiKernel_NotificationElementFooterButton);
+        return console.log("close");
+    });
+
+    // Text
+    const atuiKernel_NotificationElementText = document.createElement("p");
+    atuiKernel_NotificationElementText.textContent = text;
+
+    // Action buttons
+    if (buttons == "default") {
+        if (type == "normal") {
+            buttons = [];
+        } else if (type == "alert") {
+            buttons = ["Ok", "Annuler"];
+        } else if (type == "caution") {
+            buttons = ["Ok", "Annuler"];
+        } else if (type == "confirmation") {
+            buttons = ["Oui", "Non"];
+        } else if (type == "information") {
+            buttons = ["Ok"];
+        } else if (type == "insertion") {
+            buttons = "insertion";
+        }
     }
-  } else {
-    const atuiKernel_NotificationElementFooterInput = document.createElement("input");
-    atuiKernel_NotificationElementFooterInput.setAttribute("type", "text");
-  }
+    if (buttons != "insertion") {
+        for (let counter = 0; counter < buttons.length; counter++) {
+            const atuiKernel_NotificationElementFooterButton = document.createElement("button");
+            atuiKernel_NotificationElementFooterButton.textContent = buttons[counter];
+            atuiKernel_NotificationElementFooterButton.addEventListener("click", function () {
+                atuiKernel_NotificationClose(atuiKernel_NotificationElement);
+                return actions[counter];
+            });
+            atuiKernel_NotificationElementFooter.appendChild(atuiKernel_NotificationElementFooterButton);
+        }
+    } else {
+        const atuiKernel_NotificationElementFooterInput = document.createElement("input");
+        atuiKernel_NotificationElementFooterInput.setAttribute("type", "text");
+    }
 
-  // Inserting elements in HTML
-  atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTypeImg);
-  atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTitle);
-  atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderClose);
-  atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementHeader);
-  atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementText);
-  atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementFooter);
-  atuiKernel_Notification.appendChild(atuiKernel_NotificationElement);
+    // Inserting elements in HTML
+    atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTypeImg);
+    atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTitle);
+    atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderClose);
+    atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementHeader);
+    atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementText);
+    atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementFooter);
+    atuiKernel_Notification.appendChild(atuiKernel_NotificationElement);
 
-  // Play sound
-  atuiKernel_NotificationElementSound.play();
+    // Play sound
+    atuiKernel_NotificationElementSound.play();
 
-  // Wait and close the notification
-  if (type == "normal") {
-    setTimeout(function () {
-      atuiKernel_NotificationClose(atuiKernel_NotificationElement);
-    }, 5000);
-  }
-}
+    // Wait and close the notification
+    if (type == "normal") {
+        setTimeout(function () {
+            atuiKernel_NotificationClose(atuiKernel_NotificationElement);
+        }, 5000);
+    }
+}*/
 
 function atuiKernel_NotificationClose(element) {
   element.remove();
@@ -510,8 +510,7 @@ const atuiKernel_HeaderFixCarousel = () => {
           slideContent = element;
         }
       });
-    } else
-    {
+    } else {
       slideContentHeight = slideContent.offsetHeight;
     }
 

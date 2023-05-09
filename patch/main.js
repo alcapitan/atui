@@ -15,8 +15,20 @@ atuiKernel_FooterLastedited(9, 5, 2023);
     releaseDate: '2022',
     origin: 'http://ncs.io/SinkingShip',
 
-/*atuiKernel_NotificationDisplay('alert','default',["console.log('ok')"],["console.log('annuler')"],'Maecenas dictum felis tristique lectus imperdiet aliquet. ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, turpis vel efficitur dictum, ipsum tortor pharetra velit, at mollis nisl ligula pellentesque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ');*/
-/*atuiKernel_NotificationCookies();*/
+/*
+atuiKernel_NotificationDisplay('alert','default',["console.log('ok')"],["console.log('annuler')"],'Maecenas dictum felis tristique lectus imperdiet aliquet. ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, turpis vel efficitur dictum, ipsum tortor pharetra velit, at mollis nisl ligula pellentesque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ');
+atuiKernel_NotificationCookies();
+
+atuiKernel_NotificationPush({
+    system: false,
+    icon: 'alert',
+    title: 'autogen notif',
+    text: 'hey yo, you read an autogen notif',
+    buttons: [
+        {option: 'primary', text: 'click here'}
+    ]
+})
+*/
 
 document.getElementById("clipboardButton").addEventListener("click", async function () {
     const text = document.getElementById("clipboardInput").value;

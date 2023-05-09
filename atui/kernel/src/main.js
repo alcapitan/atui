@@ -341,7 +341,7 @@ function atuiKernel_FooterLastedited(day, month, year) {
 
 /* Notifications */
 
-try {
+/*try {
     const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
 } catch {}
 // Types available : normal, alert, caution, confirmation, information, insertion
@@ -359,7 +359,7 @@ function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
         atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src", "atui/kernel/assets/" + type + ".png");
     } else {
         atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
-    }*/
+    }*
 
     // Sound
     const atuiKernel_NotificationElementSound = new Audio("atui/kernel/assets/notification.mp3");
@@ -429,7 +429,7 @@ function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
             atuiKernel_NotificationClose(atuiKernel_NotificationElement);
         }, 5000);
     }
-}
+}*/
 
 function atuiKernel_NotificationClose(element) {
     element.remove();
@@ -510,8 +510,7 @@ const atuiKernel_HeaderFixCarousel = () => {
                     slideContent = element;
                 }
             });
-        }
-        else {
+        } else {
             slideContentHeight = slideContent.offsetHeight;
         }
 

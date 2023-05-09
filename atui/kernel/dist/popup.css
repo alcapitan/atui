@@ -47,7 +47,7 @@
 }
 
 .atuiKernel_PopupContextmenu {
-    z-index: 14;
+    z-index: 15;
 }
 
 .atuiKernel_PopupContextmenu > * {
@@ -150,6 +150,6 @@
 /* Tooltip */
 
 .atuiKernel_PopupTooltip {
-    z-index: 13;
+    z-index: 14;
     padding: 10px;
 }
