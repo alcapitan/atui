@@ -497,15 +497,26 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
 const atuiKernel_HeaderFixCarousel = () => {
   document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
     const headerHeight = header.offsetHeight + 20; // Add default margin
-    let carousel = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
+    let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
+    let slideContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
 
+    let slideContentHeight = 0;
     // To avoid QuerySelectorAll error
     // Header is the first element of its parent because it has position absolute with top 0, so it takes the first carousel of its parent.
-    if (Array.isArray(carousel)) {
-      carousel = carousel[0];
+    if (Array.isArray(slideContent)) {
+      slideContent.forEach((element) => {
+        if (element.offsetHeight > slideContentHeight) {
+          slideContentHeight = element.offsetHeight;
+          slideContent = element;
+        }
+      });
+    } else
+    {
+      slideContentHeight = slideContent.offsetHeight;
     }
 
-    carousel.style.paddingTop = headerHeight + "px";
+    carousel.style.minHeight = `max(25vh, ${slideContentHeight}px)`;
+    slideContent.style.paddingTop = headerHeight + "px";
   });
 };
 atuiKernel_HeaderFixCarousel();

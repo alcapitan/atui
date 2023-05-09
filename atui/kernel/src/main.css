@@ -135,15 +135,11 @@ code {
 
 /* Scrollbar */
 
-/* stylelint-disable no-duplicate-selectors */
-
-:root {
+* {
     /* Firefox syntax */
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--atuiKernel_Color-N90)) hsl(var(--atuiKernel_Color-N60)); /* colors order : thumb, container */
+    scrollbar-color: hsl(var(--atuiKernel_Color-N60)) hsl(var(--atuiKernel_Color-N90)); /* colors order : thumb, container */
 }
-
-/* stylelint-enable no-duplicate-selectors */
 
 ::-webkit-scrollbar {
     background-color: hsl(var(--atuiKernel_Color-N90));

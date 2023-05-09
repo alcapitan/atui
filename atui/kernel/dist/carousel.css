@@ -6,6 +6,7 @@
 .atuiKernel_Carousel {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     width: 100%;
     min-height: 25vh;
@@ -40,4 +41,10 @@
     justify-content: center;
     align-items: flex-end;
     padding: 20px;
+    min-height: -moz-min-content;
+    min-height: min-content;
+    height: available;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
 }
