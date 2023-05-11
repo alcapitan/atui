@@ -343,129 +343,94 @@ function atuiKernel_FooterLastedited(day, month, year) {
 
 function atuiKernel_NotificationPush(options) {
     function systemPush() {
-        return new Notification(options.title, {
-            title: options.title,
-            body: options.text,
-            icon: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${options.icon}.svg`,
+        const notification = new Notification(options.title, {
+            body: options.text || "",
+            icon: options.image
+                ? options.image
+                : options.icon
+                ? `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${options.icon}.svg`
+                : "",
+        });
+        notification.onclick = (event) => {
+            if (options.link && options.link !== "") {
+                event.preventDefault();
+                window.open(options.link);
+            }
+        };
+    }
+
+    function internPush() {
+        // Create the notification element
+        const notification = document.createElement("div");
+        notification.classList.add("atuiKernel_Notification");
+
+        // Create the header element
+        const header = document.createElement("header");
+        let icon;
+        if (options.image) {
+            icon = document.createElement("img");
+            icon.setAttribute("src", options.image);
+        } else if (options.icon) {
+            icon = document.createElement("i");
+            icon.classList.add("ti", `ti-${options.icon}`);
+        }
+        const title = document.createElement("p");
+        title.textContent = options.title;
+        header.appendChild(icon);
+        header.appendChild(title);
+        notification.appendChild(header);
+
+        // Create the section element
+        const section = document.createElement("section");
+        const content = document.createElement("p");
+        content.innerHTML = options.text;
+        section.appendChild(content);
+        notification.appendChild(section);
+
+        // Create the footer element
+        const footer = document.createElement("footer");
+        options.buttons.forEach((button) => {
+            const buttonElement = document.createElement("div");
+            buttonElement.classList.add("atuiKernel_Button", "optionAccent", `option${button.option}`);
+            const buttonTextElement = document.createElement("p");
+            buttonTextElement.textContent = button.text;
+            buttonElement.appendChild(buttonTextElement);
+            footer.appendChild(buttonElement);
+        });
+        notification.appendChild(footer);
+
+        // Display the notification
+        const container = document.querySelector(".atuiKernel_NotificationContainer");
+        container.insertBefore(notification, container.firstChild);
+
+        if (options.close !== false) {
+            setTimeout(() => {
+                notification.remove();
+            }, options.close || 5000);
+        }
+    }
+
+    // Ensure notification permission
+    if (Notification.permission !== "granted") {
+        Notification.requestPermission().then((permission) => {
+            if (permission !== "granted") {
+                return console.error("Notification cannot be displayed because permission has been denied.");
+            }
         });
     }
 
+    // Assert notification options
+    if (!options.title || options.title === "") {
+        return console.error("Notification should have a title.");
+    }
+
     if (options.system) {
-        if (Notification.permission === "granted") {
-            return systemPush();
-        } else if (Notification.permission !== "denied") {
-            Notification.requestPermission().then(systemPush());
-        }
-    }
-}
-
-/*try {
-    const atuiKernel_Notification = document.getElementById("atuiKernel_Notification");
-} catch {}
-// Types available : normal, alert, caution, confirmation, information, insertion
-function atuiKernel_NotificationDisplay(type, buttons, actions, title, text) {
-    // Notification element
-    const atuiKernel_NotificationElement = document.createElement("aside");
-    atuiKernel_NotificationElement.classList.add("atuiKernel_NotificationElement");
-    const atuiKernel_NotificationElementHeader = document.createElement("div");
-    const atuiKernel_NotificationElementFooter = document.createElement("div");
-
-    // Type
-    /* deprecated due to icon source change
-    const atuiKernel_NotificationElementHeaderTypeImg = document.createElement("img");
-    if (type != "normal") {
-        atuiKernel_NotificationElementHeaderTypeImg.setAttribute("src", "atui/kernel/assets/" + type + ".png");
+        systemPush();
     } else {
-        atuiKernel_NotificationElementHeaderTypeImg.style.visibility = "hidden";
-    }*
-
-    // Sound
-    const atuiKernel_NotificationElementSound = new Audio("atui/kernel/assets/notification.mp3");
-
-    // Title
-    const atuiKernel_NotificationElementHeaderTitle = document.createElement("h3");
-    atuiKernel_NotificationElementHeaderTitle.textContent = title;
-
-    // Close button
-    const atuiKernel_NotificationElementHeaderClose = document.createElement("i");
-    atuiKernel_NotificationElementHeaderClose.classList.add("ti", "ti-x");
-    atuiKernel_NotificationElementHeaderClose.addEventListener("click", function () {
-        atuiKernel_NotificationClose(atuiKernel_NotificationElement);
-        return console.log("close");
-    });
-
-    // Text
-    const atuiKernel_NotificationElementText = document.createElement("p");
-    atuiKernel_NotificationElementText.textContent = text;
-
-    // Action buttons
-    if (buttons == "default") {
-        if (type == "normal") {
-            buttons = [];
-        } else if (type == "alert") {
-            buttons = ["Ok", "Annuler"];
-        } else if (type == "caution") {
-            buttons = ["Ok", "Annuler"];
-        } else if (type == "confirmation") {
-            buttons = ["Oui", "Non"];
-        } else if (type == "information") {
-            buttons = ["Ok"];
-        } else if (type == "insertion") {
-            buttons = "insertion";
-        }
+        internPush();
+        const sound = new Audio("atui/kernel/assets/notification.mp3");
+        sound.play();
     }
-    if (buttons != "insertion") {
-        for (let counter = 0; counter < buttons.length; counter++) {
-            const atuiKernel_NotificationElementFooterButton = document.createElement("button");
-            atuiKernel_NotificationElementFooterButton.textContent = buttons[counter];
-            atuiKernel_NotificationElementFooterButton.addEventListener("click", function () {
-                atuiKernel_NotificationClose(atuiKernel_NotificationElement);
-                return actions[counter];
-            });
-            atuiKernel_NotificationElementFooter.appendChild(atuiKernel_NotificationElementFooterButton);
-        }
-    } else {
-        const atuiKernel_NotificationElementFooterInput = document.createElement("input");
-        atuiKernel_NotificationElementFooterInput.setAttribute("type", "text");
-    }
-
-    // Inserting elements in HTML
-    atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTypeImg);
-    atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderTitle);
-    atuiKernel_NotificationElementHeader.appendChild(atuiKernel_NotificationElementHeaderClose);
-    atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementHeader);
-    atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementText);
-    atuiKernel_NotificationElement.appendChild(atuiKernel_NotificationElementFooter);
-    atuiKernel_Notification.appendChild(atuiKernel_NotificationElement);
-
-    // Play sound
-    atuiKernel_NotificationElementSound.play();
-
-    // Wait and close the notification
-    if (type == "normal") {
-        setTimeout(function () {
-            atuiKernel_NotificationClose(atuiKernel_NotificationElement);
-        }, 5000);
-    }
-}*/
-
-function atuiKernel_NotificationClose(element) {
-    element.remove();
-}
-
-function atuiKernel_NotificationCookies() {
-    atuiKernel_NotificationDisplay(
-        "cookies",
-        ["I agree", "I disagree this time", "I disagree definitely", "Read more"],
-        [
-            "console.log('accept')",
-            "console.log('not accept')",
-            "console.log('always not accept')",
-            "console.log('doc')",
-        ],
-        "Accept cookies ?",
-        "This site uses trackers that collect information about you. According to the GDPR, you can express your consent to the use of cookies."
-    );
 }
 
 /* Tabs */

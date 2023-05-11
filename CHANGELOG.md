@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   For color mode, it checks at startup system status then in cookies.
 -   Color scheming now includes danger warning success and info.
 -   Supports scrollbar styling (both Firefox and Webkit syntax).
+-   Come back notification.
 
 ### Changed
 

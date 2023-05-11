@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(9, 5, 2023);
+atuiKernel_FooterLastedited(11, 5, 2023);
 
 /*atuiMediasplayer_Assign({
     player: 'audioplayer2',
@@ -22,13 +22,14 @@ atuiKernel_NotificationCookies();
 
 document.getElementById("pushNotification").addEventListener("click", function () {
     atuiKernel_NotificationPush({
-        system: true,
+        system: false,
         icon: "flask",
+        image: "patch/icons/logo.png",
         title: "autogen notif",
         text: "hey yo, you read an autogen notif",
-        buttons: [{ option: "primary", text: "click here" }],
+        buttons: [{ option: "Filled", text: "click here" }],
         link: "https://alcapitan.github.io/atui/",
-        close: false,
+        close: 5000,
     });
 });
 
