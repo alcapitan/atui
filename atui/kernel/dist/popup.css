@@ -109,14 +109,12 @@
 
 .atuiKernel_PopupGlobalpanel {
     display: block !important;
-    width: auto !important;
+    width: 80% !important;
 }
 
 .atuiKernel_PopupGlobalpanel {
     align-items: normal;
     position: absolute;
-    left: 20px;
-    right: 20px;
     visibility: hidden;
     background-color: hsl(var(--atuiKernel_Color-NFF));
     border-radius: var(--atuiKernel_Borderradius);

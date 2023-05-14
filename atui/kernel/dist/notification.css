@@ -11,6 +11,8 @@
     left: 20%;
     right: 20%;
     z-index: 13;
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
 @media (max-width: 479.98px) /* Smartphones */ {

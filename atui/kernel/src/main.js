@@ -290,55 +290,6 @@ document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
     atuiKernel_PopupSetup(listener);
 });
 
-/* Footer info */
-
-try {
-    const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
-} catch {}
-
-function atuiKernel_FooterLastedited(day, month, year) {
-    /* Warning date not updated */
-    const atuiKernel_FooterInfoDate = new Date();
-    if (
-        (atuiKernel_FooterInfoDate.getDate() != day ||
-            atuiKernel_FooterInfoDate.getMonth() + 1 != month ||
-            atuiKernel_FooterInfoDate.getFullYear() != year) &&
-        atuiKernel_Metadata["in_development"]
-    ) {
-        console.warn("The last modification date isn't up to date. ");
-    }
-
-    /* Based on ATUI */
-    const atuiKernel_FooterInfoBased = document.createElement("a");
-    atuiKernel_FooterInfoBased.setAttribute("href", atuiKernel_Metadata["website"]);
-    atuiKernel_FooterInfoBased.setAttribute("target", "_blank");
-    atuiKernel_FooterInfoBased.innerHTML =
-        "This website uses " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + " . ";
-    atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
-
-    /* Last modification of this website */
-    const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
-    const atuiKernel_FooterInfoLasteditedConvertMonth = [
-        "january",
-        "february",
-        "march",
-        "april",
-        "may",
-        "june",
-        "july",
-        "august",
-        "september",
-        "october",
-        "november",
-        "december",
-    ];
-    month = atuiKernel_FooterInfoLasteditedConvertMonth[month - 1];
-    atuiKernel_FooterInfoLasteditedText.innerHTML = "Latest modification on " + day + " " + month + " " + year + ". ";
-    atuiKernel_FooterInfoLasteditedText.setAttribute("href", "./atui/kernel/about.html");
-    atuiKernel_FooterInfoLasteditedText.setAttribute("target", "_blank");
-    atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText, atuiKernel_FooterInfo.firstChild);
-}
-
 /* Notifications */
 
 function atuiKernel_NotificationPush(options) {
@@ -395,12 +346,20 @@ function atuiKernel_NotificationPush(options) {
             const buttonTextElement = document.createElement("p");
             buttonTextElement.textContent = button.text;
             buttonElement.appendChild(buttonTextElement);
+            buttonElement.addEventListener("click", () => {
+                button.action();
+            });
             footer.appendChild(buttonElement);
         });
         notification.appendChild(footer);
 
         // Display the notification
-        const container = document.querySelector(".atuiKernel_NotificationContainer");
+        let container = document.querySelector(".atuiKernel_NotificationContainer");
+        if (!container) {
+            container = document.createElement("div");
+            container.classList.add("atuiKernel_NotificationContainer");
+            document.body.appendChild(container);
+        }
         container.insertBefore(notification, container.firstChild);
 
         if (options.close !== false) {
@@ -428,10 +387,47 @@ function atuiKernel_NotificationPush(options) {
         systemPush();
     } else {
         internPush();
-        const sound = new Audio("atui/kernel/assets/notification.mp3");
-        sound.play();
+        if (!("sound" in options)) {
+            // Default sound
+            const sound = new Audio("atuiKernel_NotificationSound");
+            sound.play();
+        } else if (options.sound) {
+            // Custom specific sound
+            const sound = new Audio(options.sound);
+            sound.play();
+        }
     }
 }
+let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
+
+/* Patch height superposition issue between header and carousel */
+
+const atuiKernel_HeaderFixCarousel = () => {
+    document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
+        const headerHeight = header.offsetHeight + 20; // Add default margin
+        let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
+        let slideContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
+
+        let slideContentHeight = 0;
+        // To avoid QuerySelectorAll error
+        // Header is the first element of its parent because it has position absolute with top 0, so it takes the first carousel of its parent.
+        if (Array.isArray(slideContent)) {
+            slideContent.forEach((element) => {
+                if (element.offsetHeight > slideContentHeight) {
+                    slideContentHeight = element.offsetHeight;
+                    slideContent = element;
+                }
+            });
+        } else {
+            slideContentHeight = slideContent.offsetHeight;
+        }
+
+        carousel.style.minHeight = `max(25vh, ${slideContentHeight}px)`;
+        slideContent.style.paddingTop = headerHeight + "px";
+    });
+};
+atuiKernel_HeaderFixCarousel();
+window.addEventListener("resize", atuiKernel_HeaderFixCarousel);
 
 /* Tabs */
 
@@ -475,31 +471,51 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
     });
 });
 
-/* Patch height superposition issue between header and carousel */
+/* Footer info */
 
-const atuiKernel_HeaderFixCarousel = () => {
-    document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-        const headerHeight = header.offsetHeight + 20; // Add default margin
-        let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
-        let slideContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
+try {
+    const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
+} catch {}
 
-        let slideContentHeight = 0;
-        // To avoid QuerySelectorAll error
-        // Header is the first element of its parent because it has position absolute with top 0, so it takes the first carousel of its parent.
-        if (Array.isArray(slideContent)) {
-            slideContent.forEach((element) => {
-                if (element.offsetHeight > slideContentHeight) {
-                    slideContentHeight = element.offsetHeight;
-                    slideContent = element;
-                }
-            });
-        } else {
-            slideContentHeight = slideContent.offsetHeight;
-        }
+function atuiKernel_FooterLastedited(day, month, year) {
+    /* Warning date not updated */
+    const atuiKernel_FooterInfoDate = new Date();
+    if (
+        (atuiKernel_FooterInfoDate.getDate() != day ||
+            atuiKernel_FooterInfoDate.getMonth() + 1 != month ||
+            atuiKernel_FooterInfoDate.getFullYear() != year) &&
+        atuiKernel_Metadata["in_development"]
+    ) {
+        console.warn("The last modification date isn't up to date. ");
+    }
 
-        carousel.style.minHeight = `max(25vh, ${slideContentHeight}px)`;
-        slideContent.style.paddingTop = headerHeight + "px";
-    });
-};
-atuiKernel_HeaderFixCarousel();
-window.addEventListener("resize", atuiKernel_HeaderFixCarousel);
+    /* Based on ATUI */
+    const atuiKernel_FooterInfoBased = document.createElement("a");
+    atuiKernel_FooterInfoBased.setAttribute("href", atuiKernel_Metadata["website"]);
+    atuiKernel_FooterInfoBased.setAttribute("target", "_blank");
+    atuiKernel_FooterInfoBased.innerHTML =
+        "This website uses " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + " . ";
+    atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
+
+    /* Last modification of this website */
+    const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
+    const atuiKernel_FooterInfoLasteditedConvertMonth = [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december",
+    ];
+    month = atuiKernel_FooterInfoLasteditedConvertMonth[month - 1];
+    atuiKernel_FooterInfoLasteditedText.innerHTML = "Latest modification on " + day + " " + month + " " + year + ". ";
+    atuiKernel_FooterInfoLasteditedText.setAttribute("href", "./atui/kernel/about.html");
+    atuiKernel_FooterInfoLasteditedText.setAttribute("target", "_blank");
+    atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText, atuiKernel_FooterInfo.firstChild);
+}
