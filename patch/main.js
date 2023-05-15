@@ -42,8 +42,6 @@ document.getElementById("pushNotification").addEventListener("click", function (
             },
         ],
         link: "https://alcapitan.github.io/atui/",
-        close: 5000,
-        sound: null,
     });
 });
 

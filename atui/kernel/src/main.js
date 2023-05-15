@@ -364,40 +364,68 @@ function atuiKernel_NotificationPush(options) {
         container.insertBefore(notification, container.firstChild);
 
         if (options.close !== false) {
+            let mouseOver = false;
+            notification.addEventListener("mouseenter", () => {
+                mouseOver = true;
+            });
+            notification.addEventListener("mouseleave", () => {
+                mouseOver = false;
+            });
+
             setTimeout(() => {
-                notification.remove();
+                if (mouseOver) {
+                    notification.addEventListener("mouseleave", () => {
+                        setTimeout(() => {
+                            notification.remove();
+                        }, 2000);
+                    });
+                } else {
+                    notification.remove();
+                }
             }, options.close || 5000);
         }
     }
 
-    // Ensure notification permission
-    if (Notification.permission !== "granted") {
-        Notification.requestPermission().then((permission) => {
-            if (permission !== "granted") {
-                return console.error("Notification cannot be displayed because permission has been denied.");
+    async function verifyPermission() {
+        if (Notification.permission === "granted") {
+            return true;
+        } else {
+            await Notification.requestPermission();
+            if (Notification.permission === "granted") {
+                return true;
+            } else {
+                return false;
             }
-        });
-    }
-
-    // Assert notification options
-    if (!options.title || options.title === "") {
-        return console.error("Notification should have a title.");
-    }
-
-    if (options.system) {
-        systemPush();
-    } else {
-        internPush();
-        if (!("sound" in options)) {
-            // Default sound
-            const sound = new Audio("atuiKernel_NotificationSound");
-            sound.play();
-        } else if (options.sound) {
-            // Custom specific sound
-            const sound = new Audio(options.sound);
-            sound.play();
         }
     }
+
+    verifyPermission().then((permission) => {
+        // Ensure notification permission is granted
+        if (!permission) {
+            return console.error("Notification cannot be displayed because permission has been denied.");
+        }
+
+        // Assert notification options
+        if (!options.title || options.title === "") {
+            return console.error("Notification should have a title.");
+        }
+
+        // Display the notification
+        if (options.system) {
+            systemPush();
+        } else {
+            internPush();
+            if (!("sound" in options)) {
+                // Default sound
+                const sound = new Audio(atuiKernel_NotificationSound);
+                sound.play();
+            } else if (options.sound) {
+                // Custom specific sound
+                const sound = new Audio(options.sound);
+                sound.play();
+            }
+        }
+    });
 }
 let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
 
