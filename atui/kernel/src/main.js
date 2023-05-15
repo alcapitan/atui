@@ -433,26 +433,15 @@ let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
 
 const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-        const headerHeight = header.offsetHeight + 20; // Add default margin
-        let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
-        let slideContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
+        let carouselContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
 
-        let slideContentHeight = 0;
-        // To avoid QuerySelectorAll error
-        // Header is the first element of its parent because it has position absolute with top 0, so it takes the first carousel of its parent.
-        if (Array.isArray(slideContent)) {
-            slideContent.forEach((element) => {
-                if (element.offsetHeight > slideContentHeight) {
-                    slideContentHeight = element.offsetHeight;
-                    slideContent = element;
-                }
-            });
-        } else {
-            slideContentHeight = slideContent.offsetHeight;
+        if (!Array.isArray(carouselContent)) {
+            carouselContent = [carouselContent];
         }
 
-        carousel.style.minHeight = `max(25vh, ${slideContentHeight}px)`;
-        slideContent.style.paddingTop = headerHeight + "px";
+        carouselContent.forEach((element) => {
+            element.style.marginTop = header.offsetHeight + "px";
+        });
     });
 };
 atuiKernel_HeaderFixCarousel();

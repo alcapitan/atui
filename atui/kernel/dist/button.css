@@ -93,6 +93,12 @@
     height: 42px;
 }
 
+.atuiKernel_Button.optionEmpty,
+.atuiKernel_Button:empty
+/* Necessary duplication otherwise Firefox doesn't work  */ {
+    height: 42px;
+}
+
 /* Filled */
 
 .atuiKernel_Button.optionFilled {
