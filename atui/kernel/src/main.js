@@ -348,6 +348,7 @@ function atuiKernel_NotificationPush(options) {
             buttonElement.appendChild(buttonTextElement);
             buttonElement.addEventListener("click", () => {
                 button.action();
+                notification.remove();
             });
             footer.appendChild(buttonElement);
         });
