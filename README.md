@@ -4,63 +4,63 @@
 
 ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/alcapitan/atui?include_prereleases&label=latest%20release)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsdelivr%20hits)
-![GitHub issues](https://img.shields.io/github/issues-raw/alcapitan/atui)
+![NPM downloads](https://img.shields.io/npm/dm/@alcapitan/atui)
 ![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/4?label=issues%20in%20milestone)
-![GitHub repo size](https://img.shields.io/github/repo-size/alcapitan/atui)
+![GitHub contributors](https://img.shields.io/github/contributors/alcapitan/atui)
 
 ## This library is still under development !
 
-Currently, there is beta versions which you can use, but keep in mind it's still in development !  
-Anyway, you can already contribute to the project and give your opinions !
+Currently, there is only beta versions which you can use, but keep in mind this is still in development !  
+Anyway, you can already contribute to the project and give your opinions to help me in the work !
 
-## Download and use ATUI (with Git)
+## Download and use ATUI
 
-Don't worry, in version 0.4.0 distribution methods will be easy.  
-You should display your website with an VScode extension like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+### By NPM package (recommended)
 
-### With CDN (for users)
+```bash
+npm install @alcapitan/atui
+```
 
-Put this line to your HTML `<head>` :  
-`<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.css" />`
+### By CDN (for those who don't want to use NPM)
 
-Put this line at the end of `<body>` in your HTML :  
-`<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui/kernel/main.js"></script>`
+Put this line in the HTML tag `<head>` :
+
+```html
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4/atui/kernel/dist/dist.css"
+/>
+```
+
+Put this line at the end in the HTML tag `<body>` :
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui@0.4/kernel/dist/dist.js"></script>
+```
+
 Then, change the links above for reach extensions files.
-
-### With release package (for users)
-
-[Download the latest release.](https://github.com/alcapitan/atui/releases)  
-After downloading ATUI, copy the `/atui` folder and paste it into your website root.
-
-### With git (for developers)
-
-`git clone https://github.com/alcapitan/atui.git`
 
 ## Contributing
 
 ATUI is an open-source project that invites collaboration.  
 You can help in the development of the project even without coding ! So you can test ATUI, report bugs, give your opinions and ideas for improvement, and more...  
 Before contributing, please read [CONTRIBUTING.md](https://alcapitan.github.io/atui/CONTRIBUTING.md).
-All your reports must be done in [Issues on GitHub](https://github.com/alcapitan/atui/issues). The road map is also in the Issues page.
+All your reports must be done in [Issues on GitHub](https://github.com/alcapitan/atui/issues). The roadmap is also in the Issues page.
+
+Besides, you will have to preview ATUI on your computer, you must preview ATUI in HTTP mode using an VScode extension like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). This is because some JavaScript functionalities of ATUI cannot work in local file mode.  
+By the way, as ATUI use NPM, you will have to install and update NPM dependencies regularly (about once a week).
 
 ## What is this project in a nutshell ?
 
 ### The goals of ATUI
 
--   to have optimal performance (thinking for those with old devices and low internet speeds)
--   to be simple to understand and use
--   to be always reliable
--   to have an active development
--   support stable versions for a long time (some years)
+-   To be as understandable and simple to use as possible for beginners.
+-   To provide useful tools to make websites faster to avoid wasting time on tedious things
 
 ### Tree structure explanation
 
--   The root `/` contains HTML files and some config and meta files.
--   The folder `/atui` contains `kernel` (ATUI core files) and some [extensions](#extensions).
--   The folder `/patch` contains your files like CSS, JS, icons, illustrations, and so on.
--   The folders `*/medias` contains all files about someone except CSS and JS files.
--   The files `*/sources.txt` contains all links to the icons and other medias.
--   The folder `/.github` is the stuff created by GitHub to store issue templates for example.
+-   In the `/atui` folder, you will find the source code of ATUI in the `kernel` folder. As well as the officials extensions in the others folders.
 
 ## Extensions
 
@@ -74,19 +74,15 @@ Anyone can create an extension, but you have to respect extension coding standar
 
 ## License & Use of external service
 
-Project released under [GNU General Public License](https://alcapitan.github.io/atui/LICENSE.md).
+This project is released under [GNU General Public License](https://alcapitan.github.io/atui/LICENSE.md).
 
-### Softwares
+### Thanks to some services which I use
 
--   Code editor : [Visual Studio Code](https://code.visualstudio.com).
--   Version control : [Git](https://git-scm.com).
-
-### Websites
-
--   Know the compatibility of web browsers about different things : [Caniuse](https://caniuse.com).
--   Icons : [Icons8](https://icons8.com).
+-   Know the compatibility of web browsers about something : [Caniuse](https://caniuse.com).
+-   Icons : [Tabler Icons](https://tabler-icons.io/).
+-   Documentations : [MDN Web Docs](https://developer.mozilla.org) & [W3Schools](https://www.w3schools.com).
 -   Illustrations : [Pexels](https://pexels.com).
 -   Performance measurement and advices for improvement : [Google Insights](https://developers.google.com/speed/pagespeed/insights).
 -   Checking HTML code : [W3C Markup Validation Service](https://validator.w3.org).
 -   Checking CSS code : [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator).
--   And a lot of more...
+-   As well as other notable websites, NPM dependencies and even some Instagram accounts...

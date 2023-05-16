@@ -433,12 +433,14 @@ let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
 
 const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
+        let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
         let carouselContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
 
         if (!Array.isArray(carouselContent)) {
             carouselContent = [carouselContent];
         }
 
+        carousel.style.minHeight = header.offsetHeight * 2 + "px";
         carouselContent.forEach((element) => {
             element.style.marginTop = header.offsetHeight + "px";
         });
