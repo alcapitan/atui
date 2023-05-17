@@ -3,10 +3,10 @@
 <p align="center"><i>Front-end library to build your website easier.</i></p>
 
 ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/alcapitan/atui?include_prereleases&label=latest%20release)
-![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsdelivr%20hits)
-![NPM downloads](https://img.shields.io/npm/dm/@alcapitan/atui)
+![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsDelivr%20hits)
+![npm](https://img.shields.io/npm/dw/@alcapitan/atui?label=NPM%20downloads)
 ![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/4?label=issues%20in%20milestone)
-![GitHub contributors](https://img.shields.io/github/contributors/alcapitan/atui)
+![GitHub contributors](https://img.shields.io/github/contributors/alcapitan/atui?label=GitHub%20contributors)
 
 ## This library is still under development !
 
