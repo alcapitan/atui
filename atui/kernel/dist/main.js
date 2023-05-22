@@ -432,17 +432,19 @@ let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
 /* Patch height superposition issue between header and carousel */
 
 const atuiKernel_HeaderFixCarousel = () => {
-  document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-    let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
-    let carouselContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
+  document.querySelectorAll(".atuiKernel_Carousel").forEach((carousel) => {
+    if (!carousel.querySelector(".atuiKernel_Header")) {
+      return;
+    }
 
+    const headerHeight = carousel.querySelector(".atuiKernel_Header").offsetHeight;
+    let carouselContent = findElement(carousel, ".atuiKernel_Carousel > div > div > div", carousel);
     if (!Array.isArray(carouselContent)) {
       carouselContent = [carouselContent];
     }
 
-    carousel.style.minHeight = header.offsetHeight * 2 + "px";
     carouselContent.forEach((element) => {
-      element.style.marginTop = header.offsetHeight + "px";
+      element.style.paddingTop = headerHeight + 20 + "px"; // Padding is preferred for better background gradient.
     });
   });
 };
