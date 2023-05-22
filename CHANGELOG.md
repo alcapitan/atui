@@ -2,69 +2,85 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
 ### Added
 
--   Add list.
--   Add spinner.
--   Add quote for paragraph.
--   Diversify shadow styles.
--   Setup NPM.
--   Setup dist files.
--   Icon color adapt according to the color theme.
--   Add clipboard JS functions.
--   Add pill option style for inputs.
--   Add share JS function.
--   Set rich links on head tag in html.
--   Display error for broken media link on Mediaplayer.
--   Add verify link JS function in kernel.
--   Add Fonts Monospace CSS variable.
--   Add pill, tinted, grouped options for Button.
--   For color mode, it checks at startup system status then in cookies.
--   Color scheming now includes danger warning success and info.
--   Supports scrollbar styling (both Firefox and Webkit syntax).
--   Come back notification with more feats.
+-   Create SectionList element.
+-   Create Spinner element.
+-   Add quote for Paragraph.
+-   Create practical JS functions :
+    -   Clipboard API.
+    -   Share API.
+    -   Verify link if it responds with 200.
+-   Some style refinements :
+    -   Add font monospace CSS variable.
+    -   Set up scrollbar styling with both Firefox and Webkit syntax.
+    -   Set up font-size guidelines.
+-   Set up rich links on the HTML `<head>` tag.
+-   Display an error for broken media links in Mediaplayer.
 
 ### Changed
 
--   Replace id by class for tools (footer).
--   Rewrite HTML structure of accordion.
--   Change style for a tag.
--   Rename SectionText into SectionParagraph.
--   Improve animation on hover and active for button.
--   Add gradient for section content split bar.
--   Set up font-size guidelines.
--   Replace HTML for Markdown links.
--   Change files architecture.
--   Replace legacy icons by Tabler icons.
--   Add light gray color in inputs.
--   Add light accent color in Pagination Text.
--   Adapt shadows to dark mode.
--   Rewrite Button.
--   Rewrite color mode script. There is a better flexibility and management for toggle button and color variables.
--   Rewrite color scheming script. There are new variables and operation.
--   Entirely rewrite popup management script. Much more flexible and simpler to use (HTML structure, JS call function, possibilities of content).
--   Move Global Panel from Navigation to Popup & Context Menu from Tools to Popup. So, these components has been renamed.
--   ToolsInfotip has been moved and renamed to PopupTooltip. This component has been completly rewritten with the same improvements as Contextmenu.
--   Rewrite Carousel. It's more flexible and supports several slides now.
--   Colors are more adapted (less bright) on dark mode.
--   Rewrite Header. There are now separators, specific displaying, style options, proper levels and better stability and ergonomics.
--   Light style refinements for search panel.
+-   Completely rewrite Notification element :
+    -   Easier to use, more flexible, and more stable.
+    -   Support system notifications.
+    -   Check notification permission.
+    -   Allow custom sound.
+-   Completely rewrite Display Mode script :
+    -   Check the system status at startup, then in cookies.
+    -   Icon color adapts to the display mode.
+-   Completely rewrite color CSS variables management :
+    -   Include danger, warning, success, and info.
+    -   Manage CSS variables entirely without JavaScript.
+    -   Use less bright colors for dark mode.
+-   Set up NPM :
+    -   Reorganize file architecture.
+    -   Fix some JS bugs highlighted by NPM compilation.
+    -   Replace legacy icons with Tabler icons.
+-   Completely rewrite popup script :
+    -   More flexible and easier to use (HTML structure, JS call function, content possibilities).
+    -   Completely rewrite ToolsInfotip and rename it to PopupTooltip.
+    -   Completely rewrite Contextmenu, move and rename it from Tools to Popup.
+    -   Move Global Panel from Navigation to Popup.
+-   Completely rewrite Header :
+    -   Add separators.
+    -   Add option styles.
+    -   Create proper levels.
+    -   Easier to use, more flexible, and more stable.
+-   Completely rewrite Carousel :
+    -   More flexible.
+    -   Support multiple slides.
+-   Completely rewrite Buttons :
+    -   Improve animations on hover and active states.
+    -   Add pill, tinted, grouped options for Button.
+    -   Buttons can be based on any HTML tag.
+-   Some style refinements :
+    -   Add pill option style for HTML inputs.
+    -   Set a light gray background color for HTML inputs.
+    -   Change the default CSS style for `<a>` tags.
+    -   Set a light accent color to Pagination Text.
+    -   Make light style refinements for the search panel.
+    -   Set a gradient color for the section content split bar.
+-   Improve shadows :
+    -   Diversify styles.
+    -   Adapt shadows to dark mode.
+-   Replace id with class for tools in Footer.
+-   Rename SectionText to SectionParagraph.
+-   Rewrite the HTML structure of Accordion.
+-   Replace HTML links with Markdown links.
 
 ### Fixed
 
--   Fix wrap text due to icon in Boxes.
--   Fix some JS possible bugs.
--   Better color contrast on Card Overlay.
+-   Fix text wrapping due to icons in Boxes.
+-   Improve color contrast on Card Overlay.
 
 ### Removed
 
--   Remove scrolltop (will be replaced later).
--   Fix some JS bugs highlighted by NPM compilation.
+-   Remove Scrolltop (will be replaced later).
 
 ## [0.3.2] - 2023-04-20
 
