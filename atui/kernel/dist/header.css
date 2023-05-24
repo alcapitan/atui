@@ -67,7 +67,7 @@
 
 /* Options */
 
-.atuiKernel_Carousel .atuiKernel_Header {
+.atuiKernel_Header.optionCarousel {
     position: absolute;
     background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     -webkit-backdrop-filter: var(--atuiKernel_Blur);

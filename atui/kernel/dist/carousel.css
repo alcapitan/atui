@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_Carousel > div {
+.atuiKernel_Carousel {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -13,14 +13,14 @@
     max-height: 75vh;
 }
 
-.atuiKernel_Carousel > div > div /* Slide */ {
+.atuiKernel_Carousel > div /* Slide */ {
     position: relative;
     flex: 0 0 100%;
     scroll-snap-align: center;
     background-color: hsl(var(--atuiKernel_Color-N10));
 }
 
-.atuiKernel_Carousel > div > div > img /* Illustration in slide */ {
+.atuiKernel_Carousel > div > img /* Illustration in slide */ {
     display: block;
     -o-object-fit: cover;
        object-fit: cover;
@@ -30,7 +30,7 @@
     height: 100%;
 }
 
-.atuiKernel_Carousel > div > div > div /* Caption in slide */ {
+.atuiKernel_Carousel > div > div /* Caption in slide */ {
     position: absolute;
     top: 0;
     right: 0;
@@ -47,4 +47,5 @@
     height: -webkit-fill-available;
     height: -moz-available;
     height: stretch;
+    box-sizing: border-box;
 }
