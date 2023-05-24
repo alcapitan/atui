@@ -174,8 +174,8 @@ function atuiKernel_ColoraccentMetatag() {
     document.head.appendChild(metaTag);
   }
   metaTag.setAttribute(
-  "content",
-  `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`
+    "content",
+    `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`
   );
 }
 

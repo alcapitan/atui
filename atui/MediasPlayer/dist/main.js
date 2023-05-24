@@ -19,9 +19,9 @@ const atuiMediasplayer_Metadata = {
 document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
   button.addEventListener("click", function () {
     const player = findElement(
-    this,
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+      this,
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
     );
     const media = player.querySelector("audio, video");
     media.pause();
@@ -91,12 +91,12 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
     let media;
     if (this.getAttribute("data-mp-target") !== null) {
       media = document.querySelector(
-      `${this.getAttribute("data-mp-target")} audio, ${this.getAttribute("data-mp-target")} video`
+        `${this.getAttribute("data-mp-target")} audio, ${this.getAttribute("data-mp-target")} video`
       );
       button = findElement(
-      media,
-      ".atuiMediasplayer_Run",
-      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+        media,
+        ".atuiMediasplayer_Run",
+        ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
       );
       if (this.getAttribute("data-mp-assign") !== null) {
         const data = JSON.parse(this.getAttribute("data-mp-assign"));
@@ -109,9 +109,9 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
     if (media.paused === true) {
       stopAllMedia();
       const player = findElement(
-      media,
-      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+        media,
+        ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
+        ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
       );
       player.querySelectorAll(".atuiKernel_SectionBox.optionAlert").forEach((alertBox) => {
         alertBox.remove();
@@ -199,9 +199,9 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
 document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar) => {
   progressbar.addEventListener("click", (event) => {
     const media = findElement(
-    progressbar,
-    "audio, video",
-    ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+      progressbar,
+      "audio, video",
+      ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
     );
     const percent = event.offsetX / progressbar.offsetWidth * 100;
     media.currentTime = media.duration * percent / 100;

@@ -39,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Use less bright colors for dark mode.
 -   Set up NPM :
     -   Reorganize file architecture.
-    -   Fix some JS bugs highlighted by NPM compilation.
+    -   Fix JS bugs raise by 'use strict' mode.
     -   Replace legacy icons with Tabler icons.
 -   Completely rewrite popup script :
     -   More flexible and easier to use (HTML structure, JS call function, content possibilities).
