@@ -36,6 +36,7 @@
         "stylelint:check:ss": "stylelint atui/SearchService/src/*.css --cache",
         "htmlhint": "htmlhint **/*.html",
         "commitlint": "commitlint",
+        "commit": "commit",
         "check": "npm-run-all cspell:* prettier:check:* stylelint:check:* eslint:check:*",
         "build": "npm-run-all cspell:* prettier:* stylelint:* eslint:* postcss:* babel:* esbuild:*"
     },
@@ -64,6 +65,7 @@
         "@babel/preset-env": "^7.21.5",
         "@commitlint/cli": "^17.6.3",
         "@commitlint/config-conventional": "^17.6.3",
+        "@commitlint/prompt-cli": "^17.6.3",
         "autoprefixer": "^10.4.14",
         "cspell": "^6.31.1",
         "esbuild": "^0.17.19",
