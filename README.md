@@ -29,14 +29,14 @@ Put this line in the HTML tag `<head>` :
 <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4/atui/kernel/dist/dist.css"
+    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.0-rc/atui/kernel/dist/dist.css"
 />
 ```
 
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui@0.4/kernel/dist/dist.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui@0.4.0-rc/kernel/dist/dist.js"></script>
 ```
 
 Then, change the links above for reach extensions files.

@@ -1,6 +1,6 @@
 {
     "name": "atui",
-    "version": "0.4.0",
+    "version": "0.4.0-rc",
     "description": "Front-end library to build your website easier.",
     "main": "index.html",
     "scripts": {
