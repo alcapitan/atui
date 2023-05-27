@@ -1,5 +1,5 @@
 /*!
- * ATUI v0.4.0-rc (https://github.com/alcapitan/atui)
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
@@ -8,7 +8,7 @@
 const atuiSearchservices_Metadata = {
     name: "Search Service",
     author: "alcapitan (on GitHub)",
-    version: "v0.4.0-rc",
+    version: "v0.4.0",
     website: "https://github.com/alcapitan/atui",
     in_development: false,
 };
