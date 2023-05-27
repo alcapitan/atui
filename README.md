@@ -4,7 +4,7 @@
 
 ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/alcapitan/atui?include_prereleases&label=latest%20release)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsDelivr%20hits)
-![npm](https://img.shields.io/npm/dw/@alcapitan/atui?label=NPM%20downloads)
+![npm](https://img.shields.io/npm/dm/@alcapitan/atui?label=NPM%20downloads)
 ![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/4?label=issues%20in%20milestone)
 ![GitHub contributors](https://img.shields.io/github/contributors/alcapitan/atui?label=GitHub%20contributors)
 
@@ -36,7 +36,7 @@ Put this line in the HTML tag `<head>` :
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui/atui@0.4.0-rc/kernel/dist/dist.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.0-rc/atui/kernel/dist/dist.js"></script>
 ```
 
 Then, change the links above for reach extensions files.

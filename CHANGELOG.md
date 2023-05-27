@@ -44,7 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Fix JS bugs raise by 'use strict' mode.
     -   Replace legacy icons with Tabler icons.
     -   Lint, format, verify, and minify HTML, CSS and JS files.
-    -   Check code and commit when committing.
+    -   Check code when committing.
+    -   Make ATUI available as a NPM package.
 -   Completely rewrite popup script :
     -   More flexible and easier to use (HTML structure, JS call function, content possibilities).
     -   Completely rewrite ToolsInfotip and rename it to PopupTooltip.
