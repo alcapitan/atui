@@ -3,27 +3,2477 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@import url("./accordion.css");
-@import url("./box.css");
-@import url("./button.css");
-@import url("./cards.css");
-@import url("./carousel.css");
-@import url("./color.css");
-@import url("./contacts.css");
-@import url("./download.css");
-@import url("./footer.css");
-@import url("./grid.css");
-@import url("./header.css");
-@import url("./image.css");
-@import url("./input.css");
-@import url("./navigation.css");
-@import url("./notification.css");
-@import url("./pagination.css");
-@import url("./paragraph.css");
-@import url("./popup.css");
-@import url("./section.css");
-@import url("./table.css");
-@import url("./tabs.css");
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionAccordion {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px hsl(0, 0%, 50%) solid;
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    overflow: hidden;
+}
+
+.atuiKernel_SectionAccordion > header {
+    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-N80));
+    padding: 0 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.atuiKernel_SectionAccordion > header * {
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+}
+
+.atuiKernel_SectionAccordion > header h3 {
+    flex: 1;
+}
+
+.atuiKernel_SectionAccordion > header i, .atuiKernel_SectionAccordion > header img {
+    width: 35px;
+    height: 35px;
+    flex: 0;
+    margin-left: 10px;
+    font-size: 35px;
+}
+
+.atuiKernel_SectionAccordion > section {
+    padding: 15px;
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    border-top: 1px hsl(0, 0%, 50%) solid;
+    border-top: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    display: none;
+}
+
+.atuiKernel_SectionAccordion > section * {
+    margin: 0;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionBox {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 15px;
+    border: 1px hsl(0, 0%, 50%) solid;
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.atuiKernel_SectionBox * {
+    margin: 0;
+}
+
+.atuiKernel_SectionBox > i, .atuiKernel_SectionBox > img {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+}
+
+.atuiKernel_SectionBox.optionAccent {
+    border-color: hsl(14, 100%, 50%);
+    border-color: hsl(var(--atuiKernel_Color-A50));
+    background-color: hsl(14, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-A90));
+}
+
+.atuiKernel_SectionBox.optionAccent * {
+    color: hsl(14, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_SectionBox.optionAlert {
+    border-color: hsl(354, 100%, 50%);
+    border-color: hsl(var(--atuiKernel_Color-D50));
+    background-color: hsl(354, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-D90));
+}
+
+.atuiKernel_SectionBox.optionAlert * {
+    color: hsl(354, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-D20));
+}
+
+.atuiKernel_SectionBox.optionWarning {
+    border-color: hsl(45, 100%, 50%);
+    border-color: hsl(var(--atuiKernel_Color-W50));
+    background-color: hsl(45, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-W90));
+}
+
+.atuiKernel_SectionBox.optionWarning * {
+    color: hsl(45, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-W20));
+}
+
+.atuiKernel_SectionBox.optionSuccess {
+    border-color: hsl(152, 100%, 50%);
+    border-color: hsl(var(--atuiKernel_Color-S50));
+    background-color: hsl(152, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-S90));
+}
+
+.atuiKernel_SectionBox.optionSuccess * {
+    color: hsl(152, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-S20));
+}
+
+.atuiKernel_SectionBox.optionInfo {
+    border-color: hsl(190, 100%, 50%);
+    border-color: hsl(var(--atuiKernel_Color-I50));
+    background-color: hsl(190, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-I90));
+}
+
+.atuiKernel_SectionBox.optionInfo * {
+    color: hsl(190, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-I20));
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_Button {
+    -webkit-text-decoration: none !important;
+    text-decoration: none !important;
+}
+
+.atuiKernel_Button {
+    margin: 10px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.atuiKernel_Button,
+.atuiKernel_Button * {
+    font-size: 1rem;
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_Button * {
+    margin: 0;
+}
+
+.atuiKernel_Button.optionAccent,
+.atuiKernel_Button.optionAccent * {
+    color: hsl(14, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_Button i, .atuiKernel_Button img {
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
+}
+
+.atuiKernel_Button hr {
+    border: 0;
+    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(var(--atuiKernel_Color-N00));
+    width: 1px;
+    height: 1em;
+}
+
+.atuiKernel_Button.optionAccent hr {
+    background-color: hsl(14, 100%, 20%);
+    background-color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_Button:not(.optionDisabled):not(:disabled):hover {
+    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Button.optionAccent:not(.optionDisabled):not(:disabled):hover {
+    background-color: hsl(14, 100%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-A80));
+}
+
+.atuiKernel_Button:not(.optionDisabled):not(:disabled):active {
+    background-color: hsl(0, 0%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-N60));
+}
+
+.atuiKernel_Button.optionAccent:not(.optionDisabled):not(:disabled):active {
+    background-color: hsl(14, 100%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-A60));
+}
+
+/* Disabled */
+
+.atuiKernel_Button:disabled {
+    opacity: 0.5;
+}
+
+.atuiKernel_Button.optionDisabled {
+    opacity: 0.5;
+}
+
+/* Pill */
+
+.atuiKernel_Button.optionPill {
+    border-radius: 21px;
+}
+
+/* Empty */
+
+.atuiKernel_Button:not(:has(*)) {
+    height: 42px;
+}
+
+.atuiKernel_Button.optionEmpty,
+.atuiKernel_Button:empty
+/* Necessary duplication otherwise Firefox doesn't work  */ {
+    height: 42px;
+}
+
+/* Filled */
+
+.atuiKernel_Button.optionFilled {
+    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(var(--atuiKernel_Color-N00));
+    color: hsl(0, 0%, 100%);
+    color: hsl(var(--atuiKernel_Color-NFF));
+}
+
+.atuiKernel_Button.optionAccent.optionFilled {
+    background-color: hsl(14, 100%, 40%);
+    background-color: hsl(var(--atuiKernel_Color-A40));
+}
+
+.atuiKernel_Button.optionFilled,
+.atuiKernel_Button.optionFilled * {
+    color: hsl(0, 0%, 100%);
+    color: hsl(var(--atuiKernel_Color-NFF));
+}
+
+.atuiKernel_Button.optionFilled:not(.optionDisabled):not(:disabled):hover {
+    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(var(--atuiKernel_Color-N20));
+}
+
+.atuiKernel_Button.optionAccent.optionFilled:not(.optionDisabled):not(:disabled):hover {
+    background-color: hsl(14, 100%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-A60));
+}
+
+.atuiKernel_Button.optionFilled:not(.optionDisabled):not(:disabled):active {
+    background-color: hsl(0, 0%, 40%);
+    background-color: hsl(var(--atuiKernel_Color-N40));
+}
+
+.atuiKernel_Button.optionAccent.optionFilled:not(.optionDisabled):not(:disabled):active {
+    background-color: hsl(14, 100%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-A80));
+}
+
+/* Tinted */
+
+.atuiKernel_Button.optionTinted {
+    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Button.optionAccent.optionTinted {
+    background-color: hsl(14, 100%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-A80));
+}
+
+.atuiKernel_Button.optionAccent.optionTinted,
+.atuiKernel_Button.optionAccent.optionTinted * {
+    color: hsl(14, 100%, 20%);
+    color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_Button.optionTinted:not(.optionDisabled):not(:disabled):hover {
+    background-color: hsl(0, 0%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-N60));
+}
+
+.atuiKernel_Button.optionAccent.optionTinted:not(.optionDisabled):not(:disabled):hover {
+    background-color: hsl(14, 100%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-A60));
+}
+
+.atuiKernel_Button.optionTinted:not(.optionDisabled):not(:disabled):active {
+    background-color: hsl(0, 0%, 40%);
+    background-color: hsl(var(--atuiKernel_Color-N40));
+}
+
+.atuiKernel_Button.optionAccent.optionTinted:not(.optionDisabled):not(:disabled):active {
+    background-color: hsl(14, 100%, 40%);
+    background-color: hsl(var(--atuiKernel_Color-A40));
+}
+
+/* Outlined */
+
+.atuiKernel_Button.optionOutlined {
+    border: 2px solid hsl(0, 0%, 0%);
+    border: 2px solid hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_Button.optionAccent.optionOutlined {
+    border-color: hsl(14, 100%, 40%);
+    border-color: hsl(var(--atuiKernel_Color-A40));
+}
+
+.atuiKernel_Button.optionOutlined:not(.optionDisabled):not(:disabled):hover {
+    border-color: hsl(0, 0%, 20%);
+    border-color: hsl(var(--atuiKernel_Color-N20));
+}
+
+.atuiKernel_Button.optionAccent.optionOutlined:not(.optionDisabled):not(:disabled):hover {
+    border-color: hsl(14, 100%, 60%);
+    border-color: hsl(var(--atuiKernel_Color-A60));
+}
+
+.atuiKernel_Button.optionOutlined:not(.optionDisabled):not(:disabled):active {
+    border-color: hsl(0, 0%, 40%);
+    border-color: hsl(var(--atuiKernel_Color-N40));
+}
+
+.atuiKernel_Button.optionAccent.optionOutlined:not(.optionDisabled):not(:disabled):active {
+    border-color: hsl(14, 100%, 80%);
+    border-color: hsl(var(--atuiKernel_Color-A80));
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionCard
+/* Container */ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.atuiKernel_SectionCard article
+/* Elements */ {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    overflow: hidden;
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    border: 1px hsl(0, 0%, 50%) solid;
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.atuiKernel_SectionCard article > div[class="image"] img
+/* Images */ {
+    width: 100%;
+}
+
+.atuiKernel_SectionCard article > div[class="text"] > h3,.atuiKernel_SectionCard article > div[class="text"] > p
+/* Texts */ {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.atuiKernel_SectionCard article > div[class="text"] > h3
+/* Titles */ {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_SectionCard article > div[class="text"] > p
+/* Paragraphs */ {
+    text-align: justify;
+}
+
+/* Responsive */
+
+@media (min-width: 1024px) /* Computers */ {
+    .atuiKernel_SectionCard article {
+        width: calc(33% - 5px);
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1023.98px) /* Tablets */ {
+    .atuiKernel_SectionCard article {
+        width: calc(50% - 5px);
+    }
+}
+
+@media (max-width: 479.98px) /* Smartphones */ {
+    .atuiKernel_SectionCard {
+        flex-direction: column;
+    }
+
+    .atuiKernel_SectionCard article {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+/* Standard */
+
+.atuiKernel_SectionCard.optionStandard article > div[class="image"] img
+/* Image */ {
+    margin: 10px;
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    width: calc(100% - 20px);
+}
+
+/* Contrast */
+
+.atuiKernel_SectionCard.optionContrast article > div[class="image"]
+/* Image container */ {
+    display: flex;
+    border-bottom: 1px hsl(0, 0%, 50%) solid;
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+}
+
+.atuiKernel_SectionCard.optionContrast article > div[class="text"] > h3
+/* Title */ {
+    border-bottom: 1px hsl(0, 0%, 50%) solid;
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-N80));
+}
+
+/* Overlay */
+
+.atuiKernel_SectionCard.optionOverlay article {
+    background-color: transparent;
+}
+
+.atuiKernel_SectionCard.optionOverlay article > div[class="image"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.atuiKernel_SectionCard.optionOverlay article > div[class="image"] img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.atuiKernel_SectionCard.optionOverlay article > div[class="text"] {
+    background: linear-gradient(
+        to top,
+        hsla(0, 0%, 90%, 0.7) 50%,
+        hsla(0, 0%, 90%, 0.4) 100%
+    );
+    background: linear-gradient(
+        to top,
+        hsl(var(--atuiKernel_Color-N90) / 70%) 50%,
+        hsl(var(--atuiKernel_Color-N90) / 40%) 100%
+    );
+    padding-top: 30%;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_Carousel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    min-height: 25vh;
+    max-height: 75vh;
+}
+
+.atuiKernel_Carousel > div /* Slide */ {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    background-color: hsl(0, 0%, 10%);
+    background-color: hsl(var(--atuiKernel_Color-N10));
+}
+
+.atuiKernel_Carousel > div > img /* Illustration in slide */ {
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.atuiKernel_Carousel > div > div /* Caption in slide */ {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, hsla(0, 0%, 90%, 0.6) 50%, transparent 100%);
+    background: linear-gradient(to top, hsl(var(--atuiKernel_Color-N90) / 60%) 50%, transparent 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    min-height: -moz-min-content;
+    min-height: min-content;
+    height: available;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
+    box-sizing: border-box;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/*
+
+There are some inspirations coming from Bootstrap by Twitter.
+Find the documentation on color management here : 
+https://getbootstrap.com/docs/5.3/customize/color-modes/
+
+*/
+
+:root {
+    --atuiKernel_Color-Accent: 14;
+    --atuiKernel_Color-Danger: 354;
+    --atuiKernel_Color-Warning: 45;
+    --atuiKernel_Color-Success: 152;
+    --atuiKernel_Color-Info: 190;
+}
+
+:root,
+[data-atui-colormode="light"] {
+    color-scheme: light;
+
+    --atuiKernel_Color-N00: 0 0% 0%;
+    --atuiKernel_Color-N10: 0 0% 10%;
+    --atuiKernel_Color-N20: 0 0% 20%;
+    --atuiKernel_Color-N30: 0 0% 30%;
+    --atuiKernel_Color-N40: 0 0% 40%;
+    --atuiKernel_Color-N50: 0 0% 50%;
+    --atuiKernel_Color-N60: 0 0% 60%;
+    --atuiKernel_Color-N70: 0 0% 70%;
+    --atuiKernel_Color-N80: 0 0% 80%;
+    --atuiKernel_Color-N90: 0 0% 90%;
+    --atuiKernel_Color-NFF: 0 0% 100%;
+    --atuiKernel_Color-A00: var(--atuiKernel_Color-Accent) 100% 0%;
+    --atuiKernel_Color-A10: var(--atuiKernel_Color-Accent) 100% 10%;
+    --atuiKernel_Color-A20: var(--atuiKernel_Color-Accent) 100% 20%;
+    --atuiKernel_Color-A30: var(--atuiKernel_Color-Accent) 100% 30%;
+    --atuiKernel_Color-A40: var(--atuiKernel_Color-Accent) 100% 40%;
+    --atuiKernel_Color-A50: var(--atuiKernel_Color-Accent) 100% 50%;
+    --atuiKernel_Color-A60: var(--atuiKernel_Color-Accent) 100% 60%;
+    --atuiKernel_Color-A70: var(--atuiKernel_Color-Accent) 100% 70%;
+    --atuiKernel_Color-A80: var(--atuiKernel_Color-Accent) 100% 80%;
+    --atuiKernel_Color-A90: var(--atuiKernel_Color-Accent) 100% 90%;
+    --atuiKernel_Color-AFF: var(--atuiKernel_Color-Accent) 100% 100%;
+    --atuiKernel_Color-D00: var(--atuiKernel_Color-Danger) 100% 0%;
+    --atuiKernel_Color-D10: var(--atuiKernel_Color-Danger) 100% 10%;
+    --atuiKernel_Color-D20: var(--atuiKernel_Color-Danger) 100% 20%;
+    --atuiKernel_Color-D30: var(--atuiKernel_Color-Danger) 100% 30%;
+    --atuiKernel_Color-D40: var(--atuiKernel_Color-Danger) 100% 40%;
+    --atuiKernel_Color-D50: var(--atuiKernel_Color-Danger) 100% 50%;
+    --atuiKernel_Color-D60: var(--atuiKernel_Color-Danger) 100% 60%;
+    --atuiKernel_Color-D70: var(--atuiKernel_Color-Danger) 100% 70%;
+    --atuiKernel_Color-D80: var(--atuiKernel_Color-Danger) 100% 80%;
+    --atuiKernel_Color-D90: var(--atuiKernel_Color-Danger) 100% 90%;
+    --atuiKernel_Color-DFF: var(--atuiKernel_Color-Danger) 100% 100%;
+    --atuiKernel_Color-W00: var(--atuiKernel_Color-Warning) 100% 0%;
+    --atuiKernel_Color-W10: var(--atuiKernel_Color-Warning) 100% 10%;
+    --atuiKernel_Color-W20: var(--atuiKernel_Color-Warning) 100% 20%;
+    --atuiKernel_Color-W30: var(--atuiKernel_Color-Warning) 100% 30%;
+    --atuiKernel_Color-W40: var(--atuiKernel_Color-Warning) 100% 40%;
+    --atuiKernel_Color-W50: var(--atuiKernel_Color-Warning) 100% 50%;
+    --atuiKernel_Color-W60: var(--atuiKernel_Color-Warning) 100% 60%;
+    --atuiKernel_Color-W70: var(--atuiKernel_Color-Warning) 100% 70%;
+    --atuiKernel_Color-W80: var(--atuiKernel_Color-Warning) 100% 80%;
+    --atuiKernel_Color-W90: var(--atuiKernel_Color-Warning) 100% 90%;
+    --atuiKernel_Color-WFF: var(--atuiKernel_Color-Warning) 100% 100%;
+    --atuiKernel_Color-S00: var(--atuiKernel_Color-Success) 100% 0%;
+    --atuiKernel_Color-S10: var(--atuiKernel_Color-Success) 100% 10%;
+    --atuiKernel_Color-S20: var(--atuiKernel_Color-Success) 100% 20%;
+    --atuiKernel_Color-S30: var(--atuiKernel_Color-Success) 100% 30%;
+    --atuiKernel_Color-S40: var(--atuiKernel_Color-Success) 100% 40%;
+    --atuiKernel_Color-S50: var(--atuiKernel_Color-Success) 100% 50%;
+    --atuiKernel_Color-S60: var(--atuiKernel_Color-Success) 100% 60%;
+    --atuiKernel_Color-S70: var(--atuiKernel_Color-Success) 100% 70%;
+    --atuiKernel_Color-S80: var(--atuiKernel_Color-Success) 100% 80%;
+    --atuiKernel_Color-S90: var(--atuiKernel_Color-Success) 100% 90%;
+    --atuiKernel_Color-SFF: var(--atuiKernel_Color-Success) 100% 100%;
+    --atuiKernel_Color-I00: var(--atuiKernel_Color-Info) 100% 0%;
+    --atuiKernel_Color-I10: var(--atuiKernel_Color-Info) 100% 10%;
+    --atuiKernel_Color-I20: var(--atuiKernel_Color-Info) 100% 20%;
+    --atuiKernel_Color-I30: var(--atuiKernel_Color-Info) 100% 30%;
+    --atuiKernel_Color-I40: var(--atuiKernel_Color-Info) 100% 40%;
+    --atuiKernel_Color-I50: var(--atuiKernel_Color-Info) 100% 50%;
+    --atuiKernel_Color-I60: var(--atuiKernel_Color-Info) 100% 60%;
+    --atuiKernel_Color-I70: var(--atuiKernel_Color-Info) 100% 70%;
+    --atuiKernel_Color-I80: var(--atuiKernel_Color-Info) 100% 80%;
+    --atuiKernel_Color-I90: var(--atuiKernel_Color-Info) 100% 90%;
+    --atuiKernel_Color-IFF: var(--atuiKernel_Color-Info) 100% 100%;
+}
+
+[data-atui-colormode="dark"] {
+    color-scheme: dark;
+
+    --atuiKernel_Color-N00: 0 0% calc(100% / 2);
+    --atuiKernel_Color-N10: 0 0% calc(90% / 2);
+    --atuiKernel_Color-N20: 0 0% calc(80% / 2);
+    --atuiKernel_Color-N30: 0 0% calc(70% / 2);
+    --atuiKernel_Color-N40: 0 0% calc(60% / 2);
+    --atuiKernel_Color-N50: 0 0% calc(50% / 2);
+    --atuiKernel_Color-N60: 0 0% calc(40% / 2);
+    --atuiKernel_Color-N70: 0 0% calc(30% / 2);
+    --atuiKernel_Color-N80: 0 0% calc(20% / 2);
+    --atuiKernel_Color-N90: 0 0% calc(10% / 2);
+    --atuiKernel_Color-NFF: 0 0% 0%;
+    --atuiKernel_Color-A00: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(100% / 2);
+    --atuiKernel_Color-A10: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(90% / 2);
+    --atuiKernel_Color-A20: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(80% / 2);
+    --atuiKernel_Color-A30: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(70% / 2);
+    --atuiKernel_Color-A40: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(60% / 2);
+    --atuiKernel_Color-A50: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(50% / 2);
+    --atuiKernel_Color-A60: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(40% / 2);
+    --atuiKernel_Color-A70: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(30% / 2);
+    --atuiKernel_Color-A80: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(20% / 2);
+    --atuiKernel_Color-A90: var(--atuiKernel_Color-Accent) calc(100% / 2) calc(10% / 2);
+    --atuiKernel_Color-AFF: var(--atuiKernel_Color-Accent) calc(100% / 2) 0%;
+    --atuiKernel_Color-D00: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(100% / 2);
+    --atuiKernel_Color-D10: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(90% / 2);
+    --atuiKernel_Color-D20: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(80% / 2);
+    --atuiKernel_Color-D30: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(70% / 2);
+    --atuiKernel_Color-D40: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(60% / 2);
+    --atuiKernel_Color-D50: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(50% / 2);
+    --atuiKernel_Color-D60: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(40% / 2);
+    --atuiKernel_Color-D70: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(30% / 2);
+    --atuiKernel_Color-D80: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(20% / 2);
+    --atuiKernel_Color-D90: var(--atuiKernel_Color-Danger) calc(100% / 2) calc(10% / 2);
+    --atuiKernel_Color-DFF: var(--atuiKernel_Color-Danger) calc(100% / 2) 0%;
+    --atuiKernel_Color-W00: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(100% / 2);
+    --atuiKernel_Color-W10: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(90% / 2);
+    --atuiKernel_Color-W20: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(80% / 2);
+    --atuiKernel_Color-W30: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(70% / 2);
+    --atuiKernel_Color-W40: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(60% / 2);
+    --atuiKernel_Color-W50: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(50% / 2);
+    --atuiKernel_Color-W60: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(40% / 2);
+    --atuiKernel_Color-W70: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(30% / 2);
+    --atuiKernel_Color-W80: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(20% / 2);
+    --atuiKernel_Color-W90: var(--atuiKernel_Color-Warning) calc(100% / 2) calc(10% / 2);
+    --atuiKernel_Color-WFF: var(--atuiKernel_Color-Warning) calc(100% / 2) 0%;
+    --atuiKernel_Color-S00: var(--atuiKernel_Color-Success) calc(100% / 2) calc(100% / 2);
+    --atuiKernel_Color-S10: var(--atuiKernel_Color-Success) calc(100% / 2) calc(90% / 2);
+    --atuiKernel_Color-S20: var(--atuiKernel_Color-Success) calc(100% / 2) calc(80% / 2);
+    --atuiKernel_Color-S30: var(--atuiKernel_Color-Success) calc(100% / 2) calc(70% / 2);
+    --atuiKernel_Color-S40: var(--atuiKernel_Color-Success) calc(100% / 2) calc(60% / 2);
+    --atuiKernel_Color-S50: var(--atuiKernel_Color-Success) calc(100% / 2) calc(50% / 2);
+    --atuiKernel_Color-S60: var(--atuiKernel_Color-Success) calc(100% / 2) calc(40% / 2);
+    --atuiKernel_Color-S70: var(--atuiKernel_Color-Success) calc(100% / 2) calc(30% / 2);
+    --atuiKernel_Color-S80: var(--atuiKernel_Color-Success) calc(100% / 2) calc(20% / 2);
+    --atuiKernel_Color-S90: var(--atuiKernel_Color-Success) calc(100% / 2) calc(10% / 2);
+    --atuiKernel_Color-SFF: var(--atuiKernel_Color-Success) calc(100% / 2) 0%;
+    --atuiKernel_Color-I00: var(--atuiKernel_Color-Info) calc(100% / 2) calc(100% / 2);
+    --atuiKernel_Color-I10: var(--atuiKernel_Color-Info) calc(100% / 2) calc(90% / 2);
+    --atuiKernel_Color-I20: var(--atuiKernel_Color-Info) calc(100% / 2) calc(80% / 2);
+    --atuiKernel_Color-I30: var(--atuiKernel_Color-Info) calc(100% / 2) calc(70% / 2);
+    --atuiKernel_Color-I40: var(--atuiKernel_Color-Info) calc(100% / 2) calc(60% / 2);
+    --atuiKernel_Color-I50: var(--atuiKernel_Color-Info) calc(100% / 2) calc(50% / 2);
+    --atuiKernel_Color-I60: var(--atuiKernel_Color-Info) calc(100% / 2) calc(40% / 2);
+    --atuiKernel_Color-I70: var(--atuiKernel_Color-Info) calc(100% / 2) calc(30% / 2);
+    --atuiKernel_Color-I80: var(--atuiKernel_Color-Info) calc(100% / 2) calc(20% / 2);
+    --atuiKernel_Color-I90: var(--atuiKernel_Color-Info) calc(100% / 2) calc(10% / 2);
+    --atuiKernel_Color-IFF: var(--atuiKernel_Color-Info) calc(100% / 2) 0%;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    #atuiKernel_ToolsContactNewsletter /* Element */ {
+        width: 380px;
+    }
+}
+
+/* Broad */
+
+#atuiKernel_ToolsContactBroad /* Container */ {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#atuiKernel_ToolsContactBroad div /* Element */ {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: hsla(0, 0%, 100%, 0.8);
+    background-color: hsl(var(--atuiKernel_Color-NFF) / 80%);
+    display: flex;
+    align-items: center;
+    margin: 5px 10px 5px 0;
+    padding: 10px 15px 10px 10px;
+}
+
+#atuiKernel_ToolsContactBroad div > i, #atuiKernel_ToolsContactBroad div > img {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+}
+
+#atuiKernel_ToolsContactBroad div > a /* Text */ {
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Newsletter */
+
+#atuiKernel_ToolsContactNewsletter /* Element */ {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: hsla(0, 0%, 100%, 0.8);
+    background-color: hsl(var(--atuiKernel_Color-NFF) / 80%);
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    gap: 10px;
+}
+
+#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img {
+    font-size: 30px !important;
+}
+
+#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 30px;
+    height: 30px;
+}
+
+#atuiKernel_ToolsContactNewsletter form /* Container with input and send icon */ {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
+}
+
+#atuiKernel_ToolsContactNewsletter form input[type="email"] /* Input */ {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 0;
+    border: none;
+    background-color: transparent;
+}
+
+#atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit /* Send icon */ {
+    font-size: 25px !important;
+}
+
+#atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit /* Send icon */ {
+    background-color: transparent;
+    border: none;
+    box-sizing: content-box;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+/* Compact */
+
+#atuiKernel_ToolsContactCompact > a {
+    margin-right: 15px;
+}
+
+#atuiKernel_ToolsContactCompact > a > i {
+    font-size: 50px;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionDownload /* Element */ {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px hsl(0, 0%, 50%) solid;
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.atuiKernel_SectionDownload > div /* Containers */ {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.atuiKernel_SectionDownload > div:first-child /* Metadata container */ {
+    flex: 1;
+}
+
+.atuiKernel_SectionDownload > div:first-child i {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    font-size: 60px;
+}
+
+.atuiKernel_SectionDownload > div:first-child img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    font-size: 60px;
+}
+
+.atuiKernel_SectionDownload > div:first-child p /* File name */ {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionDownload /* Element */ {
+        flex-direction: row;
+    }
+
+    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionDownload /* Element */ {
+        flex-direction: column;
+    }
+
+    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
+        justify-content: space-around;
+    }
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_Footer {
+    position: relative;
+    background-color: hsl(14, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-A90));
+    padding: 20px 40px 5px;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_FooterContentsColumn /* Containers */ {
+        flex-direction: row;
+    }
+
+    .atuiKernel_FooterContentsColumn > div /* Menu */ {
+        max-width: 30%;
+    }
+
+    .atuiKernel_FooterContentsRow > div /* Menu */ {
+        max-height: 30%;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_FooterContentsColumn /* Containers */ {
+        flex-direction: column;
+    }
+}
+
+/* Vertical and horizontal contents */
+
+.atuiKernel_FooterContentsColumn,.atuiKernel_FooterContentsRow
+/* Container */ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.atuiKernel_FooterContentsColumn h3,.atuiKernel_FooterContentsRow h3
+/* Title */ {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+    margin: 10px 0;
+}
+
+/* Row contents */
+
+.atuiKernel_FooterContentsRow /* Containers */ {
+    flex-direction: column;
+}
+
+.atuiKernel_FooterContentsRow > div /* Menu */ {
+    margin: 5px 0;
+}
+
+/* Column contents */
+
+.atuiKernel_FooterContentsColumn > div /* Menu */ {
+    margin: 0 5px;
+}
+
+/* Lists */
+
+.atuiKernel_FooterList /* List of elements */ {
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 0;
+}
+
+.atuiKernel_FooterList li /* Elements */ {
+    margin: 5px 0;
+}
+
+.atuiKernel_FooterList li a:hover
+/* Links of elements */ {
+    font-weight: normal;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* Logotype & Description */
+
+.atuiKernel_FooterLogotype > a, .atuiKernel_FooterDescription > a {
+    display: flex;
+    align-content: center;
+}
+
+.atuiKernel_FooterLogotype > a img, .atuiKernel_FooterDescription > a img {
+    width: 40px;
+    height: 40px;
+}
+
+.atuiKernel_FooterLogotype > a p, .atuiKernel_FooterDescription > a p {
+    margin: 0 10px;
+    font-size: 1.875rem;
+    display: inline-block;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Description */
+
+.atuiKernel_FooterDescription {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.atuiKernel_FooterDescription > * {
+    margin: 5px 0;
+}
+
+.atuiKernel_FooterDescription > div * {
+    display: block;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Legals */
+
+#atuiKernel_FooterLegals {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#atuiKernel_FooterLegals * {
+    margin: 5px 20px;
+}
+
+#atuiKernel_FooterLegals *:hover
+/* Links of elements */ {
+    font-weight: normal;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* Info */
+
+#atuiKernel_FooterInfo {
+    display: block;
+    text-align: center;
+}
+
+#atuiKernel_FooterInfo * {
+    display: block;
+    margin: 10px;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionGrid {
+    display: grid;
+    grid-gap: 15px;
+    align-items: baseline;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .atuiKernel_SectionGrid.optionColumns3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .atuiKernel_SectionGrid.optionColumns2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_Header {
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    position: relative;
+    width: available;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: stretch;
+    z-index: 12;
+    padding: 0 5px;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Header * {
+    margin: 0;
+}
+
+.atuiKernel_Header i, .atuiKernel_Header img {
+    font-size: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.atuiKernel_Header > div a > i,.atuiKernel_Header > div a > img,.atuiKernel_Header > div div > i,.atuiKernel_Header > div div > img /* Fix icon size on elements with text and icon */ {
+    font-size: 1.125rem;
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+/* Separators */
+
+.atuiKernel_HeaderSpace {
+    flex: 1;
+    border: none;
+}
+
+.atuiKernel_HeaderSplit {
+    width: 1px !important;
+    padding: 0 !important;
+}
+
+.atuiKernel_HeaderSplit {
+    border: 0;
+    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(var(--atuiKernel_Color-N20));
+    height: 1.875rem;
+}
+
+/* Display on specific devices */
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_Header *.optionMobileonly {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_Header *.optionDesktoponly {
+        display: none;
+    }
+}
+
+/* Options */
+
+.atuiKernel_Header.optionCarousel {
+    position: absolute;
+    background-color: hsla(0, 0%, 90%, 0.8);
+    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: var(--atuiKernel_Blur);
+            backdrop-filter: var(--atuiKernel_Blur);
+}
+
+.atuiKernel_Header.optionFixed {
+    position: fixed;
+}
+
+.atuiKernel_Header.optionAccent *, .atuiKernel_Header.optionDark * {
+    color: hsl(0, 0%, 100%);
+    color: hsl(var(--atuiKernel_Color-NFF));
+}
+
+.atuiKernel_Header.optionAccent {
+    background-color: hsl(14, 100%, 20%);
+    background-color: hsl(var(--atuiKernel_Color-A20));
+}
+
+.atuiKernel_Header.optionAccent .atuiKernel_HeaderSplit {
+    background-color: hsl(14, 100%, 40%);
+    background-color: hsl(var(--atuiKernel_Color-A40));
+}
+
+.atuiKernel_Header.optionDark {
+    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(var(--atuiKernel_Color-N20));
+}
+
+.atuiKernel_Header.optionDark .atuiKernel_HeaderSplit {
+    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Header.optionTransparent {
+    background-color: transparent;
+    border-bottom: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+}
+
+/* Levels */
+
+.atuiKernel_Header > div {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.atuiKernel_Header > div > * {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+/* Logotype */
+
+.atuiKernel_Header .atuiKernel_Logotype {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.atuiKernel_Header .atuiKernel_Logotype * {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+    font-size: 1.5em;
+}
+
+.atuiKernel_Header .atuiKernel_Logotype i, .atuiKernel_Header .atuiKernel_Logotype img {
+    font-size: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionImage {
+    padding: 10px;
+}
+
+.atuiKernel_SectionImage img {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+.atuiKernel_SectionImage p {
+    text-align: center;
+    color: hsl(0, 0%, 30%);
+    color: hsl(var(--atuiKernel_Color-N30));
+    margin: 5px;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionImage img {
+        margin: 0 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionImage img {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+form, fieldset {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    gap: 15px;
+}
+
+form > div, fieldset > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input,
+progress,
+textarea,
+select,
+.atuiKernel_InputSubmit,
+input[type="file"]::file-selector-button {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border: 1px solid hsl(0, 0%, 50%);
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+    margin: 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    accent-color: hsl(14, 100%, 50%);
+    accent-color: hsl(var(--atuiKernel_Color-A50));
+}
+
+input,
+progress,
+select,
+.atuiKernel_InputSubmit,
+input[type="file"]::file-selector-button {
+    height: 40px;
+}
+
+input:not([type="color"]):not([type="file"]),
+progress,
+textarea,
+select,
+.atuiKernel_InputSubmit {
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 30px;
+    height: 30px;
+}
+
+progress {
+    border-radius: revert;
+    border: revert;
+    background-color: revert;
+}
+
+input[type="color"],
+input[type="file"] {
+    padding: 0;
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px solid hsl(0, 0%, 50%);
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+}
+
+.atuiKernel_InputSubmit {
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.atuiKernel_InputSubmit {
+    box-sizing: content-box;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+        .atuiKernel_InputSubmit:not(.does-not-exist):not(.does-not-exist):not(does-not-exist):focus,
+        progress:focus:not(.does-not-exist):not(.does-not-exist):focus,
+        textarea:focus:not(.does-not-exist):not(.does-not-exist):focus,
+        select:not(.does-not-exist):not(.does-not-exist):not(.does-not-exist):focus {
+    outline: solid 2px hsla(14, 100%, 60%, 0.8);
+    outline: solid 2px hsl(var(--atuiKernel_Color-A60) / 80%);
+}
+
+fieldset {
+    border: 1px solid hsla(14, 100%, 40%, 0.8);
+    border: 1px solid hsl(var(--atuiKernel_Color-A40) / 80%);
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 15px;
+    margin: 0;
+}
+
+fieldset legend {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    padding: 0 10px;
+    font-size: 1.125rem;
+}
+
+input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit.optionPill:not(.does-not-exist):not(does-not-exist), select.optionPill:not(.does-not-exist):not(.does-not-exist), textarea.optionPill:not(.does-not-exist):not(.does-not-exist) {
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Img Big */
+
+.atuiKernel_NavigationSectionImgbig /* Container */ {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.atuiKernel_NavigationSectionImgbig a /* ELement */ {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.atuiKernel_NavigationSectionImgbig a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationSectionImgbig a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationSectionImgbig a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationSectionImgbig a:hover {
+    background-color: hsl(14, 100%, 70%);
+    background-color: hsl(var(--atuiKernel_Color-A70));
+}
+
+.atuiKernel_NavigationSectionImgbig a:active {
+    background-color: hsl(14, 100%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-A60));
+}
+
+.atuiKernel_NavigationSectionImgbig a i, .atuiKernel_NavigationSectionImgbig a img {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+}
+
+.atuiKernel_NavigationSectionImgbig a p /* Text */ {
+    margin: 10px 0 0;
+    font-size: 1.125rem;
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+/* Bar */
+
+.atuiKernel_NavigationBar {
+    display: flex;
+    row-gap: 5px;
+}
+
+.atuiKernel_NavigationBar a {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 5px;
+}
+
+.atuiKernel_NavigationBar a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationBar a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationBar a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_NavigationBar p {
+    margin: 0;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.atuiKernel_NavigationBar hr {
+    background-color: hsl(14, 100%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-A60));
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    border: 0;
+}
+
+.atuiKernel_NavigationBar hr.optionSplit {
+    flex: 1;
+    background-color: transparent;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_NavigationBar {
+        flex-direction: column;
+    }
+
+    .atuiKernel_NavigationBar a:hover {
+        background-color: hsl(14, 100%, 80%);
+        background-color: hsl(var(--atuiKernel_Color-A80));
+    }
+
+    .atuiKernel_NavigationBar i, .atuiKernel_NavigationBar img {
+        width: 36px;
+        font-size: 36px;
+    }
+
+    .atuiKernel_NavigationBar p {
+        font-size: 1.125rem;
+    }
+
+    .atuiKernel_NavigationBar *.optionMobileonly {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar.optionDrawer p {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar.optionDrawer:hover p {
+        display: block;
+    }
+
+    .atuiKernel_NavigationBar:not(.optionMobilestyle):not(.optionDrawer),
+    .atuiKernel_NavigationBar.optionDrawer:hover {
+        width: 20%;
+    }
+
+    .atuiKernel_NavigationBar.optionMobilestyle a {
+        flex-direction: column;
+        row-gap: 5px;
+        padding: 5px 10px;
+    }
+
+    .atuiKernel_NavigationBar.optionMobilestyle p {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_NavigationBar {
+        -o-border-image: none !important;
+           border-image: none !important;
+    }
+    .atuiKernel_NavigationBar {
+        width: calc(100% - 20px);
+        padding: 5px;
+        position: sticky;
+        bottom: 0;
+        z-index: 10;
+        background-color: hsl(0, 0%, 90%);
+        background-color: hsl(var(--atuiKernel_Color-N90));
+        border-top: 1px solid hsl(0, 0%, 70%);
+        border-top: 1px solid hsl(var(--atuiKernel_Color-N70));
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row nowrap;
+    }
+
+    .atuiKernel_NavigationBar a {
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px 10px;
+    }
+
+    .atuiKernel_NavigationBar a:hover {
+        background-color: hsl(0, 0%, 80%);
+        background-color: hsl(var(--atuiKernel_Color-N80));
+    }
+
+    .atuiKernel_NavigationBar i, .atuiKernel_NavigationBar img {
+        width: 30px;
+        font-size: 30px;
+    }
+
+    .atuiKernel_NavigationBar p {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+
+    .atuiKernel_NavigationBar hr {
+        display: none;
+    }
+
+    .atuiKernel_NavigationBar *.optionDesktoponly {
+        display: none;
+    }
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_NotificationContainer {
+    position: fixed;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    z-index: 13;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+@media (max-width: 479.98px) /* Smartphones */ {
+    .atuiKernel_NotificationContainer {
+        left: 0;
+        right: 0;
+    }
+}
+
+.atuiKernel_Notification {
+    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
+    box-shadow: var(--atuiKernel_ShadowMedium);
+    margin: 10px;
+    padding: 20px;
+}
+
+.atuiKernel_Notification > header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.atuiKernel_Notification > header * {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.atuiKernel_Notification > header i, .atuiKernel_Notification > header img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.atuiKernel_Notification > header p {
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+}
+
+.atuiKernel_Notification > section {
+    margin: 10px;
+}
+
+.atuiKernel_Notification > section p {
+    margin: 0;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Number */
+
+.atuiKernel_SectionPaginationNumber {
+    display: flex;
+    justify-content: center;
+}
+
+.atuiKernel_SectionPaginationNumber > * {
+    margin: 0;
+    padding: 10px 15px;
+    border-top: 1px solid hsl(0, 0%, 50%);
+    border-top: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border-bottom: 1px solid hsl(0, 0%, 50%);
+    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border-right: 1px solid hsl(0, 0%, 50%);
+    border-right: 1px solid hsl(var(--atuiKernel_Color-N50));
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_SectionPaginationNumber > *:first-child {
+    border-radius: 10px 0 0 10px;
+    border-radius: var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
+    border-left: 1px solid hsl(0, 0%, 50%);
+    border-left: 1px solid hsl(var(--atuiKernel_Color-N50));
+}
+
+.atuiKernel_SectionPaginationNumber > *:last-child {
+    border-radius: 0 10px 10px 0;
+    border-radius: 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0;
+}
+
+.atuiKernel_SectionPaginationNumber > *:hover {
+    background-color: hsl(14, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-A90));
+}
+
+.atuiKernel_SectionPaginationNumber > *:hover,
+.atuiKernel_SectionPaginationNumber > p {
+    color: hsl(14, 100%, 50%);
+    color: hsl(var(--atuiKernel_Color-A50));
+}
+
+.atuiKernel_SectionPaginationNumber > p:hover {
+    background-color: transparent;
+}
+
+.atuiKernel_SectionPaginationNumber a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationNumber a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationNumber a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+/* Text */
+
+.atuiKernel_SectionPaginationText {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    .atuiKernel_SectionPaginationText {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    .atuiKernel_SectionPaginationText {
+        flex-direction: column;
+    }
+}
+
+.atuiKernel_SectionPaginationText a {
+    border: 1px solid hsl(0, 0%, 0%);
+    border: 1px solid hsl(var(--atuiKernel_Color-N00));
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    padding: 15px;
+    flex: 1;
+}
+
+.atuiKernel_SectionPaginationText a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationText a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationText a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionPaginationText a:hover {
+    border-width: 2px;
+    border-color: hsl(14, 100%, 40%);
+    border-color: hsl(var(--atuiKernel_Color-A40));
+    background-color: hsl(14, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-A90));
+}
+
+.atuiKernel_SectionPaginationText a p {
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+    margin: 0;
+    text-align: center;
+}
+
+.atuiKernel_SectionPaginationText a:hover p {
+    color: hsl(14, 100%, 40%);
+    color: hsl(var(--atuiKernel_Color-A40));
+}
+
+.atuiKernel_SectionPaginationText a p:first-child {
+    margin-bottom: 10px;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionParagraph > * {
+    margin: 10px 5px;
+}
+
+.atuiKernel_SectionParagraph h1, .atuiKernel_SectionParagraph h2, .atuiKernel_SectionParagraph h3, .atuiKernel_SectionParagraph h4, .atuiKernel_SectionParagraph h5, .atuiKernel_SectionParagraph h6 {
+    color: hsl(14, 100%, 40%);
+    color: hsl(var(--atuiKernel_Color-A40));
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+    margin: 15px 0;
+}
+
+.atuiKernel_SectionParagraph a {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* Quote */
+
+.atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote {
+    font-family: cursive;
+    font-family: var(--atuiKernel_FontsSpecial);
+    margin: 15px 20px;
+}
+
+.atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote em {
+    color: hsl(0, 0%, 30%);
+    color: hsl(var(--atuiKernel_Color-N30));
+    display: block;
+    margin: 5px 0 0 10px;
+    font-size: 0.875rem;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Common to context menu and tooltip */
+
+.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+    display: block !important;
+}
+
+.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+    position: fixed; /* fixed position is obligatory for centered option */
+    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
+    box-shadow: var(--atuiKernel_ShadowMedium);
+    width: -moz-max-content;
+    width: max-content;
+    visibility: hidden;
+}
+
+@media (min-width: 480px) /* Tablets and computers */ {
+    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 479.98px) /* Smartphones */ {
+    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
+        max-width: 70%;
+    }
+}
+
+.atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip * {
+    color: hsl(0, 0%, 0%) !important;
+    color: hsl(var(--atuiKernel_Color-N00)) !important;
+}
+
+.atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip * {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Context menu */
+
+.atuiKernel_PopupContextmenu {
+    padding: 10px 0 !important;
+}
+
+.atuiKernel_PopupContextmenu {
+    z-index: 15;
+}
+
+.atuiKernel_PopupContextmenu > * {
+    padding: 5px 10px;
+}
+
+@media (pointer: coarse) /* Touch screen */ {
+    .atuiKernel_PopupContextmenu > * {
+        padding: 10px 15px;
+    }
+}
+
+.atuiKernel_PopupContextmenu > * i:first-child {
+    margin-left: 0 !important;
+}
+
+.atuiKernel_PopupContextmenu > * img:first-child {
+    margin-left: 0 !important;
+}
+
+.atuiKernel_PopupContextmenu > * i:last-child {
+    margin-right: 0 !important;
+}
+
+.atuiKernel_PopupContextmenu > * img:last-child {
+    margin-right: 0 !important;
+}
+
+.atuiKernel_PopupContextmenu i, .atuiKernel_PopupContextmenu img {
+    font-size: 1em !important;
+    width: 1em !important;
+    height: 1em !important;
+}
+
+.atuiKernel_PopupContextmenu > a {
+    -webkit-text-decoration: none !important;
+    text-decoration: none !important;
+}
+
+.atuiKernel_PopupContextmenu > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.atuiKernel_PopupContextmenu > a:hover {
+    background-color: hsla(14, 100%, 60%, 0.8);
+    background-color: hsl(var(--atuiKernel_Color-A60) / 80%);
+}
+
+.atuiKernel_PopupContextmenu > hr {
+    background-color: hsl(14, 100%, 60%);
+    background-color: hsl(var(--atuiKernel_Color-A60));
+    height: 2px;
+    border: 0;
+    margin: 5px 10%;
+    padding: 0;
+}
+
+/* Global Panel */
+
+.atuiKernel_PopupGlobalpanel {
+    display: block !important;
+    width: 80% !important;
+}
+
+.atuiKernel_PopupGlobalpanel {
+    align-items: normal;
+    position: absolute;
+    visibility: hidden;
+    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    box-shadow: hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
+    box-shadow: var(--atuiKernel_ShadowMedium);
+}
+
+.atuiKernel_PopupGlobalpanel > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.atuiKernel_PopupGlobalpanel > div div {
+    display: block;
+    margin: 10px;
+    min-width: 20%;
+}
+
+.atuiKernel_PopupGlobalpanel > div div p {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: bold;
+    font-weight: var(--atuiKernel_TitleBold);
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_PopupGlobalpanel > div div div a {
+    display: block;
+    margin: 5px;
+}
+
+/* Tooltip */
+
+.atuiKernel_PopupTooltip {
+    z-index: 14;
+    padding: 10px;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Section containers management */
+
+#atuiKernel_Body, #atuiKernel_Section {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) /* Computers */ {
+    #atuiKernel_Body, #atuiKernel_Section {
+        flex-direction: row;
+    }
+
+    #atuiKernel_Body > :not(:last-child):not(.atuiKernel_NotificationContainer) {
+        border-right: 1px solid hsl(0, 0%, 80%);
+        border-right: 1px solid hsl(var(--atuiKernel_Color-N80));
+    }
+
+    #atuiKernel_Section > :not(:last-child):not(.atuiKernel_NotificationContainer) {
+        border-right: 1px solid hsl(0, 0%, 80%);
+        border-right: 1px solid hsl(var(--atuiKernel_Color-N80));
+    }
+
+    #atuiKernel_Section > *:not(:last-child) {
+        -o-border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                hsl(0, 0%, 80%) calc(0% + 120px),
+                hsl(0, 0%, 80%) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0 0;
+           border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                hsl(0, 0%, 80%) calc(0% + 120px),
+                hsl(0, 0%, 80%) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0 0;
+        -o-border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0 0;
+           border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0 0;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    #atuiKernel_Body, #atuiKernel_Section {
+        flex-direction: column-reverse;
+    }
+
+    #atuiKernel_Body > :not(:last-child):not(.atuiKernel_NotificationContainer) {
+        border-bottom: 1px solid hsl(0, 0%, 80%);
+        border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
+    }
+
+    #atuiKernel_Section > :not(:last-child):not(.atuiKernel_NotificationContainer) {
+        border-bottom: 1px solid hsl(0, 0%, 80%);
+        border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
+    }
+
+    #atuiKernel_Section > *:not(:last-child) {
+        -o-border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                hsl(0, 0%, 80%) calc(0% + 120px),
+                hsl(0, 0%, 80%) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
+           border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                hsl(0, 0%, 80%) calc(0% + 120px),
+                hsl(0, 0%, 80%) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
+        -o-border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
+           border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
+    }
+}
+
+#atuiKernel_Body > *:not(.atuiKernel_BodyContent),
+#atuiKernel_Section > * {
+    padding: 10px;
+}
+
+.atuiKernel_BodyContent, .atuiKernel_SectionContent {
+    flex: 1;
+}
+
+.atuiKernel_BodyContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#atuiKernel_Section {
+    flex: 1;
+}
+
+.atuiKernel_SectionContent > * {
+    margin: 20px 0;
+}
+
+.atuiKernel_BodyContent > :first-child {
+    margin-top: 0;
+}
+
+.atuiKernel_SectionContent > :first-child {
+    margin-top: 0;
+}
+
+.atuiKernel_BodyContent > :last-child {
+    margin-bottom: 0;
+}
+
+.atuiKernel_SectionContent > :last-child {
+    margin-bottom: 0;
+}
+
+/* Breadcrumb */
+
+.atuiKernel_SectionBreadcrumb > * {
+    display: inline-block;
+    margin: 0;
+}
+
+.atuiKernel_SectionBreadcrumb > *:last-child {
+    color: hsl(14, 100%, 50%);
+    color: hsl(var(--atuiKernel_Color-A50));
+}
+
+.atuiKernel_SectionBreadcrumb > *:not(:last-child) {
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+    margin-right: 10px;
+}
+
+.atuiKernel_SectionBreadcrumb > *:not(:last-child)::after {
+    content: "/";
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+/* Square link */
+
+.atuiKernel_SectionSquarelink {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.atuiKernel_SectionSquarelink > a {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    min-width: 100px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    row-gap: 15px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_SectionSquarelink > a:active {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionSquarelink > a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionSquarelink > a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionSquarelink > a:hover {
+    border-color: hsl(14, 100%, 50%);
+    border-color: hsl(var(--atuiKernel_Color-A50));
+    background-color: hsl(14, 100%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-A90));
+    color: hsl(14, 100%, 50%);
+    color: hsl(var(--atuiKernel_Color-A50));
+    font-weight: bold;
+}
+
+.atuiKernel_SectionSquarelink > a * {
+    margin: 0;
+    color: inherit;
+    font-weight: inherit;
+}
+
+.atuiKernel_SectionSquarelink > a i, .atuiKernel_SectionSquarelink > a img {
+    height: 48px;
+    font-size: 48px;
+}
+
+.atuiKernel_SectionSquarelink > a p {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+}
+
+/* List */
+
+.atuiKernel_SectionList {
+    display: flex;
+    flex-direction: column;
+}
+
+.atuiKernel_SectionList > * {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.atuiKernel_SectionList > *:not(:last-child) {
+    border-color: hsl(0, 0%, 80%);
+    border-color: hsl(var(--atuiKernel_Color-N80));
+    border-style: solid;
+    border-width: 0 0 2px;
+}
+
+/* Snipper */
+
+.atuiKernel_Spinner {
+    animation: spinner-animation 1s infinite linear;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.atuiKernel_Spinner i {
+    height: 50px;
+    font-size: 50px;
+    color: hsl(14, 100%, 50%);
+    color: hsl(var(--atuiKernel_Color-A50));
+}
+
+@keyframes spinner-animation {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.atuiKernel_Spinner.optionLight > i {
+    color: hsl(0, 0%, 80%);
+    color: hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Spinner.optionDark > i {
+    color: hsl(0, 0%, 20%);
+    color: hsl(var(--atuiKernel_Color-N20));
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_SectionTable table {
+    border-collapse: collapse;
+}
+
+.atuiKernel_SectionTable td, .atuiKernel_SectionTable th {
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px hsl(0, 0%, 50%) solid;
+    border-top: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    border-bottom: 1px hsl(0, 0%, 50%) solid;
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+}
+
+.atuiKernel_SectionTable caption {
+    color: hsl(0, 0%, 50%);
+    color: hsl(var(--atuiKernel_Color-N50));
+    font-style: italic;
+    margin: 10px 0;
+    font-size: 0.875rem;
+    caption-side: bottom;
+}
+
+.atuiKernel_SectionTable th {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+.atuiKernel_SectionTabs {
+    border-radius: 10px;
+    border-radius: var(--atuiKernel_Borderradius);
+    overflow: hidden;
+}
+
+/* Header */
+
+.atuiKernel_SectionTabsHeader {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+    border-bottom: 1px hsl(0, 0%, 80%) solid;
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N80)) solid;
+}
+
+.atuiKernel_SectionTabsHeader > a {
+    padding: 15px;
+    position: relative;
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_SectionTabsHeader > a * {
+    margin: 0;
+    color: inherit;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-size: 1.125rem;
+}
+
+.atuiKernel_SectionTabsHeader .optionActive {
+    font-weight: bold;
+}
+
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive * {
+    color: hsl(14, 100%, 50%);
+    color: hsl(var(--atuiKernel_Color-A50));
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive::after {
+    content: "";
+    width: calc(100% - 30px);
+    height: 5px;
+    background-color: hsl(14, 100%, 50%);
+    background-color: hsl(var(--atuiKernel_Color-A50));
+    position: absolute;
+    border-radius: 5px;
+    transform: translateY(10px);
+}
+
+/* Content */
+
+.atuiKernel_SectionTabsContent {
+    padding: 15px;
+}
+
+.atuiKernel_SectionTabsContent div {
+    display: none;
+}
+
+.atuiKernel_SectionTabsContent .optionActive {
+    display: block;
+}
+
+/* Contrast style */
+
+.atuiKernel_SectionTabs.optionContrast {
+    border: 1px hsl(0, 0%, 50%) solid;
+    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader {
+    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(var(--atuiKernel_Color-N80));
+    border-bottom: 1px hsl(0, 0%, 50%) solid;
+    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    padding: 0 10px;
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsContent {
+    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(var(--atuiKernel_Color-N90));
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader > *:hover,
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .optionActive * {
+    color: hsl(0, 0%, 0%);
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .optionActive::after {
+    all: unset;
+}
 
 /* Global */
 
@@ -63,6 +2513,7 @@ Look at the # to find the corresponding shadow */
 
 body {
     margin: 0;
+    background: hsl(0, 0%, 100%);
     background: hsl(var(--atuiKernel_Color-NFF));
     scroll-behavior: smooth;
 }
@@ -70,6 +2521,7 @@ body {
 body * {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     font-family: var(--atuiKernel_FontsText);
+    color: hsl(0, 0%, 0%);
     color: hsl(var(--atuiKernel_Color-N00));
     word-wrap: anywhere;
 }
@@ -137,6 +2589,7 @@ code {
 }
 
 .ti {
+    color: hsl(0, 0%, 0%);
     color: hsl(var(--atuiKernel_Color-N00));
     font-size: 1em;
     width: 1em;
@@ -144,12 +2597,16 @@ code {
 }
 
 ::-moz-selection {
+    background: hsl(14, 100%, 80%);
     background: hsl(var(--atuiKernel_Color-A80));
+    color: hsl(14, 100%, 20%);
     color: hsl(var(--atuiKernel_Color-A20));
 }
 
 ::selection {
+    background: hsl(14, 100%, 80%);
     background: hsl(var(--atuiKernel_Color-A80));
+    color: hsl(14, 100%, 20%);
     color: hsl(var(--atuiKernel_Color-A20));
 }
 
@@ -158,20 +2615,24 @@ code {
 * {
     /* Firefox syntax */
     scrollbar-width: thin;
+    scrollbar-color: hsl(0, 0%, 60%) hsl(0, 0%, 90%);
     scrollbar-color: hsl(var(--atuiKernel_Color-N60)) hsl(var(--atuiKernel_Color-N90)); /* colors order : thumb, container */
 }
 
 ::-webkit-scrollbar {
+    background-color: hsl(0, 0%, 90%);
     background-color: hsl(var(--atuiKernel_Color-N90));
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 60%);
     background-color: hsl(var(--atuiKernel_Color-N60));
     border-width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 40%);
     background-color: hsl(var(--atuiKernel_Color-N40));
 }

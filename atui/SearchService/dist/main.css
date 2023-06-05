@@ -3,8 +3,117 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@import url("./propositions.css");
-@import url("./searchbar.css");
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+#atuiSearchservices_HeaderPropositions /* Container of propositions */ {
+    display: none;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#atuiSearchservices_HeaderPropositionsRecent,#atuiSearchservices_HeaderPropositionsSuggested
+/* Containers of propositions Recent & suggested */ {
+    margin: 0 20px;
+}
+
+#atuiSearchservices_HeaderPropositionsRecent > h3,#atuiSearchservices_HeaderPropositionsSuggested > h3
+/* Title of containers */ {
+    margin: 0;
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
+}
+
+#atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer
+/* Lists of propositions */ {
+    margin: 10px;
+}
+
+#atuiSearchservices_HeaderPropositionsRecentContainer > a,#atuiSearchservices_HeaderPropositionsSuggestedContainer > a
+/* Propositions */ {
+    color: hsl(var(--atuiKernel_Color-N00));
+    display: block;
+    padding: 5px 0;
+}
+
+/*!
+ * ATUI v0.4.0 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Global */
+
+#atuiSearchservices_HeaderBar /* Searchbar container */ {
+    border-radius: var(--atuiKernel_Borderradius);
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+#atuiSearchservices_HeaderBar > form /* HTML form */ {
+    display: flex;
+    align-items: center;
+}
+
+#atuiSearchservices_Input /* Searchbar */ {
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    outline: none;
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    color: hsl(var(--atuiKernel_Color-N50));
+    font-size: 1.125rem;
+    flex: 1;
+}
+
+#atuiSearchservices_Submit /* Submit image */ {
+    margin: 0 !important;
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+#atuiSearchservices_Submit /* Submit image */ {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    box-sizing: content-box;
+    color: hsl(var(--atuiKernel_Color-N00));
+}
+
+#atuiSearchservices_Input,
+#atuiSearchservices_Submit {
+    background-color: inherit;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) /* Computers */ {
+    #atuiSearchservices_HeaderBar {
+        background-color: hsl(var(--atuiKernel_Color-NFF));
+        border: 1px hsl(var(--atuiKernel_Color-N70)) solid;
+    }
+
+    #atuiSearchservices_Input /* Searchbar */ {
+        display: inline;
+    }
+}
+
+@media (max-width: 767px) /* Smartphones */ {
+    #atuiSearchservices_Input /* Searchbar */ {
+        display: none;
+    }
+
+    #atuiSearchservices_Submit /* Submit button */ {
+        background-color: transparent;
+    }
+}
 
 /* Global */
 
