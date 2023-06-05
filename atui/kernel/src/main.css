@@ -40,8 +40,6 @@
     --atuiKernel_ShadowLight: hsl(var(--atuiKernel_Color-N00) / 20%) 0px 3px 8px; /* #5 */
     --atuiKernel_ShadowMedium: hsl(var(--atuiKernel_Color-N00) / 30%) 0px 5px 15px; /* #3 */
     --atuiKernel_ShadowHeavy: hsl(var(--atuiKernel_Color-N00) / 80%) 0px 20px 30px -10px; /* #20 */
-
-    /* when there will be the new color script, remember to set the color opacity as before, see the git history */
 }
 
 /* Font size list convention : 
@@ -61,10 +59,13 @@
 /* Shadows source : https://getcssscan.com/css-box-shadow-examples
 Look at the # to find the corresponding shadow */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: hsl(var(--atuiKernel_Color-NFF));
-    scroll-behavior: smooth;
 }
 
 body * {
