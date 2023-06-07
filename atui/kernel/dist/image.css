@@ -3,35 +3,31 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-.atuiKernel_SectionImage {
-    padding: 10px;
+.atuiKernel_SectionImage{
+    padding:10px;
 }
 
-.atuiKernel_SectionImage img {
-    border-radius: var(--atuiKernel_Borderradius);
+.atuiKernel_SectionImage img{
+    border-radius:var(--atuiKernel_Borderradius);
 }
 
-.atuiKernel_SectionImage p {
-    text-align: center;
-    color: hsl(var(--atuiKernel_Color-N30));
-    margin: 5px;
-    font-size: 0.875rem;
+.atuiKernel_SectionImage p{
+    text-align:center;
+    color:hsl(var(--atuiKernel_Color-N30));
+    margin:5px;
+    font-size:0.875rem;
 }
 
-/* Responsive */
-
-@media (min-width: 768px) /* Computers */ {
-    .atuiKernel_SectionImage img {
-        margin: 0 10%;
-        width: 80%;
+@media (min-width: 768px){
+    .atuiKernel_SectionImage img{
+        margin:0 10%;
+        width:80%;
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_SectionImage img {
-        margin: 0;
-        width: 100%;
+@media (max-width: 767px){
+    .atuiKernel_SectionImage img{
+        margin:0;
+        width:100%;
     }
 }

@@ -3,151 +3,143 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Common to context menu and tooltip */
-
-.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
-    display: block !important;
+.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip{
+    display:block !important;
 }
 
-.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
-    position: fixed; /* fixed position is obligatory for centered option */
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
-    width: -moz-max-content;
-    width: max-content;
-    visibility: hidden;
+.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip{
+    position:fixed;
+    background-color:hsl(var(--atuiKernel_Color-NFF));
+    border-radius:var(--atuiKernel_Borderradius);
+    box-shadow:var(--atuiKernel_ShadowMedium);
+    width:-moz-max-content;
+    width:max-content;
+    visibility:hidden;
 }
 
-@media (min-width: 480px) /* Tablets and computers */ {
-    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
-        max-width: 30%;
+@media (min-width: 480px){
+    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip{
+        max-width:30%;
     }
 }
 
-@media (max-width: 479.98px) /* Smartphones */ {
-    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip {
-        max-width: 70%;
+@media (max-width: 479.98px){
+    .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip{
+        max-width:70%;
     }
 }
 
-.atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip * {
-    color: hsl(var(--atuiKernel_Color-N00)) !important;
+.atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip *{
+    color:hsl(var(--atuiKernel_Color-N00)) !important;
 }
 
-.atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip * {
-    font-size: 1rem;
-    margin: 0;
+.atuiKernel_PopupContextmenu *, .atuiKernel_PopupTooltip *{
+    font-size:1rem;
+    margin:0;
 }
 
-/* Context menu */
-
-.atuiKernel_PopupContextmenu {
-    padding: 10px 0 !important;
+.atuiKernel_PopupContextmenu{
+    padding:10px 0 !important;
 }
 
-.atuiKernel_PopupContextmenu {
-    z-index: 15;
+.atuiKernel_PopupContextmenu{
+    z-index:15;
 }
 
-.atuiKernel_PopupContextmenu > * {
-    padding: 5px 10px;
+.atuiKernel_PopupContextmenu > *{
+    padding:5px 10px;
 }
 
-@media (pointer: coarse) /* Touch screen */ {
-    .atuiKernel_PopupContextmenu > * {
-        padding: 10px 15px;
+@media (pointer: coarse){
+    .atuiKernel_PopupContextmenu > *{
+        padding:10px 15px;
     }
 }
 
-.atuiKernel_PopupContextmenu > * i:first-child {
-    margin-left: 0 !important;
+.atuiKernel_PopupContextmenu > * i:first-child{
+    margin-left:0 !important;
 }
 
-.atuiKernel_PopupContextmenu > * img:first-child {
-    margin-left: 0 !important;
+.atuiKernel_PopupContextmenu > * img:first-child{
+    margin-left:0 !important;
 }
 
-.atuiKernel_PopupContextmenu > * i:last-child {
-    margin-right: 0 !important;
+.atuiKernel_PopupContextmenu > * i:last-child{
+    margin-right:0 !important;
 }
 
-.atuiKernel_PopupContextmenu > * img:last-child {
-    margin-right: 0 !important;
+.atuiKernel_PopupContextmenu > * img:last-child{
+    margin-right:0 !important;
 }
 
-.atuiKernel_PopupContextmenu i, .atuiKernel_PopupContextmenu img {
-    font-size: 1em !important;
-    width: 1em !important;
-    height: 1em !important;
+.atuiKernel_PopupContextmenu i, .atuiKernel_PopupContextmenu img{
+    font-size:1em !important;
+    width:1em !important;
+    height:1em !important;
 }
 
-.atuiKernel_PopupContextmenu > a {
-    -webkit-text-decoration: none !important;
-    text-decoration: none !important;
+.atuiKernel_PopupContextmenu > a{
+    -webkit-text-decoration:none !important;
+    text-decoration:none !important;
 }
 
-.atuiKernel_PopupContextmenu > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.atuiKernel_PopupContextmenu > a{
+    display:flex;
+    align-items:center;
+    gap:5px;
 }
 
-.atuiKernel_PopupContextmenu > a:hover {
-    background-color: hsl(var(--atuiKernel_Color-A60) / 80%);
+.atuiKernel_PopupContextmenu > a:hover{
+    background-color:hsl(var(--atuiKernel_Color-A60) / 80%);
 }
 
-.atuiKernel_PopupContextmenu > hr {
-    background-color: hsl(var(--atuiKernel_Color-A60));
-    height: 2px;
-    border: 0;
-    margin: 5px 10%;
-    padding: 0;
+.atuiKernel_PopupContextmenu > hr{
+    background-color:hsl(var(--atuiKernel_Color-A60));
+    height:2px;
+    border:0;
+    margin:5px 10%;
+    padding:0;
 }
 
-/* Global Panel */
-
-.atuiKernel_PopupGlobalpanel {
-    display: block !important;
-    width: 80% !important;
+.atuiKernel_PopupGlobalpanel{
+    display:block !important;
+    width:80% !important;
 }
 
-.atuiKernel_PopupGlobalpanel {
-    align-items: normal;
-    position: absolute;
-    visibility: hidden;
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
+.atuiKernel_PopupGlobalpanel{
+    align-items:normal;
+    position:absolute;
+    visibility:hidden;
+    background-color:hsl(var(--atuiKernel_Color-NFF));
+    border-radius:var(--atuiKernel_Borderradius);
+    box-shadow:var(--atuiKernel_ShadowMedium);
 }
 
-.atuiKernel_PopupGlobalpanel > div {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
+.atuiKernel_PopupGlobalpanel > div{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding:20px;
 }
 
-.atuiKernel_PopupGlobalpanel > div div {
-    display: block;
-    margin: 10px;
-    min-width: 20%;
+.atuiKernel_PopupGlobalpanel > div div{
+    display:block;
+    margin:10px;
+    min-width:20%;
 }
 
-.atuiKernel_PopupGlobalpanel > div div p {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    color: hsl(var(--atuiKernel_Color-N00));
+.atuiKernel_PopupGlobalpanel > div div p{
+    font-family:var(--atuiKernel_FontsTitle);
+    font-weight:var(--atuiKernel_TitleBold);
+    color:hsl(var(--atuiKernel_Color-N00));
 }
 
-.atuiKernel_PopupGlobalpanel > div div div a {
-    display: block;
-    margin: 5px;
+.atuiKernel_PopupGlobalpanel > div div div a{
+    display:block;
+    margin:5px;
 }
 
-/* Tooltip */
-
-.atuiKernel_PopupTooltip {
-    z-index: 14;
-    padding: 10px;
+.atuiKernel_PopupTooltip{
+    z-index:14;
+    padding:10px;
 }

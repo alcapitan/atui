@@ -3,123 +3,104 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-.atuiKernel_SectionCard
-/* Container */ {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 10px;
+.atuiKernel_SectionCard{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:flex-start;
+    gap:10px;
 }
 
-.atuiKernel_SectionCard article
-/* Elements */ {
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--atuiKernel_Borderradius);
-    overflow: hidden;
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    position: relative;
-    box-sizing: border-box;
+.atuiKernel_SectionCard article{
+    display:flex;
+    flex-direction:column;
+    border-radius:var(--atuiKernel_Borderradius);
+    overflow:hidden;
+    background-color:hsl(var(--atuiKernel_Color-N90));
+    border:1px hsl(var(--atuiKernel_Color-N50)) solid;
+    position:relative;
+    box-sizing:border-box;
 }
 
-.atuiKernel_SectionCard article > div[class="image"] img
-/* Images */ {
-    width: 100%;
+.atuiKernel_SectionCard article > div[class="image"] img{
+    width:100%;
 }
 
-.atuiKernel_SectionCard article > div[class="text"] > h3,.atuiKernel_SectionCard article > div[class="text"] > p
-/* Texts */ {
-    margin: 0;
-    padding: 10px 20px;
+.atuiKernel_SectionCard article > div[class="text"] > h3,.atuiKernel_SectionCard article > div[class="text"] > p{
+    margin:0;
+    padding:10px 20px;
 }
 
-.atuiKernel_SectionCard article > div[class="text"] > h3
-/* Titles */ {
-    font-family: var(--atuiKernel_FontsTitle);
-    color: hsl(var(--atuiKernel_Color-N00));
+.atuiKernel_SectionCard article > div[class="text"] > h3{
+    font-family:var(--atuiKernel_FontsTitle);
+    color:hsl(var(--atuiKernel_Color-N00));
 }
 
-.atuiKernel_SectionCard article > div[class="text"] > p
-/* Paragraphs */ {
-    text-align: justify;
+.atuiKernel_SectionCard article > div[class="text"] > p{
+    text-align:justify;
 }
 
-/* Responsive */
-
-@media (min-width: 1024px) /* Computers */ {
-    .atuiKernel_SectionCard article {
-        width: calc(33% - 5px);
+@media (min-width: 1024px){
+    .atuiKernel_SectionCard article{
+        width:calc(33% - 5px);
     }
 }
 
-@media (min-width: 480px) and (max-width: 1023.98px) /* Tablets */ {
-    .atuiKernel_SectionCard article {
-        width: calc(50% - 5px);
+@media (min-width: 480px) and (max-width: 1023.98px){
+    .atuiKernel_SectionCard article{
+        width:calc(50% - 5px);
     }
 }
 
-@media (max-width: 479.98px) /* Smartphones */ {
-    .atuiKernel_SectionCard {
-        flex-direction: column;
+@media (max-width: 479.98px){
+    .atuiKernel_SectionCard{
+        flex-direction:column;
     }
 
-    .atuiKernel_SectionCard article {
-        margin: 10px 0;
-        width: 100%;
+    .atuiKernel_SectionCard article{
+        margin:10px 0;
+        width:100%;
     }
 }
 
-/* Standard */
-
-.atuiKernel_SectionCard.optionStandard article > div[class="image"] img
-/* Image */ {
-    margin: 10px;
-    border-radius: var(--atuiKernel_Borderradius);
-    width: calc(100% - 20px);
+.atuiKernel_SectionCard.optionStandard article > div[class="image"] img{
+    margin:10px;
+    border-radius:var(--atuiKernel_Borderradius);
+    width:calc(100% - 20px);
 }
 
-/* Contrast */
-
-.atuiKernel_SectionCard.optionContrast article > div[class="image"]
-/* Image container */ {
-    display: flex;
-    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+.atuiKernel_SectionCard.optionContrast article > div[class="image"]{
+    display:flex;
+    border-bottom:1px hsl(var(--atuiKernel_Color-N50)) solid;
 }
 
-.atuiKernel_SectionCard.optionContrast article > div[class="text"] > h3
-/* Title */ {
-    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    background-color: hsl(var(--atuiKernel_Color-N80));
+.atuiKernel_SectionCard.optionContrast article > div[class="text"] > h3{
+    border-bottom:1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color:hsl(var(--atuiKernel_Color-N80));
 }
 
-/* Overlay */
-
-.atuiKernel_SectionCard.optionOverlay article {
-    background-color: transparent;
+.atuiKernel_SectionCard.optionOverlay article{
+    background-color:transparent;
 }
 
-.atuiKernel_SectionCard.optionOverlay article > div[class="image"] {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
+.atuiKernel_SectionCard.optionOverlay article > div[class="image"]{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
 }
 
-.atuiKernel_SectionCard.optionOverlay article > div[class="image"] img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+.atuiKernel_SectionCard.optionOverlay article > div[class="image"] img{
+    height:100%;
+    -o-object-fit:cover;
+       object-fit:cover;
 }
 
-.atuiKernel_SectionCard.optionOverlay article > div[class="text"] {
-    background: linear-gradient(
+.atuiKernel_SectionCard.optionOverlay article > div[class="text"]{
+    background:linear-gradient(
         to top,
         hsl(var(--atuiKernel_Color-N90) / 70%) 50%,
         hsl(var(--atuiKernel_Color-N90) / 40%) 100%
     );
-    padding-top: 30%;
+    padding-top:30%;
 }

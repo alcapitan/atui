@@ -3,66 +3,64 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Audioplayer */
-
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover {
-    width: 150px;
-    height: 150px;
-    background-color: hsl(var(--atuiKernel_Color-N70));
-    border-radius: var(--atuiKernel_Borderradius);
-    overflow: hidden;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover{
+    width:150px;
+    height:150px;
+    background-color:hsl(var(--atuiKernel_Color-N70));
+    border-radius:var(--atuiKernel_Borderradius);
+    overflow:hidden;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover img {
-    height: 100%;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover img{
+    height:100%;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel, .atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
-    display: flex;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel, .atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard{
+    display:flex;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel {
-    gap: 15px;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel{
+    gap:15px;
 }
 
-@media (min-width: 768px) /* Computers */ {
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
-        margin: 10px 0;
+@media (min-width: 768px){
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard{
+        margin:10px 0;
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 767px){
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel{
+        flex-direction:column;
+        align-items:center;
     }
 
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover, .atuiMediasplayer_Audioplayer .atuiMediasplayer_Information {
-        display: flex;
-        justify-content: center;
-        text-align: center;
+    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover, .atuiMediasplayer_Audioplayer .atuiMediasplayer_Information{
+        display:flex;
+        justify-content:center;
+        text-align:center;
     }
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
-    flex: 1;
-    row-gap: 10px;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard{
+    flex:1;
+    row-gap:10px;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Information > p {
-    font-size: 1.125rem;
-    font-weight: bold;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Information > p{
+    font-size:1.125rem;
+    font-weight:bold;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_InformationTitle {
-    color: hsl(var(--atuiKernel_Color-A40));
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_InformationTitle{
+    color:hsl(var(--atuiKernel_Color-A40));
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Close {
-    display: none;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Close{
+    display:none;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Progressbar {
-    border-radius: 0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
-    overflow: hidden;
+.atuiMediasplayer_Audioplayer .atuiMediasplayer_Progressbar{
+    border-radius:0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
+    overflow:hidden;
 }

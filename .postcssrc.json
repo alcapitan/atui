@@ -1,5 +1,8 @@
 {
     "plugins": {
+        "postcss-discard-comments": {
+            "removeAllButFirst": true
+        },
         "postcss-import": {},
         "postcss-preset-env": {
             "stage": 2

@@ -3,144 +3,132 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-.atuiKernel_Header {
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    position: relative;
-    width: available;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: stretch;
-    z-index: 12;
-    padding: 0 5px;
-    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
+.atuiKernel_Header{
+    background-color:hsl(var(--atuiKernel_Color-N90));
+    position:relative;
+    width:available;
+    width:-webkit-fill-available;
+    width:-moz-available;
+    width:stretch;
+    z-index:12;
+    padding:0 5px;
+    border-bottom:1px solid hsl(var(--atuiKernel_Color-N80));
 }
 
-.atuiKernel_Header * {
-    margin: 0;
+.atuiKernel_Header *{
+    margin:0;
 }
 
-.atuiKernel_Header i, .atuiKernel_Header img {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
+.atuiKernel_Header i, .atuiKernel_Header img{
+    font-size:2.25rem;
+    width:2.25rem;
+    height:2.25rem;
 }
 
-.atuiKernel_Header > div a > i,.atuiKernel_Header > div a > img,.atuiKernel_Header > div div > i,.atuiKernel_Header > div div > img /* Fix icon size on elements with text and icon */ {
-    font-size: 1.125rem;
-    width: 1.125rem;
-    height: 1.125rem;
+.atuiKernel_Header > div a > i,.atuiKernel_Header > div a > img,.atuiKernel_Header > div div > i,.atuiKernel_Header > div div > img{
+    font-size:1.125rem;
+    width:1.125rem;
+    height:1.125rem;
 }
 
-/* Separators */
-
-.atuiKernel_HeaderSpace {
-    flex: 1;
-    border: none;
+.atuiKernel_HeaderSpace{
+    flex:1;
+    border:none;
 }
 
-.atuiKernel_HeaderSplit {
-    width: 1px !important;
-    padding: 0 !important;
+.atuiKernel_HeaderSplit{
+    width:1px !important;
+    padding:0 !important;
 }
 
-.atuiKernel_HeaderSplit {
-    border: 0;
-    background-color: hsl(var(--atuiKernel_Color-N20));
-    height: 1.875rem;
+.atuiKernel_HeaderSplit{
+    border:0;
+    background-color:hsl(var(--atuiKernel_Color-N20));
+    height:1.875rem;
 }
 
-/* Display on specific devices */
-
-@media (min-width: 768px) /* Computers */ {
-    .atuiKernel_Header *.optionMobileonly {
-        display: none;
+@media (min-width: 768px){
+    .atuiKernel_Header *.optionMobileonly{
+        display:none;
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_Header *.optionDesktoponly {
-        display: none;
+@media (max-width: 767px){
+    .atuiKernel_Header *.optionDesktoponly{
+        display:none;
     }
 }
 
-/* Options */
-
-.atuiKernel_Header.optionCarousel {
-    position: absolute;
-    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
-    -webkit-backdrop-filter: var(--atuiKernel_Blur);
-            backdrop-filter: var(--atuiKernel_Blur);
+.atuiKernel_Header.optionCarousel{
+    position:absolute;
+    background-color:hsl(var(--atuiKernel_Color-N90) / 80%);
+    -webkit-backdrop-filter:var(--atuiKernel_Blur);
+            backdrop-filter:var(--atuiKernel_Blur);
 }
 
-.atuiKernel_Header.optionFixed {
-    position: fixed;
+.atuiKernel_Header.optionFixed{
+    position:fixed;
 }
 
-.atuiKernel_Header.optionAccent *, .atuiKernel_Header.optionDark * {
-    color: hsl(var(--atuiKernel_Color-NFF));
+.atuiKernel_Header.optionAccent *, .atuiKernel_Header.optionDark *{
+    color:hsl(var(--atuiKernel_Color-NFF));
 }
 
-.atuiKernel_Header.optionAccent {
-    background-color: hsl(var(--atuiKernel_Color-A20));
+.atuiKernel_Header.optionAccent{
+    background-color:hsl(var(--atuiKernel_Color-A20));
 }
 
-.atuiKernel_Header.optionAccent .atuiKernel_HeaderSplit {
-    background-color: hsl(var(--atuiKernel_Color-A40));
+.atuiKernel_Header.optionAccent .atuiKernel_HeaderSplit{
+    background-color:hsl(var(--atuiKernel_Color-A40));
 }
 
-.atuiKernel_Header.optionDark {
-    background-color: hsl(var(--atuiKernel_Color-N20));
+.atuiKernel_Header.optionDark{
+    background-color:hsl(var(--atuiKernel_Color-N20));
 }
 
-.atuiKernel_Header.optionDark .atuiKernel_HeaderSplit {
-    background-color: hsl(var(--atuiKernel_Color-N80));
+.atuiKernel_Header.optionDark .atuiKernel_HeaderSplit{
+    background-color:hsl(var(--atuiKernel_Color-N80));
 }
 
-.atuiKernel_Header.optionTransparent {
-    background-color: transparent;
-    border-bottom: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+.atuiKernel_Header.optionTransparent{
+    background-color:transparent;
+    border-bottom:none;
+    -webkit-backdrop-filter:none;
+            backdrop-filter:none;
 }
 
-/* Levels */
-
-.atuiKernel_Header > div {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 5px;
-         column-gap: 5px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.atuiKernel_Header > div{
+    display:flex;
+    align-items:center;
+    -moz-column-gap:5px;
+         column-gap:5px;
+    justify-content:space-around;
+    flex-wrap:wrap;
 }
 
-.atuiKernel_Header > div > * {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    width: -moz-max-content;
-    width: max-content;
+.atuiKernel_Header > div > *{
+    padding:5px;
+    display:flex;
+    align-items:center;
+    gap:5px;
+    width:-moz-max-content;
+    width:max-content;
 }
 
-/* Logotype */
-
-.atuiKernel_Header .atuiKernel_Logotype {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.atuiKernel_Header .atuiKernel_Logotype{
+    display:flex;
+    align-items:center;
+    gap:5px;
 }
 
-.atuiKernel_Header .atuiKernel_Logotype * {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    font-size: 1.5em;
+.atuiKernel_Header .atuiKernel_Logotype *{
+    font-family:var(--atuiKernel_FontsTitle);
+    font-weight:var(--atuiKernel_TitleBold);
+    font-size:1.5em;
 }
 
-.atuiKernel_Header .atuiKernel_Logotype i, .atuiKernel_Header .atuiKernel_Logotype img {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
+.atuiKernel_Header .atuiKernel_Logotype i, .atuiKernel_Header .atuiKernel_Logotype img{
+    font-size:2.25rem;
+    width:2.25rem;
+    height:2.25rem;
 }

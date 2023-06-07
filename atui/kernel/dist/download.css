@@ -3,65 +3,61 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-.atuiKernel_SectionDownload /* Element */ {
-    border-radius: var(--atuiKernel_Borderradius);
-    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    padding: 10px;
-    display: flex;
-    align-items: center;
+.atuiKernel_SectionDownload{
+    border-radius:var(--atuiKernel_Borderradius);
+    border:1px hsl(var(--atuiKernel_Color-N50)) solid;
+    background-color:hsl(var(--atuiKernel_Color-N90));
+    padding:10px;
+    display:flex;
+    align-items:center;
 }
 
-.atuiKernel_SectionDownload > div /* Containers */ {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+.atuiKernel_SectionDownload > div{
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
 }
 
-.atuiKernel_SectionDownload > div:first-child /* Metadata container */ {
-    flex: 1;
+.atuiKernel_SectionDownload > div:first-child{
+    flex:1;
 }
 
-.atuiKernel_SectionDownload > div:first-child i {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-    font-size: 60px;
+.atuiKernel_SectionDownload > div:first-child i{
+    width:60px;
+    height:60px;
+    margin-right:10px;
+    font-size:60px;
 }
 
-.atuiKernel_SectionDownload > div:first-child img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-    font-size: 60px;
+.atuiKernel_SectionDownload > div:first-child img{
+    width:60px;
+    height:60px;
+    margin-right:10px;
+    font-size:60px;
 }
 
-.atuiKernel_SectionDownload > div:first-child p /* File name */ {
-    font-weight: bold;
-    font-size: 1.125rem;
-    margin: 0;
+.atuiKernel_SectionDownload > div:first-child p{
+    font-weight:bold;
+    font-size:1.125rem;
+    margin:0;
 }
 
-/* Responsive */
-
-@media (min-width: 768px) /* Computers */ {
-    .atuiKernel_SectionDownload /* Element */ {
-        flex-direction: row;
+@media (min-width: 768px){
+    .atuiKernel_SectionDownload{
+        flex-direction:row;
     }
 
-    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
-        justify-content: flex-end;
+    .atuiKernel_SectionDownload > div:last-child{
+        justify-content:flex-end;
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_SectionDownload /* Element */ {
-        flex-direction: column;
+@media (max-width: 767px){
+    .atuiKernel_SectionDownload{
+        flex-direction:column;
     }
 
-    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
-        justify-content: space-around;
+    .atuiKernel_SectionDownload > div:last-child{
+        justify-content:space-around;
     }
 }

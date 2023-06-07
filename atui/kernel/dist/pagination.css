@@ -3,117 +3,113 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Number */
-
-.atuiKernel_SectionPaginationNumber {
-    display: flex;
-    justify-content: center;
+.atuiKernel_SectionPaginationNumber{
+    display:flex;
+    justify-content:center;
 }
 
-.atuiKernel_SectionPaginationNumber > * {
-    margin: 0;
-    padding: 10px 15px;
-    border-top: 1px solid hsl(var(--atuiKernel_Color-N50));
-    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N50));
-    border-right: 1px solid hsl(var(--atuiKernel_Color-N50));
-    color: hsl(var(--atuiKernel_Color-N00));
+.atuiKernel_SectionPaginationNumber > *{
+    margin:0;
+    padding:10px 15px;
+    border-top:1px solid hsl(var(--atuiKernel_Color-N50));
+    border-bottom:1px solid hsl(var(--atuiKernel_Color-N50));
+    border-right:1px solid hsl(var(--atuiKernel_Color-N50));
+    color:hsl(var(--atuiKernel_Color-N00));
 }
 
-.atuiKernel_SectionPaginationNumber > *:first-child {
-    border-radius: var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
-    border-left: 1px solid hsl(var(--atuiKernel_Color-N50));
+.atuiKernel_SectionPaginationNumber > *:first-child{
+    border-radius:var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
+    border-left:1px solid hsl(var(--atuiKernel_Color-N50));
 }
 
-.atuiKernel_SectionPaginationNumber > *:last-child {
-    border-radius: 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0;
+.atuiKernel_SectionPaginationNumber > *:last-child{
+    border-radius:0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0;
 }
 
-.atuiKernel_SectionPaginationNumber > *:hover {
-    background-color: hsl(var(--atuiKernel_Color-A90));
+.atuiKernel_SectionPaginationNumber > *:hover{
+    background-color:hsl(var(--atuiKernel_Color-A90));
 }
 
 .atuiKernel_SectionPaginationNumber > *:hover,
-.atuiKernel_SectionPaginationNumber > p {
-    color: hsl(var(--atuiKernel_Color-A50));
+.atuiKernel_SectionPaginationNumber > p{
+    color:hsl(var(--atuiKernel_Color-A50));
 }
 
-.atuiKernel_SectionPaginationNumber > p:hover {
-    background-color: transparent;
+.atuiKernel_SectionPaginationNumber > p:hover{
+    background-color:transparent;
 }
 
-.atuiKernel_SectionPaginationNumber a:active {
-    -webkit-text-decoration: none;
-    text-decoration: none;
+.atuiKernel_SectionPaginationNumber a:active{
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
-.atuiKernel_SectionPaginationNumber a:visited {
-    -webkit-text-decoration: none;
-    text-decoration: none;
+.atuiKernel_SectionPaginationNumber a:visited{
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
-.atuiKernel_SectionPaginationNumber a:hover {
-    -webkit-text-decoration: none;
-    text-decoration: none;
+.atuiKernel_SectionPaginationNumber a:hover{
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
-/* Text */
-
-.atuiKernel_SectionPaginationText {
-    display: flex;
-    gap: 15px;
-    width: 100%;
+.atuiKernel_SectionPaginationText{
+    display:flex;
+    gap:15px;
+    width:100%;
 }
 
-@media (min-width: 768px) /* Computers */ {
-    .atuiKernel_SectionPaginationText {
-        flex-direction: row;
+@media (min-width: 768px){
+    .atuiKernel_SectionPaginationText{
+        flex-direction:row;
     }
 }
 
-@media (max-width: 767px) /* Smartphones */ {
-    .atuiKernel_SectionPaginationText {
-        flex-direction: column;
+@media (max-width: 767px){
+    .atuiKernel_SectionPaginationText{
+        flex-direction:column;
     }
 }
 
-.atuiKernel_SectionPaginationText a {
-    border: 1px solid hsl(var(--atuiKernel_Color-N00));
-    border-radius: var(--atuiKernel_Borderradius);
-    padding: 15px;
-    flex: 1;
+.atuiKernel_SectionPaginationText a{
+    border:1px solid hsl(var(--atuiKernel_Color-N00));
+    border-radius:var(--atuiKernel_Borderradius);
+    padding:15px;
+    flex:1;
 }
 
-.atuiKernel_SectionPaginationText a:active {
-    -webkit-text-decoration: none;
-    text-decoration: none;
+.atuiKernel_SectionPaginationText a:active{
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
-.atuiKernel_SectionPaginationText a:visited {
-    -webkit-text-decoration: none;
-    text-decoration: none;
+.atuiKernel_SectionPaginationText a:visited{
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
-.atuiKernel_SectionPaginationText a:hover {
-    -webkit-text-decoration: none;
-    text-decoration: none;
+.atuiKernel_SectionPaginationText a:hover{
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
-.atuiKernel_SectionPaginationText a:hover {
-    border-width: 2px;
-    border-color: hsl(var(--atuiKernel_Color-A40));
-    background-color: hsl(var(--atuiKernel_Color-A90));
+.atuiKernel_SectionPaginationText a:hover{
+    border-width:2px;
+    border-color:hsl(var(--atuiKernel_Color-A40));
+    background-color:hsl(var(--atuiKernel_Color-A90));
 }
 
-.atuiKernel_SectionPaginationText a p {
-    color: hsl(var(--atuiKernel_Color-N00));
-    margin: 0;
-    text-align: center;
+.atuiKernel_SectionPaginationText a p{
+    color:hsl(var(--atuiKernel_Color-N00));
+    margin:0;
+    text-align:center;
 }
 
-.atuiKernel_SectionPaginationText a:hover p {
-    color: hsl(var(--atuiKernel_Color-A40));
+.atuiKernel_SectionPaginationText a:hover p{
+    color:hsl(var(--atuiKernel_Color-A40));
 }
 
-.atuiKernel_SectionPaginationText a p:first-child {
-    margin-bottom: 10px;
+.atuiKernel_SectionPaginationText a p:first-child{
+    margin-bottom:10px;
 }

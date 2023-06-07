@@ -3,35 +3,29 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-#atuiSearchservices_HeaderPropositions /* Container of propositions */ {
-    display: none;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px;
+#atuiSearchservices_HeaderPropositions{
+    display:none;
+    width:100%;
+    margin-top:5px;
+    margin-bottom:10px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecent,#atuiSearchservices_HeaderPropositionsSuggested
-/* Containers of propositions Recent & suggested */ {
-    margin: 0 20px;
+#atuiSearchservices_HeaderPropositionsRecent,#atuiSearchservices_HeaderPropositionsSuggested{
+    margin:0 20px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecent > h3,#atuiSearchservices_HeaderPropositionsSuggested > h3
-/* Title of containers */ {
-    margin: 0;
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
+#atuiSearchservices_HeaderPropositionsRecent > h3,#atuiSearchservices_HeaderPropositionsSuggested > h3{
+    margin:0;
+    font-family:var(--atuiKernel_FontsTitle);
+    font-weight:var(--atuiKernel_TitleBold);
 }
 
-#atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer
-/* Lists of propositions */ {
-    margin: 10px;
+#atuiSearchservices_HeaderPropositionsRecentContainer,#atuiSearchservices_HeaderPropositionsSuggestedContainer{
+    margin:10px;
 }
 
-#atuiSearchservices_HeaderPropositionsRecentContainer > a,#atuiSearchservices_HeaderPropositionsSuggestedContainer > a
-/* Propositions */ {
-    color: hsl(var(--atuiKernel_Color-N00));
-    display: block;
-    padding: 5px 0;
+#atuiSearchservices_HeaderPropositionsRecentContainer > a,#atuiSearchservices_HeaderPropositionsSuggestedContainer > a{
+    color:hsl(var(--atuiKernel_Color-N00));
+    display:block;
+    padding:5px 0;
 }

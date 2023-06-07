@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   Scroll-behaviour was not smooth.
+-   Remove comments in CSS dist files except unique licensing comment.
 
 ## [0.4.0] - 2023-05-27
 
