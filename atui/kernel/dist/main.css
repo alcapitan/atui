@@ -501,6 +501,7 @@
     height:-moz-available;
     height:stretch;
     box-sizing:border-box;
+    text-align:center;
 }
 
 :root{
