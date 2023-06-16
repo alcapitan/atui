@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove comments in CSS dist files except unique licensing comment.
 -   Prevent default `<form>` submission in SearchServices.
 -   Remove color dimming in dark mode.
+-   Remove the underlining of compact contact icons when the mouse hovers over them.
 
 ## [0.4.0] - 2023-05-27
 

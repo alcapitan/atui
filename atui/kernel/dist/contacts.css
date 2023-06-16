@@ -87,6 +87,8 @@
 
 #atuiKernel_ToolsContactCompact > a{
     margin-right:15px;
+    -webkit-text-decoration:none;
+    text-decoration:none;
 }
 
 #atuiKernel_ToolsContactCompact > a > i{
