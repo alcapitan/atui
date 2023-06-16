@@ -124,4 +124,10 @@ function atuiSearchservices_HeaderPropositionsGenerate() {
     }
   } catch {}
 }
+
+/* Prevent default <form> submission */
+
+document.querySelector("#atuiSearchservices_HeaderBar form").addEventListener("submit", function (event) {
+  event.preventDefault();
+});
 //# sourceMappingURL=main.js.map

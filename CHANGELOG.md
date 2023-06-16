@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Scroll-behaviour was not smooth.
 -   Remove comments in CSS dist files except unique licensing comment.
+-   Prevent default `<form>` submission in SearchServices.
 
 ## [0.4.0] - 2023-05-27
 
