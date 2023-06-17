@@ -20,6 +20,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove the underlining of compact contact icons when the mouse hovers over them.
 -   Center text in Carousel slide content.
 
+### Removed
+
+-   Delete about page.
+
 ## [0.4.0] - 2023-05-27
 
 ### Added
