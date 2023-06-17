@@ -33,11 +33,21 @@ Put this line in the HTML tag `<head>` :
 />
 ```
 
+<details>
+    <summary>Nightly version (only for developers !)</summary>
+    The direct-from-repo CSS link is `https://raw.githubusercontent.com/alcapitan/atui/dev/atui/kernel/dist/dist.css`.
+</details>
+
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.0/atui/kernel/dist/dist.js"></script>
 ```
+
+<details>
+    <summary>Nightly version (only for developers !)</summary>
+    The direct-from-repo JavaScript link is `https://raw.githubusercontent.com/alcapitan/atui/dev/atui/kernel/dist/dist.js`.
+</details>
 
 Then, change the links above for reach extensions files.
 
