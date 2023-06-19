@@ -535,8 +535,6 @@ function atuiKernel_FooterLastedited(day, month, year) {
 
   month = atuiKernel_FooterInfoLasteditedConvertMonth[month - 1];
   atuiKernel_FooterInfoLasteditedText.innerHTML = "Latest modification on " + day + " " + month + " " + year + ". ";
-  atuiKernel_FooterInfoLasteditedText.setAttribute("href", "./atui/kernel/about.html");
-  atuiKernel_FooterInfoLasteditedText.setAttribute("target", "_blank");
   atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText, atuiKernel_FooterInfo.firstChild);
 }
 //# sourceMappingURL=main.js.map

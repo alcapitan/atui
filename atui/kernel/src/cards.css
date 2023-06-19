@@ -26,9 +26,15 @@
     box-sizing: border-box;
 }
 
+.atuiKernel_SectionCard article > div[class="image"] {
+    display: flex;
+    justify-content: center;
+}
+
 .atuiKernel_SectionCard article > div[class="image"] img
 /* Images */ {
     width: 100%;
+    max-width: 300px;
 }
 
 .atuiKernel_SectionCard article > div[class="text"] > :is(h3,p)
@@ -86,7 +92,6 @@
 
 .atuiKernel_SectionCard.optionContrast article > div[class="image"]
 /* Image container */ {
-    display: flex;
     border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
 }
 
@@ -112,6 +117,7 @@
 .atuiKernel_SectionCard.optionOverlay article > div[class="image"] img {
     height: 100%;
     object-fit: cover;
+    max-width: none;
 }
 
 .atuiKernel_SectionCard.optionOverlay article > div[class="text"] {

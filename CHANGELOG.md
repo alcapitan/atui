@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 -   Replace imports on CSS dist files by imported files content.
+-   Set max-width for Cards' images
 
 ### Fixed
 
