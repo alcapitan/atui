@@ -1,6 +1,6 @@
 {
     "name": "@alcapitan/atui",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Front-end library to build your website easier.",
     "main": "index.html",
     "scripts": {
