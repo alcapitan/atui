@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Let nightly CSS/JS links in the README.
 
+## [0.4.1] - 2023-06-20
+
 ### Changed
 
 -   Replace imports on CSS dist files by imported files content.

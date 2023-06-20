@@ -29,7 +29,7 @@ Put this line in the HTML tag `<head>` :
 <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.0/atui/kernel/dist/dist.css"
+    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.1/atui/kernel/dist/dist.css"
 />
 ```
 
@@ -41,7 +41,7 @@ Put this line in the HTML tag `<head>` :
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.0/atui/kernel/dist/dist.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.1/atui/kernel/dist/dist.js"></script>
 ```
 
 <details>
