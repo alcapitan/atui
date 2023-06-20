@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove color dimming in dark mode.
 -   Remove the underlining of compact contact icons when the mouse hovers over them.
 -   Center text in Carousel slide content.
+-   Polish Cards' margin and padding.
 
 ### Removed
 

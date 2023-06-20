@@ -39,8 +39,7 @@
 
 .atuiKernel_SectionCard article > div[class="text"] > :is(h3,p)
 /* Texts */ {
-    margin: 0;
-    padding: 10px 20px;
+    margin: 10px 15px;
 }
 
 .atuiKernel_SectionCard article > div[class="text"] > h3
@@ -52,6 +51,10 @@
 .atuiKernel_SectionCard article > div[class="text"] > p
 /* Paragraphs */ {
     text-align: justify;
+}
+
+.atuiKernel_SectionCard .atuiKernel_Button {
+    margin-top: 0;
 }
 
 /* Responsive */
@@ -99,6 +102,8 @@
 /* Title */ {
     border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
     background-color: hsl(var(--atuiKernel_Color-N80));
+    margin: 0;
+    padding: 10px 15px;
 }
 
 /* Overlay */
