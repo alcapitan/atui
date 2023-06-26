@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Let nightly CSS/JS links in the README.
 
+### Changed
+
+-   Pratical JS function `findElement` is renamed to `atuiKernel_ToolsFindElement`.
+-   `atuiKernel_ToolsFindElement` returns only arrays.
+-   JS function `stopAllMedia()` is renamed to `atuiMediasplayer_StopAllMedia()`.
+
+### Removed
+
+-   The ability to assign and play media with HTML attributes has been removed due to JSON incompatibility. From now on, you can only do this with JavaScript function calls.
+
 ## [0.4.1] - 2023-06-20
 
 ### Changed

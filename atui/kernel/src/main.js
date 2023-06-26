@@ -26,30 +26,27 @@ function atuiKernel_MetadataDisplay(infos) {
 
 /* Find associated element */
 
-function findElement(element, query, stop = null) {
+function atuiKernel_ToolsFindElement(element, query, stop = null) {
     if (element.querySelectorAll(query).length === 1) {
         // If element has query.
-        return element.querySelector(query);
+        return [element.querySelector(query)];
     } else if (element.querySelectorAll(query).length > 1) {
-        // If element has several query.
-        let list = [];
-        for (let counter = 0; counter < element.querySelectorAll(query).length; counter++) {
-            list.push(element.querySelectorAll(query)[counter]);
-        }
-        return list;
+        // If element has several queries.
+        return Array.from(element.querySelectorAll(query));
     } else if (Array.from(document.querySelectorAll(query)).includes(element)) {
         // If element is query.
-        return element;
+        return [element];
     } else if (Array.from(document.querySelectorAll(stop)).includes(element)) {
         // If element is stop.
         console.error(`No "${query}" element was found in "${stop}".`);
-        return null;
+        return [];
     } else if (element.parentNode === null) {
         // If element is root.
         console.error(`No "${query}" element was found in the webpage.`);
+        return [];
     } else {
         // The parent of element may have query.
-        return findElement(element.parentNode, query, stop);
+        return atuiKernel_ToolsFindElement(element.parentNode, query, stop);
     }
 }
 
@@ -182,7 +179,7 @@ function atuiKernel_ColoraccentMetatag() {
 /* Pop-up */
 
 function atuiKernel_PopupSetup(listener) {
-    const popup = findElement(listener, listener.getAttribute("data-vk-popup-assign"));
+    const popup = atuiKernel_ToolsFindElement(listener, listener.getAttribute("data-vk-popup-assign"))[0];
 
     let options = {
         type: "default",
@@ -433,12 +430,12 @@ let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
 
 const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-        let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
-        let carouselContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
-
-        if (!Array.isArray(carouselContent)) {
-            carouselContent = [carouselContent];
-        }
+        let carousel = atuiKernel_ToolsFindElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent")[0];
+        let carouselContent = atuiKernel_ToolsFindElement(
+            header,
+            ".atuiKernel_Carousel > div > div",
+            ".atuiKernel_BodyContent"
+        );
 
         carousel.style.minHeight = header.offsetHeight * 2 + "px";
         carouselContent.forEach((element) => {
