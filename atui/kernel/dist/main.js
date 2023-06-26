@@ -446,6 +446,21 @@ const atuiKernel_HeaderFixCarousel = () => {
 atuiKernel_HeaderFixCarousel();
 window.addEventListener("resize", atuiKernel_HeaderFixCarousel);
 
+/* Modal */
+
+function atuiKernel_ModalShow(modalId) {
+  const modalBackground = document.getElementById(modalId);
+  modalBackground.classList.add("optionShow");
+
+  function handleClickOutsideModal(event) {
+    if (event.target === modalBackground) {
+      modalBackground.classList.remove("optionShow");
+    }
+  }
+
+  document.addEventListener("click", handleClickOutsideModal);
+}
+
 /* Tabs */
 
 document.querySelectorAll(".atuiKernel_SectionTabs").forEach((tabsContainer) => {

@@ -66,3 +66,7 @@ document.getElementById("playVideo").addEventListener("click", () => {
     });
     atuiMediasplayer_Run("videoplayer");
 });
+
+document.getElementById("showModal").addEventListener("click", () => {
+    atuiKernel_ModalShow("modalPreview");
+});

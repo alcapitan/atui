@@ -1276,6 +1276,46 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     padding:10px 20px;
 }
 
+.atuiKernel_Modal{
+    margin:0 !important;
+}
+
+.atuiKernel_Modal{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:hsla(0, 0%, 20%, 0.7);
+    background-color:hsl(var(--atuiKernel_Color-N20) / 70%);
+    z-index:16;
+    overflow-y:auto;
+    max-height:100vh;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    display:none;
+}
+
+.atuiKernel_Modal.optionShow{
+    display:flex;
+}
+
+.atuiKernel_Modal > div{
+    background-color:hsl(0, 0%, 100%);
+    background-color:hsl(var(--atuiKernel_Color-NFF));
+    border-radius:10px;
+    border-radius:var(--atuiKernel_Borderradius);
+    box-shadow:hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
+    box-shadow:var(--atuiKernel_ShadowMedium);
+    padding:20px;
+    min-width:60%;
+    min-height:20%;
+    max-width:80%;
+    max-height:80%;
+}
+
 .atuiKernel_NavigationSectionImgbig{
     display:flex;
     justify-content:space-evenly;
