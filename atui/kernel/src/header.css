@@ -116,6 +116,18 @@
     width: max-content;
 }
 
+.atuiKernel_Header > div.optionScrollable {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: unset;
+    flex-wrap: nowrap;
+}
+
+.atuiKernel_Header > div.optionScrollable > * {
+    flex: 0 0 max-content;
+    scroll-snap-align: start;
+}
+
 /* Logotype */
 
 .atuiKernel_Header .atuiKernel_Logotype {

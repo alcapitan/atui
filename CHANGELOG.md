@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Let nightly CSS/JS links in the README.
 -   Create Modal.
 -   Create `.atuiKernel_Slider`.
+-   Add `.optionScrollable` for `.atuiKernel_Header` levels.
 
 ### Changed
 
