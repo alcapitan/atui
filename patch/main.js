@@ -11,7 +11,7 @@ const testActionBtnNotif = () => {
 
 document.getElementById("pushNotification").addEventListener("click", function () {
     atuiKernel_NotificationPush({
-        system: false,
+        type: "atui",
         icon: "flask",
         image: "patch/icons/logo.png",
         title: "autogen notif",
@@ -27,6 +27,27 @@ document.getElementById("pushNotification").addEventListener("click", function (
             },
         ],
         link: "https://alcapitan.github.io/atui/",
+    });
+});
+
+document.getElementById("pushNotificationMini").addEventListener("click", function () {
+    atuiKernel_NotificationPush({
+        type: "atui-mini",
+        text: "This is a mini notification !",
+        buttons: [
+            {
+                text: "that's cool",
+                action: () => {
+                    console.log("mini notif seems cool :-)");
+                },
+            },
+            {
+                text: "it sucks",
+                action: () => {
+                    console.log("argh someone said that mini notif sucks >:-(");
+                },
+            },
+        ],
     });
 });
 

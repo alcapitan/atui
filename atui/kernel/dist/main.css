@@ -1298,8 +1298,8 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     right:0;
     bottom:0;
     left:0;
-    background-color:hsla(0, 0%, 20%, 0.7);
-    background-color:hsl(var(--atuiKernel_Color-N20) / 70%);
+    background-color:hsla(0, 0%, 40%, 0.7);
+    background-color:hsl(var(--atuiKernel_Color-N40) / 70%);
     z-index:16;
     overflow-y:auto;
     max-height:100vh;
@@ -1322,6 +1322,8 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     box-shadow:hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
     box-shadow:var(--atuiKernel_ShadowMedium);
     padding:20px;
+    width:-moz-fit-content;
+    width:fit-content;
     min-width:60%;
     min-height:20%;
     max-width:80%;
@@ -1587,6 +1589,21 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
 
 .atuiKernel_Notification > section p{
     margin:0;
+}
+
+.atuiKernel_Notification.optionMini{
+    padding:10px 20px;
+}
+
+.atuiKernel_Notification.optionMini > header p{
+    font-weight:normal;
+    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family:var(--atuiKernel_FontsText);
+    font-size:1rem;
+}
+
+.atuiKernel_Notification.optionMini > section{
+    display:none;
 }
 
 .atuiKernel_SectionPaginationNumber{

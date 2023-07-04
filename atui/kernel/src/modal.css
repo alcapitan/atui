@@ -6,7 +6,7 @@
 .atuiKernel_Modal /* Background */ {
     position: fixed;
     inset: 0;
-    background-color: hsl(var(--atuiKernel_Color-N20) / 70%);
+    background-color: hsl(var(--atuiKernel_Color-N40) / 70%);
     z-index: 16;
     overflow-y: auto;
     max-height: 100vh;
@@ -27,7 +27,7 @@
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
     padding: 20px;
-    min-width: 60%;
+    min-width: 40%;
     min-height: 20%;
     max-width: 80%;
     max-height: 80%;

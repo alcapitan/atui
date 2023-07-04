@@ -56,3 +56,17 @@
 .atuiKernel_Notification > section p{
     margin:0;
 }
+
+.atuiKernel_Notification.optionMini{
+    padding:10px 20px;
+}
+
+.atuiKernel_Notification.optionMini > header p{
+    font-weight:normal;
+    font-family:var(--atuiKernel_FontsText);
+    font-size:1rem;
+}
+
+.atuiKernel_Notification.optionMini > section{
+    display:none;
+}

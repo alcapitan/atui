@@ -10,15 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Let nightly CSS/JS links in the README.
--   Create Modal.
+-   Create `.atuiKernel_Modal`.
 -   Create `.atuiKernel_Slider`.
 -   Add `.optionScrollable` for `.atuiKernel_Header` levels.
+-   Add `.optionMini` for `.atuiKernel_Notification`.
 
 ### Changed
 
 -   Pratical JS function `findElement` is renamed to `atuiKernel_ToolsFindElement`.
 -   `atuiKernel_ToolsFindElement` returns only arrays.
 -   JS function `stopAllMedia()` is renamed to `atuiMediasplayer_StopAllMedia()`.
+-   Change `system` Notification key to `type`.
 
 ### Removed
 

@@ -311,35 +311,44 @@ function atuiKernel_NotificationPush(options) {
         // Create the notification element
         const notification = document.createElement("div");
         notification.classList.add("atuiKernel_Notification");
+        if (options.type === "atui-mini") notification.classList.add("optionMini");
 
-        // Create the header element
+        // Create the icon element in the header
         const header = document.createElement("header");
         let icon;
-        if (options.image) {
-            icon = document.createElement("img");
-            icon.setAttribute("src", options.image);
-        } else if (options.icon) {
-            icon = document.createElement("i");
-            icon.classList.add("ti", `ti-${options.icon}`);
+        if (options.image || options.icon) {
+            if (options.image) {
+                icon = document.createElement("img");
+                icon.setAttribute("src", options.image);
+            } else if (options.icon) {
+                icon = document.createElement("i");
+                icon.classList.add("ti", `ti-${options.icon}`);
+            }
+            header.appendChild(icon);
         }
+
+        // Create the title element in the header
         const title = document.createElement("p");
-        title.textContent = options.title;
-        header.appendChild(icon);
+        title.textContent = options.type === "atui-mini" ? options.text : options.title;
         header.appendChild(title);
+
         notification.appendChild(header);
 
-        // Create the section element
-        const section = document.createElement("section");
-        const content = document.createElement("p");
-        content.innerHTML = options.text;
-        section.appendChild(content);
-        notification.appendChild(section);
+        if (options.type !== "atui-mini") {
+            // Create the section element
+            const section = document.createElement("section");
+            const content = document.createElement("p");
+            content.innerHTML = options.text;
+            section.appendChild(content);
+            notification.appendChild(section);
+        }
 
         // Create the footer element
         const footer = document.createElement("footer");
         options.buttons.forEach((button) => {
             const buttonElement = document.createElement("div");
-            buttonElement.classList.add("atuiKernel_Button", "optionAccent", `option${button.option}`);
+            buttonElement.classList.add("atuiKernel_Button", "optionAccent");
+            if (button.option && button.option !== "") buttonElement.classList.add(`option${button.option}`);
             const buttonTextElement = document.createElement("p");
             buttonTextElement.textContent = button.text;
             buttonElement.appendChild(buttonTextElement);
@@ -403,14 +412,14 @@ function atuiKernel_NotificationPush(options) {
         }
 
         // Assert notification options
-        if (!options.title || options.title === "") {
+        if ((!options.title || options.title === "") && options.type !== "atui-mini") {
             return console.error("Notification should have a title.");
         }
 
         // Display the notification
-        if (options.system) {
+        if (options.type === "system") {
             systemPush();
-        } else {
+        } else if (options.type.startsWith("atui")) {
             internPush();
             if (!("sound" in options)) {
                 // Default sound
@@ -421,6 +430,8 @@ function atuiKernel_NotificationPush(options) {
                 const sound = new Audio(options.sound);
                 sound.play();
             }
+        } else {
+            console.error(`Notification type ${options.type} doesn't exist.`);
         }
     });
 }
