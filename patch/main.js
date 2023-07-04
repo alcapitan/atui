@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(26, 6, 2023);
+atuiKernel_FooterLastedited(4, 7, 2023);
 
 const testActionBtnNotif = () => {
     console.log("coucou milan !");

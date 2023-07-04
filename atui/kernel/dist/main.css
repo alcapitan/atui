@@ -2161,6 +2161,18 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     color:hsl(var(--atuiKernel_Color-N20));
 }
 
+.atuiKernel_Slider{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+}
+
+.atuiKernel_Slider > *{
+    flex:0 0 max-content;
+    scroll-snap-align:start;
+}
+
 .atuiKernel_SectionTable table{
     border-collapse:collapse;
 }
