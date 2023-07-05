@@ -1322,9 +1322,7 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     box-shadow:hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
     box-shadow:var(--atuiKernel_ShadowMedium);
     padding:20px;
-    width:-moz-fit-content;
-    width:fit-content;
-    min-width:60%;
+    min-width:40%;
     min-height:20%;
     max-width:80%;
     max-height:80%;
