@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Create `.atuiKernel_Slider`.
 -   Add `.optionScrollable` for `.atuiKernel_Header` levels.
 -   Add `.optionMini` for `.atuiKernel_Notification`.
+-   Add `.optionGroup` for Input containers.
+-   Implement again `.atuiKernel_Scrolltop`.
+-   Set an instable image support in `.atuiKernel_SectionParagraph` titles.
+-   Create `.atuiKernel_List`.
 
 ### Changed
 
@@ -21,10 +25,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   `atuiKernel_ToolsFindElement` returns only arrays.
 -   JS function `stopAllMedia()` is renamed to `atuiMediasplayer_StopAllMedia()`.
 -   Change `system` Notification key to `type`.
+-   Hardly enlight footer's CSS code and remove almost all specific components.
+-   `.atuiKernel_Logotype` become a global component, not only for Header.
+-   Move some CSS styles of HTML `<h*>` to global.
+-   Hardly enlight Licensing and change features.
+-   Some light visual changes to `.atuiKernel_PopupGlobalpanel`.
+-   Rename `.atuiKernel_SectionList` to `.atuiKernel_Group` due to conflicting names.
+-   Remove the gray background color of the HTML `<input>` tags and enligh borders.
 
 ### Removed
 
 -   The ability to assign and play media with HTML attributes has been removed due to JSON incompatibility. From now on, you can only do this with JavaScript function calls.
+-   Remove all Contacts components. These components have been replaced with common buttons and inputs.
+-   Remove all form and fieldset containers' CSS properties for free use.
 
 ## [0.4.1] - 2023-06-20
 

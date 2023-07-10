@@ -154,19 +154,19 @@
     font-family: var(--atuiKernel_FontsTitle);
 }
 
-/* List */
+/* Group */
 
-.atuiKernel_SectionList {
+.atuiKernel_Group {
     display: flex;
     flex-direction: column;
 }
 
-.atuiKernel_SectionList > * {
+.atuiKernel_Group > * {
     margin: 0;
     padding: 15px 20px;
 }
 
-.atuiKernel_SectionList > *:not(:last-child) {
+.atuiKernel_Group > *:not(:last-child) {
     border-color: hsl(var(--atuiKernel_Color-N80));
     border-style: solid;
     border-width: 0 0 2px;
@@ -197,4 +197,67 @@
 
 .atuiKernel_Spinner.optionDark > i {
     color: hsl(var(--atuiKernel_Color-N20));
+}
+
+/* List */
+
+dl.atuiKernel_List :is(dt, dd) {
+    margin: 5px 0;
+}
+
+dl.atuiKernel_List dt {
+    font-weight: bold;
+}
+
+dl.atuiKernel_List dd {
+    margin-left: 10px;
+}
+
+/* Scrolltop */
+
+.atuiKernel_Scrolltop {
+    border: none !important;
+    border-radius: var(--atuiKernel_Borderradius);
+    color: hsl(var(--atuiKernel_Color-A20)) !important;
+    background-color: hsl(var(--atuiKernel_Color-A80));
+    position: fixed;
+    z-index: 13;
+    bottom: 30px;
+    right: 40px;
+    font-size: 2.25rem !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    box-shadow: var(--atuiKernel_ShadowLight);
+    display: none;
+}
+
+@media (width < 480px) /* Smartphones */ {
+    .atuiKernel_Scrolltop {
+        right: 30px;
+    }
+}
+
+.atuiKernel_Scrolltop.optionActive {
+    display: block;
+}
+
+/* Logotype */
+
+.atuiKernel_Logotype {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.atuiKernel_Logotype * {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.atuiKernel_Logotype :is(i, img) {
+    font-size: 2.25rem !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
 }

@@ -1,0 +1,19 @@
+/*!
+ * ATUI v0.4.1 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+.atuiKernel_Licensing {
+    margin: 10px 0;
+    display: flex;
+    gap: 30px;
+}
+
+.atuiKernel_Licensing * {
+    color: hsl(var(--atuiKernel_Color-N60));
+    margin: 0;
+}
+
+.atuiKernel_Footer .atuiKernel_Licensing * {
+    color: hsl(var(--atuiKernel_Color-A60));
+}

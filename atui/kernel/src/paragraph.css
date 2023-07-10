@@ -11,9 +11,6 @@
 
 .atuiKernel_SectionParagraph :is(h1, h2, h3, h4, h5, h6) {
     color: hsl(var(--atuiKernel_Color-A40));
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    margin: 15px 0;
 }
 
 .atuiKernel_SectionParagraph a {
@@ -32,4 +29,38 @@
     display: block;
     margin: 5px 0 0 10px;
     font-size: 0.875rem;
+}
+
+/* Images in titles */
+
+/* These values are linked with main.css values. */
+
+/* Don't need to do that with icons */
+
+.atuiKernel_SectionParagraph :is(h1, h2, h3, h4, h5, h6) img {
+    vertical-align: middle;
+}
+
+.atuiKernel_SectionParagraph h1 img {
+    height: 2.25rem;
+}
+
+.atuiKernel_SectionParagraph h2 img {
+    height: 1.875rem;
+}
+
+.atuiKernel_SectionParagraph h3 img {
+    height: 1.5rem;
+}
+
+.atuiKernel_SectionParagraph h4 img {
+    height: 1rem;
+}
+
+.atuiKernel_SectionParagraph h5 img {
+    height: 0.875rem;
+}
+
+.atuiKernel_SectionParagraph h6 img {
+    height: 0.625rem;
 }

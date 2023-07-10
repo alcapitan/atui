@@ -3,26 +3,20 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Metadata */
+/* Licensing */
 
-const atuiKernel_Metadata = {
-  name: "ATUI",
-  author: "alcapitan (on GitHub)",
-  version: "v0.4.1",
-  website: "https://github.com/alcapitan/atui",
-  in_development: false
-};
-atuiKernel_MetadataDisplay(atuiKernel_Metadata);
+const atuiKernel_Version = "0.4.1";
 
-/* Metadata display */
+document.querySelectorAll(".atuiKernel_LicensingAtui").forEach((link) => {
+  link.setAttribute("href", "https://github.com/alcapitan/atui/");
+  link.setAttribute("target", "_blank");
+  link.textContent = `This website is powered by ATUI v${atuiKernel_Version}.`;
+});
 
-function atuiKernel_MetadataDisplay(infos) {
-  console.group("Metadata of " + infos["name"]);
-  console.log("Author : " + infos["author"]);
-  console.log("Version : " + infos["version"]);
-  console.log("Website : " + infos["website"]);
-  console.groupEnd();
+function atuiKernel_PrintAtuiLicensing() {
+  console.info(`This website is powered by ATUI v${atuiKernel_Version} (https://github.com/alcapitan/atui).`);
 }
+atuiKernel_PrintAtuiLicensing();
 
 /* Find associated element */
 
@@ -514,50 +508,21 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
   });
 });
 
-/* Footer info */
+/* Scrolltop */
 
-try {
-  const atuiKernel_FooterInfo = document.getElementById("atuiKernel_FooterInfo");
-} catch {}
+document.querySelectorAll(".atuiKernel_Scrolltop").forEach((button) => {
+  button.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0
+    });
+  });
 
-function atuiKernel_FooterLastedited(day, month, year) {
-  /* Warning date not updated */
-  const atuiKernel_FooterInfoDate = new Date();
-  if (
-  (atuiKernel_FooterInfoDate.getDate() != day ||
-  atuiKernel_FooterInfoDate.getMonth() + 1 != month ||
-  atuiKernel_FooterInfoDate.getFullYear() != year) &&
-  atuiKernel_Metadata["in_development"])
-  {
-    console.warn("The last modification date isn't up to date. ");
-  }
-
-  /* Based on ATUI */
-  const atuiKernel_FooterInfoBased = document.createElement("a");
-  atuiKernel_FooterInfoBased.setAttribute("href", atuiKernel_Metadata["website"]);
-  atuiKernel_FooterInfoBased.setAttribute("target", "_blank");
-  atuiKernel_FooterInfoBased.innerHTML =
-  "This website uses " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + " . ";
-  atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
-
-  /* Last modification of this website */
-  const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
-  const atuiKernel_FooterInfoLasteditedConvertMonth = [
-  "january",
-  "february",
-  "march",
-  "april",
-  "may",
-  "june",
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december"];
-
-  month = atuiKernel_FooterInfoLasteditedConvertMonth[month - 1];
-  atuiKernel_FooterInfoLasteditedText.innerHTML = "Latest modification on " + day + " " + month + " " + year + ". ";
-  atuiKernel_FooterInfo.insertBefore(atuiKernel_FooterInfoLasteditedText, atuiKernel_FooterInfo.firstChild);
-}
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight) {
+      button.classList.add("optionActive");
+    } else {
+      button.classList.remove("optionActive");
+    }
+  });
+});
 //# sourceMappingURL=main.js.map

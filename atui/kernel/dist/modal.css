@@ -14,7 +14,7 @@
     bottom:0;
     left:0;
     background-color:hsl(var(--atuiKernel_Color-N40) / 70%);
-    z-index:16;
+    z-index:17;
     overflow-y:auto;
     max-height:100vh;
     flex-direction:column;

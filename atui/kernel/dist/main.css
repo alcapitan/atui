@@ -666,105 +666,6 @@
     --atuiKernel_Color-IFF:var(--atuiKernel_Color-Info) 100% 0%;
 }
 
-@media (min-width: 768px){
-    #atuiKernel_ToolsContactNewsletter{
-        width:380px;
-    }
-}
-
-#atuiKernel_ToolsContactBroad{
-    display:flex;
-    flex-wrap:wrap;
-}
-
-#atuiKernel_ToolsContactBroad div{
-    border-radius:10px;
-    border-radius:var(--atuiKernel_Borderradius);
-    background-color:hsla(0, 0%, 100%, 0.8);
-    background-color:hsl(var(--atuiKernel_Color-NFF) / 80%);
-    display:flex;
-    align-items:center;
-    margin:5px 10px 5px 0;
-    padding:10px 15px 10px 10px;
-}
-
-#atuiKernel_ToolsContactBroad div > i, #atuiKernel_ToolsContactBroad div > img{
-    border-radius:10px;
-    border-radius:var(--atuiKernel_Borderradius);
-    width:30px;
-    height:30px;
-    font-size:30px;
-}
-
-#atuiKernel_ToolsContactBroad div > a{
-    color:hsl(0, 0%, 0%);
-    color:hsl(var(--atuiKernel_Color-N00));
-    font-weight:bold;
-    margin-left:5px;
-}
-
-#atuiKernel_ToolsContactNewsletter{
-    border-radius:10px;
-    border-radius:var(--atuiKernel_Borderradius);
-    background-color:hsla(0, 0%, 100%, 0.8);
-    background-color:hsl(var(--atuiKernel_Color-NFF) / 80%);
-    display:flex;
-    align-items:center;
-    padding:5px 15px;
-    gap:10px;
-}
-
-#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img{
-    font-size:30px !important;
-}
-
-#atuiKernel_ToolsContactNewsletter > i, #atuiKernel_ToolsContactNewsletter > img{
-    border-radius:10px;
-    border-radius:var(--atuiKernel_Borderradius);
-    width:30px;
-    height:30px;
-}
-
-#atuiKernel_ToolsContactNewsletter form{
-    display:flex;
-    align-items:center;
-    flex:1;
-    gap:5px;
-}
-
-#atuiKernel_ToolsContactNewsletter form input[type="email"]{
-    flex:1;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    width:0;
-    border:none;
-    background-color:transparent;
-}
-
-#atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit{
-    font-size:25px !important;
-}
-
-#atuiKernel_ToolsContactNewsletter form .atuiKernel_InputSubmit{
-    background-color:transparent;
-    border:none;
-    box-sizing:content-box;
-    width:25px;
-    height:25px;
-    padding:0;
-}
-
-#atuiKernel_ToolsContactCompact > a{
-    margin-right:15px;
-    -webkit-text-decoration:none;
-    text-decoration:none;
-}
-
-#atuiKernel_ToolsContactCompact > a > i{
-    font-size:50px;
-}
-
 .atuiKernel_SectionDownload{
     border-radius:10px;
     border-radius:var(--atuiKernel_Borderradius);
@@ -828,137 +729,28 @@
 }
 
 .atuiKernel_Footer{
-    position:relative;
     background-color:hsl(14, 100%, 90%);
     background-color:hsl(var(--atuiKernel_Color-A90));
-    padding:20px 40px 5px;
+    padding:20px 40px;
 }
 
-@media (min-width: 768px){
-    .atuiKernel_FooterContentsColumn{
-        flex-direction:row;
-    }
-
-    .atuiKernel_FooterContentsColumn > div{
-        max-width:30%;
-    }
-
-    .atuiKernel_FooterContentsRow > div{
-        max-height:30%;
-    }
+.atuiKernel_Footer > *{
+    margin:5px 0;
 }
 
-@media (max-width: 767px){
-    .atuiKernel_FooterContentsColumn{
-        flex-direction:column;
-    }
-}
-
-.atuiKernel_FooterContentsColumn,.atuiKernel_FooterContentsRow{
+.atuiKernel_FooterColumns,
+.atuiKernel_FooterRows{
     display:flex;
     flex-wrap:wrap;
-    justify-content:space-around;
+    gap:30px;
 }
 
-.atuiKernel_FooterContentsColumn h3,.atuiKernel_FooterContentsRow h3{
-    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    font-family:var(--atuiKernel_FontsTitle);
-    font-weight:bold;
-    font-weight:var(--atuiKernel_TitleBold);
-    margin:10px 0;
+.atuiKernel_FooterColumns{
+    justify-content:space-evenly;
 }
 
-.atuiKernel_FooterContentsRow{
-    flex-direction:column;
-}
-
-.atuiKernel_FooterContentsRow > div{
-    margin:5px 0;
-}
-
-.atuiKernel_FooterContentsColumn > div{
-    margin:0 5px;
-}
-
-.atuiKernel_FooterList{
-    list-style:none;
-    margin:10px 0;
-    padding-left:0;
-}
-
-.atuiKernel_FooterList li{
-    margin:5px 0;
-}
-
-.atuiKernel_FooterList li a:hover{
-    font-weight:normal;
-    -webkit-text-decoration:underline;
-    text-decoration:underline;
-}
-
-.atuiKernel_FooterLogotype > a, .atuiKernel_FooterDescription > a{
-    display:flex;
-    align-content:center;
-}
-
-.atuiKernel_FooterLogotype > a img, .atuiKernel_FooterDescription > a img{
-    width:40px;
-    height:40px;
-}
-
-.atuiKernel_FooterLogotype > a p, .atuiKernel_FooterDescription > a p{
-    margin:0 10px;
-    font-size:1.875rem;
-    display:inline-block;
-    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    font-family:var(--atuiKernel_FontsTitle);
-    font-weight:bold;
-    font-weight:var(--atuiKernel_TitleBold);
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-}
-
-.atuiKernel_FooterDescription{
-    display:flex;
-    align-content:center;
-    flex-direction:column;
-}
-
-.atuiKernel_FooterDescription > *{
-    margin:5px 0;
-}
-
-.atuiKernel_FooterDescription > div *{
-    display:block;
-    font-style:italic;
-    margin:5px 0;
-}
-
-#atuiKernel_FooterLegals{
-    display:flex;
+.atuiKernel_FooterRows{
     justify-content:center;
-    flex-wrap:wrap;
-}
-
-#atuiKernel_FooterLegals *{
-    margin:5px 20px;
-}
-
-#atuiKernel_FooterLegals *:hover{
-    font-weight:normal;
-    -webkit-text-decoration:underline;
-    text-decoration:underline;
-}
-
-#atuiKernel_FooterInfo{
-    display:block;
-    text-align:center;
-}
-
-#atuiKernel_FooterInfo *{
-    display:block;
-    margin:10px;
 }
 
 .atuiKernel_SectionGrid{
@@ -1122,26 +914,6 @@
     scroll-snap-align:start;
 }
 
-.atuiKernel_Header .atuiKernel_Logotype{
-    display:flex;
-    align-items:center;
-    gap:5px;
-}
-
-.atuiKernel_Header .atuiKernel_Logotype *{
-    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    font-family:var(--atuiKernel_FontsTitle);
-    font-weight:bold;
-    font-weight:var(--atuiKernel_TitleBold);
-    font-size:1.5em;
-}
-
-.atuiKernel_Header .atuiKernel_Logotype i, .atuiKernel_Header .atuiKernel_Logotype img{
-    font-size:2.25rem;
-    width:2.25rem;
-    height:2.25rem;
-}
-
 .atuiKernel_SectionImage{
     padding:10px;
 }
@@ -1173,20 +945,6 @@
     }
 }
 
-form, fieldset{
-    display:grid;
-    grid-template-columns:repeat(1, 1fr);
-    grid-gap:15px;
-    gap:15px;
-}
-
-form > div, fieldset > div{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
 input,
 progress,
 textarea,
@@ -1197,9 +955,9 @@ input[type="file"]::file-selector-button{
     border-radius:var(--atuiKernel_Borderradius);
     background-color:hsl(0, 0%, 100%);
     background-color:hsl(var(--atuiKernel_Color-NFF));
-    border:1px solid hsl(0, 0%, 50%);
-    border:1px solid hsl(var(--atuiKernel_Color-N50));
-    margin:0;
+    border:1px solid hsl(0, 0%, 70%);
+    border:1px solid hsl(var(--atuiKernel_Color-N70));
+    margin:5px;
     padding:10px 15px;
     box-sizing:border-box;
     accent-color:hsl(14, 100%, 50%);
@@ -1219,8 +977,8 @@ progress,
 textarea,
 select,
 .atuiKernel_InputSubmit{
-    background-color:hsl(0, 0%, 90%);
-    background-color:hsl(var(--atuiKernel_Color-N90));
+    background-color:hsl(0, 0%, 100%);
+    background-color:hsl(var(--atuiKernel_Color-NFF));
 }
 
 input[type="checkbox"],
@@ -1256,6 +1014,7 @@ input[type="color"]::-webkit-color-swatch{
 
 .atuiKernel_InputSubmit{
     box-sizing:content-box;
+    vertical-align:middle;
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
@@ -1288,6 +1047,38 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     padding:10px 20px;
 }
 
+form div.optionGroup{
+    background-color:hsl(0, 0%, 100%);
+    background-color:hsl(var(--atuiKernel_Color-NFF));
+    border:1px solid hsl(0, 0%, 70%);
+    border:1px solid hsl(var(--atuiKernel_Color-N70));
+    display:inline-flex;
+    border-radius:10px;
+    border-radius:var(--atuiKernel_Borderradius);
+}
+
+form div.optionGroup *{
+    border:none;
+    background-color:transparent;
+}
+
+.atuiKernel_Licensing{
+    margin:10px 0;
+    display:flex;
+    gap:30px;
+}
+
+.atuiKernel_Licensing *{
+    color:hsl(0, 0%, 60%);
+    color:hsl(var(--atuiKernel_Color-N60));
+    margin:0;
+}
+
+.atuiKernel_Footer .atuiKernel_Licensing *{
+    color:hsl(14, 100%, 60%);
+    color:hsl(var(--atuiKernel_Color-A60));
+}
+
 .atuiKernel_Modal{
     margin:0 !important;
 }
@@ -1300,7 +1091,7 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     left:0;
     background-color:hsla(0, 0%, 40%, 0.7);
     background-color:hsl(var(--atuiKernel_Color-N40) / 70%);
-    z-index:16;
+    z-index:17;
     overflow-y:auto;
     max-height:100vh;
     flex-direction:column;
@@ -1535,7 +1326,7 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     top:0;
     left:20%;
     right:20%;
-    z-index:13;
+    z-index:14;
     overflow-y:auto;
     max-height:100vh;
 }
@@ -1737,11 +1528,6 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
 .atuiKernel_SectionParagraph h1, .atuiKernel_SectionParagraph h2, .atuiKernel_SectionParagraph h3, .atuiKernel_SectionParagraph h4, .atuiKernel_SectionParagraph h5, .atuiKernel_SectionParagraph h6{
     color:hsl(14, 100%, 40%);
     color:hsl(var(--atuiKernel_Color-A40));
-    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    font-family:var(--atuiKernel_FontsTitle);
-    font-weight:bold;
-    font-weight:var(--atuiKernel_TitleBold);
-    margin:15px 0;
 }
 
 .atuiKernel_SectionParagraph a{
@@ -1761,6 +1547,34 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     display:block;
     margin:5px 0 0 10px;
     font-size:0.875rem;
+}
+
+.atuiKernel_SectionParagraph h1 img, .atuiKernel_SectionParagraph h2 img, .atuiKernel_SectionParagraph h3 img, .atuiKernel_SectionParagraph h4 img, .atuiKernel_SectionParagraph h5 img, .atuiKernel_SectionParagraph h6 img{
+    vertical-align:middle;
+}
+
+.atuiKernel_SectionParagraph h1 img{
+    height:2.25rem;
+}
+
+.atuiKernel_SectionParagraph h2 img{
+    height:1.875rem;
+}
+
+.atuiKernel_SectionParagraph h3 img{
+    height:1.5rem;
+}
+
+.atuiKernel_SectionParagraph h4 img{
+    height:1rem;
+}
+
+.atuiKernel_SectionParagraph h5 img{
+    height:0.875rem;
+}
+
+.atuiKernel_SectionParagraph h6 img{
+    height:0.625rem;
 }
 
 .atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip{
@@ -1807,7 +1621,7 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
 }
 
 .atuiKernel_PopupContextmenu{
-    z-index:15;
+    z-index:16;
 }
 
 .atuiKernel_PopupContextmenu > *{
@@ -1869,7 +1683,6 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
 
 .atuiKernel_PopupGlobalpanel{
     display:block !important;
-    width:80% !important;
 }
 
 .atuiKernel_PopupGlobalpanel{
@@ -1882,6 +1695,7 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     border-radius:var(--atuiKernel_Borderradius);
     box-shadow:hsla(0, 0%, 0%, 0.3) 0px 5px 15px;
     box-shadow:var(--atuiKernel_ShadowMedium);
+    max-width:80%;
 }
 
 .atuiKernel_PopupGlobalpanel > div{
@@ -1889,30 +1703,18 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     justify-content:space-around;
     flex-wrap:wrap;
     padding:20px;
+    gap:20px;
 }
 
-.atuiKernel_PopupGlobalpanel > div div{
-    display:block;
-    margin:10px;
-    min-width:20%;
-}
-
-.atuiKernel_PopupGlobalpanel > div div p{
-    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    font-family:var(--atuiKernel_FontsTitle);
-    font-weight:bold;
-    font-weight:var(--atuiKernel_TitleBold);
-    color:hsl(0, 0%, 0%);
-    color:hsl(var(--atuiKernel_Color-N00));
-}
-
-.atuiKernel_PopupGlobalpanel > div div div a{
-    display:block;
-    margin:5px;
+@media (min-width: 480px){
+    .atuiKernel_PopupGlobalpanel > div{
+        padding:20px 30px;
+        gap:40px;
+    }
 }
 
 .atuiKernel_PopupTooltip{
-    z-index:14;
+    z-index:15;
     padding:10px;
 }
 
@@ -2142,17 +1944,17 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
     font-family:var(--atuiKernel_FontsTitle);
 }
 
-.atuiKernel_SectionList{
+.atuiKernel_Group{
     display:flex;
     flex-direction:column;
 }
 
-.atuiKernel_SectionList > *{
+.atuiKernel_Group > *{
     margin:0;
     padding:15px 20px;
 }
 
-.atuiKernel_SectionList > *:not(:last-child){
+.atuiKernel_Group > *:not(:last-child){
     border-color:hsl(0, 0%, 80%);
     border-color:hsl(var(--atuiKernel_Color-N80));
     border-style:solid;
@@ -2186,6 +1988,72 @@ input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit
 .atuiKernel_Spinner.optionDark > i{
     color:hsl(0, 0%, 20%);
     color:hsl(var(--atuiKernel_Color-N20));
+}
+
+dl.atuiKernel_List dt, dl.atuiKernel_List dd{
+    margin:5px 0;
+}
+
+dl.atuiKernel_List dt{
+    font-weight:bold;
+}
+
+dl.atuiKernel_List dd{
+    margin-left:10px;
+}
+
+.atuiKernel_Scrolltop{
+    border:none !important;
+    color:hsl(14, 100%, 20%) !important;
+    color:hsl(var(--atuiKernel_Color-A20)) !important;
+    font-size:2.25rem !important;
+    width:2.25rem !important;
+    height:2.25rem !important;
+}
+
+.atuiKernel_Scrolltop{
+    border-radius:10px;
+    border-radius:var(--atuiKernel_Borderradius);
+    background-color:hsl(14, 100%, 80%);
+    background-color:hsl(var(--atuiKernel_Color-A80));
+    position:fixed;
+    z-index:13;
+    bottom:30px;
+    right:40px;
+    box-shadow:hsla(0, 0%, 0%, 0.2) 0px 3px 8px;
+    box-shadow:var(--atuiKernel_ShadowLight);
+    display:none;
+}
+
+@media (max-width: 479.98px){
+    .atuiKernel_Scrolltop{
+        right:30px;
+    }
+}
+
+.atuiKernel_Scrolltop.optionActive{
+    display:block;
+}
+
+.atuiKernel_Logotype{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.atuiKernel_Logotype *{
+    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family:var(--atuiKernel_FontsTitle);
+    font-weight:bold;
+    font-weight:var(--atuiKernel_TitleBold);
+    font-size:1.5em;
+    margin:0;
+}
+
+.atuiKernel_Logotype i, .atuiKernel_Logotype img{
+    font-size:2.25rem !important;
+    width:2.25rem !important;
+    height:2.25rem !important;
 }
 
 .atuiKernel_Slider{
@@ -2377,6 +2245,14 @@ a:visited{
     text-decoration:underline;
     -webkit-text-decoration:underline dotted;
             text-decoration:underline dotted;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family:var(--atuiKernel_FontsTitle);
+    font-weight:bold;
+    font-weight:var(--atuiKernel_TitleBold);
+    margin:15px 0;
 }
 
 h1{

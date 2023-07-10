@@ -127,23 +127,3 @@
     flex: 0 0 max-content;
     scroll-snap-align: start;
 }
-
-/* Logotype */
-
-.atuiKernel_Header .atuiKernel_Logotype {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.atuiKernel_Header .atuiKernel_Logotype * {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    font-size: 1.5em;
-}
-
-.atuiKernel_Header .atuiKernel_Logotype :is(i, img) {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
-}

@@ -9,13 +9,13 @@
 @import url("./cards.css");
 @import url("./carousel.css");
 @import url("./color.css");
-@import url("./contacts.css");
 @import url("./download.css");
 @import url("./footer.css");
 @import url("./grid.css");
 @import url("./header.css");
 @import url("./image.css");
 @import url("./input.css");
+@import url("./licensing.css");
 @import url("./modal.css");
 @import url("./navigation.css");
 @import url("./notification.css");
@@ -92,6 +92,12 @@ a:is(:hover, :active) {
 
 a:visited {
     text-decoration: underline dotted;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--atuiKernel_FontsTitle);
+    font-weight: var(--atuiKernel_TitleBold);
+    margin: 15px 0;
 }
 
 h1 {

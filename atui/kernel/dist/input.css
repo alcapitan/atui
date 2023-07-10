@@ -3,20 +3,6 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-form, fieldset{
-    display:grid;
-    grid-template-columns:repeat(1, 1fr);
-    grid-gap:15px;
-    gap:15px;
-}
-
-form > div, fieldset > div{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
 input,
 progress,
 textarea,
@@ -25,8 +11,8 @@ select,
 input[type="file"]::file-selector-button{
     border-radius:var(--atuiKernel_Borderradius);
     background-color:hsl(var(--atuiKernel_Color-NFF));
-    border:1px solid hsl(var(--atuiKernel_Color-N50));
-    margin:0;
+    border:1px solid hsl(var(--atuiKernel_Color-N70));
+    margin:5px;
     padding:10px 15px;
     box-sizing:border-box;
     accent-color:hsl(var(--atuiKernel_Color-A50));
@@ -45,7 +31,7 @@ progress,
 textarea,
 select,
 .atuiKernel_InputSubmit{
-    background-color:hsl(var(--atuiKernel_Color-N90));
+    background-color:hsl(var(--atuiKernel_Color-NFF));
 }
 
 input[type="checkbox"],
@@ -79,6 +65,7 @@ input[type="color"]::-webkit-color-swatch{
 
 .atuiKernel_InputSubmit{
     box-sizing:content-box;
+    vertical-align:middle;
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
@@ -105,4 +92,16 @@ fieldset legend{
 input.optionPill:not([type="file"]):not([type="color"]), .atuiKernel_InputSubmit.optionPill:not(.does-not-exist):not(does-not-exist), select.optionPill:not(.does-not-exist):not(.does-not-exist), textarea.optionPill:not(.does-not-exist):not(.does-not-exist){
     border-radius:20px;
     padding:10px 20px;
+}
+
+form div.optionGroup{
+    background-color:hsl(var(--atuiKernel_Color-NFF));
+    border:1px solid hsl(var(--atuiKernel_Color-N70));
+    display:inline-flex;
+    border-radius:var(--atuiKernel_Borderradius);
+}
+
+form div.optionGroup *{
+    border:none;
+    background-color:transparent;
 }

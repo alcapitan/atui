@@ -3,19 +3,6 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-:is(form, fieldset) {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
-}
-
-:is(form, fieldset) > div {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
 input[type="file"]::-webkit-file-upload-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: hsl(var(--atuiKernel_Color-NFF));
@@ -34,8 +21,8 @@ select,
 input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: hsl(var(--atuiKernel_Color-NFF));
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
-    margin: 0;
+    border: 1px solid hsl(var(--atuiKernel_Color-N70));
+    margin: 5px;
     padding: 10px 15px;
     box-sizing: border-box;
     accent-color: hsl(var(--atuiKernel_Color-A50));
@@ -54,7 +41,7 @@ progress,
 textarea,
 select,
 .atuiKernel_InputSubmit {
-    background-color: hsl(var(--atuiKernel_Color-N90));
+    background-color: hsl(var(--atuiKernel_Color-NFF));
 }
 
 input[type="checkbox"],
@@ -85,6 +72,7 @@ input[type="color"]::-webkit-color-swatch {
     width: 20px !important;
     height: 20px !important;
     box-sizing: content-box;
+    vertical-align: middle;
 }
 
 :is(
@@ -113,4 +101,18 @@ fieldset legend {
 :is(input:not([type="file"], [type="color"]), .atuiKernel_InputSubmit, select, textarea).optionPill {
     border-radius: 20px;
     padding: 10px 20px;
+}
+
+/* Grouped */
+
+form div.optionGroup {
+    background-color: hsl(var(--atuiKernel_Color-NFF));
+    border: 1px solid hsl(var(--atuiKernel_Color-N70));
+    display: inline-flex;
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+form div.optionGroup * {
+    border: none;
+    background-color: transparent;
 }

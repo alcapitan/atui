@@ -3,153 +3,30 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
+/* Container */
 
 .atuiKernel_Footer {
-    position: relative;
     background-color: hsl(var(--atuiKernel_Color-A90));
-    padding: 20px 40px 5px;
+    padding: 20px 40px;
 }
 
-/* Responsive */
-
-@media (width >= 768px) /* Computers */ {
-    .atuiKernel_FooterContentsColumn /* Containers */ {
-        flex-direction: row;
-    }
-
-    .atuiKernel_FooterContentsColumn > div /* Menu */ {
-        max-width: 30%;
-    }
-
-    .atuiKernel_FooterContentsRow > div /* Menu */ {
-        max-height: 30%;
-    }
+.atuiKernel_Footer > * {
+    margin: 5px 0;
 }
 
-@media (width <= 767px) /* Smartphones */ {
-    .atuiKernel_FooterContentsColumn /* Containers */ {
-        flex-direction: column;
-    }
-}
+/* Columns and rows */
 
-/* Vertical and horizontal contents */
-
-:is(.atuiKernel_FooterContentsColumn,.atuiKernel_FooterContentsRow)
-/* Container */ {
+.atuiKernel_FooterColumns,
+.atuiKernel_FooterRows {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 30px;
 }
 
-:is(.atuiKernel_FooterContentsColumn,.atuiKernel_FooterContentsRow) h3
-/* Title */ {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    margin: 10px 0;
+.atuiKernel_FooterColumns {
+    justify-content: space-evenly;
 }
 
-/* Row contents */
-
-.atuiKernel_FooterContentsRow /* Containers */ {
-    flex-direction: column;
-}
-
-.atuiKernel_FooterContentsRow > div /* Menu */ {
-    margin: 5px 0;
-}
-
-/* Column contents */
-
-.atuiKernel_FooterContentsColumn > div /* Menu */ {
-    margin: 0 5px;
-}
-
-/* Lists */
-
-.atuiKernel_FooterList /* List of elements */ {
-    list-style: none;
-    margin: 10px 0;
-    padding-left: 0;
-}
-
-.atuiKernel_FooterList li /* Elements */ {
-    margin: 5px 0;
-}
-
-.atuiKernel_FooterList li a:hover
-/* Links of elements */ {
-    font-weight: normal;
-    text-decoration: underline;
-}
-
-/* Logotype & Description */
-
-:is(.atuiKernel_FooterLogotype, .atuiKernel_FooterDescription) > a {
-    display: flex;
-    align-content: center;
-}
-
-:is(.atuiKernel_FooterLogotype, .atuiKernel_FooterDescription) > a img {
-    width: 40px;
-    height: 40px;
-}
-
-:is(.atuiKernel_FooterLogotype, .atuiKernel_FooterDescription) > a p {
-    margin: 0 10px;
-    font-size: 1.875rem;
-    display: inline-block;
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-/* Description */
-
-.atuiKernel_FooterDescription {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-}
-
-.atuiKernel_FooterDescription > * {
-    margin: 5px 0;
-}
-
-.atuiKernel_FooterDescription > div * {
-    display: block;
-    font-style: italic;
-    margin: 5px 0;
-}
-
-/* Legals */
-
-#atuiKernel_FooterLegals {
-    display: flex;
+.atuiKernel_FooterRows {
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-#atuiKernel_FooterLegals * {
-    margin: 5px 20px;
-}
-
-#atuiKernel_FooterLegals *:hover
-/* Links of elements */ {
-    font-weight: normal;
-    text-decoration: underline;
-}
-
-/* Info */
-
-#atuiKernel_FooterInfo {
-    display: block;
-    text-align: center;
-}
-
-#atuiKernel_FooterInfo * {
-    display: block;
-    margin: 10px;
 }
