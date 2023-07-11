@@ -21,17 +21,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Pratical JS function `findElement` is renamed to `atuiKernel_ToolsFindElement`.
+-   Practical JS function `findElement` is renamed to `atuiKernel_ToolsFindElement`.
 -   `atuiKernel_ToolsFindElement` returns only arrays.
 -   JS function `stopAllMedia()` is renamed to `atuiMediasplayer_StopAllMedia()`.
 -   Change `system` Notification key to `type`.
--   Hardly enlight footer's CSS code and remove almost all specific components.
+-   Hardly lighten footer's CSS code and remove almost all specific components.
 -   `.atuiKernel_Logotype` become a global component, not only for Header.
 -   Move some CSS styles of HTML `<h*>` to global.
--   Hardly enlight Licensing and change features.
+-   Hardly lighten Licensing and change features.
 -   Some light visual changes to `.atuiKernel_PopupGlobalpanel`.
 -   Rename `.atuiKernel_SectionList` to `.atuiKernel_Group` due to conflicting names.
--   Remove the gray background color of the HTML `<input>` tags and enligh borders.
+-   Remove the gray background color of the HTML `<input>` tags and lighten borders.
 
 ### Removed
 
@@ -48,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Scroll-behaviour was not smooth.
+-   Scroll-behavior was not smooth.
 -   Remove comments in CSS dist files except unique licensing comment.
 -   Prevent default `<form>` submission in SearchServices.
 -   Remove color dimming in dark mode.

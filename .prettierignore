@@ -1,0 +1,15 @@
+# Config files
+.*cache
+.*ignore
+.husky
+*.map
+.github
+
+# Weird file formats
+*.mp3
+*.mp4
+*.png
+*.jpg
+
+# Compiled files
+**/dist
