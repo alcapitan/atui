@@ -1,13 +1,21 @@
 {
     "extends": ["stylelint-config-standard"],
     "rules": {
-        "at-rule-no-vendor-prefix": true,
-        "property-no-vendor-prefix": true,
-        "selector-no-vendor-prefix": true,
-        "value-no-vendor-prefix": true,
-        "selector-class-pattern": null,
-        "custom-property-pattern": null,
-        "selector-id-pattern": null,
+        "custom-property-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservices)_.*", { "severity": "warning" }],
+        "selector-id-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservices)_.*", { "severity": "warning" }],
+        "selector-class-pattern": [
+            "^(?:(atui(?:Kernel|Mediasplayer|Searchservices)_|option).*|ti)$",
+            { "severity": "warning" }
+        ],
         "no-descending-specificity": null
-    }
+    },
+    "overrides": [
+        {
+            "files": ["./patch/**"],
+            "rules": {
+                "selector-class-pattern": null,
+                "selector-id-pattern": null
+            }
+        }
+    ]
 }

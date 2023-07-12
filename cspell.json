@@ -44,7 +44,7 @@
         "videoplayer"
     ],
     "ignoreWords": [],
-    "import": [],
+    "import": ["@cspell/dict-fr-fr/cspell-ext.json"],
     "language": "en,fr,lorem",
     "useGitignore": true
 }

@@ -10,9 +10,9 @@
      --atuiKernel_FontsSpecial : 'Ubuntu';
 } */
 
-/*:root {
+/* :root {
     --atuiKernel_Color-Accent : 170 !important;
-}*/
+} */
 
 .sayHello * {
     color: hsl(var(--atuiKernel_Color-A50)) !important;

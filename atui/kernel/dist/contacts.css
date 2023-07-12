@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@media (min-width: 768px){
+@media (width >= 768px){
     #atuiKernel_ToolsContactNewsletter{
         width:380px;
     }
@@ -87,7 +87,6 @@
 
 #atuiKernel_ToolsContactCompact > a{
     margin-right:15px;
-    -webkit-text-decoration:none;
     text-decoration:none;
 }
 
