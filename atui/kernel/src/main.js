@@ -58,7 +58,7 @@ async function verifyLink(url) {
 /* Convert time data to be readable by humans */
 
 function convertTime(time) {
-    let hours = Math.floor(time / 3600);
+    const hours = Math.floor(time / 3600);
     let mins = Math.floor((time % 3600) / 60);
     let secs = Math.floor(time % 60);
     if (secs < 10) {
@@ -88,9 +88,9 @@ function atuiKernel_ClipboardPaste() {
 
 function atuiKernel_ShareTool(title, text, url) {
     navigator.share({
-        title: title,
-        text: text,
-        url: url,
+        title,
+        text,
+        url,
     });
 }
 
@@ -175,7 +175,7 @@ function atuiKernel_ColoraccentMetatag() {
 function atuiKernel_PopupSetup(listener) {
     const popup = atuiKernel_ToolsFindElement(listener, listener.getAttribute("data-vk-popup-assign"))[0];
 
-    let options = {
+    const options = {
         type: "default",
         triggerEvent: "mouseover",
         outEvent: "click",
@@ -252,7 +252,7 @@ function atuiKernel_PopupSetup(listener) {
         const overflowRight = listenerPosition.left + popupPosition.width > windowDimensions.width;
         const overflowBottom = listenerPosition.top + popupPosition.height > windowDimensions.height;
 
-        let calculatedPosition = {
+        const calculatedPosition = {
             left: 0,
             top: 0,
         };
@@ -429,14 +429,14 @@ function atuiKernel_NotificationPush(options) {
         }
     });
 }
-let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
+let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3"; /* eslint-disable-line prefer-const */
 
 /* Patch height superposition issue between header and carousel */
 
 const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-        let carousel = atuiKernel_ToolsFindElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent")[0];
-        let carouselContent = atuiKernel_ToolsFindElement(
+        const carousel = atuiKernel_ToolsFindElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent")[0];
+        const carouselContent = atuiKernel_ToolsFindElement(
             header,
             ".atuiKernel_Carousel > div > div",
             ".atuiKernel_BodyContent"

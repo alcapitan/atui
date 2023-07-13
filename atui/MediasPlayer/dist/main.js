@@ -3,17 +3,6 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Metadata */
-
-const atuiMediasplayer_Metadata = {
-  name: "Medias Player",
-  author: "alcapitan (on GitHub)",
-  version: "v0.4.1",
-  website: "https://github.com/alcapitan/atui",
-  in_development: false
-};
-// atuiKernel_MetadataDisplay(atuiMediasplayer_Metadata);
-
 /* Close Audioplayer */
 
 document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
@@ -54,7 +43,7 @@ function atuiMediasplayer_BrokenLink(player, mediaLink) {
 /* Assign an audio to an audioplayer */
 
 function atuiMediasplayer_Assign(data) {
-  const player = document.getElementById(data["player"]);
+  const player = document.getElementById(data.player);
   const media = player.querySelector("audio, video");
   const cover = player.querySelector(".atuiMediasplayer_Cover img, .atuiMediasplayer_Cover i");
   const title = player.querySelector(".atuiMediasplayer_InformationTitle");
@@ -63,24 +52,24 @@ function atuiMediasplayer_Assign(data) {
   const releaseDate = player.querySelector(".atuiMediasplayer_InformationReleaseDate");
   const origin = player.querySelector(".atuiMediasplayer_InformationOrigin");
 
-  media.setAttribute("src", data["media"]);
-  if (data["cover"] !== undefined) {
-    cover.setAttribute("src", data["cover"]);
+  media.setAttribute("src", data.media);
+  if (data.cover !== undefined) {
+    cover.setAttribute("src", data.cover);
   }
-  if (data["title"] !== undefined) {
-    title.innerHTML = data["title"];
+  if (data.title !== undefined) {
+    title.innerHTML = data.title;
   }
-  if (data["author"] !== undefined) {
-    author.innerHTML = data["author"];
+  if (data.author !== undefined) {
+    author.innerHTML = data.author;
   }
-  if (data["albumName"] !== undefined) {
-    albumName.innerHTML = data["albumName"];
+  if (data.albumName !== undefined) {
+    albumName.innerHTML = data.albumName;
   }
-  if (data["releaseDate"] !== undefined) {
-    releaseDate.innerHTML = data["releaseDate"];
+  if (data.releaseDate !== undefined) {
+    releaseDate.innerHTML = data.releaseDate;
   }
-  if (data["origin"] !== undefined) {
-    origin.setAttribute("href", data["origin"]);
+  if (data.origin !== undefined) {
+    origin.setAttribute("href", data.origin);
   }
 }
 
@@ -156,7 +145,7 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
     let listened = media.currentTime;
     let duration = media.duration;
     if (isNaN(duration)) {
-      listened = 0, duration = 0;
+      listened = duration = 0;
     }
     const percent = Math.round(listened / duration * 100);
     timer.innerText = `${convertTime(listened)} - ${convertTime(duration)}`;
@@ -246,7 +235,6 @@ document.querySelectorAll(".atuiMediasplayer_Fullscreen").forEach((button) => {
       media.webkitRequestFullscreen();
     } else {
       console.error("The browser does not support fullscreen mode.");
-      return;
     }
   });
 });

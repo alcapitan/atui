@@ -3,17 +3,6 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Metadata */
-
-const atuiSearchservices_Metadata = {
-  name: "Search Service",
-  author: "alcapitan (on GitHub)",
-  version: "v0.4.1",
-  website: "https://github.com/alcapitan/atui",
-  in_development: false
-};
-// atuiKernel_MetadataDisplay(atuiSearchservices_Metadata);
-
 /* Display search elements */
 
 function atuiSearchservices_HeaderDevelop(element, wish) {
@@ -79,11 +68,11 @@ const atuiSearchservices_HeaderPropositionsSuggestedInfos = [
 function atuiSearchservices_HeaderPropositionsGenerate() {
   try {
     /* Recent searches */
-    let atuiSearchservices_HeaderPropositionsRecentInfosContainer = document.getElementById(
+    const atuiSearchservices_HeaderPropositionsRecentInfosContainer = document.getElementById(
       "atuiSearchservices_HeaderPropositionsRecentContainer"
     );
     atuiSearchservices_HeaderPropositionsRecentInfosContainer.textContent = "";
-    for (let counter in atuiSearchservices_HeaderPropositionsRecentInfos) {
+    for (const counter in atuiSearchservices_HeaderPropositionsRecentInfos) {
       const atuiSearchservices_HeaderPropositionsRecentInfosNewlink = document.createElement("a");
       const atuiSearchservices_HeaderPropositionsRecentInfosNewlinkText = document.createTextNode(
         atuiSearchservices_HeaderPropositionsRecentInfos[counter][0]
@@ -102,11 +91,11 @@ function atuiSearchservices_HeaderPropositionsGenerate() {
   } catch {}
   try {
     /* Suggested searches */
-    let atuiSearchservices_HeaderPropositionsSuggestedInfosContainer = document.getElementById(
+    const atuiSearchservices_HeaderPropositionsSuggestedInfosContainer = document.getElementById(
       "atuiSearchservices_HeaderPropositionsSuggestedContainer"
     );
     atuiSearchservices_HeaderPropositionsSuggestedInfosContainer.textContent = "";
-    for (let counter in atuiSearchservices_HeaderPropositionsSuggestedInfos) {
+    for (const counter in atuiSearchservices_HeaderPropositionsSuggestedInfos) {
       const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlink = document.createElement("a");
       const atuiSearchservices_HeaderPropositionsSuggestedInfosNewlinkText = document.createTextNode(
         atuiSearchservices_HeaderPropositionsSuggestedInfos[counter][0]
