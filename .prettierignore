@@ -4,6 +4,7 @@
 .husky
 *.map
 .github
+.browserslistrc
 
 # Weird file formats
 *.mp3

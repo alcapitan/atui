@@ -10,11 +10,11 @@ module.exports = {
                 "default",
                 {
                     discardComments: {
-                        removeAllButFirst: true,
+                        removeAll: true,
                     },
                 },
             ],
         }),
     ],
-    map: { inline: false },
+    map: true,
 };
