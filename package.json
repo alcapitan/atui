@@ -2,20 +2,17 @@
     "name": "@alcapitan/atui",
     "version": "0.4.1",
     "description": "Front-end library to build your website easier.",
-    "main": "index.html",
     "scripts": {
         "babel:vk": "babel atui/kernel/src/*.js --out-dir atui/kernel/dist/ -s",
         "babel:mp": "babel atui/MediasPlayer/src/*.js --out-dir atui/MediasPlayer/dist/ -s",
         "babel:ss": "babel atui/SearchService/src/*.js --out-dir atui/SearchService/dist/ -s",
         "cspell": "cspell lint ** --cache --show-context",
-        "esbuild:vk": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/kernel/dist/main.css dist=atui/kernel/dist/main.js --outdir=atui/kernel/dist/",
-        "esbuild:mp": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/MediasPlayer/dist/main.css dist=atui/MediasPlayer/dist/main.js --outdir=atui/MediasPlayer/dist/",
-        "esbuild:ss": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/SearchService/dist/main.css dist=atui/SearchService/dist/main.js --outdir=atui/SearchService/dist/",
+        "esbuild:vk": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/kernel/dist/main.js --outdir=atui/kernel/dist/",
+        "esbuild:mp": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/MediasPlayer/dist/main.js --outdir=atui/MediasPlayer/dist/",
+        "esbuild:ss": "esbuild --minify --sourcemap --keep-names --tree-shaking=false dist=atui/SearchService/dist/main.js --outdir=atui/SearchService/dist/",
         "eslint": "eslint . --cache --fix",
         "eslint:check": "eslint . --cache",
-        "postcss:vk": "postcss atui/kernel/src/*.css -d atui/kernel/dist/ -m",
-        "postcss:mp": "postcss atui/MediasPlayer/src/*.css -d atui/MediasPlayer/dist/ -m",
-        "postcss:ss": "postcss atui/SearchService/src/*.css -d atui/SearchService/dist/ -m",
+        "postcss": "postcss \"atui/kernel/src/main.css\" --dir \"atui/kernel/dist/\" && postcss \"atui/MediasPlayer/src/main.css\" --dir \"atui/MediasPlayer/dist/\" && postcss \"atui/SearchService/src/main.css\" --dir \"atui/SearchService/dist/\"",
         "prettier": "prettier -w ** --cache",
         "prettier:check": "prettier -c **",
         "stylelint": "stylelint **.css --cache --fix",
@@ -24,7 +21,7 @@
         "commitlint": "commitlint",
         "commit": "commit",
         "check": "npm-run-all cspell prettier:check stylelint:check eslint:check",
-        "build": "npm-run-all cspell prettier stylelint eslint postcss:* babel:* esbuild:*"
+        "build": "npm-run-all cspell prettier stylelint eslint postcss babel:* esbuild:*"
     },
     "repository": {
         "type": "git",
@@ -55,6 +52,7 @@
         "@cspell/dict-fr-fr": "^2.2.1",
         "autoprefixer": "^10.4.14",
         "cspell": "^6.31.1",
+        "cssnano": "^6.0.1",
         "esbuild": "^0.18.11",
         "eslint": "^8.44.0",
         "eslint-config-prettier": "^8.8.0",
@@ -67,21 +65,17 @@
         "npm-run-all": "^4.1.5",
         "postcss": "^8.4.24",
         "postcss-cli": "^10.1.0",
-        "postcss-discard-comments": "^6.0.0",
         "postcss-import": "^15.1.0",
         "postcss-preset-env": "^9.0.0",
         "prettier": "^2.8.8",
         "stylelint": "^15.10.0",
         "stylelint-config-standard": "^34.0.0"
     },
-    "dependencies": {
-        "@tabler/icons-webfont": "^2.23.0",
-        "http-server": "^14.1.1"
-    },
     "browserslist": [
         "defaults"
     ],
-    "engines": {
-        "node": ">=12.16"
+    "optionalDependencies": {
+        "@tabler/icons-webfont": "^2.25.0",
+        "http-server": "^14.1.1"
     }
 }
