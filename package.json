@@ -8,14 +8,12 @@
         "cspell:check": "cspell lint ** --show-context",
         "eslint": "eslint . --cache --fix",
         "eslint:check": "eslint .",
+        "htmlhint": "htmlhint",
         "postcss": "postcss atui/kernel/src/main.css --dir atui/kernel/dist/ && postcss atui/MediasPlayer/src/main.css --dir atui/MediasPlayer/dist/ && postcss atui/SearchService/src/main.css --dir atui/SearchService/dist/",
         "prettier": "prettier -w ** --cache",
         "prettier:check": "prettier -c **",
         "stylelint": "stylelint **.css --cache --fix",
         "stylelint:check": "stylelint **.css",
-        "htmlhint": "htmlhint",
-        "commitlint": "commitlint",
-        "commit": "commit",
         "check": "npm-run-all cspell:check prettier:check htmlhint stylelint:check eslint:check",
         "build": "npm-run-all cspell prettier htmlhint stylelint eslint postcss babel"
     },
@@ -43,10 +41,11 @@
         "@babel/preset-env": "^7.22.6",
         "@commitlint/cli": "^17.6.6",
         "@commitlint/config-conventional": "^17.6.6",
-        "@commitlint/prompt-cli": "^17.6.6",
+        "@commitlint/cz-commitlint": "^17.5.0",
         "@cspell/dict-fr-fr": "^2.2.1",
         "autoprefixer": "^10.4.14",
         "babel-preset-minify": "^0.5.2",
+        "commitizen": "^4.3.0",
         "cspell": "^6.31.1",
         "cssnano": "^6.0.1",
         "eslint": "^8.44.0",
@@ -56,7 +55,6 @@
         "eslint-plugin-n": "^16.0.1",
         "eslint-plugin-promise": "^6.1.1",
         "htmlhint": "^1.1.4",
-        "husky": "^8.0.3",
         "npm-run-all": "^4.1.5",
         "postcss": "^8.4.24",
         "postcss-cli": "^10.1.0",
@@ -69,5 +67,10 @@
     "optionalDependencies": {
         "@tabler/icons-webfont": "^2.25.0",
         "http-server": "^14.1.1"
+    },
+    "config": {
+        "commitizen": {
+            "path": "@commitlint/cz-commitlint"
+        }
     }
 }
