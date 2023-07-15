@@ -5,18 +5,19 @@
     "scripts": {
         "babel": "babel atui/kernel/src/main.js --out-dir atui/kernel/dist/ && babel atui/MediasPlayer/src/main.js --out-dir atui/MediasPlayer/dist/ && babel atui/SearchService/src/main.js --out-dir atui/SearchService/dist/",
         "cspell": "cspell lint ** --cache --show-context",
+        "cspell:check": "cspell lint ** --show-context",
         "eslint": "eslint . --cache --fix",
-        "eslint:check": "eslint . --cache",
+        "eslint:check": "eslint .",
         "postcss": "postcss atui/kernel/src/main.css --dir atui/kernel/dist/ && postcss atui/MediasPlayer/src/main.css --dir atui/MediasPlayer/dist/ && postcss atui/SearchService/src/main.css --dir atui/SearchService/dist/",
         "prettier": "prettier -w ** --cache",
         "prettier:check": "prettier -c **",
         "stylelint": "stylelint **.css --cache --fix",
-        "stylelint:check": "stylelint **.css --cache",
-        "htmlhint": "htmlhint **/*.html",
+        "stylelint:check": "stylelint **.css",
+        "htmlhint": "htmlhint",
         "commitlint": "commitlint",
         "commit": "commit",
-        "check": "npm-run-all cspell prettier:check stylelint:check eslint:check",
-        "build": "npm-run-all cspell prettier stylelint eslint postcss babel"
+        "check": "npm-run-all cspell:check prettier:check htmlhint stylelint:check eslint:check",
+        "build": "npm-run-all cspell prettier htmlhint stylelint eslint postcss babel"
     },
     "repository": {
         "type": "git",
