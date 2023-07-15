@@ -12,6 +12,4 @@ patch/videos/*
 node_modules
 
 # Cache
-.cspellcache
-.eslintcache
-.stylelintcache
+.*cache
