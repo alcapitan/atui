@@ -32,6 +32,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Some light visual changes to `.atuiKernel_PopupGlobalpanel`.
 -   Rename `.atuiKernel_SectionList` to `.atuiKernel_Group` due to conflicting names.
 -   Remove the gray background color of the HTML `<input>` tags and lighten borders.
+-   Rewrite NPM scripts and dependencies' configuration files :
+    -   Speed up the check process from 60s to 45s and the build process from 30s to 13s thanks to some optimizations and parallel executions.
+    -   More flexible, simple and rich NPM scripts with better code coverage ; plus every dependencies are now used.
+    -   Source maps now entirely works.
+    -   Remove partial dist files.
+    -   Deploy ATUI on Netlify for each tag push.
+
+### Fixed
+
+-   Fix nightly CSS/JS links in the README to get ATUI.
 
 ### Removed
 
