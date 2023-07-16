@@ -18,7 +18,8 @@
         "build:css": "npm-run-all -s stylelint postcss",
         "build:js": "npm-run-all -s eslint babel",
         "build": "npm-run-all -p cspell htmlhint -s prettier -p build:css build:js",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "live": "http-server"
     },
     "repository": {
         "type": "git",
