@@ -166,7 +166,7 @@ function atuiKernel_ColoraccentMetatag() {
     }
     metaTag.setAttribute(
         "content",
-        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`
+        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`,
     );
 }
 
@@ -439,7 +439,7 @@ const atuiKernel_HeaderFixCarousel = () => {
         const carouselContent = atuiKernel_ToolsFindElement(
             header,
             ".atuiKernel_Carousel > div > div",
-            ".atuiKernel_BodyContent"
+            ".atuiKernel_BodyContent",
         );
 
         carousel.style.minHeight = header.offsetHeight * 2 + "px";

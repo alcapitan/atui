@@ -10,7 +10,7 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
         const player = atuiKernel_ToolsFindElement(
             this,
             ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
         )[0];
         const media = player.querySelector("audio, video");
         media.pause();
@@ -174,7 +174,7 @@ document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar)
         const media = atuiKernel_ToolsFindElement(
             progressbar,
             "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
         )[0];
         const percent = (event.offsetX / progressbar.offsetWidth) * 100;
         media.currentTime = (media.duration * percent) / 100;
@@ -189,7 +189,7 @@ document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
         const media = atuiKernel_ToolsFindElement(
             this,
             "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
         )[0];
         if (media.loop === false) {
             media.loop = true;
@@ -210,7 +210,7 @@ document.querySelectorAll(".atuiMediasplayer_Sound").forEach(function (button) {
         const media = atuiKernel_ToolsFindElement(
             this,
             "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
         )[0];
         if (media.muted === false) {
             media.muted = true;

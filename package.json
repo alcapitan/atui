@@ -17,7 +17,8 @@
         "check": "npm-run-all -p cspell:check htmlhint prettier:check stylelint:check eslint:check",
         "build:css": "npm-run-all -s stylelint postcss",
         "build:js": "npm-run-all -s eslint babel",
-        "build": "npm-run-all -p cspell htmlhint -s prettier -p build:css build:js"
+        "build": "npm-run-all -p cspell htmlhint -s prettier -p build:css build:js",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",
@@ -64,7 +65,8 @@
         "postcss-preset-env": "^9.0.0",
         "prettier": "^3.0.0",
         "stylelint": "^15.10.1",
-        "stylelint-config-standard": "^34.0.0"
+        "stylelint-config-standard": "^34.0.0",
+        "husky": "^8.0.0"
     },
     "optionalDependencies": {
         "@tabler/icons-webfont": "^2.25.0",
