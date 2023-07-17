@@ -3,19 +3,69 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@import url("./propositions.css");
-@import url("./searchbar.css");
+.atuiSearchservice_Panel {
+    border-radius: 25px;
+    padding: 0 !important;
+    display: block !important;
+    max-width: 80%;
+}
 
-/* Global */
+.atuiSearchservice_Panel.optionActive {
+    background-color: hsl(var(--atuiKernel_Color-A80));
+    position: absolute;
+    top: 0;
+}
 
-#atuiSearchservices_Header {
-    background-color: transparent;
-    border-radius: var(--atuiKernel_Borderradius);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    top: 5px;
-    padding: 0;
+@media (width < 480px) /* Smartphones */ {
+    .atuiSearchservice_Panel.optionActive {
+        width: calc(100% - 20px);
+        max-width: initial;
+    }
+}
+
+@media (width < 1024px) /* Smartphones & tablets */ {
+    .atuiSearchservice_Panel:not(.optionActive) div.optionGroup {
+        background-color: transparent;
+        border: none;
+    }
+
+    .atuiSearchservice_Panel:not(.optionActive) div.optionGroup input {
+        display: none;
+    }
+
+    .atuiSearchservice_Panel:not(.optionActive) div.optionGroup .atuiKernel_InputSubmit {
+        padding: 5px;
+        font-size: 1.875rem !important;
+        width: 1.875rem !important;
+        height: 1.875rem !important;
+    }
+}
+
+.atuiSearchservice_Panel > * {
+    padding: 10px 20px;
+}
+
+.atuiSearchservice_Panel:not(.optionActive) > *:not(.atuiSearchservice_Bar) {
+    display: none;
+}
+
+.atuiSearchservice_Panel .atuiSearchservice_Bar {
+    padding: 5px;
+}
+
+.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup {
+    width: available;
+    width: stretch;
+}
+
+.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup input {
+    width: 100%;
+}
+
+.atuiSearchservice_Panel > hr {
+    background-color: hsl(var(--atuiKernel_Color-A60));
+    border: none;
+    height: 1px;
+    margin: 0 20px;
+    padding: 0 !important;
 }

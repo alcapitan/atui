@@ -1,10 +1,10 @@
 {
     "extends": ["stylelint-config-standard"],
     "rules": {
-        "custom-property-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservices)_.*", { "severity": "warning" }],
-        "selector-id-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservices)_.*", { "severity": "warning" }],
+        "custom-property-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservice)_.*", { "severity": "warning" }],
+        "selector-id-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservice)_.*", { "severity": "warning" }],
         "selector-class-pattern": [
-            "^(?:(atui(?:Kernel|Mediasplayer|Searchservices)_|option).*|ti)$",
+            "^(?:(atui(?:Kernel|Mediasplayer|Searchservice)_|option).*|ti)$",
             { "severity": "warning" }
         ],
         "no-descending-specificity": null

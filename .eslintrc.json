@@ -9,7 +9,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "camelcase": ["warn", { "allow": ["^atui(?:Kernel|Mediasplayer|Searchservices)_.*"] }],
+        "camelcase": ["warn", { "allow": ["^atui(?:Kernel|Mediasplayer|Searchservice)_.*"] }],
         "no-unused-vars": "off",
         "no-undef": "off",
         "prefer-const": "warn"

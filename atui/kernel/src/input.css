@@ -112,7 +112,13 @@ form div.optionGroup {
     border-radius: var(--atuiKernel_Borderradius);
 }
 
+form div.optionGroup.optionPill {
+    border-radius: 25px;
+}
+
 form div.optionGroup * {
     border: none;
-    background-color: transparent;
+    background-color: transparent !important;
+    outline: none !important;
+    margin: 0;
 }
