@@ -3,23 +3,63 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+/* Panel */
+
 .atuiSearchservice_Panel {
     border-radius: 25px;
-    padding: 0 !important;
     display: block !important;
-    max-width: 80%;
+    padding: 0 !important;
 }
 
 .atuiSearchservice_Panel.optionActive {
-    background-color: hsl(var(--atuiKernel_Color-A80));
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    box-shadow: var(--atuiKernel_ShadowMedium);
+    width: 500px;
     position: absolute;
     top: 0;
+    padding: 10px !important;
 }
+
+.atuiSearchservice_Panel.optionActive > * {
+    margin-bottom: 10px;
+}
+
+.atuiSearchservice_Panel > hr {
+    background-color: hsl(var(--atuiKernel_Color-N70));
+    border: none;
+    height: 1px;
+}
+
+.atuiSearchservice_Panel.optionActive > *:not(.atuiSearchservice_Bar) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Search bar */
+
+.atuiSearchservice_Panel:not(.optionActive) > *:not(.atuiSearchservice_Bar) {
+    display: none;
+}
+
+.atuiSearchservice_Panel.optionActive .atuiSearchservice_Bar {
+    margin-bottom: 15px;
+}
+
+.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup {
+    width: available;
+    width: stretch;
+    box-shadow: var(--atuiKernel_ShadowLight);
+}
+
+.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup input {
+    width: 100%;
+}
+
+/* Responsive */
 
 @media (width < 480px) /* Smartphones */ {
     .atuiSearchservice_Panel.optionActive {
-        width: calc(100% - 20px);
-        max-width: initial;
+        width: 90%;
     }
 }
 
@@ -27,6 +67,7 @@
     .atuiSearchservice_Panel:not(.optionActive) div.optionGroup {
         background-color: transparent;
         border: none;
+        box-shadow: none;
     }
 
     .atuiSearchservice_Panel:not(.optionActive) div.optionGroup input {
@@ -39,33 +80,4 @@
         width: 1.875rem !important;
         height: 1.875rem !important;
     }
-}
-
-.atuiSearchservice_Panel > * {
-    padding: 10px 20px;
-}
-
-.atuiSearchservice_Panel:not(.optionActive) > *:not(.atuiSearchservice_Bar) {
-    display: none;
-}
-
-.atuiSearchservice_Panel .atuiSearchservice_Bar {
-    padding: 5px;
-}
-
-.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup {
-    width: available;
-    width: stretch;
-}
-
-.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup input {
-    width: 100%;
-}
-
-.atuiSearchservice_Panel > hr {
-    background-color: hsl(var(--atuiKernel_Color-A60));
-    border: none;
-    height: 1px;
-    margin: 0 20px;
-    padding: 0 !important;
 }

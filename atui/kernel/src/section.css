@@ -201,16 +201,23 @@
 
 /* List */
 
-dl.atuiKernel_List :is(dt, dd) {
+dl.atuiKernel_List :is(dt, dd),
+:is(ul, ol).atuiKernel_List li {
     margin: 5px 0;
+}
+
+dl.atuiKernel_List dd,
+:is(ul, ol).atuiKernel_List li {
+    margin-left: 10px;
 }
 
 dl.atuiKernel_List dt {
     font-weight: bold;
 }
 
-dl.atuiKernel_List dd {
-    margin-left: 10px;
+:is(ul, ol).atuiKernel_List {
+    padding-left: 0;
+    list-style: none;
 }
 
 /* Scrolltop */

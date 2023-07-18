@@ -11,3 +11,13 @@ document.querySelectorAll(".atuiSearchservice_Panel").forEach(function (panel) {
         panel.classList.remove("optionActive");
     });
 });
+
+/**
+ * Filters the values of an array based on an input value.
+ * @param {string} input - The value from the search or text input.
+ * @param {Array<string>} list - The array of values to filter.
+ * @returns {Array<string>} - The filtered array of values that contain the input value.
+ */
+function atuiSearchservice_Filter(input, list) {
+    return list.filter((value) => value.toLowerCase().includes(input));
+}

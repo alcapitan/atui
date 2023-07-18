@@ -48,14 +48,20 @@
 
 /* Display on specific devices */
 
-@media (width >= 768px) /* Computers */ {
-    .atuiKernel_Header *.optionMobileonly {
+@media (1024px <= width) /* Computers */ {
+    .atuiKernel_Header *.optionHideOnDesktop {
         display: none;
     }
 }
 
-@media (width <= 767px) /* Smartphones */ {
-    .atuiKernel_Header *.optionDesktoponly {
+@media (480px <= width < 1024px) /* Tablets */ {
+    .atuiKernel_Header *.optionHideOnTablet {
+        display: none;
+    }
+}
+
+@media (width < 480px) /* Smartphones */ {
+    .atuiKernel_Header *.optionHideOnPhone {
         display: none;
     }
 }

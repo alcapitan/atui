@@ -3,6 +3,28 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+/* SearchService */
+
+const values = ["France", "Morocco", "Tunisia", "Brazil", "Spain", "India"];
+const listValues = document.getElementById("listValues");
+const searchInstance = document.getElementById("searchInstance");
+const searchInstanceInput = searchInstance.querySelector(".atuiSearchservice_Bar input");
+searchInstanceInput.addEventListener("input", () => {
+    const inputValue = searchInstanceInput.value;
+    const matchingValues = atuiSearchservice_Filter(inputValue, values);
+
+    while (listValues.firstChild) {
+        listValues.removeChild(listValues.firstChild);
+    }
+    matchingValues.forEach((value) => {
+        const valueElement = document.createElement("li");
+        valueElement.innerText = value;
+        listValues.appendChild(valueElement);
+    });
+});
+
+/* Notification */
+
 const testActionBtnNotif = () => {
     console.log("coucou milan !");
 };
@@ -49,12 +71,16 @@ document.getElementById("pushNotificationMini").addEventListener("click", functi
     });
 });
 
+/* Practical JS functions */
+
 document.getElementById("clipboardButton").addEventListener("click", async function () {
     const text = document.getElementById("clipboardInput").value;
     atuiKernel_ClipboardCopy(text);
     const clipboardText = await atuiKernel_ClipboardPaste();
     document.getElementById("clipboard-paste").innerText = clipboardText;
 });
+
+/* MediasPlayer */
 
 document.getElementById("shareButton").addEventListener("click", function () {
     atuiKernel_ShareTool("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");

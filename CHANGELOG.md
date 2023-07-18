@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add `.optionGroup` for Input containers.
 -   Implement again `.atuiKernel_Scrolltop`.
 -   Set an instable image support in `.atuiKernel_SectionParagraph` titles.
--   Create `.atuiKernel_List`.
+-   Create `.atuiKernel_List` with `<dl>`, `<ul>` and `<ol>` HTML tags.
 
 ### Changed
 
@@ -38,6 +38,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Source maps now entirely works.
     -   Remove partial dist files.
     -   Deploy ATUI on Netlify for each tag push.
+-   Completely rewrite SearchService :
+    -   All new visual design.
+    -   Now really usable for all desires.
+    -   Implement an efficient filter function named `atuiSearchservice_Filter`.
+-   Replace `.optionMobileonly` and `.optionDesktoponly` to `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnMobile` for `.atuiKernel_Header`.
 
 ### Fixed
 
