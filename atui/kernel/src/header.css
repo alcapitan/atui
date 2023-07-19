@@ -112,7 +112,6 @@
     column-gap: 5px;
     justify-content: space-around;
     flex-wrap: wrap;
-    position: relative;
 }
 
 .atuiKernel_Header > div > * {
@@ -128,7 +127,6 @@
     scroll-snap-type: x mandatory;
     justify-content: unset;
     flex-wrap: nowrap;
-    position: initial;
 }
 
 .atuiKernel_Header > div.optionScrollable > * {

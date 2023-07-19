@@ -98,16 +98,16 @@
                         <p>ATUI</p>
                     </a>
                     <hr class="atuiKernel_HeaderSpace" />
-                    <div class="atuiSearchservice_Panel" id="searchInstance">
+                    <div class="atuiSearchservice_Panel" id="searchCountry">
                         <form class="atuiSearchservice_Bar">
                             <div class="optionGroup optionPill">
-                                <input type="search" placeholder="Search anything" required />
+                                <input type="search" placeholder="Search a country" required />
                                 <i class="ti ti-search atuiKernel_InputSubmit"></i>
                             </div>
                         </form>
                         <div>
-                            <h3>Coucou Milan !</h3>
-                            <ul class="atuiKernel_List" id="listValues">
+                            <h3>Some countries :</h3>
+                            <ul class="atuiKernel_List" id="listCountry">
                                 <li>France</li>
                                 <li>Morocco</li>
                                 <li>Tunisia</li>
@@ -289,6 +289,35 @@
                 </div>
                 <div class="atuiKernel_SectionContent">
                     <h3>New in v0.5</h3>
+                    <div class="atuiSearchservice_Panel" id="searchName">
+                        <form class="atuiSearchservice_Bar">
+                            <div class="optionGroup optionPill">
+                                <input type="search" placeholder="Search a name" required />
+                                <i class="ti ti-search atuiKernel_InputSubmit"></i>
+                            </div>
+                        </form>
+                        <div>
+                            <h3>Some names :</h3>
+                            <ul class="atuiKernel_List" id="listName">
+                                <li>Sarah</li>
+                                <li>Aïsha</li>
+                                <li>Mariam</li>
+                                <li>Louise</li>
+                                <li>Élise</li>
+                                <li>Éléonore</li>
+                            </ul>
+                        </div>
+                        <hr />
+                        <div>
+                            <p>SearchService can now work out of Header !</p>
+                        </div>
+                    </div>
+                    <form class="atuiSearchservice_Bar">
+                        <div class="optionGroup optionPill">
+                            <input type="search" placeholder="Search without panel" required />
+                            <i class="ti ti-search atuiKernel_InputSubmit"></i>
+                        </div>
+                    </form>
                     <button class="atuiKernel_Button optionOutlined optionPill" id="pushNotificationMini">
                         <i class="ti ti-arrows-diagonal-minimize"></i>
                         Push a mini notification

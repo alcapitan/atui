@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Deploy ATUI on Netlify for each tag push.
 -   Completely rewrite SearchService :
     -   All new visual design.
-    -   Now really usable for all desires.
+    -   Now really usable for all desires, even out of `.atuiKernel_Header` and without panel, with multiples search instance on the same page.
     -   Implement an efficient filter function named `atuiSearchservice_Filter`.
 -   Replace `.optionMobileonly` and `.optionDesktoponly` to `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnMobile` for `.atuiKernel_Header`.
 

@@ -15,9 +15,18 @@
     background-color: hsl(var(--atuiKernel_Color-N90));
     box-shadow: var(--atuiKernel_ShadowMedium);
     width: 500px;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
+    z-index: 13;
+    margin: 20px 25%;
     padding: 10px !important;
+}
+
+@media (width < 480px) /* Smartphones */ {
+    .atuiSearchservice_Panel.optionActive {
+        width: 90%;
+    }
 }
 
 .atuiSearchservice_Panel.optionActive > * {
@@ -45,9 +54,12 @@
     margin-bottom: 15px;
 }
 
-.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup {
+.atuiSearchservice_Panel.optionActive .atuiSearchservice_Bar div.optionGroup {
     width: available;
     width: stretch;
+}
+
+.atuiSearchservice_Bar div.optionGroup {
     box-shadow: var(--atuiKernel_ShadowLight);
 }
 
@@ -55,26 +67,20 @@
     width: 100%;
 }
 
-/* Responsive */
-
-@media (width < 480px) /* Smartphones */ {
-    .atuiSearchservice_Panel.optionActive {
-        width: 90%;
-    }
-}
+/* Responsive in Header */
 
 @media (width < 1024px) /* Smartphones & tablets */ {
-    .atuiSearchservice_Panel:not(.optionActive) div.optionGroup {
+    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup {
         background-color: transparent;
         border: none;
         box-shadow: none;
     }
 
-    .atuiSearchservice_Panel:not(.optionActive) div.optionGroup input {
+    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup input {
         display: none;
     }
 
-    .atuiSearchservice_Panel:not(.optionActive) div.optionGroup .atuiKernel_InputSubmit {
+    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup .atuiKernel_InputSubmit {
         padding: 5px;
         font-size: 1.875rem !important;
         width: 1.875rem !important;

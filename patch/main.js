@@ -5,23 +5,32 @@
 
 /* SearchService */
 
-const values = ["France", "Morocco", "Tunisia", "Brazil", "Spain", "India"];
-const listValues = document.getElementById("listValues");
-const searchInstance = document.getElementById("searchInstance");
-const searchInstanceInput = searchInstance.querySelector(".atuiSearchservice_Bar input");
-searchInstanceInput.addEventListener("input", () => {
-    const inputValue = searchInstanceInput.value;
-    const matchingValues = atuiSearchservice_Filter(inputValue, values);
+setupInstance(
+    document.querySelector("#searchCountry .atuiSearchservice_Bar input"),
+    ["France", "Morocco", "Tunisia", "Brazil", "Spain", "India"],
+    document.getElementById("listCountry"),
+);
+setupInstance(
+    document.querySelector("#searchName .atuiSearchservice_Bar input"),
+    ["Sarah", "Aïsha", "Mariam", "Louise", "Élise", "Éléonore"],
+    document.getElementById("listName"),
+);
 
-    while (listValues.firstChild) {
-        listValues.removeChild(listValues.firstChild);
-    }
-    matchingValues.forEach((value) => {
-        const valueElement = document.createElement("li");
-        valueElement.innerText = value;
-        listValues.appendChild(valueElement);
+function setupInstance(instance, values, listValues) {
+    instance.addEventListener("input", () => {
+        const inputValue = instance.value;
+        const matchingValues = atuiSearchservice_Filter(inputValue, values);
+
+        while (listValues.firstChild) {
+            listValues.removeChild(listValues.firstChild);
+        }
+        matchingValues.forEach((value) => {
+            const valueElement = document.createElement("li");
+            valueElement.innerText = value;
+            listValues.appendChild(valueElement);
+        });
     });
-});
+}
 
 /* Notification */
 

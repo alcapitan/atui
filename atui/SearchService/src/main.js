@@ -4,11 +4,14 @@
  */
 
 document.querySelectorAll(".atuiSearchservice_Panel").forEach(function (panel) {
-    panel.addEventListener("mouseover", function () {
+    panel.addEventListener("click", function () {
         panel.classList.add("optionActive");
     });
-    panel.addEventListener("mouseout", function () {
-        panel.classList.remove("optionActive");
+
+    document.addEventListener("click", (event) => {
+        if (!panel.contains(event.target)) {
+            panel.classList.remove("optionActive");
+        }
     });
 });
 
@@ -19,5 +22,5 @@ document.querySelectorAll(".atuiSearchservice_Panel").forEach(function (panel) {
  * @returns {Array<string>} - The filtered array of values that contain the input value.
  */
 function atuiSearchservice_Filter(input, list) {
-    return list.filter((value) => value.toLowerCase().includes(input));
+    return list.filter((value) => value.toLowerCase().includes(input.toLowerCase()));
 }
