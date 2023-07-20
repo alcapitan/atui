@@ -14,18 +14,27 @@
 .atuiSearchservice_Panel.optionActive {
     background-color: hsl(var(--atuiKernel_Color-N90));
     box-shadow: var(--atuiKernel_ShadowMedium);
-    width: 500px;
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 13;
-    margin: 20px 25%;
+    margin-block: 20px;
     padding: 10px !important;
 }
 
 @media (width < 480px) /* Smartphones */ {
     .atuiSearchservice_Panel.optionActive {
         width: 90%;
+        margin-inline: 5%;
+    }
+}
+
+@media (480px <= width) /* Tablets and computers */ {
+    .atuiSearchservice_Panel.optionActive {
+        width: 500px;
+        margin-inline: 50%;
+        transform: translateX(-50%);
     }
 }
 
