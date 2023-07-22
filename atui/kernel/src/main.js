@@ -94,15 +94,148 @@ function atuiKernel_ShareTool(title, text, url) {
     });
 }
 
+/* Data storage */
+
+/**
+ * Create or update data stored in the user's device (with localStorage, sessionStorage, or cookies).
+ * @param {string} key - The key to identify the data.
+ * @param {*} value - The data to be saved.
+ * @param {string} tool - The storage tool to use: "local" (means localStorage), "session" (means sessionStorage), or "cookie".
+ * @param {number} [lifetime=30] - The number of days before the cookie expires (only for "cookie" storage).
+ * @returns {boolean} Returns true if the data was saved successfully, otherwise false.
+ */
+function atuiKernel_StorageSet(key, value, tool, lifetime = 30) {
+    switch (tool) {
+        case "local":
+            try {
+                localStorage.setItem(key, JSON.stringify(value));
+                return true;
+            } catch (error) {
+                console.error("Error when handling localStorage :", error);
+                return false;
+            }
+        case "session":
+            try {
+                sessionStorage.setItem(key, JSON.stringify(value));
+                return true;
+            } catch (error) {
+                console.error("Error when handling sessionStorage :", error);
+                return false;
+            }
+        case "cookie":
+            try {
+                let cookie = `${encodeURIComponent(key)}=${encodeURIComponent(JSON.stringify(value))}`;
+                const expirationDate = new Date();
+                expirationDate.setDate(expirationDate.getDate() + (lifetime ?? 30));
+                cookie += `;expires=${expirationDate.toUTCString()}`;
+                document.cookie = cookie;
+                return true;
+            } catch (error) {
+                console.error("Error when handling cookies :", error);
+                return false;
+            }
+        default:
+            console.error("This storage tool unavailable (check spelling) :", tool);
+            return false;
+    }
+}
+
+/**
+ * Retrieves data stored in the user's device (with localStorage, sessionStorage, or cookies).
+ * @param {string} key - The key to identify the data to retrieve.
+ * @param {string} tool - The storage tool to use: "local" (means localStorage), "session" (means sessionStorage), or "cookie".
+ * @returns {*} The retrieved data or null if no data is found.
+ */
+function atuiKernel_StorageGet(key, tool) {
+    function convertToLogicalType(value) {
+        try {
+            return JSON.parse(value); // If the value is a dictionary, an array, a boolean, a number, or null
+        } catch (error) {
+            return value === "undefined" ? undefined : value;
+        }
+    }
+
+    switch (tool) {
+        case "local":
+            try {
+                const data = localStorage.getItem(key);
+                return data ? JSON.parse(data) : null;
+            } catch (error) {
+                console.error("Error when handling localStorage :", error);
+                return null;
+            }
+        case "session":
+            try {
+                const data = sessionStorage.getItem(key);
+                return data ? JSON.parse(data) : null;
+            } catch (error) {
+                console.error("Error when handling sessionStorage :", error);
+                return null;
+            }
+        case "cookie":
+            try {
+                const cookies = document.cookie.split(";");
+                for (const cookie of cookies) {
+                    const [cookieName, cookieValue] = cookie.split("=");
+                    if (decodeURIComponent(cookieName.trim()) === key) {
+                        const value = decodeURIComponent(cookieValue.trim());
+                        const convertedValue = convertToLogicalType(value);
+                        return convertedValue;
+                    }
+                }
+                return null; // If no cookie found
+            } catch (error) {
+                console.error("Error when handling cookies :", error);
+                return null;
+            }
+        default:
+            console.error("This storage tool unavailable (check spelling) :", tool);
+            return null;
+    }
+}
+
+/**
+ * Removes data stored in the user's device (with localStorage, sessionStorage, or cookies).
+ * @param {string} key - The key to identify the data to remove.
+ * @param {string} tool - The storage tool to use: "local" (means localStorage), "session" (means sessionStorage), or "cookie".
+ * @returns {boolean} Returns true if the data was removed successfully, otherwise false.
+ */
+function atuiKernel_StorageRemove(key, tool) {
+    switch (tool) {
+        case "local":
+            try {
+                localStorage.removeItem(key);
+                return true;
+            } catch (error) {
+                console.error("Error when handling localStorage :", error);
+                return false;
+            }
+        case "session":
+            try {
+                sessionStorage.removeItem(key);
+                return true;
+            } catch (error) {
+                console.error("Error when handling sessionStorage :", error);
+                return false;
+            }
+        case "cookie":
+            try {
+                document.cookie = `${encodeURIComponent(key)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT;`;
+                return true;
+            } catch (error) {
+                console.error("Error when handling cookies :", error);
+                return false;
+            }
+        default:
+            console.error("This storage tool unavailable (check spelling) :", tool);
+            return false;
+    }
+}
+
 /* Display mode */
 
 function atuiKernel_ColormodeIsDark() {
-    const status = document.documentElement.getAttribute("data-atui-colormode");
-    if (status === "dark") {
-        return true;
-    } else {
-        return false;
-    }
+    return document.documentElement.getAttribute("data-atui-colormode") === "dark";
 }
 
 function atuiKernel_ColormodeToggle() {
@@ -116,14 +249,7 @@ function atuiKernel_ColormodeToggle() {
             button.classList.replace("ti-sun", "ti-moon");
         }
     });
-
-    /* Save the status in cookies */
-    const date = new Date();
-    date.setTime(date.getTime() + 3600000); // Expiration time is 1 hour
-    const expires = "expires=" + date.toUTCString();
-    const cookie =
-        "atuiKernel_ColormodeIsDark=" + atuiKernel_ColormodeIsDark() + ";" + expires + ";path=/;SameSite=Lax;";
-    document.cookie = cookie;
+    atuiKernel_StorageSet("atuiKernel_ColormodeIsDark", atuiKernel_ColormodeIsDark(), "local");
 }
 
 function atuiKernel_ColormodeStartup() {
@@ -133,18 +259,13 @@ function atuiKernel_ColormodeStartup() {
         console.info("Dark mode enabled according to the system preferences.");
         return true;
     }
-    const cookies = document.cookie.split(";");
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        if (cookie.startsWith("atuiKernel_ColormodeIsDark=")) {
-            const cookieStatus = cookie.substring("atuiKernel_ColormodeIsDark=".length, cookie.length);
-            if (cookieStatus === "true") {
-                atuiKernel_ColormodeToggle();
-                console.info("Dark mode enabled according to the cookies.");
-            }
-            return cookieStatus === "true";
-        }
+
+    const localStatus = atuiKernel_StorageGet("atuiKernel_ColormodeIsDark", "local");
+    if (localStatus) {
+        atuiKernel_ColormodeToggle();
+        console.info("Dark mode enabled according to the memory.");
     }
+
     return false;
 }
 atuiKernel_ColormodeStartup();

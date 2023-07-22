@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Implement again `.atuiKernel_Scrolltop`.
 -   Set an instable image support in `.atuiKernel_SectionParagraph` titles.
 -   Create `.atuiKernel_List` with `<dl>`, `<ul>` and `<ol>` HTML tags.
+-   Create JavaScript storage functions to store data between 2 web page visits : `atuiKernel_StorageGet`, `atuiKernel_StorageSet`, `atuiKernel_StorageRemove`.
 
 ### Changed
 
@@ -43,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Now really usable for all desires, even out of `.atuiKernel_Header` and without panel, with multiples search instance on the same page.
     -   Implement an efficient filter function named `atuiSearchservice_Filter`.
 -   Replace `.optionMobileonly` and `.optionDesktoponly` to `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnMobile` for `.atuiKernel_Header`.
+-   Check the color mode status at startup in localStorage instead of cookies.
 
 ### Fixed
 
