@@ -72,12 +72,13 @@
     position: fixed;
 }
 
-.atuiKernel_Header:is(.optionAccent, .optionDark) * {
+.atuiKernel_Header.optionDark * {
     color: hsl(var(--atuiKernel_Color-NFF));
 }
 
 .atuiKernel_Header.optionAccent {
-    background-color: hsl(var(--atuiKernel_Color-A20));
+    background-color: hsl(var(--atuiKernel_Color-A90));
+    border-bottom-color: hsl(var(--atuiKernel_Color-A80));
 }
 
 .atuiKernel_Header.optionAccent .atuiKernel_HeaderSplit {

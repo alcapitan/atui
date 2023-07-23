@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   Fix nightly CSS/JS links in the README to get ATUI.
+-   Set a lighter color for `.atuiKernel_Header.optionAccent`.
 
 ## [0.4.1] - 2023-06-20
 
