@@ -41,6 +41,13 @@ Put this line at the end in the HTML tag `<body>` :
 
 Then, change the links above for reach extensions files.
 
+#### Nightly channel (only for developers !)
+
+To get ATUI from the latest commit in the github repo.
+
+CSS : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.css`  
+JavaScript : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.js`
+
 ## Contributing
 
 ATUI is an open-source project that invites collaboration.  
