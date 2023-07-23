@@ -67,6 +67,10 @@
     background-color: hsl(var(--atuiKernel_Color-A60));
 }
 
+.atuiKernel_Button:focus {
+    outline: none !important;
+}
+
 /* Disabled */
 
 .atuiKernel_Button:is(:disabled, .optionDisabled) {

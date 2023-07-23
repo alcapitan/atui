@@ -585,7 +585,9 @@ function atuiKernel_NotificationPush(options) {
 }
 let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3"; /* eslint-disable-line prefer-const */
 
-/* Patch height superposition issue between header and carousel */
+/* Visual patches */
+
+// Height superposition between header and carousel
 
 const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
