@@ -159,7 +159,7 @@ function atuiKernel_StorageGet(key, tool) {
         case "local":
             try {
                 const data = localStorage.getItem(key);
-                return data ? JSON.parse(data) : null;
+                return data !== null ? convertToLogicalType(data) : null;
             } catch (error) {
                 console.error("Error when handling localStorage :", error);
                 return null;
@@ -167,7 +167,7 @@ function atuiKernel_StorageGet(key, tool) {
         case "session":
             try {
                 const data = sessionStorage.getItem(key);
-                return data ? JSON.parse(data) : null;
+                return data !== null ? convertToLogicalType(data) : null;
             } catch (error) {
                 console.error("Error when handling sessionStorage :", error);
                 return null;
@@ -178,9 +178,8 @@ function atuiKernel_StorageGet(key, tool) {
                 for (const cookie of cookies) {
                     const [cookieName, cookieValue] = cookie.split("=");
                     if (decodeURIComponent(cookieName.trim()) === key) {
-                        const value = decodeURIComponent(cookieValue.trim());
-                        const convertedValue = convertToLogicalType(value);
-                        return convertedValue;
+                        const data = decodeURIComponent(cookieValue.trim());
+                        return convertToLogicalType(data);
                     }
                 }
                 return null; // If no cookie found
