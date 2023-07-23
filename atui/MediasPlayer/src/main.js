@@ -21,7 +21,7 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
         const player = findElement(
             this,
             ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
         );
         const media = player.querySelector("audio, video");
         media.pause();
@@ -54,7 +54,7 @@ function atuiMediasplayer_BrokenLink(player, mediaLink) {
 /* Assign an audio to an audioplayer */
 
 function atuiMediasplayer_Assign(data) {
-    const player = document.getElementById(data["player"]);
+    const player = document.getElementById(data.player);
     const media = player.querySelector("audio, video");
     const cover = player.querySelector(".atuiMediasplayer_Cover img, .atuiMediasplayer_Cover i");
     const title = player.querySelector(".atuiMediasplayer_InformationTitle");
@@ -63,24 +63,24 @@ function atuiMediasplayer_Assign(data) {
     const releaseDate = player.querySelector(".atuiMediasplayer_InformationReleaseDate");
     const origin = player.querySelector(".atuiMediasplayer_InformationOrigin");
 
-    media.setAttribute("src", data["media"]);
-    if (data["cover"] !== undefined) {
-        cover.setAttribute("src", data["cover"]);
+    media.setAttribute("src", data.media);
+    if (data.cover !== undefined) {
+        cover.setAttribute("src", data.cover);
     }
-    if (data["title"] !== undefined) {
-        title.innerHTML = data["title"];
+    if (data.title !== undefined) {
+        title.innerHTML = data.title;
     }
-    if (data["author"] !== undefined) {
-        author.innerHTML = data["author"];
+    if (data.author !== undefined) {
+        author.innerHTML = data.author;
     }
-    if (data["albumName"] !== undefined) {
-        albumName.innerHTML = data["albumName"];
+    if (data.albumName !== undefined) {
+        albumName.innerHTML = data.albumName;
     }
-    if (data["releaseDate"] !== undefined) {
-        releaseDate.innerHTML = data["releaseDate"];
+    if (data.releaseDate !== undefined) {
+        releaseDate.innerHTML = data.releaseDate;
     }
-    if (data["origin"] !== undefined) {
-        origin.setAttribute("href", data["origin"]);
+    if (data.origin !== undefined) {
+        origin.setAttribute("href", data.origin);
     }
 }
 
@@ -91,12 +91,12 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
         let media;
         if (this.getAttribute("data-mp-target") !== null) {
             media = document.querySelector(
-                `${this.getAttribute("data-mp-target")} audio, ${this.getAttribute("data-mp-target")} video`
+                `${this.getAttribute("data-mp-target")} audio, ${this.getAttribute("data-mp-target")} video`,
             );
             button = findElement(
                 media,
                 ".atuiMediasplayer_Run",
-                ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+                ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
             );
             if (this.getAttribute("data-mp-assign") !== null) {
                 const data = JSON.parse(this.getAttribute("data-mp-assign"));
@@ -111,7 +111,7 @@ document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
             const player = findElement(
                 media,
                 ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-                ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+                ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
             );
             player.querySelectorAll(".atuiKernel_SectionBox.optionAlert").forEach((alertBox) => {
                 alertBox.remove();
@@ -172,7 +172,7 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
         let listened = media.currentTime;
         let duration = media.duration;
         if (isNaN(duration)) {
-            (listened = 0), (duration = 0);
+            listened = duration = 0;
         }
         const percent = Math.round((listened / duration) * 100);
         timer.innerText = `${convertTime(listened)} - ${convertTime(duration)}`;
@@ -201,7 +201,7 @@ document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar)
         const media = findElement(
             progressbar,
             "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer"
+            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
         );
         const percent = (event.offsetX / progressbar.offsetWidth) * 100;
         media.currentTime = (media.duration * percent) / 100;
@@ -254,7 +254,6 @@ document.querySelectorAll(".atuiMediasplayer_Fullscreen").forEach((button) => {
             media.webkitRequestFullscreen();
         } else {
             console.error("The browser does not support fullscreen mode.");
-            return;
         }
     });
 });

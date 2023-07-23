@@ -17,10 +17,10 @@ atuiKernel_MetadataDisplay(atuiKernel_Metadata);
 /* Metadata display */
 
 function atuiKernel_MetadataDisplay(infos) {
-    console.group("Metadata of " + infos["name"]);
-    console.log("Author : " + infos["author"]);
-    console.log("Version : " + infos["version"]);
-    console.log("Website : " + infos["website"]);
+    console.group("Metadata of " + infos.name);
+    console.log("Author : " + infos.author);
+    console.log("Version : " + infos.version);
+    console.log("Website : " + infos.website);
     console.groupEnd();
 }
 
@@ -32,7 +32,7 @@ function findElement(element, query, stop = null) {
         return element.querySelector(query);
     } else if (element.querySelectorAll(query).length > 1) {
         // If element has several query.
-        let list = [];
+        const list = [];
         for (let counter = 0; counter < element.querySelectorAll(query).length; counter++) {
             list.push(element.querySelectorAll(query)[counter]);
         }
@@ -67,7 +67,7 @@ async function verifyLink(url) {
 /* Convert time data to be readable by humans */
 
 function convertTime(time) {
-    let hours = Math.floor(time / 3600);
+    const hours = Math.floor(time / 3600);
     let mins = Math.floor((time % 3600) / 60);
     let secs = Math.floor(time % 60);
     if (secs < 10) {
@@ -97,9 +97,9 @@ function atuiKernel_ClipboardPaste() {
 
 function atuiKernel_ShareTool(title, text, url) {
     navigator.share({
-        title: title,
-        text: text,
-        url: url,
+        title,
+        text,
+        url,
     });
 }
 
@@ -175,7 +175,7 @@ function atuiKernel_ColoraccentMetatag() {
     }
     metaTag.setAttribute(
         "content",
-        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`
+        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`,
     );
 }
 
@@ -184,7 +184,7 @@ function atuiKernel_ColoraccentMetatag() {
 function atuiKernel_PopupSetup(listener) {
     const popup = findElement(listener, listener.getAttribute("data-vk-popup-assign"));
 
-    let options = {
+    const options = {
         type: "default",
         triggerEvent: "mouseover",
         outEvent: "click",
@@ -261,7 +261,7 @@ function atuiKernel_PopupSetup(listener) {
         const overflowRight = listenerPosition.left + popupPosition.width > windowDimensions.width;
         const overflowBottom = listenerPosition.top + popupPosition.height > windowDimensions.height;
 
-        let calculatedPosition = {
+        const calculatedPosition = {
             left: 0,
             top: 0,
         };
@@ -427,13 +427,13 @@ function atuiKernel_NotificationPush(options) {
         }
     });
 }
-let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
+const atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3";
 
 /* Patch height superposition issue between header and carousel */
 
 const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-        let carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
+        const carousel = findElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent");
         let carouselContent = findElement(header, ".atuiKernel_Carousel > div > div", ".atuiKernel_BodyContent");
 
         if (!Array.isArray(carouselContent)) {
@@ -501,37 +501,37 @@ function atuiKernel_FooterLastedited(day, month, year) {
     /* Warning date not updated */
     const atuiKernel_FooterInfoDate = new Date();
     if (
-        (atuiKernel_FooterInfoDate.getDate() != day ||
-            atuiKernel_FooterInfoDate.getMonth() + 1 != month ||
-            atuiKernel_FooterInfoDate.getFullYear() != year) &&
-        atuiKernel_Metadata["in_development"]
+        (atuiKernel_FooterInfoDate.getDate() !== day ||
+            atuiKernel_FooterInfoDate.getMonth() + 1 !== month ||
+            atuiKernel_FooterInfoDate.getFullYear() !== year) &&
+        atuiKernel_Metadata.in_development
     ) {
         console.warn("The last modification date isn't up to date. ");
     }
 
     /* Based on ATUI */
     const atuiKernel_FooterInfoBased = document.createElement("a");
-    atuiKernel_FooterInfoBased.setAttribute("href", atuiKernel_Metadata["website"]);
+    atuiKernel_FooterInfoBased.setAttribute("href", atuiKernel_Metadata.website);
     atuiKernel_FooterInfoBased.setAttribute("target", "_blank");
     atuiKernel_FooterInfoBased.innerHTML =
-        "This website uses " + atuiKernel_Metadata["name"] + " " + atuiKernel_Metadata["version"] + " . ";
+        "This website uses " + atuiKernel_Metadata.name + " " + atuiKernel_Metadata.version + " . ";
     atuiKernel_FooterInfo.appendChild(atuiKernel_FooterInfoBased);
 
     /* Last modification of this website */
     const atuiKernel_FooterInfoLasteditedText = document.createElement("a");
     const atuiKernel_FooterInfoLasteditedConvertMonth = [
-        "january",
-        "february",
-        "march",
-        "april",
-        "may",
-        "june",
-        "july",
-        "august",
-        "september",
-        "october",
-        "november",
-        "december",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
     ];
     month = atuiKernel_FooterInfoLasteditedConvertMonth[month - 1];
     atuiKernel_FooterInfoLasteditedText.innerHTML = "Latest modification on " + day + " " + month + " " + year + ". ";

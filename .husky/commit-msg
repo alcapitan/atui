@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx --no --edit "$1"
+echo -e "\n\n=== CHECK COMMIT CONVENTION ===\n"
+npx --no -- commitlint --edit "$1"

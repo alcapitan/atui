@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+-   Rewrite NPM scripts and dependencies' configuration files :
+    -   Speed up the check process from 60s to 45s and the build process from 30s to 13s thanks to some optimizations and parallel executions.
+    -   More flexible, simple and rich NPM scripts with better code coverage ; plus every dependencies are now used.
+    -   Source maps now entirely works.
+    -   Remove partial dist files.
+    -   Deploy ATUI on Netlify for each tag push.
+
 ## [0.4.1] - 2023-06-20
 
 ### Changed
@@ -16,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Scroll-behaviour was not smooth.
+-   Scroll-behavior was not smooth.
 -   Remove comments in CSS dist files except unique licensing comment.
 -   Prevent default `<form>` submission in SearchServices.
 -   Remove color dimming in dark mode.

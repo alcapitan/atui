@@ -1,17 +1,17 @@
 {
-    "parser": "",
     "env": {
         "browser": true,
         "es2021": true
     },
-    "extends": ["eslint:recommended", "prettier"],
-    "overrides": [],
+    "extends": ["standard", "eslint:recommended", "prettier"],
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "sourceType": "module"
     },
     "rules": {
-        "no-undef": "off",
+        "camelcase": ["warn", { "allow": ["^atui(?:Kernel|Mediasplayer|Searchservices)_.*"] }],
         "no-unused-vars": "off",
-        "no-empty": "off"
+        "no-undef": "off",
+        "prefer-const": "warn"
     }
 }
