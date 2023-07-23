@@ -48,6 +48,10 @@
     height: 1px;
 }
 
+.atuiSearchservice_Panel:not(.optionActive) {
+    width: fit-content;
+}
+
 .atuiSearchservice_Panel.optionActive > *:not(.atuiSearchservice_Bar) {
     margin-left: 10px;
     margin-right: 10px;
