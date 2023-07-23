@@ -101,10 +101,44 @@ function atuiKernel_ShareTool(title, text, url) {
  * @param {string} key - The key to identify the data.
  * @param {*} value - The data to be saved.
  * @param {string} tool - The storage tool to use: "local" (means localStorage), "session" (means sessionStorage), or "cookie".
- * @param {number} [lifetime=30] - The number of days before the cookie expires (only for "cookie" storage).
+ * @param {string} [lifetime="30d"] - The data's lifetime (only for "cookie" storage) ("37m" means 37 minutes, "4h" means 4 hours and "8d" means 8 days).
  * @returns {boolean} Returns true if the data was saved successfully, otherwise false.
  */
-function atuiKernel_StorageSet(key, value, tool, lifetime = 30) {
+function atuiKernel_StorageSet(key, value, tool, lifetime = "30d") {
+    function addDurationToDate(date, duration) {
+        const regex = /^(\d+)([dhm])$/;
+        const match = duration.match(regex);
+
+        if (!match) {
+            throw new Error("Invalid duration format. Use Xd, Xh, or Xm (X being a positive integer).");
+        }
+
+        const quantity = parseInt(match[1]);
+        const unit = match[2];
+
+        if (isNaN(quantity) || quantity <= 0) {
+            throw new Error("The quantity of time must be a positive integer.");
+        }
+
+        const dateCopy = new Date(date.getTime());
+
+        switch (unit) {
+            case "d": // Days
+                dateCopy.setDate(dateCopy.getDate() + quantity);
+                break;
+            case "h": // Hours
+                dateCopy.setTime(dateCopy.getTime() + quantity * 60 * 60 * 1000);
+                break;
+            case "m": // Minutes
+                dateCopy.setTime(dateCopy.getTime() + quantity * 60 * 1000);
+                break;
+            default:
+                throw new Error("Invalid time unit. Use 'd' (= days), 'h' (= hours), or 'm' (= minutes).");
+        }
+
+        return dateCopy;
+    }
+
     switch (tool) {
         case "local":
             try {
@@ -125,9 +159,9 @@ function atuiKernel_StorageSet(key, value, tool, lifetime = 30) {
         case "cookie":
             try {
                 let cookie = `${encodeURIComponent(key)}=${encodeURIComponent(JSON.stringify(value))}`;
-                const expirationDate = new Date();
-                expirationDate.setDate(expirationDate.getDate() + (lifetime ?? 30));
-                cookie += `;expires=${expirationDate.toUTCString()}`;
+                const expirationDate = addDurationToDate(new Date(), lifetime);
+                const maxAgeInSeconds = Math.floor((expirationDate - new Date()) / 1000);
+                cookie += `;max-age=${maxAgeInSeconds}`;
                 document.cookie = cookie;
                 return true;
             } catch (error) {
