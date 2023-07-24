@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Let nightly CSS/JS links in the README.
 -   Create `.atuiKernel_Modal`.
 -   Create `.atuiKernel_Slider`.
 -   Add `.optionScrollable` for `.atuiKernel_Header` levels.
@@ -28,27 +27,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Change `system` Notification key to `type`.
 -   Hardly lighten footer's CSS code and remove almost all specific components.
 -   `.atuiKernel_Logotype` become a global component, not only for Header.
--   Move some CSS styles of HTML `<h*>` to global.
 -   Hardly lighten Licensing and change features.
 -   Some light visual changes to `.atuiKernel_PopupGlobalpanel`.
 -   Rename `.atuiKernel_SectionList` to `.atuiKernel_Group` due to conflicting names.
--   Remove the gray background color of the HTML `<input>` tags and lighten borders.
--   Rewrite NPM scripts and dependencies' configuration files :
-    -   Speed up the check process from 60s to 45s and the build process from 30s to 13s thanks to some optimizations and parallel executions.
-    -   More flexible, simple and rich NPM scripts with better code coverage ; plus every dependencies are now used.
-    -   Source maps now entirely works.
-    -   Remove partial dist files.
-    -   Deploy ATUI on Netlify for each tag push.
 -   Completely rewrite SearchService :
     -   All new visual design.
     -   Now really usable for all desires, even out of `.atuiKernel_Header` and without panel, with multiples search instance on the same page.
     -   Implement an efficient filter function named `atuiSearchservice_Filter`.
 -   Replace `.optionMobileonly` and `.optionDesktoponly` to `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnMobile` for `.atuiKernel_Header`.
 -   Check the color mode status at startup in localStorage instead of cookies.
-
-### Fixed
-
--   Fix nightly CSS/JS links in the README to get ATUI.
 
 ### Removed
 
