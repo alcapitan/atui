@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Let nightly CSS/JS links in the README to get ATUI from the latest commit in the github repository.
+
 ### Changed
 
 -   Rewrite NPM scripts and dependencies' configuration files :
@@ -18,8 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Fix nightly CSS/JS links in the README to get ATUI.
 -   Set a lighter color for `.atuiKernel_Header.optionAccent`.
+-   Remove outline for `input[type="submit"].atuiKernel_Button`.
 
 ## [0.4.1] - 2023-06-20
 
