@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Let nightly CSS/JS links in the README to get ATUI from the latest commit in the github repository.
+-   Create `.atuiKernel_Header > div.optionLevelLink` to substitute icons size patch in Header.
 
 ### Changed
 
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Source maps now entirely works.
     -   Remove partial dist files.
     -   Deploy ATUI on Netlify for each tag push.
+-   Remove underline for `.atuiKernel_Header a`.
 
 ### Fixed
 

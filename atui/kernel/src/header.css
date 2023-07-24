@@ -25,10 +25,8 @@
     height: 2.25rem;
 }
 
-.atuiKernel_Header > div :is(a,div) > :is(i,img) /* Fix icon size on elements with text and icon */ {
-    font-size: 1.125rem;
-    width: 1.125rem;
-    height: 1.125rem;
+.atuiKernel_Header a:is(:hover,:active) {
+    text-decoration: none;
 }
 
 /* Separators */
@@ -117,6 +115,12 @@
     width: max-content;
 }
 
+.atuiKernel_Header > div.optionLevelLink :is(i,img) {
+    font-size: 1.125rem;
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
 /* Logotype */
 
 .atuiKernel_Header .atuiKernel_Logotype {
@@ -129,10 +133,4 @@
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
     font-size: 1.5em;
-}
-
-.atuiKernel_Header .atuiKernel_Logotype :is(i, img) {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
 }
