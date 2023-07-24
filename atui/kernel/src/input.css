@@ -34,8 +34,8 @@ select,
 input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
     background-color: hsl(var(--atuiKernel_Color-NFF));
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
-    margin: 0;
+    border: 1px solid hsl(var(--atuiKernel_Color-N70));
+    margin: 5px;
     padding: 10px 15px;
     box-sizing: border-box;
     accent-color: hsl(var(--atuiKernel_Color-A50));
@@ -54,7 +54,7 @@ progress,
 textarea,
 select,
 .atuiKernel_InputSubmit {
-    background-color: hsl(var(--atuiKernel_Color-N90));
+    background-color: hsl(var(--atuiKernel_Color-NFF));
 }
 
 input[type="checkbox"],
@@ -85,6 +85,7 @@ input[type="color"]::-webkit-color-swatch {
     width: 20px !important;
     height: 20px !important;
     box-sizing: content-box;
+    vertical-align: middle;
 }
 
 :is(

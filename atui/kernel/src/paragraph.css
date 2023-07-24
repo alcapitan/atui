@@ -11,9 +11,6 @@
 
 .atuiKernel_SectionParagraph :is(h1, h2, h3, h4, h5, h6) {
     color: hsl(var(--atuiKernel_Color-A40));
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    margin: 15px 0;
 }
 
 .atuiKernel_SectionParagraph a {

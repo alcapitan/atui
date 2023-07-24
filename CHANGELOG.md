@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Remove partial dist files.
     -   Deploy ATUI on Netlify for each tag push.
 -   Remove underline for `.atuiKernel_Header a`.
+-   Move some CSS styles of HTML `<h*>` to global.
+-   Remove the gray background color of the HTML `<input>` tags and lighten borders.
 
 ### Fixed
 
