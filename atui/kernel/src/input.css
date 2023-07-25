@@ -3,15 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-input[type="file"]::-webkit-file-upload-button {
-    border-radius: var(--atuiKernel_Borderradius);
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
-    padding: 10px 15px;
-    height: 40px;
-    box-sizing: border-box;
-    accent-color: hsl(var(--atuiKernel_Color-A50));
-}
+/* Common */
 
 input,
 progress,
@@ -20,29 +12,14 @@ select,
 .atuiKernel_InputSubmit,
 input[type="file"]::file-selector-button {
     border-radius: var(--atuiKernel_Borderradius);
-    background-color: hsl(var(--atuiKernel_Color-NFF));
     border: 1px solid hsl(var(--atuiKernel_Color-N70));
+    accent-color: hsl(var(--atuiKernel_Color-A50));
     margin: 5px;
     padding: 10px 15px;
-    box-sizing: border-box;
-    accent-color: hsl(var(--atuiKernel_Color-A50));
+    vertical-align: middle;
 }
 
-input,
-progress,
-select,
-.atuiKernel_InputSubmit,
-input[type="file"]::file-selector-button {
-    height: 40px;
-}
-
-input:not([type="color"], [type="file"]),
-progress,
-textarea,
-select,
-.atuiKernel_InputSubmit {
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-}
+/* Patch */
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -50,46 +27,53 @@ input[type="radio"] {
     height: 30px;
 }
 
-progress {
-    border-radius: revert;
-    border: revert;
-    background-color: revert;
-}
-
-input[type="color"],
-input[type="file"] {
+input[type="color"] {
+    appearance: none;
+    width: 40px;
+    height: 40px;
     padding: 0;
+    background-color: transparent;
     border: none;
 }
 
 input[type="color"]::-webkit-color-swatch {
     border-radius: var(--atuiKernel_Borderradius);
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
 }
 
+input[type="color"]::-moz-color-swatch {
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+input[type="image"],
 .atuiKernel_InputSubmit {
-    font-size: 20px !important;
-    width: 20px !important;
-    height: 20px !important;
+    width: 1.125rem !important;
+    height: 1.125rem !important;
     box-sizing: content-box;
-    vertical-align: middle;
+    font-size: 1.125rem !important;
 }
 
-:is(
-        input:not([type="checkbox"], [type="radio"], [type="range"]),
-        .atuiKernel_InputSubmit,
-        progress:focus,
-        textarea:focus,
-        select
-    ):focus {
-    outline: solid 2px hsl(var(--atuiKernel_Color-A60) / 80%);
+input[type="file"] {
+    padding: 0;
+    border: none;
 }
+
+input[type="range"] {
+    padding-inline: 0;
+}
+
+progress {
+    padding: 0;
+    background: revert;
+    border: revert;
+    border-radius: revert;
+    height: 30px;
+}
+
+/* Fieldset */
 
 fieldset {
-    border: 1px solid hsl(var(--atuiKernel_Color-A40) / 80%);
+    border: 1px solid hsl(var(--atuiKernel_Color-A40));
     border-radius: var(--atuiKernel_Borderradius);
-    padding: 15px;
-    margin: 0;
 }
 
 fieldset legend {
@@ -98,12 +82,9 @@ fieldset legend {
     font-size: 1.125rem;
 }
 
-:is(input:not([type="file"], [type="color"]), .atuiKernel_InputSubmit, select, textarea).optionPill {
-    border-radius: 20px;
-    padding: 10px 20px;
-}
-
 /* Grouped */
+
+/* TODO: set :has(input) instead of form when Firefox will support :has() */
 
 form div.optionGroup {
     background-color: hsl(var(--atuiKernel_Color-NFF));
