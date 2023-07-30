@@ -44,6 +44,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove all Contacts components. These components have been replaced with common buttons and inputs.
 -   Remove all form and fieldset containers' CSS properties for free use.
 
+## [0.4.2] - 2023-07-30
+
+### Added
+
+-   Let nightly CSS/JS links in the README to get ATUI from the latest commit in the github repository.
+-   Create `.atuiKernel_Header > div.optionLevelLink` to substitute icons size patch in Header.
+
+### Changed
+
+-   Rewrite NPM scripts and dependencies' configuration files :
+    -   Speed up the check process from 60s to 45s and the build process from 30s to 13s thanks to some optimizations and parallel executions.
+    -   More flexible, simple and rich NPM scripts with better code coverage ; plus every dependencies are now used.
+    -   Source maps now entirely works.
+    -   Remove partial dist files.
+    -   Deploy ATUI on Netlify for each tag push.
+-   Remove underline for `.atuiKernel_Header a`.
+-   Move some CSS styles of HTML `<h*>` to global.
+-   Remove the gray background color of the HTML `<input>` tags and lighten borders.
+
+### Fixed
+
+-   Set a lighter color for `.atuiKernel_Header.optionAccent`.
+-   Remove outline for `input[type="submit"].atuiKernel_Button`.
+
 ## [0.4.1] - 2023-06-20
 
 ### Changed

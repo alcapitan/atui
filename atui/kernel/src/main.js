@@ -1,11 +1,11 @@
 /*!
- * ATUI v0.4.1 (https://github.com/alcapitan/atui)
+ * ATUI v0.4.2 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
 /* Licensing */
 
-const atuiKernel_Version = "0.4.1";
+const atuiKernel_Version = "0.4.2";
 
 document.querySelectorAll(".atuiKernel_LicensingAtui").forEach((link) => {
     link.setAttribute("href", "https://github.com/alcapitan/atui/");
