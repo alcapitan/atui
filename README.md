@@ -18,7 +18,7 @@ Anyway, you can already contribute to the project and give your opinions to help
 ### By NPM package (recommended)
 
 ```bash
-npm install @alcapitan/atui
+npm install @alcapitan/atui@0.4.2
 ```
 
 ### By CDN (for those who don't want to use NPM)
@@ -29,14 +29,14 @@ Put this line in the HTML tag `<head>` :
 <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.1/atui/kernel/dist/main.css"
+    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.2/atui/kernel/dist/main.css"
 />
 ```
 
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.1/atui/kernel/dist/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.2/atui/kernel/dist/main.js"></script>
 ```
 
 Then, change the links above for reach extensions files.
@@ -45,8 +45,8 @@ Then, change the links above for reach extensions files.
 
 To get ATUI from the latest commit in the github repo.
 
-CSS : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.css`  
-JavaScript : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.js`
+CSS : `https://cdn.jsdelivr.net/gh/alcapitan/atui@vv0.4-support/atui/kernel/dist/main.css`  
+JavaScript : `https://cdn.jsdelivr.net/gh/alcapitan/atui@vv0.4-support/atui/kernel/dist/main.js`
 
 ## Contributing
 
