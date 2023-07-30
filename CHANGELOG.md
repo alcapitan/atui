@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+-   Fix Netlify deployment fatal errors discovered pushing v0.4.2.
+
 ## [0.4.2] - 2023-07-30
 
 ### Added
