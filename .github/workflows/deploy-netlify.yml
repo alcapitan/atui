@@ -19,4 +19,5 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: 53032d03-f184-45a8-a5a7-c412ba1e645c
-          DIR: '/'
+          build_directory: ''
+          build_command: ''
