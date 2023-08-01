@@ -593,9 +593,9 @@ const atuiKernel_HeaderFixCarousel = () => {
     document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
         const carousel = atuiKernel_ToolsFindElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent")[0];
         const carouselContent = atuiKernel_ToolsFindElement(
-            header,
+            carousel,
             ".atuiKernel_Carousel > div > div",
-            ".atuiKernel_BodyContent",
+            ".atuiKernel_Carousel",
         );
 
         carousel.style.minHeight = header.offsetHeight * 2 + "px";

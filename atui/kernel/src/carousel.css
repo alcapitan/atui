@@ -11,6 +11,11 @@
     width: 100%;
     min-height: 25vh;
     max-height: 75vh;
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+.atuiKernel_Header + .atuiKernel_Carousel {
+    border-radius: 0;
 }
 
 .atuiKernel_Carousel > div /* Slide */ {
