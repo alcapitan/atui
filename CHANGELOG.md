@@ -39,6 +39,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Rewrite input stylesheet.
 -   Add the ability to use `.atuiKernel_Carousel` in `.atuiKernel_BodyContent` in addition to next to `.atuiKernel_Header`.
 
+### Fixed
+
+-   Webpage's min-height follows now the dynamic height of the viewport to prevent issues on floating panels in phones' web browsers.
+
 ### Removed
 
 -   The ability to assign and play media with HTML attributes has been removed due to JSON incompatibility. From now on, you can only do this with JavaScript function calls.
