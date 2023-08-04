@@ -228,7 +228,7 @@ dl.atuiKernel_List dt {
     color: hsl(var(--atuiKernel_Color-A20)) !important;
     background-color: hsl(var(--atuiKernel_Color-A80));
     position: fixed;
-    z-index: 14;
+    z-index: 15;
     bottom: 30px;
     right: 40px;
     font-size: 2.25rem !important;

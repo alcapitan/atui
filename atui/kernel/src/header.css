@@ -10,7 +10,7 @@
     position: relative;
     width: available;
     width: stretch;
-    z-index: 12;
+    z-index: 13;
     padding: 0 5px;
     border-bottom: 1px solid hsl(var(--atuiKernel_Color-N80));
 }

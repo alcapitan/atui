@@ -3,29 +3,35 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+/* Global */
+
 .atuiKernel_Carousel {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    min-height: 25vh;
-    max-height: 75vh;
     border-radius: var(--atuiKernel_Borderradius);
+    overflow: hidden;
+    position: relative;
 }
 
 .atuiKernel_Header + .atuiKernel_Carousel {
     border-radius: 0;
 }
 
-.atuiKernel_Carousel > div /* Slide */ {
+.atuiKernel_Carousel .atuiKernel_CarouselSlides {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    min-height: 25vh;
+    max-height: 75vh;
+}
+
+.atuiKernel_Carousel .atuiKernel_CarouselSlides > div /* Slide */ {
     position: relative;
     flex: 0 0 100%;
     scroll-snap-align: center;
     background-color: hsl(var(--atuiKernel_Color-N10));
 }
 
-.atuiKernel_Carousel > div > img /* Illustration in slide */ {
+.atuiKernel_Carousel .atuiKernel_CarouselSlides > div > img /* Illustration in slide */ {
     display: block;
     object-fit: cover;
     object-position: center;
@@ -33,7 +39,7 @@
     height: 100%;
 }
 
-.atuiKernel_Carousel > div > div /* Caption in slide */ {
+.atuiKernel_Carousel .atuiKernel_CarouselSlides > div > div /* Caption in slide */ {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, hsl(var(--atuiKernel_Color-N90) / 60%) 50%, transparent 100%);
@@ -46,4 +52,32 @@
     height: stretch;
     box-sizing: border-box;
     text-align: center;
+}
+
+/* Controls */
+
+.atuiKernel_Carousel .atuiKernel_CarouselControls {
+    position: absolute;
+    inset: 0;
+}
+
+.atuiKernel_Carousel
+    .atuiKernel_CarouselControls
+    :is(.atuiKernel_CarouselControlsLeft, .atuiKernel_CarouselControlsRight) {
+    font-size: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    color: hsl(var(--atuiKernel_Color-NFF));
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 10;
+}
+
+.atuiKernel_Carousel .atuiKernel_CarouselControls .atuiKernel_CarouselControlsLeft {
+    left: 10px;
+}
+
+.atuiKernel_Carousel .atuiKernel_CarouselControls .atuiKernel_CarouselControlsRight {
+    right: 10px;
 }

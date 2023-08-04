@@ -585,7 +585,7 @@ function atuiKernel_NotificationPush(options) {
 }
 let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3"; /* eslint-disable-line prefer-const */
 
-/* Visual patches */
+/* Carousel */
 
 // Height superposition between header and carousel
 
@@ -594,7 +594,7 @@ const atuiKernel_HeaderFixCarousel = () => {
         const carousel = atuiKernel_ToolsFindElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent")[0];
         const carouselContent = atuiKernel_ToolsFindElement(
             carousel,
-            ".atuiKernel_Carousel > div > div",
+            ".atuiKernel_CarouselSlides > div > div",
             ".atuiKernel_Carousel",
         );
 
@@ -606,6 +606,27 @@ const atuiKernel_HeaderFixCarousel = () => {
 };
 atuiKernel_HeaderFixCarousel();
 window.addEventListener("resize", atuiKernel_HeaderFixCarousel);
+
+// Controls
+
+document.querySelectorAll(".atuiKernel_Carousel").forEach((carousel) => {
+    const slidesContainer = carousel.querySelector(".atuiKernel_CarouselSlides");
+    const controls = carousel.querySelector(".atuiKernel_CarouselControls");
+    const controlsLeft = controls?.querySelector(".atuiKernel_CarouselControlsLeft");
+    const controlsRight = controls?.querySelector(".atuiKernel_CarouselControlsRight");
+    controlsLeft?.addEventListener("click", () => {
+        slidesContainer.scrollBy({
+            left: -slidesContainer.offsetWidth,
+            behavior: "smooth",
+        });
+    });
+    controlsRight?.addEventListener("click", () => {
+        slidesContainer.scrollBy({
+            left: slidesContainer.offsetWidth,
+            behavior: "smooth",
+        });
+    });
+});
 
 /* Modal */
 

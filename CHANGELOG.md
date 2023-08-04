@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Check the color mode status at startup in localStorage instead of cookies.
 -   Rewrite input stylesheet.
 -   Add the ability to use `.atuiKernel_Carousel` in `.atuiKernel_BodyContent` in addition to next to `.atuiKernel_Header`.
+-   Add controls arrows to `.atuiKernel_Carousel` in addition to sliding on a touchscreen.
 
 ### Fixed
 
