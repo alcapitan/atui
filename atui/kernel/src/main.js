@@ -597,11 +597,13 @@ const atuiKernel_HeaderFixCarousel = () => {
             ".atuiKernel_CarouselSlides > div > div",
             ".atuiKernel_Carousel",
         );
+        const carouselControls = carousel.querySelector(".atuiKernel_CarouselControls");
 
         carousel.style.minHeight = header.offsetHeight * 2 + "px";
         carouselContent.forEach((element) => {
             element.style.paddingTop = header.offsetHeight + 20 + "px";
         });
+        carouselControls.style.marginTop = header.offsetHeight + "px";
     });
 };
 atuiKernel_HeaderFixCarousel();
