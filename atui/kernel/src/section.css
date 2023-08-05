@@ -138,7 +138,7 @@
 }
 
 .atuiKernel_Squarelink:is(:hover, :active) * {
-    background-color: hsl(var(--atuiKernel_Color-A50));
+    color: hsl(var(--atuiKernel_Color-A50));
 }
 
 .atuiKernel_Squarelink.optionFilled {
