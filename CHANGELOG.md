@@ -40,6 +40,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add the ability to use `.atuiKernel_Carousel` in `.atuiKernel_BodyContent` in addition to next to `.atuiKernel_Header`.
 -   Add controls arrows to `.atuiKernel_Carousel` in addition to sliding on a touchscreen.
 -   Add danger, warning, success, and info color themes to `.atuiKernel_Button`.
+-   Rewrite Squarelink :
+    -   Rename `.atuiKernel_SectionSquarelink` to `.atuiKernel_Squarelink`, and change HTML structure.
+    -   More flexible visual possibilities.
+    -   Add `.optionFilled` and `.optionNavigator` (to transpose former interface).
 
 ### Fixed
 
