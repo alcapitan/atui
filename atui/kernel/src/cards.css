@@ -3,133 +3,41 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Global */
-
-.atuiKernel_SectionCard
-/* Container */ {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.atuiKernel_SectionCard article
-/* Elements */ {
-    display: flex;
-    flex-direction: column;
+.atuiKernel_Card {
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+}
+
+.atuiKernel_Card.optionOverlay {
     position: relative;
-    box-sizing: border-box;
 }
 
-.atuiKernel_SectionCard article > div[class="image"] {
-    display: flex;
-    justify-content: center;
-}
-
-.atuiKernel_SectionCard article > div[class="image"] img
-/* Images */ {
+.atuiKernel_Card > img {
     width: 100%;
-    max-width: 300px;
+    display: block;
+
+    /** set filter to brightness(0.7) if you need more color contrast with optionOverlay */
 }
 
-.atuiKernel_SectionCard article > div[class="text"] > :is(h3,p)
-/* Texts */ {
-    margin: 10px 15px;
-}
-
-.atuiKernel_SectionCard article > div[class="text"] > h3
-/* Titles */ {
-    font-family: var(--atuiKernel_FontsTitle);
-    color: hsl(var(--atuiKernel_Color-N00));
-}
-
-.atuiKernel_SectionCard article > div[class="text"] > p
-/* Paragraphs */ {
-    text-align: justify;
-}
-
-.atuiKernel_SectionCard .atuiKernel_Button {
-    margin-top: 0;
-}
-
-/* Responsive */
-
-@media (1024px <= width) /* Computers */ {
-    .atuiKernel_SectionCard article {
-        width: calc(33% - 5px);
-    }
-}
-
-@media (480px <= width < 1024px) /* Tablets */ {
-    .atuiKernel_SectionCard article {
-        width: calc(50% - 5px);
-    }
-}
-
-@media (width < 480px) /* Smartphones */ {
-    .atuiKernel_SectionCard {
-        flex-direction: column;
-    }
-
-    .atuiKernel_SectionCard article {
-        margin: 10px 0;
-        width: 100%;
-    }
-}
-
-/* Standard */
-
-.atuiKernel_SectionCard.optionStandard article > div[class="image"] img
-/* Image */ {
-    margin: 10px;
-    border-radius: var(--atuiKernel_Borderradius);
-    width: calc(100% - 20px);
-}
-
-/* Contrast */
-
-.atuiKernel_SectionCard.optionContrast article > div[class="image"]
-/* Image container */ {
-    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-}
-
-.atuiKernel_SectionCard.optionContrast article > div[class="text"] > h3
-/* Title */ {
-    border-bottom: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    background-color: hsl(var(--atuiKernel_Color-N80));
-    margin: 0;
-    padding: 10px 15px;
-}
-
-/* Overlay */
-
-.atuiKernel_SectionCard.optionOverlay article {
-    background-color: transparent;
-}
-
-.atuiKernel_SectionCard.optionOverlay article > div[class="image"] {
-    width: 100%;
-    height: 100%;
+.atuiKernel_Card.optionOverlay > div {
     position: absolute;
-    z-index: -1;
+    top: 0;
+
+    /** replace top with bottom to place the text content at the bottom */
+
+    /** set color to white if needed for > * */
 }
 
-.atuiKernel_SectionCard.optionOverlay article > div[class="image"] img {
-    height: 100%;
-    object-fit: cover;
-    max-width: none;
+.atuiKernel_Card > div > *:not(.atuiKernel_CardHighlight),
+.atuiKernel_Card .atuiKernel_CardHighlight > * {
+    /* TODO: lighten spacing code when global margin/padding will be 0 */
+    margin: 10px;
 }
 
-.atuiKernel_SectionCard.optionOverlay article > div[class="text"] {
-    background: linear-gradient(
-        to top,
-        hsl(var(--atuiKernel_Color-N90) / 70%) 50%,
-        hsl(var(--atuiKernel_Color-N90) / 40%) 100%
-    );
-    padding-top: 30%;
+/** set font-weight: bold for .atuiKernel_CardHighlight > * for more logical appearance if needed */
+
+.atuiKernel_Card:not(.optionOverlay) .atuiKernel_CardHighlight {
+    background-color: hsl(var(--atuiKernel_Color-N90));
+    border-block: 1px solid hsl(var(--atuiKernel_Color-N50));
 }

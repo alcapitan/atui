@@ -44,16 +44,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Rename `.atuiKernel_SectionSquarelink` to `.atuiKernel_Squarelink`, and change HTML structure.
     -   More flexible visual possibilities.
     -   Add `.optionFilled` and `.optionNavigator` (to transpose former interface).
+-   Rewrite `.atuiKernel_Card` :
+    -   Almost rationalize the operation of Cards.
+    -   Hardly lighten HTML and CSS code of Cards.
+    -   Remove container feat.
+    -   Remove `.atuiKernel_Card.optionStandard` and `.atuiKernel_Card.optionContrast`.
+    -   New operation largely inspired by Bootstrap.
+    -   Largely rebuilt `.atuiKernel_Card.optionOverlay`.
+    -   Add `.atuiKernel_CardHighlight`.
 
 ### Fixed
 
 -   Webpage's min-height follows now the dynamic height of the viewport to prevent issues on floating panels in phones' web browsers.
+-   Fix an alignment bug in `.atuiKernel_SectionGrid`.
 
 ### Removed
 
 -   The ability to assign and play media with HTML attributes has been removed due to JSON incompatibility. From now on, you can only do this with JavaScript function calls.
 -   Remove all Contacts components. These components have been replaced with common buttons and inputs.
 -   Remove all form and fieldset containers' CSS properties for free use.
+-   Remove useless and orphan pictures in `patch/illustrations` for lighting package size.
 
 ## [0.4.2] - 2023-07-30
 
