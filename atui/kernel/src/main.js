@@ -21,6 +21,9 @@ atuiKernel_PrintAtuiLicensing();
 /* Find associated element */
 
 function atuiKernel_ToolsFindElement(element, query, stop = null) {
+    /**
+     * ! This function is deprecated, it will be replaced by native javascript function closest().
+     */
     if (element.querySelectorAll(query).length === 1) {
         // If element has query.
         return [element.querySelector(query)];

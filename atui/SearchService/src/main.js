@@ -24,3 +24,10 @@ document.querySelectorAll(".atuiSearchservice_Panel").forEach(function (panel) {
 function atuiSearchservice_Filter(input, list) {
     return list.filter((value) => value.toLowerCase().includes(input.toLowerCase()));
 }
+
+/* atuiKernel_InputSubmit action setup */
+document.querySelectorAll(".atuiKernel_InputSubmit").forEach((input) => {
+    input.addEventListener("click", () => {
+        input.closest("form").submit();
+    });
+});

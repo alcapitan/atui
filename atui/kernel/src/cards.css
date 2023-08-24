@@ -7,17 +7,41 @@
     border-radius: var(--atuiKernel_Borderradius);
     overflow: hidden;
     border: 1px solid hsl(var(--atuiKernel_Color-N50));
+    background-color: hsl(var(--atuiKernel_Color-N90));
 }
+
+.atuiKernel_Card > img {
+    display: block;
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+.atuiKernel_Card > div > *:not(.atuiKernel_CardHighlight),
+.atuiKernel_Card .atuiKernel_CardHighlight > * {
+    /* TODO: lighten spacing code when global margin/padding will be 0 */
+    margin-inline: 15px;
+}
+
+/** set font-weight: bold for .atuiKernel_CardHighlight > * for more logical appearance if needed */
+
+.atuiKernel_Card:not(.optionOverlay) .atuiKernel_CardHighlight {
+    background-color: hsl(var(--atuiKernel_Color-N80));
+    border-block: 1px solid hsl(var(--atuiKernel_Color-N50));
+}
+
+/* Overlay style */
 
 .atuiKernel_Card.optionOverlay {
     position: relative;
 }
 
-.atuiKernel_Card > img {
-    width: 100%;
-    display: block;
+.atuiKernel_Card.optionOverlay * {
+    color: #fff;
+}
 
-    /** set filter to brightness(0.7) if you need more color contrast with optionOverlay */
+.atuiKernel_Card.optionOverlay > img {
+    filter: brightness(0.7);
 }
 
 .atuiKernel_Card.optionOverlay > div {
@@ -25,19 +49,4 @@
     top: 0;
 
     /** replace top with bottom to place the text content at the bottom */
-
-    /** set color to white if needed for > * */
-}
-
-.atuiKernel_Card > div > *:not(.atuiKernel_CardHighlight),
-.atuiKernel_Card .atuiKernel_CardHighlight > * {
-    /* TODO: lighten spacing code when global margin/padding will be 0 */
-    margin: 10px;
-}
-
-/** set font-weight: bold for .atuiKernel_CardHighlight > * for more logical appearance if needed */
-
-.atuiKernel_Card:not(.optionOverlay) .atuiKernel_CardHighlight {
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    border-block: 1px solid hsl(var(--atuiKernel_Color-N50));
 }

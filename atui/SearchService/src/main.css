@@ -79,20 +79,19 @@
     width: 100%;
 }
 
+.atuiSearchservice_Trigger {
+    display: none;
+}
+
 /* Responsive in Header */
 
 @media (width < 1024px) /* Smartphones & tablets */ {
     .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup {
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-    }
-
-    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup input {
         display: none;
     }
 
-    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup .atuiKernel_InputSubmit {
+    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) .atuiSearchservice_Trigger {
+        display: block;
         padding: 5px;
         font-size: 1.875rem !important;
         width: 1.875rem !important;

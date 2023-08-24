@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   All new visual design.
     -   Now really usable for all desires, even out of `.atuiKernel_Header` and without panel, with multiples search instance on the same page.
     -   Implement an efficient filter function named `atuiSearchservice_Filter`.
+    -   Set up submit action for `.atuiKernel_InputSubmit`, add as replacement `.atuiSearchservice_Trigger` for `.atuiKernel_Header .atuiSearchservice_Bar`.
 -   Replace `.optionMobileonly` and `.optionDesktoponly` to `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnMobile` for `.atuiKernel_Header`.
 -   Check the color mode status at startup in localStorage instead of cookies.
 -   Rewrite input stylesheet.
