@@ -26,8 +26,11 @@ function atuiSearchservice_Filter(input, list) {
 }
 
 /* atuiKernel_InputSubmit action setup */
+/* 
+ * This is commented for JavaScript forms
 document.querySelectorAll(".atuiKernel_InputSubmit").forEach((input) => {
     input.addEventListener("click", () => {
         input.closest("form").submit();
     });
 });
+*/

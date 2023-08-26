@@ -32,6 +32,73 @@ function setupInstance(instance, values, listValues) {
     });
 }
 
+function toggleRtl() {
+    const isRtlEnabled = () => {
+        return document.documentElement.getAttribute("dir") === "rtl";
+    };
+
+    function createBox(id, iconClassName, textContent, optionColor) {
+        const box = document.createElement("div");
+        box.classList.add(
+            "atuiKernel_SectionBox",
+            `option${optionColor.charAt(0).toUpperCase() + optionColor.slice(1)}`,
+        );
+        box.setAttribute("id", id);
+        const icon = document.createElement("i");
+        icon.classList.add("ti", iconClassName);
+        box.appendChild(icon);
+        const text = document.createElement("p");
+        text.innerText = textContent;
+        box.appendChild(text);
+        listBoxes.appendChild(box);
+    }
+
+    const form = document.querySelector("#testFeatures");
+    const input = form.querySelector(".atuiSearchservice_Bar input[type='search']");
+    const listBoxes = form.querySelector("#listFeatures");
+
+    const ltrMatch = (value) => {
+        return ["faustine", "ltr", "latin"].includes(value);
+    };
+    const rtlMatch = (value) => {
+        return ["fayrouz", "rtl", "arabic"].includes(value);
+    };
+
+    input.addEventListener("input", () => {
+        if (rtlMatch(input.value) && !isRtlEnabled()) {
+            if (!listBoxes.querySelector("#rtl-proposal")) {
+                createBox("rtl-proposal", "ti-flag-code", `You are going to enable RTL mode.`, "accent");
+            }
+        } else if (ltrMatch(input.value) && isRtlEnabled()) {
+            if (!listBoxes.querySelector("#rtl-proposal")) {
+                createBox("rtl-proposal", "ti-flag-code", `You are going to disable RTL mode.`, "accent");
+            }
+        } else {
+            listBoxes.querySelector("#rtl-proposal")?.remove();
+        }
+    });
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (rtlMatch(input.value)) {
+            document.documentElement.setAttribute("dir", "rtl");
+        } else if (ltrMatch(input.value)) {
+            document.documentElement.setAttribute("dir", "ltr");
+        }
+        listBoxes.querySelector("#rtl-proposal")?.remove();
+
+        if (isRtlEnabled()) {
+            if (!listBoxes.querySelector("#rtl-enabled")) {
+                createBox("rtl-enabled", "ti-flag-check", `RTL mode is enabled.`, "success");
+            }
+        } else {
+            listBoxes.querySelector("#rtl-enabled")?.remove();
+        }
+    });
+}
+toggleRtl();
+
 /* Notification */
 
 const testActionBtnNotif = () => {

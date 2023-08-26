@@ -98,28 +98,17 @@
                         <p>ATUI</p>
                     </a>
                     <hr class="atuiKernel_HeaderSpace" />
-                    <div class="atuiSearchservice_Panel" id="searchCountry">
+                    <div class="atuiSearchservice_Panel" id="testFeatures">
                         <form class="atuiSearchservice_Bar">
                             <i class="ti ti-search atuiSearchservice_Trigger"></i>
                             <div class="optionGroup optionPill">
-                                <input type="search" placeholder="Search a country" required />
+                                <input type="search" placeholder="Test hidden features" required />
                                 <i class="ti ti-search atuiKernel_InputSubmit"></i>
                             </div>
                         </form>
                         <div>
-                            <h3>Some countries :</h3>
-                            <ul class="atuiKernel_List" id="listCountry">
-                                <li>France</li>
-                                <li>Morocco</li>
-                                <li>Tunisia</li>
-                                <li>Brazil</li>
-                                <li>Spain</li>
-                                <li>India</li>
-                            </ul>
-                        </div>
-                        <hr />
-                        <div>
-                            <p>This is the all new SearchService !</p>
+                            <p>Find the easter egg 🤫</p>
+                            <div id="listFeatures"></div>
                         </div>
                     </div>
                     <hr class="atuiKernel_HeaderSpace optionHideOnTablet optionHideOnPhone" />
@@ -455,12 +444,29 @@
                             <p>SearchService can now work out of Header !</p>
                         </div>
                     </div>
-                    <form class="atuiSearchservice_Bar">
-                        <div class="optionGroup optionPill">
-                            <input type="search" placeholder="Search without panel" required />
-                            <i class="ti ti-search atuiKernel_InputSubmit"></i>
+                    <div class="atuiSearchservice_Panel" id="searchCountry">
+                        <form class="atuiSearchservice_Bar">
+                            <div class="optionGroup optionPill">
+                                <input type="search" placeholder="Search a country" required />
+                                <i class="ti ti-search atuiKernel_InputSubmit"></i>
+                            </div>
+                        </form>
+                        <div>
+                            <h3>Some countries :</h3>
+                            <ul class="atuiKernel_List" id="listCountry">
+                                <li>France</li>
+                                <li>Morocco</li>
+                                <li>Tunisia</li>
+                                <li>Brazil</li>
+                                <li>Spain</li>
+                                <li>India</li>
+                            </ul>
                         </div>
-                    </form>
+                        <hr />
+                        <div>
+                            <p>This is the all new SearchService !</p>
+                        </div>
+                    </div>
                     <button class="atuiKernel_Button optionOutlined optionPill" id="pushNotificationMini">
                         <i class="ti ti-arrows-diagonal-minimize"></i>
                         Push a mini notification

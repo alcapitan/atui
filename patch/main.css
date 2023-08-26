@@ -23,3 +23,7 @@
     border: 1px solid hsl(var(--atuiKernel_Color-N00));
     border-radius: var(--atuiKernel_Borderradius);
 }
+
+#listFeatures > * {
+    margin-block: 15px;
+}
