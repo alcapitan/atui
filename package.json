@@ -9,13 +9,14 @@
         "eslint": "eslint . --cache --fix",
         "eslint:check": "eslint .",
         "htmlhint": "htmlhint",
-        "postcss": "postcss atui/kernel/src/main.css --dir atui/kernel/dist/ & postcss atui/MediasPlayer/src/main.css --dir atui/MediasPlayer/dist/ & postcss atui/SearchService/src/main.css --dir atui/SearchService/dist/",
+        "postcss": "postcss atui/kernel/dist/main.css -r & postcss atui/MediasPlayer/dist/main.css -r & postcss atui/SearchService/dist/main.css -r",
         "prettier": "prettier -w ** --cache",
         "prettier:check": "prettier -c **",
-        "stylelint": "stylelint **.css --cache --fix",
-        "stylelint:check": "stylelint **.css",
+        "sass": "sass atui/kernel/src/main.scss:atui/kernel/dist/main.css --embed-source-map & sass atui/MediasPlayer/src/main.scss:atui/MediasPlayer/dist/main.css --embed-source-map & sass atui/SearchService/src/main.scss:atui/SearchService/dist/main.css --embed-source-map",
+        "stylelint": "stylelint **.scss --cache --fix",
+        "stylelint:check": "stylelint **.scss",
         "check": "npm-run-all -p cspell:check htmlhint prettier:check stylelint:check eslint:check",
-        "build:css": "npm-run-all -s stylelint postcss",
+        "build:css": "npm-run-all -s stylelint sass postcss",
         "build:js": "npm-run-all -s eslint babel",
         "build": "npm-run-all -p cspell htmlhint -s prettier -p build:css build:js",
         "prepare": "husky install",
@@ -66,12 +67,14 @@
         "postcss-import": "^15.1.0",
         "postcss-preset-env": "^9.1.1",
         "prettier": "^3.0.2",
+        "sass": "^1.66.1",
         "stylelint": "^15.10.3",
-        "stylelint-config-standard": "^34.0.0"
+        "stylelint-config-standard-scss": "^10.0.0"
     },
     "optionalDependencies": {
         "@tabler/icons-webfont": "^2.32.0",
-        "http-server": "^14.1.1"
+        "http-server": "^14.1.1",
+        "sass-migrator": "^1.7.3"
     },
     "config": {
         "commitizen": {

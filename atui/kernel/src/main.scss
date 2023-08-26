@@ -3,29 +3,29 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@import url("./accordion.css");
-@import url("./box.css");
-@import url("./button.css");
-@import url("./cards.css");
-@import url("./carousel.css");
-@import url("./color.css");
-@import url("./download.css");
-@import url("./footer.css");
-@import url("./grid.css");
-@import url("./header.css");
-@import url("./image.css");
-@import url("./input.css");
-@import url("./licensing.css");
-@import url("./modal.css");
-@import url("./navigation.css");
-@import url("./notification.css");
-@import url("./pagination.css");
-@import url("./paragraph.css");
-@import url("./popup.css");
-@import url("./section.css");
-@import url("./slider.css");
-@import url("./table.css");
-@import url("./tabs.css");
+@use "accordion";
+@use "box";
+@use "button";
+@use "cards";
+@use "carousel";
+@use "color";
+@use "download";
+@use "footer";
+@use "grid";
+@use "header";
+@use "image";
+@use "input";
+@use "licensing";
+@use "modal";
+@use "navigation";
+@use "notification";
+@use "pagination";
+@use "paragraph";
+@use "popup";
+@use "section";
+@use "slider";
+@use "table";
+@use "tabs";
 
 /* Global */
 

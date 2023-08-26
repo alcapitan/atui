@@ -1,5 +1,5 @@
 {
-    "extends": ["stylelint-config-standard"],
+    "extends": ["stylelint-config-standard-scss"],
     "rules": {
         "custom-property-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservice)_.*", { "severity": "warning" }],
         "selector-id-pattern": ["^atui(?:Kernel|Mediasplayer|Searchservice)_.*", { "severity": "warning" }],

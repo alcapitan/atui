@@ -3,10 +3,10 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-@import url("./audio-floating.css");
-@import url("./audio-main.css");
-@import url("./video-main.css");
-@import url("./video-overlay.css");
+@use "audio-floating";
+@use "audio-main";
+@use "video-main";
+@use "video-overlay";
 
 /* Common */
 
