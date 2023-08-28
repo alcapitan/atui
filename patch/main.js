@@ -58,10 +58,10 @@ function toggleRtl() {
     const listBoxes = form.querySelector("#listFeatures");
 
     const ltrMatch = (value) => {
-        return ["faustine", "ltr", "latin"].includes(value);
+        return ["faustine", "ltr", "latin"].includes(value.toLowerCase());
     };
     const rtlMatch = (value) => {
-        return ["fayrouz", "rtl", "arabic"].includes(value);
+        return ["fayrouz", "rtl", "arabic"].includes(value.toLowerCase());
     };
 
     input.addEventListener("input", () => {
@@ -78,7 +78,7 @@ function toggleRtl() {
         }
     });
 
-    form.addEventListener("submit", (event) => {
+    function submit(event) {
         event.preventDefault();
 
         if (rtlMatch(input.value)) {
@@ -95,7 +95,12 @@ function toggleRtl() {
         } else {
             listBoxes.querySelector("#rtl-enabled")?.remove();
         }
-    });
+    }
+
+    form.querySelector(".atuiSearchservice_Bar .atuiKernel_InputSubmit").addEventListener("click", (event) =>
+        submit(event),
+    );
+    form.addEventListener("submit", (event) => submit(event));
 }
 toggleRtl();
 
