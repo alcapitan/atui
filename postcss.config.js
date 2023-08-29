@@ -3,6 +3,9 @@ module.exports = {
         require("postcss-import"),
         require("postcss-preset-env")({
             stage: 2,
+            features: {
+                "logical-properties-and-values": false,
+            },
         }),
         require("autoprefixer"),
         require("cssnano")({

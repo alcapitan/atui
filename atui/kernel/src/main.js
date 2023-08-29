@@ -394,8 +394,8 @@ function atuiKernel_PopupSetup(listener) {
         const gap = 5;
 
         // The temporary position at 0 is very important to get the getBoundingClientRect() position at 0px;0px and thus know the shift.
-        popup.style.left = "0";
-        popup.style.top = "0";
+        popup.style.insetInlineStart = "0";
+        popup.style.insetBlockStart = "0";
 
         // The variables windowDimensions, listenerPosition and popupPosition have been made to facilitate the reading of the code.
         const windowDimensions = {
@@ -406,32 +406,33 @@ function atuiKernel_PopupSetup(listener) {
         const listenerPosition = listener.getBoundingClientRect();
         const popupPosition = popup.getBoundingClientRect();
 
-        const overflowRight = listenerPosition.left + popupPosition.width > windowDimensions.width;
-        const overflowBottom = listenerPosition.top + popupPosition.height > windowDimensions.height;
+        const overflowRight = listenerPosition.x + popupPosition.width > windowDimensions.width;
+        const overflowBottom = listenerPosition.y + popupPosition.height > windowDimensions.height;
 
         const calculatedPosition = {
-            left: 0,
-            top: 0,
+            x: 0, // Left in LTR languages
+            y: 0, // Top
         };
 
         if (options.type === "centered" || options.type === "centered-hor") {
-            calculatedPosition.left = (windowDimensions.width - popupPosition.width) / 2;
+            calculatedPosition.x = (windowDimensions.width - popupPosition.width) / 2;
         } else if (overflowRight) {
-            calculatedPosition.left = listenerPosition.right - popupPosition.left - popupPosition.width - gap;
+            calculatedPosition.x =
+                listenerPosition.x + listenerPosition.width - popupPosition.x - popupPosition.width - gap;
         } else {
-            calculatedPosition.left = listenerPosition.left - popupPosition.left + gap;
+            calculatedPosition.x = listenerPosition.x - popupPosition.x + gap;
         }
 
         if (options.type === "centered" || options.type === "centered-ver") {
-            calculatedPosition.top = (windowDimensions.height - popupPosition.height) / 2;
+            calculatedPosition.y = (windowDimensions.height - popupPosition.height) / 2;
         } else if (overflowBottom) {
-            calculatedPosition.top = listenerPosition.top - popupPosition.top - popupPosition.height + gap;
+            calculatedPosition.y = listenerPosition.y - popupPosition.y - popupPosition.height + gap;
         } else {
-            calculatedPosition.top = listenerPosition.bottom - popupPosition.top - gap;
+            calculatedPosition.y = listenerPosition.y + listenerPosition.height - popupPosition.y - gap;
         }
 
-        popup.style.left = calculatedPosition.left + "px";
-        popup.style.top = calculatedPosition.top + "px";
+        popup.style.insetInlineStart = calculatedPosition.x + "px";
+        popup.style.insetBlockStart = calculatedPosition.y + "px";
     }
 }
 document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
@@ -604,9 +605,9 @@ const atuiKernel_HeaderFixCarousel = () => {
 
         carousel.style.minHeight = header.offsetHeight * 2 + "px";
         carouselContent.forEach((element) => {
-            element.style.paddingTop = header.offsetHeight + 20 + "px";
+            element.style.paddingBlockStart = header.offsetHeight + 20 + "px";
         });
-        carouselControls.style.marginTop = header.offsetHeight + "px";
+        carouselControls.style.marginBlockStart = header.offsetHeight + "px";
     });
 };
 atuiKernel_HeaderFixCarousel();

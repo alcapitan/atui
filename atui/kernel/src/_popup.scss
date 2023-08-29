@@ -51,11 +51,11 @@
 }
 
 .atuiKernel_PopupContextmenu > * :first-child:is(i, img) {
-    margin-left: 0 !important;
+    margin-inline-start: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu > * :last-child:is(i, img) {
-    margin-right: 0 !important;
+    margin-inline-end: 0 !important;
 }
 
 .atuiKernel_PopupContextmenu :is(i, img) {

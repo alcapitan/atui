@@ -133,10 +133,10 @@
         width: calc(100% - 20px);
         padding: 5px;
         position: sticky;
-        bottom: 0;
+        inset-block-end: 0;
         z-index: 11;
         background-color: hsl(var(--atuiKernel_Color-N90));
-        border-top: 1px solid hsl(var(--atuiKernel_Color-N70));
+        border-block-start: 1px solid hsl(var(--atuiKernel_Color-N70));
         border-image: none !important;
         display: flex;
         justify-content: space-around;

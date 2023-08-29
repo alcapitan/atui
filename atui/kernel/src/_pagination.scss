@@ -13,15 +13,14 @@
 .atuiKernel_SectionPaginationNumber > * {
     margin: 0;
     padding: 10px 15px;
-    border-top: 1px solid hsl(var(--atuiKernel_Color-N50));
-    border-bottom: 1px solid hsl(var(--atuiKernel_Color-N50));
-    border-right: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border-inline-start: none;
     color: hsl(var(--atuiKernel_Color-N00));
 }
 
 .atuiKernel_SectionPaginationNumber > *:first-child {
     border-radius: var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
-    border-left: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border-inline-start: 1px solid hsl(var(--atuiKernel_Color-N50));
 }
 
 .atuiKernel_SectionPaginationNumber > *:last-child {
@@ -93,5 +92,5 @@
 }
 
 .atuiKernel_SectionPaginationText a p:first-child {
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }

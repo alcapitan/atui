@@ -7,18 +7,14 @@
 
 .atuiKernel_NotificationContainer {
     position: fixed;
-    top: 0;
-    left: 20%;
-    right: 20%;
+    inset: 0 20%;
     z-index: 16;
     overflow-y: auto;
-    max-height: 100vh;
 }
 
 @media (width < 480px) /* Smartphones */ {
     .atuiKernel_NotificationContainer {
-        left: 0;
-        right: 0;
+        inset-block: 0;
     }
 }
 

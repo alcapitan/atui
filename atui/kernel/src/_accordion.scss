@@ -32,14 +32,14 @@
     width: 35px;
     height: 35px;
     flex: 0;
-    margin-left: 10px;
+    margin-inline-start: 10px;
     font-size: 35px;
 }
 
 .atuiKernel_SectionAccordion > section {
     padding: 15px;
     background-color: hsl(var(--atuiKernel_Color-N90));
-    border-top: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    border-block-start: 1px hsl(var(--atuiKernel_Color-N50)) solid;
     display: none;
 }
 
