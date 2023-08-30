@@ -11,11 +11,12 @@
     z-index: 16;
     overflow-y: auto;
     max-height: 100vh;
+    padding: 0 !important;
 }
 
 @media (width < 480px) /* Smartphones */ {
     .atuiKernel_NotificationContainer {
-        inset-block: 0;
+        inset-inline: 0;
     }
 }
 
