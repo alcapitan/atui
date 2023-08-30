@@ -38,7 +38,7 @@
 }
 
 .atuiSearchservice_Panel.optionActive > * {
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }
 
 .atuiSearchservice_Panel > hr {
@@ -52,8 +52,7 @@
 }
 
 .atuiSearchservice_Panel.optionActive > *:not(.atuiSearchservice_Bar) {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-inline: 10px;
 }
 
 /* Search bar */
@@ -63,7 +62,7 @@
 }
 
 .atuiSearchservice_Panel.optionActive .atuiSearchservice_Bar {
-    margin-bottom: 15px;
+    margin-block-end: 15px;
 }
 
 .atuiSearchservice_Panel.optionActive .atuiSearchservice_Bar div.optionGroup {

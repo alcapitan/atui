@@ -394,8 +394,8 @@ function atuiKernel_PopupSetup(listener) {
         const gap = 5;
 
         // The temporary position at 0 is very important to get the getBoundingClientRect() position at 0px;0px and thus know the shift.
-        popup.style.insetInlineStart = "0";
-        popup.style.insetBlockStart = "0";
+        popup.style.left = "0";
+        popup.style.top = "0";
 
         // The variables windowDimensions, listenerPosition and popupPosition have been made to facilitate the reading of the code.
         const windowDimensions = {
@@ -406,33 +406,36 @@ function atuiKernel_PopupSetup(listener) {
         const listenerPosition = listener.getBoundingClientRect();
         const popupPosition = popup.getBoundingClientRect();
 
-        const overflowRight = listenerPosition.x + popupPosition.width > windowDimensions.width;
-        const overflowBottom = listenerPosition.y + popupPosition.height > windowDimensions.height;
+        const isListenerRTL = getComputedStyle(listener).direction === "rtl";
+
+        const overflowInline = !isListenerRTL
+            ? listenerPosition.left + popupPosition.width > windowDimensions.width
+            : listenerPosition.left - popupPosition.width < 0;
+        const overflowBottom = listenerPosition.top + popupPosition.height > windowDimensions.height;
 
         const calculatedPosition = {
-            x: 0, // Left in LTR languages
-            y: 0, // Top
+            left: 0,
+            top: 0,
         };
 
         if (options.type === "centered" || options.type === "centered-hor") {
-            calculatedPosition.x = (windowDimensions.width - popupPosition.width) / 2;
-        } else if (overflowRight) {
-            calculatedPosition.x =
-                listenerPosition.x + listenerPosition.width - popupPosition.x - popupPosition.width - gap;
+            calculatedPosition.left = (windowDimensions.width - popupPosition.width) / 2;
+        } else if ((overflowInline && !isListenerRTL) || (!overflowInline && isListenerRTL)) {
+            calculatedPosition.left = listenerPosition.right - popupPosition.left - popupPosition.width - gap;
         } else {
-            calculatedPosition.x = listenerPosition.x - popupPosition.x + gap;
+            calculatedPosition.left = listenerPosition.left - popupPosition.left + gap;
         }
 
         if (options.type === "centered" || options.type === "centered-ver") {
-            calculatedPosition.y = (windowDimensions.height - popupPosition.height) / 2;
+            calculatedPosition.top = (windowDimensions.height - popupPosition.height) / 2;
         } else if (overflowBottom) {
-            calculatedPosition.y = listenerPosition.y - popupPosition.y - popupPosition.height + gap;
+            calculatedPosition.top = listenerPosition.top - popupPosition.top - popupPosition.height + gap;
         } else {
-            calculatedPosition.y = listenerPosition.y + listenerPosition.height - popupPosition.y - gap;
+            calculatedPosition.top = listenerPosition.bottom - popupPosition.top - gap;
         }
 
-        popup.style.insetInlineStart = calculatedPosition.x + "px";
-        popup.style.insetBlockStart = calculatedPosition.y + "px";
+        popup.style.left = calculatedPosition.left + "px";
+        popup.style.top = calculatedPosition.top + "px";
     }
 }
 document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {

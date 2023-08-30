@@ -9,7 +9,7 @@
     background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
     opacity: 0.2;
     position: absolute;
-    bottom: 0;
+    inset-block-end: 0;
 }
 
 .atuiMediasplayer_Videoplayer.optionOverlay .atuiMediasplayer_Dashboard:hover {

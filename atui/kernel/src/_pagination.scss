@@ -19,12 +19,14 @@
 }
 
 .atuiKernel_SectionPaginationNumber > *:first-child {
-    border-radius: var(--atuiKernel_Borderradius) 0 0 var(--atuiKernel_Borderradius);
+    border-start-start-radius: var(--atuiKernel_Borderradius);
+    border-end-start-radius: var(--atuiKernel_Borderradius);
     border-inline-start: 1px solid hsl(var(--atuiKernel_Color-N50));
 }
 
 .atuiKernel_SectionPaginationNumber > *:last-child {
-    border-radius: 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius) 0;
+    border-start-end-radius: var(--atuiKernel_Borderradius);
+    border-end-end-radius: var(--atuiKernel_Borderradius);
 }
 
 .atuiKernel_SectionPaginationNumber > *:hover {
