@@ -26,17 +26,13 @@ npm install @alcapitan/atui
 Put this line in the HTML tag `<head>` :
 
 ```html
-<link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.2/atui/kernel/dist/dist.css"
-/>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@alcapitan/atui@0.4.2/atui/kernel/dist/dist.css" />
 ```
 
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.2/atui/kernel/dist/dist.js"></script>
+<script src="https://unpkg.com/@alcapitan/atui@0.4.2/atui/kernel/dist/dist.js"></script>
 ```
 
 Then, change the links above for reach extensions files.
@@ -47,6 +43,8 @@ To get ATUI from the latest commit in the github repo.
 
 CSS : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.css`  
 JavaScript : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.js`
+
+**Warning : `jsdelivr.net` is blocked in Egypt and China, so these links cannot be used. Consequently, we advise you to use a VPN in the absence of a practical way to get content from Github repository in real time.**
 
 ## Contributing
 

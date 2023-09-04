@@ -451,7 +451,7 @@ function atuiKernel_NotificationPush(options) {
             icon: options.image
                 ? options.image
                 : options.icon
-                ? `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${options.icon}.svg`
+                ? `https://unpkg.com/@tabler/icons/icons/${options.icon}.svg`
                 : "",
         });
         notification.onclick = (event) => {
