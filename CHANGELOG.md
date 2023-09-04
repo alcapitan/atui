@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Set an instable image support in `.atuiKernel_SectionParagraph` titles.
 -   Create `.atuiKernel_List` with `<dl>`, `<ul>` and `<ol>` HTML tags.
 -   Create JavaScript storage functions to store data between 2 web page visits : `atuiKernel_StorageGet`, `atuiKernel_StorageSet`, `atuiKernel_StorageRemove`.
+-   Support RTL languages (Right-To-Left direction languages such as Arabic or Hebrew).
 
 ### Changed
 

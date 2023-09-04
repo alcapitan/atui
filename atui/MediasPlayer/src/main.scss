@@ -63,6 +63,7 @@
 
 .atuiMediasplayer_Controls {
     justify-content: space-evenly;
+    direction: ltr;
 }
 
 .atuiMediasplayer_Controls :is(i, img) {
@@ -82,6 +83,10 @@
 .atuiMediasplayer_Progressbar,
 .atuiMediasplayer_ProgressbarInside {
     height: 10px;
+}
+
+.atuiMediasplayer_Progressbar {
+    direction: ltr;
 }
 
 .atuiMediasplayer_ProgressbarInside {
