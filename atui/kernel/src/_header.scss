@@ -25,25 +25,6 @@
     height: 2.25rem;
 }
 
-.atuiKernel_Header a:is(:hover, :active) {
-    text-decoration: none;
-}
-
-/* Separators */
-
-.atuiKernel_HeaderSpace {
-    flex: 1;
-    border: none;
-}
-
-.atuiKernel_HeaderSplit {
-    border: 0;
-    background-color: hsl(var(--atuiKernel_Color-N20));
-    width: 1px !important;
-    height: 1.875rem;
-    padding: 0 !important;
-}
-
 /* Display on specific devices */
 
 @media (1024px <= width) /* Computers */ {
@@ -111,13 +92,13 @@
     column-gap: 5px;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 5px;
 }
 
 .atuiKernel_Header > div > * {
-    padding: 5px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .atuiKernel_Header > div.optionLevelLink :is(i, img) {
@@ -136,4 +117,18 @@
 .atuiKernel_Header > div.optionScrollable > * {
     flex: none;
     scroll-snap-align: start;
+}
+
+/* Separators */
+
+.atuiKernel_HeaderSpace {
+    flex: 1;
+    border: none;
+}
+
+.atuiKernel_HeaderSplit {
+    border: 0;
+    background-color: hsl(var(--atuiKernel_Color-N20));
+    width: 1px;
+    height: 1.875rem;
 }

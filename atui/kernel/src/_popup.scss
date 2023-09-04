@@ -6,6 +6,7 @@
 /* Common to context menu and tooltip */
 
 :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+    all: unset;
     position: fixed; /* fixed position is obligatory for centered option */
     background-color: hsl(var(--atuiKernel_Color-NFF));
     border-radius: var(--atuiKernel_Borderradius);
@@ -68,7 +69,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    text-decoration: none !important;
 }
 
 .atuiKernel_PopupContextmenu > a:hover {

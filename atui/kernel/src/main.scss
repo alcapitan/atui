@@ -3,164 +3,32 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+// Core (global variables and HTML tags' properties)
+@use "color";
+@use "root";
+@use "input";
+
+// Components which can contain other components
+@use "section";
+@use "cards";
+@use "header";
+@use "footer";
+@use "modal";
+@use "notification";
+
+// Independent components
 @use "accordion";
 @use "box";
 @use "button";
-@use "cards";
 @use "carousel";
-@use "color";
 @use "download";
-@use "footer";
 @use "grid";
-@use "header";
 @use "image";
-@use "input";
 @use "licensing";
-@use "modal";
 @use "navigation";
-@use "notification";
 @use "pagination";
 @use "paragraph";
 @use "popup";
-@use "section";
 @use "slider";
 @use "table";
 @use "tabs";
-
-/* Global */
-
-:root {
-    font-size: 16px;
-
-    --atuiKernel_FontsTitle: system-ui;
-    --atuiKernel_FontsText: system-ui;
-    --atuiKernel_FontsSpecial: cursive;
-    --atuiKernel_FontsMonospace: monospace;
-    --atuiKernel_TitleBold: bold; /* or normal */
-    --atuiKernel_Blur: blur(5px);
-    --atuiKernel_Borderradius: 10px;
-    --atuiKernel_ShadowLight: hsl(var(--atuiKernel_Color-N00) / 20%) 0px 3px 8px; /* #5 */
-    --atuiKernel_ShadowMedium: hsl(var(--atuiKernel_Color-N00) / 30%) 0px 5px 15px; /* #3 */
-    --atuiKernel_ShadowHeavy: hsl(var(--atuiKernel_Color-N00) / 80%) 0px 20px 30px -10px; /* #20 */
-}
-
-/* Font size list convention : 
-84px : 5.25rem
-72px : 4.5rem
-60px : 3.75rem
-48px : 3rem
-36px : 2.25rem
-30px : 1.875rem
-24px : 1.5rem
-18px : 1.125rem
-16px : 1rem
-14px : 0.875rem
-10px : 0.625rem
-*/
-
-/* Shadows source : https://getcssscan.com/css-box-shadow-examples
-Look at the # to find the corresponding shadow */
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: hsl(var(--atuiKernel_Color-NFF));
-}
-
-body * {
-    font-family: var(--atuiKernel_FontsText);
-    color: hsl(var(--atuiKernel_Color-N00));
-    word-wrap: anywhere;
-}
-
-/* Default props of HTML tags */
-
-:is(p, a, label) {
-    font-size: 1rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:is(:hover, :active) {
-    text-decoration: underline;
-}
-
-a:visited {
-    text-decoration: underline dotted;
-}
-
-:is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
-    margin: 15px 0;
-}
-
-h1 {
-    font-size: 2.25rem;
-}
-
-h2 {
-    font-size: 1.875rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 1rem;
-}
-
-h5 {
-    font-size: 0.875rem;
-}
-
-h6 {
-    font-size: 0.625rem;
-}
-
-code {
-    font-family: var(--atuiKernel_FontsMonospace);
-}
-
-.ti {
-    color: hsl(var(--atuiKernel_Color-N00));
-    font-weight: normal !important;
-    text-decoration: none !important;
-    font-size: 1em;
-    width: 1em;
-    height: 1em;
-}
-
-::selection {
-    background: hsl(var(--atuiKernel_Color-A80));
-    color: hsl(var(--atuiKernel_Color-A20));
-}
-
-/* Scrollbar */
-
-* {
-    /* Firefox syntax */
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--atuiKernel_Color-N60)) hsl(var(--atuiKernel_Color-N90)); /* colors order : thumb, container */
-}
-
-::-webkit-scrollbar {
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--atuiKernel_Color-N60));
-    border-width: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(var(--atuiKernel_Color-N40));
-}

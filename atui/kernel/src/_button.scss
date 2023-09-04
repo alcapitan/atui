@@ -41,15 +41,10 @@
     align-items: center;
     gap: 10px;
     border-radius: var(--atuiKernel_Borderradius);
-    text-decoration: none !important;
     border: none;
     background-color: transparent;
     box-sizing: border-box;
     vertical-align: middle;
-}
-
-.atuiKernel_Button:focus {
-    outline: none !important;
 }
 
 .atuiKernel_Button * {

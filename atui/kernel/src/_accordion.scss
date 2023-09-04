@@ -17,15 +17,12 @@
     align-items: center;
 }
 
-.atuiKernel_SectionAccordion > header * {
+.atuiKernel_SectionAccordion > header h3 {
+    flex: 1;
     color: hsl(var(--atuiKernel_Color-N00));
     margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
-}
-
-.atuiKernel_SectionAccordion > header h3 {
-    flex: 1;
 }
 
 .atuiKernel_SectionAccordion > header :is(i, img) {

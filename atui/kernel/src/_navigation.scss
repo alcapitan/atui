@@ -19,10 +19,6 @@
     align-items: center;
 }
 
-.atuiKernel_NavigationSectionImgbig a:is(:hover, :active, :visited) {
-    text-decoration: none;
-}
-
 .atuiKernel_NavigationSectionImgbig a:hover {
     background-color: hsl(var(--atuiKernel_Color-A70));
 }
@@ -57,10 +53,6 @@
     align-items: center;
     column-gap: 10px;
     row-gap: 5px;
-}
-
-.atuiKernel_NavigationBar a:is(:hover, :active, :visited) {
-    text-decoration: none;
 }
 
 .atuiKernel_NavigationBar p {
@@ -137,7 +129,7 @@
         z-index: 11;
         background-color: hsl(var(--atuiKernel_Color-N90));
         border-block-start: 1px solid hsl(var(--atuiKernel_Color-N70));
-        border-image: none !important;
+        border-image: none;
         display: flex;
         justify-content: space-around;
         flex-flow: row nowrap;

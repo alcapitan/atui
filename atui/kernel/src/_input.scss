@@ -46,10 +46,10 @@ input[type="color"]::-moz-color-swatch {
 
 input[type="image"],
 .atuiKernel_InputSubmit {
-    width: 1.125rem !important;
-    height: 1.125rem !important;
+    width: 1.125rem;
+    height: 1.125rem;
+    font-size: 1.125rem;
     box-sizing: content-box;
-    font-size: 1.125rem !important;
 }
 
 input[type="file"] {
@@ -99,7 +99,7 @@ form div.optionGroup.optionPill {
 
 form div.optionGroup * {
     border: none;
-    background-color: transparent !important;
-    outline: none !important;
+    background-color: transparent;
+    outline: none;
     margin: 0;
 }

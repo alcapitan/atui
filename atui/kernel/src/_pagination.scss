@@ -42,10 +42,6 @@
     background-color: transparent;
 }
 
-.atuiKernel_SectionPaginationNumber a:is(:hover, :active, :visited) {
-    text-decoration: none;
-}
-
 /* Text */
 
 .atuiKernel_SectionPaginationText {
@@ -71,10 +67,6 @@
     border-radius: var(--atuiKernel_Borderradius);
     padding: 15px;
     flex: 1;
-}
-
-.atuiKernel_SectionPaginationText a:is(:hover, :active, :visited) {
-    text-decoration: none;
 }
 
 .atuiKernel_SectionPaginationText a:hover {

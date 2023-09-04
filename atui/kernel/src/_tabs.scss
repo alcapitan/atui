@@ -39,7 +39,6 @@
 .atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader > *:hover,
 .atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive * {
     color: hsl(var(--atuiKernel_Color-A50));
-    text-decoration: none;
 }
 
 .atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive::after {
