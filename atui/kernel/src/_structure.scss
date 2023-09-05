@@ -1,0 +1,84 @@
+/*!
+ * ATUI v0.4.2 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Section containers management */
+
+:is(#atuiKernel_Body, #atuiKernel_Section) {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (width >= 768px) /* Computers */ {
+    :is(#atuiKernel_Body, #atuiKernel_Section) {
+        flex-direction: row;
+    }
+
+    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child, .atuiKernel_NotificationContainer) {
+        border-inline-end: 1px solid hsl(var(--atuiKernel_Color-N80));
+    }
+
+    #atuiKernel_Section > *:not(:last-child) {
+        border-image: linear-gradient(
+                to bottom,
+                transparent calc(0% + 20px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            0 1 0;
+    }
+}
+
+@media (width <= 767px) /* Smartphones */ {
+    :is(#atuiKernel_Body, #atuiKernel_Section) {
+        flex-direction: column-reverse;
+    }
+
+    :is(#atuiKernel_Body, #atuiKernel_Section) > *:not(:last-child, .atuiKernel_NotificationContainer) {
+        border-block-end: 1px solid hsl(var(--atuiKernel_Color-N80));
+    }
+
+    #atuiKernel_Section > *:not(:last-child) {
+        border-image: linear-gradient(
+                to right,
+                transparent calc(0% + 20px),
+                hsl(var(--atuiKernel_Color-N80)) calc(0% + 120px),
+                hsl(var(--atuiKernel_Color-N80)) calc(100% - 120px),
+                transparent calc(100% - 20px)
+            )
+            1 0 0 0;
+    }
+}
+
+#atuiKernel_Body > *:not(.atuiKernel_BodyContent),
+#atuiKernel_Section > * {
+    padding: 10px;
+}
+
+:is(.atuiKernel_BodyContent, .atuiKernel_SectionContent) {
+    flex: 1;
+}
+
+.atuiKernel_BodyContent {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+#atuiKernel_Section {
+    flex: 1;
+}
+
+.atuiKernel_SectionContent > * {
+    margin: 20px 0;
+}
+
+:is(.atuiKernel_BodyContent, .atuiKernel_SectionContent) > *:first-child {
+    margin-block-start: 0;
+}
+
+:is(.atuiKernel_BodyContent, .atuiKernel_SectionContent) > *:last-child {
+    margin-block-end: 0;
+}

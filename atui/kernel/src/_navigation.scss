@@ -122,7 +122,6 @@
 
 @media (width <= 767px) /* Smartphones */ {
     .atuiKernel_NavigationBar {
-        width: calc(100% - 20px);
         padding: 5px;
         position: sticky;
         inset-block-end: 0;

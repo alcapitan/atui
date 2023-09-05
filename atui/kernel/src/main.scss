@@ -4,31 +4,42 @@
  */
 
 // Core (global variables and HTML tags' properties)
-@use "color";
-@use "root";
-@use "input";
+@layer core {
+    @import "color";
+    @import "root";
+    @import "input";
+}
 
 // Components which can contain other components
-@use "section";
-@use "cards";
-@use "header";
-@use "footer";
-@use "modal";
-@use "notification";
+@layer base {
+    @import "structure";
+    @import "cards";
+    @import "header";
+    @import "footer";
+    @import "modal";
+    @import "notification";
+}
 
 // Independent components
-@use "accordion";
-@use "box";
-@use "button";
-@use "carousel";
-@use "download";
-@use "grid";
-@use "image";
-@use "licensing";
-@use "navigation";
-@use "pagination";
-@use "paragraph";
-@use "popup";
-@use "slider";
-@use "table";
-@use "tabs";
+@layer final {
+    @import "popup";
+    @import "accordion";
+    @import "box";
+    @import "button";
+    @import "carousel";
+    @import "download";
+    @import "grid";
+    @import "image";
+    @import "licensing";
+    @import "loader";
+    @import "navigation";
+    @import "pagination";
+    @import "paragraph";
+    @import "section";
+    @import "slider";
+    @import "squarelink";
+    @import "table";
+    @import "tabs";
+}
+
+@layer core, base, final;

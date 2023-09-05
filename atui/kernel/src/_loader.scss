@@ -1,0 +1,31 @@
+/*!
+ * ATUI v0.4.2 (https://github.com/alcapitan/atui)
+ * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
+ */
+
+/* Snipper */
+
+.atuiKernel_Spinner {
+    animation: spinner-animation 1s infinite linear;
+    width: fit-content;
+}
+
+.atuiKernel_Spinner i {
+    height: 50px;
+    font-size: 50px;
+    color: hsl(var(--atuiKernel_Color-A50));
+}
+
+@keyframes spinner-animation {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.atuiKernel_Spinner.optionLight > i {
+    color: hsl(var(--atuiKernel_Color-N80));
+}
+
+.atuiKernel_Spinner.optionDark > i {
+    color: hsl(var(--atuiKernel_Color-N20));
+}

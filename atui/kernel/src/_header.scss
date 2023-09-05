@@ -89,7 +89,7 @@
 .atuiKernel_Header > div {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 15px;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 5px;
@@ -98,7 +98,7 @@
 .atuiKernel_Header > div > * {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .atuiKernel_Header > div.optionLevelLink :is(i, img) {

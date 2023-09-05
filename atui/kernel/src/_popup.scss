@@ -13,7 +13,7 @@
     box-shadow: var(--atuiKernel_ShadowMedium);
     width: max-content;
     visibility: hidden;
-    display: block !important;
+    display: block;
 }
 
 @media (480px <= width) /* Tablets and computers */ {
@@ -29,7 +29,7 @@
 }
 
 :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) * {
-    color: hsl(var(--atuiKernel_Color-N00)) !important;
+    color: hsl(var(--atuiKernel_Color-N00));
     font-size: 1rem;
     margin: 0;
 }
@@ -38,7 +38,7 @@
 
 .atuiKernel_PopupContextmenu {
     z-index: 18;
-    padding: 10px 0 !important;
+    padding: 10px 0;
 }
 
 .atuiKernel_PopupContextmenu > * {
@@ -51,18 +51,10 @@
     }
 }
 
-.atuiKernel_PopupContextmenu > * :first-child:is(i, img) {
-    margin-inline-start: 0 !important;
-}
-
-.atuiKernel_PopupContextmenu > * :last-child:is(i, img) {
-    margin-inline-end: 0 !important;
-}
-
 .atuiKernel_PopupContextmenu :is(i, img) {
-    font-size: 1em !important;
-    width: 1em !important;
-    height: 1em !important;
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
 }
 
 .atuiKernel_PopupContextmenu > a {
@@ -92,11 +84,7 @@
     background-color: hsl(var(--atuiKernel_Color-NFF));
     border-radius: var(--atuiKernel_Borderradius);
     box-shadow: var(--atuiKernel_ShadowMedium);
-    display: block !important;
     max-width: 80%;
-}
-
-.atuiKernel_PopupGlobalpanel > div {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -105,10 +93,14 @@
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .atuiKernel_PopupGlobalpanel > div {
+    .atuiKernel_PopupGlobalpanel {
         padding: 20px 30px;
         gap: 40px;
     }
+}
+
+.atuiKernel_PopupGlobalpanel * {
+    color: hsl(var(--atuiKernel_Color-N00));
 }
 
 /* Tooltip */

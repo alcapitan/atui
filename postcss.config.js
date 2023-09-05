@@ -5,6 +5,7 @@ module.exports = {
             stage: 2,
             features: {
                 "logical-properties-and-values": false,
+                "cascade-layers": false,
             },
         }),
         require("autoprefixer"),
