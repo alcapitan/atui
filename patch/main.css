@@ -11,11 +11,11 @@
 } */
 
 /* :root {
-    --atuiKernel_Color-Accent : 170 !important;
+    --atuiKernel_Color-Accent : 170;
 } */
 
 .sayHello * {
-    color: hsl(var(--atuiKernel_Color-A50)) !important;
+    color: hsl(var(--atuiKernel_Color-A50));
     font-weight: bold;
 }
 

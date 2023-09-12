@@ -7,7 +7,7 @@
 
 .atuiSearchservice_Panel {
     border-radius: 25px;
-    display: block !important;
+    display: block;
 }
 
 .atuiSearchservice_Panel.optionActive {
@@ -19,7 +19,7 @@
     left: 0;
     z-index: 14;
     margin-block: 20px;
-    padding: 10px !important;
+    padding: 10px;
 }
 
 @media (width < 480px) /* Smartphones */ {
@@ -98,8 +98,8 @@
     .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) .atuiSearchservice_Trigger {
         display: block;
         padding: 5px;
-        font-size: 1.875rem !important;
-        width: 1.875rem !important;
-        height: 1.875rem !important;
+        font-size: 1.875rem;
+        width: 1.875rem;
+        height: 1.875rem;
     }
 }

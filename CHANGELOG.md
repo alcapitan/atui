@@ -55,6 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Largely rebuilt `.atuiKernel_Card.optionOverlay`.
     -   Add `.atuiKernel_CardHighlight`.
 -   Use unpkg instead of jsdelivr for CDN content (like icons, and ATUI itself) to avoid domain blockage in Egypt and China.
+-   Remove `!important` from CSS code and use `@layer` for better inheritance management with minor visual changes.
+-   Lighten Globalpanel's HTML structure.
 
 ### Fixed
 
