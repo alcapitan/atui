@@ -11,12 +11,8 @@
     width: available;
     width: stretch;
     z-index: 13;
-    padding: 0 5px;
+    padding-inline: 5px;
     border-block-end: 1px solid hsl(var(--atuiKernel_Color-N80));
-}
-
-.atuiKernel_Header * {
-    margin: 0;
 }
 
 .atuiKernel_Header :is(i, img) {

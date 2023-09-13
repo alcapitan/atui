@@ -12,6 +12,7 @@
     padding: 10px;
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .atuiKernel_SectionDownload > div /* Containers */ {
@@ -34,22 +35,15 @@
 .atuiKernel_SectionDownload > div:first-child p /* File name */ {
     font-weight: bold;
     font-size: 1.125rem;
-    margin: 0;
+}
+
+.atuiKernel_SectionDownload > div:last-child /* Button container */ {
+    justify-content: flex-end;
 }
 
 /* Responsive */
 
-@media (width >= 768px) /* Computers */ {
-    .atuiKernel_SectionDownload /* Element */ {
-        flex-direction: row;
-    }
-
-    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
-        justify-content: flex-end;
-    }
-}
-
-@media (width <= 767px) /* Smartphones */ {
+@media (width < 480px) /* Smartphones */ {
     .atuiKernel_SectionDownload /* Element */ {
         flex-direction: column;
     }

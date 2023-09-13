@@ -43,12 +43,7 @@
     border-radius: var(--atuiKernel_Borderradius);
     border: none;
     background-color: transparent;
-    box-sizing: border-box;
     vertical-align: middle;
-}
-
-.atuiKernel_Button * {
-    margin: 0;
 }
 
 .atuiKernel_Button :is(i, img) {

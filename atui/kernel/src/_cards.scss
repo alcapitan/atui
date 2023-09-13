@@ -17,10 +17,8 @@
     object-fit: cover;
 }
 
-.atuiKernel_Card > div > *:not(.atuiKernel_CardHighlight),
-.atuiKernel_Card .atuiKernel_CardHighlight > * {
-    /* TODO: lighten spacing code when global margin/padding will be 0 */
-    margin-inline: 15px;
+.atuiKernel_Card > div > * {
+    margin: 10px 15px;
 }
 
 /** set font-weight: bold for .atuiKernel_CardHighlight > * for more logical appearance if needed */
@@ -28,6 +26,8 @@
 .atuiKernel_Card:not(.optionOverlay) .atuiKernel_CardHighlight {
     background-color: hsl(var(--atuiKernel_Color-N80));
     border-block: 1px solid hsl(var(--atuiKernel_Color-N50));
+    margin: 0;
+    padding: 15px;
 }
 
 /* Overlay style */

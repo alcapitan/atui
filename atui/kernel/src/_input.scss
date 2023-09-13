@@ -62,7 +62,6 @@ input[type="range"] {
 }
 
 progress {
-    padding: 0;
     background: revert;
     border: revert;
     border-radius: revert;
@@ -74,11 +73,12 @@ progress {
 fieldset {
     border: 1px solid hsl(var(--atuiKernel_Color-A40));
     border-radius: var(--atuiKernel_Borderradius);
+    padding: 10px;
 }
 
 fieldset legend {
     font-family: var(--atuiKernel_FontsTitle);
-    padding: 0 10px;
+    padding-inline: 10px;
     font-size: 1.125rem;
 }
 

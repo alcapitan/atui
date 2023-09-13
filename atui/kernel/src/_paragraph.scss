@@ -23,7 +23,8 @@
 .atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote em {
     color: hsl(var(--atuiKernel_Color-N30));
     display: block;
-    margin: 5px 0 0 10px;
+    margin-block-start: 5px;
+    margin-inline-start: 10px;
     font-size: 0.875rem;
 }
 

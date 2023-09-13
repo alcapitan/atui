@@ -31,14 +31,13 @@
 :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) * {
     color: hsl(var(--atuiKernel_Color-N00));
     font-size: 1rem;
-    margin: 0;
 }
 
 /* Context menu */
 
 .atuiKernel_PopupContextmenu {
     z-index: 18;
-    padding: 10px 0;
+    padding-block: 10px;
 }
 
 .atuiKernel_PopupContextmenu > * {

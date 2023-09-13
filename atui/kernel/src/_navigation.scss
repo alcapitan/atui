@@ -34,7 +34,7 @@
 }
 
 .atuiKernel_NavigationSectionImgbig a p /* Text */ {
-    margin: 10px 0 0;
+    margin-block-start: 10px;
     font-size: 1.125rem;
     color: hsl(var(--atuiKernel_Color-N00));
 }
@@ -56,7 +56,6 @@
 }
 
 .atuiKernel_NavigationBar p {
-    margin: 0;
     width: max-content;
 }
 
@@ -64,7 +63,6 @@
     background-color: hsl(var(--atuiKernel_Color-A60));
     width: 100%;
     height: 2px;
-    margin: 0;
     border: 0;
 }
 

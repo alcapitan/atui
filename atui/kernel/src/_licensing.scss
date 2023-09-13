@@ -4,14 +4,13 @@
  */
 
 .atuiKernel_Licensing {
-    margin: 10px 0;
+    margin-block: 10px;
     display: flex;
     gap: 30px;
 }
 
 .atuiKernel_Licensing * {
     color: hsl(var(--atuiKernel_Color-N60));
-    margin: 0;
 }
 
 .atuiKernel_Footer .atuiKernel_Licensing * {

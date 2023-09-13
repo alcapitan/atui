@@ -35,7 +35,6 @@
 
 .atuiKernel_Notification > header * {
     font-size: 1.5rem;
-    margin: 0;
 }
 
 .atuiKernel_Notification > header :is(i, img) {
@@ -50,10 +49,6 @@
 
 .atuiKernel_Notification > section {
     margin: 10px;
-}
-
-.atuiKernel_Notification > section p {
-    margin: 0;
 }
 
 /* Mini option */

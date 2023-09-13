@@ -24,10 +24,6 @@
     background-color: hsl(var(--atuiKernel_Color-N90));
 }
 
-:is(.atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer) * {
-    margin: 0;
-}
-
 /* Controls */
 
 .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
@@ -67,8 +63,8 @@
 }
 
 .atuiMediasplayer_Controls :is(i, img) {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     padding: 5px 10px;
     border-radius: var(--atuiKernel_Borderradius);
     font-size: 30px;

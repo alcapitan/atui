@@ -13,7 +13,6 @@
 // Components which can contain other components
 @layer base {
     @import "structure";
-    @import "cards";
     @import "header";
     @import "footer";
     @import "modal";
@@ -26,6 +25,7 @@
     @import "accordion";
     @import "box";
     @import "button";
+    @import "cards";
     @import "carousel";
     @import "download";
     @import "grid";

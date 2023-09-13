@@ -40,14 +40,16 @@ html {
 }
 
 body {
-    margin: 0;
     background: hsl(var(--atuiKernel_Color-NFF));
 }
 
-body * {
+* {
     font-family: var(--atuiKernel_FontsText);
     color: hsl(var(--atuiKernel_Color-N00));
     word-wrap: anywhere;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Default props of HTML tags */
@@ -63,7 +65,7 @@ a {
 :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
-    margin: 15px 0;
+    margin-block: 15px;
 }
 
 h1 {
@@ -108,6 +110,7 @@ code {
 
 /* Scrollbar */
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 * {
     /* Firefox syntax */
     scrollbar-width: thin;

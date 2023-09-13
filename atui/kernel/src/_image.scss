@@ -24,14 +24,13 @@
 
 @media (width >= 768px) /* Computers */ {
     .atuiKernel_SectionImage img {
-        margin: 0 10%;
+        margin-inline: 10%;
         width: 80%;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
     .atuiKernel_SectionImage img {
-        margin: 0;
         width: 100%;
     }
 }

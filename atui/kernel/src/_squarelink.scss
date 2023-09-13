@@ -9,8 +9,8 @@
     gap: 10px;
     padding: 10px;
     border-radius: var(--atuiKernel_Borderradius);
-    height: 100px;
-    min-width: 100px;
+    height: 120px;
+    min-width: 120px;
     max-width: 250px;
     border: 1px solid hsl(var(--atuiKernel_Color-N00));
     vertical-align: middle;
@@ -26,10 +26,6 @@
 
 .atuiKernel_Squarelink:active {
     background-color: hsl(var(--atuiKernel_Color-A60));
-}
-
-.atuiKernel_Squarelink * {
-    margin: 0;
 }
 
 .atuiKernel_Squarelink:is(:hover, :active) * {

@@ -11,7 +11,7 @@
 
 .atuiKernel_SectionAccordion > header {
     background-color: hsl(var(--atuiKernel_Color-N80));
-    padding: 0 20px;
+    padding-inline: 20px;
     min-height: 50px;
     display: flex;
     align-items: center;
@@ -20,7 +20,6 @@
 .atuiKernel_SectionAccordion > header h3 {
     flex: 1;
     color: hsl(var(--atuiKernel_Color-N00));
-    margin: 0;
     font-family: var(--atuiKernel_FontsTitle);
     font-weight: var(--atuiKernel_TitleBold);
 }
@@ -38,8 +37,4 @@
     background-color: hsl(var(--atuiKernel_Color-N90));
     border-block-start: 1px hsl(var(--atuiKernel_Color-N50)) solid;
     display: none;
-}
-
-.atuiKernel_SectionAccordion > section * {
-    margin: 0;
 }

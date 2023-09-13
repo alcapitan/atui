@@ -15,8 +15,8 @@
 .atuiKernel_SectionTabsHeader {
     display: flex;
     flex-wrap: wrap;
-    padding-block-end: 5px;
     border-block-end: 1px hsl(var(--atuiKernel_Color-N80)) solid;
+    padding-inline: 15px;
 }
 
 .atuiKernel_SectionTabsHeader > a {
@@ -26,7 +26,6 @@
 }
 
 .atuiKernel_SectionTabsHeader > a * {
-    margin: 0;
     color: inherit;
     font-family: var(--atuiKernel_FontsTitle);
     font-size: 1.125rem;
@@ -74,7 +73,7 @@
 .atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader {
     background-color: hsl(var(--atuiKernel_Color-N80));
     border-block-end: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    padding: 0 10px;
+    padding-block-end: 5px;
 }
 
 .atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsContent {
