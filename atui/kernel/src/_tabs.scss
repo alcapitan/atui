@@ -17,6 +17,13 @@
     flex-wrap: wrap;
     border-block-end: 1px hsl(var(--atuiKernel_Color-N80)) solid;
     padding-inline: 15px;
+    padding-block-end: 5px;
+}
+
+@media (width < 480px) /* Smartphones */ {
+    .atuiKernel_SectionTabsHeader {
+        padding-inline: 5px;
+    }
 }
 
 .atuiKernel_SectionTabsHeader > a {
@@ -73,7 +80,7 @@
 .atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader {
     background-color: hsl(var(--atuiKernel_Color-N80));
     border-block-end: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    padding-block-end: 5px;
+    padding-block-end: 0; // To reset margin created for ::after symbol for other style
 }
 
 .atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsContent {

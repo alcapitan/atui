@@ -50,5 +50,10 @@
 
     .atuiKernel_SectionDownload > div:last-child /* Button container */ {
         justify-content: space-around;
+        margin-block-start: 10px;
+    }
+
+    .atuiKernel_SectionDownload > div:last-child .atuiKernel_Button {
+        margin-block: 0;
     }
 }

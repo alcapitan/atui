@@ -13,10 +13,10 @@
 // Components which can contain other components
 @layer base {
     @import "structure";
+    @import "button";
     @import "header";
     @import "footer";
     @import "modal";
-    @import "notification";
 }
 
 // Independent components
@@ -24,15 +24,14 @@
     @import "popup";
     @import "accordion";
     @import "box";
-    @import "button";
     @import "cards";
     @import "carousel";
     @import "download";
     @import "grid";
-    @import "image";
     @import "licensing";
     @import "loader";
     @import "navigation";
+    @import "notification";
     @import "pagination";
     @import "paragraph";
     @import "section";

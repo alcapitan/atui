@@ -21,11 +21,11 @@
 }
 
 .atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote em {
-    color: hsl(var(--atuiKernel_Color-N30));
-    display: block;
-    margin-block-start: 5px;
-    margin-inline-start: 10px;
+    color: hsl(var(--atuiKernel_Color-N50));
+    font-style: italic;
+    margin: 5px;
     font-size: 0.875rem;
+    display: block;
 }
 
 /* Images in titles */
@@ -60,4 +60,35 @@
 
 .atuiKernel_SectionParagraph h6 img {
     height: 0.625rem;
+}
+
+/* Image */
+
+.atuiKernel_SectionImage {
+    padding: 10px;
+}
+
+.atuiKernel_SectionImage img {
+    border-radius: var(--atuiKernel_Borderradius);
+}
+
+.atuiKernel_SectionImage p {
+    color: hsl(var(--atuiKernel_Color-N50));
+    font-style: italic;
+    margin: 5px;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+@media (width >= 768px) /* Computers */ {
+    .atuiKernel_SectionImage img {
+        margin-inline: 10%;
+        width: 80%;
+    }
+}
+
+@media (width <= 767px) /* Smartphones */ {
+    .atuiKernel_SectionImage img {
+        width: 100%;
+    }
 }

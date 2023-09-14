@@ -74,6 +74,7 @@ fieldset {
     border: 1px solid hsl(var(--atuiKernel_Color-A40));
     border-radius: var(--atuiKernel_Borderradius);
     padding: 10px;
+    padding-block-start: 0;
 }
 
 fieldset legend {

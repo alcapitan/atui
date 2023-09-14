@@ -53,16 +53,18 @@
 
 /* Mini option */
 
-.atuiKernel_Notification.optionMini {
-    padding: 10px 20px;
-}
-
 .atuiKernel_Notification.optionMini > header p {
-    font-weight: normal;
-    font-family: var(--atuiKernel_FontsText);
-    font-size: 1rem;
+    all: unset;
 }
 
 .atuiKernel_Notification.optionMini > section {
     display: none;
+}
+
+.atuiKernel_Notification.optionMini > footer {
+    margin-block-start: 10px;
+}
+
+.atuiKernel_Notification.optionMini > footer .atuiKernel_Button {
+    margin: 0;
 }
