@@ -3,10 +3,10 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_Modal /* Background */ {
+.vkModal /* Background */ {
     position: fixed;
     inset: 0;
-    background-color: hsl(var(--atuiKernel_Color-N40) / 70%);
+    background-color: hsl(var(--vkColorN40) / 70%);
     z-index: 19;
     overflow-y: auto;
     max-height: 100vh;
@@ -18,14 +18,14 @@
     display: none;
 }
 
-.atuiKernel_Modal.optionShow {
+.vkModal.optionShow {
     display: flex;
 }
 
-.atuiKernel_Modal > div /* Container */ {
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
+.vkModal > div /* Container */ {
+    background-color: hsl(var(--vkColorNFF));
+    border-radius: var(--vkBorderRadius);
+    box-shadow: var(--vkShadowMedium);
     padding: 20px;
     min-width: 40%;
     min-height: 20%;

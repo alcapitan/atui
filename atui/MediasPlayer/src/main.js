@@ -5,13 +5,9 @@
 
 /* Close Audioplayer */
 
-document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
+document.querySelectorAll(".mpClose").forEach(function (button) {
     button.addEventListener("click", function () {
-        const player = atuiKernel_ToolsFindElement(
-            this,
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-        )[0];
+        const player = vkClosest(this, ".mpAudio, .mpVideo", ".mpAudio, .mpVideo")[0];
         const media = player.querySelector("audio, video");
         media.pause();
         player.style.display = "none";
@@ -20,9 +16,9 @@ document.querySelectorAll(".atuiMediasplayer_Close").forEach(function (button) {
 
 /* Display error for broken media link */
 
-function atuiMediasplayer_BrokenLink(player, mediaLink) {
+function mpLinkBroken(player, mediaLink) {
     const alertBox = document.createElement("div");
-    alertBox.classList.add("atuiKernel_SectionBox", "optionAlert");
+    alertBox.classList.add("vkBox", "optionAlert");
     const alertIcon = document.createElement("i");
     alertIcon.classList.add("ti", "ti-circle-x");
     const alertText = document.createElement("p");
@@ -33,7 +29,7 @@ function atuiMediasplayer_BrokenLink(player, mediaLink) {
     }
     alertBox.appendChild(alertIcon);
     alertBox.appendChild(alertText);
-    if (player.classList.contains("atuiMediasplayer_Videoplayer")) {
+    if (player.classList.contains("mpVideo")) {
         player.querySelector("article").prepend(alertBox);
     } else {
         player.prepend(alertBox);
@@ -42,15 +38,15 @@ function atuiMediasplayer_BrokenLink(player, mediaLink) {
 
 /* Assign an audio to an audioplayer */
 
-function atuiMediasplayer_Assign(data) {
+function mpAssign(data) {
     const player = document.getElementById(data.player);
     const media = player.querySelector("audio, video");
-    const cover = player.querySelector(".atuiMediasplayer_Cover img, .atuiMediasplayer_Cover i");
-    const title = player.querySelector(".atuiMediasplayer_InformationTitle");
-    const author = player.querySelector(".atuiMediasplayer_InformationAuthor");
-    const albumName = player.querySelector(".atuiMediasplayer_InformationAlbumName");
-    const releaseDate = player.querySelector(".atuiMediasplayer_InformationReleaseDate");
-    const origin = player.querySelector(".atuiMediasplayer_InformationOrigin");
+    const cover = player.querySelector(".mpCover img, .mpCover i");
+    const title = player.querySelector(".mpInfoTitle");
+    const author = player.querySelector(".mpInfoAuthor");
+    const albumName = player.querySelector(".mpInfoAlbumName");
+    const releaseDate = player.querySelector(".mpInfoReleaseDate");
+    const origin = player.querySelector(".mpInfoOrigin");
 
     media.setAttribute("src", data.media);
     if (data.cover !== undefined) {
@@ -75,20 +71,20 @@ function atuiMediasplayer_Assign(data) {
 
 /* Play and pause a media */
 
-function atuiMediasplayer_Run(player) {
+function mpRun(player) {
     player = document.getElementById(player);
     const media = player.querySelector("audio, video");
-    const button = player.querySelector(".atuiMediasplayer_Run");
+    const button = player.querySelector(".mpRun");
     if (media.paused === true) {
-        atuiMediasplayer_StopAllMedia();
-        player.querySelectorAll(".atuiKernel_SectionBox.optionAlert").forEach((alertBox) => {
+        mpStop();
+        player.querySelectorAll(".vkBox.optionAlert").forEach((alertBox) => {
             alertBox.remove();
         });
         const mediaLink = media.getAttribute("src");
         const mediaLinkIsOk = verifyLink(mediaLink);
         mediaLinkIsOk.then((response) => {
             if (!response) {
-                atuiMediasplayer_BrokenLink(player, mediaLink);
+                mpLinkBroken(player, mediaLink);
             }
         });
         media.play();
@@ -104,16 +100,16 @@ function atuiMediasplayer_Run(player) {
     }
 }
 
-document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer").forEach((player) => {
-    player.querySelector(".atuiMediasplayer_Run").addEventListener("click", () => {
-        atuiMediasplayer_Run(player.getAttribute("id"));
+document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
+    player.querySelector(".mpRun").addEventListener("click", () => {
+        mpRun(player.getAttribute("id"));
     });
 });
 
 /* Manage when audio ends */
 
-document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer").forEach((player) => {
-    const button = player.querySelector(".atuiMediasplayer_Run");
+document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
+    const button = player.querySelector(".mpRun");
     const media = player.querySelector("audio, video");
     media.addEventListener("ended", () => {
         button.classList.replace("ti-player-pause", "ti-player-play");
@@ -125,22 +121,22 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
 
 /* Stop all others medias when playing a new one */
 
-function atuiMediasplayer_StopAllMedia() {
+function mpStop() {
     const medias = document.querySelectorAll("audio, video");
     medias.forEach(function (media) {
         media.pause();
     });
-    document.querySelectorAll(".atuiMediasplayer_Run").forEach(function (button) {
+    document.querySelectorAll(".mpRun").forEach(function (button) {
         button.classList.replace("ti-player-pause", "ti-player-play");
     });
 }
 
 /* Update timer */
 
-document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer").forEach((player) => {
+document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
     const media = player.querySelector("audio, video");
     const timer = player.querySelector(".atuiMediasplayer_Timer");
-    const progressBar = player.querySelector(".atuiMediasplayer_ProgressbarInside");
+    const progressBar = player.querySelector(".mpProgressInside");
     media.addEventListener("timeupdate", () => {
         let listened = media.currentTime;
         let duration = media.duration;
@@ -155,7 +151,7 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
 
 /* Go forward or backward */
 
-document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer").forEach((player) => {
+document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
     const backward = player.querySelector(".atuiMediasplayer_Backward");
     const forward = player.querySelector(".atuiMediasplayer_Forward");
     const media = player.querySelector("audio, video");
@@ -169,16 +165,12 @@ document.querySelectorAll(".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Vide
 
 /* Change playback */
 
-document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar) => {
-    progressbar.addEventListener("click", (event) => {
-        const media = atuiKernel_ToolsFindElement(
-            progressbar,
-            "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-        )[0];
-        const percent = (event.offsetX / progressbar.offsetWidth) * 100;
+document.querySelectorAll(".mpProgress").forEach((progressBar) => {
+    progressBar.addEventListener("click", (event) => {
+        const media = vkClosest(progressBar, "audio, video", ".mpAudio, .mpVideo")[0];
+        const percent = (event.offsetX / progressBar.offsetWidth) * 100;
         media.currentTime = (media.duration * percent) / 100;
-        progressbar.querySelector(".atuiMediasplayer_ProgressbarInside").style.width = `${percent}%`;
+        progressBar.querySelector(".mpProgressInside").style.width = `${percent}%`;
     });
 });
 
@@ -186,11 +178,7 @@ document.querySelectorAll(".atuiMediasplayer_Progressbar").forEach((progressbar)
 
 document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
     button.addEventListener("click", function () {
-        const media = atuiKernel_ToolsFindElement(
-            this,
-            "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-        )[0];
+        const media = vkClosest(this, "audio, video", ".mpAudio, .mpVideo")[0];
         if (media.loop === false) {
             media.loop = true;
             this.classList.replace("ti-repeat", "ti-repeat-off");
@@ -207,11 +195,7 @@ document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
 
 document.querySelectorAll(".atuiMediasplayer_Sound").forEach(function (button) {
     button.addEventListener("click", function () {
-        const media = atuiKernel_ToolsFindElement(
-            this,
-            "audio, video",
-            ".atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer",
-        )[0];
+        const media = vkClosest(this, "audio, video", ".mpAudio, .mpVideo")[0];
         if (media.muted === false) {
             media.muted = true;
             this.classList.replace("ti-volume", "ti-volume-off");
@@ -228,7 +212,7 @@ document.querySelectorAll(".atuiMediasplayer_Sound").forEach(function (button) {
 
 document.querySelectorAll(".atuiMediasplayer_Fullscreen").forEach((button) => {
     button.addEventListener("click", () => {
-        const media = atuiKernel_ToolsFindElement(button, "video", ".atuiMediasplayer_Videoplayer")[0];
+        const media = vkClosest(button, "video", ".mpVideo")[0];
         if (media.requestFullscreen) {
             media.requestFullscreen();
         } else if (media.webkitRequestFullscreen) {
@@ -243,7 +227,7 @@ document.querySelectorAll(".atuiMediasplayer_Fullscreen").forEach((button) => {
 
 document.querySelectorAll(".atuiMediasplayer_Pip").forEach((button) => {
     button.addEventListener("click", () => {
-        const media = atuiKernel_ToolsFindElement(button, "video", ".atuiMediasplayer_Videoplayer")[0];
+        const media = vkClosest(button, "video", ".mpVideo")[0];
         if (media !== document.pictureInPictureElement) {
             media.requestPictureInPicture();
         } else {

@@ -3,48 +3,48 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_Card {
-    border-radius: var(--atuiKernel_Borderradius);
+.vkCard {
+    border-radius: var(--vkBorderRadius);
     overflow: hidden;
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
-    background-color: hsl(var(--atuiKernel_Color-N90));
+    border: 1px solid hsl(var(--vkColorN50));
+    background-color: hsl(var(--vkColorN90));
 }
 
-.atuiKernel_Card > img {
+.vkCard > img {
     display: block;
     width: 100%;
     max-height: 60vh;
     object-fit: cover;
 }
 
-.atuiKernel_Card > div > * {
+.vkCard > div > * {
     margin: 10px 15px;
 }
 
-/** set font-weight: bold for .atuiKernel_CardHighlight > * for more logical appearance if needed */
+/** set font-weight: bold for .vkCardHighlight > * for more logical appearance if needed */
 
-.atuiKernel_Card:not(.optionOverlay) .atuiKernel_CardHighlight {
-    background-color: hsl(var(--atuiKernel_Color-N80));
-    border-block: 1px solid hsl(var(--atuiKernel_Color-N50));
+.vkCard:not(.optionOverlay) .vkCardHighlight {
+    background-color: hsl(var(--vkColorN80));
+    border-block: 1px solid hsl(var(--vkColorN50));
     margin: 0;
     padding: 15px;
 }
 
 /* Overlay style */
 
-.atuiKernel_Card.optionOverlay {
+.vkCard.optionOverlay {
     position: relative;
 }
 
-.atuiKernel_Card.optionOverlay * {
+.vkCard.optionOverlay * {
     color: #fff;
 }
 
-.atuiKernel_Card.optionOverlay > img {
+.vkCard.optionOverlay > img {
     filter: brightness(0.7);
 }
 
-.atuiKernel_Card.optionOverlay > div {
+.vkCard.optionOverlay > div {
     position: absolute;
     top: 0;
 

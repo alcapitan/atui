@@ -5,53 +5,53 @@
 
 /* Global */
 
-.atuiKernel_SectionTabs {
-    border-radius: var(--atuiKernel_Borderradius);
+.vkTabs {
+    border-radius: var(--vkBorderRadius);
     overflow: hidden;
 }
 
 /* Header */
 
-.atuiKernel_SectionTabsHeader {
+.vkTabsHeader {
     display: flex;
     flex-wrap: wrap;
-    border-block-end: 1px hsl(var(--atuiKernel_Color-N80)) solid;
+    border-block-end: 1px hsl(var(--vkColorN80)) solid;
     padding-inline: 15px;
     padding-block-end: 5px;
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .atuiKernel_SectionTabsHeader {
+    .vkTabsHeader {
         padding-inline: 5px;
     }
 }
 
-.atuiKernel_SectionTabsHeader > a {
+.vkTabsHeader > a {
     padding: 15px;
     position: relative;
-    color: hsl(var(--atuiKernel_Color-N00));
+    color: hsl(var(--vkColorN00));
 }
 
-.atuiKernel_SectionTabsHeader > a * {
+.vkTabsHeader > a * {
     color: inherit;
-    font-family: var(--atuiKernel_FontsTitle);
+    font-family: var(--vkFontsTitle);
     font-size: 1.125rem;
 }
 
-.atuiKernel_SectionTabsHeader .optionActive {
+.vkTabsHeader .optionActive {
     font-weight: bold;
 }
 
-.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader > *:hover,
-.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive * {
-    color: hsl(var(--atuiKernel_Color-A50));
+.vkTabs .vkTabsHeader > *:hover,
+.vkTabs .vkTabsHeader .optionActive * {
+    color: hsl(var(--vkColorA50));
 }
 
-.atuiKernel_SectionTabs .atuiKernel_SectionTabsHeader .optionActive::after {
+.vkTabs .vkTabsHeader .optionActive::after {
     content: "";
     width: calc(100% - 30px);
     height: 5px;
-    background-color: hsl(var(--atuiKernel_Color-A50));
+    background-color: hsl(var(--vkColorA50));
     position: absolute;
     border-radius: 5px;
     transform: translateY(10px);
@@ -59,39 +59,39 @@
 
 /* Content */
 
-.atuiKernel_SectionTabsContent {
+.vkTabsContent {
     padding: 15px;
 }
 
-.atuiKernel_SectionTabsContent div {
+.vkTabsContent div {
     display: none;
 }
 
-.atuiKernel_SectionTabsContent .optionActive {
+.vkTabsContent .optionActive {
     display: block;
 }
 
 /* Contrast style */
 
-.atuiKernel_SectionTabs.optionContrast {
-    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+.vkTabs.optionContrast {
+    border: 1px hsl(var(--vkColorN50)) solid;
 }
 
-.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader {
-    background-color: hsl(var(--atuiKernel_Color-N80));
-    border-block-end: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+.vkTabs.optionContrast .vkTabsHeader {
+    background-color: hsl(var(--vkColorN80));
+    border-block-end: 1px hsl(var(--vkColorN50)) solid;
     padding-block-end: 0; // To reset margin created for ::after symbol for other style
 }
 
-.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsContent {
-    background-color: hsl(var(--atuiKernel_Color-N90));
+.vkTabs.optionContrast .vkTabsContent {
+    background-color: hsl(var(--vkColorN90));
 }
 
-.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader > *:hover,
-.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .optionActive * {
-    color: hsl(var(--atuiKernel_Color-N00));
+.vkTabs.optionContrast .vkTabsHeader > *:hover,
+.vkTabs.optionContrast .vkTabsHeader .optionActive * {
+    color: hsl(var(--vkColorN00));
 }
 
-.atuiKernel_SectionTabs.optionContrast .atuiKernel_SectionTabsHeader .optionActive::after {
+.vkTabs.optionContrast .vkTabsHeader .optionActive::after {
     all: unset;
 }

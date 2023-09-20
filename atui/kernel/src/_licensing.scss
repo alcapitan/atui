@@ -3,15 +3,15 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_Licensing {
+.vkLicensing {
     display: flex;
     gap: 30px;
 }
 
-.atuiKernel_Licensing * {
-    color: hsl(var(--atuiKernel_Color-N60));
+.vkLicensing * {
+    color: hsl(var(--vkColorN60));
 }
 
-.atuiKernel_Footer .atuiKernel_Licensing * {
-    color: hsl(var(--atuiKernel_Color-A60));
+.vkFooter .vkLicensing * {
+    color: hsl(var(--vkColorA60));
 }

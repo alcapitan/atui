@@ -5,14 +5,14 @@
 
 /* Panel */
 
-.atuiSearchservice_Panel {
+.ssPanel {
     border-radius: 25px;
     display: block;
 }
 
-.atuiSearchservice_Panel.optionActive {
-    background-color: hsl(var(--atuiKernel_Color-N90));
-    box-shadow: var(--atuiKernel_ShadowMedium);
+.ssPanel.optionActive {
+    background-color: hsl(var(--vkColorN90));
+    box-shadow: var(--vkShadowMedium);
     position: fixed;
     top: 0;
     left: 0;
@@ -22,79 +22,79 @@
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .atuiSearchservice_Panel.optionActive {
+    .ssPanel.optionActive {
         width: 90%;
         margin-inline: 5%;
     }
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .atuiSearchservice_Panel.optionActive {
+    .ssPanel.optionActive {
         width: 500px;
         margin-inline: 50%;
         transform: translateX(-50%);
     }
 }
 
-.atuiSearchservice_Panel.optionActive > * {
+.ssPanel.optionActive > * {
     margin-block-end: 10px;
 }
 
-.atuiSearchservice_Panel > hr {
-    background-color: hsl(var(--atuiKernel_Color-N70));
+.ssPanel > hr {
+    background-color: hsl(var(--vkColorN70));
     border: none;
     height: 1px;
 }
 
-.atuiSearchservice_Panel:not(.optionActive) {
+.ssPanel:not(.optionActive) {
     width: fit-content;
 }
 
-.atuiSearchservice_Panel.optionActive > *:not(.atuiSearchservice_Bar) {
+.ssPanel.optionActive > *:not(.ssBar) {
     margin-inline: 10px;
 }
 
 /* Search bar */
 
-.atuiSearchservice_Panel:not(.optionActive) > *:not(.atuiSearchservice_Bar) {
+.ssPanel:not(.optionActive) > *:not(.ssBar) {
     display: none;
 }
 
-.atuiSearchservice_Panel.optionActive .atuiSearchservice_Bar {
+.ssPanel.optionActive .ssBar {
     margin-block-end: 15px;
 }
 
-.atuiSearchservice_Panel.optionActive .atuiSearchservice_Bar div.optionGroup {
+.ssPanel.optionActive .ssBar div.optionGroup {
     width: available;
     width: stretch;
 }
 
-.atuiSearchservice_Bar div.optionGroup {
-    box-shadow: var(--atuiKernel_ShadowLight);
+.ssBar div.optionGroup {
+    box-shadow: var(--vkShadowLight);
 }
 
-.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup input {
+.ssPanel .ssBar div.optionGroup input {
     width: 100%;
 }
 
-.atuiSearchservice_Panel .atuiSearchservice_Bar div.optionGroup i {
+.ssPanel .ssBar div.optionGroup i {
     font-size: 1.125rem;
     width: 1.125rem;
     height: 1.125rem;
 }
 
-.atuiSearchservice_Trigger {
+.ssTrigger {
     display: none;
 }
 
 /* Responsive in Header */
 
 @media (width < 1024px) /* Smartphones & tablets */ {
-    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) div.optionGroup {
+    .vkHeader .ssPanel:not(.optionActive) div.optionGroup {
         display: none;
     }
 
-    .atuiKernel_Header .atuiSearchservice_Panel:not(.optionActive) .atuiSearchservice_Trigger {
+    .vkHeader .ssPanel:not(.optionActive) .ssTrigger {
         display: block;
         padding: 5px;
         font-size: 1.875rem;

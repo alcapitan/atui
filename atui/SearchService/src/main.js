@@ -3,7 +3,7 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-document.querySelectorAll(".atuiSearchservice_Panel").forEach(function (panel) {
+document.querySelectorAll(".ssPanel").forEach(function (panel) {
     panel.addEventListener("click", function () {
         panel.classList.add("optionActive");
     });
@@ -21,14 +21,14 @@ document.querySelectorAll(".atuiSearchservice_Panel").forEach(function (panel) {
  * @param {Array<string>} list - The array of values to filter.
  * @returns {Array<string>} - The filtered array of values that contain the input value.
  */
-function atuiSearchservice_Filter(input, list) {
+function ssFilter(input, list) {
     return list.filter((value) => value.toLowerCase().includes(input.toLowerCase()));
 }
 
-/* atuiKernel_InputSubmit action setup */
+/* vkInputSubmit action setup */
 /* 
  * This is commented for JavaScript forms
-document.querySelectorAll(".atuiKernel_InputSubmit").forEach((input) => {
+document.querySelectorAll(".vkInputSubmit").forEach((input) => {
     input.addEventListener("click", () => {
         input.closest("form").submit();
     });

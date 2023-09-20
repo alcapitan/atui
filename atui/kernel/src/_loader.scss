@@ -5,15 +5,15 @@
 
 /* Snipper */
 
-.atuiKernel_Spinner {
+.vkLoader {
     animation: spinner-animation 1s infinite linear;
     width: fit-content;
 }
 
-.atuiKernel_Spinner i {
+.vkLoader i {
     height: 50px;
     font-size: 50px;
-    color: hsl(var(--atuiKernel_Color-A50));
+    color: hsl(var(--vkColorA50));
 }
 
 @keyframes spinner-animation {
@@ -22,10 +22,10 @@
     }
 }
 
-.atuiKernel_Spinner.optionLight > i {
-    color: hsl(var(--atuiKernel_Color-N80));
+.vkLoader.optionLight > i {
+    color: hsl(var(--vkColorN80));
 }
 
-.atuiKernel_Spinner.optionDark > i {
-    color: hsl(var(--atuiKernel_Color-N20));
+.vkLoader.optionDark > i {
+    color: hsl(var(--vkColorN20));
 }

@@ -6,17 +6,17 @@
 /* Container */
 
 @media (width >= 768px) /* Computers */ {
-    .atuiMediasplayer_Videoplayer {
+    .mpVideo {
         display: flex;
         justify-content: center;
     }
 }
 
-.atuiMediasplayer_Videoplayer > article {
+.mpVideo > article {
     overflow: hidden;
 }
 
-.atuiMediasplayer_Videoplayer video {
+.mpVideo video {
     max-width: 100%;
     max-height: 65vh;
     display: block;
@@ -24,7 +24,7 @@
 
 /* Controls */
 
-.atuiMediasplayer_Videoplayer .atuiMediasplayer_Dashboard {
+.mpVideo .mpDashboard {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -32,6 +32,6 @@
 
 /* Progressbar */
 
-.atuiMediasplayer_Videoplayer .atuiMediasplayer_Progressbar {
+.mpVideo .mpProgress {
     width: 100%;
 }

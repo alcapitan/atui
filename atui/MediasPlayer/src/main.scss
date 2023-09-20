@@ -12,87 +12,87 @@
 
 /* Container */
 
-.atuiMediasplayer_Audioplayer,
-.atuiMediasplayer_Videoplayer > article {
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
-    border-radius: var(--atuiKernel_Borderradius);
+.mpAudio,
+.mpVideo > article {
+    border: 1px solid hsl(var(--vkColorN50));
+    border-radius: var(--vkBorderRadius);
     position: relative;
 }
 
-.atuiMediasplayer_Audioplayer,
-.atuiMediasplayer_Videoplayer .atuiMediasplayer_Dashboard {
-    background-color: hsl(var(--atuiKernel_Color-N90));
+.mpAudio,
+.mpVideo .mpDashboard {
+    background-color: hsl(var(--vkColorN90));
 }
 
 /* Controls */
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
-.atuiMediasplayer_Videoplayer .atuiMediasplayer_Controls {
+.mpAudio .mpPanel,
+.mpVideo .mpControls {
     padding: 10px;
 }
 
 @media (width >= 768px) /* Computers */ {
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel,
-    .atuiMediasplayer_Videoplayer .atuiMediasplayer_Controls {
+    .mpAudio .mpPanel,
+    .mpVideo .mpControls {
         flex-direction: row;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .atuiMediasplayer_Controls {
+    .mpControls {
         flex-direction: column;
     }
 }
 
-.atuiMediasplayer_Dashboard {
+.mpDashboard {
     flex-direction: column;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Information,
-.atuiMediasplayer_Controls,
-.atuiMediasplayer_Controls > div {
+.mpAudio .mpInfo,
+.mpControls,
+.mpControls > div {
     display: flex;
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.atuiMediasplayer_Controls {
+.mpControls {
     justify-content: space-evenly;
     direction: ltr;
 }
 
-.atuiMediasplayer_Controls :is(i, img) {
+.mpControls :is(i, img) {
     width: 50px;
     height: 40px;
     padding: 5px 10px;
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
     font-size: 30px;
 }
 
-.atuiMediasplayer_Controls :is(i, img):hover {
-    background-color: hsl(var(--atuiKernel_Color-A70));
+.mpControls :is(i, img):hover {
+    background-color: hsl(var(--vkColorA70));
 }
 
 /* Progressbar */
 
-.atuiMediasplayer_Progressbar,
-.atuiMediasplayer_ProgressbarInside {
+.mpProgress,
+.mpProgressInside {
     height: 10px;
 }
 
-.atuiMediasplayer_Progressbar {
+.mpProgress {
     direction: ltr;
 }
 
-.atuiMediasplayer_ProgressbarInside {
+.mpProgressInside {
     width: 0;
-    background-color: hsl(var(--atuiKernel_Color-A50));
+    background-color: hsl(var(--vkColorA50));
     transition: width 500ms;
 }
 
 /* Error */
 
-:is(.atuiMediasplayer_Audioplayer, .atuiMediasplayer_Videoplayer) .atuiKernel_SectionBox {
+:is(.mpAudio, .mpVideo) .vkBox {
     margin: 10px;
 }

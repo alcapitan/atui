@@ -5,18 +5,18 @@
 
 /* Option style floating */
 
-.atuiMediasplayer_Audioplayer.optionFloating {
+.mpAudio.optionFloating {
     position: fixed;
     z-index: 12;
     inset: auto 10% 20px;
     margin: 0;
     border: none;
-    box-shadow: var(--atuiKernel_ShadowMedium);
-    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
-    backdrop-filter: var(--atuiKernel_Blur);
+    box-shadow: var(--vkShadowMedium);
+    background-color: hsl(var(--vkColorN90) / 80%);
+    backdrop-filter: var(--vkBlur);
     display: none;
 }
 
-.atuiMediasplayer_Audioplayer.optionFloating .atuiMediasplayer_Close {
+.mpAudio.optionFloating .mpClose {
     display: block;
 }

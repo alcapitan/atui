@@ -9,11 +9,11 @@ input,
 progress,
 textarea,
 select,
-.atuiKernel_InputSubmit,
+.vkInputSubmit,
 input[type="file"]::file-selector-button {
-    border-radius: var(--atuiKernel_Borderradius);
-    border: 1px solid hsl(var(--atuiKernel_Color-N70));
-    accent-color: hsl(var(--atuiKernel_Color-A50));
+    border-radius: var(--vkBorderRadius);
+    border: 1px solid hsl(var(--vkColorN70));
+    accent-color: hsl(var(--vkColorA50));
     margin: 5px;
     padding: 10px 15px;
     vertical-align: middle;
@@ -37,15 +37,15 @@ input[type="color"] {
 }
 
 input[type="color"]::-webkit-color-swatch {
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
 }
 
 input[type="color"]::-moz-color-swatch {
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
 }
 
 input[type="image"],
-.atuiKernel_InputSubmit {
+.vkInputSubmit {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem;
@@ -71,14 +71,14 @@ progress {
 /* Fieldset */
 
 fieldset {
-    border: 1px solid hsl(var(--atuiKernel_Color-A40));
-    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px solid hsl(var(--vkColorA40));
+    border-radius: var(--vkBorderRadius);
     padding: 10px;
     padding-block-start: 0;
 }
 
 fieldset legend {
-    font-family: var(--atuiKernel_FontsTitle);
+    font-family: var(--vkFontsTitle);
     padding-inline: 10px;
     font-size: 1.125rem;
 }
@@ -88,10 +88,10 @@ fieldset legend {
 /* TODO: set :has(input) instead of form when Firefox will support :has() */
 
 form div.optionGroup {
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border: 1px solid hsl(var(--atuiKernel_Color-N70));
+    background-color: hsl(var(--vkColorNFF));
+    border: 1px solid hsl(var(--vkColorN70));
     display: inline-flex;
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
 }
 
 form div.optionGroup.optionPill {

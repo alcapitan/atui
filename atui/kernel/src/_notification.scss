@@ -5,7 +5,7 @@
 
 /* Global */
 
-.atuiKernel_NotificationContainer {
+.vkNotificationContainer {
     position: fixed;
     inset: 0 20% auto;
     z-index: 16;
@@ -14,57 +14,57 @@
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .atuiKernel_NotificationContainer {
+    .vkNotificationContainer {
         inset-inline: 0;
     }
 }
 
-.atuiKernel_Notification {
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
+.vkNotification {
+    background-color: hsl(var(--vkColorNFF));
+    border-radius: var(--vkBorderRadius);
+    box-shadow: var(--vkShadowMedium);
     margin: 10px;
     padding: 20px;
 }
 
-.atuiKernel_Notification > header {
+.vkNotification > header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.atuiKernel_Notification > header * {
+.vkNotification > header * {
     font-size: 1.5rem;
 }
 
-.atuiKernel_Notification > header :is(i, img) {
+.vkNotification > header :is(i, img) {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.atuiKernel_Notification > header p {
-    font-weight: var(--atuiKernel_TitleBold);
-    font-family: var(--atuiKernel_FontsTitle);
+.vkNotification > header p {
+    font-weight: var(--vkFontsTitleBold);
+    font-family: var(--vkFontsTitle);
 }
 
-.atuiKernel_Notification > section {
+.vkNotification > section {
     margin: 10px;
 }
 
 /* Mini option */
 
-.atuiKernel_Notification.optionMini > header p {
+.vkNotification.optionMini > header p {
     all: unset;
 }
 
-.atuiKernel_Notification.optionMini > section {
+.vkNotification.optionMini > section {
     display: none;
 }
 
-.atuiKernel_Notification.optionMini > footer {
+.vkNotification.optionMini > footer {
     margin-block-start: 10px;
 }
 
-.atuiKernel_Notification.optionMini > footer .atuiKernel_Button {
+.vkNotification.optionMini > footer .vkButton {
     margin: 0;
 }

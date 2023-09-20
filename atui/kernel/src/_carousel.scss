@@ -5,17 +5,17 @@
 
 /* Global */
 
-.atuiKernel_Carousel {
-    border-radius: var(--atuiKernel_Borderradius);
+.vkCarousel {
+    border-radius: var(--vkBorderRadius);
     overflow: hidden;
     position: relative;
 }
 
-.atuiKernel_Header + .atuiKernel_Carousel {
+.vkHeader + .vkCarousel {
     border-radius: 0;
 }
 
-.atuiKernel_Carousel .atuiKernel_CarouselSlides {
+.vkCarousel .vkCarouselSlides {
     display: flex;
     overflow: auto;
     scroll-snap-type: x mandatory;
@@ -24,14 +24,14 @@
     max-height: 75vh;
 }
 
-.atuiKernel_Carousel .atuiKernel_CarouselSlides > div /* Slide */ {
+.vkCarousel .vkCarouselSlides > div /* Slide */ {
     position: relative;
     flex: 0 0 100%;
     scroll-snap-align: center;
-    background-color: hsl(var(--atuiKernel_Color-N10));
+    background-color: hsl(var(--vkColorN10));
 }
 
-.atuiKernel_Carousel .atuiKernel_CarouselSlides > div > img /* Illustration in slide */ {
+.vkCarousel .vkCarouselSlides > div > img /* Illustration in slide */ {
     display: block;
     object-fit: cover;
     object-position: center;
@@ -39,10 +39,10 @@
     height: 100%;
 }
 
-.atuiKernel_Carousel .atuiKernel_CarouselSlides > div > div /* Caption in slide */ {
+.vkCarousel .vkCarouselSlides > div > div /* Caption in slide */ {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, hsl(var(--atuiKernel_Color-N90) / 60%) 50%, transparent 100%);
+    background: linear-gradient(to top, hsl(var(--vkColorN90) / 60%) 50%, transparent 100%);
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -55,28 +55,26 @@
 
 /* Controls */
 
-.atuiKernel_Carousel .atuiKernel_CarouselControls {
+.vkCarousel .vkCarouselControls {
     position: absolute;
     inset: 0;
 }
 
-.atuiKernel_Carousel
-    .atuiKernel_CarouselControls
-    :is(.atuiKernel_CarouselControlsLeft, .atuiKernel_CarouselControlsRight) {
+.vkCarousel .vkCarouselControls :is(.vkCarouselControlsLeft, .vkCarouselControlsRight) {
     font-size: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
-    color: hsl(var(--atuiKernel_Color-NFF));
+    color: hsl(var(--vkColorNFF));
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
     z-index: 10;
 }
 
-.atuiKernel_Carousel .atuiKernel_CarouselControls .atuiKernel_CarouselControlsLeft {
+.vkCarousel .vkCarouselControls .vkCarouselControlsLeft {
     left: 10px;
 }
 
-.atuiKernel_Carousel .atuiKernel_CarouselControls .atuiKernel_CarouselControlsRight {
+.vkCarousel .vkCarouselControls .vkCarouselControlsRight {
     right: 10px;
 }

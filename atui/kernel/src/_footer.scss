@@ -5,28 +5,28 @@
 
 /* Container */
 
-.atuiKernel_Footer {
-    background-color: hsl(var(--atuiKernel_Color-A90));
+.vkFooter {
+    background-color: hsl(var(--vkColorA90));
     padding: 20px 40px;
 }
 
-.atuiKernel_Footer > * {
+.vkFooter > * {
     margin-block: 10px;
 }
 
 /* Columns and rows */
 
-.atuiKernel_FooterColumns,
-.atuiKernel_FooterRows {
+.vkFooterColumns,
+.vkFooterRows {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.atuiKernel_FooterColumns {
+.vkFooterColumns {
     justify-content: space-evenly;
 }
 
-.atuiKernel_FooterRows {
+.vkFooterRows {
     justify-content: center;
 }

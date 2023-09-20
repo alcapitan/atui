@@ -5,55 +5,55 @@
 
 /* Global */
 
-.atuiKernel_SectionDownload /* Element */ {
-    border-radius: var(--atuiKernel_Borderradius);
-    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    background-color: hsl(var(--atuiKernel_Color-N90));
+.vkDownload /* Element */ {
+    border-radius: var(--vkBorderRadius);
+    border: 1px hsl(var(--vkColorN50)) solid;
+    background-color: hsl(var(--vkColorN90));
     padding: 10px;
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 
-.atuiKernel_SectionDownload > div /* Containers */ {
+.vkDownload > div /* Containers */ {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-.atuiKernel_SectionDownload > div:first-child /* Metadata container */ {
+.vkDownload > div:first-child /* Metadata container */ {
     flex: 1;
 }
 
-.atuiKernel_SectionDownload > div:first-child :is(i, img) {
+.vkDownload > div:first-child :is(i, img) {
     width: 60px;
     height: 60px;
     margin-inline-end: 10px;
     font-size: 60px;
 }
 
-.atuiKernel_SectionDownload > div:first-child p /* File name */ {
+.vkDownload > div:first-child p /* File name */ {
     font-weight: bold;
     font-size: 1.125rem;
 }
 
-.atuiKernel_SectionDownload > div:last-child /* Button container */ {
+.vkDownload > div:last-child /* Button container */ {
     justify-content: flex-end;
 }
 
 /* Responsive */
 
 @media (width < 480px) /* Smartphones */ {
-    .atuiKernel_SectionDownload /* Element */ {
+    .vkDownload /* Element */ {
         flex-direction: column;
     }
 
-    .atuiKernel_SectionDownload > div:last-child /* Button container */ {
+    .vkDownload > div:last-child /* Button container */ {
         justify-content: space-around;
         margin-block-start: 10px;
     }
 
-    .atuiKernel_SectionDownload > div:last-child .atuiKernel_Button {
+    .vkDownload > div:last-child .vkButton {
         margin-block: 0;
     }
 }

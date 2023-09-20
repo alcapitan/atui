@@ -11,153 +11,66 @@ https://getbootstrap.com/docs/5.3/customize/color-modes/
 
 */
 
-:root {
-    --atuiKernel_Color-Accent: 14;
-    --atuiKernel_Color-Danger: 354;
-    --atuiKernel_Color-Warning: 45;
-    --atuiKernel_Color-Success: 152;
-    --atuiKernel_Color-Info: 190;
+$colorNormal: 0;
+$colorAccent: 14;
+$colorDanger: 354;
+$colorWarning: 45;
+$colorSuccess: 152;
+$colorInfo: 190;
+
+@function colorGenerator($color, $lightness, $mode) {
+    $saturation: 100%;
+
+    @if $color == $colorNormal {
+        $saturation: 0%;
+    }
+
+    @if $mode == "light" {
+        @return $color $saturation #{$lightness + "%"};
+    } @else if $mode == "dark" {
+        @return $color $saturation #{(100 - $lightness) + "%"};
+    }
 }
 
 :root,
-[data-atui-colormode="light"] {
-    color-scheme: light;
+[data-vk-theme="light"] {
+    @for $i from 0 through 10 {
+        $step: "";
 
-    --atuiKernel_Color-N00: 0 0% 0%;
-    --atuiKernel_Color-N10: 0 0% 10%;
-    --atuiKernel_Color-N20: 0 0% 20%;
-    --atuiKernel_Color-N30: 0 0% 30%;
-    --atuiKernel_Color-N40: 0 0% 40%;
-    --atuiKernel_Color-N50: 0 0% 50%;
-    --atuiKernel_Color-N60: 0 0% 60%;
-    --atuiKernel_Color-N70: 0 0% 70%;
-    --atuiKernel_Color-N80: 0 0% 80%;
-    --atuiKernel_Color-N90: 0 0% 90%;
-    --atuiKernel_Color-NFF: 0 0% 100%;
-    --atuiKernel_Color-A00: var(--atuiKernel_Color-Accent) 100% 0%;
-    --atuiKernel_Color-A10: var(--atuiKernel_Color-Accent) 100% 10%;
-    --atuiKernel_Color-A20: var(--atuiKernel_Color-Accent) 100% 20%;
-    --atuiKernel_Color-A30: var(--atuiKernel_Color-Accent) 100% 30%;
-    --atuiKernel_Color-A40: var(--atuiKernel_Color-Accent) 100% 40%;
-    --atuiKernel_Color-A50: var(--atuiKernel_Color-Accent) 100% 50%;
-    --atuiKernel_Color-A60: var(--atuiKernel_Color-Accent) 100% 60%;
-    --atuiKernel_Color-A70: var(--atuiKernel_Color-Accent) 100% 70%;
-    --atuiKernel_Color-A80: var(--atuiKernel_Color-Accent) 100% 80%;
-    --atuiKernel_Color-A90: var(--atuiKernel_Color-Accent) 100% 90%;
-    --atuiKernel_Color-AFF: var(--atuiKernel_Color-Accent) 100% 100%;
-    --atuiKernel_Color-D00: var(--atuiKernel_Color-Danger) 100% 0%;
-    --atuiKernel_Color-D10: var(--atuiKernel_Color-Danger) 100% 10%;
-    --atuiKernel_Color-D20: var(--atuiKernel_Color-Danger) 100% 20%;
-    --atuiKernel_Color-D30: var(--atuiKernel_Color-Danger) 100% 30%;
-    --atuiKernel_Color-D40: var(--atuiKernel_Color-Danger) 100% 40%;
-    --atuiKernel_Color-D50: var(--atuiKernel_Color-Danger) 100% 50%;
-    --atuiKernel_Color-D60: var(--atuiKernel_Color-Danger) 100% 60%;
-    --atuiKernel_Color-D70: var(--atuiKernel_Color-Danger) 100% 70%;
-    --atuiKernel_Color-D80: var(--atuiKernel_Color-Danger) 100% 80%;
-    --atuiKernel_Color-D90: var(--atuiKernel_Color-Danger) 100% 90%;
-    --atuiKernel_Color-DFF: var(--atuiKernel_Color-Danger) 100% 100%;
-    --atuiKernel_Color-W00: var(--atuiKernel_Color-Warning) 100% 0%;
-    --atuiKernel_Color-W10: var(--atuiKernel_Color-Warning) 100% 10%;
-    --atuiKernel_Color-W20: var(--atuiKernel_Color-Warning) 100% 20%;
-    --atuiKernel_Color-W30: var(--atuiKernel_Color-Warning) 100% 30%;
-    --atuiKernel_Color-W40: var(--atuiKernel_Color-Warning) 100% 40%;
-    --atuiKernel_Color-W50: var(--atuiKernel_Color-Warning) 100% 50%;
-    --atuiKernel_Color-W60: var(--atuiKernel_Color-Warning) 100% 60%;
-    --atuiKernel_Color-W70: var(--atuiKernel_Color-Warning) 100% 70%;
-    --atuiKernel_Color-W80: var(--atuiKernel_Color-Warning) 100% 80%;
-    --atuiKernel_Color-W90: var(--atuiKernel_Color-Warning) 100% 90%;
-    --atuiKernel_Color-WFF: var(--atuiKernel_Color-Warning) 100% 100%;
-    --atuiKernel_Color-S00: var(--atuiKernel_Color-Success) 100% 0%;
-    --atuiKernel_Color-S10: var(--atuiKernel_Color-Success) 100% 10%;
-    --atuiKernel_Color-S20: var(--atuiKernel_Color-Success) 100% 20%;
-    --atuiKernel_Color-S30: var(--atuiKernel_Color-Success) 100% 30%;
-    --atuiKernel_Color-S40: var(--atuiKernel_Color-Success) 100% 40%;
-    --atuiKernel_Color-S50: var(--atuiKernel_Color-Success) 100% 50%;
-    --atuiKernel_Color-S60: var(--atuiKernel_Color-Success) 100% 60%;
-    --atuiKernel_Color-S70: var(--atuiKernel_Color-Success) 100% 70%;
-    --atuiKernel_Color-S80: var(--atuiKernel_Color-Success) 100% 80%;
-    --atuiKernel_Color-S90: var(--atuiKernel_Color-Success) 100% 90%;
-    --atuiKernel_Color-SFF: var(--atuiKernel_Color-Success) 100% 100%;
-    --atuiKernel_Color-I00: var(--atuiKernel_Color-Info) 100% 0%;
-    --atuiKernel_Color-I10: var(--atuiKernel_Color-Info) 100% 10%;
-    --atuiKernel_Color-I20: var(--atuiKernel_Color-Info) 100% 20%;
-    --atuiKernel_Color-I30: var(--atuiKernel_Color-Info) 100% 30%;
-    --atuiKernel_Color-I40: var(--atuiKernel_Color-Info) 100% 40%;
-    --atuiKernel_Color-I50: var(--atuiKernel_Color-Info) 100% 50%;
-    --atuiKernel_Color-I60: var(--atuiKernel_Color-Info) 100% 60%;
-    --atuiKernel_Color-I70: var(--atuiKernel_Color-Info) 100% 70%;
-    --atuiKernel_Color-I80: var(--atuiKernel_Color-Info) 100% 80%;
-    --atuiKernel_Color-I90: var(--atuiKernel_Color-Info) 100% 90%;
-    --atuiKernel_Color-IFF: var(--atuiKernel_Color-Info) 100% 100%;
+        @if $i == 10 {
+            $step: "FF";
+        } @else if $i == 0 {
+            $step: "00";
+        } @else {
+            $step: $i * 10;
+        }
+
+        --vkColorN#{$step}: #{colorGenerator($colorNormal, $i * 10, "light")};
+        --vkColorA#{$step}: #{colorGenerator($colorAccent, $i * 10, "light")};
+        --vkColorD#{$step}: #{colorGenerator($colorDanger, $i * 10, "light")};
+        --vkColorW#{$step}: #{colorGenerator($colorWarning, $i * 10, "light")};
+        --vkColorS#{$step}: #{colorGenerator($colorSuccess, $i * 10, "light")};
+        --vkColorI#{$step}: #{colorGenerator($colorInfo, $i * 10, "light")};
+    }
 }
 
-[data-atui-colormode="dark"] {
-    color-scheme: dark;
+[data-vk-theme="dark"] {
+    @for $i from 0 through 10 {
+        $step: "";
 
-    --atuiKernel_Color-N00: 0 0% 100%;
-    --atuiKernel_Color-N10: 0 0% 90%;
-    --atuiKernel_Color-N20: 0 0% 80%;
-    --atuiKernel_Color-N30: 0 0% 70%;
-    --atuiKernel_Color-N40: 0 0% 60%;
-    --atuiKernel_Color-N50: 0 0% 50%;
-    --atuiKernel_Color-N60: 0 0% 40%;
-    --atuiKernel_Color-N70: 0 0% 30%;
-    --atuiKernel_Color-N80: 0 0% 20%;
-    --atuiKernel_Color-N90: 0 0% 10%;
-    --atuiKernel_Color-NFF: 0 0% 0%;
-    --atuiKernel_Color-A00: var(--atuiKernel_Color-Accent) 100% 100%;
-    --atuiKernel_Color-A10: var(--atuiKernel_Color-Accent) 100% 90%;
-    --atuiKernel_Color-A20: var(--atuiKernel_Color-Accent) 100% 80%;
-    --atuiKernel_Color-A30: var(--atuiKernel_Color-Accent) 100% 70%;
-    --atuiKernel_Color-A40: var(--atuiKernel_Color-Accent) 100% 60%;
-    --atuiKernel_Color-A50: var(--atuiKernel_Color-Accent) 100% 50%;
-    --atuiKernel_Color-A60: var(--atuiKernel_Color-Accent) 100% 40%;
-    --atuiKernel_Color-A70: var(--atuiKernel_Color-Accent) 100% 30%;
-    --atuiKernel_Color-A80: var(--atuiKernel_Color-Accent) 100% 20%;
-    --atuiKernel_Color-A90: var(--atuiKernel_Color-Accent) 100% 10%;
-    --atuiKernel_Color-AFF: var(--atuiKernel_Color-Accent) 100% 0%;
-    --atuiKernel_Color-D00: var(--atuiKernel_Color-Danger) 100% 100%;
-    --atuiKernel_Color-D10: var(--atuiKernel_Color-Danger) 100% 90%;
-    --atuiKernel_Color-D20: var(--atuiKernel_Color-Danger) 100% 80%;
-    --atuiKernel_Color-D30: var(--atuiKernel_Color-Danger) 100% 70%;
-    --atuiKernel_Color-D40: var(--atuiKernel_Color-Danger) 100% 60%;
-    --atuiKernel_Color-D50: var(--atuiKernel_Color-Danger) 100% 50%;
-    --atuiKernel_Color-D60: var(--atuiKernel_Color-Danger) 100% 40%;
-    --atuiKernel_Color-D70: var(--atuiKernel_Color-Danger) 100% 30%;
-    --atuiKernel_Color-D80: var(--atuiKernel_Color-Danger) 100% 20%;
-    --atuiKernel_Color-D90: var(--atuiKernel_Color-Danger) 100% 10%;
-    --atuiKernel_Color-DFF: var(--atuiKernel_Color-Danger) 100% 0%;
-    --atuiKernel_Color-W00: var(--atuiKernel_Color-Warning) 100% 100%;
-    --atuiKernel_Color-W10: var(--atuiKernel_Color-Warning) 100% 90%;
-    --atuiKernel_Color-W20: var(--atuiKernel_Color-Warning) 100% 80%;
-    --atuiKernel_Color-W30: var(--atuiKernel_Color-Warning) 100% 70%;
-    --atuiKernel_Color-W40: var(--atuiKernel_Color-Warning) 100% 60%;
-    --atuiKernel_Color-W50: var(--atuiKernel_Color-Warning) 100% 50%;
-    --atuiKernel_Color-W60: var(--atuiKernel_Color-Warning) 100% 40%;
-    --atuiKernel_Color-W70: var(--atuiKernel_Color-Warning) 100% 30%;
-    --atuiKernel_Color-W80: var(--atuiKernel_Color-Warning) 100% 20%;
-    --atuiKernel_Color-W90: var(--atuiKernel_Color-Warning) 100% 10%;
-    --atuiKernel_Color-WFF: var(--atuiKernel_Color-Warning) 100% 0%;
-    --atuiKernel_Color-S00: var(--atuiKernel_Color-Success) 100% 100%;
-    --atuiKernel_Color-S10: var(--atuiKernel_Color-Success) 100% 90%;
-    --atuiKernel_Color-S20: var(--atuiKernel_Color-Success) 100% 80%;
-    --atuiKernel_Color-S30: var(--atuiKernel_Color-Success) 100% 70%;
-    --atuiKernel_Color-S40: var(--atuiKernel_Color-Success) 100% 60%;
-    --atuiKernel_Color-S50: var(--atuiKernel_Color-Success) 100% 50%;
-    --atuiKernel_Color-S60: var(--atuiKernel_Color-Success) 100% 40%;
-    --atuiKernel_Color-S70: var(--atuiKernel_Color-Success) 100% 30%;
-    --atuiKernel_Color-S80: var(--atuiKernel_Color-Success) 100% 20%;
-    --atuiKernel_Color-S90: var(--atuiKernel_Color-Success) 100% 10%;
-    --atuiKernel_Color-SFF: var(--atuiKernel_Color-Success) 100% 0%;
-    --atuiKernel_Color-I00: var(--atuiKernel_Color-Info) 100% 100%;
-    --atuiKernel_Color-I10: var(--atuiKernel_Color-Info) 100% 90%;
-    --atuiKernel_Color-I20: var(--atuiKernel_Color-Info) 100% 80%;
-    --atuiKernel_Color-I30: var(--atuiKernel_Color-Info) 100% 70%;
-    --atuiKernel_Color-I40: var(--atuiKernel_Color-Info) 100% 60%;
-    --atuiKernel_Color-I50: var(--atuiKernel_Color-Info) 100% 50%;
-    --atuiKernel_Color-I60: var(--atuiKernel_Color-Info) 100% 40%;
-    --atuiKernel_Color-I70: var(--atuiKernel_Color-Info) 100% 30%;
-    --atuiKernel_Color-I80: var(--atuiKernel_Color-Info) 100% 20%;
-    --atuiKernel_Color-I90: var(--atuiKernel_Color-Info) 100% 10%;
-    --atuiKernel_Color-IFF: var(--atuiKernel_Color-Info) 100% 0%;
+        @if $i == 10 {
+            $step: "FF";
+        } @else if $i == 0 {
+            $step: "00";
+        } @else {
+            $step: $i * 10;
+        }
+
+        --vkColorN#{$step}: #{colorGenerator($colorNormal, $i * 10, "dark")};
+        --vkColorA#{$step}: #{colorGenerator($colorAccent, $i * 10, "dark")};
+        --vkColorD#{$step}: #{colorGenerator($colorDanger, $i * 10, "dark")};
+        --vkColorW#{$step}: #{colorGenerator($colorWarning, $i * 10, "dark")};
+        --vkColorS#{$step}: #{colorGenerator($colorSuccess, $i * 10, "dark")};
+        --vkColorI#{$step}: #{colorGenerator($colorInfo, $i * 10, "dark")};
+    }
 }

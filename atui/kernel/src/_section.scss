@@ -5,20 +5,20 @@
 
 /* Breadcrumb */
 
-.atuiKernel_SectionBreadcrumb > * {
+.vkBreadcrumb > * {
     display: inline-block;
 }
 
-.atuiKernel_SectionBreadcrumb > *:last-child {
-    color: hsl(var(--atuiKernel_Color-A50));
+.vkBreadcrumb > *:last-child {
+    color: hsl(var(--vkColorA50));
 }
 
-.atuiKernel_SectionBreadcrumb > *:not(:last-child) {
-    color: hsl(var(--atuiKernel_Color-N00));
+.vkBreadcrumb > *:not(:last-child) {
+    color: hsl(var(--vkColorN00));
     margin-inline-end: 10px;
 }
 
-.atuiKernel_SectionBreadcrumb > *:not(:last-child)::after {
+.vkBreadcrumb > *:not(:last-child)::after {
     content: "/";
     margin-inline-start: 10px;
     font-weight: normal;
@@ -26,47 +26,47 @@
 
 /* Group */
 
-.atuiKernel_Group {
+.vkGroup {
     display: flex;
     flex-direction: column;
 }
 
-.atuiKernel_Group > * {
+.vkGroup > * {
     padding: 15px 20px;
 }
 
-.atuiKernel_Group > *:not(:last-child) {
-    border-block-end: 2px solid hsl(var(--atuiKernel_Color-N80));
+.vkGroup > *:not(:last-child) {
+    border-block-end: 2px solid hsl(var(--vkColorN80));
 }
 
 /* List */
 
-dl.atuiKernel_List :is(dt, dd),
-:is(ul, ol).atuiKernel_List li {
+dl.vkList :is(dt, dd),
+:is(ul, ol).vkList li {
     margin-block: 5px;
 }
 
-dl.atuiKernel_List dd,
-:is(ul, ol).atuiKernel_List li {
+dl.vkList dd,
+:is(ul, ol).vkList li {
     margin-inline-start: 10px;
 }
 
-dl.atuiKernel_List dt {
+dl.vkList dt {
     font-weight: bold;
 }
 
-:is(ul, ol).atuiKernel_List {
+:is(ul, ol).vkList {
     padding-inline-start: 0;
     list-style: none;
 }
 
 /* Scrolltop */
 
-.atuiKernel_Scrolltop {
+.vkScrolltop {
     border: none;
-    border-radius: var(--atuiKernel_Borderradius);
-    color: hsl(var(--atuiKernel_Color-A20));
-    background-color: hsl(var(--atuiKernel_Color-A80));
+    border-radius: var(--vkBorderRadius);
+    color: hsl(var(--vkColorA20));
+    background-color: hsl(var(--vkColorA80));
     position: fixed;
     z-index: 15;
     inset-block-end: 30px;
@@ -74,35 +74,35 @@ dl.atuiKernel_List dt {
     font-size: 2.25rem;
     width: auto;
     height: auto;
-    box-shadow: var(--atuiKernel_ShadowLight);
+    box-shadow: var(--vkShadowLight);
     display: none;
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .atuiKernel_Scrolltop {
+    .vkScrolltop {
         inset-inline-end: 30px;
     }
 }
 
-.atuiKernel_Scrolltop.optionActive {
+.vkScrolltop.optionActive {
     display: block;
 }
 
 /* Logotype */
 
-.atuiKernel_Logotype {
+.vkLogotype {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.atuiKernel_Logotype * {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
+.vkLogotype * {
+    font-family: var(--vkFontsTitle);
+    font-weight: var(--vkFontsTitleBold);
     font-size: 1.5em;
 }
 
-.atuiKernel_Logotype :is(i, img) {
+.vkLogotype :is(i, img) {
     font-size: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;

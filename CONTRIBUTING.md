@@ -9,7 +9,7 @@ Firstly, you must report any problems or suggestions on the [Issue Tracker](http
 More generally, anything related to ATUI development should be posted on GitHub.
 
 -   Please, avoid using the Issue Tracker to post your usage issues.  
-    Prefer to use Overstackflow or any other dev help blog.  
+    Prefer to use Stack Overflow or any other dev help blog.  
     You can also look the cause of the problem in the ATUI source code and temporarily fixing it locally, then posting the problem and your solution on the [Issue Tracker](https://github.com/alcapitan/atui/issues).
 -   Be serious in your activities about ATUI ; do not troll and do not vandalize the directory. Respect others people, even beginners.
 -   Do not spam on the Issue Tracker, like "+1" or ":thumbsup:" messages.  

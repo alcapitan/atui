@@ -5,45 +5,45 @@
 
 /* Number */
 
-.atuiKernel_SectionPaginationNumber {
+.vkPaginationNumber {
     display: flex;
     justify-content: center;
 }
 
-.atuiKernel_SectionPaginationNumber > * {
+.vkPaginationNumber > * {
     padding: 10px 15px;
-    border: 1px solid hsl(var(--atuiKernel_Color-N50));
+    border: 1px solid hsl(var(--vkColorN50));
     border-inline-start: none;
-    color: hsl(var(--atuiKernel_Color-N00));
+    color: hsl(var(--vkColorN00));
 }
 
-.atuiKernel_SectionPaginationNumber > *:first-child {
-    border-start-start-radius: var(--atuiKernel_Borderradius);
-    border-end-start-radius: var(--atuiKernel_Borderradius);
-    border-inline-start: 1px solid hsl(var(--atuiKernel_Color-N50));
+.vkPaginationNumber > *:first-child {
+    border-start-start-radius: var(--vkBorderRadius);
+    border-end-start-radius: var(--vkBorderRadius);
+    border-inline-start: 1px solid hsl(var(--vkColorN50));
 }
 
-.atuiKernel_SectionPaginationNumber > *:last-child {
-    border-start-end-radius: var(--atuiKernel_Borderradius);
-    border-end-end-radius: var(--atuiKernel_Borderradius);
+.vkPaginationNumber > *:last-child {
+    border-start-end-radius: var(--vkBorderRadius);
+    border-end-end-radius: var(--vkBorderRadius);
 }
 
-.atuiKernel_SectionPaginationNumber > *:hover {
-    background-color: hsl(var(--atuiKernel_Color-A90));
+.vkPaginationNumber > *:hover {
+    background-color: hsl(var(--vkColorA90));
 }
 
-.atuiKernel_SectionPaginationNumber > *:hover,
-.atuiKernel_SectionPaginationNumber > p {
-    color: hsl(var(--atuiKernel_Color-A50));
+.vkPaginationNumber > *:hover,
+.vkPaginationNumber > p {
+    color: hsl(var(--vkColorA50));
 }
 
-.atuiKernel_SectionPaginationNumber > p:hover {
+.vkPaginationNumber > p:hover {
     background-color: transparent;
 }
 
 /* Text */
 
-.atuiKernel_SectionPaginationText {
+.vkPaginationText {
     display: flex;
     gap: 15px;
     width: 100%;
@@ -51,33 +51,33 @@
 }
 
 @media (width <= 480px) /* Smartphones */ {
-    .atuiKernel_SectionPaginationText {
+    .vkPaginationText {
         flex-direction: column;
     }
 }
 
-.atuiKernel_SectionPaginationText a {
-    border: 1px solid hsl(var(--atuiKernel_Color-N00));
-    border-radius: var(--atuiKernel_Borderradius);
+.vkPaginationText a {
+    border: 1px solid hsl(var(--vkColorN00));
+    border-radius: var(--vkBorderRadius);
     padding: 15px;
     flex: 1;
 }
 
-.atuiKernel_SectionPaginationText a:hover {
+.vkPaginationText a:hover {
     border-width: 2px;
-    border-color: hsl(var(--atuiKernel_Color-A40));
-    background-color: hsl(var(--atuiKernel_Color-A90));
+    border-color: hsl(var(--vkColorA40));
+    background-color: hsl(var(--vkColorA90));
 }
 
-.atuiKernel_SectionPaginationText a p {
-    color: hsl(var(--atuiKernel_Color-N00));
+.vkPaginationText a p {
+    color: hsl(var(--vkColorN00));
     text-align: center;
 }
 
-.atuiKernel_SectionPaginationText a:hover p {
-    color: hsl(var(--atuiKernel_Color-A40));
+.vkPaginationText a:hover p {
+    color: hsl(var(--vkColorA40));
 }
 
-.atuiKernel_SectionPaginationText a p:first-child {
+.vkPaginationText a p:first-child {
     margin-block-end: 10px;
 }

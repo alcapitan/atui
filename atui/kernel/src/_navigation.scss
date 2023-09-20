@@ -5,49 +5,49 @@
 
 /* Img Big */
 
-.atuiKernel_NavigationSectionImgbig /* Container */ {
+.vkNavigationRow /* Container */ {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.atuiKernel_NavigationSectionImgbig a /* ELement */ {
+.vkNavigationRow a /* ELement */ {
     padding: 10px 20px;
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.atuiKernel_NavigationSectionImgbig a:hover {
-    background-color: hsl(var(--atuiKernel_Color-A70));
+.vkNavigationRow a:hover {
+    background-color: hsl(var(--vkColorA70));
 }
 
-.atuiKernel_NavigationSectionImgbig a:active {
-    background-color: hsl(var(--atuiKernel_Color-A60));
+.vkNavigationRow a:active {
+    background-color: hsl(var(--vkColorA60));
 }
 
-.atuiKernel_NavigationSectionImgbig a :is(i, img) {
+.vkNavigationRow a :is(i, img) {
     width: 80px;
     height: 80px;
     font-size: 80px;
 }
 
-.atuiKernel_NavigationSectionImgbig a p /* Text */ {
+.vkNavigationRow a p /* Text */ {
     margin-block-start: 10px;
     font-size: 1.125rem;
-    color: hsl(var(--atuiKernel_Color-N00));
+    color: hsl(var(--vkColorN00));
 }
 
 /* Bar */
 
-.atuiKernel_NavigationBar {
+.vkNavigationBar {
     display: flex;
     row-gap: 5px;
 }
 
-.atuiKernel_NavigationBar a {
-    border-radius: var(--atuiKernel_Borderradius);
+.vkNavigationBar a {
+    border-radius: var(--vkBorderRadius);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -55,107 +55,107 @@
     row-gap: 5px;
 }
 
-.atuiKernel_NavigationBar p {
+.vkNavigationBar p {
     width: max-content;
 }
 
-.atuiKernel_NavigationBar hr {
-    background-color: hsl(var(--atuiKernel_Color-A60));
+.vkNavigationBar hr {
+    background-color: hsl(var(--vkColorA60));
     width: 100%;
     height: 2px;
     border: 0;
 }
 
-.atuiKernel_NavigationBar hr.optionSplit {
+.vkNavigationBar hr.optionSplit {
     flex: 1;
     background-color: transparent;
 }
 
 @media (width >= 768px) /* Computers */ {
-    .atuiKernel_NavigationBar {
+    .vkNavigationBar {
         flex-direction: column;
     }
 
-    .atuiKernel_NavigationBar a:hover {
-        background-color: hsl(var(--atuiKernel_Color-A80));
+    .vkNavigationBar a:hover {
+        background-color: hsl(var(--vkColorA80));
     }
 
-    .atuiKernel_NavigationBar :is(i, img) {
+    .vkNavigationBar :is(i, img) {
         width: 36px;
         font-size: 36px;
     }
 
-    .atuiKernel_NavigationBar p {
+    .vkNavigationBar p {
         font-size: 1.125rem;
     }
 
-    .atuiKernel_NavigationBar *.optionMobileonly {
+    .vkNavigationBar *.optionOnlyMobile {
         display: none;
     }
 
-    .atuiKernel_NavigationBar.optionDrawer p {
+    .vkNavigationBar.optionDrawer p {
         display: none;
     }
 
-    .atuiKernel_NavigationBar.optionDrawer:hover p {
+    .vkNavigationBar.optionDrawer:hover p {
         display: block;
     }
 
-    .atuiKernel_NavigationBar:not(.optionMobilestyle, .optionDrawer),
-    .atuiKernel_NavigationBar.optionDrawer:hover {
+    .vkNavigationBar:not(.styleMobile, .optionDrawer),
+    .vkNavigationBar.optionDrawer:hover {
         width: 20%;
     }
 
-    .atuiKernel_NavigationBar.optionMobilestyle a {
+    .vkNavigationBar.styleMobile a {
         flex-direction: column;
         row-gap: 5px;
         padding: 5px 10px;
     }
 
-    .atuiKernel_NavigationBar.optionMobilestyle p {
+    .vkNavigationBar.styleMobile p {
         font-size: 0.875rem;
         text-align: center;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .atuiKernel_NavigationBar {
+    .vkNavigationBar {
         padding: 5px;
         position: sticky;
         inset-block-end: 0;
         z-index: 11;
-        background-color: hsl(var(--atuiKernel_Color-N90));
-        border-block-start: 1px solid hsl(var(--atuiKernel_Color-N70));
+        background-color: hsl(var(--vkColorN90));
+        border-block-start: 1px solid hsl(var(--vkColorN70));
         border-image: none;
         display: flex;
         justify-content: space-around;
         flex-flow: row nowrap;
     }
 
-    .atuiKernel_NavigationBar a {
+    .vkNavigationBar a {
         flex-direction: column;
         justify-content: center;
     }
 
-    .atuiKernel_NavigationBar a:hover {
-        background-color: hsl(var(--atuiKernel_Color-N80));
+    .vkNavigationBar a:hover {
+        background-color: hsl(var(--vkColorN80));
     }
 
-    .atuiKernel_NavigationBar :is(i, img) {
+    .vkNavigationBar :is(i, img) {
         width: 30px;
         font-size: 30px;
     }
 
-    .atuiKernel_NavigationBar p {
+    .vkNavigationBar p {
         font-size: 0.875rem;
         text-align: center;
     }
 
-    .atuiKernel_NavigationBar hr {
+    .vkNavigationBar hr {
         display: none;
     }
 
-    .atuiKernel_NavigationBar *.optionDesktoponly {
+    .vkNavigationBar *.optionOnlyDesktop {
         display: none;
     }
 }

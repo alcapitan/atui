@@ -3,6 +3,8 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
+@use "sass:list";
+
 /* * SASS colors plans 
  * STANDARD
  * N00 A20 - Content
@@ -11,7 +13,7 @@
  * N60 A60 - Active
  * 
  * FILLED
- * N00 A00 - Content
+ * NFF AFF - Content
  * N00 A40 - Background
  * N20 A60 - Hover
  * N40 A80 - Active
@@ -24,29 +26,49 @@
  * 
  * OUTLINE
  * N00 A40 - Content
- * N00 A40 - Background
+ * transparent - Background
  * N20 A60 - Hover
  * N40 A80 - Active
  *
  */
 
+$colors: (
+    (("00", null, "80", "60"), ("20", null, "80", "60")),
+    (("FF", "00", "20", "40"), ("FF", "40", "60", "80")),
+    (("20", "80", "60", "40"), ("20", "80", "60", "40")),
+    (("00", null, "20", "40"), ("40", null, "60", "80"))
+);
+$notDisabled: ":not(:is(:disabled, .optionDisabled))";
+$colorOptions: (
+    "": "N",
+    ".optionAccent": "A",
+    ".optionDanger": "D",
+    ".optionWarning": "W",
+    ".optionSuccess": "S",
+    ".optionInfo": "I",
+);
+
+@function getColor($i, $j, $k) {
+    @return #{list.nth(list.nth(list.nth($colors, $i), $j), $k)};
+}
+
 /* ! SASS will give to separators the content's color */
 
 /* Global */
 
-.atuiKernel_Button {
+.vkButton {
     margin: 10px;
     padding: 10px 20px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
     border: none;
     background-color: transparent;
     vertical-align: middle;
 }
 
-.atuiKernel_Button :is(i, img) {
+.vkButton :is(i, img) {
     font-size: 1em;
     width: 1em;
     height: 1em;
@@ -54,414 +76,183 @@
 
 /* Disabled */
 
-.atuiKernel_Button:is(:disabled, .optionDisabled) {
+.vkButton:is(:disabled, .optionDisabled) {
     opacity: 0.5;
 }
 
 /* Pill */
 
-.atuiKernel_Button.optionPill {
+.vkButton.optionPill {
     border-radius: 21px;
 }
 
 /* Empty */
 
-.atuiKernel_Button:not(:has(*)) {
+.vkButton:not(:has(*)) {
     height: 42px;
 }
 
-.atuiKernel_Button.optionEmpty,
-.atuiKernel_Button:empty
+.vkButton.optionEmpty,
+.vkButton:empty
 /* Necessary duplication otherwise Firefox doesn't work  */ {
     height: 42px;
 }
 
-/* Standard content */
+/* Standard */
 
-.atuiKernel_Button,
-.atuiKernel_Button * {
+.vkButton,
+.vkButton * {
     font-size: 1rem;
-    color: hsl(var(--atuiKernel_Color-N00));
 }
 
-.atuiKernel_Button.optionAccent,
-.atuiKernel_Button.optionAccent * {
-    color: hsl(var(--atuiKernel_Color-A20));
-}
-
-.atuiKernel_Button.optionDanger,
-.atuiKernel_Button.optionDanger * {
-    color: hsl(var(--atuiKernel_Color-D20));
-}
-
-.atuiKernel_Button.optionWarning,
-.atuiKernel_Button.optionWarning * {
-    color: hsl(var(--atuiKernel_Color-W20));
-}
-
-.atuiKernel_Button.optionSuccess,
-.atuiKernel_Button.optionSuccess * {
-    color: hsl(var(--atuiKernel_Color-S20));
-}
-
-.atuiKernel_Button.optionInfo,
-.atuiKernel_Button.optionInfo * {
-    color: hsl(var(--atuiKernel_Color-I20));
+@each $option, $prefix in $colorOptions {
+    .vkButton#{$option},
+    .vkButton#{$option} * {
+        @if $option == "" {
+            color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 1)}));
+        } @else {
+            color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 1)}));
+        }
+    }
 }
 
 /* Standard separator */
 
-.atuiKernel_Button hr {
+.vkButton hr {
     border: 0;
-    background-color: hsl(var(--atuiKernel_Color-N00));
     width: 1px;
     height: 1em;
 }
 
-.atuiKernel_Button.optionAccent hr {
-    background-color: hsl(var(--atuiKernel_Color-A20));
+@each $option, $prefix in $colorOptions {
+    .vkButton#{$option} hr {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 1)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 1)}));
+        }
+    }
+
+    .vkButton#{$option}#{$notDisabled}:hover {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 3)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 3)}));
+        }
+    }
+
+    .vkButton#{$option}#{$notDisabled}:active {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 4)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 4)}));
+        }
+    }
 }
 
-.atuiKernel_Button.optionDanger hr {
-    background-color: hsl(var(--atuiKernel_Color-D20));
+/* Filled */
+
+@each $option, $prefix in $colorOptions {
+    .vkButton.optionFilled#{$option} {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 2)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 2, 2)}));
+        }
+    }
+
+    .vkButton.optionFilled#{$option}#{$notDisabled}:hover {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 3)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 2, 3)}));
+        }
+    }
+
+    .vkButton.optionFilled#{$option}#{$notDisabled}:active {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 4)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 2, 4)}));
+        }
+    }
 }
 
-.atuiKernel_Button.optionWarning hr {
-    background-color: hsl(var(--atuiKernel_Color-W20));
+.vkButton.optionFilled,
+.vkButton.optionFilled * {
+    color: hsl(var(--vkColorN#{getColor(2, 1, 1)})); // stylelint-disable-line custom-property-pattern
 }
 
-.atuiKernel_Button.optionSuccess hr {
-    background-color: hsl(var(--atuiKernel_Color-S20));
+.vkButton.optionFilled hr {
+    background-color: hsl(var(--vkColorN#{getColor(2, 1, 1)})); // stylelint-disable-line custom-property-pattern
 }
 
-.atuiKernel_Button.optionInfo hr {
-    background-color: hsl(var(--atuiKernel_Color-I20));
-}
-
-/* Standard hover */
-
-.atuiKernel_Button:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-N80));
-}
-
-.atuiKernel_Button.optionAccent:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-A80));
-}
-
-.atuiKernel_Button.optionDanger:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-D80));
-}
-
-.atuiKernel_Button.optionWarning:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-W80));
-}
-
-.atuiKernel_Button.optionSuccess:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-S80));
-}
-
-.atuiKernel_Button.optionInfo:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-I80));
-}
-
-/* Standard active */
-
-.atuiKernel_Button:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-N60));
-}
-
-.atuiKernel_Button.optionAccent:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-A60));
-}
-
-.atuiKernel_Button.optionDanger:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-D60));
-}
-
-.atuiKernel_Button.optionWarning:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-W60));
-}
-
-.atuiKernel_Button.optionSuccess:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-S60));
-}
-
-.atuiKernel_Button.optionInfo:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-I60));
-}
-
-/* Filled content */
-
-.atuiKernel_Button.optionFilled,
-.atuiKernel_Button.optionFilled * {
-    color: hsl(var(--atuiKernel_Color-NFF));
-}
-
-/* Filled separator */
-
-.atuiKernel_Button.optionFilled hr {
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-}
-
-/* Filled background */
-
-.atuiKernel_Button.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-N00));
-}
-
-.atuiKernel_Button.optionAccent.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-A40));
-}
-
-.atuiKernel_Button.optionDanger.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-D40));
-}
-
-.atuiKernel_Button.optionWarning.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-W40));
-}
-
-.atuiKernel_Button.optionSuccess.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-S40));
-}
-
-.atuiKernel_Button.optionInfo.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-I40));
-}
-
-/* Filled hover */
-
-.atuiKernel_Button.optionFilled:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-N20));
-}
-
-.atuiKernel_Button.optionAccent.optionFilled:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-A60));
-}
-
-.atuiKernel_Button.optionDanger.optionFilled:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-D60));
-}
-
-.atuiKernel_Button.optionWarning.optionFilled:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-W60));
-}
-
-.atuiKernel_Button.optionSuccess.optionFilled:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-S60));
-}
-
-.atuiKernel_Button.optionInfo.optionFilled:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-I60));
-}
-
-/* Filled active */
-
-.atuiKernel_Button.optionFilled:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-N40));
-}
-
-.atuiKernel_Button.optionAccent.optionFilled:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-A80));
-}
-
-.atuiKernel_Button.optionDanger.optionFilled:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-D80));
-}
-
-.atuiKernel_Button.optionWarning.optionFilled:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-W80));
-}
-
-.atuiKernel_Button.optionSuccess.optionFilled:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-S80));
-}
-
-.atuiKernel_Button.optionInfo.optionFilled:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-I80));
-}
-
-/* Tinted content */
-
-.atuiKernel_Button.optionAccent.optionTinted,
-.atuiKernel_Button.optionAccent.optionTinted * {
-    color: hsl(var(--atuiKernel_Color-A20));
-}
-
-.atuiKernel_Button.optionDanger.optionTinted,
-.atuiKernel_Button.optionDanger.optionTinted * {
-    color: hsl(var(--atuiKernel_Color-D20));
-}
-
-.atuiKernel_Button.optionWarning.optionTinted,
-.atuiKernel_Button.optionWarning.optionTinted * {
-    color: hsl(var(--atuiKernel_Color-W20));
-}
-
-.atuiKernel_Button.optionSuccess.optionTinted,
-.atuiKernel_Button.optionSuccess.optionTinted * {
-    color: hsl(var(--atuiKernel_Color-S20));
-}
-
-.atuiKernel_Button.optionInfo.optionTinted,
-.atuiKernel_Button.optionInfo.optionTinted * {
-    color: hsl(var(--atuiKernel_Color-I20));
-}
-
-/* Tinted background */
-
-.atuiKernel_Button.optionTinted {
-    background-color: hsl(var(--atuiKernel_Color-N80));
-}
-
-.atuiKernel_Button.optionAccent.optionTinted {
-    background-color: hsl(var(--atuiKernel_Color-A80));
-}
-
-.atuiKernel_Button.optionDanger.optionTinted {
-    background-color: hsl(var(--atuiKernel_Color-D80));
-}
-
-.atuiKernel_Button.optionWarning.optionTinted {
-    background-color: hsl(var(--atuiKernel_Color-W80));
-}
-
-.atuiKernel_Button.optionSuccess.optionTinted {
-    background-color: hsl(var(--atuiKernel_Color-S80));
-}
-
-.atuiKernel_Button.optionInfo.optionTinted {
-    background-color: hsl(var(--atuiKernel_Color-I80));
-}
-
-/* Tinted hover */
-
-.atuiKernel_Button.optionTinted:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-N60));
-}
-
-.atuiKernel_Button.optionAccent.optionTinted:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-A60));
-}
-
-.atuiKernel_Button.optionDanger.optionTinted:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-D60));
-}
-
-.atuiKernel_Button.optionWarning.optionTinted:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-W60));
-}
-
-.atuiKernel_Button.optionSuccess.optionTinted:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-S60));
-}
-
-.atuiKernel_Button.optionInfo.optionTinted:not(:is(:disabled, .optionDisabled)):hover {
-    background-color: hsl(var(--atuiKernel_Color-I60));
-}
-
-/* Tinted active */
-
-.atuiKernel_Button.optionTinted:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-N40));
-}
-
-.atuiKernel_Button.optionAccent.optionTinted:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-A40));
-}
-
-.atuiKernel_Button.optionDanger.optionTinted:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-D40));
-}
-
-.atuiKernel_Button.optionWarning.optionTinted:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-W40));
-}
-
-.atuiKernel_Button.optionSuccess.optionTinted:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-S40));
-}
-
-.atuiKernel_Button.optionInfo.optionTinted:not(:is(:disabled, .optionDisabled)):active {
-    background-color: hsl(var(--atuiKernel_Color-I40));
+/* Tinted */
+
+@each $option, $prefix in $colorOptions {
+    .vkButton.optionTinted#{$option},
+    .vkButton.optionTinted#{$option} * {
+        @if $option == "" {
+            color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 1)}));
+        } @else {
+            color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 1)}));
+        }
+    }
+
+    .vkButton.optionTinted#{$option} {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 2)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 2)}));
+        }
+    }
+
+    .vkButton.optionTinted#{$option}#{$notDisabled}:hover {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 3)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 3)}));
+        }
+    }
+
+    .vkButton.optionTinted#{$option}#{$notDisabled}:active {
+        @if $option == "" {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 4)}));
+        } @else {
+            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 4)}));
+        }
+    }
 }
 
 /* Outlined */
 
-.atuiKernel_Button.optionOutlined {
-    border: 2px solid hsl(var(--atuiKernel_Color-N00));
+.vkButton.optionOutlined {
+    border-width: 2px;
+    border-style: solid;
 }
 
-/* Outlined border */
+@each $option, $prefix in $colorOptions {
+    .vkButton.optionOutlined#{$option} {
+        @if $option == "" {
+            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 1)}));
+        } @else {
+            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 2, 1)}));
+        }
+    }
 
-.atuiKernel_Button.optionAccent.optionOutlined {
-    border-color: hsl(var(--atuiKernel_Color-A40));
-}
+    .vkButton.optionOutlined#{$option}#{$notDisabled}:hover {
+        @if $option == "" {
+            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 3)}));
+        } @else {
+            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 2, 3)}));
+        }
+    }
 
-.atuiKernel_Button.optionDanger.optionOutlined {
-    border-color: hsl(var(--atuiKernel_Color-D40));
-}
-
-.atuiKernel_Button.optionWarning.optionOutlined {
-    border-color: hsl(var(--atuiKernel_Color-W40));
-}
-
-.atuiKernel_Button.optionSuccess.optionOutlined {
-    border-color: hsl(var(--atuiKernel_Color-S40));
-}
-
-.atuiKernel_Button.optionInfo.optionOutlined {
-    border-color: hsl(var(--atuiKernel_Color-I40));
-}
-
-/* Outlined hover */
-
-.atuiKernel_Button.optionOutlined:not(:is(:disabled, .optionDisabled)):hover {
-    border-color: hsl(var(--atuiKernel_Color-N20));
-}
-
-.atuiKernel_Button.optionAccent.optionOutlined:not(:is(:disabled, .optionDisabled)):hover {
-    border-color: hsl(var(--atuiKernel_Color-A60));
-}
-
-.atuiKernel_Button.optionDanger.optionOutlined:not(:is(:disabled, .optionDisabled)):hover {
-    border-color: hsl(var(--atuiKernel_Color-D60));
-}
-
-.atuiKernel_Button.optionWarning.optionOutlined:not(:is(:disabled, .optionDisabled)):hover {
-    border-color: hsl(var(--atuiKernel_Color-W60));
-}
-
-.atuiKernel_Button.optionSuccess.optionOutlined:not(:is(:disabled, .optionDisabled)):hover {
-    border-color: hsl(var(--atuiKernel_Color-S60));
-}
-
-.atuiKernel_Button.optionInfo.optionOutlined:not(:is(:disabled, .optionDisabled)):hover {
-    border-color: hsl(var(--atuiKernel_Color-I60));
-}
-
-/* Outlined active */
-
-.atuiKernel_Button.optionOutlined:not(:is(:disabled, .optionDisabled)):active {
-    border-color: hsl(var(--atuiKernel_Color-N40));
-}
-
-.atuiKernel_Button.optionAccent.optionOutlined:not(:is(:disabled, .optionDisabled)):active {
-    border-color: hsl(var(--atuiKernel_Color-A80));
-}
-
-.atuiKernel_Button.optionDanger.optionOutlined:not(:is(:disabled, .optionDisabled)):active {
-    border-color: hsl(var(--atuiKernel_Color-D80));
-}
-
-.atuiKernel_Button.optionWarning.optionOutlined:not(:is(:disabled, .optionDisabled)):active {
-    border-color: hsl(var(--atuiKernel_Color-W80));
-}
-
-.atuiKernel_Button.optionSuccess.optionOutlined:not(:is(:disabled, .optionDisabled)):active {
-    border-color: hsl(var(--atuiKernel_Color-S80));
-}
-
-.atuiKernel_Button.optionInfo.optionOutlined:not(:is(:disabled, .optionDisabled)):active {
-    border-color: hsl(var(--atuiKernel_Color-I80));
+    .vkButton.optionOutlined#{$option}#{$notDisabled}:active {
+        @if $option == "" {
+            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 4)}));
+        } @else {
+            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 2, 4)}));
+        }
+    }
 }

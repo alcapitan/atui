@@ -3,26 +3,26 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_SectionTable table {
+.vkTable table {
     border-collapse: collapse;
 }
 
-.atuiKernel_SectionTable :is(td, th) {
+.vkTable :is(td, th) {
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle;
-    border-block: 1px hsl(var(--atuiKernel_Color-N50)) solid;
+    border-block: 1px hsl(var(--vkColorN50)) solid;
 }
 
-.atuiKernel_SectionTable caption {
-    color: hsl(var(--atuiKernel_Color-N50));
+.vkTable caption {
+    color: hsl(var(--vkColorN50));
     font-style: italic;
     margin: 5px;
     font-size: 0.875rem;
     caption-side: bottom;
 }
 
-.atuiKernel_SectionTable th {
+.vkTable th {
     font-weight: bold;
-    font-family: var(--atuiKernel_FontsTitle);
+    font-family: var(--vkFontsTitle);
 }

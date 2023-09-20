@@ -58,6 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove `!important` from CSS code and use `@layer` for better inheritance management with minor visual changes.
 -   Lighten Globalpanel's HTML structure.
 -   Set up a better responsive that better integrates tablets.
+-   Port CSS code to SCSS. But, use SASS feats in a limited part of the code (buttons and colors for now).
+-   Change all variables and classes structure ! Please change classes in your projects to restore ATUI's operation.
 
 ### Fixed
 

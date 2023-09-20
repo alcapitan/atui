@@ -3,14 +3,14 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_Slider {
+.vkSlider {
     display: flex;
     gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
-.atuiKernel_Slider > * /* Slide */ {
+.vkSlider > * /* Slide */ {
     flex: 0 0 max-content;
     scroll-snap-align: start;
 }

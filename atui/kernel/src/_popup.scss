@@ -5,69 +5,69 @@
 
 /* Common to context menu and tooltip */
 
-:is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+:is(.vkPopupContextmenu, .vkPopupTooltip) {
     all: unset;
     position: fixed; /* fixed position is obligatory for centered option */
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
+    background-color: hsl(var(--vkColorNFF));
+    border-radius: var(--vkBorderRadius);
+    box-shadow: var(--vkShadowMedium);
     width: max-content;
     visibility: hidden;
     display: block;
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+    :is(.vkPopupContextmenu, .vkPopupTooltip) {
         max-width: 30%;
     }
 }
 
 @media (width < 480px) /* Smartphones */ {
-    :is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) {
+    :is(.vkPopupContextmenu, .vkPopupTooltip) {
         max-width: 70%;
     }
 }
 
-:is(.atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip) * {
-    color: hsl(var(--atuiKernel_Color-N00));
+:is(.vkPopupContextmenu, .vkPopupTooltip) * {
+    color: hsl(var(--vkColorN00));
     font-size: 1rem;
 }
 
 /* Context menu */
 
-.atuiKernel_PopupContextmenu {
+.vkPopupContextmenu {
     z-index: 18;
     padding-block: 10px;
 }
 
-.atuiKernel_PopupContextmenu > * {
+.vkPopupContextmenu > * {
     padding: 5px 10px;
 }
 
 @media (pointer: coarse) /* Touch screen */ {
-    .atuiKernel_PopupContextmenu > * {
+    .vkPopupContextmenu > * {
         padding: 10px 15px;
     }
 }
 
-.atuiKernel_PopupContextmenu :is(i, img) {
+.vkPopupContextmenu :is(i, img) {
     font-size: 1em;
     width: 1em;
     height: 1em;
 }
 
-.atuiKernel_PopupContextmenu > a {
+.vkPopupContextmenu > a {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.atuiKernel_PopupContextmenu > a:hover {
-    background-color: hsl(var(--atuiKernel_Color-A60) / 80%);
+.vkPopupContextmenu > a:hover {
+    background-color: hsl(var(--vkColorA60) / 80%);
 }
 
-.atuiKernel_PopupContextmenu > hr {
-    background-color: hsl(var(--atuiKernel_Color-A60));
+.vkPopupContextmenu > hr {
+    background-color: hsl(var(--vkColorA60));
     height: 2px;
     border: 0;
     margin: 5px 10%;
@@ -76,13 +76,13 @@
 
 /* Global Panel */
 
-.atuiKernel_PopupGlobalpanel {
+.vkPopupGlobalpanel {
     align-items: normal;
     position: absolute;
     visibility: hidden;
-    background-color: hsl(var(--atuiKernel_Color-NFF));
-    border-radius: var(--atuiKernel_Borderradius);
-    box-shadow: var(--atuiKernel_ShadowMedium);
+    background-color: hsl(var(--vkColorNFF));
+    border-radius: var(--vkBorderRadius);
+    box-shadow: var(--vkShadowMedium);
     max-width: 80%;
     display: flex;
     justify-content: space-around;
@@ -92,19 +92,19 @@
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .atuiKernel_PopupGlobalpanel {
+    .vkPopupGlobalpanel {
         padding: 20px 30px;
         gap: 40px;
     }
 }
 
-.atuiKernel_PopupGlobalpanel * {
-    color: hsl(var(--atuiKernel_Color-N00));
+.vkPopupGlobalpanel * {
+    color: hsl(var(--vkColorN00));
 }
 
 /* Tooltip */
 
-.atuiKernel_PopupTooltip {
+.vkPopupTooltip {
     z-index: 17;
     padding: 10px;
 }

@@ -5,17 +5,17 @@
 
 /* Global */
 
-.atuiKernel_Header {
-    background-color: hsl(var(--atuiKernel_Color-N90));
+.vkHeader {
+    background-color: hsl(var(--vkColorN90));
     position: relative;
     width: available;
     width: stretch;
     z-index: 13;
     padding-inline: 5px;
-    border-block-end: 1px solid hsl(var(--atuiKernel_Color-N80));
+    border-block-end: 1px solid hsl(var(--vkColorN80));
 }
 
-.atuiKernel_Header :is(i, img) {
+.vkHeader :is(i, img) {
     font-size: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
@@ -24,57 +24,57 @@
 /* Display on specific devices */
 
 @media (1024px <= width) /* Computers */ {
-    .atuiKernel_Header *.optionHideOnDesktop {
+    .vkHeader *.optionHideOnDesktop {
         display: none;
     }
 }
 
 @media (480px <= width < 1024px) /* Tablets */ {
-    .atuiKernel_Header *.optionHideOnTablet {
+    .vkHeader *.optionHideOnTablet {
         display: none;
     }
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .atuiKernel_Header *.optionHideOnPhone {
+    .vkHeader *.optionHideOnPhone {
         display: none;
     }
 }
 
 /* Options */
 
-.atuiKernel_Header.optionCarousel {
+.vkHeader.optionCarousel {
     position: absolute;
-    background-color: hsl(var(--atuiKernel_Color-N90) / 80%);
-    backdrop-filter: var(--atuiKernel_Blur);
+    background-color: hsl(var(--vkColorN90) / 80%);
+    backdrop-filter: var(--vkBlur);
 }
 
-.atuiKernel_Header.optionFixed {
+.vkHeader.optionFixed {
     position: fixed;
 }
 
-.atuiKernel_Header.optionDark * {
-    color: hsl(var(--atuiKernel_Color-NFF));
+.vkHeader.optionDark * {
+    color: hsl(var(--vkColorNFF));
 }
 
-.atuiKernel_Header.optionAccent {
-    background-color: hsl(var(--atuiKernel_Color-A90));
-    border-block-end-color: hsl(var(--atuiKernel_Color-A80));
+.vkHeader.optionAccent {
+    background-color: hsl(var(--vkColorA90));
+    border-block-end-color: hsl(var(--vkColorA80));
 }
 
-.atuiKernel_Header.optionAccent .atuiKernel_HeaderSplit {
-    background-color: hsl(var(--atuiKernel_Color-A40));
+.vkHeader.optionAccent .vkHeaderSplit {
+    background-color: hsl(var(--vkColorA40));
 }
 
-.atuiKernel_Header.optionDark {
-    background-color: hsl(var(--atuiKernel_Color-N20));
+.vkHeader.optionDark {
+    background-color: hsl(var(--vkColorN20));
 }
 
-.atuiKernel_Header.optionDark .atuiKernel_HeaderSplit {
-    background-color: hsl(var(--atuiKernel_Color-N80));
+.vkHeader.optionDark .vkHeaderSplit {
+    background-color: hsl(var(--vkColorN80));
 }
 
-.atuiKernel_Header.optionTransparent {
+.vkHeader.optionTransparent {
     background-color: transparent;
     border-block-end: none;
     backdrop-filter: none;
@@ -82,7 +82,7 @@
 
 /* Levels */
 
-.atuiKernel_Header > div {
+.vkHeader > div {
     display: flex;
     align-items: center;
     column-gap: 10px;
@@ -91,40 +91,40 @@
     padding: 5px;
 }
 
-.atuiKernel_Header > div > * {
+.vkHeader > div > * {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.atuiKernel_Header > div.optionLevelLink :is(i, img) {
+.vkHeader > div.optionLevelLink :is(i, img) {
     font-size: 1.125rem;
     width: 1.125rem;
     height: 1.125rem;
 }
 
-.atuiKernel_Header > div.optionScrollable {
+.vkHeader > div.optionScrollable {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     justify-content: unset;
     flex-wrap: nowrap;
 }
 
-.atuiKernel_Header > div.optionScrollable > * {
+.vkHeader > div.optionScrollable > * {
     flex: none;
     scroll-snap-align: start;
 }
 
 /* Separators */
 
-.atuiKernel_HeaderSpace {
+.vkHeaderSpace {
     flex: 1;
     border: none;
 }
 
-.atuiKernel_HeaderSplit {
+.vkHeaderSplit {
     border: 0;
-    background-color: hsl(var(--atuiKernel_Color-N20));
+    background-color: hsl(var(--vkColorN20));
     width: 1px;
     height: 1.875rem;
 }

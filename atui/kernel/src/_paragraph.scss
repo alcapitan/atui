@@ -5,23 +5,23 @@
 
 /* Global */
 
-.atuiKernel_SectionParagraph > * {
+.vkParagraph > * {
     margin: 10px 5px;
 }
 
-.atuiKernel_SectionParagraph :is(h1, h2, h3, h4, h5, h6) {
-    color: hsl(var(--atuiKernel_Color-A40));
+.vkParagraph :is(h1, h2, h3, h4, h5, h6) {
+    color: hsl(var(--vkColorA40));
 }
 
 /* Quote */
 
-.atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote {
-    font-family: var(--atuiKernel_FontsSpecial);
+.vkParagraph .vkParagraphQuote {
+    font-family: var(--vkFontsSpecial);
     margin: 15px 20px;
 }
 
-.atuiKernel_SectionParagraph .atuiKernel_SectionParagraphQuote em {
-    color: hsl(var(--atuiKernel_Color-N50));
+.vkParagraph .vkParagraphQuote em {
+    color: hsl(var(--vkColorN50));
     font-style: italic;
     margin: 5px;
     font-size: 0.875rem;
@@ -34,46 +34,46 @@
 
 /* Don't need to do that with icons */
 
-.atuiKernel_SectionParagraph :is(h1, h2, h3, h4, h5, h6) img {
+.vkParagraph :is(h1, h2, h3, h4, h5, h6) img {
     vertical-align: middle;
 }
 
-.atuiKernel_SectionParagraph h1 img {
+.vkParagraph h1 img {
     height: 2.25rem;
 }
 
-.atuiKernel_SectionParagraph h2 img {
+.vkParagraph h2 img {
     height: 1.875rem;
 }
 
-.atuiKernel_SectionParagraph h3 img {
+.vkParagraph h3 img {
     height: 1.5rem;
 }
 
-.atuiKernel_SectionParagraph h4 img {
+.vkParagraph h4 img {
     height: 1rem;
 }
 
-.atuiKernel_SectionParagraph h5 img {
+.vkParagraph h5 img {
     height: 0.875rem;
 }
 
-.atuiKernel_SectionParagraph h6 img {
+.vkParagraph h6 img {
     height: 0.625rem;
 }
 
 /* Image */
 
-.atuiKernel_SectionImage {
+.vkParagraphImage {
     padding: 10px;
 }
 
-.atuiKernel_SectionImage img {
-    border-radius: var(--atuiKernel_Borderradius);
+.vkParagraphImage img {
+    border-radius: var(--vkBorderRadius);
 }
 
-.atuiKernel_SectionImage p {
-    color: hsl(var(--atuiKernel_Color-N50));
+.vkParagraphImage p {
+    color: hsl(var(--vkColorN50));
     font-style: italic;
     margin: 5px;
     font-size: 0.875rem;
@@ -81,14 +81,14 @@
 }
 
 @media (width >= 768px) /* Computers */ {
-    .atuiKernel_SectionImage img {
+    .vkParagraphImage img {
         margin-inline: 10%;
         width: 80%;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .atuiKernel_SectionImage img {
+    .vkParagraphImage img {
         width: 100%;
     }
 }

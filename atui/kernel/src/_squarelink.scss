@@ -3,60 +3,60 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_Squarelink {
+.vkSquarelink {
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
-    border-radius: var(--atuiKernel_Borderradius);
+    border-radius: var(--vkBorderRadius);
     height: 120px;
     min-width: 120px;
     max-width: 250px;
-    border: 1px solid hsl(var(--atuiKernel_Color-N00));
+    border: 1px solid hsl(var(--vkColorN00));
     vertical-align: middle;
 }
 
-.atuiKernel_Squarelink:is(:hover, :active) {
-    border-color: hsl(var(--atuiKernel_Color-A50));
+.vkSquarelink:is(:hover, :active) {
+    border-color: hsl(var(--vkColorA50));
 }
 
-.atuiKernel_Squarelink:hover {
-    background-color: hsl(var(--atuiKernel_Color-A80));
+.vkSquarelink:hover {
+    background-color: hsl(var(--vkColorA80));
 }
 
-.atuiKernel_Squarelink:active {
-    background-color: hsl(var(--atuiKernel_Color-A60));
+.vkSquarelink:active {
+    background-color: hsl(var(--vkColorA60));
 }
 
-.atuiKernel_Squarelink:is(:hover, :active) * {
-    color: hsl(var(--atuiKernel_Color-A50));
+.vkSquarelink:is(:hover, :active) * {
+    color: hsl(var(--vkColorA50));
 }
 
-.atuiKernel_Squarelink.optionFilled {
-    background-color: hsl(var(--atuiKernel_Color-A40));
+.vkSquarelink.optionFilled {
+    background-color: hsl(var(--vkColorA40));
     border: none;
 }
 
-.atuiKernel_Squarelink.optionFilled:hover {
-    background-color: hsl(var(--atuiKernel_Color-A60));
+.vkSquarelink.optionFilled:hover {
+    background-color: hsl(var(--vkColorA60));
 }
 
-.atuiKernel_Squarelink.optionFilled:active {
-    background-color: hsl(var(--atuiKernel_Color-A80));
+.vkSquarelink.optionFilled:active {
+    background-color: hsl(var(--vkColorA80));
 }
 
-.atuiKernel_Squarelink.optionFilled * {
-    color: hsl(var(--atuiKernel_Color-NFF));
+.vkSquarelink.optionFilled * {
+    color: hsl(var(--vkColorNFF));
 }
 
-.atuiKernel_Squarelink.optionNavigator {
+.vkSquarelink.optionNavigator {
     justify-content: flex-end;
 }
 
-.atuiKernel_Squarelink.optionNavigator > i {
+.vkSquarelink.optionNavigator > i {
     font-size: 2.25em;
 }
 
-.atuiKernel_Squarelink.optionNavigator > p {
-    font-weight: var(--atuiKernel_TitleBold);
+.vkSquarelink.optionNavigator > p {
+    font-weight: var(--vkFontsTitleBold);
 }

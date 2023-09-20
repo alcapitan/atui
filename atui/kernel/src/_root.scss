@@ -6,16 +6,16 @@
 :root {
     font-size: 16px;
 
-    --atuiKernel_FontsTitle: system-ui;
-    --atuiKernel_FontsText: system-ui;
-    --atuiKernel_FontsSpecial: cursive;
-    --atuiKernel_FontsMonospace: monospace;
-    --atuiKernel_TitleBold: bold; /* or normal */
-    --atuiKernel_Blur: blur(5px);
-    --atuiKernel_Borderradius: 10px;
-    --atuiKernel_ShadowLight: hsl(var(--atuiKernel_Color-N00) / 20%) 0px 3px 8px; /* #5 */
-    --atuiKernel_ShadowMedium: hsl(var(--atuiKernel_Color-N00) / 30%) 0px 5px 15px; /* #3 */
-    --atuiKernel_ShadowHeavy: hsl(var(--atuiKernel_Color-N00) / 80%) 0px 20px 30px -10px; /* #20 */
+    --vkFontsTitle: system-ui;
+    --vkFontsText: system-ui;
+    --vkFontsSpecial: cursive;
+    --vkFontsMonospace: monospace;
+    --vkFontsTitleBold: bold; /* or normal */
+    --vkBlur: blur(5px);
+    --vkBorderRadius: 10px;
+    --vkShadowLight: hsl(var(--vkColorN00) / 20%) 0px 3px 8px; /* #5 */
+    --vkShadowMedium: hsl(var(--vkColorN00) / 30%) 0px 5px 15px; /* #3 */
+    --vkShadowHeavy: hsl(var(--vkColorN00) / 80%) 0px 20px 30px -10px; /* #20 */
 }
 
 /* Font size list convention : 
@@ -40,12 +40,12 @@ html {
 }
 
 body {
-    background: hsl(var(--atuiKernel_Color-NFF));
+    background: hsl(var(--vkColorNFF));
 }
 
 * {
-    font-family: var(--atuiKernel_FontsText);
-    color: hsl(var(--atuiKernel_Color-N00));
+    font-family: var(--vkFontsText);
+    color: hsl(var(--vkColorN00));
     word-wrap: anywhere;
     margin: 0;
     padding: 0;
@@ -63,8 +63,8 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--atuiKernel_FontsTitle);
-    font-weight: var(--atuiKernel_TitleBold);
+    font-family: var(--vkFontsTitle);
+    font-weight: var(--vkFontsTitleBold);
     margin-block: 15px;
 }
 
@@ -93,19 +93,20 @@ h6 {
 }
 
 code {
-    font-family: var(--atuiKernel_FontsMonospace);
+    font-family: var(--vkFontsMonospace);
 }
 
+// stylelint-disable-next-line selector-class-pattern
 .ti {
-    color: hsl(var(--atuiKernel_Color-N00));
+    color: hsl(var(--vkColorN00));
     font-size: 1em;
     width: 1em;
     height: 1em;
 }
 
 ::selection {
-    background: hsl(var(--atuiKernel_Color-A80));
-    color: hsl(var(--atuiKernel_Color-A20));
+    background: hsl(var(--vkColorA80));
+    color: hsl(var(--vkColorA20));
 }
 
 /* Scrollbar */
@@ -114,20 +115,20 @@ code {
 * {
     /* Firefox syntax */
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--atuiKernel_Color-N60)) hsl(var(--atuiKernel_Color-N90)); /* colors order : thumb, container */
+    scrollbar-color: hsl(var(--vkColorN60)) hsl(var(--vkColorN90)); /* colors order : thumb, container */
 }
 
 ::-webkit-scrollbar {
-    background-color: hsl(var(--atuiKernel_Color-N90));
+    background-color: hsl(var(--vkColorN90));
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--atuiKernel_Color-N60));
+    background-color: hsl(var(--vkColorN60));
     border-width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(var(--atuiKernel_Color-N40));
+    background-color: hsl(var(--vkColorN40));
 }

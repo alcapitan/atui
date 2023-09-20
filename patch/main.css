@@ -5,23 +5,23 @@
 
 /* :root
 {
-     --atuiKernel_FontsTitle : 'Times New Roman';
-     --atuiKernel_FontsText : Arial;
-     --atuiKernel_FontsSpecial : 'Ubuntu';
+     --vkFontsTitle : 'Times New Roman';
+     --vkFontsText : Arial;
+     --vkFontsSpecial : 'Ubuntu';
 } */
 
 /* :root {
-    --atuiKernel_Color-Accent : 170;
+    --vkColorAccent : 170;
 } */
 
 .sayHello * {
-    color: hsl(var(--atuiKernel_Color-A50));
+    color: hsl(var(--vkColorA50));
     font-weight: bold;
 }
 
 .boxTest {
-    border: 1px solid hsl(var(--atuiKernel_Color-N00));
-    border-radius: var(--atuiKernel_Borderradius);
+    border: 1px solid hsl(var(--vkColorN00));
+    border-radius: var(--vkBorderRadius);
 }
 
 #listFeatures > * {

@@ -5,22 +5,22 @@
 
 /* Licensing */
 
-const atuiKernel_Version = "0.4.2";
+const vkVersion = "0.4.2";
 
-document.querySelectorAll(".atuiKernel_LicensingAtui").forEach((link) => {
+document.querySelectorAll(".vkLicensingAtui").forEach((link) => {
     link.setAttribute("href", "https://github.com/alcapitan/atui/");
     link.setAttribute("target", "_blank");
-    link.textContent = `This website is powered by ATUI v${atuiKernel_Version}.`;
+    link.textContent = `This website is powered by ATUI v${vkVersion}.`;
 });
 
-function atuiKernel_PrintAtuiLicensing() {
-    console.info(`This website is powered by ATUI v${atuiKernel_Version} (https://github.com/alcapitan/atui).`);
+function vkLicensingPrint() {
+    console.info(`This website is powered by ATUI v${vkVersion} (https://github.com/alcapitan/atui).`);
 }
-atuiKernel_PrintAtuiLicensing();
+vkLicensingPrint();
 
 /* Find associated element */
 
-function atuiKernel_ToolsFindElement(element, query, stop = null) {
+function vkClosest(element, query, stop = null) {
     /**
      * ! This function is deprecated, it will be replaced by native javascript function closest().
      */
@@ -43,7 +43,7 @@ function atuiKernel_ToolsFindElement(element, query, stop = null) {
         return [];
     } else {
         // The parent of element may have query.
-        return atuiKernel_ToolsFindElement(element.parentNode, query, stop);
+        return vkClosest(element.parentNode, query, stop);
     }
 }
 
@@ -79,17 +79,17 @@ function convertTime(time) {
 
 /* Clipboard tools */
 
-function atuiKernel_ClipboardCopy(text) {
+function vkClipboardCopy(text) {
     navigator.clipboard.writeText(text);
 }
 
-function atuiKernel_ClipboardPaste() {
+function vkClipboardPaste() {
     return navigator.clipboard.readText();
 }
 
 /* Share tool */
 
-function atuiKernel_ShareTool(title, text, url) {
+function vkShare(title, text, url) {
     navigator.share({
         title,
         text,
@@ -107,7 +107,7 @@ function atuiKernel_ShareTool(title, text, url) {
  * @param {string} [lifetime="30d"] - The data's lifetime (only for "cookie" storage) ("37m" means 37 minutes, "4h" means 4 hours and "8d" means 8 days).
  * @returns {boolean} Returns true if the data was saved successfully, otherwise false.
  */
-function atuiKernel_StorageSet(key, value, tool, lifetime = "30d") {
+function vkStorageSet(key, value, tool, lifetime = "30d") {
     function addDurationToDate(date, duration) {
         const regex = /^(\d+)([dhm])$/;
         const match = duration.match(regex);
@@ -183,7 +183,7 @@ function atuiKernel_StorageSet(key, value, tool, lifetime = "30d") {
  * @param {string} tool - The storage tool to use: "local" (means localStorage), "session" (means sessionStorage), or "cookie".
  * @returns {*} The retrieved data or null if no data is found.
  */
-function atuiKernel_StorageGet(key, tool) {
+function vkStorageGet(key, tool) {
     function convertToLogicalType(value) {
         try {
             return JSON.parse(value); // If the value is a dictionary, an array, a boolean, a number, or null
@@ -236,7 +236,7 @@ function atuiKernel_StorageGet(key, tool) {
  * @param {string} tool - The storage tool to use: "local" (means localStorage), "session" (means sessionStorage), or "cookie".
  * @returns {boolean} Returns true if the data was removed successfully, otherwise false.
  */
-function atuiKernel_StorageRemove(key, tool) {
+function vkStorageRemove(key, tool) {
     switch (tool) {
         case "local":
             try {
@@ -270,52 +270,52 @@ function atuiKernel_StorageRemove(key, tool) {
 
 /* Display mode */
 
-function atuiKernel_ColormodeIsDark() {
-    return document.documentElement.getAttribute("data-atui-colormode") === "dark";
+function vkThemeIsDark() {
+    return document.documentElement.getAttribute("data-vk-theme") === "dark";
 }
 
-function atuiKernel_ColormodeToggle() {
+function vkThemeToggle() {
     /* Toggles the status */
-    document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
-        if (atuiKernel_ColormodeIsDark()) {
-            document.documentElement.setAttribute("data-atui-colormode", "light");
+    document.querySelectorAll(".vkThemeButton").forEach((button) => {
+        if (vkThemeIsDark()) {
+            document.documentElement.setAttribute("data-vk-theme", "light");
             button.classList.replace("ti-moon", "ti-sun");
         } else {
-            document.documentElement.setAttribute("data-atui-colormode", "dark");
+            document.documentElement.setAttribute("data-vk-theme", "dark");
             button.classList.replace("ti-sun", "ti-moon");
         }
     });
-    atuiKernel_StorageSet("atuiKernel_ColormodeIsDark", atuiKernel_ColormodeIsDark(), "local");
+    vkStorageSet("vkThemeIsDark", vkThemeIsDark(), "local");
 }
 
-function atuiKernel_ColormodeStartup() {
+function vkThemeStartup() {
     const systemStatus = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (systemStatus) {
-        atuiKernel_ColormodeToggle();
+        vkThemeToggle();
         console.info("Dark mode enabled according to the system preferences.");
         return true;
     }
 
-    const localStatus = atuiKernel_StorageGet("atuiKernel_ColormodeIsDark", "local");
+    const localStatus = vkStorageGet("vkThemeIsDark", "local");
     if (localStatus) {
-        atuiKernel_ColormodeToggle();
+        vkThemeToggle();
         console.info("Dark mode enabled according to the memory.");
     }
 
     return false;
 }
-atuiKernel_ColormodeStartup();
+vkThemeStartup();
 
-document.querySelectorAll(".atuiKernel_ColormodeButton").forEach((button) => {
+document.querySelectorAll(".vkThemeButton").forEach((button) => {
     button.addEventListener("click", () => {
-        atuiKernel_ColormodeToggle();
+        vkThemeToggle();
     });
 });
 
 /* Color accent */
 
-function atuiKernel_ColoraccentMetatag() {
-    let metaTag = document.querySelector('meta[name="data-atui-colormode"]');
+function vkColorMetatag() {
+    let metaTag = document.querySelector('meta[name="data-vk-theme"]');
     if (!metaTag) {
         metaTag = document.createElement("meta");
         metaTag.setAttribute("name", "theme-color");
@@ -323,14 +323,14 @@ function atuiKernel_ColoraccentMetatag() {
     }
     metaTag.setAttribute(
         "content",
-        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--atuiKernel_Color-A40")})`,
+        `hsl(${getComputedStyle(document.documentElement).getPropertyValue("--vkColorA40")})`,
     );
 }
 
 /* Pop-up */
 
-function atuiKernel_PopupSetup(listener) {
-    const popup = atuiKernel_ToolsFindElement(listener, listener.getAttribute("data-vk-popup-assign"))[0];
+function vkPopupSetup(listener) {
+    const popup = vkClosest(listener, listener.getAttribute("data-vk-popup-assign"))[0];
 
     const options = {
         type: "default",
@@ -338,11 +338,11 @@ function atuiKernel_PopupSetup(listener) {
         outEvent: "click",
     };
 
-    if (popup.classList.contains("atuiKernel_PopupGlobalpanel")) {
+    if (popup.classList.contains("vkPopupGlobalpanel")) {
         options.type = "centered-hor";
     }
 
-    if (listener.classList.contains("optionRightclick")) {
+    if (listener.classList.contains("optionRightClick")) {
         options.triggerEvent = "contextmenu";
     }
 
@@ -353,16 +353,14 @@ function atuiKernel_PopupSetup(listener) {
         }
 
         // Hide all popups
-        document
-            .querySelectorAll(".atuiKernel_PopupContextmenu, .atuiKernel_PopupTooltip, .atuiKernel_PopupGlobalpanel")
-            .forEach((popup) => {
-                atuiKernel_PopupHide(popup);
-            });
+        document.querySelectorAll(".vkPopupContextmenu, .vkPopupTooltip, .vkPopupGlobalpanel").forEach((popup) => {
+            vkPopupHide(popup);
+        });
 
-        atuiKernel_PopupPosition(listener, popup, options);
-        atuiKernel_PopupDisplay(popup);
-        document.addEventListener("scroll", atuiKernel_PopupReload);
-        window.addEventListener("resize", atuiKernel_PopupReload);
+        vkPopupPosition(listener, popup, options);
+        vkPopupDisplay(popup);
+        document.addEventListener("scroll", vkPopupReload);
+        window.addEventListener("resize", vkPopupReload);
 
         document.addEventListener(options.outEvent, (event) => {
             detectOutsideClick(event);
@@ -371,26 +369,26 @@ function atuiKernel_PopupSetup(listener) {
 
     function detectOutsideClick(event) {
         if (!popup.contains(event.target) && !listener.contains(event.target)) {
-            atuiKernel_PopupHide(popup);
+            vkPopupHide(popup);
         }
     }
 
-    function atuiKernel_PopupReload() {
-        atuiKernel_PopupPosition(listener, popup, options);
+    function vkPopupReload() {
+        vkPopupPosition(listener, popup, options);
     }
 
-    function atuiKernel_PopupHide(popup) {
-        document.removeEventListener("scroll", atuiKernel_PopupReload);
-        window.removeEventListener("resize", atuiKernel_PopupReload);
+    function vkPopupHide(popup) {
+        document.removeEventListener("scroll", vkPopupReload);
+        window.removeEventListener("resize", vkPopupReload);
         document.removeEventListener("click", detectOutsideClick);
         popup.style.visibility = "hidden";
     }
 
-    function atuiKernel_PopupDisplay(popup) {
+    function vkPopupDisplay(popup) {
         popup.style.visibility = "visible";
     }
 
-    function atuiKernel_PopupPosition(listener, popup, options) {
+    function vkPopupPosition(listener, popup, options) {
         const gap = 5;
 
         // The temporary position at 0 is very important to get the getBoundingClientRect() position at 0px;0px and thus know the shift.
@@ -439,12 +437,12 @@ function atuiKernel_PopupSetup(listener) {
     }
 }
 document.querySelectorAll("[data-vk-popup-assign]").forEach((listener) => {
-    atuiKernel_PopupSetup(listener);
+    vkPopupSetup(listener);
 });
 
 /* Notifications */
 
-function atuiKernel_NotificationPush(options) {
+function vkNotificationPush(options) {
     function systemPush() {
         const notification = new Notification(options.title, {
             body: options.text || "",
@@ -465,7 +463,7 @@ function atuiKernel_NotificationPush(options) {
     function internPush() {
         // Create the notification element
         const notification = document.createElement("div");
-        notification.classList.add("atuiKernel_Notification");
+        notification.classList.add("vkNotification");
         if (options.type === "atui-mini") notification.classList.add("optionMini");
 
         // Create the icon element in the header
@@ -502,7 +500,7 @@ function atuiKernel_NotificationPush(options) {
         const footer = document.createElement("footer");
         options.buttons.forEach((button) => {
             const buttonElement = document.createElement("div");
-            buttonElement.classList.add("atuiKernel_Button", "optionAccent");
+            buttonElement.classList.add("vkButton", "optionAccent");
             if (button.option && button.option !== "") buttonElement.classList.add(`option${button.option}`);
             const buttonTextElement = document.createElement("p");
             buttonTextElement.textContent = button.text;
@@ -516,10 +514,10 @@ function atuiKernel_NotificationPush(options) {
         notification.appendChild(footer);
 
         // Display the notification
-        let container = document.querySelector(".atuiKernel_NotificationContainer");
+        let container = document.querySelector(".vkNotificationContainer");
         if (!container) {
             container = document.createElement("div");
-            container.classList.add("atuiKernel_NotificationContainer");
+            container.classList.add("vkNotificationContainer");
             document.body.appendChild(container);
         }
         container.insertBefore(notification, container.firstChild);
@@ -578,7 +576,7 @@ function atuiKernel_NotificationPush(options) {
             internPush();
             if (!("sound" in options)) {
                 // Default sound
-                const sound = new Audio(atuiKernel_NotificationSound);
+                const sound = new Audio(vkNotificationSound);
                 sound.play();
             } else if (options.sound) {
                 // Custom specific sound
@@ -590,21 +588,17 @@ function atuiKernel_NotificationPush(options) {
         }
     });
 }
-let atuiKernel_NotificationSound = "atui/kernel/assets/notification.mp3"; /* eslint-disable-line prefer-const */
+let vkNotificationSound = "atui/kernel/assets/notification.mp3"; /* eslint-disable-line prefer-const */
 
 /* Carousel */
 
 // Height superposition between header and carousel
 
-const atuiKernel_HeaderFixCarousel = () => {
-    document.querySelectorAll(".atuiKernel_Header.optionCarousel").forEach((header) => {
-        const carousel = atuiKernel_ToolsFindElement(header, ".atuiKernel_Carousel", ".atuiKernel_BodyContent")[0];
-        const carouselContent = atuiKernel_ToolsFindElement(
-            carousel,
-            ".atuiKernel_CarouselSlides > div > div",
-            ".atuiKernel_Carousel",
-        );
-        const carouselControls = carousel.querySelector(".atuiKernel_CarouselControls");
+const vkHeaderFixCarousel = () => {
+    document.querySelectorAll(".vkHeader.optionCarousel").forEach((header) => {
+        const carousel = vkClosest(header, ".vkCarousel", ".vkStructureBodyContent")[0];
+        const carouselContent = vkClosest(carousel, ".vkCarouselSlides > div > div", ".vkCarousel");
+        const carouselControls = carousel.querySelector(".vkCarouselControls");
 
         carousel.style.minHeight = header.offsetHeight * 2 + "px";
         carouselContent.forEach((element) => {
@@ -613,16 +607,16 @@ const atuiKernel_HeaderFixCarousel = () => {
         carouselControls.style.marginBlockStart = header.offsetHeight + "px";
     });
 };
-atuiKernel_HeaderFixCarousel();
-window.addEventListener("resize", atuiKernel_HeaderFixCarousel);
+vkHeaderFixCarousel();
+window.addEventListener("resize", vkHeaderFixCarousel);
 
 // Controls
 
-document.querySelectorAll(".atuiKernel_Carousel").forEach((carousel) => {
-    const slidesContainer = carousel.querySelector(".atuiKernel_CarouselSlides");
-    const controls = carousel.querySelector(".atuiKernel_CarouselControls");
-    const controlsLeft = controls?.querySelector(".atuiKernel_CarouselControlsLeft");
-    const controlsRight = controls?.querySelector(".atuiKernel_CarouselControlsRight");
+document.querySelectorAll(".vkCarousel").forEach((carousel) => {
+    const slidesContainer = carousel.querySelector(".vkCarouselSlides");
+    const controls = carousel.querySelector(".vkCarouselControls");
+    const controlsLeft = controls?.querySelector(".vkCarouselControlsLeft");
+    const controlsRight = controls?.querySelector(".vkCarouselControlsRight");
     controlsLeft?.addEventListener("click", () => {
         slidesContainer.scrollBy({
             left: -slidesContainer.offsetWidth,
@@ -639,7 +633,7 @@ document.querySelectorAll(".atuiKernel_Carousel").forEach((carousel) => {
 
 /* Modal */
 
-function atuiKernel_ModalShow(modalId) {
+function vkModalShow(modalId) {
     const modalBackground = document.getElementById(modalId);
     modalBackground.classList.add("optionShow");
 
@@ -654,10 +648,10 @@ function atuiKernel_ModalShow(modalId) {
 
 /* Tabs */
 
-document.querySelectorAll(".atuiKernel_SectionTabs").forEach((tabsContainer) => {
-    const tabsHeader = tabsContainer.querySelector(".atuiKernel_SectionTabsHeader");
+document.querySelectorAll(".vkTabs").forEach((tabsContainer) => {
+    const tabsHeader = tabsContainer.querySelector(".vkTabsHeader");
     const tabsHeaderLinks = tabsHeader.querySelectorAll("a");
-    const tabsContent = tabsContainer.querySelector(".atuiKernel_SectionTabsContent");
+    const tabsContent = tabsContainer.querySelector(".vkTabsContent");
     const tabsContentTexts = tabsContent.querySelectorAll("div");
 
     tabsHeaderLinks.forEach((link) => {
@@ -677,7 +671,7 @@ document.querySelectorAll(".atuiKernel_SectionTabs").forEach((tabsContainer) => 
 
 /* Accordion */
 
-document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) => {
+document.querySelectorAll(".vkAccordion").forEach((accordion) => {
     const header = accordion.querySelector("header");
     const button = header.querySelector("i");
     const content = accordion.querySelector("section");
@@ -696,7 +690,7 @@ document.querySelectorAll(".atuiKernel_SectionAccordion").forEach((accordion) =>
 
 /* Scrolltop */
 
-document.querySelectorAll(".atuiKernel_Scrolltop").forEach((button) => {
+document.querySelectorAll(".vkScrolltop").forEach((button) => {
     button.addEventListener("click", () => {
         window.scrollTo({
             top: 0,

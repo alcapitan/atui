@@ -3,66 +3,66 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-/* Audioplayer */
+/* Audio player */
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover {
+.mpAudio .mpCover {
     width: 150px;
     height: 150px;
-    background-color: hsl(var(--atuiKernel_Color-N70));
-    border-radius: var(--atuiKernel_Borderradius);
+    background-color: hsl(var(--vkColorN70));
+    border-radius: var(--vkBorderRadius);
     overflow: hidden;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Cover img {
+.mpAudio .mpCover img {
     height: 100%;
 }
 
-.atuiMediasplayer_Audioplayer :is(.atuiMediasplayer_Panel, .atuiMediasplayer_Dashboard) {
+.mpAudio :is(.mpPanel, .mpDashboard) {
     display: flex;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel {
+.mpAudio .mpPanel {
     gap: 15px;
 }
 
 @media (width >= 768px) /* Computers */ {
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
+    .mpAudio .mpDashboard {
         margin-block: 10px;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .atuiMediasplayer_Audioplayer .atuiMediasplayer_Panel {
+    .mpAudio .mpPanel {
         flex-direction: column;
         align-items: center;
     }
 
-    .atuiMediasplayer_Audioplayer :is(.atuiMediasplayer_Cover, .atuiMediasplayer_Information) {
+    .mpAudio :is(.mpCover, .mpInfo) {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Dashboard {
+.mpAudio .mpDashboard {
     flex: 1;
     row-gap: 10px;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Information > p {
+.mpAudio .mpInfo > p {
     font-size: 1.125rem;
     font-weight: bold;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_InformationTitle {
-    color: hsl(var(--atuiKernel_Color-A40));
+.mpAudio .mpInfoTitle {
+    color: hsl(var(--vkColorA40));
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Close {
+.mpAudio .mpClose {
     display: none;
 }
 
-.atuiMediasplayer_Audioplayer .atuiMediasplayer_Progressbar {
-    border-radius: 0 0 var(--atuiKernel_Borderradius) var(--atuiKernel_Borderradius);
+.mpAudio .mpProgress {
+    border-radius: 0 0 var(--vkBorderRadius) var(--vkBorderRadius);
     overflow: hidden;
 }

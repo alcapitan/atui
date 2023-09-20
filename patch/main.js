@@ -6,12 +6,12 @@
 /* SearchService */
 
 setupInstance(
-    document.querySelector("#searchCountry .atuiSearchservice_Bar input"),
+    document.querySelector("#searchCountry .ssBar input"),
     ["France", "Morocco", "Tunisia", "Brazil", "Spain", "India"],
     document.getElementById("listCountry"),
 );
 setupInstance(
-    document.querySelector("#searchName .atuiSearchservice_Bar input"),
+    document.querySelector("#searchName .ssBar input"),
     ["Sarah", "Aïsha", "Mariam", "Louise", "Élise", "Éléonore"],
     document.getElementById("listName"),
 );
@@ -19,7 +19,7 @@ setupInstance(
 function setupInstance(instance, values, listValues) {
     instance.addEventListener("input", () => {
         const inputValue = instance.value;
-        const matchingValues = atuiSearchservice_Filter(inputValue, values);
+        const matchingValues = ssFilter(inputValue, values);
 
         while (listValues.firstChild) {
             listValues.removeChild(listValues.firstChild);
@@ -48,7 +48,7 @@ const testActionBtnNotif = () => {
 };
 
 document.getElementById("pushNotification").addEventListener("click", function () {
-    atuiKernel_NotificationPush({
+    vkNotificationPush({
         type: "atui",
         icon: "flask",
         image: "patch/icons/logo.png",
@@ -69,7 +69,7 @@ document.getElementById("pushNotification").addEventListener("click", function (
 });
 
 document.getElementById("pushNotificationMini").addEventListener("click", function () {
-    atuiKernel_NotificationPush({
+    vkNotificationPush({
         type: "atui-mini",
         text: "This is a mini notification !",
         buttons: [
@@ -93,22 +93,22 @@ document.getElementById("pushNotificationMini").addEventListener("click", functi
 
 document.getElementById("clipboardButton").addEventListener("click", async function () {
     const text = document.getElementById("clipboardInput").value;
-    atuiKernel_ClipboardCopy(text);
-    const clipboardText = await atuiKernel_ClipboardPaste();
+    vkClipboardCopy(text);
+    const clipboardText = await vkClipboardPaste();
     document.getElementById("clipboard-paste").innerText = clipboardText;
 });
 
 /* MediasPlayer */
 
 document.getElementById("shareButton").addEventListener("click", function () {
-    atuiKernel_ShareTool("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");
+    vkShare("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");
 });
 
 document.getElementById("playAudio1").addEventListener("click", () => {
-    atuiMediasplayer_Run("audioplayer1");
+    mpRun("audioplayer1");
 });
 document.getElementById("playAudio2").addEventListener("click", () => {
-    atuiMediasplayer_Assign({
+    mpAssign({
         player: "audioplayer2",
         media: "patch/musics/test-audioplayer.mp3",
         cover: "patch/musics/test-audioplayer.png",
@@ -118,18 +118,18 @@ document.getElementById("playAudio2").addEventListener("click", () => {
         releaseDate: "2022",
         origin: "http://ncs.io/SinkingShip",
     });
-    atuiMediasplayer_Run("audioplayer2");
+    mpRun("audioplayer2");
 });
 
 document.getElementById("playVideo").addEventListener("click", () => {
-    atuiMediasplayer_Assign({
+    mpAssign({
         player: "videoplayer",
         media: "patch/videos/test-videoplayer.mp4",
         origin: "https://pixabay.com/users/justyøu-587443/",
     });
-    atuiMediasplayer_Run("videoplayer");
+    mpRun("videoplayer");
 });
 
 document.getElementById("showModal").addEventListener("click", () => {
-    atuiKernel_ModalShow("modalPreview");
+    vkModalShow("modalPreview");
 });

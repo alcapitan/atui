@@ -3,63 +3,63 @@
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-.atuiKernel_SectionBox {
-    border-radius: var(--atuiKernel_Borderradius);
+.vkBox {
+    border-radius: var(--vkBorderRadius);
     padding: 15px;
-    border: 1px hsl(var(--atuiKernel_Color-N50)) solid;
-    background-color: hsl(var(--atuiKernel_Color-N90));
+    border: 1px hsl(var(--vkColorN50)) solid;
+    background-color: hsl(var(--vkColorN90));
     display: flex;
     flex-flow: row nowrap;
     gap: 15px;
 }
 
-.atuiKernel_SectionBox > :is(i, img) {
+.vkBox > :is(i, img) {
     width: 30px;
     height: 30px;
     font-size: 30px;
 }
 
-.atuiKernel_SectionBox.optionAccent {
-    border-color: hsl(var(--atuiKernel_Color-A50));
-    background-color: hsl(var(--atuiKernel_Color-A90));
+.vkBox.optionAccent {
+    border-color: hsl(var(--vkColorA50));
+    background-color: hsl(var(--vkColorA90));
 }
 
-.atuiKernel_SectionBox.optionAccent * {
-    color: hsl(var(--atuiKernel_Color-A20));
+.vkBox.optionAccent * {
+    color: hsl(var(--vkColorA20));
 }
 
-.atuiKernel_SectionBox.optionAlert {
-    border-color: hsl(var(--atuiKernel_Color-D50));
-    background-color: hsl(var(--atuiKernel_Color-D90));
+.vkBox.optionAlert {
+    border-color: hsl(var(--vkColorD50));
+    background-color: hsl(var(--vkColorD90));
 }
 
-.atuiKernel_SectionBox.optionAlert * {
-    color: hsl(var(--atuiKernel_Color-D20));
+.vkBox.optionAlert * {
+    color: hsl(var(--vkColorD20));
 }
 
-.atuiKernel_SectionBox.optionWarning {
-    border-color: hsl(var(--atuiKernel_Color-W50));
-    background-color: hsl(var(--atuiKernel_Color-W90));
+.vkBox.optionWarning {
+    border-color: hsl(var(--vkColorW50));
+    background-color: hsl(var(--vkColorW90));
 }
 
-.atuiKernel_SectionBox.optionWarning * {
-    color: hsl(var(--atuiKernel_Color-W20));
+.vkBox.optionWarning * {
+    color: hsl(var(--vkColorW20));
 }
 
-.atuiKernel_SectionBox.optionSuccess {
-    border-color: hsl(var(--atuiKernel_Color-S50));
-    background-color: hsl(var(--atuiKernel_Color-S90));
+.vkBox.optionSuccess {
+    border-color: hsl(var(--vkColorS50));
+    background-color: hsl(var(--vkColorS90));
 }
 
-.atuiKernel_SectionBox.optionSuccess * {
-    color: hsl(var(--atuiKernel_Color-S20));
+.vkBox.optionSuccess * {
+    color: hsl(var(--vkColorS20));
 }
 
-.atuiKernel_SectionBox.optionInfo {
-    border-color: hsl(var(--atuiKernel_Color-I50));
-    background-color: hsl(var(--atuiKernel_Color-I90));
+.vkBox.optionInfo {
+    border-color: hsl(var(--vkColorI50));
+    background-color: hsl(var(--vkColorI90));
 }
 
-.atuiKernel_SectionBox.optionInfo * {
-    color: hsl(var(--atuiKernel_Color-I20));
+.vkBox.optionInfo * {
+    color: hsl(var(--vkColorI20));
 }
