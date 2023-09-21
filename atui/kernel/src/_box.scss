@@ -1,13 +1,17 @@
-/*!
- * ATUI v0.4.2 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
- */
+$colorOptions: (
+    "": "N",
+    ".optionAccent": "A",
+    ".optionDanger": "D",
+    ".optionWarning": "W",
+    ".optionSuccess": "S",
+    ".optionInfo": "I",
+);
 
 .vkBox {
     border-radius: var(--vkBorderRadius);
     padding: 15px;
-    border: 1px hsl(var(--vkColorN50)) solid;
-    background-color: hsl(var(--vkColorN90));
+    border-style: solid;
+    border-width: 1px;
     display: flex;
     flex-flow: row nowrap;
     gap: 15px;
@@ -19,47 +23,13 @@
     font-size: 30px;
 }
 
-.vkBox.optionAccent {
-    border-color: hsl(var(--vkColorA50));
-    background-color: hsl(var(--vkColorA90));
-}
+@each $option, $prefix in $colorOptions {
+    .vkBox#{$option} {
+        border-color: hsl(var(--vkColor#{$prefix}50));
+        background-color: hsl(var(--vkColor#{$prefix}90));
+    }
 
-.vkBox.optionAccent * {
-    color: hsl(var(--vkColorA20));
-}
-
-.vkBox.optionAlert {
-    border-color: hsl(var(--vkColorD50));
-    background-color: hsl(var(--vkColorD90));
-}
-
-.vkBox.optionAlert * {
-    color: hsl(var(--vkColorD20));
-}
-
-.vkBox.optionWarning {
-    border-color: hsl(var(--vkColorW50));
-    background-color: hsl(var(--vkColorW90));
-}
-
-.vkBox.optionWarning * {
-    color: hsl(var(--vkColorW20));
-}
-
-.vkBox.optionSuccess {
-    border-color: hsl(var(--vkColorS50));
-    background-color: hsl(var(--vkColorS90));
-}
-
-.vkBox.optionSuccess * {
-    color: hsl(var(--vkColorS20));
-}
-
-.vkBox.optionInfo {
-    border-color: hsl(var(--vkColorI50));
-    background-color: hsl(var(--vkColorI90));
-}
-
-.vkBox.optionInfo * {
-    color: hsl(var(--vkColorI20));
+    .vkBox#{$option} * {
+        color: hsl(var(--vkColor#{$prefix}20));
+    }
 }

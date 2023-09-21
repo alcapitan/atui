@@ -58,8 +58,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove `!important` from CSS code and use `@layer` for better inheritance management with minor visual changes.
 -   Lighten Globalpanel's HTML structure.
 -   Set up a better responsive that better integrates tablets.
--   Port CSS code to SCSS. But, use SASS feats in a limited part of the code (buttons and colors for now).
+-   Port CSS code to SCSS. But, use SASS feats in a limited part of the code (boxes, buttons and colors for now).
 -   Change all variables and classes structure ! Please change classes in your projects to restore ATUI's operation.
+-   Change `vkStructureBody` and `vkStructureSection` from id to class.
+-   Replace `.vkBox.optionAlert` to `.vkBox.optionDanger`.
 
 ### Fixed
 
@@ -72,6 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove all Contacts components. These components have been replaced with common buttons and inputs.
 -   Remove all form and fieldset containers' CSS properties for free use.
 -   Remove useless and orphan pictures in `patch/illustrations` for lighting package size.
+-   Removing licensing header in source code files.
 
 ## [0.4.2] - 2023-07-30
 

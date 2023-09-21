@@ -1,8 +1,3 @@
-/*!
- * ATUI v0.4.2 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
- */
-
 /* Close Audioplayer */
 
 document.querySelectorAll(".mpClose").forEach(function (button) {
@@ -18,7 +13,7 @@ document.querySelectorAll(".mpClose").forEach(function (button) {
 
 function mpLinkBroken(player, mediaLink) {
     const alertBox = document.createElement("div");
-    alertBox.classList.add("vkBox", "optionAlert");
+    alertBox.classList.add("vkBox", "optionDanger");
     const alertIcon = document.createElement("i");
     alertIcon.classList.add("ti", "ti-circle-x");
     const alertText = document.createElement("p");
@@ -77,7 +72,7 @@ function mpRun(player) {
     const button = player.querySelector(".mpRun");
     if (media.paused === true) {
         mpStop();
-        player.querySelectorAll(".vkBox.optionAlert").forEach((alertBox) => {
+        player.querySelectorAll(".vkBox.optionDanger").forEach((alertBox) => {
             alertBox.remove();
         });
         const mediaLink = media.getAttribute("src");
@@ -135,7 +130,7 @@ function mpStop() {
 
 document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
     const media = player.querySelector("audio, video");
-    const timer = player.querySelector(".atuiMediasplayer_Timer");
+    const timer = player.querySelector(".mpTimer");
     const progressBar = player.querySelector(".mpProgressInside");
     media.addEventListener("timeupdate", () => {
         let listened = media.currentTime;
@@ -152,8 +147,8 @@ document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
 /* Go forward or backward */
 
 document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
-    const backward = player.querySelector(".atuiMediasplayer_Backward");
-    const forward = player.querySelector(".atuiMediasplayer_Forward");
+    const backward = player.querySelector(".mpBackward");
+    const forward = player.querySelector(".mpForward");
     const media = player.querySelector("audio, video");
     backward.addEventListener("click", () => {
         media.currentTime -= 10;
@@ -176,7 +171,7 @@ document.querySelectorAll(".mpProgress").forEach((progressBar) => {
 
 /* Loop */
 
-document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
+document.querySelectorAll(".mpLoop").forEach(function (button) {
     button.addEventListener("click", function () {
         const media = vkClosest(this, "audio, video", ".mpAudio, .mpVideo")[0];
         if (media.loop === false) {
@@ -193,7 +188,7 @@ document.querySelectorAll(".atuiMediasplayer_Loop").forEach(function (button) {
 
 /* Sound */
 
-document.querySelectorAll(".atuiMediasplayer_Sound").forEach(function (button) {
+document.querySelectorAll(".mpSound").forEach(function (button) {
     button.addEventListener("click", function () {
         const media = vkClosest(this, "audio, video", ".mpAudio, .mpVideo")[0];
         if (media.muted === false) {
@@ -210,7 +205,7 @@ document.querySelectorAll(".atuiMediasplayer_Sound").forEach(function (button) {
 
 /* Fullscreen */
 
-document.querySelectorAll(".atuiMediasplayer_Fullscreen").forEach((button) => {
+document.querySelectorAll(".mpFullscreen").forEach((button) => {
     button.addEventListener("click", () => {
         const media = vkClosest(button, "video", ".mpVideo")[0];
         if (media.requestFullscreen) {
@@ -225,7 +220,7 @@ document.querySelectorAll(".atuiMediasplayer_Fullscreen").forEach((button) => {
 
 /* Picture in picture */
 
-document.querySelectorAll(".atuiMediasplayer_Pip").forEach((button) => {
+document.querySelectorAll(".mpPip").forEach((button) => {
     button.addEventListener("click", () => {
         const media = vkClosest(button, "video", ".mpVideo")[0];
         if (media !== document.pictureInPictureElement) {

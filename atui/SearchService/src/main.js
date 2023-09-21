@@ -1,8 +1,3 @@
-/*!
- * ATUI v0.4.2 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
- */
-
 document.querySelectorAll(".ssPanel").forEach(function (panel) {
     panel.addEventListener("click", function () {
         panel.classList.add("optionActive");

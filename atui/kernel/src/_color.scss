@@ -1,8 +1,3 @@
-/*!
- * ATUI v0.4.2 (https://github.com/alcapitan/atui)
- * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
- */
-
 /*
 
 There are some inspirations coming from Bootstrap by Twitter.
@@ -52,6 +47,8 @@ $colorInfo: 190;
         --vkColorS#{$step}: #{colorGenerator($colorSuccess, $i * 10, "light")};
         --vkColorI#{$step}: #{colorGenerator($colorInfo, $i * 10, "light")};
     }
+
+    color-scheme: light;
 }
 
 [data-vk-theme="dark"] {
@@ -73,4 +70,6 @@ $colorInfo: 190;
         --vkColorS#{$step}: #{colorGenerator($colorSuccess, $i * 10, "dark")};
         --vkColorI#{$step}: #{colorGenerator($colorInfo, $i * 10, "dark")};
     }
+
+    color-scheme: dark;
 }
