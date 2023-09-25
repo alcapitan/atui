@@ -26,13 +26,13 @@ npm install @alcapitan/atui
 Put this line in the HTML tag `<head>` :
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/@alcapitan/atui@0.4.2/atui/kernel/dist/dist.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.css" />
 ```
 
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://unpkg.com/@alcapitan/atui@0.4.2/atui/kernel/dist/dist.js"></script>
+<script src="https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.js"></script>
 ```
 
 Then, change the links above for reach extensions files.

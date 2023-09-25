@@ -1,6 +1,6 @@
-/* Option style floating */
+/* Style floating */
 
-.mpAudio.optionFloating {
+.mpAudio.styleFloating {
     position: fixed;
     z-index: 12;
     inset: auto 10% 20px;
@@ -12,6 +12,6 @@
     display: none;
 }
 
-.mpAudio.optionFloating .mpClose {
+.mpAudio.styleFloating .mpClose {
     display: block;
 }

@@ -1,12 +1,12 @@
-/* Option style overlay */
+/* Style overlay */
 
-.mpVideo.optionOverlay .mpDashboard {
+.mpVideo.styleOverlay .mpDashboard {
     background-color: hsl(var(--vkColorN90) / 80%);
     opacity: 0.2;
     position: absolute;
     inset-block-end: 0;
 }
 
-.mpVideo.optionOverlay .mpDashboard:hover {
+.mpVideo.styleOverlay .mpDashboard:hover {
     opacity: 1;
 }

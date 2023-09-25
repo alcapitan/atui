@@ -13,7 +13,7 @@ document.querySelectorAll(".mpClose").forEach(function (button) {
 
 function mpLinkBroken(player, mediaLink) {
     const alertBox = document.createElement("div");
-    alertBox.classList.add("vkBox", "optionDanger");
+    alertBox.classList.add("vkBox", "styleDanger");
     const alertIcon = document.createElement("i");
     alertIcon.classList.add("ti", "ti-circle-x");
     const alertText = document.createElement("p");
@@ -72,7 +72,7 @@ function mpRun(player) {
     const button = player.querySelector(".mpRun");
     if (media.paused === true) {
         mpStop();
-        player.querySelectorAll(".vkBox.optionDanger").forEach((alertBox) => {
+        player.querySelectorAll(".vkBox.styleDanger").forEach((alertBox) => {
             alertBox.remove();
         });
         const mediaLink = media.getAttribute("src");
@@ -108,7 +108,7 @@ document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
     const media = player.querySelector("audio, video");
     media.addEventListener("ended", () => {
         button.classList.replace("ti-player-pause", "ti-player-play");
-        if (player.classList.contains("optionFloating")) {
+        if (player.classList.contains("styleFloating")) {
             player.style.display = "none";
         }
     });

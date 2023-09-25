@@ -1,11 +1,11 @@
 document.querySelectorAll(".ssPanel").forEach(function (panel) {
     panel.addEventListener("click", function () {
-        panel.classList.add("optionActive");
+        panel.classList.add("statusActive");
     });
 
     document.addEventListener("click", (event) => {
         if (!panel.contains(event.target)) {
-            panel.classList.remove("optionActive");
+            panel.classList.remove("statusActive");
         }
     });
 });

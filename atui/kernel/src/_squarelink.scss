@@ -27,31 +27,31 @@
     color: hsl(var(--vkColorA50));
 }
 
-.vkSquarelink.optionFilled {
+.vkSquarelink.styleFilled {
     background-color: hsl(var(--vkColorA40));
     border: none;
 }
 
-.vkSquarelink.optionFilled:hover {
+.vkSquarelink.styleFilled:hover {
     background-color: hsl(var(--vkColorA60));
 }
 
-.vkSquarelink.optionFilled:active {
+.vkSquarelink.styleFilled:active {
     background-color: hsl(var(--vkColorA80));
 }
 
-.vkSquarelink.optionFilled * {
+.vkSquarelink.styleFilled * {
     color: hsl(var(--vkColorNFF));
 }
 
-.vkSquarelink.optionNavigator {
+.vkSquarelink.styleNavigator {
     justify-content: flex-end;
 }
 
-.vkSquarelink.optionNavigator > i {
+.vkSquarelink.styleNavigator > i {
     font-size: 2.25em;
 }
 
-.vkSquarelink.optionNavigator > p {
+.vkSquarelink.styleNavigator > p {
     font-weight: var(--vkFontsTitleBold);
 }

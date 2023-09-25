@@ -51,7 +51,7 @@ document.getElementById("pushNotification").addEventListener("click", function (
         text: "hey yo, you read an autogen notif",
         buttons: [
             {
-                option: "Filled",
+                style: "Filled",
                 text: "click here",
                 action: () => {
                     testActionBtnNotif();

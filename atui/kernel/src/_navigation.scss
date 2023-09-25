@@ -61,7 +61,7 @@
     border: 0;
 }
 
-.vkNavigationBar hr.optionSplit {
+.vkNavigationBar hr.vkNavigationSplit {
     flex: 1;
     background-color: transparent;
 }
@@ -88,16 +88,16 @@
         display: none;
     }
 
-    .vkNavigationBar.optionDrawer p {
+    .vkNavigationBar.styleDrawer p {
         display: none;
     }
 
-    .vkNavigationBar.optionDrawer:hover p {
+    .vkNavigationBar.styleDrawer:hover p {
         display: block;
     }
 
-    .vkNavigationBar:not(.styleMobile, .optionDrawer),
-    .vkNavigationBar.optionDrawer:hover {
+    .vkNavigationBar:not(.styleMobile, .styleDrawer),
+    .vkNavigationBar.styleDrawer:hover {
         width: 20%;
     }
 

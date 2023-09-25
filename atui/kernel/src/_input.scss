@@ -82,18 +82,18 @@ fieldset legend {
 
 /* TODO: set :has(input) instead of form when Firefox will support :has() */
 
-form div.optionGroup {
+form div.styleGroup {
     background-color: hsl(var(--vkColorNFF));
     border: 1px solid hsl(var(--vkColorN70));
     display: inline-flex;
     border-radius: var(--vkBorderRadius);
 }
 
-form div.optionGroup.optionPill {
+form div.styleGroup.stylePill {
     border-radius: 25px;
 }
 
-form div.optionGroup * {
+form div.styleGroup * {
     border: none;
     background-color: transparent;
     outline: none;

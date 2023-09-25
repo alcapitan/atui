@@ -33,16 +33,16 @@
     font-size: 1.125rem;
 }
 
-.vkTabsHeader .optionActive {
+.vkTabsHeader .statusActive {
     font-weight: bold;
 }
 
 .vkTabs .vkTabsHeader > *:hover,
-.vkTabs .vkTabsHeader .optionActive * {
+.vkTabs .vkTabsHeader .statusActive * {
     color: hsl(var(--vkColorA50));
 }
 
-.vkTabs .vkTabsHeader .optionActive::after {
+.vkTabs .vkTabsHeader .statusActive::after {
     content: "";
     width: calc(100% - 30px);
     height: 5px;
@@ -62,31 +62,31 @@
     display: none;
 }
 
-.vkTabsContent .optionActive {
+.vkTabsContent .statusActive {
     display: block;
 }
 
 /* Contrast style */
 
-.vkTabs.optionContrast {
+.vkTabs.styleContrast {
     border: 1px hsl(var(--vkColorN50)) solid;
 }
 
-.vkTabs.optionContrast .vkTabsHeader {
+.vkTabs.styleContrast .vkTabsHeader {
     background-color: hsl(var(--vkColorN80));
     border-block-end: 1px hsl(var(--vkColorN50)) solid;
     padding-block-end: 0; // To reset margin created for ::after symbol for other style
 }
 
-.vkTabs.optionContrast .vkTabsContent {
+.vkTabs.styleContrast .vkTabsContent {
     background-color: hsl(var(--vkColorN90));
 }
 
-.vkTabs.optionContrast .vkTabsHeader > *:hover,
-.vkTabs.optionContrast .vkTabsHeader .optionActive * {
+.vkTabs.styleContrast .vkTabsHeader > *:hover,
+.vkTabs.styleContrast .vkTabsHeader .statusActive * {
     color: hsl(var(--vkColorN00));
 }
 
-.vkTabs.optionContrast .vkTabsHeader .optionActive::after {
+.vkTabs.styleContrast .vkTabsHeader .statusActive::after {
     all: unset;
 }

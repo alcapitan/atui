@@ -1,6 +1,6 @@
 /* Licensing */
 
-const vkVersion = "0.4.2";
+const vkVersion = "0.5.0-beta";
 
 document.querySelectorAll(".vkLicensingAtui").forEach((link) => {
     link.setAttribute("href", "https://github.com/alcapitan/atui/");
@@ -459,7 +459,7 @@ function vkNotificationPush(options) {
         // Create the notification element
         const notification = document.createElement("div");
         notification.classList.add("vkNotification");
-        if (options.type === "atui-mini") notification.classList.add("optionMini");
+        if (options.type === "atui-mini") notification.classList.add("styleMini");
 
         // Create the icon element in the header
         const header = document.createElement("header");
@@ -495,8 +495,8 @@ function vkNotificationPush(options) {
         const footer = document.createElement("footer");
         options.buttons.forEach((button) => {
             const buttonElement = document.createElement("div");
-            buttonElement.classList.add("vkButton", "optionAccent");
-            if (button.option && button.option !== "") buttonElement.classList.add(`option${button.option}`);
+            buttonElement.classList.add("vkButton", "styleAccent");
+            if (button.style && button.style !== "") buttonElement.classList.add(`style${button.style}`);
             const buttonTextElement = document.createElement("p");
             buttonTextElement.textContent = button.text;
             buttonElement.appendChild(buttonTextElement);
@@ -590,7 +590,7 @@ let vkNotificationSound = "atui/kernel/assets/notification.mp3"; /* eslint-disab
 // Height superposition between header and carousel
 
 const vkHeaderFixCarousel = () => {
-    document.querySelectorAll(".vkHeader.optionCarousel").forEach((header) => {
+    document.querySelectorAll(".vkHeader.styleCarousel").forEach((header) => {
         const carousel = vkClosest(header, ".vkCarousel", ".vkStructureBodyContent")[0];
         const carouselContent = vkClosest(carousel, ".vkCarouselSlides > div > div", ".vkCarousel");
         const carouselControls = carousel.querySelector(".vkCarouselControls");
@@ -630,11 +630,11 @@ document.querySelectorAll(".vkCarousel").forEach((carousel) => {
 
 function vkModalShow(modalId) {
     const modalBackground = document.getElementById(modalId);
-    modalBackground.classList.add("optionShow");
+    modalBackground.classList.add("statusShow");
 
     function handleClickOutsideModal(event) {
         if (event.target === modalBackground) {
-            modalBackground.classList.remove("optionShow");
+            modalBackground.classList.remove("statusShow");
         }
     }
 
@@ -652,14 +652,14 @@ document.querySelectorAll(".vkTabs").forEach((tabsContainer) => {
     tabsHeaderLinks.forEach((link) => {
         link.addEventListener("click", () => {
             tabsHeaderLinks.forEach((tab) => {
-                tab.classList.remove("optionActive");
+                tab.classList.remove("statusActive");
             });
             tabsContentTexts.forEach((content) => {
-                content.classList.remove("optionActive");
+                content.classList.remove("statusActive");
             });
 
-            link.classList.add("optionActive");
-            document.getElementById(link.getAttribute("data-tabs-assign")).classList.add("optionActive");
+            link.classList.add("statusActive");
+            document.getElementById(link.getAttribute("data-tabs-assign")).classList.add("statusActive");
         });
     });
 });
@@ -694,9 +694,9 @@ document.querySelectorAll(".vkScrolltop").forEach((button) => {
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > window.innerHeight) {
-            button.classList.add("optionActive");
+            button.classList.add("statusActive");
         } else {
-            button.classList.remove("optionActive");
+            button.classList.remove("statusActive");
         }
     });
 });

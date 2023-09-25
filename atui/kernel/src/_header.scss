@@ -36,40 +36,40 @@
     }
 }
 
-/* Options */
+/* Styles */
 
-.vkHeader.optionCarousel {
+.vkHeader.styleCarousel {
     position: absolute;
     background-color: hsl(var(--vkColorN90) / 80%);
     backdrop-filter: var(--vkBlur);
 }
 
-.vkHeader.optionFixed {
+.vkHeader.styleFixed {
     position: fixed;
 }
 
-.vkHeader.optionDark * {
+.vkHeader.styleDark * {
     color: hsl(var(--vkColorNFF));
 }
 
-.vkHeader.optionAccent {
+.vkHeader.styleAccent {
     background-color: hsl(var(--vkColorA90));
     border-block-end-color: hsl(var(--vkColorA80));
 }
 
-.vkHeader.optionAccent .vkHeaderSplit {
+.vkHeader.styleAccent .vkHeaderSplit {
     background-color: hsl(var(--vkColorA40));
 }
 
-.vkHeader.optionDark {
+.vkHeader.styleDark {
     background-color: hsl(var(--vkColorN20));
 }
 
-.vkHeader.optionDark .vkHeaderSplit {
+.vkHeader.styleDark .vkHeaderSplit {
     background-color: hsl(var(--vkColorN80));
 }
 
-.vkHeader.optionTransparent {
+.vkHeader.styleTransparent {
     background-color: transparent;
     border-block-end: none;
     backdrop-filter: none;
@@ -98,14 +98,14 @@
     height: 1.125rem;
 }
 
-.vkHeader > div.optionScrollable {
+.vkHeader > div.styleScrollable {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     justify-content: unset;
     flex-wrap: nowrap;
 }
 
-.vkHeader > div.optionScrollable > * {
+.vkHeader > div.styleScrollable > * {
     flex: none;
     scroll-snap-align: start;
 }

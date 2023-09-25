@@ -5,7 +5,7 @@
     display: block;
 }
 
-.ssPanel.optionActive {
+.ssPanel.statusActive {
     background-color: hsl(var(--vkColorN90));
     box-shadow: var(--vkShadowMedium);
     position: fixed;
@@ -17,21 +17,21 @@
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .ssPanel.optionActive {
+    .ssPanel.statusActive {
         width: 90%;
         margin-inline: 5%;
     }
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .ssPanel.optionActive {
+    .ssPanel.statusActive {
         width: 500px;
         margin-inline: 50%;
         transform: translateX(-50%);
     }
 }
 
-.ssPanel.optionActive > * {
+.ssPanel.statusActive > * {
     margin-block-end: 10px;
 }
 
@@ -41,38 +41,38 @@
     height: 1px;
 }
 
-.ssPanel:not(.optionActive) {
+.ssPanel:not(.statusActive) {
     width: fit-content;
 }
 
-.ssPanel.optionActive > *:not(.ssBar) {
+.ssPanel.statusActive > *:not(.ssBar) {
     margin-inline: 10px;
 }
 
 /* Search bar */
 
-.ssPanel:not(.optionActive) > *:not(.ssBar) {
+.ssPanel:not(.statusActive) > *:not(.ssBar) {
     display: none;
 }
 
-.ssPanel.optionActive .ssBar {
+.ssPanel.statusActive .ssBar {
     margin-block-end: 15px;
 }
 
-.ssPanel.optionActive .ssBar div.optionGroup {
+.ssPanel.statusActive .ssBar div.styleGroup {
     width: available;
     width: stretch;
 }
 
-.ssBar div.optionGroup {
+.ssBar div.styleGroup {
     box-shadow: var(--vkShadowLight);
 }
 
-.ssPanel .ssBar div.optionGroup input {
+.ssPanel .ssBar div.styleGroup input {
     width: 100%;
 }
 
-.ssPanel .ssBar div.optionGroup i {
+.ssPanel .ssBar div.styleGroup i {
     font-size: 1.125rem;
     width: 1.125rem;
     height: 1.125rem;
@@ -85,11 +85,11 @@
 /* Responsive in Header */
 
 @media (width < 1024px) /* Smartphones & tablets */ {
-    .vkHeader .ssPanel:not(.optionActive) div.optionGroup {
+    .vkHeader .ssPanel:not(.statusActive) div.styleGroup {
         display: none;
     }
 
-    .vkHeader .ssPanel:not(.optionActive) .ssTrigger {
+    .vkHeader .ssPanel:not(.statusActive) .ssTrigger {
         display: block;
         padding: 5px;
         font-size: 1.875rem;

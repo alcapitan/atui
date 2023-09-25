@@ -46,20 +46,20 @@
     margin: 10px;
 }
 
-/* Mini option */
+/* Mini style */
 
-.vkNotification.optionMini > header p {
+.vkNotification.styleMini > header p {
     all: unset;
 }
 
-.vkNotification.optionMini > section {
+.vkNotification.styleMini > section {
     display: none;
 }
 
-.vkNotification.optionMini > footer {
+.vkNotification.styleMini > footer {
     margin-block-start: 10px;
 }
 
-.vkNotification.optionMini > footer .vkButton {
+.vkNotification.styleMini > footer .vkButton {
     margin: 0;
 }

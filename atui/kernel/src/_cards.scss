@@ -18,7 +18,7 @@
 
 /** set font-weight: bold for .vkCardHighlight > * for more logical appearance if needed */
 
-.vkCard:not(.optionOverlay) .vkCardHighlight {
+.vkCard:not(.styleOverlay) .vkCardHighlight {
     background-color: hsl(var(--vkColorN80));
     border-block: 1px solid hsl(var(--vkColorN50));
     margin: 0;
@@ -27,19 +27,19 @@
 
 /* Overlay style */
 
-.vkCard.optionOverlay {
+.vkCard.styleOverlay {
     position: relative;
 }
 
-.vkCard.optionOverlay * {
+.vkCard.styleOverlay * {
     color: #fff;
 }
 
-.vkCard.optionOverlay > img {
+.vkCard.styleOverlay > img {
     filter: brightness(0.7);
 }
 
-.vkCard.optionOverlay > div {
+.vkCard.styleOverlay > div {
     position: absolute;
     top: 0;
 

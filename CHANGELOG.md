@@ -5,68 +5,69 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.5.0-beta] - 2023-09-26
 
 ### Added
 
--   Create `.atuiKernel_Modal`.
--   Create `.atuiKernel_Slider`.
--   Add `.optionScrollable` for `.atuiKernel_Header` levels.
--   Add `.optionMini` for `.atuiKernel_Notification`.
--   Add `.optionGroup` for Input containers.
--   Implement again `.atuiKernel_Scrolltop`.
--   Set an instable image support in `.atuiKernel_SectionParagraph` titles.
--   Create `.atuiKernel_List` with `<dl>`, `<ul>` and `<ol>` HTML tags.
--   Create JavaScript storage functions to store data between 2 web page visits : `atuiKernel_StorageGet`, `atuiKernel_StorageSet`, `atuiKernel_StorageRemove`.
+-   Create `.vkModal`.
+-   Create `.vkSlider`.
+-   Add `.styleScrollable` for `.vkHeader` levels.
+-   Add `.styleMini` for `.vkNotification`.
+-   Add `.styleGroup` for Input containers.
+-   Implement again `.vkScrolltop`.
+-   Set an instable image support in `.vkParagraph` titles.
+-   Create `.vkList` with `<dl>`, `<ul>` and `<ol>` HTML tags.
+-   Create JavaScript storage functions to store data between 2 web page visits : `vkStorageGet`, `vkStorageSet`, `vkStorageRemove`.
 -   Support RTL languages (Right-To-Left direction languages such as Arabic or Hebrew).
 
 ### Changed
 
--   Practical JS function `findElement` is renamed to `atuiKernel_ToolsFindElement`.
--   `atuiKernel_ToolsFindElement` returns only arrays.
--   JS function `stopAllMedia()` is renamed to `atuiMediasplayer_StopAllMedia()`.
--   Change `system` Notification key to `type`.
+-   About `vkClosest` :
+    -   Practical JS function `findElement` has been renamed to `vkClosest`.
+    -   It returns only arrays now.
+    -   Warning ! This function is now deprecated, it will be replaced by native javascript function `closest()`.
+-   JS function `stopAllMedia()` is renamed to `mpStop()`.
+-   Change `system` Notification key to `type`, and `option` key to `style` for Notification's buttons.
 -   Hardly lighten footer's CSS code and remove almost all specific components.
--   `.atuiKernel_Logotype` become a global component, not only for Header.
+-   `.vkLogotype` become a global component, not only for Header.
 -   Hardly lighten Licensing and change features.
--   Some light visual changes to `.atuiKernel_PopupGlobalpanel`.
--   Rename `.atuiKernel_SectionList` to `.atuiKernel_Group` due to conflicting names.
+-   Lighten HTML structure with some light visual changes to `.vkPopupGlobalpanel`.
+-   Rename `.vkList` to `.vkGroup` due to conflicting names with the new list component.
 -   Completely rewrite SearchService :
     -   All new visual design.
-    -   Now really usable for all desires, even out of `.atuiKernel_Header` and without panel, with multiples search instance on the same page.
-    -   Implement an efficient filter function named `atuiSearchservice_Filter`.
-    -   Set up submit action for `.atuiKernel_InputSubmit`, add as replacement `.atuiSearchservice_Trigger` for `.atuiKernel_Header .atuiSearchservice_Bar`.
--   Replace `.optionMobileonly` and `.optionDesktoponly` to `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnMobile` for `.atuiKernel_Header`.
+    -   Now really usable for all desires, even out of `.vkHeader` and without panel, with multiples search instance on the same page.
+    -   Implement an efficient filter function named `ssFilter`.
+    -   Set up submit action for `.vkInputSubmit`, add as replacement `.ssTrigger` for `.vkHeader .ssBar`.
+-   Replace `.optionMobileonly` and `.optionDesktoponly` with `.optionHideOnDesktop` `.optionHideOnTablet` and `.optionHideOnPhone` for `.vkHeader`.
+-   Add the ability to use `.vkCarousel` in `.vkStructureBodyContent` in addition to next to `.vkHeader`.
+-   Add controls arrows to `.vkCarousel` in addition to sliding on a touchscreen.
+-   Add danger, warning, success, and info color themes to `.vkButton`.
 -   Check the color mode status at startup in localStorage instead of cookies.
 -   Rewrite input stylesheet.
--   Add the ability to use `.atuiKernel_Carousel` in `.atuiKernel_BodyContent` in addition to next to `.atuiKernel_Header`.
--   Add controls arrows to `.atuiKernel_Carousel` in addition to sliding on a touchscreen.
--   Add danger, warning, success, and info color themes to `.atuiKernel_Button`.
 -   Rewrite Squarelink :
-    -   Rename `.atuiKernel_SectionSquarelink` to `.atuiKernel_Squarelink`, and change HTML structure.
+    -   Change HTML structure.
     -   More flexible visual possibilities.
-    -   Add `.optionFilled` and `.optionNavigator` (to transpose former interface).
--   Rewrite `.atuiKernel_Card` :
+    -   Add `.styleFilled` and `.styleNavigator` (to transpose former interface).
+-   Rewrite `.vkCard` :
     -   Almost rationalize the operation of Cards.
     -   Hardly lighten HTML and CSS code of Cards.
     -   Remove container feat.
-    -   Remove `.atuiKernel_Card.optionStandard` and `.atuiKernel_Card.optionContrast`.
+    -   Remove `.vkCard.optionStandard` and `.vkCard.optionContrast`.
     -   New operation largely inspired by Bootstrap.
-    -   Largely rebuilt `.atuiKernel_Card.optionOverlay`.
-    -   Add `.atuiKernel_CardHighlight`.
+    -   Largely rebuilt overlay style.
+    -   Add `.vkCardHighlight`.
 -   Use unpkg instead of jsdelivr for CDN content (like icons, and ATUI itself) to avoid domain blockage in Egypt and China.
 -   Remove `!important` from CSS code and use `@layer` for better inheritance management with minor visual changes.
--   Lighten Globalpanel's HTML structure.
 -   Set up a better responsive that better integrates tablets.
 -   Port CSS code to SCSS. But, use SASS feats in a limited part of the code (boxes, buttons and colors for now).
--   Change all variables and classes structure ! Please change classes in your projects to restore ATUI's operation.
+-   Change all variables, component classes and option classes structure ! You need to update classes in your projects to restore ATUI's operation.
 -   Change `vkStructureBody` and `vkStructureSection` from id to class.
--   Replace `.vkBox.optionAlert` to `.vkBox.optionDanger`.
+-   Replace `.vkBox.styleAlert` to `.vkBox.styleDanger`.
 
 ### Fixed
 
 -   Webpage's min-height follows now the dynamic height of the viewport to prevent issues on floating panels in phones' web browsers.
--   Fix an alignment bug in `.atuiKernel_SectionGrid`.
+-   Fix an alignment bug in `.vkGrid`.
 
 ### Removed
 
@@ -75,6 +76,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove all form and fieldset containers' CSS properties for free use.
 -   Remove useless and orphan pictures in `patch/illustrations` for lighting package size.
 -   Removing licensing header in source code files.
+
+## [0.4.3] - 2023-09-25
+
+### Fixed
+
+-   Fix Netlify deployment fatal errors discovered pushing v0.4.2.
 
 ## [0.4.2] - 2023-07-30
 

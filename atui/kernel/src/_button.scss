@@ -36,11 +36,11 @@ $colors: (
 $notDisabled: ":not(:is(:disabled, .optionDisabled))";
 $colorOptions: (
     "": "N",
-    ".optionAccent": "A",
-    ".optionDanger": "D",
-    ".optionWarning": "W",
-    ".optionSuccess": "S",
-    ".optionInfo": "I",
+    ".styleAccent": "A",
+    ".styleDanger": "D",
+    ".styleWarning": "W",
+    ".styleSuccess": "S",
+    ".styleInfo": "I",
 );
 
 @function getColor($i, $j, $k) {
@@ -77,7 +77,7 @@ $colorOptions: (
 
 /* Pill */
 
-.vkButton.optionPill {
+.vkButton.stylePill {
     border-radius: 21px;
 }
 
@@ -148,7 +148,7 @@ $colorOptions: (
 /* Filled */
 
 @each $option, $prefix in $colorOptions {
-    .vkButton.optionFilled#{$option} {
+    .vkButton.styleFilled#{$option} {
         @if $option == "" {
             background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 2)}));
         } @else {
@@ -156,7 +156,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionFilled#{$option}#{$notDisabled}:hover {
+    .vkButton.styleFilled#{$option}#{$notDisabled}:hover {
         @if $option == "" {
             background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 3)}));
         } @else {
@@ -164,7 +164,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionFilled#{$option}#{$notDisabled}:active {
+    .vkButton.styleFilled#{$option}#{$notDisabled}:active {
         @if $option == "" {
             background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 4)}));
         } @else {
@@ -173,20 +173,20 @@ $colorOptions: (
     }
 }
 
-.vkButton.optionFilled,
-.vkButton.optionFilled * {
+.vkButton.styleFilled,
+.vkButton.styleFilled * {
     color: hsl(var(--vkColorN#{getColor(2, 1, 1)})); // stylelint-disable-line custom-property-pattern
 }
 
-.vkButton.optionFilled hr {
+.vkButton.styleFilled hr {
     background-color: hsl(var(--vkColorN#{getColor(2, 1, 1)})); // stylelint-disable-line custom-property-pattern
 }
 
 /* Tinted */
 
 @each $option, $prefix in $colorOptions {
-    .vkButton.optionTinted#{$option},
-    .vkButton.optionTinted#{$option} * {
+    .vkButton.styleTinted#{$option},
+    .vkButton.styleTinted#{$option} * {
         @if $option == "" {
             color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 1)}));
         } @else {
@@ -194,7 +194,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionTinted#{$option} {
+    .vkButton.styleTinted#{$option} {
         @if $option == "" {
             background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 2)}));
         } @else {
@@ -202,7 +202,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionTinted#{$option}#{$notDisabled}:hover {
+    .vkButton.styleTinted#{$option}#{$notDisabled}:hover {
         @if $option == "" {
             background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 3)}));
         } @else {
@@ -210,7 +210,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionTinted#{$option}#{$notDisabled}:active {
+    .vkButton.styleTinted#{$option}#{$notDisabled}:active {
         @if $option == "" {
             background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 4)}));
         } @else {
@@ -221,13 +221,13 @@ $colorOptions: (
 
 /* Outlined */
 
-.vkButton.optionOutlined {
+.vkButton.styleOutlined {
     border-width: 2px;
     border-style: solid;
 }
 
 @each $option, $prefix in $colorOptions {
-    .vkButton.optionOutlined#{$option} {
+    .vkButton.styleOutlined#{$option} {
         @if $option == "" {
             border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 1)}));
         } @else {
@@ -235,7 +235,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionOutlined#{$option}#{$notDisabled}:hover {
+    .vkButton.styleOutlined#{$option}#{$notDisabled}:hover {
         @if $option == "" {
             border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 3)}));
         } @else {
@@ -243,7 +243,7 @@ $colorOptions: (
         }
     }
 
-    .vkButton.optionOutlined#{$option}#{$notDisabled}:active {
+    .vkButton.styleOutlined#{$option}#{$notDisabled}:active {
         @if $option == "" {
             border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 4)}));
         } @else {

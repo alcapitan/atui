@@ -14,10 +14,3 @@ mediasplayer
 optionMobileonly
 Searchservice
 videoplayer
-
-# Words which I make a pull request to cspell
-cssnano
-commitlint
-stylelint
-jsdelivr
-caniuse
