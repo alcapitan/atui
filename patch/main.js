@@ -1,9 +1,9 @@
 /*!
- * ATUI v0.4.2 (https://github.com/alcapitan/atui)
+ * ATUI v0.4.3 (https://github.com/alcapitan/atui)
  * This code is released under GNU General Public License (https://github.com/alcapitan/atui/blob/dev/LICENSE.md)
  */
 
-atuiKernel_FooterLastedited(30, 7, 2023);
+atuiKernel_FooterLastedited(25, 9, 2023);
 
 /*
 atuiMediasplayer_Assign({

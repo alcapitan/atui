@@ -8,6 +8,12 @@
 ![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/4?label=issues%20in%20milestone)
 ![GitHub contributors](https://img.shields.io/github/contributors/alcapitan/atui?label=GitHub%20contributors)
 
+## This version is now unsupported !
+
+Warning, the v0.4 branch has been end-of-life since September 2023. Its latest version is `v0.4.3`.  
+From now on, there will be no more patch releases for this version branch.  
+We strongly advise you to update ATUI to a supported version branch.
+
 ## This library is still under development !
 
 Currently, there is only beta versions which you can use, but keep in mind this is still in development !  
@@ -18,7 +24,7 @@ Anyway, you can already contribute to the project and give your opinions to help
 ### By NPM package (recommended)
 
 ```bash
-npm install @alcapitan/atui@0.4.2
+npm install @alcapitan/atui@0.4.3
 ```
 
 ### By CDN (for those who don't want to use NPM)
@@ -29,14 +35,14 @@ Put this line in the HTML tag `<head>` :
 <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.2/atui/kernel/dist/main.css"
+    href="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.3/atui/kernel/dist/main.css"
 />
 ```
 
 Put this line at the end in the HTML tag `<body>` :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.2/atui/kernel/dist/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alcapitan/atui@0.4.3/atui/kernel/dist/main.js"></script>
 ```
 
 Then, change the links above for reach extensions files.
