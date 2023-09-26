@@ -5,7 +5,7 @@
 ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/alcapitan/atui?include_prereleases&label=latest%20release)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/alcapitan/atui?label=jsDelivr%20hits)
 ![npm](https://img.shields.io/npm/dm/@alcapitan/atui?label=NPM%20downloads)
-![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/4?label=issues%20in%20milestone)
+![GitHub milestone](https://img.shields.io/github/milestones/progress/alcapitan/atui/5?label=issues%20in%20milestone)
 ![GitHub contributors](https://img.shields.io/github/contributors/alcapitan/atui?label=GitHub%20contributors)
 
 ## This library is still under development !
@@ -15,34 +15,49 @@ Anyway, you can already contribute to the project and give your opinions to help
 
 ## Download and use ATUI
 
+For all these links, duplicate these 2 import lines and replace `kernel` by the name of the extension you want to use :
+
+-   `MediasPlayer` if you need audio and video players.
+-   `SearchServices` if you need search components such as bar, panel and filter.
+
 ### By NPM package (recommended)
+
+Install the NPM package :
 
 ```bash
 npm install @alcapitan/atui
 ```
 
+Then, import ATUI in your project using the way you want :
+
+```
+# Links with node_modules
+node_modules/@alcapitan/atui/atui/kernel/dist/dist.css
+node_modules/@alcapitan/atui/atui/kernel/dist/dist.js
+# Imports in JavaScript
+import '@alcapitan/atui/atui/kernel/dist/main.css'
+import '@alcapitan/atui/atui/kernel/dist/main.js'
+```
+
 ### By CDN (for those who don't want to use NPM)
 
-Put this line in the HTML tag `<head>` :
+Directly import ATUI in your project :
 
-```html
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.css" />
+```
+https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.css
+https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.js
 ```
 
-Put this line at the end in the HTML tag `<body>` :
+However, we warn you that using unpkg is quite slow in comparison of NPM install.
 
-```html
-<script src="https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.js"></script>
+### Nightly channel (only for hard developers !)
+
+To get ATUI from the latest commit in the github repo :
+
 ```
-
-Then, change the links above for reach extensions files.
-
-#### Nightly channel (only for developers !)
-
-To get ATUI from the latest commit in the github repo.
-
-CSS : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.css`  
-JavaScript : `https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.js`
+https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.css
+https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.js
+```
 
 **Warning : `jsdelivr.net` is blocked in Egypt and China, so these links cannot be used. Consequently, we advise you to use a VPN in the absence of a practical way to get content from Github repository in real time.**
 
