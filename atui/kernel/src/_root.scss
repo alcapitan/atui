@@ -8,9 +8,9 @@
     --vkFontsTitleBold: bold; /* or normal */
     --vkBlur: blur(5px);
     --vkBorderRadius: 10px;
-    --vkShadowLight: color("N00", "20%") 0px 3px 8px; /* #5 */
-    --vkShadowMedium: color("N00", "30%") 0px 5px 15px; /* #3 */
-    --vkShadowHeavy: color("N00", "80%") 0px 20px 30px -10px; /* #20 */
+    --vkShadowLight: #{color("N00", "20%")} 0px 3px 8px; /* #5 */
+    --vkShadowMedium: #{color("N00", "30%")} 0px 5px 15px; /* #3 */
+    --vkShadowHeavy: #{color("N00", "80%")} 0px 20px 30px -10px; /* #20 */
 }
 
 /* Font size list convention : 
