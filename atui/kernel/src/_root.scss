@@ -8,9 +8,9 @@
     --vkFontsTitleBold: bold; /* or normal */
     --vkBlur: blur(5px);
     --vkBorderRadius: 10px;
-    --vkShadowLight: hsl(var(--vkColorN00) / 20%) 0px 3px 8px; /* #5 */
-    --vkShadowMedium: hsl(var(--vkColorN00) / 30%) 0px 5px 15px; /* #3 */
-    --vkShadowHeavy: hsl(var(--vkColorN00) / 80%) 0px 20px 30px -10px; /* #20 */
+    --vkShadowLight: color("N00", "20%") 0px 3px 8px; /* #5 */
+    --vkShadowMedium: color("N00", "30%") 0px 5px 15px; /* #3 */
+    --vkShadowHeavy: color("N00", "80%") 0px 20px 30px -10px; /* #20 */
 }
 
 /* Font size list convention : 
@@ -35,12 +35,12 @@ html {
 }
 
 body {
-    background: hsl(var(--vkColorNFF));
+    background: color("NFF");
 }
 
 * {
     font-family: var(--vkFontsText);
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
     word-wrap: anywhere;
     margin: 0;
     padding: 0;
@@ -91,17 +91,16 @@ code {
     font-family: var(--vkFontsMonospace);
 }
 
-// stylelint-disable-next-line selector-class-pattern
-.ti {
-    color: hsl(var(--vkColorN00));
-    font-size: 1em;
-    width: 1em;
-    height: 1em;
+::selection {
+    background: color("A80");
+    color: color("A20");
 }
 
-::selection {
-    background: hsl(var(--vkColorA80));
-    color: hsl(var(--vkColorA20));
+// stylelint-disable-next-line selector-class-pattern
+.ti {
+    color: color("N00");
+
+    @include iconSize("1rem");
 }
 
 /* Scrollbar */
@@ -110,20 +109,20 @@ code {
 * {
     /* Firefox syntax */
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--vkColorN60)) hsl(var(--vkColorN90)); /* colors order : thumb, container */
+    scrollbar-color: color("N60") color("N90"); /* colors order : thumb, container */
 }
 
 ::-webkit-scrollbar {
-    background-color: hsl(var(--vkColorN90));
+    background-color: color("N90");
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--vkColorN60));
+    background-color: color("N60");
     border-width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(var(--vkColorN40));
+    background-color: color("N40");
 }

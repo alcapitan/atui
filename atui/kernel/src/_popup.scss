@@ -3,7 +3,7 @@
 :is(.vkPopupContextmenu, .vkPopupTooltip) {
     all: unset;
     position: fixed; /* fixed position is obligatory for centered option */
-    background-color: hsl(var(--vkColorNFF));
+    background-color: color("NFF");
     border-radius: var(--vkBorderRadius);
     box-shadow: var(--vkShadowMedium);
     width: max-content;
@@ -24,7 +24,7 @@
 }
 
 :is(.vkPopupContextmenu, .vkPopupTooltip) * {
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
     font-size: 1rem;
 }
 
@@ -45,10 +45,8 @@
     }
 }
 
-.vkPopupContextmenu :is(i, img) {
-    font-size: 1em;
-    width: 1em;
-    height: 1em;
+.vkPopupContextmenu #{$iconSelector} {
+    @include iconSize("1em");
 }
 
 .vkPopupContextmenu > a {
@@ -58,11 +56,11 @@
 }
 
 .vkPopupContextmenu > a:hover {
-    background-color: hsl(var(--vkColorA60) / 80%);
+    background-color: color("A60", "80%");
 }
 
 .vkPopupContextmenu > hr {
-    background-color: hsl(var(--vkColorA60));
+    background-color: color("A60");
     height: 2px;
     border: 0;
     margin: 5px 10%;
@@ -75,7 +73,7 @@
     align-items: normal;
     position: absolute;
     visibility: hidden;
-    background-color: hsl(var(--vkColorNFF));
+    background-color: color("NFF");
     border-radius: var(--vkBorderRadius);
     box-shadow: var(--vkShadowMedium);
     max-width: 80%;
@@ -94,7 +92,7 @@
 }
 
 .vkPopupGlobalpanel * {
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
 }
 
 /* Tooltip */

@@ -1,8 +1,8 @@
 .vkCard {
     border-radius: var(--vkBorderRadius);
     overflow: hidden;
-    border: 1px solid hsl(var(--vkColorN50));
-    background-color: hsl(var(--vkColorN90));
+    border: 1px solid color("N50");
+    background-color: color("N90");
 }
 
 .vkCard > img {
@@ -19,8 +19,8 @@
 /** set font-weight: bold for .vkCardHighlight > * for more logical appearance if needed */
 
 .vkCard:not(.styleOverlay) .vkCardHighlight {
-    background-color: hsl(var(--vkColorN80));
-    border-block: 1px solid hsl(var(--vkColorN50));
+    background-color: color("N80");
+    border-block: 1px solid color("N50");
     margin: 0;
     padding: 15px;
 }

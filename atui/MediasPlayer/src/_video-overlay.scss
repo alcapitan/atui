@@ -1,7 +1,7 @@
 /* Style overlay */
 
 .mpVideo.styleOverlay .mpDashboard {
-    background-color: hsl(var(--vkColorN90) / 80%);
+    background-color: color("N90", "80%");
     opacity: 0.2;
     position: absolute;
     inset-block-end: 0;

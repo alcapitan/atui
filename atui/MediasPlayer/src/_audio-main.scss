@@ -3,7 +3,7 @@
 .mpAudio .mpCover {
     width: 150px;
     height: 150px;
-    background-color: hsl(var(--vkColorN70));
+    background-color: color("N70");
     border-radius: var(--vkBorderRadius);
     overflow: hidden;
 }
@@ -50,7 +50,7 @@
 }
 
 .mpAudio .mpInfoTitle {
-    color: hsl(var(--vkColorA40));
+    color: color("A40");
 }
 
 .mpAudio .mpClose {

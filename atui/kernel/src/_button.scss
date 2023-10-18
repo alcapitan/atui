@@ -1,5 +1,3 @@
-@use "sass:list";
-
 /* * SASS colors plans 
  * STANDARD
  * N00 A20 - Content
@@ -63,10 +61,8 @@ $colorOptions: (
     vertical-align: middle;
 }
 
-.vkButton :is(i, img) {
-    font-size: 1em;
-    width: 1em;
-    height: 1em;
+.vkButton #{$iconSelector} {
+    @include iconSize("1em");
 }
 
 /* Disabled */
@@ -104,9 +100,9 @@ $colorOptions: (
     .vkButton#{$option},
     .vkButton#{$option} * {
         @if $option == "" {
-            color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 1)}));
+            color: color(#{$prefix}#{getColor(1, 1, 1)});
         } @else {
-            color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 1)}));
+            color: color(#{$prefix}#{getColor(1, 2, 1)});
         }
     }
 }
@@ -122,25 +118,25 @@ $colorOptions: (
 @each $option, $prefix in $colorOptions {
     .vkButton#{$option} hr {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 1)}));
+            background-color: color(#{$prefix}#{getColor(1, 1, 1)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 1)}));
+            background-color: color(#{$prefix}#{getColor(1, 2, 1)});
         }
     }
 
     .vkButton#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 3)}));
+            background-color: color(#{$prefix}#{getColor(1, 1, 3)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 3)}));
+            background-color: color(#{$prefix}#{getColor(1, 2, 3)});
         }
     }
 
     .vkButton#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 1, 4)}));
+            background-color: color(#{$prefix}#{getColor(1, 1, 4)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(1, 2, 4)}));
+            background-color: color(#{$prefix}#{getColor(1, 2, 4)});
         }
     }
 }
@@ -150,36 +146,36 @@ $colorOptions: (
 @each $option, $prefix in $colorOptions {
     .vkButton.styleFilled#{$option} {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 2)}));
+            background-color: color(#{$prefix}#{getColor(2, 1, 2)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 2, 2)}));
+            background-color: color(#{$prefix}#{getColor(2, 2, 2)});
         }
     }
 
     .vkButton.styleFilled#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 3)}));
+            background-color: color(#{$prefix}#{getColor(2, 1, 3)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 2, 3)}));
+            background-color: color(#{$prefix}#{getColor(2, 2, 3)});
         }
     }
 
     .vkButton.styleFilled#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 1, 4)}));
+            background-color: color(#{$prefix}#{getColor(2, 1, 4)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(2, 2, 4)}));
+            background-color: color(#{$prefix}#{getColor(2, 2, 4)});
         }
     }
 }
 
 .vkButton.styleFilled,
 .vkButton.styleFilled * {
-    color: hsl(var(--vkColorN#{getColor(2, 1, 1)})); // stylelint-disable-line custom-property-pattern
+    color: color("N#{getColor(2, 1, 1)}"); // stylelint-disable-line custom-property-pattern
 }
 
 .vkButton.styleFilled hr {
-    background-color: hsl(var(--vkColorN#{getColor(2, 1, 1)})); // stylelint-disable-line custom-property-pattern
+    background-color: color("N#{getColor(2, 1, 1)}"); // stylelint-disable-line custom-property-pattern
 }
 
 /* Tinted */
@@ -188,33 +184,33 @@ $colorOptions: (
     .vkButton.styleTinted#{$option},
     .vkButton.styleTinted#{$option} * {
         @if $option == "" {
-            color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 1)}));
+            color: color(#{$prefix}#{getColor(3, 1, 1)});
         } @else {
-            color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 1)}));
+            color: color(#{$prefix}#{getColor(3, 2, 1)});
         }
     }
 
     .vkButton.styleTinted#{$option} {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 2)}));
+            background-color: color(#{$prefix}#{getColor(3, 1, 2)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 2)}));
+            background-color: color(#{$prefix}#{getColor(3, 2, 2)});
         }
     }
 
     .vkButton.styleTinted#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 3)}));
+            background-color: color(#{$prefix}#{getColor(3, 1, 3)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 3)}));
+            background-color: color(#{$prefix}#{getColor(3, 2, 3)});
         }
     }
 
     .vkButton.styleTinted#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 1, 4)}));
+            background-color: color(#{$prefix}#{getColor(3, 1, 4)});
         } @else {
-            background-color: hsl(var(--vkColor#{$prefix}#{getColor(3, 2, 4)}));
+            background-color: color(#{$prefix}#{getColor(3, 2, 4)});
         }
     }
 }
@@ -229,25 +225,25 @@ $colorOptions: (
 @each $option, $prefix in $colorOptions {
     .vkButton.styleOutlined#{$option} {
         @if $option == "" {
-            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 1)}));
+            border-color: color(#{$prefix}#{getColor(4, 1, 1)});
         } @else {
-            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 2, 1)}));
+            border-color: color(#{$prefix}#{getColor(4, 2, 1)});
         }
     }
 
     .vkButton.styleOutlined#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 3)}));
+            border-color: color(#{$prefix}#{getColor(4, 1, 3)});
         } @else {
-            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 2, 3)}));
+            border-color: color(#{$prefix}#{getColor(4, 2, 3)});
         }
     }
 
     .vkButton.styleOutlined#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 1, 4)}));
+            border-color: color(#{$prefix}#{getColor(4, 1, 4)});
         } @else {
-            border-color: hsl(var(--vkColor#{$prefix}#{getColor(4, 2, 4)}));
+            border-color: color(#{$prefix}#{getColor(4, 2, 4)});
         }
     }
 }

@@ -1,7 +1,8 @@
-@use "audio-floating";
-@use "audio-main";
-@use "video-main";
-@use "video-overlay";
+@import "../../kernel/src/tools";
+@import "audio-floating";
+@import "audio-main";
+@import "video-main";
+@import "video-overlay";
 
 /* Common */
 
@@ -9,14 +10,14 @@
 
 .mpAudio,
 .mpVideo > article {
-    border: 1px solid hsl(var(--vkColorN50));
+    border: 1px solid color("N50");
     border-radius: var(--vkBorderRadius);
     position: relative;
 }
 
 .mpAudio,
 .mpVideo .mpDashboard {
-    background-color: hsl(var(--vkColorN90));
+    background-color: color("N90");
 }
 
 /* Controls */
@@ -57,16 +58,17 @@
     direction: ltr;
 }
 
-.mpControls :is(i, img) {
-    width: 50px;
-    height: 40px;
+.mpControls #{$iconSelector} {
     padding: 5px 10px;
     border-radius: var(--vkBorderRadius);
-    font-size: 30px;
+
+    @include iconSize(30px);
+
+    box-sizing: content-box;
 }
 
-.mpControls :is(i, img):hover {
-    background-color: hsl(var(--vkColorA70));
+.mpControls #{$iconSelector}:hover {
+    background-color: color("A70");
 }
 
 /* Progressbar */
@@ -82,7 +84,7 @@
 
 .mpProgressInside {
     width: 0;
-    background-color: hsl(var(--vkColorA50));
+    background-color: color("A50");
     transition: width 500ms;
 }
 

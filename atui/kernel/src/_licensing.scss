@@ -4,9 +4,9 @@
 }
 
 .vkLicensing * {
-    color: hsl(var(--vkColorN60));
+    color: color("N60");
 }
 
 .vkFooter .vkLicensing * {
-    color: hsl(var(--vkColorA60));
+    color: color("A60");
 }

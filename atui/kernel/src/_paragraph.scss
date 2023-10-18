@@ -5,7 +5,7 @@
 }
 
 .vkParagraph :is(h1, h2, h3, h4, h5, h6) {
-    color: hsl(var(--vkColorA40));
+    color: color("A40");
 }
 
 /* Quote */
@@ -16,7 +16,7 @@
 }
 
 .vkParagraph .vkParagraphQuote em {
-    color: hsl(var(--vkColorN50));
+    color: color("N50");
     font-style: italic;
     margin: 5px;
     font-size: 0.875rem;
@@ -68,7 +68,7 @@
 }
 
 .vkParagraphImage p {
-    color: hsl(var(--vkColorN50));
+    color: color("N50");
     font-style: italic;
     margin: 5px;
     font-size: 0.875rem;

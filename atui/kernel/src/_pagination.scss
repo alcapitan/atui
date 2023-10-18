@@ -7,15 +7,15 @@
 
 .vkPaginationNumber > * {
     padding: 10px 15px;
-    border: 1px solid hsl(var(--vkColorN50));
+    border: 1px solid color("N50");
     border-inline-start: none;
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
 }
 
 .vkPaginationNumber > *:first-child {
     border-start-start-radius: var(--vkBorderRadius);
     border-end-start-radius: var(--vkBorderRadius);
-    border-inline-start: 1px solid hsl(var(--vkColorN50));
+    border-inline-start: 1px solid color("N50");
 }
 
 .vkPaginationNumber > *:last-child {
@@ -24,12 +24,12 @@
 }
 
 .vkPaginationNumber > *:hover {
-    background-color: hsl(var(--vkColorA90));
+    background-color: color("A90");
 }
 
 .vkPaginationNumber > *:hover,
 .vkPaginationNumber > p {
-    color: hsl(var(--vkColorA50));
+    color: color("A50");
 }
 
 .vkPaginationNumber > p:hover {
@@ -52,7 +52,7 @@
 }
 
 .vkPaginationText a {
-    border: 1px solid hsl(var(--vkColorN00));
+    border: 1px solid color("N00");
     border-radius: var(--vkBorderRadius);
     padding: 15px;
     flex: 1;
@@ -60,17 +60,17 @@
 
 .vkPaginationText a:hover {
     border-width: 2px;
-    border-color: hsl(var(--vkColorA40));
-    background-color: hsl(var(--vkColorA90));
+    border-color: color("A40");
+    background-color: color("A90");
 }
 
 .vkPaginationText a p {
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
     text-align: center;
 }
 
 .vkPaginationText a:hover p {
-    color: hsl(var(--vkColorA40));
+    color: color("A40");
 }
 
 .vkPaginationText a p:first-child {

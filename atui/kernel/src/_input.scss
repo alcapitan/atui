@@ -7,8 +7,8 @@ select,
 .vkInputSubmit,
 input[type="file"]::file-selector-button {
     border-radius: var(--vkBorderRadius);
-    border: 1px solid hsl(var(--vkColorN70));
-    accent-color: hsl(var(--vkColorA50));
+    border: 1px solid color("N70");
+    accent-color: color("A50");
     margin: 5px;
     padding: 10px 15px;
     vertical-align: middle;
@@ -66,7 +66,7 @@ progress {
 /* Fieldset */
 
 fieldset {
-    border: 1px solid hsl(var(--vkColorA40));
+    border: 1px solid color("A40");
     border-radius: var(--vkBorderRadius);
     padding: 10px;
     padding-block-start: 0;
@@ -83,8 +83,8 @@ fieldset legend {
 /* TODO: set :has(input) instead of form when Firefox will support :has() */
 
 form div.styleGroup {
-    background-color: hsl(var(--vkColorNFF));
-    border: 1px solid hsl(var(--vkColorN70));
+    background-color: color("NFF");
+    border: 1px solid color("N70");
     display: inline-flex;
     border-radius: var(--vkBorderRadius);
 }

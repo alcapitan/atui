@@ -7,7 +7,7 @@
     margin: 0;
     border: none;
     box-shadow: var(--vkShadowMedium);
-    background-color: hsl(var(--vkColorN90) / 80%);
+    background-color: color("N90", "80%");
     backdrop-filter: var(--vkBlur);
     display: none;
 }

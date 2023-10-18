@@ -15,23 +15,21 @@
 }
 
 .vkNavigationRow a:hover {
-    background-color: hsl(var(--vkColorA70));
+    background-color: color("A70");
 }
 
 .vkNavigationRow a:active {
-    background-color: hsl(var(--vkColorA60));
+    background-color: color("A60");
 }
 
-.vkNavigationRow a :is(i, img) {
-    width: 80px;
-    height: 80px;
-    font-size: 80px;
+.vkNavigationRow a #{$iconSelector} {
+    @include iconSize("80px");
 }
 
 .vkNavigationRow a p /* Text */ {
     margin-block-start: 10px;
     font-size: 1.125rem;
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
 }
 
 /* Bar */
@@ -55,7 +53,7 @@
 }
 
 .vkNavigationBar hr {
-    background-color: hsl(var(--vkColorA60));
+    background-color: color("A60");
     width: 100%;
     height: 2px;
     border: 0;
@@ -72,12 +70,11 @@
     }
 
     .vkNavigationBar a:hover {
-        background-color: hsl(var(--vkColorA80));
+        background-color: color("A80");
     }
 
-    .vkNavigationBar :is(i, img) {
-        width: 36px;
-        font-size: 36px;
+    .vkNavigationBar #{$iconSelector} {
+        @include iconSize("36px");
     }
 
     .vkNavigationBar p {
@@ -119,8 +116,8 @@
         position: sticky;
         inset-block-end: 0;
         z-index: 11;
-        background-color: hsl(var(--vkColorN90));
-        border-block-start: 1px solid hsl(var(--vkColorN70));
+        background-color: color("N90");
+        border-block-start: 1px solid color("N70");
         border-image: none;
         display: flex;
         justify-content: space-around;
@@ -133,12 +130,11 @@
     }
 
     .vkNavigationBar a:hover {
-        background-color: hsl(var(--vkColorN80));
+        background-color: color("N80");
     }
 
-    .vkNavigationBar :is(i, img) {
-        width: 30px;
-        font-size: 30px;
+    .vkNavigationBar #{$iconSelector} {
+        @include iconSize("30px");
     }
 
     .vkNavigationBar p {

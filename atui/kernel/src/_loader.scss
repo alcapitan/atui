@@ -8,7 +8,7 @@
 .vkLoader i {
     height: 50px;
     font-size: 50px;
-    color: hsl(var(--vkColorA50));
+    color: color("A50");
 }
 
 @keyframes spinner-animation {
@@ -18,9 +18,9 @@
 }
 
 .vkLoader.styleLight > i {
-    color: hsl(var(--vkColorN80));
+    color: color("N80");
 }
 
 .vkLoader.styleDark > i {
-    color: hsl(var(--vkColorN20));
+    color: color("N20");
 }

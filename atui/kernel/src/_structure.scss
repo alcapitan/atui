@@ -11,15 +11,15 @@
     }
 
     :is(.vkStructureBody, .vkStructureSection) > *:not(:last-child, .vkNotificationContainer) {
-        border-inline-end: 1px solid hsl(var(--vkColorN80));
+        border-inline-end: 1px solid color("N80");
     }
 
     .vkStructureSection > *:not(:last-child) {
         border-image: linear-gradient(
                 to bottom,
                 transparent calc(0% + 20px),
-                hsl(var(--vkColorN80)) calc(0% + 120px),
-                hsl(var(--vkColorN80)) calc(100% - 120px),
+                color("N80") calc(0% + 120px),
+                color("N80") calc(100% - 120px),
                 transparent calc(100% - 20px)
             )
             0 1 0;
@@ -32,15 +32,15 @@
     }
 
     :is(.vkStructureBody, .vkStructureSection) > *:not(:last-child, .vkNotificationContainer) {
-        border-block-end: 1px solid hsl(var(--vkColorN80));
+        border-block-end: 1px solid color("N80");
     }
 
     .vkStructureSection > *:not(:last-child) {
         border-image: linear-gradient(
                 to right,
                 transparent calc(0% + 20px),
-                hsl(var(--vkColorN80)) calc(0% + 120px),
-                hsl(var(--vkColorN80)) calc(100% - 120px),
+                color("N80") calc(0% + 120px),
+                color("N80") calc(100% - 120px),
                 transparent calc(100% - 20px)
             )
             1 0 0 0;

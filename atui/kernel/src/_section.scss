@@ -5,11 +5,11 @@
 }
 
 .vkBreadcrumb > *:last-child {
-    color: hsl(var(--vkColorA50));
+    color: color("A50");
 }
 
 .vkBreadcrumb > *:not(:last-child) {
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
     margin-inline-end: 10px;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .vkGroup > *:not(:last-child) {
-    border-block-end: 2px solid hsl(var(--vkColorN80));
+    border-block-end: 2px solid color("N80");
 }
 
 /* List */
@@ -60,8 +60,8 @@ dl.vkList dt {
 .vkScrolltop {
     border: none;
     border-radius: var(--vkBorderRadius);
-    color: hsl(var(--vkColorA20));
-    background-color: hsl(var(--vkColorA80));
+    color: color("A20");
+    background-color: color("A80");
     position: fixed;
     z-index: 15;
     inset-block-end: 30px;
@@ -97,8 +97,6 @@ dl.vkList dt {
     font-size: 1.5em;
 }
 
-.vkLogotype :is(i, img) {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
+.vkLogotype #{$iconSelector} {
+    @include iconSize("2.25rem");
 }

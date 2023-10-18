@@ -7,41 +7,41 @@
     height: 120px;
     min-width: 120px;
     max-width: 250px;
-    border: 1px solid hsl(var(--vkColorN00));
+    border: 1px solid color("N00");
     vertical-align: middle;
 }
 
 .vkSquarelink:is(:hover, :active) {
-    border-color: hsl(var(--vkColorA50));
+    border-color: color("A50");
 }
 
 .vkSquarelink:hover {
-    background-color: hsl(var(--vkColorA80));
+    background-color: color("A80");
 }
 
 .vkSquarelink:active {
-    background-color: hsl(var(--vkColorA60));
+    background-color: color("A60");
 }
 
 .vkSquarelink:is(:hover, :active) * {
-    color: hsl(var(--vkColorA50));
+    color: color("A50");
 }
 
 .vkSquarelink.styleFilled {
-    background-color: hsl(var(--vkColorA40));
+    background-color: color("A40");
     border: none;
 }
 
 .vkSquarelink.styleFilled:hover {
-    background-color: hsl(var(--vkColorA60));
+    background-color: color("A60");
 }
 
 .vkSquarelink.styleFilled:active {
-    background-color: hsl(var(--vkColorA80));
+    background-color: color("A80");
 }
 
 .vkSquarelink.styleFilled * {
-    color: hsl(var(--vkColorNFF));
+    color: color("NFF");
 }
 
 .vkSquarelink.styleNavigator {

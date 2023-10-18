@@ -15,7 +15,7 @@
 }
 
 .vkNotification {
-    background-color: hsl(var(--vkColorNFF));
+    background-color: color("NFF");
     border-radius: var(--vkBorderRadius);
     box-shadow: var(--vkShadowMedium);
     margin: 10px;
@@ -32,9 +32,8 @@
     font-size: 1.5rem;
 }
 
-.vkNotification > header :is(i, img) {
-    width: 1.5rem;
-    height: 1.5rem;
+.vkNotification > header #{$iconSelector} {
+    @include iconSize("1.5rem");
 }
 
 .vkNotification > header p {

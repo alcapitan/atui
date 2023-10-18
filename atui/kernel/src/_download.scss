@@ -2,8 +2,8 @@
 
 .vkDownload /* Element */ {
     border-radius: var(--vkBorderRadius);
-    border: 1px hsl(var(--vkColorN50)) solid;
-    background-color: hsl(var(--vkColorN90));
+    border: 1px color("N50") solid;
+    background-color: color("N90");
     padding: 10px;
     display: flex;
     align-items: center;
@@ -20,11 +20,10 @@
     flex: 1;
 }
 
-.vkDownload > div:first-child :is(i, img) {
-    width: 60px;
-    height: 60px;
+.vkDownload > div:first-child #{$iconSelector} {
     margin-inline-end: 10px;
-    font-size: 60px;
+
+    @include iconSize("60px");
 }
 
 .vkDownload > div:first-child p /* File name */ {

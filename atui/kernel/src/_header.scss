@@ -1,19 +1,17 @@
 /* Global */
 
 .vkHeader {
-    background-color: hsl(var(--vkColorN90));
+    background-color: color("N90");
     position: relative;
     width: available;
     width: stretch;
     z-index: 13;
     padding-inline: 5px;
-    border-block-end: 1px solid hsl(var(--vkColorN80));
+    border-block-end: 1px solid color("N80");
 }
 
-.vkHeader :is(i, img) {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
+.vkHeader #{$iconSelector} {
+    @include iconSize("2.25rem");
 }
 
 /* Display on specific devices */
@@ -40,7 +38,7 @@
 
 .vkHeader.styleCarousel {
     position: absolute;
-    background-color: hsl(var(--vkColorN90) / 80%);
+    background-color: color("N90", "80%");
     backdrop-filter: var(--vkBlur);
 }
 
@@ -49,24 +47,24 @@
 }
 
 .vkHeader.styleDark * {
-    color: hsl(var(--vkColorNFF));
+    color: color("NFF");
 }
 
 .vkHeader.styleAccent {
-    background-color: hsl(var(--vkColorA90));
-    border-block-end-color: hsl(var(--vkColorA80));
+    background-color: color("A90");
+    border-block-end-color: color("A80");
 }
 
 .vkHeader.styleAccent .vkHeaderSplit {
-    background-color: hsl(var(--vkColorA40));
+    background-color: color("A40");
 }
 
 .vkHeader.styleDark {
-    background-color: hsl(var(--vkColorN20));
+    background-color: color("N20");
 }
 
 .vkHeader.styleDark .vkHeaderSplit {
-    background-color: hsl(var(--vkColorN80));
+    background-color: color("N80");
 }
 
 .vkHeader.styleTransparent {
@@ -92,10 +90,8 @@
     gap: 5px;
 }
 
-.vkHeader > div.optionLevelLink :is(i, img) {
-    font-size: 1.125rem;
-    width: 1.125rem;
-    height: 1.125rem;
+.vkHeader > div.optionLevelLink #{$iconSelector} {
+    @include iconSize("1.125rem");
 }
 
 .vkHeader > div.styleScrollable {
@@ -119,7 +115,7 @@
 
 .vkHeaderSplit {
     border: 0;
-    background-color: hsl(var(--vkColorN20));
+    background-color: color("N20");
     width: 1px;
     height: 1.875rem;
 }

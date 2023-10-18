@@ -10,7 +10,7 @@
 .vkTabsHeader {
     display: flex;
     flex-wrap: wrap;
-    border-block-end: 1px hsl(var(--vkColorN80)) solid;
+    border-block-end: 1px color("N80") solid;
     padding-inline: 15px;
     padding-block-end: 5px;
 }
@@ -24,7 +24,7 @@
 .vkTabsHeader > a {
     padding: 15px;
     position: relative;
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
 }
 
 .vkTabsHeader > a * {
@@ -39,14 +39,14 @@
 
 .vkTabs .vkTabsHeader > *:hover,
 .vkTabs .vkTabsHeader .statusActive * {
-    color: hsl(var(--vkColorA50));
+    color: color("A50");
 }
 
 .vkTabs .vkTabsHeader .statusActive::after {
     content: "";
     width: calc(100% - 30px);
     height: 5px;
-    background-color: hsl(var(--vkColorA50));
+    background-color: color("A50");
     position: absolute;
     border-radius: 5px;
     transform: translateY(10px);
@@ -69,22 +69,22 @@
 /* Contrast style */
 
 .vkTabs.styleContrast {
-    border: 1px hsl(var(--vkColorN50)) solid;
+    border: 1px color("N50") solid;
 }
 
 .vkTabs.styleContrast .vkTabsHeader {
-    background-color: hsl(var(--vkColorN80));
-    border-block-end: 1px hsl(var(--vkColorN50)) solid;
+    background-color: color("N80");
+    border-block-end: 1px color("N50") solid;
     padding-block-end: 0; // To reset margin created for ::after symbol for other style
 }
 
 .vkTabs.styleContrast .vkTabsContent {
-    background-color: hsl(var(--vkColorN90));
+    background-color: color("N90");
 }
 
 .vkTabs.styleContrast .vkTabsHeader > *:hover,
 .vkTabs.styleContrast .vkTabsHeader .statusActive * {
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
 }
 
 .vkTabs.styleContrast .vkTabsHeader .statusActive::after {

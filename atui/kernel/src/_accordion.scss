@@ -1,11 +1,11 @@
 .vkAccordion {
     border-radius: var(--vkBorderRadius);
-    border: 1px hsl(var(--vkColorN50)) solid;
+    border: 1px color("N50") solid;
     overflow: hidden;
 }
 
 .vkAccordion > header {
-    background-color: hsl(var(--vkColorN80));
+    background-color: color("N80");
     padding-inline: 20px;
     min-height: 50px;
     display: flex;
@@ -14,22 +14,21 @@
 
 .vkAccordion > header h3 {
     flex: 1;
-    color: hsl(var(--vkColorN00));
+    color: color("N00");
     font-family: var(--vkFontsTitle);
     font-weight: var(--vkFontsTitleBold);
 }
 
-.vkAccordion > header :is(i, img) {
-    width: 35px;
-    height: 35px;
+.vkAccordion > header #{$iconSelector} {
     flex: 0;
     margin-inline-start: 10px;
-    font-size: 35px;
+
+    @include iconSize("35px");
 }
 
 .vkAccordion > section {
     padding: 15px;
-    background-color: hsl(var(--vkColorN90));
-    border-block-start: 1px hsl(var(--vkColorN50)) solid;
+    background-color: color("N90");
+    border-block-start: 1px color("N50") solid;
     display: none;
 }

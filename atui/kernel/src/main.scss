@@ -1,7 +1,11 @@
+@use "sass:list";
+@use "sass:string";
+@import "tools";
+
 // Core (global variables and HTML tags' properties)
 @layer core {
-    @import "color";
     @import "root";
+    @import "color";
     @import "input";
 }
 

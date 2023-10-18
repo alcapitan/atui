@@ -1,7 +1,7 @@
 .vkModal /* Background */ {
     position: fixed;
     inset: 0;
-    background-color: hsl(var(--vkColorN40) / 70%);
+    background-color: color("N40", "70%");
     z-index: 19;
     overflow-y: auto;
     max-height: 100vh;
@@ -18,7 +18,7 @@
 }
 
 .vkModal > div /* Container */ {
-    background-color: hsl(var(--vkColorNFF));
+    background-color: color("NFF");
     border-radius: var(--vkBorderRadius);
     box-shadow: var(--vkShadowMedium);
     padding: 20px;

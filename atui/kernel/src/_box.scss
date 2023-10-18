@@ -17,19 +17,17 @@ $colorOptions: (
     gap: 15px;
 }
 
-.vkBox > :is(i, img) {
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
+.vkBox > #{$iconSelector} {
+    @include iconSize("30px");
 }
 
 @each $option, $prefix in $colorOptions {
     .vkBox#{$option} {
-        border-color: hsl(var(--vkColor#{$prefix}50));
-        background-color: hsl(var(--vkColor#{$prefix}90));
+        border-color: color("#{$prefix}50");
+        background-color: color("#{$prefix}90");
     }
 
     .vkBox#{$option} * {
-        color: hsl(var(--vkColor#{$prefix}20));
+        color: color("#{$prefix}20");
     }
 }

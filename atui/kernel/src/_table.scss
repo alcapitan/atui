@@ -6,11 +6,11 @@
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle;
-    border-block: 1px hsl(var(--vkColorN50)) solid;
+    border-block: 1px color("N50") solid;
 }
 
 .vkTable caption {
-    color: hsl(var(--vkColorN50));
+    color: color("N50");
     font-style: italic;
     margin: 5px;
     font-size: 0.875rem;
