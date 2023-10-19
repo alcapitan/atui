@@ -280,24 +280,37 @@ function vkThemeToggle() {
             button.classList.replace("ti-sun", "ti-moon");
         }
     });
-    vkStorageSet("vkThemeIsDark", vkThemeIsDark(), "local");
+    vkStorageSet("vkThemeIsDark", vkThemeIsDark(), "cookie", "2h");
 }
 
 function vkThemeStartup() {
-    const systemStatus = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (systemStatus) {
-        vkThemeToggle();
-        console.info("Dark mode enabled according to the system preferences.");
-        return true;
+    const localStatus = vkStorageGet("vkThemeIsDark", "cookie");
+    /*
+        If localStatus is null, it means there is no non-expired color theme cookie.
+        If localStatus is false, it means the cookie order to keep light mode.
+        If localStatus is true, it means the cookie order to toggle dark mode.
+    */
+    if (localStatus !== null) {
+        if (localStatus) {
+            vkThemeToggle();
+            console.info("Dark mode enabled at startup according to the color theme cookie.");
+            return 0;
+        } else {
+            console.info("Light mode enabled at startup according to the color theme cookie.");
+            return 1;
+        }
+    } else {
+        console.info("No color theme cookie found, the system preferences will be applied.");
+        const systemStatus = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (systemStatus) {
+            vkThemeToggle();
+            console.info("Dark mode enabled at startup according to the system preferences.");
+            return 2;
+        } else {
+            console.info("Light mode enabled at startup according to the system preferences.");
+            return 3;
+        }
     }
-
-    const localStatus = vkStorageGet("vkThemeIsDark", "local");
-    if (localStatus) {
-        vkThemeToggle();
-        console.info("Dark mode enabled according to the memory.");
-    }
-
-    return false;
 }
 vkThemeStartup();
 

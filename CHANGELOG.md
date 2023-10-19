@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add the ability to use `.vkCarousel` in `.vkStructureBodyContent` in addition to next to `.vkHeader`.
 -   Add controls arrows to `.vkCarousel` in addition to sliding on a touchscreen.
 -   Add danger, warning, success, and info color themes to `.vkButton`.
--   Check the color mode status at startup in localStorage instead of cookies.
+-   The color theme status cookie is checked before the system preferences at startup, plus its lifetime has been set to 2 hours for better startup color theme choice.
 -   Rewrite input stylesheet.
 -   Rewrite Squarelink :
     -   Change HTML structure.
