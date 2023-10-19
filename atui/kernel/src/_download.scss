@@ -1,7 +1,7 @@
 /* Global */
 
-.vkDownload /* Element */ {
-    border-radius: var(--vkBorderRadius);
+.#{$prefix}Download /* Element */ {
+    border-radius: var(--#{$prefix}BorderRadius);
     border: 1px color("N50") solid;
     background-color: color("N90");
     padding: 10px;
@@ -10,44 +10,44 @@
     flex-direction: row;
 }
 
-.vkDownload > div /* Containers */ {
+.#{$prefix}Download > div /* Containers */ {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-.vkDownload > div:first-child /* Metadata container */ {
+.#{$prefix}Download > div:first-child /* Metadata container */ {
     flex: 1;
 }
 
-.vkDownload > div:first-child #{$iconSelector} {
+.#{$prefix}Download > div:first-child #{$iconSelector} {
     margin-inline-end: 10px;
 
     @include iconSize("60px");
 }
 
-.vkDownload > div:first-child p /* File name */ {
+.#{$prefix}Download > div:first-child p /* File name */ {
     font-weight: bold;
     font-size: 1.125rem;
 }
 
-.vkDownload > div:last-child /* Button container */ {
+.#{$prefix}Download > div:last-child /* Button container */ {
     justify-content: flex-end;
 }
 
 /* Responsive */
 
 @media (width < 480px) /* Smartphones */ {
-    .vkDownload /* Element */ {
+    .#{$prefix}Download /* Element */ {
         flex-direction: column;
     }
 
-    .vkDownload > div:last-child /* Button container */ {
+    .#{$prefix}Download > div:last-child /* Button container */ {
         justify-content: space-around;
         margin-block-start: 10px;
     }
 
-    .vkDownload > div:last-child .vkButton {
+    .#{$prefix}Download > div:last-child .#{$prefix}Button {
         margin-block: 0;
     }
 }

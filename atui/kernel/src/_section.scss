@@ -1,19 +1,19 @@
 /* Breadcrumb */
 
-.vkBreadcrumb > * {
+.#{$prefix}Breadcrumb > * {
     display: inline-block;
 }
 
-.vkBreadcrumb > *:last-child {
+.#{$prefix}Breadcrumb > *:last-child {
     color: color("A50");
 }
 
-.vkBreadcrumb > *:not(:last-child) {
+.#{$prefix}Breadcrumb > *:not(:last-child) {
     color: color("N00");
     margin-inline-end: 10px;
 }
 
-.vkBreadcrumb > *:not(:last-child)::after {
+.#{$prefix}Breadcrumb > *:not(:last-child)::after {
     content: "/";
     margin-inline-start: 10px;
     font-weight: normal;
@@ -21,45 +21,45 @@
 
 /* Group */
 
-.vkGroup {
+.#{$prefix}Group {
     display: flex;
     flex-direction: column;
 }
 
-.vkGroup > * {
+.#{$prefix}Group > * {
     padding: 15px 20px;
 }
 
-.vkGroup > *:not(:last-child) {
+.#{$prefix}Group > *:not(:last-child) {
     border-block-end: 2px solid color("N80");
 }
 
 /* List */
 
-dl.vkList :is(dt, dd),
-:is(ul, ol).vkList li {
+dl.#{$prefix}List :is(dt, dd),
+:is(ul, ol).#{$prefix}List li {
     margin-block: 5px;
 }
 
-dl.vkList dd,
-:is(ul, ol).vkList li {
+dl.#{$prefix}List dd,
+:is(ul, ol).#{$prefix}List li {
     margin-inline-start: 10px;
 }
 
-dl.vkList dt {
+dl.#{$prefix}List dt {
     font-weight: bold;
 }
 
-:is(ul, ol).vkList {
+:is(ul, ol).#{$prefix}List {
     padding-inline-start: 0;
     list-style: none;
 }
 
 /* Scrolltop */
 
-.vkScrolltop {
+.#{$prefix}Scrolltop {
     border: none;
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
     color: color("A20");
     background-color: color("A80");
     position: fixed;
@@ -69,34 +69,34 @@ dl.vkList dt {
     font-size: 2.25rem;
     width: auto;
     height: auto;
-    box-shadow: var(--vkShadowLight);
+    box-shadow: var(--#{$prefix}ShadowLight);
     display: none;
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .vkScrolltop {
+    .#{$prefix}Scrolltop {
         inset-inline-end: 30px;
     }
 }
 
-.vkScrolltop.statusActive {
+.#{$prefix}Scrolltop.statusActive {
     display: block;
 }
 
 /* Logotype */
 
-.vkLogotype {
+.#{$prefix}Logotype {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.vkLogotype * {
-    font-family: var(--vkFontsTitle);
-    font-weight: var(--vkFontsTitleBold);
+.#{$prefix}Logotype * {
+    font-family: var(--#{$prefix}FontsTitle);
+    font-weight: var(--#{$prefix}FontsTitleBold);
     font-size: 1.5em;
 }
 
-.vkLogotype #{$iconSelector} {
+.#{$prefix}Logotype #{$iconSelector} {
     @include iconSize("2.25rem");
 }

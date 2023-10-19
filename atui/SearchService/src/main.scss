@@ -1,15 +1,17 @@
+$subprefix: "ss";
+
 @import "../../kernel/src/tools";
 
 /* Panel */
 
-.ssPanel {
+.#{$subprefix}Panel {
     border-radius: 25px;
     display: block;
 }
 
-.ssPanel.statusActive {
+.#{$subprefix}Panel.statusActive {
     background-color: color("N90");
-    box-shadow: var(--vkShadowMedium);
+    box-shadow: var(--#{$prefix}ShadowMedium);
     position: fixed;
     top: 0;
     left: 0;
@@ -19,79 +21,79 @@
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .ssPanel.statusActive {
+    .#{$subprefix}Panel.statusActive {
         width: 90%;
         margin-inline: 5%;
     }
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .ssPanel.statusActive {
+    .#{$subprefix}Panel.statusActive {
         width: 500px;
         margin-inline: 50%;
         transform: translateX(-50%);
     }
 }
 
-.ssPanel.statusActive > * {
+.#{$subprefix}Panel.statusActive > * {
     margin-block-end: 10px;
 }
 
-.ssPanel > hr {
+.#{$subprefix}Panel > hr {
     background-color: color("N70");
     border: none;
     height: 1px;
 }
 
-.ssPanel:not(.statusActive) {
+.#{$subprefix}Panel:not(.statusActive) {
     width: fit-content;
 }
 
-.ssPanel.statusActive > *:not(.ssBar) {
+.#{$subprefix}Panel.statusActive > *:not(.#{$subprefix}Bar) {
     margin-inline: 10px;
 }
 
 /* Search bar */
 
-.ssPanel:not(.statusActive) > *:not(.ssBar) {
+.#{$subprefix}Panel:not(.statusActive) > *:not(.#{$subprefix}Bar) {
     display: none;
 }
 
-.ssPanel.statusActive .ssBar {
+.#{$subprefix}Panel.statusActive .#{$subprefix}Bar {
     margin-block-end: 15px;
 }
 
-.ssPanel.statusActive .ssBar div.styleGroup {
+.#{$subprefix}Panel.statusActive .#{$subprefix}Bar div.styleGroup {
     width: available;
     width: stretch;
 }
 
-.ssBar div.styleGroup {
-    box-shadow: var(--vkShadowLight);
+.#{$subprefix}Bar div.styleGroup {
+    box-shadow: var(--#{$prefix}ShadowLight);
 }
 
-.ssPanel .ssBar div.styleGroup input {
+.#{$subprefix}Panel .#{$subprefix}Bar div.styleGroup input {
     width: 100%;
 }
 
-.ssPanel .ssBar div.styleGroup i {
+.#{$subprefix}Panel .#{$subprefix}Bar div.styleGroup i {
     font-size: 1.125rem;
     width: 1.125rem;
     height: 1.125rem;
 }
 
-.ssTrigger {
+.#{$subprefix}Trigger {
     display: none;
 }
 
 /* Responsive in Header */
 
 @media (width < 1024px) /* Smartphones & tablets */ {
-    .vkHeader .ssPanel:not(.statusActive) div.styleGroup {
+    .#{$prefix}Header .#{$subprefix}Panel:not(.statusActive) div.styleGroup {
         display: none;
     }
 
-    .vkHeader .ssPanel:not(.statusActive) .ssTrigger {
+    .#{$prefix}Header .#{$subprefix}Panel:not(.statusActive) .#{$subprefix}Trigger {
         display: block;
         padding: 5px;
         font-size: 1.875rem;

@@ -1,15 +1,15 @@
-.vkTable table {
+.#{$prefix}Table table {
     border-collapse: collapse;
 }
 
-.vkTable :is(td, th) {
+.#{$prefix}Table :is(td, th) {
     padding: 10px 20px;
     text-align: center;
     vertical-align: middle;
     border-block: 1px color("N50") solid;
 }
 
-.vkTable caption {
+.#{$prefix}Table caption {
     color: color("N50");
     font-style: italic;
     margin: 5px;
@@ -17,7 +17,7 @@
     caption-side: bottom;
 }
 
-.vkTable th {
+.#{$prefix}Table th {
     font-weight: bold;
-    font-family: var(--vkFontsTitle);
+    font-family: var(--#{$prefix}FontsTitle);
 }

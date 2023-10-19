@@ -1,4 +1,4 @@
-.vkModal /* Background */ {
+.#{$prefix}Modal /* Background */ {
     position: fixed;
     inset: 0;
     background-color: color("N40", "70%");
@@ -13,14 +13,14 @@
     display: none;
 }
 
-.vkModal.statusShow {
+.#{$prefix}Modal.statusShow {
     display: flex;
 }
 
-.vkModal > div /* Container */ {
+.#{$prefix}Modal > div /* Container */ {
     background-color: color("NFF");
-    border-radius: var(--vkBorderRadius);
-    box-shadow: var(--vkShadowMedium);
+    border-radius: var(--#{$prefix}BorderRadius);
+    box-shadow: var(--#{$prefix}ShadowMedium);
     padding: 20px;
     min-width: 40%;
     min-height: 20%;

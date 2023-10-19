@@ -1,24 +1,24 @@
-.vkCard {
-    border-radius: var(--vkBorderRadius);
+.#{$prefix}Card {
+    border-radius: var(--#{$prefix}BorderRadius);
     overflow: hidden;
     border: 1px solid color("N50");
     background-color: color("N90");
 }
 
-.vkCard > img {
+.#{$prefix}Card > img {
     display: block;
     width: 100%;
     max-height: 60vh;
     object-fit: cover;
 }
 
-.vkCard > div > * {
+.#{$prefix}Card > div > * {
     margin: 10px 15px;
 }
 
-/** set font-weight: bold for .vkCardHighlight > * for more logical appearance if needed */
+/** set font-weight: bold for .#{$prefix}CardHighlight > * for more logical appearance if needed */
 
-.vkCard:not(.styleOverlay) .vkCardHighlight {
+.#{$prefix}Card:not(.styleOverlay) .#{$prefix}CardHighlight {
     background-color: color("N80");
     border-block: 1px solid color("N50");
     margin: 0;
@@ -27,19 +27,19 @@
 
 /* Overlay style */
 
-.vkCard.styleOverlay {
+.#{$prefix}Card.styleOverlay {
     position: relative;
 }
 
-.vkCard.styleOverlay * {
+.#{$prefix}Card.styleOverlay * {
     color: #fff;
 }
 
-.vkCard.styleOverlay > img {
+.#{$prefix}Card.styleOverlay > img {
     filter: brightness(0.7);
 }
 
-.vkCard.styleOverlay > div {
+.#{$prefix}Card.styleOverlay > div {
     position: absolute;
     top: 0;
 

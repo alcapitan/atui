@@ -4,9 +4,9 @@ input,
 progress,
 textarea,
 select,
-.vkInputSubmit,
+.#{$prefix}InputSubmit,
 input[type="file"]::file-selector-button {
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
     border: 1px solid color("N70");
     accent-color: color("A50");
     margin: 5px;
@@ -32,15 +32,15 @@ input[type="color"] {
 }
 
 input[type="color"]::-webkit-color-swatch {
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
 }
 
 input[type="color"]::-moz-color-swatch {
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
 }
 
 input[type="image"],
-.vkInputSubmit {
+.#{$prefix}InputSubmit {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem;
@@ -67,13 +67,13 @@ progress {
 
 fieldset {
     border: 1px solid color("A40");
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
     padding: 10px;
     padding-block-start: 0;
 }
 
 fieldset legend {
-    font-family: var(--vkFontsTitle);
+    font-family: var(--#{$prefix}FontsTitle);
     padding-inline: 10px;
     font-size: 1.125rem;
 }
@@ -86,7 +86,7 @@ form div.styleGroup {
     background-color: color("NFF");
     border: 1px solid color("N70");
     display: inline-flex;
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
 }
 
 form div.styleGroup.stylePill {

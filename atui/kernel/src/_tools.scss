@@ -1,10 +1,14 @@
+/* Prefix */
+
+$prefix: "vk";
+
 /* Colors */
 
 @function color($color, $opacity: 100%) {
     @if $opacity == 100% {
-        @return hsl(var(--vkColor#{$color}));
+        @return hsl(var(--#{$prefix}Color#{$color}));
     } @else {
-        @return hsl(var(--vkColor#{$color}) / #{$opacity});
+        @return hsl(var(--#{$prefix}Color#{$color}) / #{$opacity});
     }
 }
 

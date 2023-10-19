@@ -1,16 +1,16 @@
 /* Global */
 
-.vkCarousel {
-    border-radius: var(--vkBorderRadius);
+.#{$prefix}Carousel {
+    border-radius: var(--#{$prefix}BorderRadius);
     overflow: hidden;
     position: relative;
 }
 
-.vkHeader + .vkCarousel {
+.#{$prefix}Header + .#{$prefix}Carousel {
     border-radius: 0;
 }
 
-.vkCarousel .vkCarouselSlides {
+.#{$prefix}Carousel .#{$prefix}CarouselSlides {
     display: flex;
     overflow: auto;
     scroll-snap-type: x mandatory;
@@ -19,14 +19,14 @@
     max-height: 75vh;
 }
 
-.vkCarousel .vkCarouselSlides > div /* Slide */ {
+.#{$prefix}Carousel .#{$prefix}CarouselSlides > div /* Slide */ {
     position: relative;
     flex: 0 0 100%;
     scroll-snap-align: center;
     background-color: color("N10");
 }
 
-.vkCarousel .vkCarouselSlides > div > img /* Illustration in slide */ {
+.#{$prefix}Carousel .#{$prefix}CarouselSlides > div > img /* Illustration in slide */ {
     display: block;
     object-fit: cover;
     object-position: center;
@@ -34,7 +34,7 @@
     height: 100%;
 }
 
-.vkCarousel .vkCarouselSlides > div > div /* Caption in slide */ {
+.#{$prefix}Carousel .#{$prefix}CarouselSlides > div > div /* Caption in slide */ {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, color("N90", "60%") 50%, transparent 100%);
@@ -50,12 +50,12 @@
 
 /* Controls */
 
-.vkCarousel .vkCarouselControls {
+.#{$prefix}Carousel .#{$prefix}CarouselControls {
     position: absolute;
     inset: 0;
 }
 
-.vkCarousel .vkCarouselControls :is(.vkCarouselControlsLeft, .vkCarouselControlsRight) {
+.#{$prefix}Carousel .#{$prefix}CarouselControls :is(.#{$prefix}CarouselControlsLeft, .#{$prefix}CarouselControlsRight) {
     font-size: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
@@ -66,10 +66,10 @@
     z-index: 10;
 }
 
-.vkCarousel .vkCarouselControls .vkCarouselControlsLeft {
+.#{$prefix}Carousel .#{$prefix}CarouselControls .#{$prefix}CarouselControlsLeft {
     left: 10px;
 }
 
-.vkCarousel .vkCarouselControls .vkCarouselControlsRight {
+.#{$prefix}Carousel .#{$prefix}CarouselControls .#{$prefix}CarouselControlsRight {
     right: 10px;
 }

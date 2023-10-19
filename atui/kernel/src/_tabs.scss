@@ -1,13 +1,13 @@
 /* Global */
 
-.vkTabs {
-    border-radius: var(--vkBorderRadius);
+.#{$prefix}Tabs {
+    border-radius: var(--#{$prefix}BorderRadius);
     overflow: hidden;
 }
 
 /* Header */
 
-.vkTabsHeader {
+.#{$prefix}TabsHeader {
     display: flex;
     flex-wrap: wrap;
     border-block-end: 1px color("N80") solid;
@@ -16,33 +16,33 @@
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .vkTabsHeader {
+    .#{$prefix}TabsHeader {
         padding-inline: 5px;
     }
 }
 
-.vkTabsHeader > a {
+.#{$prefix}TabsHeader > a {
     padding: 15px;
     position: relative;
     color: color("N00");
 }
 
-.vkTabsHeader > a * {
+.#{$prefix}TabsHeader > a * {
     color: inherit;
-    font-family: var(--vkFontsTitle);
+    font-family: var(--#{$prefix}FontsTitle);
     font-size: 1.125rem;
 }
 
-.vkTabsHeader .statusActive {
+.#{$prefix}TabsHeader .statusActive {
     font-weight: bold;
 }
 
-.vkTabs .vkTabsHeader > *:hover,
-.vkTabs .vkTabsHeader .statusActive * {
+.#{$prefix}Tabs .#{$prefix}TabsHeader > *:hover,
+.#{$prefix}Tabs .#{$prefix}TabsHeader .statusActive * {
     color: color("A50");
 }
 
-.vkTabs .vkTabsHeader .statusActive::after {
+.#{$prefix}Tabs .#{$prefix}TabsHeader .statusActive::after {
     content: "";
     width: calc(100% - 30px);
     height: 5px;
@@ -54,39 +54,39 @@
 
 /* Content */
 
-.vkTabsContent {
+.#{$prefix}TabsContent {
     padding: 15px;
 }
 
-.vkTabsContent div {
+.#{$prefix}TabsContent div {
     display: none;
 }
 
-.vkTabsContent .statusActive {
+.#{$prefix}TabsContent .statusActive {
     display: block;
 }
 
 /* Contrast style */
 
-.vkTabs.styleContrast {
+.#{$prefix}Tabs.styleContrast {
     border: 1px color("N50") solid;
 }
 
-.vkTabs.styleContrast .vkTabsHeader {
+.#{$prefix}Tabs.styleContrast .#{$prefix}TabsHeader {
     background-color: color("N80");
     border-block-end: 1px color("N50") solid;
     padding-block-end: 0; // To reset margin created for ::after symbol for other style
 }
 
-.vkTabs.styleContrast .vkTabsContent {
+.#{$prefix}Tabs.styleContrast .#{$prefix}TabsContent {
     background-color: color("N90");
 }
 
-.vkTabs.styleContrast .vkTabsHeader > *:hover,
-.vkTabs.styleContrast .vkTabsHeader .statusActive * {
+.#{$prefix}Tabs.styleContrast .#{$prefix}TabsHeader > *:hover,
+.#{$prefix}Tabs.styleContrast .#{$prefix}TabsHeader .statusActive * {
     color: color("N00");
 }
 
-.vkTabs.styleContrast .vkTabsHeader .statusActive::after {
+.#{$prefix}Tabs.styleContrast .#{$prefix}TabsHeader .statusActive::after {
     all: unset;
 }

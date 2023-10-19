@@ -1,63 +1,63 @@
 /* Audio player */
 
-.mpAudio .mpCover {
+.#{$subprefix}Audio .#{$subprefix}Cover {
     width: 150px;
     height: 150px;
     background-color: color("N70");
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
     overflow: hidden;
 }
 
-.mpAudio .mpCover img {
+.#{$subprefix}Audio .#{$subprefix}Cover img {
     height: 100%;
 }
 
-.mpAudio :is(.mpPanel, .mpDashboard) {
+.#{$subprefix}Audio :is(.#{$subprefix}Panel, .#{$subprefix}Dashboard) {
     display: flex;
 }
 
-.mpAudio .mpPanel {
+.#{$subprefix}Audio .#{$subprefix}Panel {
     gap: 15px;
 }
 
 @media (width >= 768px) /* Computers */ {
-    .mpAudio .mpDashboard {
+    .#{$subprefix}Audio .#{$subprefix}Dashboard {
         margin-block: 10px;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .mpAudio .mpPanel {
+    .#{$subprefix}Audio .#{$subprefix}Panel {
         flex-direction: column;
         align-items: center;
     }
 
-    .mpAudio :is(.mpCover, .mpInfo) {
+    .#{$subprefix}Audio :is(.#{$subprefix}Cover, .#{$subprefix}Info) {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.mpAudio .mpDashboard {
+.#{$subprefix}Audio .#{$subprefix}Dashboard {
     flex: 1;
     row-gap: 10px;
 }
 
-.mpAudio .mpInfo > p {
+.#{$subprefix}Audio .#{$subprefix}Info > p {
     font-size: 1.125rem;
     font-weight: bold;
 }
 
-.mpAudio .mpInfoTitle {
+.#{$subprefix}Audio .#{$subprefix}InfoTitle {
     color: color("A40");
 }
 
-.mpAudio .mpClose {
+.#{$subprefix}Audio .#{$subprefix}Close {
     display: none;
 }
 
-.mpAudio .mpProgress {
-    border-radius: 0 0 var(--vkBorderRadius) var(--vkBorderRadius);
+.#{$subprefix}Audio .#{$subprefix}Progress {
+    border-radius: 0 0 var(--#{$prefix}BorderRadius) var(--#{$prefix}BorderRadius);
     overflow: hidden;
 }

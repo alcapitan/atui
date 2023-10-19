@@ -1,6 +1,6 @@
 /* Global */
 
-.vkNotificationContainer {
+.#{$prefix}NotificationContainer {
     position: fixed;
     inset: 0 20% auto;
     z-index: 16;
@@ -9,56 +9,56 @@
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .vkNotificationContainer {
+    .#{$prefix}NotificationContainer {
         inset-inline: 0;
     }
 }
 
-.vkNotification {
+.#{$prefix}Notification {
     background-color: color("NFF");
-    border-radius: var(--vkBorderRadius);
-    box-shadow: var(--vkShadowMedium);
+    border-radius: var(--#{$prefix}BorderRadius);
+    box-shadow: var(--#{$prefix}ShadowMedium);
     margin: 10px;
     padding: 20px;
 }
 
-.vkNotification > header {
+.#{$prefix}Notification > header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.vkNotification > header * {
+.#{$prefix}Notification > header * {
     font-size: 1.5rem;
 }
 
-.vkNotification > header #{$iconSelector} {
+.#{$prefix}Notification > header #{$iconSelector} {
     @include iconSize("1.5rem");
 }
 
-.vkNotification > header p {
-    font-weight: var(--vkFontsTitleBold);
-    font-family: var(--vkFontsTitle);
+.#{$prefix}Notification > header p {
+    font-weight: var(--#{$prefix}FontsTitleBold);
+    font-family: var(--#{$prefix}FontsTitle);
 }
 
-.vkNotification > section {
+.#{$prefix}Notification > section {
     margin: 10px;
 }
 
 /* Mini style */
 
-.vkNotification.styleMini > header p {
+.#{$prefix}Notification.styleMini > header p {
     all: unset;
 }
 
-.vkNotification.styleMini > section {
+.#{$prefix}Notification.styleMini > section {
     display: none;
 }
 
-.vkNotification.styleMini > footer {
+.#{$prefix}Notification.styleMini > footer {
     margin-block-start: 10px;
 }
 
-.vkNotification.styleMini > footer .vkButton {
+.#{$prefix}Notification.styleMini > footer .#{$prefix}Button {
     margin: 0;
 }

@@ -49,201 +49,201 @@ $colorOptions: (
 
 /* Global */
 
-.vkButton {
+.#{$prefix}Button {
     margin: 10px;
     padding: 10px 20px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    border-radius: var(--vkBorderRadius);
+    border-radius: var(--#{$prefix}BorderRadius);
     border: none;
     background-color: transparent;
     vertical-align: middle;
 }
 
-.vkButton #{$iconSelector} {
+.#{$prefix}Button #{$iconSelector} {
     @include iconSize("1em");
 }
 
 /* Disabled */
 
-.vkButton:is(:disabled, .optionDisabled) {
+.#{$prefix}Button:is(:disabled, .optionDisabled) {
     opacity: 0.5;
 }
 
 /* Pill */
 
-.vkButton.stylePill {
+.#{$prefix}Button.stylePill {
     border-radius: 21px;
 }
 
 /* Empty */
 
-.vkButton:not(:has(*)) {
+.#{$prefix}Button:not(:has(*)) {
     height: 42px;
 }
 
-.vkButton.optionEmpty,
-.vkButton:empty
+.#{$prefix}Button.optionEmpty,
+.#{$prefix}Button:empty
 /* Necessary duplication otherwise Firefox doesn't work  */ {
     height: 42px;
 }
 
 /* Standard */
 
-.vkButton,
-.vkButton * {
+.#{$prefix}Button,
+.#{$prefix}Button * {
     font-size: 1rem;
 }
 
-@each $option, $prefix in $colorOptions {
-    .vkButton#{$option},
-    .vkButton#{$option} * {
+@each $option, $palette in $colorOptions {
+    .#{$prefix}Button#{$option},
+    .#{$prefix}Button#{$option} * {
         @if $option == "" {
-            color: color(#{$prefix}#{getColor(1, 1, 1)});
+            color: color(#{$palette}#{getColor(1, 1, 1)});
         } @else {
-            color: color(#{$prefix}#{getColor(1, 2, 1)});
+            color: color(#{$palette}#{getColor(1, 2, 1)});
         }
     }
 }
 
 /* Standard separator */
 
-.vkButton hr {
+.#{$prefix}Button hr {
     border: 0;
     width: 1px;
     height: 1em;
 }
 
-@each $option, $prefix in $colorOptions {
-    .vkButton#{$option} hr {
+@each $option, $palette in $colorOptions {
+    .#{$prefix}Button#{$option} hr {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(1, 1, 1)});
+            background-color: color(#{$palette}#{getColor(1, 1, 1)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(1, 2, 1)});
+            background-color: color(#{$palette}#{getColor(1, 2, 1)});
         }
     }
 
-    .vkButton#{$option}#{$notDisabled}:hover {
+    .#{$prefix}Button#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(1, 1, 3)});
+            background-color: color(#{$palette}#{getColor(1, 1, 3)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(1, 2, 3)});
+            background-color: color(#{$palette}#{getColor(1, 2, 3)});
         }
     }
 
-    .vkButton#{$option}#{$notDisabled}:active {
+    .#{$prefix}Button#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(1, 1, 4)});
+            background-color: color(#{$palette}#{getColor(1, 1, 4)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(1, 2, 4)});
+            background-color: color(#{$palette}#{getColor(1, 2, 4)});
         }
     }
 }
 
 /* Filled */
 
-@each $option, $prefix in $colorOptions {
-    .vkButton.styleFilled#{$option} {
+@each $option, $palette in $colorOptions {
+    .#{$prefix}Button.styleFilled#{$option} {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(2, 1, 2)});
+            background-color: color(#{$palette}#{getColor(2, 1, 2)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(2, 2, 2)});
+            background-color: color(#{$palette}#{getColor(2, 2, 2)});
         }
     }
 
-    .vkButton.styleFilled#{$option}#{$notDisabled}:hover {
+    .#{$prefix}Button.styleFilled#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(2, 1, 3)});
+            background-color: color(#{$palette}#{getColor(2, 1, 3)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(2, 2, 3)});
+            background-color: color(#{$palette}#{getColor(2, 2, 3)});
         }
     }
 
-    .vkButton.styleFilled#{$option}#{$notDisabled}:active {
+    .#{$prefix}Button.styleFilled#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(2, 1, 4)});
+            background-color: color(#{$palette}#{getColor(2, 1, 4)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(2, 2, 4)});
+            background-color: color(#{$palette}#{getColor(2, 2, 4)});
         }
     }
 }
 
-.vkButton.styleFilled,
-.vkButton.styleFilled * {
+.#{$prefix}Button.styleFilled,
+.#{$prefix}Button.styleFilled * {
     color: color("N#{getColor(2, 1, 1)}"); // stylelint-disable-line custom-property-pattern
 }
 
-.vkButton.styleFilled hr {
+.#{$prefix}Button.styleFilled hr {
     background-color: color("N#{getColor(2, 1, 1)}"); // stylelint-disable-line custom-property-pattern
 }
 
 /* Tinted */
 
-@each $option, $prefix in $colorOptions {
-    .vkButton.styleTinted#{$option},
-    .vkButton.styleTinted#{$option} * {
+@each $option, $palette in $colorOptions {
+    .#{$prefix}Button.styleTinted#{$option},
+    .#{$prefix}Button.styleTinted#{$option} * {
         @if $option == "" {
-            color: color(#{$prefix}#{getColor(3, 1, 1)});
+            color: color(#{$palette}#{getColor(3, 1, 1)});
         } @else {
-            color: color(#{$prefix}#{getColor(3, 2, 1)});
+            color: color(#{$palette}#{getColor(3, 2, 1)});
         }
     }
 
-    .vkButton.styleTinted#{$option} {
+    .#{$prefix}Button.styleTinted#{$option} {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(3, 1, 2)});
+            background-color: color(#{$palette}#{getColor(3, 1, 2)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(3, 2, 2)});
+            background-color: color(#{$palette}#{getColor(3, 2, 2)});
         }
     }
 
-    .vkButton.styleTinted#{$option}#{$notDisabled}:hover {
+    .#{$prefix}Button.styleTinted#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(3, 1, 3)});
+            background-color: color(#{$palette}#{getColor(3, 1, 3)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(3, 2, 3)});
+            background-color: color(#{$palette}#{getColor(3, 2, 3)});
         }
     }
 
-    .vkButton.styleTinted#{$option}#{$notDisabled}:active {
+    .#{$prefix}Button.styleTinted#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            background-color: color(#{$prefix}#{getColor(3, 1, 4)});
+            background-color: color(#{$palette}#{getColor(3, 1, 4)});
         } @else {
-            background-color: color(#{$prefix}#{getColor(3, 2, 4)});
+            background-color: color(#{$palette}#{getColor(3, 2, 4)});
         }
     }
 }
 
 /* Outlined */
 
-.vkButton.styleOutlined {
+.#{$prefix}Button.styleOutlined {
     border-width: 2px;
     border-style: solid;
 }
 
-@each $option, $prefix in $colorOptions {
-    .vkButton.styleOutlined#{$option} {
+@each $option, $palette in $colorOptions {
+    .#{$prefix}Button.styleOutlined#{$option} {
         @if $option == "" {
-            border-color: color(#{$prefix}#{getColor(4, 1, 1)});
+            border-color: color(#{$palette}#{getColor(4, 1, 1)});
         } @else {
-            border-color: color(#{$prefix}#{getColor(4, 2, 1)});
+            border-color: color(#{$palette}#{getColor(4, 2, 1)});
         }
     }
 
-    .vkButton.styleOutlined#{$option}#{$notDisabled}:hover {
+    .#{$prefix}Button.styleOutlined#{$option}#{$notDisabled}:hover {
         @if $option == "" {
-            border-color: color(#{$prefix}#{getColor(4, 1, 3)});
+            border-color: color(#{$palette}#{getColor(4, 1, 3)});
         } @else {
-            border-color: color(#{$prefix}#{getColor(4, 2, 3)});
+            border-color: color(#{$palette}#{getColor(4, 2, 3)});
         }
     }
 
-    .vkButton.styleOutlined#{$option}#{$notDisabled}:active {
+    .#{$prefix}Button.styleOutlined#{$option}#{$notDisabled}:active {
         @if $option == "" {
-            border-color: color(#{$prefix}#{getColor(4, 1, 4)});
+            border-color: color(#{$palette}#{getColor(4, 1, 4)});
         } @else {
-            border-color: color(#{$prefix}#{getColor(4, 2, 4)});
+            border-color: color(#{$palette}#{getColor(4, 2, 4)});
         }
     }
 }

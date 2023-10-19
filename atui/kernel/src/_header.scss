@@ -1,6 +1,6 @@
 /* Global */
 
-.vkHeader {
+.#{$prefix}Header {
     background-color: color("N90");
     position: relative;
     width: available;
@@ -10,64 +10,64 @@
     border-block-end: 1px solid color("N80");
 }
 
-.vkHeader #{$iconSelector} {
+.#{$prefix}Header #{$iconSelector} {
     @include iconSize("2.25rem");
 }
 
 /* Display on specific devices */
 
 @media (1024px <= width) /* Computers */ {
-    .vkHeader *.optionHideOnDesktop {
+    .#{$prefix}Header *.optionHideOnDesktop {
         display: none;
     }
 }
 
 @media (480px <= width < 1024px) /* Tablets */ {
-    .vkHeader *.optionHideOnTablet {
+    .#{$prefix}Header *.optionHideOnTablet {
         display: none;
     }
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .vkHeader *.optionHideOnPhone {
+    .#{$prefix}Header *.optionHideOnPhone {
         display: none;
     }
 }
 
 /* Styles */
 
-.vkHeader.styleCarousel {
+.#{$prefix}Header.styleCarousel {
     position: absolute;
     background-color: color("N90", "80%");
-    backdrop-filter: var(--vkBlur);
+    backdrop-filter: var(--#{$prefix}Blur);
 }
 
-.vkHeader.styleFixed {
+.#{$prefix}Header.styleFixed {
     position: fixed;
 }
 
-.vkHeader.styleDark * {
+.#{$prefix}Header.styleDark * {
     color: color("NFF");
 }
 
-.vkHeader.styleAccent {
+.#{$prefix}Header.styleAccent {
     background-color: color("A90");
     border-block-end-color: color("A80");
 }
 
-.vkHeader.styleAccent .vkHeaderSplit {
+.#{$prefix}Header.styleAccent .#{$prefix}HeaderSplit {
     background-color: color("A40");
 }
 
-.vkHeader.styleDark {
+.#{$prefix}Header.styleDark {
     background-color: color("N20");
 }
 
-.vkHeader.styleDark .vkHeaderSplit {
+.#{$prefix}Header.styleDark .#{$prefix}HeaderSplit {
     background-color: color("N80");
 }
 
-.vkHeader.styleTransparent {
+.#{$prefix}Header.styleTransparent {
     background-color: transparent;
     border-block-end: none;
     backdrop-filter: none;
@@ -75,7 +75,7 @@
 
 /* Levels */
 
-.vkHeader > div {
+.#{$prefix}Header > div {
     display: flex;
     align-items: center;
     column-gap: 10px;
@@ -84,36 +84,36 @@
     padding: 5px;
 }
 
-.vkHeader > div > * {
+.#{$prefix}Header > div > * {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.vkHeader > div.optionLevelLink #{$iconSelector} {
+.#{$prefix}Header > div.optionLevelLink #{$iconSelector} {
     @include iconSize("1.125rem");
 }
 
-.vkHeader > div.styleScrollable {
+.#{$prefix}Header > div.styleScrollable {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     justify-content: unset;
     flex-wrap: nowrap;
 }
 
-.vkHeader > div.styleScrollable > * {
+.#{$prefix}Header > div.styleScrollable > * {
     flex: none;
     scroll-snap-align: start;
 }
 
 /* Separators */
 
-.vkHeaderSpace {
+.#{$prefix}HeaderSpace {
     flex: 1;
     border: none;
 }
 
-.vkHeaderSplit {
+.#{$prefix}HeaderSplit {
     border: 0;
     background-color: color("N20");
     width: 1px;

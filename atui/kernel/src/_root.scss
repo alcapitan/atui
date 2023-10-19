@@ -1,16 +1,16 @@
 :root {
     font-size: 16px;
 
-    --vkFontsTitle: system-ui;
-    --vkFontsText: system-ui;
-    --vkFontsSpecial: cursive;
-    --vkFontsMonospace: monospace;
-    --vkFontsTitleBold: bold; /* or normal */
-    --vkBlur: blur(5px);
-    --vkBorderRadius: 10px;
-    --vkShadowLight: #{color("N00", "20%")} 0px 3px 8px; /* #5 */
-    --vkShadowMedium: #{color("N00", "30%")} 0px 5px 15px; /* #3 */
-    --vkShadowHeavy: #{color("N00", "80%")} 0px 20px 30px -10px; /* #20 */
+    --#{$prefix}FontsTitle: system-ui;
+    --#{$prefix}FontsText: system-ui;
+    --#{$prefix}FontsSpecial: cursive;
+    --#{$prefix}FontsMonospace: monospace;
+    --#{$prefix}FontsTitleBold: bold; /* or normal */
+    --#{$prefix}Blur: blur(5px);
+    --#{$prefix}BorderRadius: 10px;
+    --#{$prefix}ShadowLight: #{color("N00", "20%")} 0px 3px 8px; /* #5 */
+    --#{$prefix}ShadowMedium: #{color("N00", "30%")} 0px 5px 15px; /* #3 */
+    --#{$prefix}ShadowHeavy: #{color("N00", "80%")} 0px 20px 30px -10px; /* #20 */
 }
 
 /* Font size list convention : 
@@ -39,7 +39,7 @@ body {
 }
 
 * {
-    font-family: var(--vkFontsText);
+    font-family: var(--#{$prefix}FontsText);
     color: color("N00");
     word-wrap: anywhere;
     margin: 0;
@@ -58,8 +58,8 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--vkFontsTitle);
-    font-weight: var(--vkFontsTitleBold);
+    font-family: var(--#{$prefix}FontsTitle);
+    font-weight: var(--#{$prefix}FontsTitleBold);
     margin-block: 15px;
 }
 
@@ -88,7 +88,7 @@ h6 {
 }
 
 code {
-    font-family: var(--vkFontsMonospace);
+    font-family: var(--#{$prefix}FontsMonospace);
 }
 
 ::selection {

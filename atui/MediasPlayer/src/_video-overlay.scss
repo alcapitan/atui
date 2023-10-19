@@ -1,12 +1,12 @@
 /* Style overlay */
 
-.mpVideo.styleOverlay .mpDashboard {
+.#{$subprefix}Video.styleOverlay .#{$subprefix}Dashboard {
     background-color: color("N90", "80%");
     opacity: 0.2;
     position: absolute;
     inset-block-end: 0;
 }
 
-.mpVideo.styleOverlay .mpDashboard:hover {
+.#{$subprefix}Video.styleOverlay .#{$subprefix}Dashboard:hover {
     opacity: 1;
 }

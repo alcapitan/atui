@@ -1,21 +1,21 @@
 /* Global */
 
-.vkParagraph > * {
+.#{$prefix}Paragraph > * {
     margin: 10px 5px;
 }
 
-.vkParagraph :is(h1, h2, h3, h4, h5, h6) {
+.#{$prefix}Paragraph :is(h1, h2, h3, h4, h5, h6) {
     color: color("A40");
 }
 
 /* Quote */
 
-.vkParagraph .vkParagraphQuote {
-    font-family: var(--vkFontsSpecial);
+.#{$prefix}Paragraph .#{$prefix}ParagraphQuote {
+    font-family: var(--#{$prefix}FontsSpecial);
     margin: 15px 20px;
 }
 
-.vkParagraph .vkParagraphQuote em {
+.#{$prefix}Paragraph .#{$prefix}ParagraphQuote em {
     color: color("N50");
     font-style: italic;
     margin: 5px;
@@ -29,45 +29,45 @@
 
 /* Don't need to do that with icons */
 
-.vkParagraph :is(h1, h2, h3, h4, h5, h6) img {
+.#{$prefix}Paragraph :is(h1, h2, h3, h4, h5, h6) img {
     vertical-align: middle;
 }
 
-.vkParagraph h1 img {
+.#{$prefix}Paragraph h1 img {
     height: 2.25rem;
 }
 
-.vkParagraph h2 img {
+.#{$prefix}Paragraph h2 img {
     height: 1.875rem;
 }
 
-.vkParagraph h3 img {
+.#{$prefix}Paragraph h3 img {
     height: 1.5rem;
 }
 
-.vkParagraph h4 img {
+.#{$prefix}Paragraph h4 img {
     height: 1rem;
 }
 
-.vkParagraph h5 img {
+.#{$prefix}Paragraph h5 img {
     height: 0.875rem;
 }
 
-.vkParagraph h6 img {
+.#{$prefix}Paragraph h6 img {
     height: 0.625rem;
 }
 
 /* Image */
 
-.vkParagraphImage {
+.#{$prefix}ParagraphImage {
     padding: 10px;
 }
 
-.vkParagraphImage img {
-    border-radius: var(--vkBorderRadius);
+.#{$prefix}ParagraphImage img {
+    border-radius: var(--#{$prefix}BorderRadius);
 }
 
-.vkParagraphImage p {
+.#{$prefix}ParagraphImage p {
     color: color("N50");
     font-style: italic;
     margin: 5px;
@@ -76,14 +76,14 @@
 }
 
 @media (width >= 768px) /* Computers */ {
-    .vkParagraphImage img {
+    .#{$prefix}ParagraphImage img {
         margin-inline: 10%;
         width: 80%;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .vkParagraphImage img {
+    .#{$prefix}ParagraphImage img {
         width: 100%;
     }
 }
