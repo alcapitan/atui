@@ -1,11 +1,11 @@
 /* Snipper */
 
-.#{$prefix}Loader {
+.vkLoader {
     animation: spinner-animation 1s infinite linear;
     width: fit-content;
 }
 
-.#{$prefix}Loader i {
+.vkLoader i {
     height: 50px;
     font-size: 50px;
     color: color("A50");
@@ -17,10 +17,10 @@
     }
 }
 
-.#{$prefix}Loader.styleLight > i {
+.vkLoader.styleLight > i {
     color: color("N80");
 }
 
-.#{$prefix}Loader.styleDark > i {
+.vkLoader.styleDark > i {
     color: color("N20");
 }

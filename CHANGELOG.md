@@ -62,7 +62,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Port CSS code to SCSS :
     -   SASS feats are used in a limited part of the code (boxes, buttons and colors for now).
     -   Create `color` function, `iconSize` mixin and `iconSelector` global variable.
-    -   For developers, replace static prefixes in classes with dynamic variables.
 -   Change all variables, component classes and option classes structure ! You need to update classes in your projects to restore ATUI's operation.
 -   Change `vkStructureBody` and `vkStructureSection` from id to class.
 -   Replace `.vkBox.styleAlert` to `.vkBox.styleDanger`.

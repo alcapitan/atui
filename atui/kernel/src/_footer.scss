@@ -1,27 +1,27 @@
 /* Container */
 
-.#{$prefix}Footer {
+.vkFooter {
     background-color: color("A90");
     padding: 20px 40px;
 }
 
-.#{$prefix}Footer > * {
+.vkFooter > * {
     margin-block: 10px;
 }
 
 /* Columns and rows */
 
-.#{$prefix}FooterColumns,
-.#{$prefix}FooterRows {
+.vkFooterColumns,
+.vkFooterRows {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.#{$prefix}FooterColumns {
+.vkFooterColumns {
     justify-content: space-evenly;
 }
 
-.#{$prefix}FooterRows {
+.vkFooterRows {
     justify-content: center;
 }

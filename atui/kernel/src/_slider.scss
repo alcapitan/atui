@@ -1,11 +1,11 @@
-.#{$prefix}Slider {
+.vkSlider {
     display: flex;
     gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
-.#{$prefix}Slider > * /* Slide */ {
+.vkSlider > * /* Slide */ {
     flex: 0 0 max-content;
     scroll-snap-align: start;
 }

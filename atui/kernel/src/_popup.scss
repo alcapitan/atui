@@ -1,65 +1,65 @@
 /* Common to context menu and tooltip */
 
-:is(.#{$prefix}PopupContextmenu, .#{$prefix}PopupTooltip) {
+:is(.vkPopupContextmenu, .vkPopupTooltip) {
     all: unset;
     position: fixed; /* fixed position is obligatory for centered option */
     background-color: color("NFF");
-    border-radius: var(--#{$prefix}BorderRadius);
-    box-shadow: var(--#{$prefix}ShadowMedium);
+    border-radius: var(--vkBorderRadius);
+    box-shadow: var(--vkShadowMedium);
     width: max-content;
     visibility: hidden;
     display: block;
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    :is(.#{$prefix}PopupContextmenu, .#{$prefix}PopupTooltip) {
+    :is(.vkPopupContextmenu, .vkPopupTooltip) {
         max-width: 30%;
     }
 }
 
 @media (width < 480px) /* Smartphones */ {
-    :is(.#{$prefix}PopupContextmenu, .#{$prefix}PopupTooltip) {
+    :is(.vkPopupContextmenu, .vkPopupTooltip) {
         max-width: 70%;
     }
 }
 
-:is(.#{$prefix}PopupContextmenu, .#{$prefix}PopupTooltip) * {
+:is(.vkPopupContextmenu, .vkPopupTooltip) * {
     color: color("N00");
     font-size: 1rem;
 }
 
 /* Context menu */
 
-.#{$prefix}PopupContextmenu {
+.vkPopupContextmenu {
     z-index: 18;
     padding-block: 10px;
 }
 
-.#{$prefix}PopupContextmenu > * {
+.vkPopupContextmenu > * {
     padding: 5px 10px;
 }
 
 @media (pointer: coarse) /* Touch screen */ {
-    .#{$prefix}PopupContextmenu > * {
+    .vkPopupContextmenu > * {
         padding: 10px 15px;
     }
 }
 
-.#{$prefix}PopupContextmenu #{$iconSelector} {
+.vkPopupContextmenu #{$iconSelector} {
     @include iconSize("1em");
 }
 
-.#{$prefix}PopupContextmenu > a {
+.vkPopupContextmenu > a {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.#{$prefix}PopupContextmenu > a:hover {
+.vkPopupContextmenu > a:hover {
     background-color: color("A60", "80%");
 }
 
-.#{$prefix}PopupContextmenu > hr {
+.vkPopupContextmenu > hr {
     background-color: color("A60");
     height: 2px;
     border: 0;
@@ -69,13 +69,13 @@
 
 /* Global Panel */
 
-.#{$prefix}PopupGlobalpanel {
+.vkPopupGlobalpanel {
     align-items: normal;
     position: absolute;
     visibility: hidden;
     background-color: color("NFF");
-    border-radius: var(--#{$prefix}BorderRadius);
-    box-shadow: var(--#{$prefix}ShadowMedium);
+    border-radius: var(--vkBorderRadius);
+    box-shadow: var(--vkShadowMedium);
     max-width: 80%;
     display: flex;
     justify-content: space-around;
@@ -85,19 +85,19 @@
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .#{$prefix}PopupGlobalpanel {
+    .vkPopupGlobalpanel {
         padding: 20px 30px;
         gap: 40px;
     }
 }
 
-.#{$prefix}PopupGlobalpanel * {
+.vkPopupGlobalpanel * {
     color: color("N00");
 }
 
 /* Tooltip */
 
-.#{$prefix}PopupTooltip {
+.vkPopupTooltip {
     z-index: 17;
     padding: 10px;
 }

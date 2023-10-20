@@ -1,44 +1,44 @@
 /* Number */
 
-.#{$prefix}PaginationNumber {
+.vkPaginationNumber {
     display: flex;
     justify-content: center;
 }
 
-.#{$prefix}PaginationNumber > * {
+.vkPaginationNumber > * {
     padding: 10px 15px;
     border: 1px solid color("N50");
     border-inline-start: none;
     color: color("N00");
 }
 
-.#{$prefix}PaginationNumber > *:first-child {
-    border-start-start-radius: var(--#{$prefix}BorderRadius);
-    border-end-start-radius: var(--#{$prefix}BorderRadius);
+.vkPaginationNumber > *:first-child {
+    border-start-start-radius: var(--vkBorderRadius);
+    border-end-start-radius: var(--vkBorderRadius);
     border-inline-start: 1px solid color("N50");
 }
 
-.#{$prefix}PaginationNumber > *:last-child {
-    border-start-end-radius: var(--#{$prefix}BorderRadius);
-    border-end-end-radius: var(--#{$prefix}BorderRadius);
+.vkPaginationNumber > *:last-child {
+    border-start-end-radius: var(--vkBorderRadius);
+    border-end-end-radius: var(--vkBorderRadius);
 }
 
-.#{$prefix}PaginationNumber > *:hover {
+.vkPaginationNumber > *:hover {
     background-color: color("A90");
 }
 
-.#{$prefix}PaginationNumber > *:hover,
-.#{$prefix}PaginationNumber > p {
+.vkPaginationNumber > *:hover,
+.vkPaginationNumber > p {
     color: color("A50");
 }
 
-.#{$prefix}PaginationNumber > p:hover {
+.vkPaginationNumber > p:hover {
     background-color: transparent;
 }
 
 /* Text */
 
-.#{$prefix}PaginationText {
+.vkPaginationText {
     display: flex;
     gap: 15px;
     width: 100%;
@@ -46,33 +46,33 @@
 }
 
 @media (width <= 480px) /* Smartphones */ {
-    .#{$prefix}PaginationText {
+    .vkPaginationText {
         flex-direction: column;
     }
 }
 
-.#{$prefix}PaginationText a {
+.vkPaginationText a {
     border: 1px solid color("N00");
-    border-radius: var(--#{$prefix}BorderRadius);
+    border-radius: var(--vkBorderRadius);
     padding: 15px;
     flex: 1;
 }
 
-.#{$prefix}PaginationText a:hover {
+.vkPaginationText a:hover {
     border-width: 2px;
     border-color: color("A40");
     background-color: color("A90");
 }
 
-.#{$prefix}PaginationText a p {
+.vkPaginationText a p {
     color: color("N00");
     text-align: center;
 }
 
-.#{$prefix}PaginationText a:hover p {
+.vkPaginationText a:hover p {
     color: color("A40");
 }
 
-.#{$prefix}PaginationText a p:first-child {
+.vkPaginationText a p:first-child {
     margin-block-end: 10px;
 }

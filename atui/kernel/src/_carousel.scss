@@ -1,16 +1,16 @@
 /* Global */
 
-.#{$prefix}Carousel {
-    border-radius: var(--#{$prefix}BorderRadius);
+.vkCarousel {
+    border-radius: var(--vkBorderRadius);
     overflow: hidden;
     position: relative;
 }
 
-.#{$prefix}Header + .#{$prefix}Carousel {
+.vkHeader + .vkCarousel {
     border-radius: 0;
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselSlides {
+.vkCarousel .vkCarouselSlides {
     display: flex;
     overflow: auto;
     scroll-snap-type: x mandatory;
@@ -19,14 +19,14 @@
     max-height: 75vh;
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselSlides > div /* Slide */ {
+.vkCarousel .vkCarouselSlides > div /* Slide */ {
     position: relative;
     flex: 0 0 100%;
     scroll-snap-align: center;
     background-color: color("N10");
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselSlides > div > img /* Illustration in slide */ {
+.vkCarousel .vkCarouselSlides > div > img /* Illustration in slide */ {
     display: block;
     object-fit: cover;
     object-position: center;
@@ -34,7 +34,7 @@
     height: 100%;
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselSlides > div > div /* Caption in slide */ {
+.vkCarousel .vkCarouselSlides > div > div /* Caption in slide */ {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, color("N90", "60%") 50%, transparent 100%);
@@ -50,12 +50,12 @@
 
 /* Controls */
 
-.#{$prefix}Carousel .#{$prefix}CarouselControls {
+.vkCarousel .vkCarouselControls {
     position: absolute;
     inset: 0;
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselControls :is(.#{$prefix}CarouselControlsLeft, .#{$prefix}CarouselControlsRight) {
+.vkCarousel .vkCarouselControls :is(.vkCarouselControlsLeft, .vkCarouselControlsRight) {
     font-size: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
@@ -66,10 +66,10 @@
     z-index: 10;
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselControls .#{$prefix}CarouselControlsLeft {
+.vkCarousel .vkCarouselControls .vkCarouselControlsLeft {
     left: 10px;
 }
 
-.#{$prefix}Carousel .#{$prefix}CarouselControls .#{$prefix}CarouselControlsRight {
+.vkCarousel .vkCarouselControls .vkCarouselControlsRight {
     right: 10px;
 }

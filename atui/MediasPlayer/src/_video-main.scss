@@ -1,17 +1,17 @@
 /* Container */
 
 @media (width >= 768px) /* Computers */ {
-    .#{$subprefix}Video {
+    .mpVideo {
         display: flex;
         justify-content: center;
     }
 }
 
-.#{$subprefix}Video > article {
+.mpVideo > article {
     overflow: hidden;
 }
 
-.#{$subprefix}Video video {
+.mpVideo video {
     max-width: 100%;
     max-height: 65vh;
     display: block;
@@ -19,7 +19,7 @@
 
 /* Controls */
 
-.#{$subprefix}Video .#{$subprefix}Dashboard {
+.mpVideo .mpDashboard {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -27,6 +27,6 @@
 
 /* Progressbar */
 
-.#{$subprefix}Video .#{$subprefix}Progress {
+.mpVideo .mpProgress {
     width: 100%;
 }

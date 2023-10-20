@@ -1,32 +1,32 @@
 /* Img Big */
 
-.#{$prefix}NavigationRow /* Container */ {
+.vkNavigationRow /* Container */ {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.#{$prefix}NavigationRow a /* ELement */ {
+.vkNavigationRow a /* ELement */ {
     padding: 10px 20px;
-    border-radius: var(--#{$prefix}BorderRadius);
+    border-radius: var(--vkBorderRadius);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.#{$prefix}NavigationRow a:hover {
+.vkNavigationRow a:hover {
     background-color: color("A70");
 }
 
-.#{$prefix}NavigationRow a:active {
+.vkNavigationRow a:active {
     background-color: color("A60");
 }
 
-.#{$prefix}NavigationRow a #{$iconSelector} {
+.vkNavigationRow a #{$iconSelector} {
     @include iconSize("80px");
 }
 
-.#{$prefix}NavigationRow a p /* Text */ {
+.vkNavigationRow a p /* Text */ {
     margin-block-start: 10px;
     font-size: 1.125rem;
     color: color("N00");
@@ -34,83 +34,83 @@
 
 /* Bar */
 
-.#{$prefix}NavigationBar {
+.vkNavigationBar {
     display: flex;
     row-gap: 5px;
 }
 
-.#{$prefix}NavigationBar a {
-    border-radius: var(--#{$prefix}BorderRadius);
+.vkNavigationBar a {
+    border-radius: var(--vkBorderRadius);
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 5px 10px;
 }
 
-.#{$prefix}NavigationBar p {
+.vkNavigationBar p {
     width: max-content;
 }
 
-.#{$prefix}NavigationBar hr {
+.vkNavigationBar hr {
     background-color: color("A60");
     width: 100%;
     height: 2px;
     border: 0;
 }
 
-.#{$prefix}NavigationBar hr.#{$prefix}NavigationSplit {
+.vkNavigationBar hr.vkNavigationSplit {
     flex: 1;
     background-color: transparent;
 }
 
 @media (width >= 768px) /* Computers */ {
-    .#{$prefix}NavigationBar {
+    .vkNavigationBar {
         flex-direction: column;
     }
 
-    .#{$prefix}NavigationBar a:hover {
+    .vkNavigationBar a:hover {
         background-color: color("A80");
     }
 
-    .#{$prefix}NavigationBar #{$iconSelector} {
+    .vkNavigationBar #{$iconSelector} {
         @include iconSize("36px");
     }
 
-    .#{$prefix}NavigationBar p {
+    .vkNavigationBar p {
         font-size: 1.125rem;
     }
 
-    .#{$prefix}NavigationBar *.optionOnlyMobile {
+    .vkNavigationBar *.optionOnlyMobile {
         display: none;
     }
 
-    .#{$prefix}NavigationBar.styleDrawer p {
+    .vkNavigationBar.styleDrawer p {
         display: none;
     }
 
-    .#{$prefix}NavigationBar.styleDrawer:hover p {
+    .vkNavigationBar.styleDrawer:hover p {
         display: block;
     }
 
-    .#{$prefix}NavigationBar:not(.styleMobile, .styleDrawer),
-    .#{$prefix}NavigationBar.styleDrawer:hover {
+    .vkNavigationBar:not(.styleMobile, .styleDrawer),
+    .vkNavigationBar.styleDrawer:hover {
         width: 20%;
     }
 
-    .#{$prefix}NavigationBar.styleMobile a {
+    .vkNavigationBar.styleMobile a {
         flex-direction: column;
         row-gap: 5px;
         padding: 5px 10px;
     }
 
-    .#{$prefix}NavigationBar.styleMobile p {
+    .vkNavigationBar.styleMobile p {
         font-size: 0.875rem;
         text-align: center;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .#{$prefix}NavigationBar {
+    .vkNavigationBar {
         padding: 5px;
         position: sticky;
         inset-block-end: 0;
@@ -123,29 +123,29 @@
         flex-flow: row nowrap;
     }
 
-    .#{$prefix}NavigationBar a {
+    .vkNavigationBar a {
         flex-direction: column;
         justify-content: center;
     }
 
-    .#{$prefix}NavigationBar a:hover {
+    .vkNavigationBar a:hover {
         background-color: color("N80");
     }
 
-    .#{$prefix}NavigationBar #{$iconSelector} {
+    .vkNavigationBar #{$iconSelector} {
         @include iconSize("30px");
     }
 
-    .#{$prefix}NavigationBar p {
+    .vkNavigationBar p {
         font-size: 0.875rem;
         text-align: center;
     }
 
-    .#{$prefix}NavigationBar hr {
+    .vkNavigationBar hr {
         display: none;
     }
 
-    .#{$prefix}NavigationBar *.optionOnlyDesktop {
+    .vkNavigationBar *.optionOnlyDesktop {
         display: none;
     }
 }

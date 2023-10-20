@@ -1,20 +1,20 @@
 /* Section containers management */
 
-:is(.#{$prefix}StructureBody, .#{$prefix}StructureSection) {
+:is(.vkStructureBody, .vkStructureSection) {
     display: flex;
     flex-wrap: nowrap;
 }
 
 @media (width >= 768px) /* Computers */ {
-    :is(.#{$prefix}StructureBody, .#{$prefix}StructureSection) {
+    :is(.vkStructureBody, .vkStructureSection) {
         flex-direction: row;
     }
 
-    :is(.#{$prefix}StructureBody, .#{$prefix}StructureSection) > *:not(:last-child, .#{$prefix}NotificationContainer) {
+    :is(.vkStructureBody, .vkStructureSection) > *:not(:last-child, .vkNotificationContainer) {
         border-inline-end: 1px solid color("N80");
     }
 
-    .#{$prefix}StructureSection > *:not(:last-child) {
+    .vkStructureSection > *:not(:last-child) {
         border-image: linear-gradient(
                 to bottom,
                 transparent calc(0% + 20px),
@@ -27,15 +27,15 @@
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    :is(.#{$prefix}StructureBody, .#{$prefix}StructureSection) {
+    :is(.vkStructureBody, .vkStructureSection) {
         flex-direction: column-reverse;
     }
 
-    :is(.#{$prefix}StructureBody, .#{$prefix}StructureSection) > *:not(:last-child, .#{$prefix}NotificationContainer) {
+    :is(.vkStructureBody, .vkStructureSection) > *:not(:last-child, .vkNotificationContainer) {
         border-block-end: 1px solid color("N80");
     }
 
-    .#{$prefix}StructureSection > *:not(:last-child) {
+    .vkStructureSection > *:not(:last-child) {
         border-image: linear-gradient(
                 to right,
                 transparent calc(0% + 20px),
@@ -47,33 +47,33 @@
     }
 }
 
-.#{$prefix}StructureBody > *:not(.#{$prefix}StructureBodyContent),
-.#{$prefix}StructureSection > * {
+.vkStructureBody > *:not(.vkStructureBodyContent),
+.vkStructureSection > * {
     padding: 10px;
 }
 
-:is(.#{$prefix}StructureBodyContent, .#{$prefix}StructureSectionContent) {
+:is(.vkStructureBodyContent, .vkStructureSectionContent) {
     flex: 1;
 }
 
-.#{$prefix}StructureBodyContent {
+.vkStructureBodyContent {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
 
-.#{$prefix}StructureSection {
+.vkStructureSection {
     flex: 1;
 }
 
-.#{$prefix}StructureSectionContent > * {
+.vkStructureSectionContent > * {
     margin-block: 20px;
 }
 
-:is(.#{$prefix}StructureBodyContent, .#{$prefix}StructureSectionContent) > *:first-child {
+:is(.vkStructureBodyContent, .vkStructureSectionContent) > *:first-child {
     margin-block-start: 0;
 }
 
-:is(.#{$prefix}StructureBodyContent, .#{$prefix}StructureSectionContent) > *:last-child {
+:is(.vkStructureBodyContent, .vkStructureSectionContent) > *:last-child {
     margin-block-end: 0;
 }

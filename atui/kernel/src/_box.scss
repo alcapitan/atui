@@ -7,8 +7,8 @@ $colorOptions: (
     ".styleInfo": "I",
 );
 
-.#{$prefix}Box {
-    border-radius: var(--#{$prefix}BorderRadius);
+.vkBox {
+    border-radius: var(--vkBorderRadius);
     padding: 15px;
     border-style: solid;
     border-width: 1px;
@@ -17,17 +17,17 @@ $colorOptions: (
     gap: 15px;
 }
 
-.#{$prefix}Box > #{$iconSelector} {
+.vkBox > #{$iconSelector} {
     @include iconSize("30px");
 }
 
-@each $option, $palette in $colorOptions {
-    .#{$prefix}Box#{$option} {
-        border-color: color("#{$palette}50");
-        background-color: color("#{$palette}90");
+@each $option, $prefix in $colorOptions {
+    .vkBox#{$option} {
+        border-color: color("#{$prefix}50");
+        background-color: color("#{$prefix}90");
     }
 
-    .#{$prefix}Box#{$option} * {
-        color: color("#{$palette}20");
+    .vkBox#{$option} * {
+        color: color("#{$prefix}20");
     }
 }

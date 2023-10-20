@@ -1,9 +1,9 @@
-.#{$prefix}Squarelink {
+.vkSquarelink {
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
-    border-radius: var(--#{$prefix}BorderRadius);
+    border-radius: var(--vkBorderRadius);
     height: 120px;
     min-width: 120px;
     max-width: 250px;
@@ -11,47 +11,47 @@
     vertical-align: middle;
 }
 
-.#{$prefix}Squarelink:is(:hover, :active) {
+.vkSquarelink:is(:hover, :active) {
     border-color: color("A50");
 }
 
-.#{$prefix}Squarelink:hover {
+.vkSquarelink:hover {
     background-color: color("A80");
 }
 
-.#{$prefix}Squarelink:active {
+.vkSquarelink:active {
     background-color: color("A60");
 }
 
-.#{$prefix}Squarelink:is(:hover, :active) * {
+.vkSquarelink:is(:hover, :active) * {
     color: color("A50");
 }
 
-.#{$prefix}Squarelink.styleFilled {
+.vkSquarelink.styleFilled {
     background-color: color("A40");
     border: none;
 }
 
-.#{$prefix}Squarelink.styleFilled:hover {
+.vkSquarelink.styleFilled:hover {
     background-color: color("A60");
 }
 
-.#{$prefix}Squarelink.styleFilled:active {
+.vkSquarelink.styleFilled:active {
     background-color: color("A80");
 }
 
-.#{$prefix}Squarelink.styleFilled * {
+.vkSquarelink.styleFilled * {
     color: color("NFF");
 }
 
-.#{$prefix}Squarelink.styleNavigator {
+.vkSquarelink.styleNavigator {
     justify-content: flex-end;
 }
 
-.#{$prefix}Squarelink.styleNavigator > i {
+.vkSquarelink.styleNavigator > i {
     font-size: 2.25em;
 }
 
-.#{$prefix}Squarelink.styleNavigator > p {
-    font-weight: var(--#{$prefix}FontsTitleBold);
+.vkSquarelink.styleNavigator > p {
+    font-weight: var(--vkFontsTitleBold);
 }

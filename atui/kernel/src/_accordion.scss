@@ -1,10 +1,10 @@
-.#{$prefix}Accordion {
-    border-radius: var(--#{$prefix}BorderRadius);
+.vkAccordion {
+    border-radius: var(--vkBorderRadius);
     border: 1px color("N50") solid;
     overflow: hidden;
 }
 
-.#{$prefix}Accordion > header {
+.vkAccordion > header {
     background-color: color("N80");
     padding-inline: 20px;
     min-height: 50px;
@@ -12,21 +12,21 @@
     align-items: center;
 }
 
-.#{$prefix}Accordion > header h3 {
+.vkAccordion > header h3 {
     flex: 1;
     color: color("N00");
-    font-family: var(--#{$prefix}FontsTitle);
-    font-weight: var(--#{$prefix}FontsTitleBold);
+    font-family: var(--vkFontsTitle);
+    font-weight: var(--vkFontsTitleBold);
 }
 
-.#{$prefix}Accordion > header #{$iconSelector} {
+.vkAccordion > header #{$iconSelector} {
     flex: 0;
     margin-inline-start: 10px;
 
     @include iconSize("35px");
 }
 
-.#{$prefix}Accordion > section {
+.vkAccordion > section {
     padding: 15px;
     background-color: color("N90");
     border-block-start: 1px color("N50") solid;

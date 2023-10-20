@@ -1,17 +1,17 @@
 /* Style floating */
 
-.#{$subprefix}Audio.styleFloating {
+.mpAudio.styleFloating {
     position: fixed;
     z-index: 12;
     inset: auto 10% 20px;
     margin: 0;
     border: none;
-    box-shadow: var(--#{$prefix}ShadowMedium);
+    box-shadow: var(--vkShadowMedium);
     background-color: color("N90", "80%");
-    backdrop-filter: var(--#{$prefix}Blur);
+    backdrop-filter: var(--vkBlur);
     display: none;
 }
 
-.#{$subprefix}Audio.styleFloating .#{$subprefix}Close {
+.mpAudio.styleFloating .mpClose {
     display: block;
 }

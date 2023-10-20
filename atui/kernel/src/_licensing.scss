@@ -1,12 +1,12 @@
-.#{$prefix}Licensing {
+.vkLicensing {
     display: flex;
     gap: 30px;
 }
 
-.#{$prefix}Licensing * {
+.vkLicensing * {
     color: color("N60");
 }
 
-.#{$prefix}Footer .#{$prefix}Licensing * {
+.vkFooter .vkLicensing * {
     color: color("A60");
 }

@@ -1,5 +1,3 @@
-$subprefix: "mp";
-
 @import "../../kernel/src/tools";
 @import "audio-floating";
 @import "audio-main";
@@ -10,81 +8,81 @@ $subprefix: "mp";
 
 /* Container */
 
-.#{$subprefix}Audio,
-.#{$subprefix}Video > article {
+.mpAudio,
+.mpVideo > article {
     border: 1px solid color("N50");
-    border-radius: var(--#{$prefix}BorderRadius);
+    border-radius: var(--vkBorderRadius);
     position: relative;
 }
 
-.#{$subprefix}Audio,
-.#{$subprefix}Video .#{$subprefix}Dashboard {
+.mpAudio,
+.mpVideo .mpDashboard {
     background-color: color("N90");
 }
 
 /* Controls */
 
-.#{$subprefix}Audio .#{$subprefix}Panel,
-.#{$subprefix}Video .#{$subprefix}Controls {
+.mpAudio .mpPanel,
+.mpVideo .mpControls {
     padding: 10px;
 }
 
 @media (width >= 768px) /* Computers */ {
-    .#{$subprefix}Audio .#{$subprefix}Panel,
-    .#{$subprefix}Video .#{$subprefix}Controls {
+    .mpAudio .mpPanel,
+    .mpVideo .mpControls {
         flex-direction: row;
     }
 }
 
 @media (width <= 767px) /* Smartphones */ {
-    .#{$subprefix}Controls {
+    .mpControls {
         flex-direction: column;
     }
 }
 
-.#{$subprefix}Dashboard {
+.mpDashboard {
     flex-direction: column;
 }
 
-.#{$subprefix}Audio .#{$subprefix}Info,
-.#{$subprefix}Controls,
-.#{$subprefix}Controls > div {
+.mpAudio .mpInfo,
+.mpControls,
+.mpControls > div {
     display: flex;
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.#{$subprefix}Controls {
+.mpControls {
     justify-content: space-evenly;
     direction: ltr;
 }
 
-.#{$subprefix}Controls #{$iconSelector} {
+.mpControls #{$iconSelector} {
     padding: 5px 10px;
-    border-radius: var(--#{$prefix}BorderRadius);
+    border-radius: var(--vkBorderRadius);
 
     @include iconSize(30px);
 
     box-sizing: content-box;
 }
 
-.#{$subprefix}Controls #{$iconSelector}:hover {
+.mpControls #{$iconSelector}:hover {
     background-color: color("A70");
 }
 
 /* Progressbar */
 
-.#{$subprefix}Progress,
-.#{$subprefix}ProgressInside {
+.mpProgress,
+.mpProgressInside {
     height: 10px;
 }
 
-.#{$subprefix}Progress {
+.mpProgress {
     direction: ltr;
 }
 
-.#{$subprefix}ProgressInside {
+.mpProgressInside {
     width: 0;
     background-color: color("A50");
     transition: width 500ms;
@@ -92,6 +90,6 @@ $subprefix: "mp";
 
 /* Error */
 
-:is(.#{$subprefix}Audio, .#{$subprefix}Video) .#{$prefix}Box {
+:is(.mpAudio, .mpVideo) .vkBox {
     margin: 10px;
 }

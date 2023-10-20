@@ -1,17 +1,15 @@
-$subprefix: "ss";
-
 @import "../../kernel/src/tools";
 
 /* Panel */
 
-.#{$subprefix}Panel {
+.ssPanel {
     border-radius: 25px;
     display: block;
 }
 
-.#{$subprefix}Panel.statusActive {
+.ssPanel.statusActive {
     background-color: color("N90");
-    box-shadow: var(--#{$prefix}ShadowMedium);
+    box-shadow: var(--vkShadowMedium);
     position: fixed;
     top: 0;
     left: 0;
@@ -21,79 +19,79 @@ $subprefix: "ss";
 }
 
 @media (width < 480px) /* Smartphones */ {
-    .#{$subprefix}Panel.statusActive {
+    .ssPanel.statusActive {
         width: 90%;
         margin-inline: 5%;
     }
 }
 
 @media (480px <= width) /* Tablets and computers */ {
-    .#{$subprefix}Panel.statusActive {
+    .ssPanel.statusActive {
         width: 500px;
         margin-inline: 50%;
         transform: translateX(-50%);
     }
 }
 
-.#{$subprefix}Panel.statusActive > * {
+.ssPanel.statusActive > * {
     margin-block-end: 10px;
 }
 
-.#{$subprefix}Panel > hr {
+.ssPanel > hr {
     background-color: color("N70");
     border: none;
     height: 1px;
 }
 
-.#{$subprefix}Panel:not(.statusActive) {
+.ssPanel:not(.statusActive) {
     width: fit-content;
 }
 
-.#{$subprefix}Panel.statusActive > *:not(.#{$subprefix}Bar) {
+.ssPanel.statusActive > *:not(.ssBar) {
     margin-inline: 10px;
 }
 
 /* Search bar */
 
-.#{$subprefix}Panel:not(.statusActive) > *:not(.#{$subprefix}Bar) {
+.ssPanel:not(.statusActive) > *:not(.ssBar) {
     display: none;
 }
 
-.#{$subprefix}Panel.statusActive .#{$subprefix}Bar {
+.ssPanel.statusActive .ssBar {
     margin-block-end: 15px;
 }
 
-.#{$subprefix}Panel.statusActive .#{$subprefix}Bar div.styleGroup {
+.ssPanel.statusActive .ssBar div.styleGroup {
     width: available;
     width: stretch;
 }
 
-.#{$subprefix}Bar div.styleGroup {
-    box-shadow: var(--#{$prefix}ShadowLight);
+.ssBar div.styleGroup {
+    box-shadow: var(--vkShadowLight);
 }
 
-.#{$subprefix}Panel .#{$subprefix}Bar div.styleGroup input {
+.ssPanel .ssBar div.styleGroup input {
     width: 100%;
 }
 
-.#{$subprefix}Panel .#{$subprefix}Bar div.styleGroup i {
+.ssPanel .ssBar div.styleGroup i {
     font-size: 1.125rem;
     width: 1.125rem;
     height: 1.125rem;
 }
 
-.#{$subprefix}Trigger {
+.ssTrigger {
     display: none;
 }
 
 /* Responsive in Header */
 
 @media (width < 1024px) /* Smartphones & tablets */ {
-    .#{$prefix}Header .#{$subprefix}Panel:not(.statusActive) div.styleGroup {
+    .vkHeader .ssPanel:not(.statusActive) div.styleGroup {
         display: none;
     }
 
-    .#{$prefix}Header .#{$subprefix}Panel:not(.statusActive) .#{$subprefix}Trigger {
+    .vkHeader .ssPanel:not(.statusActive) .ssTrigger {
         display: block;
         padding: 5px;
         font-size: 1.875rem;
