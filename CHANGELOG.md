@@ -65,6 +65,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Change all variables, component classes and option classes structure ! You need to update classes in your projects to restore ATUI's operation.
 -   Change `vkStructureBody` and `vkStructureSection` from id to class.
 -   Replace `.vkBox.styleAlert` to `.vkBox.styleDanger`.
+-   Improve MediasPlayer stability and flexibility :
+    -   Update options for `mpAssign`. Audio and video have the same options now.
+    -   Merge music title and author.
+    -   Change some media info classes.
+    -   Create `.mpHeader`, mostly for VideoPlayer title.
+    -   Improve a lot the stability of `mpAssign` with resolution in every case.
 
 ### Fixed
 

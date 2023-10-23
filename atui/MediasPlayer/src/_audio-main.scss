@@ -1,6 +1,6 @@
 /* Audio player */
 
-.mpAudio .mpCover {
+.mpAudio .mpMediaPicture {
     width: 150px;
     height: 150px;
     background-color: color("N70");
@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.mpAudio .mpCover img {
+.mpAudio .mpMediaPicture img {
     height: 100%;
 }
 
@@ -32,7 +32,7 @@
         align-items: center;
     }
 
-    .mpAudio :is(.mpCover, .mpInfo) {
+    .mpAudio :is(.mpMediaPicture, .mpHeader) {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -42,15 +42,6 @@
 .mpAudio .mpDashboard {
     flex: 1;
     row-gap: 10px;
-}
-
-.mpAudio .mpInfo > p {
-    font-size: 1.125rem;
-    font-weight: bold;
-}
-
-.mpAudio .mpInfoTitle {
-    color: color("A40");
 }
 
 .mpAudio .mpClose {

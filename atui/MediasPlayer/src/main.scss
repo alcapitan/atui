@@ -20,6 +20,13 @@
     background-color: color("N90");
 }
 
+/* Header */
+
+.mpHeader > p {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
 /* Controls */
 
 .mpAudio .mpPanel,
@@ -44,7 +51,7 @@
     flex-direction: column;
 }
 
-.mpAudio .mpInfo,
+.mpAudio .mpHeader,
 .mpControls,
 .mpControls > div {
     display: flex;

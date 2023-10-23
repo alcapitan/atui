@@ -93,38 +93,38 @@ document.getElementById("clipboardButton").addEventListener("click", async funct
     document.getElementById("clipboard-paste").innerText = clipboardText;
 });
 
-/* MediasPlayer */
-
 document.getElementById("shareButton").addEventListener("click", function () {
     vkShare("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");
 });
 
-document.getElementById("playAudio1").addEventListener("click", () => {
-    mpRun("audioplayer1");
-});
-document.getElementById("playAudio2").addEventListener("click", () => {
-    mpAssign({
-        player: "audioplayer2",
-        media: "patch/musics/test-audioplayer.mp3",
-        cover: "patch/musics/test-audioplayer.png",
-        title: "Uplink",
-        author: "Sinking Ship",
-        albumName: "undefined",
-        releaseDate: "2022",
-        origin: "http://ncs.io/SinkingShip",
-    });
-    mpRun("audioplayer2");
-});
-
-document.getElementById("playVideo").addEventListener("click", () => {
-    mpAssign({
-        player: "videoplayer",
-        media: "patch/videos/test-videoplayer.mp4",
-        origin: "https://pixabay.com/users/justyøu-587443/",
-    });
-    mpRun("videoplayer");
-});
-
 document.getElementById("showModal").addEventListener("click", () => {
     vkModalShow("modalPreview");
+});
+
+/* MediasPlayer */
+
+document.getElementById("assignVideo").addEventListener("click", () => {
+    mpAssign({
+        player: "#videoplayer",
+        media: "patch/videos/test-videoplayer.mp4",
+        title: "Testing video",
+        picture: "patch/illustrations/community.jpg",
+        source: "https://pixabay.com/users/justyøu-587443/",
+    });
+});
+
+document.getElementById("playAudio2").addEventListener("click", () => {
+    mpAssign({
+        player: "#audioplayer2",
+        media: "patch/musics/test-audioplayer.mp3",
+        title: "Sinking Ship - Uplink",
+        picture: "patch/musics/test-audioplayer.png",
+        source: "http://ncs.io/SinkingShip",
+        date: "2022",
+    });
+    mpRun("#audioplayer2");
+});
+
+document.getElementById("playAudio1").addEventListener("click", () => {
+    mpRun("#audioplayer1");
 });

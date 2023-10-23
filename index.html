@@ -1065,21 +1065,20 @@
                     </div>
                     <div></div>
                     <div>
-                        <p class="vkButton styleFilled styleAccent stylePill" id="playAudio1">Play an audio</p>
+                        <p class="vkButton styleFilled styleAccent stylePill" id="playAudio1">Run an audio</p>
                     </div>
                     <div class="mpAudio" id="audioplayer1">
                         <audio src="atui/kernel/assets/notification.mp3"></audio>
                         <div class="mpPanel">
-                            <div class="mpCover">
+                            <div class="mpMediaPicture">
                                 <img
                                     src="https://unpkg.com/@tabler/icons/icons/disc.svg"
                                     alt="Unavailable album cover"
                                 />
                             </div>
                             <div class="mpDashboard">
-                                <div class="mpInfo">
-                                    <p class="mpInfoAuthor">Author</p>
-                                    <p class="mpInfoTitle">Title</p>
+                                <div class="mpHeader">
+                                    <p class="mpMediaTitle">Title</p>
                                 </div>
                                 <div class="mpControls">
                                     <p class="mpTimer">0:00 - 0:00</p>
@@ -1092,9 +1091,9 @@
                                         <i class="ti ti-repeat mpLoop"></i>
                                         <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
                                         <aside class="vkPopupContextmenu mpInfos">
-                                            <a href="#" class="mpInfoAlbumName">Album name</a>
-                                            <a href="#" class="mpInfoReleaseDate">Release date</a>
-                                            <a class="mpInfoOrigin" href="">Source of the audio</a>
+                                            <a href="#" class="mpMediaPlaylist">Playlist</a>
+                                            <a href="#" class="mpMediaDate">Release date</a>
+                                            <a class="mpMediaSource" href="">Source of the audio</a>
                                         </aside>
                                         <div class="mpClose">
                                             <i class="ti ti-x"></i>
@@ -1108,21 +1107,22 @@
                         </div>
                     </div>
                     <div>
-                        <p class="vkButton styleFilled styleAccent stylePill" id="playAudio2">Play an audio</p>
+                        <p class="vkButton styleFilled styleAccent stylePill" id="playAudio2">
+                            Assign and run an audio
+                        </p>
                     </div>
                     <div class="mpAudio styleFloating" id="audioplayer2">
                         <audio src="atui/kernel/assets/notification.mp3"></audio>
                         <div class="mpPanel">
-                            <div class="mpCover">
+                            <div class="mpMediaPicture">
                                 <img
                                     src="https://unpkg.com/@tabler/icons/icons/disc.svg"
                                     alt="Unavailable album cover"
                                 />
                             </div>
                             <div class="mpDashboard">
-                                <div class="mpInfo">
-                                    <p class="mpInfoAuthor">Author</p>
-                                    <p class="mpInfoTitle">Title</p>
+                                <div class="mpHeader">
+                                    <p class="mpMediaTitle">Title</p>
                                 </div>
                                 <div class="mpControls">
                                     <p class="mpTimer">0:00 - 0:00</p>
@@ -1135,9 +1135,9 @@
                                         <i class="ti ti-repeat mpLoop"></i>
                                         <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
                                         <aside class="vkPopupContextmenu mpInfos">
-                                            <a href="#" class="mpInfoAlbumName">Album name</a>
-                                            <a href="#" class="mpInfoReleaseDate">Release date</a>
-                                            <a class="mpInfoOrigin" href="">Source of the audio</a>
+                                            <a href="#" class="mpMediaPlaylist">Playlist</a>
+                                            <a href="#" class="mpMediaDate">Release date</a>
+                                            <a class="mpMediaSource" href="">Source of the audio</a>
                                         </aside>
                                         <div class="mpClose">
                                             <i class="ti ti-x"></i>
@@ -1151,13 +1151,18 @@
                         </div>
                     </div>
                     <div>
-                        <p class="vkButton styleFilled styleAccent stylePill" id="playVideo">Play a video</p>
+                        <p class="vkButton styleFilled styleAccent stylePill" id="assignVideo">
+                            Assign a video to the following mediasplayer
+                        </p>
                     </div>
                     <div class="mpVideo styleOverlay" id="videoplayer">
                         <article>
                             <video>
-                                <source src="" type="video/mp4" />
+                                <source src="" />
                             </video>
+                            <aside class="mpHeader">
+                                <p class="mpMediaTitle">Title</p>
+                            </aside>
                             <aside class="mpDashboard">
                                 <div class="mpProgress">
                                     <div class="mpProgressInside"></div>
@@ -1172,7 +1177,9 @@
                                     <div>
                                         <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
                                         <aside class="vkPopupContextmenu mpInfos">
-                                            <a class="mpInfoOrigin" href="">Source of the video</a>
+                                            <a href="#" class="mpMediaPlaylist">Playlist</a>
+                                            <a href="#" class="mpMediaDate">Release date</a>
+                                            <a class="mpMediaSource" href="">Source of the video</a>
                                         </aside>
                                         <i class="ti ti-volume mpSound"></i>
                                         <i class="ti ti-picture-in-picture-on mpPip"></i>

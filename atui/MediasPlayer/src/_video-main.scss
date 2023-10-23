@@ -17,6 +17,18 @@
     display: block;
 }
 
+/* Header */
+
+.mpVideo .mpHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to bottom, color("N90", "60%") 60%, color("N90", "0%"));
+    position: absolute;
+    inset-block-start: 0;
+    padding: 5px 10px;
+}
+
 /* Controls */
 
 .mpVideo .mpDashboard {

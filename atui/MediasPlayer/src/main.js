@@ -34,40 +34,139 @@ function mpLinkBroken(player, mediaLink) {
 /* Assign an audio to an audioplayer */
 
 function mpAssign(data) {
-    const player = document.getElementById(data.player);
-    const media = player.querySelector("audio, video");
-    const cover = player.querySelector(".mpCover img, .mpCover i");
-    const title = player.querySelector(".mpInfoTitle");
-    const author = player.querySelector(".mpInfoAuthor");
-    const albumName = player.querySelector(".mpInfoAlbumName");
-    const releaseDate = player.querySelector(".mpInfoReleaseDate");
-    const origin = player.querySelector(".mpInfoOrigin");
+    /** possible attributes of data :
+     - player (required)
+     - media (required)
+     - picture
+     - title
+     - description
+     - source
+     - date
+     - playlist
+     - author
+     */
 
-    media.setAttribute("src", data.media);
-    if (data.cover !== undefined) {
-        cover.setAttribute("src", data.cover);
+    // Player
+    if (data.player === undefined) {
+        console.error("The player attribute is required.");
+        return false;
     }
-    if (data.title !== undefined) {
-        title.innerHTML = data.title;
+    const player = document.querySelector(data.player);
+    if (player === null) {
+        console.error(`The player "${data.player}" has not been found in this webpage.`);
+        return false;
     }
-    if (data.author !== undefined) {
-        author.innerHTML = data.author;
+
+    // Media
+    if (data.media === undefined) {
+        console.error("The media attribute is required.");
+        return false;
     }
-    if (data.albumName !== undefined) {
-        albumName.innerHTML = data.albumName;
+    const media = player.querySelector("audio, video");
+    if (media === null) {
+        console.error(`The player ${data.player} does not have any audio or video tag.`);
+        return false;
+    } else {
+        media.setAttribute("src", data.media);
     }
-    if (data.releaseDate !== undefined) {
-        releaseDate.innerHTML = data.releaseDate;
+
+    // Picture
+    const picture = player.querySelector(".mpMediaPicture img, .mpMediaPicture i");
+    if (media.tagName === "AUDIO") {
+        picture.setAttribute(
+            "src",
+            data.picture !== undefined ? data.picture : "https://unpkg.com/@tabler/icons/icons/disc.svg",
+        );
+    } else if (media.tagName === "VIDEO") {
+        media.setAttribute("poster", data.picture !== undefined ? data.picture : "");
+        // TODO: there is no default poster for video
     }
-    if (data.origin !== undefined) {
-        origin.setAttribute("href", data.origin);
+
+    // Title
+    const title = player.querySelector(".mpMediaTitle");
+    if (title === null && data.title !== undefined) {
+        console.error(`The player ${data.player} does not have any title element.`);
+        return false;
     }
+    if (title !== null) title.innerHTML = data.title !== undefined ? data.title : "";
+
+    // Description
+    const description = player.querySelector(".mpMediaDescription");
+    if (description === null && data.description !== undefined) {
+        console.error(`The player ${data.player} does not have any description element.`);
+        return false;
+    }
+    if (description !== null) {
+        if (data.description === undefined) description.style.display = "none";
+        else {
+            description.innerHTML = data.description;
+            description.style.display = "inherit";
+        }
+    }
+
+    // Source
+    const source = player.querySelector(".mpMediaSource");
+    if (source === null && data.source !== undefined) {
+        console.error(`The player ${data.player} does not have any source element.`);
+        return false;
+    }
+    if (source !== null) {
+        if (data.source === undefined) source.style.display = "none";
+        else {
+            source.setAttribute("href", data.source);
+            source.style.display = "inherit";
+        }
+    }
+
+    // Date
+    const date = player.querySelector(".mpMediaDate");
+    if (date === null && data.date !== undefined) {
+        console.error(`The player ${data.player} does not have any date element.`);
+        return false;
+    }
+    if (date !== null) {
+        if (data.date === undefined) date.style.display = "none";
+        else {
+            date.innerHTML = data.date;
+            date.style.display = "inherit";
+        }
+    }
+
+    // Playlist
+    const playlist = player.querySelector(".mpMediaPlaylist");
+    if (playlist === null && data.playlist !== undefined) {
+        console.error(`The player ${data.player} does not have any playlist element.`);
+        return false;
+    }
+    if (playlist !== null) {
+        if (data.playlist === undefined) playlist.style.display = "none";
+        else {
+            playlist.setAttribute("href", data.playlist);
+            playlist.style.display = "inherit";
+        }
+    }
+
+    // Author
+    const author = player.querySelector(".mpMediaAuthor");
+    if (author === null && data.author !== undefined) {
+        console.error(`The player ${data.player} does not have any author element.`);
+        return false;
+    }
+    if (author !== null) {
+        if (data.author === undefined) author.style.display = "none";
+        else {
+            author.innerHTML = data.author;
+            author.style.display = "inherit";
+        }
+    }
+
+    return true;
 }
 
 /* Play and pause a media */
 
-function mpRun(player) {
-    player = document.getElementById(player);
+function mpRun(playerSelector) {
+    const player = document.querySelector(playerSelector);
     const media = player.querySelector("audio, video");
     const button = player.querySelector(".mpRun");
     if (media.paused === true) {
@@ -97,7 +196,7 @@ function mpRun(player) {
 
 document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
     player.querySelector(".mpRun").addEventListener("click", () => {
-        mpRun(player.getAttribute("id"));
+        mpRun(`#${player.getAttribute("id")}`);
     });
 });
 
