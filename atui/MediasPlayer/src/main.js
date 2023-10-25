@@ -71,8 +71,12 @@ function mpAssign(data) {
     }
 
     // Picture
-    const picture = player.querySelector(".mpMediaPicture img, .mpMediaPicture i");
     if (media.tagName === "AUDIO") {
+        const picture = player.querySelector(".mpMediaPicture img, .mpMediaPicture i");
+        if (picture === null && data.picture !== undefined) {
+            console.error(`The player ${data.player} does not have any album cover element.`);
+            return false;
+        }
         picture.setAttribute(
             "src",
             data.picture !== undefined ? data.picture : "https://unpkg.com/@tabler/icons/icons/disc.svg",
@@ -96,13 +100,7 @@ function mpAssign(data) {
         console.error(`The player ${data.player} does not have any description element.`);
         return false;
     }
-    if (description !== null) {
-        if (data.description === undefined) description.style.display = "none";
-        else {
-            description.innerHTML = data.description;
-            description.style.display = "inherit";
-        }
-    }
+    if (description !== null) description.innerHTML = data.description !== undefined ? data.description : "";
 
     // Source
     const source = player.querySelector(".mpMediaSource");
