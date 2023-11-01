@@ -22,3 +22,9 @@
 #listFeatures > * {
     margin-block: 15px;
 }
+
+.loadersRow {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}

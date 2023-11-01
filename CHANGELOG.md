@@ -72,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Create `.mpHeader`, mostly for VideoPlayer title.
     -   Improve a lot the stability of `mpAssign` with resolution in every case.
 -   Abandon failing Netlify and switch deployment to working Vercel.
+-   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
 
 ### Fixed
 

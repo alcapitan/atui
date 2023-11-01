@@ -1,26 +1,336 @@
-/* Snipper */
+// * Source code : https://uiball.com/loaders/
 
-.vkLoader {
-    animation: spinner-animation 1s infinite linear;
-    width: fit-content;
+/* Default variables */
+
+$defaultSize: 40px;
+$defaultSpeed: 1.5s;
+$defaultColor: color("A50");
+$defaultThickness: 5px;
+
+svg.vkLoaderRing,
+div.vkLoaderWobble,
+div.vkLoaderWave,
+div.vkLoaderPulse,
+div.vkLoaderSpinner,
+div.vkLoaderRace {
+    --vkLoaderSize: #{$defaultSize};
+    --vkLoaderSpeed: #{$defaultSpeed};
+    --vkLoaderColor: #{$defaultColor};
+    --vkLoaderThickness: #{$defaultThickness};
 }
 
-.vkLoader i {
-    height: 50px;
-    font-size: 50px;
-    color: color("A50");
+/* Ring */
+
+svg.vkLoaderRing {
+    height: var(--vkLoaderSize);
+    width: var(--vkLoaderSize);
+    stroke-width: var(--vkLoaderThickness);
+    vertical-align: middle;
+    transform-origin: center;
+    animation: rotate var(--vkLoaderSpeed) linear infinite;
+    border-radius: 50%;
 }
 
-@keyframes spinner-animation {
+svg.vkLoaderRing circle {
+    fill: none;
+    stroke: var(--vkLoaderColor);
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: stretch calc(var(--vkLoaderSpeed) * 0.75) ease-in-out infinite;
+}
+
+@keyframes rotate {
     100% {
-        transform: rotate(1turn);
+        transform: rotate(360deg);
     }
 }
 
-.vkLoader.styleLight > i {
-    color: color("N80");
+@keyframes stretch {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dashoffset: -124px;
+    }
 }
 
-.vkLoader.styleDark > i {
-    color: color("N20");
+/* Wobble */
+
+div.vkLoaderWobble {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--vkLoaderSize);
+    width: var(--vkLoaderSize);
+}
+
+div.vkLoaderWobble::before {
+    content: "";
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    animation: wobble var(--vkLoaderSpeed) ease-in-out infinite;
+    transform: translate(0, calc(var(--vkLoaderSize) * -0.4));
+    background-color: var(--vkLoaderColor);
+}
+
+@keyframes wobble {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(calc(var(--vkLoaderSize) * 0.75));
+    }
+}
+
+/* Wave dot */
+
+div.vkLoaderWave {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--vkLoaderSize);
+    height: calc(var(--vkLoaderSize) * 0.17);
+    padding-top: calc(var(--vkLoaderSize) * 0.34);
+}
+
+div.vkLoaderWaveDot {
+    flex-shrink: 0;
+    width: calc(var(--vkLoaderSize) * 0.17);
+    height: calc(var(--vkLoaderSize) * 0.17);
+    border-radius: 50%;
+    background-color: var(--vkLoaderColor);
+    will-change: transform;
+}
+
+div.vkLoaderWaveDot:nth-child(1) {
+    animation: jump var(--vkLoaderSpeed) ease-in-out calc(var(--vkLoaderSpeed) * -0.45) infinite;
+}
+
+div.vkLoaderWaveDot:nth-child(2) {
+    animation: jump var(--vkLoaderSpeed) ease-in-out calc(var(--vkLoaderSpeed) * -0.3) infinite;
+}
+
+div.vkLoaderWaveDot:nth-child(3) {
+    animation: jump var(--vkLoaderSpeed) ease-in-out calc(var(--vkLoaderSpeed) * -0.15) infinite;
+}
+
+div.vkLoaderWaveDot:nth-child(4) {
+    animation: jump var(--vkLoaderSpeed) ease-in-out infinite;
+}
+
+@keyframes jump {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+}
+
+/* Dot pulse */
+
+div.vkLoaderPulse {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--vkLoaderSize);
+    height: calc(var(--vkLoaderSize) * 0.27);
+}
+
+div.vkLoaderPulseDot,
+div.vkLoaderPulse::before,
+div.vkLoaderPulse::after {
+    content: "";
+    display: block;
+    height: calc(var(--vkLoaderSize) * 0.18);
+    width: calc(var(--vkLoaderSize) * 0.18);
+    border-radius: 50%;
+    background-color: var(--vkLoaderColor);
+    transform: scale(0);
+}
+
+div.vkLoaderPulse::before {
+    animation: pulse var(--vkLoaderSpeed) ease-in-out infinite;
+}
+
+div.vkLoaderPulseDot {
+    animation: pulse var(--vkLoaderSpeed) ease-in-out calc(var(--vkLoaderSpeed) * 0.125) infinite both;
+}
+
+div.vkLoaderPulse::after {
+    animation: pulse var(--vkLoaderSpeed) ease-in-out calc(var(--vkLoaderSpeed) * 0.25) infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/* Dot spinner */
+
+div.vkLoaderSpinner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--vkLoaderSize);
+    width: var(--vkLoaderSize);
+}
+
+div.vkLoaderSpinnerDot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+div.vkLoaderSpinnerDot::before {
+    content: "";
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: var(--vkLoaderColor);
+    transform: scale(0);
+    opacity: 0.5;
+    animation: pulse calc(var(--vkLoaderSpeed) * 1.111) ease-in-out infinite;
+}
+
+div.vkLoaderSpinnerDot:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(2)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.875);
+}
+
+div.vkLoaderSpinnerDot:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(3)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.75);
+}
+
+div.vkLoaderSpinnerDot:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(4)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.625);
+}
+
+div.vkLoaderSpinnerDot:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(5)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.5);
+}
+
+div.vkLoaderSpinnerDot:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(6)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.375);
+}
+
+div.vkLoaderSpinnerDot:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(7)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.25);
+}
+
+div.vkLoaderSpinnerDot:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+div.vkLoaderSpinnerDot:nth-child(8)::before {
+    animation-delay: calc(var(--vkLoaderSpeed) * -0.125);
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Race by */
+
+div.vkLoaderRace {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--vkLoaderThickness);
+    width: var(--vkLoaderSize);
+    border-radius: calc(var(--vkLoaderThickness) / 2);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+div.vkLoaderRace::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--vkLoaderColor);
+    opacity: 0.1;
+}
+
+div.vkLoaderRace::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--vkLoaderThickness) / 2);
+    animation: race-by var(--vkLoaderSpeed) ease-in-out infinite;
+    transform: translateX(-100%);
+    background-color: var(--vkLoaderColor);
+}
+
+@keyframes race-by {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
