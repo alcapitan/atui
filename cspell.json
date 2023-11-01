@@ -1,6 +1,6 @@
 {
     "version": "0.2",
-    "ignorePaths": ["*.mp3", ".mp4", "**/dist", "package.json"],
+    "ignorePaths": ["*.mp3", "*.mp4", "**/dist", "package.json"],
     "dictionaries": ["atui-dict", "npm"],
     "dictionaryDefinitions": [
         {
