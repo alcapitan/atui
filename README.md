@@ -65,7 +65,7 @@ https://cdn.jsdelivr.net/gh/alcapitan/atui@dev/atui/kernel/dist/main.js
 
 ATUI is an open-source project that invites collaboration.  
 You can help in the development of the project even without coding ! So you can test ATUI, report bugs, give your opinions and ideas for improvement, and more...  
-Before contributing, please read [CONTRIBUTING.md](https://alcapitan.github.io/atui/CONTRIBUTING.md).
+Before contributing, please read [CONTRIBUTING.md](https://atui.vercel.app/CONTRIBUTING.md).
 All your reports must be done in [Issues on GitHub](https://github.com/alcapitan/atui/issues). The roadmap is also in the Issues page.
 
 Besides, you will have to preview ATUI on your computer, you must preview ATUI in HTTP mode using an VScode extension like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). This is because some JavaScript functionalities of ATUI cannot work in local file mode.  
@@ -94,7 +94,7 @@ Anyone can create an extension, but you have to respect extension coding standar
 
 ## License & Use of external service
 
-This project is released under [GNU General Public License](https://alcapitan.github.io/atui/LICENSE.md).
+This project is released under [GNU General Public License](https://atui.vercel.app/LICENSE.md).
 
 ### Thanks to some services which I use
 

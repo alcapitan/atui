@@ -59,7 +59,7 @@ document.getElementById("pushNotification").addEventListener("click", function (
                 },
             },
         ],
-        link: "https://alcapitan.github.io/atui/",
+        link: "https://atui.vercel.app/",
     });
 });
 
@@ -94,7 +94,7 @@ document.getElementById("clipboardButton").addEventListener("click", async funct
 });
 
 document.getElementById("shareButton").addEventListener("click", function () {
-    vkShare("ATUI", "Meet the new web UI framework", "https://alcapitan.github.io/atui/");
+    vkShare("ATUI", "Meet the new web UI framework", "https://atui.vercel.app/");
 });
 
 document.getElementById("showModal").addEventListener("click", () => {
