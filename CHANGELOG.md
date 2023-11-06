@@ -56,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   New operation largely inspired by Bootstrap.
     -   Largely rebuilt overlay style.
     -   Add `.vkCardHighlight`.
--   Use unpkg instead of jsdelivr for CDN content (like icons, and ATUI itself) to avoid domain blockage in Egypt and China.
+-   Import Tabler icons with node_modules, unpkg and jsdelivr ; according to the availability of each of these ways. We use unpkg due to avoid domain blockage in Egypt and China.
 -   Remove `!important` from CSS code and use `@layer` for better inheritance management with minor visual changes.
 -   Set up a better responsive that better integrates tablets.
 -   Port CSS code to SCSS :
@@ -73,6 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Improve a lot the stability of `mpAssign` with resolution in every case.
 -   Abandon failing Netlify and switch deployment to working Vercel.
 -   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
+-   Update ATUI demonstration URL to `atui.vercel.app` !
 
 ### Fixed
 

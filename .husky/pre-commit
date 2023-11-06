@@ -3,3 +3,4 @@
 
 echo -e "\n=== BUILD BEFORE COMMITING ==="
 npm run build
+git add --all
