@@ -79,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Webpage's min-height follows now the dynamic height of the viewport to prevent issues on floating panels in phones' web browsers.
 -   Fix an alignment bug in `.vkGrid`.
+-   Husky now indexes every pending file before committing.
 
 ### Removed
 

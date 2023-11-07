@@ -2,5 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo -e "\n=== BUILD BEFORE COMMITING ==="
+git add --all --renormalize
 npm run build
-git add --all
+git add --all --renormalize
