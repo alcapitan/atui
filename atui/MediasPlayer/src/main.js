@@ -9,28 +9,6 @@ document.querySelectorAll(".mpClose").forEach(function (button) {
     });
 });
 
-/* Display error for broken media link */
-
-function mpLinkBroken(player, mediaLink) {
-    const alertBox = document.createElement("div");
-    alertBox.classList.add("vkBox", "styleDanger");
-    const alertIcon = document.createElement("i");
-    alertIcon.classList.add("ti", "ti-circle-x");
-    const alertText = document.createElement("p");
-    if (mediaLink !== null) {
-        alertText.innerHTML = `ERROR : The media "<code>${mediaLink}</code>" is not reachable.`;
-    } else {
-        alertText.innerHTML = `ERROR : There is no media in this mediasplayer.`;
-    }
-    alertBox.appendChild(alertIcon);
-    alertBox.appendChild(alertText);
-    if (player.classList.contains("mpVideo")) {
-        player.querySelector("article").prepend(alertBox);
-    } else {
-        player.prepend(alertBox);
-    }
-}
-
 /* Assign an audio to an audioplayer */
 
 function mpAssign(data) {
@@ -161,25 +139,75 @@ function mpAssign(data) {
     return true;
 }
 
+/* Manage media loading errors */
+
+function mpRaiseError(player, text) {
+    const alertBox = document.createElement("div");
+    alertBox.classList.add("vkBox", "styleDanger");
+
+    const alertIcon = document.createElement("i");
+    alertIcon.classList.add("ti", "ti-circle-x");
+    alertBox.appendChild(alertIcon);
+
+    const alertText = document.createElement("p");
+    alertText.innerHTML = text;
+    alertBox.appendChild(alertText);
+
+    if (player.classList.contains("mpVideo")) {
+        player.querySelector("article").prepend(alertBox);
+        media.setAttribute("poster", "");
+    } else {
+        player.prepend(alertBox);
+    }
+}
+
+document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
+    const media = player.querySelector("audio, video");
+    media.addEventListener("error", () => {
+        player.querySelectorAll(".vkBox.styleDanger").forEach((alertBox) => {
+            alertBox.remove();
+        });
+
+        let text = `ERROR : `;
+        switch (error.code) {
+            case 1:
+                text += `Media loading has been interrupted by the user. `;
+                break;
+            case 2:
+                text += `Media loading was interrupted due to a network problem. `;
+                break;
+            case 3:
+                text += `Media cannot be read due to a file decoding error. `;
+                break;
+            case 4:
+                text += `Media has not been found. `;
+                break;
+            default:
+                text += `An unexpected error has occurred. `;
+        }
+        const mediaLink = player.querySelector("audio, video").getAttribute("src");
+        text += `<hr /><small>Media link : <code>${mediaLink}</code></small>`;
+        text += `<br /><small>Technical error: <code>${error.code} ${error.message}</code></small>`;
+        mpRaiseError(player, text);
+    });
+});
+
 /* Play and pause a media */
 
 function mpRun(playerSelector) {
     const player = document.querySelector(playerSelector);
     const media = player.querySelector("audio, video");
     const button = player.querySelector(".mpRun");
+    if (media.getAttribute("src") === null) {
+        let text = `ERROR : This player ${playerSelector} does not have any media assigned.`;
+        text += `<hr /><small>MediaPlayer querySelector : <code>${playerSelector}</code></small>`;
+        mpRaiseError(player, text);
+        return 0;
+    }
     if (media.paused === true) {
         mpStop();
-        player.querySelectorAll(".vkBox.styleDanger").forEach((alertBox) => {
-            alertBox.remove();
-        });
-        const mediaLink = media.getAttribute("src");
-        const mediaLinkIsOk = verifyLink(mediaLink);
-        mediaLinkIsOk.then((response) => {
-            if (!response) {
-                mpLinkBroken(player, mediaLink);
-            }
-        });
         media.play();
+
         if (window.getComputedStyle(player).display === "none") {
             player.style.display = "block";
         }

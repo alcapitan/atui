@@ -65,6 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Change all variables, component classes and option classes structure ! You need to update classes in your projects to restore ATUI's operation.
 -   Change `vkStructureBody` and `vkStructureSection` from id to class.
 -   Replace `.vkBox.styleAlert` to `.vkBox.styleDanger`.
+-   Set style for `.vkBox hr`.
 -   Improve MediasPlayer stability and flexibility :
     -   Update options for `mpAssign`. Audio and video have the same options now.
     -   Merge music title and author.
@@ -74,6 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Abandon failing Netlify and switch deployment to working Vercel.
 -   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
 -   Update ATUI demonstration URL to `atui.vercel.app` !
+-   Rewrite and highly improve MediaPlayer's error management.
 
 ### Fixed
 
@@ -156,7 +158,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Set up scrollbar styling with both Firefox and Webkit syntax.
     -   Set up font-size guidelines.
 -   Set up rich links on the HTML `<head>` tag.
--   Display an error for broken media links in Mediaplayer.
+-   Display an error for broken media links in MediaPlayer.
 
 ### Changed
 

@@ -21,6 +21,14 @@ $colorOptions: (
     @include iconSize("30px");
 }
 
+.vkBox > p {
+    flex: 1;
+}
+
+.vkBox hr {
+    margin-block: 10px;
+}
+
 @each $option, $prefix in $colorOptions {
     .vkBox#{$option} {
         border-color: color("#{$prefix}50");
@@ -29,5 +37,9 @@ $colorOptions: (
 
     .vkBox#{$option} * {
         color: color("#{$prefix}20");
+    }
+
+    .vkBox#{$option} hr {
+        border-color: color("#{$prefix}20");
     }
 }
