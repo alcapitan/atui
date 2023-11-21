@@ -42,3 +42,11 @@
 .mpVideo .mpProgress {
     width: 100%;
 }
+
+/* Style overlay */
+
+.mpVideo.styleOverlay .mpDashboard {
+    background-color: color("N90", "80%");
+    position: absolute;
+    inset-block-end: 0;
+}

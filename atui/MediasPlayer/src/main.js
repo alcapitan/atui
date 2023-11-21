@@ -1,14 +1,3 @@
-/* Close Audioplayer */
-
-document.querySelectorAll(".mpClose").forEach(function (button) {
-    button.addEventListener("click", function () {
-        const player = vkClosest(this, ".mpAudio, .mpVideo", ".mpAudio, .mpVideo")[0];
-        const media = player.querySelector("audio, video");
-        media.pause();
-        player.style.display = "none";
-    });
-});
-
 /* Assign an audio to an audioplayer */
 
 function mpAssign(data) {
@@ -35,6 +24,17 @@ function mpAssign(data) {
         return false;
     }
 
+    // Clear media player
+    player.querySelectorAll(".vkBox.styleDanger").forEach((alertBox) => {
+        alertBox.remove();
+    });
+    if (player.classList.contains("mpVideo") && player.classList.contains("styleOverlay")) {
+        player.querySelector(".mpDashboard").style.opacity = "1";
+    }
+    player.querySelector(".mpRun").classList.replace("ti-player-pause", "ti-player-play");
+    player.querySelector(".mpTimer").innerText = "00:00 - 00:00";
+    player.querySelector(".mpProgressInside").style.width = "0%";
+
     // Media
     if (data.media === undefined) {
         console.error("The media attribute is required.");
@@ -42,6 +42,7 @@ function mpAssign(data) {
     }
     const media = player.querySelector("audio, video");
     if (media === null) {
+        // TODO: we could call mpRaiseError() here with an understandable message for the user (who is not developer !)
         console.error(`The player ${data.player} does not have any audio or video tag.`);
         return false;
     } else {
@@ -139,9 +140,13 @@ function mpAssign(data) {
     return true;
 }
 
-/* Manage media loading errors */
+/* Raise error boxes inside the player */
 
 function mpRaiseError(player, text) {
+    player.querySelectorAll(".vkBox.styleDanger").forEach((alertBox) => {
+        alertBox.remove();
+    });
+
     const alertBox = document.createElement("div");
     alertBox.classList.add("vkBox", "styleDanger");
 
@@ -155,105 +160,117 @@ function mpRaiseError(player, text) {
 
     if (player.classList.contains("mpVideo")) {
         player.querySelector("article").prepend(alertBox);
-        media.setAttribute("poster", "");
+        player.querySelector("video").setAttribute("poster", "");
     } else {
         player.prepend(alertBox);
     }
-}
-
-document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
-    const media = player.querySelector("audio, video");
-    media.addEventListener("error", () => {
-        player.querySelectorAll(".vkBox.styleDanger").forEach((alertBox) => {
-            alertBox.remove();
-        });
-
-        let text = `ERROR : `;
-        switch (error.code) {
-            case 1:
-                text += `Media loading has been interrupted by the user. `;
-                break;
-            case 2:
-                text += `Media loading was interrupted due to a network problem. `;
-                break;
-            case 3:
-                text += `Media cannot be read due to a file decoding error. `;
-                break;
-            case 4:
-                text += `Media has not been found. `;
-                break;
-            default:
-                text += `An unexpected error has occurred. `;
-        }
-        const mediaLink = player.querySelector("audio, video").getAttribute("src");
-        text += `<hr /><small>Media link : <code>${mediaLink}</code></small>`;
-        text += `<br /><small>Technical error: <code>${error.code} ${error.message}</code></small>`;
-        mpRaiseError(player, text);
-    });
-});
-
-/* Play and pause a media */
-
-function mpRun(playerSelector) {
-    const player = document.querySelector(playerSelector);
-    const media = player.querySelector("audio, video");
-    const button = player.querySelector(".mpRun");
-    if (media.getAttribute("src") === null) {
-        let text = `ERROR : This player ${playerSelector} does not have any media assigned.`;
-        text += `<hr /><small>MediaPlayer querySelector : <code>${playerSelector}</code></small>`;
-        mpRaiseError(player, text);
-        return 0;
-    }
-    if (media.paused === true) {
-        mpStop();
-        media.play();
-
-        if (window.getComputedStyle(player).display === "none") {
-            player.style.display = "block";
-        }
-        button.classList.replace("ti-player-play", "ti-player-pause");
-    } else if (media.paused === false) {
-        media.pause();
-        button.classList.replace("ti-player-pause", "ti-player-play");
-    } else {
-        console.error("An unexpected error has occurred.");
+    if (window.getComputedStyle(player).display === "none") {
+        player.style.display = "block";
     }
 }
-
-document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
-    player.querySelector(".mpRun").addEventListener("click", () => {
-        mpRun(`#${player.getAttribute("id")}`);
-    });
-});
-
-/* Manage when audio ends */
-
-document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
-    const button = player.querySelector(".mpRun");
-    const media = player.querySelector("audio, video");
-    media.addEventListener("ended", () => {
-        button.classList.replace("ti-player-pause", "ti-player-play");
-        if (player.classList.contains("styleFloating")) {
-            player.style.display = "none";
-        }
-    });
-});
 
 /* Stop all others medias when playing a new one */
 
 function mpStop() {
     const medias = document.querySelectorAll("audio, video");
-    medias.forEach(function (media) {
+    medias.forEach((media) => {
         media.pause();
     });
-    document.querySelectorAll(".mpRun").forEach(function (button) {
+    document.querySelectorAll(".mpRun").forEach((button) => {
         button.classList.replace("ti-player-pause", "ti-player-play");
     });
 }
 
-/* Update timer */
+/* Touch and click interactions for video player */
+
+function toggleDashboardOpacity(player) {
+    const media = player.querySelector("video");
+    const dashboard = player.querySelector(".mpDashboard");
+
+    dashboard.style.opacity = "1";
+    if (media.paused === false) {
+        clearTimeout(media.period);
+        media.addEventListener("mouseleave", () => {
+            media.period = setTimeout(() => {
+                dashboard.style.opacity = "0.2";
+            }, 2000);
+        });
+    }
+}
+
+document.querySelectorAll(".mpVideo.styleOverlay").forEach((player) => {
+    const media = player.querySelector("video");
+    const dashboard = player.querySelector(".mpDashboard");
+
+    dashboard.addEventListener("mouseover", () => {
+        toggleDashboardOpacity(player);
+    });
+
+    const isTouchscreen = navigator.maxTouchPoints > 0;
+    if (isTouchscreen) {
+        media.addEventListener("dblclick", () => {
+            mpRun(`#${player.getAttribute("id")}`);
+        });
+    } else {
+        media.addEventListener("click", () => {
+            mpRun(`#${player.getAttribute("id")}`);
+        });
+        media.addEventListener("dblclick", () => {
+            mpToggleFullscreen(player);
+        });
+    }
+});
+
+/* Initialize media player features */
 
 document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
+    const media = player.querySelector("audio, video");
+
+    media.addEventListener("timeupdate", () => {
+        mpUpdateTimer(player);
+    });
+
+    media.addEventListener("ended", () => {
+        mpMediaEnded(player);
+    });
+
+    media.addEventListener("error", (error) => {
+        mpLoadingError(player, error);
+    });
+
+    mpChangePlaybackByButtons(player);
+
+    mpChangePlaybackByProgressBar(player);
+
+    player.querySelector(".mpRun").addEventListener("click", () => {
+        mpRun(`#${player.getAttribute("id")}`);
+        //* This complex previous line should be kept because mpRun needs player's selector id !
+    });
+
+    player.querySelector(".mpLoop")?.addEventListener("click", () => {
+        mpToggleLoop(player);
+    });
+
+    player.querySelector(".mpSound")?.addEventListener("click", () => {
+        mpToggleSound(player);
+    });
+
+    player.querySelector(".mpClose")?.addEventListener("click", () => {
+        mpClose(player);
+    });
+
+    player.querySelector(".mpFullscreen")?.addEventListener("click", () => {
+        mpToggleFullscreen(player);
+    });
+
+    player.querySelector(".mpPip")?.addEventListener("click", () => {
+        mpTogglePip(player);
+    });
+});
+
+/* Update timer */
+
+function mpUpdateTimer(player) {
     const media = player.querySelector("audio, video");
     const timer = player.querySelector(".mpTimer");
     const progressBar = player.querySelector(".mpProgressInside");
@@ -267,91 +284,162 @@ document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
         timer.innerText = `${convertTime(listened)} - ${convertTime(duration)}`;
         progressBar.style.width = `${percent}%`;
     });
-});
+}
 
-/* Go forward or backward */
+/* Manage when audio ends */
 
-document.querySelectorAll(".mpAudio, .mpVideo").forEach((player) => {
+function mpMediaEnded(player) {
+    player.querySelector(".mpRun").classList.replace("ti-player-pause", "ti-player-play");
+    if (player.classList.contains("styleFloating")) {
+        player.style.display = "none";
+    }
+}
+
+/* Manage media loading errors */
+
+//* This function is almost useless and could be removed soon
+function mpLoadingError(player, error) {
+    let text = `ERROR : `;
+    text += `The media cannot be loaded. `;
+    /* switch (error.code) {
+        case 1:
+            text += `Media loading has been interrupted by the user. `;
+            break;
+        case 2:
+            text += `Media loading was interrupted due to a network problem. `;
+            break;
+        case 3:
+            text += `Media cannot be read due to a file decoding error. `;
+            break;
+        case 4:
+            text += `Media has not been found. `;
+            break;
+        case 5:
+            text += `Media cannot be played due to a network error. `;
+            break;
+        default:
+            text += `An unexpected error has occurred. `;
+    } */
+    const mediaLink = player.querySelector("audio, video").getAttribute("src");
+    text += `<hr /><small>Media link : <code>${mediaLink}</code></small>`;
+    text += `<br /><small>Technical error: <code>${error.code} - ${error.message}</code></small>`;
+    console.error(text);
+    mpRaiseError(player, text);
+}
+
+/* Change playback by buttons */
+
+function mpChangePlaybackByButtons(player) {
+    const media = player.querySelector("audio, video");
     const backward = player.querySelector(".mpBackward");
     const forward = player.querySelector(".mpForward");
-    const media = player.querySelector("audio, video");
     backward.addEventListener("click", () => {
         media.currentTime -= 10;
     });
     forward.addEventListener("click", () => {
         media.currentTime += 10;
     });
-});
+}
 
-/* Change playback */
+/* Change playback by progress bar */
 
-document.querySelectorAll(".mpProgress").forEach((progressBar) => {
+function mpChangePlaybackByProgressBar(player) {
+    const media = player.querySelector("audio, video");
+    const progressBar = player.querySelector(".mpProgress");
     progressBar.addEventListener("click", (event) => {
-        const media = vkClosest(progressBar, "audio, video", ".mpAudio, .mpVideo")[0];
+        if (isNaN(media.duration)) return false;
         const percent = (event.offsetX / progressBar.offsetWidth) * 100;
         media.currentTime = (media.duration * percent) / 100;
         progressBar.querySelector(".mpProgressInside").style.width = `${percent}%`;
+
+        return true;
     });
-});
+}
+
+/* Play and pause a media */
+
+function mpRun(playerSelector) {
+    const player = document.querySelector(playerSelector);
+    const media = player.querySelector("audio, video");
+    const button = player.querySelector(".mpRun");
+
+    if (media.paused === true) {
+        mpStop();
+        if (window.getComputedStyle(player).display === "none") {
+            player.style.display = "block";
+        }
+        media.play();
+        button.classList.replace("ti-player-play", "ti-player-pause");
+    } else if (media.paused === false) {
+        media.pause();
+        button.classList.replace("ti-player-pause", "ti-player-play");
+        if (player.classList.contains("mpVideo") && player.classList.contains("styleOverlay")) {
+            player.querySelector(".mpDashboard").style.opacity = "1"; // Reset dashboard opacity
+        }
+    }
+
+    return true;
+}
 
 /* Loop */
 
-document.querySelectorAll(".mpLoop").forEach(function (button) {
-    button.addEventListener("click", function () {
-        const media = vkClosest(this, "audio, video", ".mpAudio, .mpVideo")[0];
-        if (media.loop === false) {
-            media.loop = true;
-            this.classList.replace("ti-repeat", "ti-repeat-off");
-        } else if (media.loop === true) {
-            media.loop = false;
-            this.classList.replace("ti-repeat-off", "ti-repeat");
-        } else {
-            console.error("An unexpected error has occurred.");
-        }
-    });
-});
+function mpToggleLoop(player) {
+    const media = player.querySelector("audio, video");
+    const button = player.querySelector(".mpLoop");
+    if (media.loop === false) {
+        media.loop = true;
+        button.classList.replace("ti-repeat", "ti-repeat-off");
+    } else if (media.loop === true) {
+        media.loop = false;
+        button.classList.replace("ti-repeat-off", "ti-repeat");
+    }
+}
 
 /* Sound */
 
-document.querySelectorAll(".mpSound").forEach(function (button) {
-    button.addEventListener("click", function () {
-        const media = vkClosest(this, "audio, video", ".mpAudio, .mpVideo")[0];
-        if (media.muted === false) {
-            media.muted = true;
-            this.classList.replace("ti-volume", "ti-volume-off");
-        } else if (media.muted === true) {
-            media.muted = false;
-            this.classList.replace("ti-volume-off", "ti-volume");
-        } else {
-            console.error("An unexpected error has occurred.");
-        }
-    });
-});
+function mpToggleSound(player) {
+    const media = player.querySelector("audio, video");
+    const button = player.querySelector(".mpSound");
+    if (media.muted === false) {
+        media.muted = true;
+        button.classList.replace("ti-volume", "ti-volume-off");
+    } else if (media.muted === true) {
+        media.muted = false;
+        button.classList.replace("ti-volume-off", "ti-volume");
+    }
+}
+
+/* Close Audioplayer */
+
+function mpClose(player) {
+    player.querySelector("audio, video").pause();
+    player.style.display = "none";
+}
 
 /* Fullscreen */
 
-document.querySelectorAll(".mpFullscreen").forEach((button) => {
-    button.addEventListener("click", () => {
-        const media = vkClosest(button, "video", ".mpVideo")[0];
-        if (media.requestFullscreen) {
-            media.requestFullscreen();
-        } else if (media.webkitRequestFullscreen) {
-            media.webkitRequestFullscreen();
-        } else {
-            console.error("The browser does not support fullscreen mode.");
-        }
-    });
-});
+function mpToggleFullscreen(player) {
+    const media = player.querySelector("video");
+    if (media.src === "") return 0; // don't toggle fullscreen if no media is assigned
+    if (media.requestFullscreen) {
+        media.requestFullscreen();
+    } else if (media.webkitRequestFullscreen) {
+        media.webkitRequestFullscreen();
+    } else {
+        console.error("The browser does not support fullscreen mode.");
+    }
+}
 
 /* Picture in picture */
 
-document.querySelectorAll(".mpPip").forEach((button) => {
-    button.addEventListener("click", () => {
-        const media = vkClosest(button, "video", ".mpVideo")[0];
-        if (media !== document.pictureInPictureElement) {
-            media.requestPictureInPicture();
-        } else {
-            document.exitPictureInPicture();
-        }
-    });
-});
+function mpTogglePip(player) {
+    const media = player.querySelector("video");
+    if (media.src === "") return 0; // don't toggle fullscreen if no media is assigned
+    if (media !== document.pictureInPictureElement) {
+        media.requestPictureInPicture();
+    } else if (document.exitPictureInPicture) {
+        document.exitPictureInPicture();
+    } else {
+        console.error("The browser does not support picture in picture mode.");
+    }
+}

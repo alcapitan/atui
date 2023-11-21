@@ -66,16 +66,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Change `vkStructureBody` and `vkStructureSection` from id to class.
 -   Replace `.vkBox.styleAlert` to `.vkBox.styleDanger`.
 -   Set style for `.vkBox hr`.
--   Improve MediasPlayer stability and flexibility :
+-   Largely rework MediasPlayer :
     -   Update options for `mpAssign`. Audio and video have the same options now.
     -   Merge music title and author.
     -   Change some media info classes.
     -   Create `.mpHeader`, mostly for VideoPlayer title.
-    -   Improve a lot the stability of `mpAssign` with resolution in every case.
+    -   Improve a lot the stability as well as possible by working on manage every case and catch every bug.
+    -   Error boxes are clearer and better called.
+    -   Add mouse interaction over media surface.
+    -   Add dynamic opacity for dashboard in `.mpVideo.styleOverlay`.
+    -   An initialization function now calls a clear function for each feature. Function code has been rearranged in the call sequence.
 -   Abandon failing Netlify and switch deployment to working Vercel.
 -   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
 -   Update ATUI demonstration URL to `atui.vercel.app` !
--   Rewrite and highly improve MediaPlayer's error management.
 
 ### Fixed
 
