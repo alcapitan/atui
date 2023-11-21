@@ -457,8 +457,8 @@ function vkNotificationPush(options) {
             icon: options.image
                 ? options.image
                 : options.icon
-                ? `https://unpkg.com/@tabler/icons/icons/${options.icon}.svg`
-                : "",
+                  ? `https://unpkg.com/@tabler/icons/icons/${options.icon}.svg`
+                  : "",
         });
         notification.onclick = (event) => {
             if (options.link && options.link !== "") {
