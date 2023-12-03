@@ -49,7 +49,7 @@
 }
 
 .vkSquarelink.styleNavigator > i {
-    font-size: 2.25em;
+    @include iconSize("2.25rem");
 }
 
 .vkSquarelink.styleNavigator > p {

@@ -47,13 +47,9 @@
     }
 }
 
-.vkStructureBody > *:not(.vkStructureBodyContent),
-.vkStructureSection > * {
-    padding: 10px;
-}
-
 :is(.vkStructureBodyContent, .vkStructureSectionContent) {
     flex: 1;
+    position: relative;
 }
 
 .vkStructureBodyContent {
@@ -64,6 +60,10 @@
 
 .vkStructureSection {
     flex: 1;
+}
+
+.vkStructureSectionContent {
+    padding: 10px;
 }
 
 .vkStructureSectionContent > * {

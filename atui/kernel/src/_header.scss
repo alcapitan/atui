@@ -3,10 +3,9 @@
 .vkHeader {
     background-color: color("N90");
     position: relative;
-    width: available;
-    width: stretch;
     z-index: 13;
     padding-inline: 5px;
+    width: 100%;
     border-block-end: 1px solid color("N80");
 }
 
