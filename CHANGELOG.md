@@ -76,15 +76,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Add mouse interaction over media surface.
     -   Add dynamic opacity for dashboard in `.mpVideo.styleOverlay`.
     -   An initialization function now calls a clear function for each feature. Function code has been rearranged in the call sequence.
+    -   Polish the interfaces.
+    -   Makes efforts to lighten HTML/CSS code.
 -   Abandon failing Netlify and switch deployment to working Vercel.
 -   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
 -   Update ATUI demonstration URL to `atui.vercel.app` !
+-   Slightly change border radius and blur global CSS variables.
 
 ### Fixed
 
 -   Webpage's min-height follows now the dynamic height of the viewport to prevent issues on floating panels in phones' web browsers.
 -   Fix an alignment bug in `.vkGrid`.
 -   Husky now indexes every pending file before committing.
+-   Fix several CSS bugs noticeable in Webkit-based browsers like Safari and Epiphany (aka Gnome Web).
 
 ### Removed
 

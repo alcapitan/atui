@@ -1088,23 +1088,28 @@
                     <div class="mpAudio" id="audioplayer1">
                         <audio src="atui/kernel/assets/notification.mp3"></audio>
                         <div class="mpPanel">
-                            <div class="mpMediaPicture">
-                                <img
-                                    src="https://unpkg.com/@tabler/icons/icons/disc.svg"
-                                    alt="Unavailable album cover"
-                                />
-                            </div>
+                            <img
+                                class="mpMediaPicture"
+                                src="https://unpkg.com/@tabler/icons/icons/disc.svg"
+                                alt="Unavailable album cover"
+                            />
                             <div class="mpDashboard">
                                 <div class="mpHeader">
-                                    <p class="mpMediaTitle">Title</p>
+                                    <p class="mpMediaTitle">Testing audio</p>
                                 </div>
+                                <div class="mpProgress">
+                                    <div class="mpProgressInside"></div>
+                                    <div class="mpProgressIndicator"></div>
+                                </div>
+                                <div class="mpSpace"></div>
                                 <div class="mpControls">
-                                    <p class="mpTimer">0:00 - 0:00</p>
                                     <div>
-                                        <i class="ti ti-player-skip-back mpBackward"></i>
                                         <i class="ti ti-player-play mpRun"></i>
+                                        <i class="ti ti-player-skip-back mpBackward"></i>
                                         <i class="ti ti-player-skip-forward mpForward"></i>
                                     </div>
+                                    <p class="mpTimer">0:00 - 0:00</p>
+                                    <hr class="mpSpace" />
                                     <div>
                                         <i class="ti ti-repeat mpLoop"></i>
                                         <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
@@ -1113,15 +1118,10 @@
                                             <a href="#" class="mpMediaDate">Release date</a>
                                             <a class="mpMediaSource" href="">Source of the audio</a>
                                         </aside>
-                                        <div class="mpClose">
-                                            <i class="ti ti-x"></i>
-                                        </div>
+                                        <i class="ti ti-x mpClose"></i>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mpProgress">
-                            <div class="mpProgressInside"></div>
                         </div>
                     </div>
                     <div>
@@ -1132,23 +1132,28 @@
                     <div class="mpAudio styleFloating" id="audioplayer2">
                         <audio src="atui/kernel/assets/notification.mp3"></audio>
                         <div class="mpPanel">
-                            <div class="mpMediaPicture">
-                                <img
-                                    src="https://unpkg.com/@tabler/icons/icons/disc.svg"
-                                    alt="Unavailable album cover"
-                                />
-                            </div>
+                            <img
+                                class="mpMediaPicture"
+                                src="https://unpkg.com/@tabler/icons/icons/disc.svg"
+                                alt="Unavailable album cover"
+                            />
                             <div class="mpDashboard">
                                 <div class="mpHeader">
                                     <p class="mpMediaTitle">Title</p>
                                 </div>
+                                <div class="mpProgress">
+                                    <div class="mpProgressInside"></div>
+                                    <div class="mpProgressIndicator"></div>
+                                </div>
+                                <div class="mpSpace"></div>
                                 <div class="mpControls">
-                                    <p class="mpTimer">0:00 - 0:00</p>
                                     <div>
-                                        <i class="ti ti-player-skip-back mpBackward"></i>
                                         <i class="ti ti-player-play mpRun"></i>
+                                        <i class="ti ti-player-skip-back mpBackward"></i>
                                         <i class="ti ti-player-skip-forward mpForward"></i>
                                     </div>
+                                    <p class="mpTimer">0:00 - 0:00</p>
+                                    <hr class="mpSpace" />
                                     <div>
                                         <i class="ti ti-repeat mpLoop"></i>
                                         <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
@@ -1157,15 +1162,10 @@
                                             <a href="#" class="mpMediaDate">Release date</a>
                                             <a class="mpMediaSource" href="">Source of the audio</a>
                                         </aside>
-                                        <div class="mpClose">
-                                            <i class="ti ti-x"></i>
-                                        </div>
+                                        <i class="ti ti-x mpClose"></i>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mpProgress">
-                            <div class="mpProgressInside"></div>
                         </div>
                     </div>
                     <div>
@@ -1174,38 +1174,37 @@
                         </p>
                     </div>
                     <div class="mpVideo styleOverlay" id="videoplayer">
-                        <article>
-                            <video>
-                                <source src="" />
-                            </video>
-                            <aside class="mpHeader">
-                                <p class="mpMediaTitle">Title</p>
-                            </aside>
-                            <aside class="mpDashboard">
-                                <div class="mpProgress">
-                                    <div class="mpProgressInside"></div>
+                        <div class="mpHeader">
+                            <p class="mpMediaTitle">Title</p>
+                        </div>
+                        <video src=""></video>
+                        <div class="mpDashboard">
+                            <div class="mpProgress">
+                                <div class="mpProgressInside"></div>
+                                <div class="mpProgressIndicator"></div>
+                            </div>
+                            <div class="mpControls">
+                                <div>
+                                    <i class="ti ti-player-play mpRun"></i>
+                                    <i class="ti ti-player-skip-back mpBackward"></i>
+                                    <i class="ti ti-player-skip-forward mpForward"></i>
                                 </div>
-                                <div class="mpControls">
-                                    <p class="mpTimer">0:00 - 0:00</p>
-                                    <div>
-                                        <i class="ti ti-player-skip-back mpBackward"></i>
-                                        <i class="ti ti-player-play mpRun"></i>
-                                        <i class="ti ti-player-skip-forward mpForward"></i>
-                                    </div>
-                                    <div>
-                                        <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
-                                        <aside class="vkPopupContextmenu mpInfos">
-                                            <a href="#" class="mpMediaPlaylist">Playlist</a>
-                                            <a href="#" class="mpMediaDate">Release date</a>
-                                            <a class="mpMediaSource" href="">Source of the video</a>
-                                        </aside>
-                                        <i class="ti ti-volume mpSound"></i>
-                                        <i class="ti ti-picture-in-picture-on mpPip"></i>
-                                        <i class="ti ti-arrows-maximize mpFullscreen"></i>
-                                    </div>
+                                <p class="mpTimer">0:00 - 0:00</p>
+                                <hr class="mpSpace" />
+                                <div>
+                                    <i class="ti ti-repeat mpLoop"></i>
+                                    <i class="ti ti-info-circle" data-vk-popup-assign=".mpInfos"></i>
+                                    <aside class="vkPopupContextmenu mpInfos">
+                                        <a href="#" class="mpMediaPlaylist">Playlist</a>
+                                        <a href="#" class="mpMediaDate">Release date</a>
+                                        <a class="mpMediaSource" href="">Source of the video</a>
+                                    </aside>
+                                    <i class="ti ti-volume mpSound"></i>
+                                    <i class="ti ti-picture-in-picture-on mpPip"></i>
+                                    <i class="ti ti-arrows-maximize mpFullscreen"></i>
                                 </div>
-                            </aside>
-                        </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -51,7 +51,7 @@ function mpAssign(data) {
 
     // Picture
     if (media.tagName === "AUDIO") {
-        const picture = player.querySelector(".mpMediaPicture img, .mpMediaPicture i");
+        const picture = player.querySelector(".mpMediaPicture, .mpMediaPicture");
         if (picture === null && data.picture !== undefined) {
             console.error(`The player ${data.player} does not have any album cover element.`);
             return false;
@@ -159,8 +159,8 @@ function mpRaiseError(player, text) {
     alertBox.appendChild(alertText);
 
     if (player.classList.contains("mpVideo")) {
-        player.querySelector("article").prepend(alertBox);
         player.querySelector("video").setAttribute("poster", "");
+        player.querySelector("video").before(alertBox);
     } else {
         player.prepend(alertBox);
     }
@@ -320,10 +320,11 @@ function mpLoadingError(player, error) {
         default:
             text += `An unexpected error has occurred. `;
     } */
-    const mediaLink = player.querySelector("audio, video").getAttribute("src");
+    let mediaLink = player.querySelector("audio, video").getAttribute("src");
+    if (mediaLink === "") mediaLink = "undefined";
     text += `<hr /><small>Media link : <code>${mediaLink}</code></small>`;
-    text += `<br /><small>Technical error: <code>${error.code} - ${error.message}</code></small>`;
-    console.error(text);
+    /* text += `<br /><small>Technical error: <code>${error}</code></small>`;
+    console.error(error.eventPhase); */
     mpRaiseError(player, text);
 }
 
