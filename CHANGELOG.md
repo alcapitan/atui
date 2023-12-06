@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.0-beta] - 2023-09-26
+## [0.5.0-beta2] - 2023-12-06
 
 ### Added
 
@@ -26,7 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   Practical JS function `findElement` has been renamed to `vkClosest`.
     -   It returns only arrays now.
     -   Warning ! This function is now deprecated, it will be replaced by native javascript function `closest()`.
--   JS function `stopAllMedia()` is renamed to `mpStop()`.
 -   Change `system` Notification key to `type`, and `option` key to `style` for Notification's buttons.
 -   Hardly lighten footer's CSS code and remove almost all specific components.
 -   `.vkLogotype` become a global component, not only for Header.
@@ -67,6 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Replace `.vkBox.styleAlert` to `.vkBox.styleDanger`.
 -   Set style for `.vkBox hr`.
 -   Largely rework MediasPlayer :
+
+    -   JS function `stopAllMedia()` is renamed to `mpStop()`.
     -   Update options for `mpAssign`. Audio and video have the same options now.
     -   Merge music title and author.
     -   Change some media info classes.
@@ -78,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -   An initialization function now calls a clear function for each feature. Function code has been rearranged in the call sequence.
     -   Polish the interfaces.
     -   Makes efforts to lighten HTML/CSS code.
+
 -   Abandon failing Netlify and switch deployment to working Vercel.
 -   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
 -   Update ATUI demonstration URL to `atui.vercel.app` !

@@ -1,6 +1,6 @@
 /* Licensing */
 
-const vkVersion = "0.5.0-beta";
+const vkVersion = "0.5.0-beta2";
 
 document.querySelectorAll(".vkLicensingAtui").forEach((link) => {
     link.setAttribute("href", "https://github.com/alcapitan/atui/");

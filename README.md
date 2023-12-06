@@ -44,8 +44,8 @@ import '@alcapitan/atui/atui/kernel/dist/main.js'
 Directly import ATUI in your project :
 
 ```
-https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.css
-https://unpkg.com/@alcapitan/atui@0.5.0-beta/atui/kernel/dist/dist.js
+https://unpkg.com/@alcapitan/atui@0.5.0-beta2/atui/kernel/dist/dist.css
+https://unpkg.com/@alcapitan/atui@0.5.0-beta2/atui/kernel/dist/dist.js
 ```
 
 However, we warn you that using unpkg is quite slow in comparison of NPM install.
