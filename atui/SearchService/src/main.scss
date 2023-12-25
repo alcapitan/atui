@@ -7,6 +7,12 @@
     display: block;
 }
 
+.ssPanel > hr {
+    background-color: color("N70");
+    border: none;
+    height: 1px;
+}
+
 .ssPanel.statusActive {
     background-color: color("N90");
     box-shadow: var(--vkShadowMedium);
@@ -16,39 +22,29 @@
     z-index: 14;
     margin-block: 20px;
     padding: 10px;
-}
 
-@media (width < 480px) /* Smartphones */ {
-    .ssPanel.statusActive {
+    @media (width < 480px) /* Smartphones */ {
         width: 90%;
         margin-inline: 5%;
     }
-}
 
-@media (480px <= width) /* Tablets and computers */ {
-    .ssPanel.statusActive {
+    @media (480px <= width) /* Tablets and computers */ {
         width: 500px;
         margin-inline: 50%;
         transform: translateX(-50%);
     }
-}
 
-.ssPanel.statusActive > * {
-    margin-block-end: 10px;
-}
+    > * {
+        margin-block-end: 10px;
 
-.ssPanel > hr {
-    background-color: color("N70");
-    border: none;
-    height: 1px;
+        &:not(.ssBar) {
+            margin-inline: 10px;
+        }
+    }
 }
 
 .ssPanel:not(.statusActive) {
     width: fit-content;
-}
-
-.ssPanel.statusActive > *:not(.ssBar) {
-    margin-inline: 10px;
 }
 
 /* Search bar */
@@ -59,24 +55,26 @@
 
 .ssPanel.statusActive .ssBar {
     margin-block-end: 15px;
-}
 
-.ssPanel.statusActive .ssBar div.styleGroup {
-    width: 100%;
+    div.styleGroup {
+        width: 100%;
+    }
 }
 
 .ssBar div.styleGroup {
     box-shadow: var(--vkShadowLight);
 }
 
-.ssPanel .ssBar div.styleGroup input {
-    width: 100%;
-}
+.ssPanel .ssBar div.styleGroup {
+    input {
+        width: 100%;
+    }
 
-.ssPanel .ssBar div.styleGroup i {
-    font-size: 1.125rem;
-    width: 1.125rem;
-    height: 1.125rem;
+    i {
+        font-size: 1.125rem;
+        width: 1.125rem;
+        height: 1.125rem;
+    }
 }
 
 .ssTrigger {

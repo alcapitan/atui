@@ -3,37 +3,37 @@
 .vkPaginationNumber {
     display: flex;
     justify-content: center;
-}
 
-.vkPaginationNumber > * {
-    padding: 10px 15px;
-    border: 1px solid color("N50");
-    border-inline-start: none;
-    color: color("N00");
-}
+    > * {
+        padding: 10px 15px;
+        border: 1px solid color("N50");
+        border-inline-start: none;
+        color: color("N00");
 
-.vkPaginationNumber > *:first-child {
-    border-start-start-radius: var(--vkBorderRadius);
-    border-end-start-radius: var(--vkBorderRadius);
-    border-inline-start: 1px solid color("N50");
-}
+        &:first-child {
+            border-start-start-radius: var(--vkBorderRadius);
+            border-end-start-radius: var(--vkBorderRadius);
+            border-inline-start: 1px solid color("N50");
+        }
 
-.vkPaginationNumber > *:last-child {
-    border-start-end-radius: var(--vkBorderRadius);
-    border-end-end-radius: var(--vkBorderRadius);
-}
+        &:last-child {
+            border-start-end-radius: var(--vkBorderRadius);
+            border-end-end-radius: var(--vkBorderRadius);
+        }
 
-.vkPaginationNumber > *:hover {
-    background-color: color("A90");
-}
+        &:hover {
+            color: color("A50");
+            background-color: color("A90");
+        }
+    }
 
-.vkPaginationNumber > *:hover,
-.vkPaginationNumber > p {
-    color: color("A50");
-}
+    > p {
+        color: color("A50");
 
-.vkPaginationNumber > p:hover {
-    background-color: transparent;
+        &:hover {
+            background-color: transparent;
+        }
+    }
 }
 
 /* Text */
@@ -43,10 +43,8 @@
     gap: 15px;
     width: 100%;
     flex-direction: row;
-}
 
-@media (width <= 480px) /* Smartphones */ {
-    .vkPaginationText {
+    @media (width <= 480px) /* Smartphones */ {
         flex-direction: column;
     }
 }
@@ -56,23 +54,24 @@
     border-radius: var(--vkBorderRadius);
     padding: 15px;
     flex: 1;
-}
 
-.vkPaginationText a:hover {
-    border-width: 2px;
-    border-color: color("A40");
-    background-color: color("A90");
-}
+    p {
+        color: color("N00");
+        text-align: center;
 
-.vkPaginationText a p {
-    color: color("N00");
-    text-align: center;
-}
+        // ! not flexible feature, need review
+        &:first-child {
+            margin-block-end: 10px;
+        }
+    }
 
-.vkPaginationText a:hover p {
-    color: color("A40");
-}
+    &:hover {
+        border-width: 2px;
+        border-color: color("A40");
+        background-color: color("A90");
 
-.vkPaginationText a p:first-child {
-    margin-block-end: 10px;
+        p {
+            color: color("A40");
+        }
+    }
 }

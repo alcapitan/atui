@@ -1,11 +1,18 @@
 /* Global */
 
-.vkParagraph > * {
-    margin: 10px 5px;
-}
+.vkParagraph {
+    > * {
+        margin: 10px 5px;
+    }
 
-.vkParagraph :is(h1, h2, h3, h4, h5, h6) {
-    color: color("A40");
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color("A40");
+    }
 }
 
 /* Quote */
@@ -13,14 +20,14 @@
 .vkParagraph .vkParagraphQuote {
     font-family: var(--vkFontsSpecial);
     margin: 15px 20px;
-}
 
-.vkParagraph .vkParagraphQuote em {
-    color: color("N50");
-    font-style: italic;
-    margin: 5px;
-    font-size: 0.875rem;
-    display: block;
+    em {
+        color: color("N50");
+        font-style: italic;
+        margin: 5px;
+        font-size: 0.875rem;
+        display: block;
+    }
 }
 
 /* Images in titles */
@@ -29,61 +36,61 @@
 
 /* Don't need to do that with icons */
 
-.vkParagraph :is(h1, h2, h3, h4, h5, h6) img {
-    vertical-align: middle;
-}
+// ! This feature below may need a review
+/* stylelint-disable-next-line no-duplicate-selectors */
+.vkParagraph {
+    :is(h1, h2, h3, h4, h5, h6) img {
+        vertical-align: middle;
+    }
 
-.vkParagraph h1 img {
-    height: 2.25rem;
-}
+    h1 img {
+        height: 2.25rem;
+    }
 
-.vkParagraph h2 img {
-    height: 1.875rem;
-}
+    h2 img {
+        height: 1.875rem;
+    }
 
-.vkParagraph h3 img {
-    height: 1.5rem;
-}
+    h3 img {
+        height: 1.5rem;
+    }
 
-.vkParagraph h4 img {
-    height: 1rem;
-}
+    h4 img {
+        height: 1rem;
+    }
 
-.vkParagraph h5 img {
-    height: 0.875rem;
-}
+    h5 img {
+        height: 0.875rem;
+    }
 
-.vkParagraph h6 img {
-    height: 0.625rem;
+    h6 img {
+        height: 0.625rem;
+    }
 }
 
 /* Image */
 
 .vkParagraphImage {
     padding: 10px;
-}
 
-.vkParagraphImage img {
-    border-radius: var(--vkBorderRadius);
-}
+    img {
+        border-radius: var(--vkBorderRadius);
 
-.vkParagraphImage p {
-    color: color("N50");
-    font-style: italic;
-    margin: 5px;
-    font-size: 0.875rem;
-    text-align: center;
-}
+        @media (width >= 768px) /* Computers */ {
+            margin-inline: 10%;
+            width: 80%;
+        }
 
-@media (width >= 768px) /* Computers */ {
-    .vkParagraphImage img {
-        margin-inline: 10%;
-        width: 80%;
+        @media (width <= 767px) /* Smartphones */ {
+            width: 100%;
+        }
     }
-}
 
-@media (width <= 767px) /* Smartphones */ {
-    .vkParagraphImage img {
-        width: 100%;
+    p {
+        color: color("N50");
+        font-style: italic;
+        margin: 5px;
+        font-size: 0.875rem;
+        text-align: center;
     }
 }

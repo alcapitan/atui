@@ -26,19 +26,19 @@
     display: flex;
     align-items: center;
     gap: 10px;
-}
 
-.vkNotification > header * {
-    font-size: 1.5rem;
-}
+    * {
+        font-size: 1.5rem;
+    }
 
-.vkNotification > header #{$iconSelector} {
-    @include iconSize("1.5rem");
-}
+    #{$iconSelector} {
+        @include iconSize("1.5rem");
+    }
 
-.vkNotification > header p {
-    font-weight: var(--vkFontsTitleBold);
-    font-family: var(--vkFontsTitle);
+    p {
+        font-weight: var(--vkFontsTitleBold);
+        font-family: var(--vkFontsTitle);
+    }
 }
 
 .vkNotification > section {
@@ -47,18 +47,20 @@
 
 /* Mini style */
 
-.vkNotification.styleMini > header p {
-    all: unset;
-}
+.vkNotification.styleMini > {
+    header p {
+        all: unset;
+    }
 
-.vkNotification.styleMini > section {
-    display: none;
-}
+    section {
+        display: none;
+    }
 
-.vkNotification.styleMini > footer {
-    margin-block-start: 10px;
-}
+    footer {
+        margin-block-start: 10px;
 
-.vkNotification.styleMini > footer .vkButton {
-    margin: 0;
+        .vkButton {
+            margin: 0;
+        }
+    }
 }

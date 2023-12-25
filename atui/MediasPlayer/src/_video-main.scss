@@ -26,23 +26,25 @@
 
 /* Style overlay */
 
-.mpVideo.mpVideo.styleOverlay :is(.mpHeader, .mpDashboard) {
-    position: absolute;
-    width: 100%;
-    border: none;
-}
+.mpVideo.styleOverlay {
+    :is(.mpHeader, .mpDashboard) {
+        position: absolute;
+        width: 100%;
+        border: none;
+    }
 
-.mpVideo.styleOverlay .mpHeader {
-    background: linear-gradient(color("N90", "80%"), transparent);
-    top: 0;
-}
+    .mpHeader {
+        background: linear-gradient(color("N90", "80%"), transparent);
+        top: 0;
+    }
 
-.mpVideo.styleOverlay .mpDashboard {
-    background: linear-gradient(transparent, color("N90", "80%"));
-    bottom: 0;
-}
+    .mpDashboard {
+        background: linear-gradient(transparent, color("N90", "80%"));
+        bottom: 0;
+    }
 
-.mpVideo.styleOverlay .mpProgress,
-.mpVideo.styleOverlay .mpControls #{$iconSelector}:hover {
-    background-color: color("N80", 70%);
+    .mpProgress,
+    .mpControls #{$iconSelector}:hover {
+        background-color: color("N80", 70%);
+    }
 }

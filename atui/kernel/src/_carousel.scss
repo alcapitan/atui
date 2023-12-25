@@ -17,47 +17,41 @@
     width: 100%;
     min-height: 25vh;
     max-height: 75vh;
-}
 
-.vkCarousel .vkCarouselSlides > div /* Slide */ {
-    position: relative;
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    background-color: color("N10");
-}
+    > div /* Slide */ {
+        position: relative;
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        background-color: color("N10");
 
-.vkCarousel .vkCarouselSlides > div > img /* Illustration in slide */ {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-}
+        > img /* Illustration in slide */ {
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
 
-.vkCarousel .vkCarouselSlides > div > div /* Caption in slide */ {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, color("N90", "60%") 50%, transparent 100%);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    min-height: min-content;
-    height: 100%;
-    text-align: center;
+        > div /* Caption in slide */ {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, color("N90", "60%") 50%, transparent 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 20px;
+            min-height: min-content;
+            height: 100%;
+            text-align: center;
+        }
+    }
 }
 
 /* Controls */
 
-.vkCarousel .vkCarouselControls {
-    position: absolute;
-    inset: 0;
-}
+@mixin vkCarouselControls {
+    @include iconSize("2.25rem");
 
-.vkCarousel .vkCarouselControls :is(.vkCarouselControlsLeft, .vkCarouselControlsRight) {
-    font-size: 2.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
     color: color("NFF");
     top: 50%;
     transform: translateY(-50%);
@@ -65,10 +59,19 @@
     z-index: 10;
 }
 
-.vkCarousel .vkCarouselControls .vkCarouselControlsLeft {
-    left: 10px;
-}
+.vkCarousel .vkCarouselControls {
+    position: absolute;
+    inset: 0;
 
-.vkCarousel .vkCarouselControls .vkCarouselControlsRight {
-    right: 10px;
+    .vkCarouselControlsLeft {
+        @include vkCarouselControls;
+
+        left: 10px;
+    }
+
+    .vkCarouselControlsRight {
+        @include vkCarouselControls;
+
+        right: 10px;
+    }
 }

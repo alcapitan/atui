@@ -1,23 +1,25 @@
-.vkTable table {
-    border-collapse: collapse;
-}
+.vkTable {
+    table {
+        border-collapse: collapse;
+    }
 
-.vkTable :is(td, th) {
-    padding: 10px 20px;
-    text-align: center;
-    vertical-align: middle;
-    border-block: 1px color("N50") solid;
-}
+    :is(td, th) {
+        padding: 10px 20px;
+        text-align: center;
+        vertical-align: middle;
+        border-block: 1px color("N50") solid;
+    }
 
-.vkTable caption {
-    color: color("N50");
-    font-style: italic;
-    margin: 5px;
-    font-size: 0.875rem;
-    caption-side: bottom;
-}
+    caption {
+        color: color("N50");
+        font-style: italic;
+        margin: 5px;
+        font-size: 0.875rem;
+        caption-side: bottom;
+    }
 
-.vkTable th {
-    font-weight: bold;
-    font-family: var(--vkFontsTitle);
+    th {
+        font-weight: bold;
+        font-family: var(--vkFontsTitle);
+    }
 }

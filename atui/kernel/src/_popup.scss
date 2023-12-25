@@ -1,6 +1,6 @@
 /* Common to context menu and tooltip */
 
-:is(.vkPopupContextmenu, .vkPopupTooltip) {
+@mixin vkPopup {
     all: unset;
     position: fixed; /* fixed position is obligatory for centered option */
     background-color: color("NFF");
@@ -9,62 +9,67 @@
     width: max-content;
     visibility: hidden;
     display: block;
-}
 
-@media (480px <= width) /* Tablets and computers */ {
-    :is(.vkPopupContextmenu, .vkPopupTooltip) {
+    @media (480px <= width) /* Tablets and computers */ {
         max-width: 30%;
     }
-}
 
-@media (width < 480px) /* Smartphones */ {
-    :is(.vkPopupContextmenu, .vkPopupTooltip) {
+    @media (width < 480px) /* Smartphones */ {
         max-width: 70%;
+    }
+
+    * {
+        color: color("N00");
+        font-size: 1rem;
     }
 }
 
-:is(.vkPopupContextmenu, .vkPopupTooltip) * {
-    color: color("N00");
-    font-size: 1rem;
+/* Tooltip */
+
+.vkPopupTooltip {
+    @include vkPopup;
+
+    z-index: 17;
+    padding: 10px;
 }
 
 /* Context menu */
 
 .vkPopupContextmenu {
+    @include vkPopup;
+
     z-index: 18;
     padding-block: 10px;
-}
 
-.vkPopupContextmenu > * {
-    padding: 5px 10px;
-}
+    > * {
+        padding: 5px 10px;
 
-@media (pointer: coarse) /* Touch screen */ {
-    .vkPopupContextmenu > * {
-        padding: 10px 15px;
+        @media (pointer: coarse) /* Touch screen */ {
+            padding: 10px 15px;
+        }
     }
-}
 
-.vkPopupContextmenu #{$iconSelector} {
-    @include iconSize("1em");
-}
+    #{$iconSelector} {
+        @include iconSize("1em");
+    }
 
-.vkPopupContextmenu > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+    > a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
 
-.vkPopupContextmenu > a:hover {
-    background-color: color("A60", "80%");
-}
+        &:hover {
+            background-color: color("A60", "80%");
+        }
+    }
 
-.vkPopupContextmenu > hr {
-    background-color: color("A60");
-    height: 2px;
-    border: 0;
-    margin: 5px 10%;
-    padding: 0;
+    > hr {
+        background-color: color("A60");
+        height: 2px;
+        border: 0;
+        margin: 5px 10%;
+        padding: 0;
+    }
 }
 
 /* Global Panel */
@@ -82,22 +87,13 @@
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
-}
 
-@media (480px <= width) /* Tablets and computers */ {
-    .vkPopupGlobalpanel {
+    @media (480px <= width) /* Tablets and computers */ {
         padding: 20px 30px;
         gap: 40px;
     }
-}
 
-.vkPopupGlobalpanel * {
-    color: color("N00");
-}
-
-/* Tooltip */
-
-.vkPopupTooltip {
-    z-index: 17;
-    padding: 10px;
+    * {
+        color: color("N00");
+    }
 }

@@ -1,12 +1,12 @@
 .vkLicensing {
     display: flex;
     gap: 30px;
-}
 
-.vkLicensing * {
-    color: color("N60");
-}
+    * {
+        color: color("N60");
 
-.vkFooter .vkLicensing * {
-    color: color("A60");
+        .vkFooter & {
+            color: color("A60");
+        }
+    }
 }

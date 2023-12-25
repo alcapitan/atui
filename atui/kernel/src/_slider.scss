@@ -3,9 +3,9 @@
     gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-}
 
-.vkSlider > * /* Slide */ {
-    flex: 0 0 max-content;
-    scroll-snap-align: start;
+    > * /* Slide */ {
+        flex: 0 0 max-content;
+        scroll-snap-align: start;
+    }
 }

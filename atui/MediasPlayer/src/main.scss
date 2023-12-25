@@ -38,12 +38,14 @@
 
 /* Header */
 
-.mpHeader p {
-    font-size: 1.125rem;
-}
+.mpHeader {
+    p {
+        font-size: 1.125rem;
+    }
 
-.mpHeader .mpMediaTitle {
-    font-weight: bold;
+    .mpMediaTitle {
+        font-weight: bold;
+    }
 }
 
 /* Controls */
@@ -53,37 +55,36 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-}
 
-.mpControls > .mpSpace {
-    flex: 1;
-    border: none;
-}
-
-.mpControls #{$iconSelector},
-.mpTimer {
-    padding: 8px;
-    box-sizing: content-box;
-}
-
-.mpControls #{$iconSelector} {
-    border-radius: var(--vkBorderRadius);
-
-    @include iconSize(24px);
-}
-
-.mpControls #{$iconSelector}:hover {
-    background-color: color("N80");
-}
-
-@media (width < 480px) /* Smartphones */ {
-    .mpControls {
+    @media (width < 480px) /* Smartphones */ {
         justify-content: space-around;
     }
 
-    .mpControls > .mpSpace {
-        display: none;
+    #{$iconSelector} {
+        border-radius: var(--vkBorderRadius);
+        padding: 8px;
+        box-sizing: content-box;
+
+        @include iconSize(24px);
+
+        &:hover {
+            background-color: color("N80");
+        }
     }
+
+    > .mpSpace {
+        flex: 1;
+        border: none;
+
+        @media (width < 480px) /* Smartphones */ {
+            display: none;
+        }
+    }
+}
+
+.mpTimer {
+    padding: 8px;
+    box-sizing: content-box;
 }
 
 /* Progressbar */

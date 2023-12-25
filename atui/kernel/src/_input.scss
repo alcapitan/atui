@@ -29,14 +29,11 @@ input[type="color"] {
     padding: 0;
     background-color: transparent;
     border: none;
-}
 
-input[type="color"]::-webkit-color-swatch {
-    border-radius: var(--vkBorderRadius);
-}
-
-input[type="color"]::-moz-color-swatch {
-    border-radius: var(--vkBorderRadius);
+    &::-webkit-color-swatch,
+    &::-moz-color-swatch {
+        border-radius: var(--vkBorderRadius);
+    }
 }
 
 input[type="image"],
@@ -70,32 +67,31 @@ fieldset {
     border-radius: var(--vkBorderRadius);
     padding: 10px;
     padding-block-start: 0;
-}
 
-fieldset legend {
-    font-family: var(--vkFontsTitle);
-    padding-inline: 10px;
-    font-size: 1.125rem;
+    legend {
+        font-family: var(--vkFontsTitle);
+        padding-inline: 10px;
+        font-size: 1.125rem;
+    }
 }
 
 /* Grouped */
-
-/* TODO: set :has(input) instead of form when Firefox will support :has() */
 
 form div.styleGroup {
     background-color: color("NFF");
     border: 1px solid color("N70");
     display: inline-flex;
     border-radius: var(--vkBorderRadius);
-}
 
-form div.styleGroup.stylePill {
-    border-radius: 25px;
-}
+    &.stylePill {
+        border-radius: 25px;
+    }
 
-form div.styleGroup * {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    margin: 0;
+    // TODO: set :has(input) instead of form when Firefox will support :has()
+    * {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        margin: 0;
+    }
 }

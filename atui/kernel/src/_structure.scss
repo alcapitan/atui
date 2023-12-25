@@ -3,18 +3,26 @@
 :is(.vkStructureBody, .vkStructureSection) {
     display: flex;
     flex-wrap: nowrap;
+
+    @media (width >= 768px) /* Computers */ {
+        flex-direction: row;
+
+        > *:not(:last-child, .vkNotificationContainer) {
+            border-inline-end: 1px solid color("N80");
+        }
+    }
+
+    @media (width <= 767px) /* Smartphones */ {
+        flex-direction: column-reverse;
+
+        > *:not(:last-child, .vkNotificationContainer) {
+            border-block-end: 1px solid color("N80");
+        }
+    }
 }
 
-@media (width >= 768px) /* Computers */ {
-    :is(.vkStructureBody, .vkStructureSection) {
-        flex-direction: row;
-    }
-
-    :is(.vkStructureBody, .vkStructureSection) > *:not(:last-child, .vkNotificationContainer) {
-        border-inline-end: 1px solid color("N80");
-    }
-
-    .vkStructureSection > *:not(:last-child) {
+.vkStructureSection > *:not(:last-child) {
+    @media (width >= 768px) /* Computers */ {
         border-image: linear-gradient(
                 to bottom,
                 transparent calc(0% + 20px),
@@ -24,18 +32,8 @@
             )
             0 1 0;
     }
-}
 
-@media (width <= 767px) /* Smartphones */ {
-    :is(.vkStructureBody, .vkStructureSection) {
-        flex-direction: column-reverse;
-    }
-
-    :is(.vkStructureBody, .vkStructureSection) > *:not(:last-child, .vkNotificationContainer) {
-        border-block-end: 1px solid color("N80");
-    }
-
-    .vkStructureSection > *:not(:last-child) {
+    @media (width <= 767px) /* Smartphones */ {
         border-image: linear-gradient(
                 to right,
                 transparent calc(0% + 20px),
@@ -47,9 +45,21 @@
     }
 }
 
+.vkStructureSection {
+    flex: 1;
+}
+
 :is(.vkStructureBodyContent, .vkStructureSectionContent) {
     flex: 1;
     position: relative;
+
+    > *:first-child {
+        margin-block-start: 0;
+    }
+
+    > *:last-child {
+        margin-block-end: 0;
+    }
 }
 
 .vkStructureBodyContent {
@@ -58,22 +68,10 @@
     flex-direction: column;
 }
 
-.vkStructureSection {
-    flex: 1;
-}
-
 .vkStructureSectionContent {
     padding: 10px;
-}
 
-.vkStructureSectionContent > * {
-    margin-block: 20px;
-}
-
-:is(.vkStructureBodyContent, .vkStructureSectionContent) > *:first-child {
-    margin-block-start: 0;
-}
-
-:is(.vkStructureBodyContent, .vkStructureSectionContent) > *:last-child {
-    margin-block-end: 0;
+    > * {
+        margin-block: 20px;
+    }
 }

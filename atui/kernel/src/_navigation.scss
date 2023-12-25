@@ -4,32 +4,32 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
 
-.vkNavigationRow a /* ELement */ {
-    padding: 10px 20px;
-    border-radius: var(--vkBorderRadius);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    a /* ELement */ {
+        padding: 10px 20px;
+        border-radius: var(--vkBorderRadius);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-.vkNavigationRow a:hover {
-    background-color: color("A70");
-}
+        &:hover {
+            background-color: color("A70");
+        }
 
-.vkNavigationRow a:active {
-    background-color: color("A60");
-}
+        &:active {
+            background-color: color("A60");
+        }
 
-.vkNavigationRow a #{$iconSelector} {
-    @include iconSize("80px");
-}
+        #{$iconSelector} {
+            @include iconSize("80px");
+        }
 
-.vkNavigationRow a p /* Text */ {
-    margin-block-start: 10px;
-    font-size: 1.125rem;
-    color: color("N00");
+        p /* Text */ {
+            margin-block-start: 10px;
+            font-size: 1.125rem;
+            color: color("N00");
+        }
+    }
 }
 
 /* Bar */
@@ -38,75 +38,79 @@
     padding: 10px;
     display: flex;
     row-gap: 5px;
-}
 
-.vkNavigationBar a {
-    border-radius: var(--vkBorderRadius);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px 10px;
-}
+    a {
+        border-radius: var(--vkBorderRadius);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px 10px;
+    }
 
-.vkNavigationBar p {
-    width: max-content;
-}
+    p {
+        width: max-content;
+    }
 
-.vkNavigationBar hr {
-    background-color: color("A60");
-    width: 100%;
-    height: 2px;
-    border: 0;
-}
+    hr {
+        background-color: color("A60");
+        width: 100%;
+        height: 2px;
+        border: 0;
 
-.vkNavigationBar hr.vkNavigationSplit {
-    flex: 1;
-    background-color: transparent;
+        &.vkNavigationSplit {
+            flex: 1;
+            background-color: transparent;
+        }
+    }
 }
 
 @media (width >= 768px) /* Computers */ {
     .vkNavigationBar {
         flex-direction: column;
-    }
 
-    .vkNavigationBar a:hover {
-        background-color: color("A80");
-    }
+        a:hover {
+            background-color: color("A80");
+        }
 
-    .vkNavigationBar #{$iconSelector} {
-        @include iconSize("36px");
-    }
+        #{$iconSelector} {
+            @include iconSize("36px");
+        }
 
-    .vkNavigationBar p {
-        font-size: 1.125rem;
-    }
+        p {
+            font-size: 1.125rem;
+        }
 
-    .vkNavigationBar *.optionOnlyMobile {
-        display: none;
-    }
+        *.optionOnlyMobile {
+            display: none;
+        }
 
-    .vkNavigationBar.styleDrawer p {
-        display: none;
-    }
+        &:not(.styleMobile, .styleDrawer),
+        &.styleDrawer:hover {
+            width: 20%;
+        }
 
-    .vkNavigationBar.styleDrawer:hover p {
-        display: block;
-    }
+        &.styleDrawer {
+            p {
+                display: none;
+            }
 
-    .vkNavigationBar:not(.styleMobile, .styleDrawer),
-    .vkNavigationBar.styleDrawer:hover {
-        width: 20%;
-    }
+            &:hover p {
+                display: block;
+            }
+        }
 
-    .vkNavigationBar.styleMobile a {
-        flex-direction: column;
-        row-gap: 5px;
-        padding: 5px 10px;
-    }
+        &.styleMobile {
+            a {
+                flex-direction: column;
+                row-gap: 5px;
+                padding: 5px 10px;
+            }
 
-    .vkNavigationBar.styleMobile p {
-        font-size: 0.875rem;
-        text-align: center;
+            p {
+                font-size: 0.875rem;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -122,31 +126,31 @@
         display: flex;
         justify-content: space-around;
         flex-flow: row nowrap;
-    }
 
-    .vkNavigationBar a {
-        flex-direction: column;
-        justify-content: center;
-    }
+        a {
+            flex-direction: column;
+            justify-content: center;
 
-    .vkNavigationBar a:hover {
-        background-color: color("N80");
-    }
+            &:hover {
+                background-color: color("N80");
+            }
+        }
 
-    .vkNavigationBar #{$iconSelector} {
-        @include iconSize("30px");
-    }
+        #{$iconSelector} {
+            @include iconSize("30px");
+        }
 
-    .vkNavigationBar p {
-        font-size: 0.875rem;
-        text-align: center;
-    }
+        p {
+            font-size: 0.875rem;
+            text-align: center;
+        }
 
-    .vkNavigationBar hr {
-        display: none;
-    }
+        hr {
+            display: none;
+        }
 
-    .vkNavigationBar *.optionOnlyDesktop {
-        display: none;
+        *.optionOnlyDesktop {
+            display: none;
+        }
     }
 }

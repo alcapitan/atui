@@ -3,17 +3,17 @@
     overflow: hidden;
     border: 1px solid color("N50");
     background-color: color("N90");
-}
 
-.vkCard > img {
-    display: block;
-    width: 100%;
-    max-height: 60vh;
-    object-fit: cover;
-}
+    > img {
+        display: block;
+        width: 100%;
+        max-height: 60vh;
+        object-fit: cover;
+    }
 
-.vkCard > div > * {
-    margin: 10px 15px;
+    > div > * {
+        margin: 10px 15px;
+    }
 }
 
 /** set font-weight: bold for .vkCardHighlight > * for more logical appearance if needed */
@@ -29,19 +29,19 @@
 
 .vkCard.styleOverlay {
     position: relative;
-}
 
-.vkCard.styleOverlay * {
-    color: #fff;
-}
+    * {
+        color: #fff;
+    }
 
-.vkCard.styleOverlay > img {
-    filter: brightness(0.7);
-}
+    > img {
+        filter: brightness(0.7);
+    }
 
-.vkCard.styleOverlay > div {
-    position: absolute;
-    top: 0;
+    > div {
+        position: absolute;
+        top: 0;
 
-    /** replace top with bottom to place the text content at the bottom */
+        /** replace top with bottom to place the text content at the bottom */
+    }
 }

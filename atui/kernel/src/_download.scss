@@ -14,25 +14,25 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-}
 
-.vkDownload > div:first-child /* Metadata container */ {
-    flex: 1;
-}
+    &:first-child /* Metadata container */ {
+        flex: 1;
 
-.vkDownload > div:first-child #{$iconSelector} {
-    margin-inline-end: 10px;
+        #{$iconSelector} {
+            margin-inline-end: 10px;
 
-    @include iconSize("60px");
-}
+            @include iconSize("60px");
+        }
 
-.vkDownload > div:first-child p /* File name */ {
-    font-weight: bold;
-    font-size: 1.125rem;
-}
+        p /* File name */ {
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+    }
 
-.vkDownload > div:last-child /* Button container */ {
-    justify-content: flex-end;
+    &:last-child /* Button container */ {
+        justify-content: flex-end;
+    }
 }
 
 /* Responsive */
@@ -40,14 +40,14 @@
 @media (width < 480px) /* Smartphones */ {
     .vkDownload /* Element */ {
         flex-direction: column;
-    }
 
-    .vkDownload > div:last-child /* Button container */ {
-        justify-content: space-around;
-        margin-block-start: 10px;
-    }
+        > div:last-child /* Button container */ {
+            justify-content: space-around;
+            margin-block-start: 10px;
 
-    .vkDownload > div:last-child .vkButton {
-        margin-block: 0;
+            .vkButton {
+                margin-block: 0;
+            }
+        }
     }
 }

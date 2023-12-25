@@ -59,7 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Remove `!important` from CSS code and use `@layer` for better inheritance management with minor visual changes.
 -   Set up a better responsive that better integrates tablets.
 -   Port CSS code to SCSS :
-    -   SASS feats are used in a limited part of the code (boxes, buttons and colors for now).
+    -   SASS feats are used in a limited part of the code (boxes, buttons and colors for now) and for nesting everywhere.
     -   Create `color` function, `iconSize` mixin and `iconSelector` global variable.
 -   Change all variables, component classes and option classes structure ! You need to update classes in your projects to restore ATUI's operation.
 -   Change `vkStructureBody` and `vkStructureSection` from id to class.

@@ -7,10 +7,10 @@
     padding-inline: 5px;
     width: 100%;
     border-block-end: 1px solid color("N80");
-}
 
-.vkHeader #{$iconSelector} {
-    @include iconSize("2.25rem");
+    #{$iconSelector} {
+        @include iconSize("2.25rem");
+    }
 }
 
 /* Display on specific devices */
@@ -45,25 +45,17 @@
     position: fixed;
 }
 
-.vkHeader.styleDark * {
-    color: color("NFF");
-}
-
 .vkHeader.styleAccent {
     background-color: color("A90");
     border-block-end-color: color("A80");
 }
 
-.vkHeader.styleAccent .vkHeaderSplit {
-    background-color: color("A40");
-}
-
 .vkHeader.styleDark {
     background-color: color("N20");
-}
 
-.vkHeader.styleDark .vkHeaderSplit {
-    background-color: color("N80");
+    * {
+        color: color("NFF");
+    }
 }
 
 .vkHeader.styleTransparent {
@@ -81,28 +73,28 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 5px;
-}
 
-.vkHeader > div > * {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+    > * {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 
-.vkHeader > div.optionLevelLink #{$iconSelector} {
-    @include iconSize("1.125rem");
-}
+    &.optionLevelLink #{$iconSelector} {
+        @include iconSize("1.125rem");
+    }
 
-.vkHeader > div.styleScrollable {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    justify-content: unset;
-    flex-wrap: nowrap;
-}
+    &.styleScrollable {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-content: unset;
+        flex-wrap: nowrap;
 
-.vkHeader > div.styleScrollable > * {
-    flex: none;
-    scroll-snap-align: start;
+        > * {
+            flex: none;
+            scroll-snap-align: start;
+        }
+    }
 }
 
 /* Separators */
@@ -117,4 +109,12 @@
     background-color: color("N20");
     width: 1px;
     height: 1.875rem;
+
+    .vkHeader.styleAccent & {
+        background-color: color("A40");
+    }
+
+    .vkHeader.styleDark & {
+        background-color: color("N80");
+    }
 }

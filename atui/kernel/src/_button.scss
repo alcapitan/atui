@@ -59,10 +59,10 @@ $colorOptions: (
     border: none;
     background-color: transparent;
     vertical-align: middle;
-}
 
-.vkButton #{$iconSelector} {
-    @include iconSize("1em");
+    #{$iconSelector} {
+        @include iconSize("1em");
+    }
 }
 
 /* Disabled */

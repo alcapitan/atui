@@ -3,25 +3,28 @@
 .vkFooter {
     background-color: color("A90");
     padding: 20px 40px;
-}
 
-.vkFooter > * {
-    margin-block: 10px;
+    > * {
+        margin-block: 10px;
+    }
 }
 
 /* Columns and rows */
 
-.vkFooterColumns,
-.vkFooterRows {
+@mixin vkFooterLayout {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
 .vkFooterColumns {
+    @include vkFooterLayout;
+
     justify-content: space-evenly;
 }
 
 .vkFooterRows {
+    @include vkFooterLayout;
+
     justify-content: center;
 }

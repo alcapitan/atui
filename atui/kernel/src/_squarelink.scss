@@ -9,49 +9,50 @@
     max-width: 250px;
     border: 1px solid color("N00");
     vertical-align: middle;
-}
 
-.vkSquarelink:is(:hover, :active) {
-    border-color: color("A50");
-}
+    &:hover,
+    &:active {
+        border-color: color("A50");
 
-.vkSquarelink:hover {
-    background-color: color("A80");
-}
+        * {
+            color: color("A50");
+        }
+    }
 
-.vkSquarelink:active {
-    background-color: color("A60");
-}
+    &:hover {
+        background-color: color("A80");
+    }
 
-.vkSquarelink:is(:hover, :active) * {
-    color: color("A50");
+    &:active {
+        background-color: color("A60");
+    }
 }
 
 .vkSquarelink.styleFilled {
     background-color: color("A40");
     border: none;
-}
 
-.vkSquarelink.styleFilled:hover {
-    background-color: color("A60");
-}
+    &:hover {
+        background-color: color("A60");
+    }
 
-.vkSquarelink.styleFilled:active {
-    background-color: color("A80");
-}
+    &:active {
+        background-color: color("A80");
+    }
 
-.vkSquarelink.styleFilled * {
-    color: color("NFF");
+    * {
+        color: color("NFF");
+    }
 }
 
 .vkSquarelink.styleNavigator {
     justify-content: flex-end;
-}
 
-.vkSquarelink.styleNavigator > i {
-    @include iconSize("2.25rem");
-}
+    > i {
+        @include iconSize("2.25rem");
+    }
 
-.vkSquarelink.styleNavigator > p {
-    font-weight: var(--vkFontsTitleBold);
+    > p {
+        font-weight: var(--vkFontsTitleBold);
+    }
 }

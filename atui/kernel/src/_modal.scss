@@ -11,19 +11,19 @@
     align-items: center;
     gap: 10px;
     display: none;
-}
 
-.vkModal.statusShow {
-    display: flex;
-}
+    > div /* Container */ {
+        background-color: color("NFF");
+        border-radius: var(--vkBorderRadius);
+        box-shadow: var(--vkShadowMedium);
+        padding: 20px;
+        min-width: 40%;
+        min-height: 20%;
+        max-width: 80%;
+        max-height: 80%;
+    }
 
-.vkModal > div /* Container */ {
-    background-color: color("NFF");
-    border-radius: var(--vkBorderRadius);
-    box-shadow: var(--vkShadowMedium);
-    padding: 20px;
-    min-width: 40%;
-    min-height: 20%;
-    max-width: 80%;
-    max-height: 80%;
+    &.statusShow {
+        display: flex;
+    }
 }
