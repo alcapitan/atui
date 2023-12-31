@@ -1,11 +1,9 @@
----
 name: Bug report
 about: Create a report to fix a bug.
 title: ""
 labels: fix
 assignees: alcapitan
----
-
+body:
   - type: checkboxes
     attributes:
       label: Prerequisites
