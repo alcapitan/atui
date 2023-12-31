@@ -2,15 +2,25 @@
 name: Feature request
 about: Suggest an idea for this project.
 title: ""
-labels: doc, feat, improve
-assignees: ""
+labels: feat
+assignees: alcapitan
 ---
 
-First, make sure your idea is useful, it relates to this directory, and it has never been suggested.
-
-1. Describe as precisely as possible what problem your idea will solve.
-
-2. Describe how you imagine the solution. You can add a piece of code, or a UI/UX template.
-
-Don't hesitate to contribute to the project by making a fork and a pull request linked to your issue.
-Report that you are working on it so that others do not do the same thing twice.
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: Take a couple minutes to help our maintainers work faster.
+      options:
+        - label: I have [searched](https://github.com/alcapitan/atui/issues?q=is%3Aissue) for duplicate or closed issues
+          required: true
+        - label: I think my idea is really useful for the project.
+          required: true
+        - label: I have read the [contributing guidelines](https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md)
+          required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe as precisely as possible what problem your idea will solve and how you imagine the solution. You can add a piece of code, or a UI/UX template.
+    validations:
+      required: true

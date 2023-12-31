@@ -1,102 +1,77 @@
-# ATUI Contribution Rules
+# Contributing to ATUI
 
-First of all, thank you for investing in this project !  
-Please read these rules to keep the project in order and save time for developers.
+Thank you for your interest in contributing to ATUI ! We welcome contributions from the community to help improve our project.
 
-## Using the Issue Tracker
+## Table of Contents
 
-Firstly, you must report any problems or suggestions on the [Issue Tracker](https://github.com/alcapitan/atui/issues).  
-More generally, anything related to ATUI development should be posted on GitHub.
+-   [Getting Started](#getting-started)
+-   [Contributing Guidelines](#contributing-guidelines)
+-   [Code Style](#code-style)
+-   [How to contribute](#how-to-contribute)
+-   [License](#license)
 
--   Please, avoid using the Issue Tracker to post your usage issues.  
-    Prefer to use Stack Overflow or any other dev help blog.  
-    You can also look the cause of the problem in the ATUI source code and temporarily fixing it locally, then posting the problem and your solution on the [Issue Tracker](https://github.com/alcapitan/atui/issues).
--   Be serious in your activities about ATUI ; do not troll and do not vandalize the directory. Respect others people, even beginners.
--   Do not spam on the Issue Tracker, like "+1" or ":thumbsup:" messages.  
-    Use [GitHub's reactions](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) instead. We will delete comments which violate this rule.
+## Getting Started
 
-## Labels on Issues
+If you just have a question about how to use ATUI, please contact us at [Github Discussions](https://github.com/alcapitan/atui/discussions).
 
-The severals labels on Issues help us to classify and identify issues. Here's what they represent and how we use them :
+To get started with contributing to ATUI, please follow these steps:
 
--   `break` : Modifications can break the code !
--   `community` : Let the community resolve the issue with forking and making a pull request.
--   `css` : The issue or the solution mainly involves CSS contributors.
--   `doc` : It concern the documentation.
--   `feat` : Add or remove or modify a feature.
--   `fix` : Fix a bug.
--   `html` : The issue or the solution mainly involves HTML contributors.
--   `improve` : Clear the code or improve the performances.
--   `in progress` : An official contributor is resolving it. So, don't work on it !
--   `javascript` : The issue or the solution mainly involves JavaScript contributors.
--   `meta` - Concern the overall project.
--   `php` : The issue or the solution mainly involves PHP contributors.
-    Be precise in choosing your labels. Do not put too many labels.
+1. Fork the repository on GitHub.
+2. Clone your forked repository to your local machine.
+3. Install the necessary dependencies by running `npm install`.
+4. Make your changes, run `npm run build` to apply your changes and run `npm run live` to test the result. It's possible to run `npm run build:css` for CSS only changes, as well as `npm run build:js` for JavaScript only changes.
+5. Run `npm run build` before committing to force code common style and reliability.
+6. Commit your changes with descriptive commit following the Commitlint conventional style. You can use the interactive commiter with `npx cz` to help you with that.
+7. Push your changes to your forked repository.
+8. Submit a pull request to the main repository.
 
-## Bug reports
+## Contributing Guidelines
 
-Good bug reports are extremely helpful, so thanks !
+Please follow these guidelines when contributing to ATUI:
 
--   Make sure your problem is not caused by a simple error in your own code or by an extension.
--   Use the GitHub issue search tool to check if the issue has already been reported.
--   Check the issue has not already been fixed with an update.
--   Be as relevant and efficient as possible in your reports. A good bug report shouldn't force others to ask you for more information. Use the issue templates to help you be complete.
+-   Before starting work on a new feature or bug fix, check the issue tracker to see if the issue is already being worked on or reported.
+-   If you plan to add a new feature or make a significant change, it's recommended to discuss it with the project maintainers first.
+-   Follow the project's code style and conventions.
+-   Write clear and concise commit messages.
+-   Make sure your change works well.
+-   Document any changes or additions to the project's documentation.
 
-## Feature requests
+## Code Style
 
-Feature requests are welcome !  
-Make sure your idea is useful, give as much detail and context as possible.  
-The goal is to convince the developers of the project.
+Our code style is maintained by NPM dependencies such as Prettier, Stylelint and Eslint. Please run `npm run build` before committing.
 
-## Pull requests
+## How to contribute
 
-Contributing code helps us grow faster!
+### Reporting bugs
 
--   Your pull request must be clean and only resolve the issue which it is associated.
--   Ask first before make a contribution, otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
--   Please adhere to the [coding guidelines](#code-guidelines) used throughout the project (indentation, accurate comments, etc...).
--   When you add, remove, or modify a feature, you must also update the documentation.
+The goal of issues is to help maintainers to understand as quickly and easily as possible your report, this should include as many details as possible.
 
-When contributing, please follow these steps :
+To submit a good issue, please follow these steps:
 
-1. Fork the project, and clone your fork into your computer.
-2. If you want to update your fork with the work of the original directory.
+1. Use the latest ATUI repository version to ensure your issue has not been already done.
+2. Check if the issue hasn't been reported before by searching existing issues to avoid duplicates.
+3. Provide a clear and concise title that summarizes the issue or feature request.
+4. Describe the problem or request in detail, including any relevant information such as environment details (with `npm ls`), steps to reproduce, and expected behavior.
+5. If applicable, attach screenshots or code snippets to help illustrate the issue.
+6. Assign relevant labels to categorize the issue, such as bug, feature, or whatever.
 
-```
-git remote add upstream https://github.com/twbs/bootstrap.git
-git checkout {branch}
-git pull upstream {branch}
-```
+### Suggest your changes
 
-3. Please, always respecting coding and Git conventions.
-4. Push your work into your fork.
+We ask you to produce good quality work, and to be present to rectify your pull request in case of return.
 
-```
-git push origin {branch}
-```
+To submit an acceptable pull request, please follow these steps:
 
-5. Open a Pull Request with a link to your issue and with a clear title and description.
+1. Before working, make sure your idea is useful to the community and that no one is working on it or has already done so.
+2. Make sure your forked repository is up to date with the latest changes from the main repository.
+3. Create a new branch for your changes.
+4. Make your changes and commit them with descriptive commit messages.
+5. Push your changes to your forked repository.
+6. Open a pull request on the main repository, providing a clear description of your changes.
 
-**IMPORTANT** : By submitting a patch, you agree to allow the project owners to license your work under the License [GNU General Public License](https://github.com/alcapitan/atui/blob/beta/LICENSE.md).
+## License
 
-## Code guidelines
+By contributing to ATUI, you agree that your contributions will be licensed under the GNU General Public License. Please make sure to read and understand the license before contributing.
 
-### Common
+---
 
--   5 spaces (no tabs).
--   Avoid depreciated elements.
--   [Respect the rules of the Code Guide. ](https://codeguide.co/)
-
-### HTML
-
--   Use tags and elements of HTML5.
--   Use existing elements (such as buttons, cards, or context menus) when it is possible.
-
-### CSS
-
--   Use tags and elements of CSS3.
--   Use existing elements (such as variables, common properties) when it is possible.
-
-### JS
-
--   Use HTTPS protocol to open ATUI on your computer (if you use VS Code, you can use the extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) because `file://` format can break JavaScript (such as modules).
+We appreciate your contributions to ATUI ! Thank you for helping us make it better.
