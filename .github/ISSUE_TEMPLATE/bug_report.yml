@@ -1,95 +1,22 @@
 name: Bug Report
-description: Create a bug report to help us improve
-title: "[Bug]: "
-labels: [bug, triage]
+description: Create a report to fix a bug.
+labels: [bug]
+assignees: alcapitan
 body:
-  - type: markdown
+  - type: checkboxes
     attributes:
-      value: Thank you for taking the time to complete this bug report!
-  - type: markdown
-    attributes:
-      value: Please make sure to provide the information we ask for. This will allow us to help you better.
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: Describe the bug
-      description: A clear and concise description of the current behaviour.
-      placeholder: A bug happened!
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected behaviour
-      description: A description of what you expect to happen.
-      placeholder: I expect to see X or Y
-    validations:
-      required: true
-  - type: textarea
-    id: reproduction
-    attributes:
-      label: Steps to reproduce
-      description: Please add a link to a repository with a minimal reproduction. Or describe accurately how we can reproduce/verify the bug.
-      placeholder: |
-        Example steps (replace with your own):
-        1. Clone my repo at https://github.com/<myuser>/example
-        2. npm run minify
-        3. You should see the error come up
-    validations:
-      required: true
-  - type: input
-    id: version
-    attributes:
-      label: Version
-      description: The version of cssnano you are using.
-      placeholder: ex. 5.0.6
-    validations:
-      required: true
-  - type: dropdown
-    id: preset
-    attributes:
-      label: Preset
-      description: Are you using a [preset](https://cssnano.co/docs/presets)?
+      label: Prerequisites
+      description: Please take a couple minutes to help our maintainers work faster.
       options:
-        - (no preset)
-        - lite
-        - default
-        - advanced
-    validations:
-      required: true
-  - type: textarea
-    id: envinfo
-    attributes:
-      label: Environment
-      description: |
-        Please paste the output of running `npx envinfo --system`.
-        This will be automatically formatted as a code block, so no need for backticks.
-      placeholder: |
-        System:
-          OS:
-          CPU:
-          Memory:
-          Shell:
-      render: shell
-    validations:
-      required: true
-  - type: textarea
-    id: nanoinfo
-    attributes:
-      label: Package details
-      description: |
-        Please paste the output of running `npm ls cssnano postcss`.
-        This will be automatically formatted as a code block, so no need for backticks.
-      placeholder: |
-        ├── cssnano@5.0.6
-        └── postcss@8.3.5
-      render: shell
-    validations:
-      required: true
-  - type: textarea
-    id: context
-    attributes:
-      label: Additional context
-      description: Anything else that might be relevant
-    validations:
-      required: false
+        - label: I have [searched](https://github.com/alcapitan/atui/issues?q=is%3Aissue) for duplicate or closed features requests.
+          required: true
+        - label: I checked my HTML to avoid common problems such as HTML classes typing mistakes, CSS overwriting, and issues that are caused by ATUI.
+          required: true
+        - label: I have read the [contributing guidelines](https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md)
+          required: true
+- type: textarea
+  attributes:
+    label: Describe the issue
+    description: Tell us the issue with as many details as possible, and explain how to reproduce the unexpected behavior. Moreover, adding screenshots is also very useful !
+  validations:
+    required: true
