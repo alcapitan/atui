@@ -1,6 +1,6 @@
-name: Bug Report
+name: Bug report
 description: Create a report to fix a bug.
-labels: [bug]
+labels: [fix]
 assignees: alcapitan
 body:
   - type: checkboxes
