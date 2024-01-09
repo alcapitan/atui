@@ -1,10 +1,11 @@
 name: Feature request
 description: Suggest an idea for this project.
 title: ""
-labels: feat
+labels: [feat]
 assignees: alcapitan
 body:
   - type: checkboxes
+    id: prerequisites
     attributes:
       label: Prerequisites
       description: Take a couple minutes to help our maintainers work faster.

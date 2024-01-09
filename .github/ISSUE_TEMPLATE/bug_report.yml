@@ -1,13 +1,14 @@
 name: Bug report
 description: Create a report to fix a bug.
 title: ""
-labels: fix
+labels: [fix]
 assignees: alcapitan
 body:
   - type: checkboxes
+    id: prerequisites
     attributes:
       label: Prerequisites
-      description: Take a couple minutes to help our maintainers work faster.
+      description: Please take a couple minutes to help our maintainers work faster.
       options:
         - label: I have [searched](https://github.com/alcapitan/atui/issues?q=is%3Aissue) for duplicate or closed features requests.
           required: true
@@ -15,10 +16,10 @@ body:
           required: true
         - label: I have read the [contributing guidelines](https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md)
           required: true
-   - type: textarea
-   id: what-happened
-   attributes:
+  - type: textarea
+    id: what-happened
+    attributes:
       label: Describe the issue
       description: Tell us the issue with as many details as possible, and explain how to reproduce the unexpected behavior. Moreover, adding screenshots is also very useful !
-   validations:
+    validations:
       required: true
