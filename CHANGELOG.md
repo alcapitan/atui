@@ -84,7 +84,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Drop `.vkLoader`, and replace it by `.vkLoaderRing`, `.vkLoaderWobble`, `.vkLoaderWave`, `.vkLoaderPulse`, `.vkLoaderSpinner` and `.vkLoaderRace` with rich customization capabilities.
 -   Update ATUI demonstration URL to `atui.vercel.app` !
 -   Slightly change border radius and blur global CSS variables.
--   Make `CONTRIBUTING.md` and issue templates way much clearer and use recent Github's syntax.
+-   Make `CONTRIBUTING.md`, issue and pull request templates way much clearer and use recent Github's syntax.
 
 ### Fixed
 

@@ -1,0 +1,28 @@
+name: Pull request
+description: Submit your work for this project.
+labels: []
+assignees: alcapitan
+body:
+    - type: checkboxes
+      id: prerequisites
+      attributes:
+          label: Prerequisites
+          description: Take a couple minutes to help our maintainers work faster.
+          options:
+              - label: I have [searched](https://github.com/alcapitan/atui/pulls) for duplicate or closed pull requests.
+                required: true
+              - label: I have read the [contributing guidelines](https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md)
+                required: true
+              - label: I think my idea is really useful for the project.
+                required: true
+              - label: My changes are acceptable (no troll or hate, no voluntary introduction of issues or traps, well-made change)
+                required: true
+              - label: I effectively ran `npm run build` to ensure code validity and the script succeed.
+                required: true
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+          description: Explain what you have submitted, and what your change does.
+      validations:
+          required: true

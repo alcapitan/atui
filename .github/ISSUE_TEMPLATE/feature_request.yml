@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest a feature or an improvement
+labels: [feat]
+assignees: alcapitan
+body:
+    - type: checkboxes
+      id: prerequisites
+      attributes:
+          label: Prerequisites
+          description: Please take a couple minutes to help our maintainers work faster.
+          options:
+              - label: I have [searched](https://github.com/alcapitan/atui/issues?q=is%3Aissue) for duplicate or closed features requests.
+                required: true
+              - label: I have read the [contributing guidelines](https://github.com/alcapitan/atui/blob/dev/CONTRIBUTING.md)
+                required: true
+              - label: I think my idea is really useful for the project.
+                required: true
+    - type: textarea
+      id: proposal
+      attributes:
+          label: Proposal
+          description: Describe as precisely as possible what problem your idea will solve and how you imagine the solution. You can add a piece of code, or a UI/UX template.
+      validations:
+          required: true
