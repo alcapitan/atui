@@ -5,6 +5,7 @@ globalpanel
 infotip
 metatag
 scrolltop
+squarelink
 
 # Words related to dead versions
 audioplayer
